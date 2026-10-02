@@ -123,10 +123,17 @@ def place_label(s, x, y, text, lines):
 
 
 def chart_overview(boards, theme, path):
+    # one display row per board; a final (held-out) board is its own row under its validation board
+    disp = []
+    for b in boards:
+        disp.append({"name": b["name"], "sub": ("board " + b["suffix"]) if b["suffix"] else
+                     ("validation board" if b["final"] else ""), "rows": b["rows"], "final": False})
+        if b["final"]:
+            disp.append({"name": b["name"], "sub": "final (held-out) board", "rows": b["final"], "final": True})
     row_h, top = 64, 96
-    s = mc.Svg(top + row_h * len(boards) + 8, theme,
+    s = mc.Svg(top + row_h * len(disp) + 8, theme,
                "Competition hills and team standings (read %s)" % SNAPSHOT,
-               "validation boards, best result per account; ranks can change until the deadline")
+               "best result per account on each board; ranks can change until the deadline")
     s.text(0, 49, "ties share a rank: the platform lists accounts with identical metrics alphabetically", 12,
            ink="ink2")
     team_c, plain = s.t["series"][0], NEUTRAL[theme]
@@ -142,24 +149,20 @@ def chart_overview(boards, theme, path):
     circle(s, x + 10, 68, 5, plain)
     circle(s, x + 24, 68, 5, plain)
     s.text(x + 40, 72, "tied: identical metrics", 12, ink="ink2")
-    x += 40 + mc.tw("tied: identical metrics", 12) + 18
-    diamond(s, x + 6, 68, 6, plain)
-    s.text(x + 17, 72, "final (held-out) board", 12, ink="ink2")
     x0, step = 232, 22
-    for i, b in enumerate(boards):
+    for i, b in enumerate(disp):
         y = top + i * row_h
         if i:
             s.line(0, y - 8, W, y - 8, "grid")
         s.text(0, y + 24, b["name"], 13, weight="600")
-        if b["suffix"]:
-            s.text(0, y + 40, "board " + b["suffix"], 11, ink="ink2")
+        if b["sub"]:
+            s.text(0, y + 40, b["sub"], 11, ink="ink2")
         rows = b["rows"]
         if not rows:
             s.text(x0, y + 24, "no entries on the board in this snapshot", 12, ink="ink2")
             continue
         cy = y + 20
-        lines = [[], []]
-        # tie bands first, then markers
+        sole = len(rows) == 1                 # a one-account board has no rank: say "only entry", never "1st"
         j = 0
         while j < len(rows):
             k = rows[j]["tied"]
@@ -173,34 +176,19 @@ def chart_overview(boards, theme, path):
             cx = x0 + j * step
             if r["owner"] in TEAM:
                 circle(s, cx, cy, 7, team_c)
-                team_labels.append("%s %s" % (rank_text(r), r["owner"]))
+                team_labels.append(("%s, only entry" % r["owner"]) if sole else
+                                   "%s %s" % (rank_text(r), r["owner"]))
                 if first_cx is None:
                     first_cx = cx
             else:
                 circle(s, cx, cy, 5, plain)
+        xe = x0 + len(rows) * step
+        s.text(xe, cy + 4, "1 account" if sole else "%d accounts" % len(rows), 11, ink="ink2")
         if team_labels:
             # one label line per row, in rank order, so no label drops to a second line
             text = " · ".join(team_labels)
             lx = min(first_cx - 7, W - mc.tw(text, 11) - 4)
-            lines[0].append((lx - 4, lx + mc.tw(text, 11) + 4))
             s.text(lx, cy + 24, text, 11, weight="600", check=False)
-        xe = x0 + len(rows) * step
-        s.text(xe, cy + 4, "%d accounts" % len(rows), 11, ink="ink2")
-        if b["final"]:
-            xf = xe + mc.tw("%d accounts" % len(rows), 11) + 22
-            for j, r in enumerate(b["final"]):
-                cx = xf + j * step
-                mine = r["owner"] in TEAM
-                sole = len(b["final"]) == 1       # a one-account board has no rank: neutral marker, "only entry"
-                diamond(s, cx, cy, 7 if mine else 5.5, team_c if mine else plain)   # a team result is always marked as ours
-                if mine and sole:
-                    s.text(W, cy + 24, "final board: %s, only entry" % r["owner"], 11,
-                           anchor="end", weight="600", check=False)
-                elif mine:
-                    place_label(s, cx - 7, cy + 24, "%s %s (final)" % (rank_text(r), r["owner"]), lines)
-            if not (len(b["final"]) == 1 and b["final"][0]["owner"] in TEAM):
-                s.text(xf + len(b["final"]) * step - 6, cy + 4,
-                       "%d on final board" % len(b["final"]), 11, ink="ink2")
     s.write(path, "Competition hills: accounts per board in rank order, ties grouped, team members highlighted")
 
 
