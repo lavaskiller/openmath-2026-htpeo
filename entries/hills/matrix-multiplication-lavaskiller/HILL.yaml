@@ -1,0 +1,5 @@
+# Extra text for the README hill-results row (tools/make_results_table.py).
+result: "rank 23, support 139; not the leading score (leader: support 138); known scheme from the Heule-Kauers-Seidl database, not claimed as new mathematics"
+result_ko: "rank 23, support 139; 선두 점수가 아님(선두는 support 138); Heule-Kauers-Seidl 데이터베이스의 알려진 scheme이며 새 수학으로 주장하지 않음"
+files: "solution, signed report, notes, code"
+files_ko: "해, 서명된 보고서, 기록, 코드"
