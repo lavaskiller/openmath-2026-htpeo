@@ -92,7 +92,7 @@ def hill_rows(root, lang, boards):
                 extra = load(os.path.join(root, folder, "HILL.yaml"))
             if extra.get("result"):
                 res = [extra.get("result_ko") if ko and extra.get("result_ko") else extra["result"]]
-            if os.path.exists(os.path.join(root, folder, "report.json")):
+            if os.path.exists(os.path.join(root, folder, "report.json")) or extra.get("files"):
                 what = extra.get("files_ko" if ko else "files") or ("해, 서명된 보고서" if ko else "solution, signed report")
             else:
                 what = "담당 팀원이 파일 추가 예정" if ko else "files to be added by its owner"
@@ -101,7 +101,8 @@ def hill_rows(root, lang, boards):
             lead = 0 if (v and v["rank"] == 1 and v["tied"] == 1) else (1 if (v and v["rank"] == 1) else 2)
             rows.append(((lead, best, i),
                          (name, "@" + o, "hill 결과" if ko else "hill result", "; ".join(res), "; ".join(st),
-                          "hill 평가기(Python), Lean 산출물 없음" if ko else "hill evaluator (Python), no Lean artifact",
+                          (extra.get("verification_ko") if ko and extra.get("verification_ko") else extra.get("verification"))
+                          or ("hill 평가기(Python), Lean 산출물 없음" if ko else "hill evaluator (Python), no Lean artifact"),
                           files)))
     rows.sort(key=lambda t: t[0])
     return [t[1] for t in rows]

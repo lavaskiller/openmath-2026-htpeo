@@ -1,0 +1,5 @@
+name = "LeanProject"
+defaultTargets = ["LeanProject"]
+
+[[lean_lib]]
+name = "LeanProject"
