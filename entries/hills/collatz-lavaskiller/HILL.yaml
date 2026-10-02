@@ -1,0 +1,5 @@
+# Extra text for the README hill-results row (tools/make_results_table.py).
+result: "coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 234; not a leading score (leaders use 3 rules); known kind of certificate, not claimed as new mathematics"
+result_ko: "coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 234; 선두 점수가 아님(선두는 규칙 3개); 알려진 종류의 인증서이며 새 수학으로 주장하지 않음"
+files: "solution, signed report, notes, code"
+files_ko: "해, 서명된 보고서, 기록, 코드"
