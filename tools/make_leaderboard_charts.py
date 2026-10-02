@@ -168,13 +168,22 @@ def chart_overview(boards, theme, path):
                 s.rect(xa, cy - 11, xb - xa, 22, BAND[theme], rx=11)
                 s.text((xa + xb) / 2, cy - 15, "%d tied" % k, 10, anchor="middle", ink="ink2")
             j += k
+        team_labels, first_cx = [], None
         for j, r in enumerate(rows):
             cx = x0 + j * step
             if r["owner"] in TEAM:
                 circle(s, cx, cy, 7, team_c)
-                place_label(s, cx - 7, cy + 24, "%s %s" % (rank_text(r), r["owner"]), lines)
+                team_labels.append("%s %s" % (rank_text(r), r["owner"]))
+                if first_cx is None:
+                    first_cx = cx
             else:
                 circle(s, cx, cy, 5, plain)
+        if team_labels:
+            # one label line per row, in rank order, so no label drops to a second line
+            text = "  ·  ".join(team_labels)
+            lx = min(first_cx - 7, W - mc.tw(text, 11) - 4)
+            lines[0].append((lx - 4, lx + mc.tw(text, 11) + 4))
+            s.text(lx, cy + 24, text, 11, weight="600", check=False)
         xe = x0 + len(rows) * step
         s.text(xe, cy + 4, "%d accounts" % len(rows), 11, ink="ink2")
         if b["final"]:
@@ -208,9 +217,10 @@ def chart_ramsey(board, theme, path):
     xl, xr = 250, 610
     zero = xl + (xr - xl) * (0 - lo) / (hi - lo)
     s.text(zero, top - 8, "reference", 11, anchor="middle", ink="ink2")
+    ours = next((r["owner"] for r in rows if r["owner"] in TEAM), None)   # best team account = this repository's entry
     for i, (r, v) in enumerate(zip(rows, vals)):
         y = top + i * row_h
-        mine = r["owner"] in TEAM
+        mine = r["owner"] == ours
         s.text(138, y + 15, "%s %s" % (rank_text(r), r["owner"]), 12, anchor="end", weight="600" if mine else None)
         w = (xr - xl) * abs(v) / (hi - lo)
         txt = ("+" if v > 0 else "−" if v < 0 else "") + "{:,}".format(abs(v))
@@ -221,7 +231,7 @@ def chart_ramsey(board, theme, path):
             s.rect(zero - w, y + 3, w, 16, plain, rx=3)
             s.text(zero - w - 6, y + 15, txt, 12, anchor="end")
     s.line(zero, top - 2, zero, top + row_h * len(rows) - 4, "axis")
-    s.text(0, s.h - 4, "Blue: team accounts. Bars left of the line do not beat the reference "
+    s.text(0, s.h - 4, "Blue: the entry of this repository. Bars left of the line do not beat the reference "
            "(reference_beaten = 0).", 11, ink="ink2")
     s.write(path, "Ramsey validation board: improvement over the hill reference per account")
 
