@@ -53,10 +53,10 @@
 <circle cx="430.0" cy="244.0" r="5.0" fill="#9a9892"/>
 <circle cx="452.0" cy="244.0" r="5.0" fill="#9a9892"/>
 <circle cx="474.0" cy="244.0" r="5.0" fill="#9a9892"/>
-<text x="225.0" y="268.0" font-size="11" text-anchor="start" fill="#1f2328" font-weight="600">#1 lavaskiller  ·  #5 hl728  ·  #8 n0rang2</text>
+<text x="225.0" y="268.0" font-size="11" text-anchor="start" fill="#1f2328" font-weight="600">#1 lavaskiller · #5 hl728 · #8 n0rang2</text>
 <text x="496.0" y="248.0" font-size="11" text-anchor="start" fill="#52514e">12 accounts</text>
 <path d="M585.8 237.0 L592.8 244.0 L585.8 251.0 L578.8 244.0 Z" fill="#2a78d6"/>
-<text x="720.0" y="268.0" font-size="11" text-anchor="end" fill="#1f2328" font-weight="600">final (held-out) board: hl728, only entry (1 account)</text>
+<text x="720.0" y="268.0" font-size="11" text-anchor="end" fill="#1f2328" font-weight="600">final board: hl728, only entry</text>
 <line x1="0.0" y1="280.0" x2="720.0" y2="280.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="0.0" y="312.0" font-size="13" text-anchor="start" fill="#1f2328" font-weight="600">3x3 matrix-multiplication tensor</text>
 <rect x="244.00" y="297.00" width="130.00" height="22.00" fill="#ecebe6" rx="11"/>

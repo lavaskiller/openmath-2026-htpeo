@@ -180,7 +180,7 @@ def chart_overview(boards, theme, path):
                 circle(s, cx, cy, 5, plain)
         if team_labels:
             # one label line per row, in rank order, so no label drops to a second line
-            text = "  ·  ".join(team_labels)
+            text = " · ".join(team_labels)
             lx = min(first_cx - 7, W - mc.tw(text, 11) - 4)
             lines[0].append((lx - 4, lx + mc.tw(text, 11) + 4))
             s.text(lx, cy + 24, text, 11, weight="600", check=False)
@@ -194,7 +194,7 @@ def chart_overview(boards, theme, path):
                 sole = len(b["final"]) == 1       # a one-account board has no rank: neutral marker, "only entry"
                 diamond(s, cx, cy, 7 if mine else 5.5, team_c if mine else plain)   # a team result is always marked as ours
                 if mine and sole:
-                    s.text(W, cy + 24, "final (held-out) board: %s, only entry (1 account)" % r["owner"], 11,
+                    s.text(W, cy + 24, "final board: %s, only entry" % r["owner"], 11,
                            anchor="end", weight="600", check=False)
                 elif mine:
                     place_label(s, cx - 7, cy + 24, "%s %s (final)" % (rank_text(r), r["owner"]), lines)
