@@ -1,52 +1,116 @@
-# codex (GPT) usage on the server. TODO STUB: no numbers were collected.
-# Reason: on 2026-10-03 (KST) the server could not be reached from the laptop session that wrote this repository.
-reported_by: "helper-team-repo (Claude Code agent); stub, to be completed by the operator"
-period: {from: "TODO", to: "TODO"}
-status: "TODO - not collected"
-how_to_collect:
-  - "copy tools/sum_codex_usage.py and archive/stats/codex_server_attribution_rules.json to ~/team-stats/ on the server (write only under ~/team-stats/)"
-  - "cd ~/m_harness/harness && ~/.venvs/mh/bin/python -m danus.ops.jobs star6 teamstats 2G -- python3 ~/team-stats/sum_codex_usage.py ~/.codex/sessions --rules ~/team-stats/codex_server_attribution_rules.json --tz-hours 9 --since 2026-09-27T00:00:00+09:00 --until 2026-10-04T00:00:00+09:00 --sessions --json ~/team-stats/codex_usage.json"
-  - "check the 'unattributed' group in the output (sessions whose cwd matches no rule) and extend the rules if needed; audit / verification runs belong to dms-star6"
-  - "fill the rows below from by_group (one row per entry and model), by_date into by_date_kst, and record the command and the time of the run in source"
-  - "codex input_tokens includes cached input: put input_uncached into input_tokens and cached_input into cache_read_tokens; cache_write_tokens does not exist for codex (null)"
-ai_usage:
+# codex (GPT) usage on the server, all rollouts under ~/.codex/sessions. Numbers only.
+# Collected 2026-10-02 16:04 UTC (2026-10-03 01:04 KST) with tools/sum_codex_usage.py, run as a harness job (unit mh-job-teamstats-160432-r0).
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-09-28 04:21 KST", to: "2026-10-03 00:21 KST"}   # first and last token_count time stamps (19:21Z 09-27 .. 15:21Z 10-02)
+ai_usage:                         # input_tokens = uncached input; cache_read_tokens = cached input; output_tokens includes reasoning
   - entry: "ramsey-k4-multiplicity"
     provider: "OpenAI"
-    model: "TODO (recorded as gpt-6-sol in the packet)"
+    model: "gpt-6-sol"
     interface: "codex CLI"
-    account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
+    account_plan: "server account, subscription plan (plan_type prolite in the rollouts)"
+    sessions: 3
+    input_tokens: 459277
+    output_tokens: 112386
+    cache_read_tokens: 19127936
     cache_write_tokens: null
     cost_usd: null
-    plan_usage: "TODO"
-    source: "TODO: sessions with cwd under the Erdos work directory named ramseyfast, ramseylimit, ramseymono"
-  - entry: "dms-star6"
-    provider: "OpenAI"
-    model: "TODO (recorded as gpt-6-sol in the pack READMEs, GPT-5.6-sol in packet v3)"
-    interface: "codex CLI"
-    account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: null
-    cost_usd: null
-    plan_usage: "TODO"
-    source: "TODO: star6 GPT workers (workers/gpt-*), cross-check audits and verification runs, sessions dmspet and dmsiff"
+    plan_usage: "see plan_usage_by_date"
+    source: "by_group; sessions ramseyfast, ramseylimit, ramseymono (2026-10-02); reasoning 55432 of the output; session wall time 1.77 h in total (first to last record)"
   - entry: "erdos-m2-formalizations"
     provider: "OpenAI"
-    model: "TODO (recorded as gpt-6-sol in the packet)"
+    model: "gpt-6-sol"
     interface: "codex CLI"
-    account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
+    account_plan: "server account, subscription plan (plan_type prolite in the rollouts)"
+    sessions: 21
+    input_tokens: 3715728
+    output_tokens: 854854
+    cache_read_tokens: 202473856
     cache_write_tokens: null
     cost_usd: null
-    plan_usage: "weekly window 0% at 2026-10-02 08:20 KST, 12% at 18:10 KST (project log PLAN.md, hand-written; all codex use of that day)"
-    source: "TODO: all other sessions with cwd under the Erdos work directory"
-notes: "Stub. tools/sum_codex_usage.py was tested only on six unrelated local codex rollouts on the laptop (format check: session totals equal the last cumulative token_count record); it has not been run on the server data."
+    plan_usage: "see plan_usage_by_date"
+    source: "by_group; 21 sessions gptA..gptJ, w3a..w3f, adv1..adv5 (2026-10-02, the last increments on 2026-10-03 KST); reasoning 452632; session wall time 9.6 h in total, longest 2.26 h"
+  - entry: "dms-star6"
+    provider: "OpenAI"
+    model: "gpt-6-sol"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan (plan_type prolite in the rollouts)"
+    sessions: 510
+    input_tokens: 46446618
+    output_tokens: 7703841
+    cache_read_tokens: 1536066560
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "see plan_usage_by_date"
+    source: "by_group; star6 GPT workers, verify/audit agent, sessions dmspet, dmsiff, inflate; reasoning 4367657"
+  - entry: "dms-star6"
+    provider: "OpenAI"
+    model: "gpt-5.6-sol"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan (plan_type plus, later prolite, in the rollouts)"
+    sessions: 386
+    input_tokens: 33208951
+    output_tokens: 3276308
+    cache_read_tokens: 490652544
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "see plan_usage_by_date"
+    source: "by_group; verify/audit agent 2026-09-28 .. 09-30; reasoning 1811033"
+  - entry: "dms-star6"
+    provider: "OpenAI"
+    model: "gpt-6-astra"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan"
+    sessions: 7
+    input_tokens: 137341
+    output_tokens: 7010
+    cache_read_tokens: 675072
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: ""
+    source: "by_group; reasoning 2304"
+  - entry: "dms-star6"
+    provider: "OpenAI"
+    model: "gpt-5.5"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan"
+    sessions: 1
+    input_tokens: 7795
+    output_tokens: 17
+    cache_read_tokens: 4480
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: ""
+    source: "by_group; one test session 2026-09-28"
+totals:
+  rollouts_found: 972
+  sessions_with_usage: 928
+  input_uncached: 83975710
+  cached_input: 2249000448
+  output: 11954416
+  reasoning_output: 6689068
+  total_tokens: 2344930574
+dms_by_session_dir:               # total tokens (input incl. cached + output) per working directory group, from the --sessions table
+  - {where: "verify/audit agent (server)", sessions: 802, total_tokens: 795001848}
+  - {where: "verify/audit agent (run from the laptop WSL path, 2026-09-28)", sessions: 20, total_tokens: 16497987}
+  - {where: "star6 worker gpt-compute", sessions: 18, total_tokens: 477378459}
+  - {where: "star6 worker gpt-joker", sessions: 19, total_tokens: 433206716}
+  - {where: "star6 worker gpt-core", sessions: 31, total_tokens: 386096467}
+  - {where: "formalization sessions dmsiff, dmspet, inflate", sessions: 3, total_tokens: 8324957}
+  - {where: "project root and temporary directories", sessions: 11, total_tokens: 1680103}
+by_date_kst:                      # all entries; increments placed at their own time stamps; sessions counted at their start date
+  - {date: "2026-09-28", input_uncached: 2098355, cached_input: 25971328, output: 212879, sessions: 37}
+  - {date: "2026-09-29", input_uncached: 12089540, cached_input: 165912192, output: 1189894, sessions: 152}
+  - {date: "2026-09-30", input_uncached: 21312499, cached_input: 324721536, output: 2073518, sessions: 231}
+  - {date: "2026-10-01", input_uncached: 36542102, cached_input: 1208003584, output: 5800449, sessions: 433}
+  - {date: "2026-10-02", input_uncached: 11864827, cached_input: 519372160, output: 2657670, sessions: 75}
+  - {date: "2026-10-03", input_uncached: 68387, cached_input: 5019648, output: 20006, sessions: 0}
+plan_usage_by_date:               # min..max of used_percent in the rate-limit snapshots stored in the rollouts (KST dates); resets are visible as returns to 0
+  - {date: "2026-09-28", five_hour_window: "0..100", weekly_window: "0..25"}
+  - {date: "2026-09-29", five_hour_window: "0..100", weekly_window: "0..42 (plan changed during the day: afterwards a single weekly window, 0..26)"}
+  - {date: "2026-09-30", weekly_window: "27..81"}
+  - {date: "2026-10-01", weekly_window: "0..100 (limit reached; at least one reset)"}
+  - {date: "2026-10-02", weekly_window: "0..100 (reset to 0 during the day)"}
+  - {date: "2026-10-03", weekly_window: "18..19"}
+plan_types_seen: "prolite in 24103 snapshots, plus in 803, none in 42"
+command: "python3 ~/team-stats/sum_codex_usage.py ~/.codex/sessions --rules ~/team-stats/codex_server_attribution_rules.json --tz-hours 9 --sessions --json ~/team-stats/codex_usage.json (outputs kept on the server in ~/team-stats/)"
+notes: "All 928 sessions with usage matched a cwd rule (archive/stats/codex_server_attribution_rules.json); none unattributed. 44 rollouts carry no token_count record. Verify/audit cross-check runs and the three GPT workers of the star6 run are counted under dms-star6. Session wall times are first-to-last record of a rollout. No cost is reported by codex for subscription use. The weekly-window percentages are the tool's own snapshots, not a billing statement."

@@ -17,18 +17,18 @@ ai_usage:
     counted_in: "archive/stats/claude-laptop.yaml"
     source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 300 of 306 messages have only a stream-start usage record; visible assistant content of these sessions is 449906 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
   - provider: "OpenAI"
-    model: "TODO: server not reachable on 2026-10-03 (recorded as gpt-6-sol in the packet)"
+    model: "gpt-6-sol"
     interface: "codex CLI (server; sessions ramseyfast, ramseylimit, ramseymono)"
     account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: "TODO"
+    sessions: 3
+    input_tokens: 459277
+    output_tokens: 112386
+    cache_read_tokens: 19127936
+    cache_write_tokens: null
     cost_usd: null
-    plan_usage: "TODO"
+    plan_usage: "see archive/stats/server-codex.yaml"
     counted_in: "archive/stats/server-codex.yaml"
-    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+    source: "tools/sum_codex_usage.py on the server, 2026-10-03 01:04 KST; 3 sessions; input = uncached input, cache_read = cached input, output includes 55432 reasoning tokens; session wall time 1.77 h"
 compute:
   - machine: "16-core server, 14 GB RAM"
     purpose: "search (search/v2: SA/tabu, block splitting, weight optimisation, exact re-scoring), 2026-10-02"
@@ -81,4 +81,4 @@ attempts:
     - "certificate with several blocks per declaration: one file exceeded 5 GB; split to one block and colour per file (CERT_STATUS.md)"
     - "test compile without a memory cap reached 13 GB and was OOM-killed on the server, 2026-10-02 18:37 KST (project log PLAN.md)"
     - "search moves that did not help: see archive/findings/ramsey-search.md"
-notes: "Claude usage of the steering session and all server-side usage are not in this file's counted rows; see archive/stats/. Human time is left for the operator."
+notes: "The usage rows here are copies (counted_in) of rows in archive/stats/. Claude usage of the steering session is under shared/steering. Search wall time on the server: logs from 2026-10-01 23:55 UTC to 2026-10-02 11:12 UTC (11.3 h), consistent with the packet's 12 h; CPU time not recorded. Human time is left for the operator."

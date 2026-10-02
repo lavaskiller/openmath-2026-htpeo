@@ -17,25 +17,25 @@ ai_usage:
     counted_in: "archive/stats/claude-laptop.yaml"
     source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 212 of 228 messages have only a stream-start usage record; visible assistant content of these sessions is 332984 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
   - provider: "OpenAI"
-    model: "TODO: server not reachable on 2026-10-03 (recorded as gpt-6-sol in the packet)"
+    model: "gpt-6-sol"
     interface: "codex CLI (server; unattended sessions under the Erdos work directory)"
     account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: "TODO"
+    sessions: 21
+    input_tokens: 3715728
+    output_tokens: 854854
+    cache_read_tokens: 202473856
+    cache_write_tokens: null
     cost_usd: null
     plan_usage: "weekly window 0% at 2026-10-02 08:20 KST, 12% at 18:10 KST (project log PLAN.md, hand-written; includes the Ramsey and DMS codex sessions of that day)"
     counted_in: "archive/stats/server-codex.yaml"
-    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+    source: "tools/sum_codex_usage.py on the server, 2026-10-03 01:04 KST; 21 sessions (gptA..gptJ, w3a..w3f, adv1..adv5); input = uncached input, cache_read = cached input, output includes 452632 reasoning tokens"
 compute:
   - machine: "16-core server, 14 GB RAM"
     purpose: "Lean compilation of candidate proofs by the codex sessions and the re-check of the bundle (lake env lean per file)"
-    wall_hours: "TODO"
-    cpu_hours: "TODO: not recorded in the artifact; each file compiles in about a minute (PACKET.md section 7); server not reachable on 2026-10-03"
+    wall_hours: 9.6
+    cpu_hours: "TODO: not recorded; each file compiles in about a minute (PACKET.md section 7)"
     peak_memory_gb: "TODO"
-    source: "not collected"
+    source: "wall_hours = sum of first-to-last record time of the 21 codex rollouts (longest 2.26 h); this is session time (model + compilation), sessions ran in parallel - an estimate, not CPU time"
 human_time:
   - person: "TODO: operator"
     hours: "TODO"
@@ -57,4 +57,4 @@ attempts:
     - "E649 was called new in packet v1; wrong (already in plby/lean-proofs); moved to optional in v2"
     - "third triage: 326 candidates skipped as hard, 12 failed (project log PLAN.md, 2026-10-02, hand-written)"
     - "E617 r_eq_3 still in progress when the packet was generated; not included"
-notes: "All proofs were produced by codex sessions on the server; their token usage is not collected yet (archive/stats/server-codex.yaml is a TODO stub). The laptop numbers cover only the Claude helper sessions that verified, searched prior art and wrote the packet."
+notes: "The usage rows here are copies (counted_in) of rows in archive/stats/. All proofs were produced by the codex sessions on the server; the laptop numbers cover only the Claude helper sessions that verified, searched prior art and wrote the packet."

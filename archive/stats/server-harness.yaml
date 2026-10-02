@@ -1,44 +1,129 @@
-# star6 agent harness usage on the server (Claude workers, verify service, supervisor, decomposer, reviewer, audits).
-# TODO STUB: no numbers were collected.
-# Reason: on 2026-10-03 (KST) the server could not be reached from the laptop session that wrote this repository.
-reported_by: "helper-team-repo (Claude Code agent); stub, to be completed by the operator"
-period: {from: "TODO", to: "TODO"}
-status: "TODO - not collected"
-how_to_collect:
-  - "the script is scripts/mh-export-usage.sh in the harness repository: usage 'scripts/mh-export-usage.sh star6 [out.tar.gz] [--since YYYY-MM-DD]'"
-  - "as read in the laptop copy of the script (2026-10-03): it copies the whole project (workers, overnight, reviewer, fact_graph, verify runs, codex sessions, Claude transcripts) to a temporary staging directory, builds INDEX.json there and then makes the tarball; INDEX.json cannot be produced without the staging copy unless the embedded Python part is run directly on the live directories"
-  - "run it as a job, output under ~/team-stats/: cd ~/m_harness/harness && ~/.venvs/mh/bin/python -m danus.ops.jobs star6 teamstats 2G -- bash scripts/mh-export-usage.sh star6 ~/team-stats/ai-usage-star6.tar.gz"
-  - "keep the tarball on the server; record only: sha256sum ~/team-stats/ai-usage-star6.tar.gz"
-  - "extract the index only: tar -xzf ~/team-stats/ai-usage-star6.tar.gz -C ~/team-stats ./INDEX.json"
-  - "sum INDEX.json runs per (role, model): number of runs, output_tokens, cost_usd; record the date range of the logs"
-  - "limit of the script as written: an INDEX.json row has role, model, cost_usd, output_tokens, turns - it does NOT carry input or cache tokens. For input/cache tokens run tools/sum_claude_usage.py on the claude-sessions/ part (the server-side Claude Code project folders of the star6 project)"
-  - "the staging copy needs free disk space of about the project size and /tmp is used by mktemp: check df first"
-bundle:
-  path_on_server: "TODO"
-  sha256: "TODO"
-  size: "TODO"
-ai_usage:
+# star6 agent harness: Claude usage on the server account (workers, verify service, supervisor, decomposer, reviewer, falsifier).
+# Numbers only. Collected 2026-10-02 16:04 UTC (2026-10-03 01:04 KST) as a harness job (unit mh-job-teamstats-160432-r0).
+# Two independent sources: (A) Claude Code session transcripts on the server - used for the token rows below;
+# (B) the stream-json run logs of the harness - used for the cost figure, the per-role table and the coverage.
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-09-28 02:07 KST", to: "2026-10-02 01:22 KST"}   # first and last message time stamps in the transcripts (17:07Z 09-27 .. 16:22Z 10-01)
+ai_usage:                         # tokens from source A (transcripts); cost_usd from source B (run logs), a LOWER BOUND
   - entry: "dms-star6"
     provider: "Anthropic"
-    model: "TODO (Claude Opus / Sonnet; exact ids from INDEX.json)"
-    interface: "agent harness (Claude Code headless workers, verifier, supervisor)"
+    model: "claude-opus-5-5"
+    interface: "agent harness (Claude Code headless sessions)"
     account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: "TODO"
-    cost_usd: "TODO (INDEX.json: claude_api_equivalent_cost_usd)"
-    plan_usage: "TODO; hand-written log: weekly window 99% on 2026-10-01 23:25 KST, Claude workers stopped from 15:49 that day until the deadline (PLAN.md)"
-    source: "TODO"
-by_role: "TODO: table role x model (runs, output tokens, cost) from INDEX.json"
-compute:
+    sessions: 1151
+    input_tokens: 53814
+    output_tokens: 52673273
+    cache_read_tokens: 6057023868
+    cache_write_tokens: 140584995
+    cost_usd: 2819.74
+    plan_usage: "hand-written project log: weekly window 99% on 2026-10-01 23:25 KST; Claude workers stopped from 15:49 KST that day"
+    source: "A: tools/sum_claude_usage.py over each folder of the server's Claude Code project directory (39 folders), 26798 messages. sessions = 1151 transcripts of ALL models, counted once on this row. cost: B, modelUsage.costUSD summed over 1103 runs with a result record (API list-price equivalent as reported by the tool; nothing was billed per token)"
+  - entry: "dms-star6"
+    provider: "Anthropic"
+    model: "claude-sonnet-5"
+    interface: "agent harness (Claude Code headless sessions)"
+    account_plan: "server account, subscription plan"
+    sessions: null
+    input_tokens: 8974
+    output_tokens: 8214758
+    cache_read_tokens: 738979565
+    cache_write_tokens: 17541014
+    cost_usd: 191.03
+    plan_usage: ""
+    source: "A, 4487 messages (worker compute); cost from B"
+  - entry: "dms-star6"
+    provider: "Anthropic"
+    model: "claude-fable-5-1"
+    interface: "agent harness (Claude Code headless sessions)"
+    account_plan: "server account, subscription plan"
+    sessions: null
+    input_tokens: 27596
+    output_tokens: 6242202
+    cache_read_tokens: 326183572
+    cache_write_tokens: 20186556
+    cost_usd: 704.16
+    plan_usage: ""
+    source: "A, 939 messages (workers opar and core, 2026-09-29/30); cost from B"
+  - entry: "dms-star6"
+    provider: "Anthropic"
+    model: "claude-haiku-4-5-20251001"
+    interface: "agent harness (side model of the tool)"
+    account_plan: "server account, subscription plan"
+    sessions: null
+    input_tokens: 424
+    output_tokens: 3634
+    cache_read_tokens: 966566
+    cache_write_tokens: 81063
+    cost_usd: 3.03
+    plan_usage: ""
+    source: "A, 43 messages. B reports 2149540 input and 41097 output tokens for this side model (tool-internal calls that are not stored in the transcripts); those are NOT in the token columns of this row"
+totals_transcripts:               # source A
+  transcripts: 1151
+  messages: 32267
+  messages_without_final_usage: 1
+  input_tokens: 90808
+  output_tokens: 67133867
+  cache_read_tokens: 7123153571
+  cache_write_tokens: 178393628
+by_role_transcripts:              # source A, by project folder of the session
+  - {role: "worker opar", transcripts: 48, input_tokens: 27534, output_tokens: 12910503, cache_read_tokens: 1429355504, cache_write_tokens: 31346847}
+  - {role: "worker lean", transcripts: 40, input_tokens: 10384, output_tokens: 11572458, cache_read_tokens: 1904231466, cache_write_tokens: 19799018}
+  - {role: "worker core", transcripts: 35, input_tokens: 13268, output_tokens: 11334919, cache_read_tokens: 1272478747, cache_write_tokens: 17648791}
+  - {role: "worker compute", transcripts: 85, input_tokens: 10666, output_tokens: 11156641, cache_read_tokens: 1255671344, cache_write_tokens: 20815066}
+  - {role: "verify agent (LLM verifier)", transcripts: 782, input_tokens: 20384, output_tokens: 15338205, cache_read_tokens: 812216898, cache_write_tokens: 74181373}
+  - {role: "reviewer", transcripts: 35, input_tokens: 3162, output_tokens: 1466143, cache_read_tokens: 152846641, cache_write_tokens: 4214863}
+  - {role: "falsifier", transcripts: 29, input_tokens: 1480, output_tokens: 1391761, cache_read_tokens: 80724237, cache_write_tokens: 3801469}
+  - {role: "decomposer", transcripts: 12, input_tokens: 1622, output_tokens: 1359730, cache_read_tokens: 158376606, cache_write_tokens: 3049323}
+  - {role: "supervisor", transcripts: 42, input_tokens: 1880, output_tokens: 599865, cache_read_tokens: 56248913, cache_write_tokens: 3439634}
+  - {role: "other (overnight folder, temporary directory)", transcripts: 43, input_tokens: 428, output_tokens: 3642, cache_read_tokens: 1003215, cache_write_tokens: 97244}
+by_date_kst_transcripts:          # source A
+  - {date: "2026-09-28", input_tokens: 18029, output_tokens: 18399079, cache_read_tokens: 1812463535, cache_write_tokens: 38322464}
+  - {date: "2026-09-29", input_tokens: 24593, output_tokens: 19264672, cache_read_tokens: 2259032896, cache_write_tokens: 45449332}
+  - {date: "2026-09-30", input_tokens: 27394, output_tokens: 13542842, cache_read_tokens: 1570274163, cache_write_tokens: 41841530}
+  - {date: "2026-10-01", input_tokens: 20436, output_tokens: 15634952, cache_read_tokens: 1472953516, cache_write_tokens: 51634138}
+  - {date: "2026-10-02", input_tokens: 356, output_tokens: 292322, cache_read_tokens: 8429461, cache_write_tokens: 1146164}
+run_logs:                         # source B: tools/sum_harness_usage.py over 2816 log files
+  total: {runs_with_result_record: 1103, runs_without_result_record: 60, input_tokens: 2250455, output_tokens: 53681358, cache_read_tokens: 6715581463, cache_write_tokens: 169942776, cost_usd: 3717.96}
+  by_role:                        # final = runs with a result record; partial = stream present but no result record (counted from message usage, no cost)
+    - {role: "verify", final: 915, partial: 9, output_tokens: 16674343, cost_usd: 1148.47}
+    - {role: "worker opar", final: 26, partial: 15, output_tokens: 10154796, cost_usd: 939.08}
+    - {role: "worker lean", final: 25, partial: 11, output_tokens: 8852985, cost_usd: 619.22}
+    - {role: "worker core", final: 19, partial: 14, output_tokens: 7020519, cost_usd: 445.67}
+    - {role: "worker compute", final: 59, partial: 9, output_tokens: 9023506, cost_usd: 432.43}
+    - {role: "decomposer", final: 10, partial: 1, output_tokens: 1368030, cost_usd: 83.34}
+    - {role: "supervisor", final: 48, partial: 1, output_tokens: 587179, cost_usd: 49.74}
+  by_date_kst_cost_usd: {"2026-09-28": 533.62, "2026-09-29": 1154.88, "2026-09-30": 1085.97, "2026-10-01": 927.00, "2026-10-02": 16.49}
+  not_claude_stream_logs: "1651 of the 2816 log files contain no Claude stream-json: 832 verify-run logs, 465 audit logs, 236 service/job logs, 104 GPT-worker round logs, 7 reviewer, 6 decomposer, 1 falsifier. GPT usage of those is in server-codex.yaml."
+compute:                          # star6 job records: overnight/jobs/*.json (695 specs). Duration = log file mtime - start time: an ESTIMATE of wall time; CPU time is not recorded
   - entry: "dms-star6"
     machine: "16-core server, 14 GB RAM"
-    purpose: "all star6 jobs (job specs with start times in the project's overnight/jobs/*.json; systemd user units mh-*)"
-    wall_hours: "TODO"
-    cpu_hours: "TODO: systemctl --user show <unit> -p CPUUsageNSec -p ExecMainStartTimestamp -p ExecMainExitTimestamp, where the unit records still exist"
-    peak_memory_gb: "TODO"
-    counted_in: "entries/dms-star6/STATS.yaml"
-    source: "TODO"
-notes: "Stub. GPT usage of the harness (GPT workers and audits run through codex) belongs to archive/stats/server-codex.yaml, not here, so that it is counted once."
+    purpose: "star6 worker computations (censuses, SAT, exhaustive checks): 213 jobs, cap 2G each, 2026-10-01 02:33 .. 10-02 05:21 KST, 8 retries"
+    wall_hours: 7.24
+    cpu_hours: "TODO: not recorded (systemd unit records are gone; 1 unit left)"
+    peak_memory_gb: 2
+    source: "~/team-stats/sum_jobs.py over the job specs; wall = sum of (log mtime - started), estimate; longest job 0.51 h; peak = the cap, not a measurement"
+  - entry: "dms-star6"
+    machine: "16-core server, 14 GB RAM"
+    purpose: "GPT cross-check audit jobs: 453 jobs (caps 4G: 278, 8G: 171, 3G: 4), 2026-09-28 16:04 .. 10-02 01:14 KST, 29 retries"
+    wall_hours: 50.59
+    cpu_hours: "TODO: not recorded; mostly waiting on the model, plus Lean library builds inside some audits"
+    peak_memory_gb: 8
+    source: "as above; estimate; longest 1.84 h"
+  - entry: "dms-star6"
+    machine: "16-core server, 14 GB RAM"
+    purpose: "review / decompose / consult agent runs as jobs: 14 jobs (11 with a duration), caps 2-3G"
+    wall_hours: 18.18
+    cpu_hours: "TODO: not recorded"
+    peak_memory_gb: 3
+    source: "as above; estimate; longest 5.85 h"
+  - entry: "dms-star6"
+    machine: "16-core server, 14 GB RAM"
+    purpose: "Lean setup and library checks as jobs (2026-09-29): 6 jobs, caps 6-12G, 1 retry"
+    wall_hours: 0.36
+    cpu_hours: "TODO: not recorded"
+    peak_memory_gb: 12
+    source: "as above; estimate"
+jobs_not_in_this_record: "The Ramsey search and certificate jobs, the Lean pack builds and the Erdos codex sessions were not star6 job specs with durations here (7 dmsiff/dmspet specs exist, started 2026-10-02 22:14-22:20 KST, cap 7G, no usable duration). Their figures are in the entries' STATS.yaml, from the artifacts."
+command: "bash ~/team-stats/run_all.sh via the harness job runner (python -m danus.ops.jobs star6 teamstats 2G -- ...); it ran sum_codex_usage.py, sum_harness_usage.py, sum_claude_usage.py per project folder and sum_jobs.py; outputs kept on the server in ~/team-stats/"
+bundle: "scripts/mh-export-usage.sh was NOT run (not needed for the sums; it would copy several GB into a staging directory). No tarball, no checksum."
+notes: "Why two sources: 60 runs have no result record (killed or timed out), and falsifier and reviewer runs have no stream-json run log, so source B is incomplete (53.7M output tokens against 67.1M in the transcripts). The transcripts have a final usage record for all but 1 of 32267 messages. cost_usd is therefore a lower bound: it covers the 1103 runs with a result record only. The star6 run started on the laptop (WSL) on 2026-09-27/28 before it moved to the server; Claude sessions of that first part are not on the server and are NOT included here (not collected; whether they still exist in the laptop WSL home was not checked). GPT usage of the harness is in server-codex.yaml."

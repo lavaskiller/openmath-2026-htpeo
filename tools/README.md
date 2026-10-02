@@ -7,6 +7,7 @@ Scripts shared by all entries: checksum generation/verification, usage summation
 | `make_checksums.sh write\|verify entries/<name>` | writes or verifies `artifact/SHA256SUMS` (refuses to overwrite an existing list unless `FORCE=1`) |
 | `sum_claude_usage.py <dir> [--since ISO] [--until ISO] [--rules rules.json] [--json out.json] [--files]` | sums `usage` per model over Claude Code transcripts (`*.jsonl`, including `subagents/`), de-duplicates message ids, splits by date (KST by default) and by group |
 | `sum_codex_usage.py [<dir>] [--since ISO] [--until ISO] [--rules rules.json] [--json out.json] [--sessions]` | sums codex rollouts (`~/.codex/sessions/**/*.jsonl`) from the cumulative `token_count` records, per model, date and cwd group |
+| `sum_harness_usage.py <project_dir> [--verify-runs DIR] [--json out.json]` | sums Claude usage of a harness run from its stream-json run logs (`result` records: tokens per model and API-equivalent cost), per role, model and date; reports runs without a result record as partial (lower bound) |
 | `summarize_stats.py [repo_root]` | reads `entries/*/STATS.yaml` and `archive/stats/*.yaml`, writes `archive/stats/SUMMARY.md` |
 
 Notes:
@@ -16,3 +17,4 @@ Notes:
 - `sum_codex_usage.py`: codex `input_tokens` includes cached input; the script reports uncached and cached input separately.
 - `summarize_stats.py`: rows with `counted_in:` are copies and are not added; a non-numeric value (e.g. `TODO`) is shown as `TODO`. It reads a simple YAML subset (see its docstring) or JSON.
 - Tested 2026-10-03: `sum_claude_usage.py` on the laptop transcripts of this project; `sum_codex_usage.py` on six unrelated local rollouts (format check only, not on the server data); `make_checksums.sh` on the three entries; `summarize_stats.py` on this repository.
+- Run on the server 2026-10-03 01:04 KST: `sum_codex_usage.py` (972 rollouts), `sum_harness_usage.py` (2,816 log files), `sum_claude_usage.py` (39 project folders).

@@ -17,31 +17,31 @@ ai_usage:
     counted_in: "archive/stats/claude-laptop.yaml"
     source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 1521 of 1771 messages have only a stream-start usage record; visible assistant content of these sessions is 2860293 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
   - provider: "Anthropic"
-    model: "TODO: server not reachable on 2026-10-03 (Claude Opus / Sonnet workers, verifier, supervisor of the star6 harness run)"
-    interface: "agent harness (server)"
+    model: "claude-opus-5-5, claude-sonnet-5, claude-fable-5-1 (+ side model claude-haiku-4-5)"
+    interface: "agent harness (server; workers, verify agent, supervisor, decomposer, reviewer, falsifier)"
     account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: "TODO"
-    cost_usd: "TODO"
-    plan_usage: "TODO"
+    sessions: 1151
+    input_tokens: 90808
+    output_tokens: 67133867
+    cache_read_tokens: 7123153571
+    cache_write_tokens: 178393628
+    cost_usd: 3717.96
+    plan_usage: "see archive/stats/server-harness.yaml"
     counted_in: "archive/stats/server-harness.yaml"
-    source: "to be produced on the server with scripts/mh-export-usage.sh star6 (commands in archive/stats/server-harness.yaml)"
+    source: "tools/sum_claude_usage.py over the server Claude Code transcripts (all models together; per model in server-harness.yaml), 2026-10-03 01:04 KST. cost_usd: API list-price equivalent reported by the tool for the 1103 runs with a result record - a lower bound, nothing billed per token. The first part of the run on the laptop (2026-09-27/28) is not included."
   - provider: "OpenAI"
-    model: "TODO: server not reachable on 2026-10-03 (GPT workers gpt-*, audits, codex sessions dmspet, dmsiff)"
-    interface: "codex CLI (server)"
+    model: "gpt-6-sol, gpt-5.6-sol (+ gpt-6-astra, gpt-5.5: 8 sessions)"
+    interface: "codex CLI (server; GPT workers, verify/audit agent, sessions dmspet, dmsiff, inflate)"
     account_plan: "server account, subscription plan"
-    sessions: "TODO"
-    input_tokens: "TODO"
-    output_tokens: "TODO"
-    cache_read_tokens: "TODO"
-    cache_write_tokens: "TODO"
+    sessions: 904
+    input_tokens: 79800705
+    output_tokens: 10987176
+    cache_read_tokens: 2027398656
+    cache_write_tokens: null
     cost_usd: null
-    plan_usage: "TODO"
+    plan_usage: "see archive/stats/server-codex.yaml"
     counted_in: "archive/stats/server-codex.yaml"
-    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+    source: "tools/sum_codex_usage.py on the server, 2026-10-03 01:04 KST (all models together; per model in server-codex.yaml); input = uncached input, cache_read = cached input. By total tokens: verify/audit agent 811.5M (822 sessions), GPT workers 1296.7M (68 sessions), formalization sessions 8.3M (3 sessions)."
 compute:
   - machine: "16-core server, 14 GB RAM"
     purpose: "Lean build, pack3 on Lean 4.33.1, per module (98 modules)"
@@ -73,10 +73,17 @@ compute:
     cpu_hours: 0.04
     peak_memory_gb: 2.8
     source: "PACKET.md section 2.2: about 20 s per pack5 module (80 s - estimate), StarDMS2 73 s, 2.8 GB peak"
-  - machine: "16-core server, 14 GB RAM; laptop (WSL) on 2026-09-27/28"
-    purpose: "harness run: Lean gate rebuilds, exhaustive computations, SAT searches, censuses (2026-09-27 .. 2026-10-02)"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "harness jobs: 213 worker computations (7.24 h), 453 GPT audit jobs (50.59 h), 14 review/decompose/consult runs (18.18 h), 6 Lean setup/library checks (0.36 h)"
+    wall_hours: 76.37
+    cpu_hours: "TODO: not recorded (unit records gone)"
+    peak_memory_gb: 12
+    counted_in: "archive/stats/server-harness.yaml"
+    source: "job specs overnight/jobs/*.json; wall = sum of (log mtime - start), an estimate; jobs overlapped in time; peak = largest cap, not a measurement"
+  - machine: "laptop (WSL), 2026-09-27/28"
+    purpose: "first part of the harness run before the move to the server"
     wall_hours: "TODO"
-    cpu_hours: "TODO: needs the server job records (overnight/jobs/*.json, systemd units mh-*); server not reachable on 2026-10-03"
+    cpu_hours: "TODO: not collected"
     peak_memory_gb: "TODO"
     source: "not collected"
 human_time:
@@ -102,4 +109,4 @@ attempts:
     - "FE-ALLPM-D at 20 vertices refuted; TD-RED-POLE with threshold 10 false (artifact/informal/p16_REPORT.md, p23-pole_REPORT.md)"
     - "single-decide version of a GP window check hit the 6 GB cap and swap, 2026-10-02 13:38 UTC (artifact/lean/pack4/STATUS.md); split into chunk modules"
     - "49 refuted or abandoned approaches in the baseline ledger (PACKET.md section 3.3)"
-notes: "Server-side usage (harness workers, verifier, audits, codex sessions) is not collected yet: archive/stats/server-harness.yaml and server-codex.yaml are TODO stubs. Laptop subagent attribution is by description regex; harness-development subagents are under shared/steering."
+notes: "The usage rows here are copies (counted_in) of rows in archive/stats/. Laptop subagent attribution is by description regex; harness-development subagents are under shared/steering. The Lean gate rebuilds inside worker rounds are not separately recorded."
