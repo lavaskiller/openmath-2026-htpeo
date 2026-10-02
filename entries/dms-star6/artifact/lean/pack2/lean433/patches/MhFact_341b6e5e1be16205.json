@@ -1,0 +1,50 @@
+[
+ {
+  "old": "    rw [← C.scount_sub]\n",
+  "new": "    refine (C.scount_sub S' β).symm.trans ?_\n",
+  "count": 1,
+  "why": "4.33: rw does not find `scount C.clo ?S' ?β` because S' is typed over Fin (addEdge ..).n; give the instance"
+ },
+ {
+  "old": "  simp [leafSet, newE]; intro h; omega\n",
+  "new": "  have h : ¬ ((newE g i hi).val < X.m) := by show ¬ (X.m + i < X.m); omega\n  exact cast (dif_neg h).symm trivial\n",
+  "count": 1,
+  "why": "4.33: simp leaves the `if h : X.m + i < X.m then _ else True` unreduced instead of producing a binder"
+ },
+ {
+  "old": ":= by simp [phiT]\n",
+  "new": ":= by simp [phiT]; rfl\n",
+  "count": 1,
+  "why": "4.33: simp leaves `vx (addEdge ..) = vx (addEdge ..)` (types differ up to unfolding addEdge); closed by rfl"
+ },
+ {
+  "old": ":= by simp [phiT, h]\n",
+  "new": ":= by simp [phiT, h]; rfl\n",
+  "count": 1,
+  "why": "same"
+ },
+ {
+  "old": "  simp [phiT, h1, h2]\n",
+  "new": "  simp [phiT, h1, h2]\n  rfl\n",
+  "count": 1,
+  "why": "same"
+ },
+ {
+  "old": "  · rw [hp, set_old]\n",
+  "new": "  · rw [hp]; refine (set_old _ _ _).mpr ?_\n",
+  "count": 1,
+  "why": "4.33: rw [set_old] does not match because Fin.last G.m is typed Fin (G.m+1), not Fin (addEdge ..).m"
+ },
+ {
+  "old": "    · rw [C.scount_sub]; omega\n",
+  "new": "    · have hss := C.scount_sub S' β; omega\n",
+  "count": 1,
+  "why": "4.33: rw pattern not found (S' typed over Fin (addEdge ..).n); omega with the equation instead"
+ },
+ {
+  "old": "    · rw [C.scount_sub] at hsp; omega\n",
+  "new": "    · have hss := C.scount_sub S' β; omega\n",
+  "count": 1,
+  "why": "same"
+ }
+]

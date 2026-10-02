@@ -1,0 +1,39 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_09796da8a434e150.lean:327:34: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cntB, Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_09796da8a434e150.lean:766:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_09796da8a434e150.lean:773:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_09796da8a434e150.lean:831:49: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_09796da8a434e150.lean:858:49: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

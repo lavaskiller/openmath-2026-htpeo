@@ -1,0 +1,6 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_90b4662cdeba097d.lean:121:152: warning: Unused tactic linter: `(simp at hvB; exact hvB)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_90b4662cdeba097d.lean:121:152: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`

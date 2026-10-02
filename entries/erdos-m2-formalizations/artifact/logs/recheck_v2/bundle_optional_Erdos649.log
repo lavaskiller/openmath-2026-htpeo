@@ -1,0 +1,41 @@
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:49:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:100:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:101:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:143:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:164:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:199:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:229:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos649.lean:244:8: warning: declaration uses `sorry`
+'Erdos649.erdos_649.variants.tong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos649.erdos_649.variants.sampaio' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

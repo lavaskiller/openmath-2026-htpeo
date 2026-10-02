@@ -1,0 +1,51 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:68:35: warning: `Symmetric` has been deprecated: Use `Std.Symm` instead
+
+Note: The updated constant has a different type:
+  {α : Sort u} → (α → α → Prop) → Prop
+instead of
+  {α : Sort u_1} → (α → α → Prop) → Prop
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:223:32: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:239:9: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:592:2: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:593:2: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:820:35: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:820:35: warning: This simp argument is unused:
+  Sym2.map_pair_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [subEn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:862:45: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1028:42: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1034:34: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1036:58: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1037:58: warning: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1073:26: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [o, oriG]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6c78409a046a3fe7.lean:1245:15: warning: This simp argument is unused:
+  Bool.and_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, decide_eq_true_eq] at hf
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,14 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_a030b9ec722eb795.lean:206:48: warning: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [leafEl, gE, List.getD_eq_getElem?_getD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_a030b9ec722eb795.lean:210:48: warning: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [leafEl, gE, List.getD_eq_getElem?_getD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,10 @@
+@MGraph.Star : {G : MGraph} → (k : ℕ) → (Fin G.m → Fin k) → Prop
+FlowerSnark.flower_star : ∀ (n : Nat),
+  @Eq Nat
+      (@HMod.hMod Nat Nat Nat (@instHMod Nat Nat.instMod) n (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (@OfNat.ofNat Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) →
+    @LE.le Nat instLENat (@OfNat.ofNat Nat (nat_lit 5) (instOfNatNat (nat_lit 5))) n →
+      @MGraph.Star (FlowerSnark.flowerSnark n) (@OfNat.ofNat Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))
+        (FlowerSnark.flowerCol n)
+peak_anon_kb=292412 elapsed_s=3
+rc=0

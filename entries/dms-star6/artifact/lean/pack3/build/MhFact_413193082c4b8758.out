@@ -1,0 +1,14 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_413193082c4b8758.lean:176:109: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_413193082c4b8758.lean:381:32: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

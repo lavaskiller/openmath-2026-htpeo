@@ -1,0 +1,3 @@
+'RamseyCert.native_fastK_R' depends on axioms: [propext, native_fastK_R._native.native_decide.ax_1_1]
+'RamseyCert.native_fastK_B' depends on axioms: [propext, native_fastK_B._native.native_decide.ax_1_1]
+TIME 679.43s MAXRSS 6564552KB

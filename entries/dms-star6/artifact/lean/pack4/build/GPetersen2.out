@@ -1,0 +1,4 @@
+'GPetersen2.gp2_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPetersen2.gp2_spokes' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=591872 elapsed_s=7
+rc=0

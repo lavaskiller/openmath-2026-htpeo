@@ -1,0 +1,36 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:47:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:49:70: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:372:15: warning: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:372:32: warning: `Fin.coe_natAdd` has been deprecated: Use `Fin.val_natAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:377:15: warning: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:377:32: warning: `Fin.coe_natAdd` has been deprecated: Use `Fin.val_natAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:491:7: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:497:75: warning: Variable name `f` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _f
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_30194dab4e05fdcf.lean:1134:22: warning: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

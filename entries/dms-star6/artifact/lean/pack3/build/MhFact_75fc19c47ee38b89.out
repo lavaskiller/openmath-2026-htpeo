@@ -1,0 +1,4 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_75fc19c47ee38b89.lean:858:39: warning: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_75fc19c47ee38b89.lean:891:39: warning: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_75fc19c47ee38b89.lean:893:39: warning: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_75fc19c47ee38b89.lean:895:39: warning: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead

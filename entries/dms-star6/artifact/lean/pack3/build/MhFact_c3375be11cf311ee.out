@@ -1,0 +1,58 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:57:22: warning: Variable name `Q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _Q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:254:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:263:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:265:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:694:21: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:1007:19: warning: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:1007:44: warning: Variable name `h10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:1224:20: warning: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_c3375be11cf311ee.lean:1224:45: warning: Variable name `h10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

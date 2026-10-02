@@ -1,0 +1,4 @@
+'GP2Five.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GP3Five.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=1713556 elapsed_s=18
+rc=0

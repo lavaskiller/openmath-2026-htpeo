@@ -1,0 +1,29 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:41:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:52:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:67:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:75:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:89:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:134:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:142:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/erdos-fc/m2/final/bundle/Erdos918.lean:224:8: warning: declaration uses `sorry`
+'Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos918.erdos_918.variants.eq_aleph_0.parts.i' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

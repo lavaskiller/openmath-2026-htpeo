@@ -1,0 +1,15 @@
+@@ why: Mathlib: `convert … using 2` now produces different side goals (a type equation); replaced by explicit congruence
+<<<<
+  convert hbig using 2
+  · ext w
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and]
+    exact hset w
+  · convert rfl
+====
+  refine Eq.trans (congrArg Finset.card (Finset.ext fun w => ?_)) (hbig.trans ?_)
+  · simp only [Finset.mem_filter, Finset.mem_univ, true_and]
+    exact hset w
+  · first
+      | rfl
+      | (congr 2; first | rfl | (ext w; simp only [Finset.mem_filter, Finset.mem_univ, true_and]))
+>>>>

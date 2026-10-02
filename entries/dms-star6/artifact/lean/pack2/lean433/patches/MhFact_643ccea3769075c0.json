@@ -1,0 +1,134 @@
+[
+ {
+  "old": "  have αu : α u0 = nv0 H := by simp [α]\n",
+  "new": "  have αu : α u0 = nv0 H := by simp [α]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αv : α v0 = nv1 H := by simp [α, Ne.symm huv]\n",
+  "new": "  have αv : α v0 = nv1 H := by simp [α, Ne.symm huv]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αo : ∀ w, w ≠ u0 → w ≠ v0 → α w = ov H (α' w) := fun w h1 h2 => by simp [α, h1, h2]\n",
+  "new": "  have αo : ∀ w, w ≠ u0 → w ≠ v0 → α w = ov H (α' w) := fun w h1 h2 => by simp [α, h1, h2]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "    have φl : ∀ d, (d = D.gu ∨ d = D.gv) → φ d = Fin.last X.m := fun d h => by simp [φ, h]\n",
+  "new": "    have φl : ∀ d, (d = D.gu ∨ d = D.gv) → φ d = Fin.last X.m := fun d h => by simp [φ, h]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "    have φo : ∀ d, ¬ (d = D.gu ∨ d = D.gv) → φ d = Fin.castSucc d := fun d h => by simp [φ, h]\n",
+  "new": "    have φo : ∀ d, ¬ (d = D.gu ∨ d = D.gv) → φ d = Fin.castSucc d := fun d h => by simp [φ, h]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αa : α T.a = ov H s := by simp [α]\n",
+  "new": "  have αa : α T.a = ov H s := by simp [α]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αb : α T.b = nv0 H := by simp [α, Ne.symm T.nab]\n",
+  "new": "  have αb : α T.b = nv0 H := by simp [α, Ne.symm T.nab]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αc : α T.c = nv1 H := by simp [α, Ne.symm T.nac, Ne.symm T.nbc]\n",
+  "new": "  have αc : α T.c = nv1 H := by simp [α, Ne.symm T.nac, Ne.symm T.nbc]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  have αo : ∀ w, w ≠ T.a → w ≠ T.b → w ≠ T.c → α w = ov H (α' (Fin.castSucc w)) := fun w h1 h2 h3 => by\n    simp [α, h1, h2, h3]\n",
+  "new": "  have αo : ∀ w, w ≠ T.a → w ≠ T.b → w ≠ T.c → α w = ov H (α' (Fin.castSucc w)) := fun w h1 h2 h3 => by\n    simp [α, h1, h2, h3]; rfl\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      exact Or.inr (by rw [subG_ends_i, hi])\n",
+  "new": "      exact Or.inr (by rw [subG_ends_i, hi]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      exact Or.inl (by rw [subG_ends_m2, hi])\n",
+  "new": "      exact Or.inl (by rw [subG_ends_m2, hi]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "    · exact Or.inl (by rw [subG_ends_old H i hne, h])\n",
+  "new": "    · exact Or.inl (by rw [subG_ends_old H i hne, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "    · exact Or.inr (by rw [subG_ends_old H i hne, h])\n",
+  "new": "    · exact Or.inr (by rw [subG_ends_old H i hne, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "          · exact Or.inl (by rw [h])\n",
+  "new": "          · exact Or.inl (by rw [h]; first | done | rfl)\n",
+  "count": 2,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "          · exact Or.inr (by rw [h])]\n",
+  "new": "          · exact Or.inr (by rw [h]; rfl)]\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inl (by rw [infG_ends_i2, h])\n",
+  "new": "      · exact Or.inl (by rw [infG_ends_i2, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inr (by rw [infG_ends_i2, h])\n",
+  "new": "      · exact Or.inr (by rw [infG_ends_i2, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inl (by rw [infG_ends_i3 H s i2 i3 (Ne.symm i23), h])\n",
+  "new": "      · exact Or.inl (by rw [infG_ends_i3 H s i2 i3 (Ne.symm i23), h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inr (by rw [infG_ends_i3 H s i2 i3 (Ne.symm i23), h])\n",
+  "new": "      · exact Or.inr (by rw [infG_ends_i3 H s i2 i3 (Ne.symm i23), h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inl (by rw [infG_ends_old H s i2 i3 f2 f3, h])\n",
+  "new": "      · exact Or.inl (by rw [infG_ends_old H s i2 i3 f2 f3, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "      · exact Or.inr (by rw [infG_ends_old H s i2 i3 f2 f3, h])\n",
+  "new": "      · exact Or.inr (by rw [infG_ends_old H s i2 i3 f2 f3, h]; rfl)\n",
+  "count": 1,
+  "why": "4.33: the tactic leaves a goal `a = a` whose two sides are typed over Fin (subG/infG/addEdge ..).n resp. the unfolded Nat expression (instances transparency); closed by rfl"
+ },
+ {
+  "old": "  show cntF (X.n + 1) (@meets (triG X T.a' T.b' T.c') (triP P T.a T.b T.c T.a' T.b' T.c')) + 2 = cntF X.n (meets P)\n  rw [cntF_succ, if_pos T.meets_triP_last, cntF_congr X.n _ _ T.meets_triP_old]\n",
+  "new": "  have h1 := cntF_succ X.n (@meets (triG X T.a' T.b' T.c') (triP P T.a T.b T.c T.a' T.b' T.c'))\n  rw [if_pos T.meets_triP_last, cntF_congr X.n _ _ T.meets_triP_old] at h1\n  refine (congrArg (· + 2) h1).trans ?_\n",
+  "count": 1,
+  "why": "4.33: rw [cntF_succ] does not match (the predicate is typed over Fin (triG ..).n); instantiate cntF_succ by hand"
+ }
+]

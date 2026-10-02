@@ -1,0 +1,105 @@
+# Resources used for this entry. Give the source of every number; write "estimate" where it is one.
+entry: dms-star6
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-09-27 KST", to: "2026-10-02 KST"}
+ai_usage:
+  - provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code (laptop helper sessions = subagents of the steering session)"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 39
+    input_tokens: 3550
+    output_tokens: 192179
+    cache_read_tokens: 281275831
+    cache_write_tokens: 24914819
+    cost_usd: null
+    plan_usage: "TODO: operator (usage screen)"
+    counted_in: "archive/stats/claude-laptop.yaml"
+    source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 1521 of 1771 messages have only a stream-start usage record; visible assistant content of these sessions is 2860293 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
+  - provider: "Anthropic"
+    model: "TODO: server not reachable on 2026-10-03 (Claude Opus / Sonnet workers, verifier, supervisor of the star6 harness run)"
+    interface: "agent harness (server)"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: "TODO"
+    cost_usd: "TODO"
+    plan_usage: "TODO"
+    counted_in: "archive/stats/server-harness.yaml"
+    source: "to be produced on the server with scripts/mh-export-usage.sh star6 (commands in archive/stats/server-harness.yaml)"
+  - provider: "OpenAI"
+    model: "TODO: server not reachable on 2026-10-03 (GPT workers gpt-*, audits, codex sessions dmspet, dmsiff)"
+    interface: "codex CLI (server)"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: "TODO"
+    cost_usd: null
+    plan_usage: "TODO"
+    counted_in: "archive/stats/server-codex.yaml"
+    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+compute:
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build, pack3 on Lean 4.33.1, per module (98 modules)"
+    wall_hours: "TODO: not recorded"
+    cpu_hours: 0.40
+    peak_memory_gb: 3.2
+    source: "artifact/lean/pack3/README.md: 1422 s of module time, largest process 3.2 GB RSS"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build, pack3 on Lean 4.33.1, clean lake build (one worker)"
+    wall_hours: 0.33
+    cpu_hours: 0.33
+    peak_memory_gb: "TODO"
+    source: "artifact/lean/pack3/STATUS.md and README.md: 20 min wall, sequential; cpu_hours = wall (estimate, one worker)"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build, the same 98 modules on Lean 4.20 (before the port)"
+    wall_hours: 0.83
+    cpu_hours: 1.18
+    peak_memory_gb: 6.3
+    source: "artifact/lean/pack2/README.md: 4248 s of module time, about 50 min wall, 6.3 GB RSS"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build, pack4 (125 modules, families)"
+    wall_hours: 0.26
+    cpu_hours: 0.26
+    peak_memory_gb: 2.05
+    source: "PACKET.md section 2.2: 930 s of compiler time, one process at a time, largest process 2.05 GB"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build, pack5 (4 modules) and StarDMS2.lean"
+    wall_hours: 0.04
+    cpu_hours: 0.04
+    peak_memory_gb: 2.8
+    source: "PACKET.md section 2.2: about 20 s per pack5 module (80 s - estimate), StarDMS2 73 s, 2.8 GB peak"
+  - machine: "16-core server, 14 GB RAM; laptop (WSL) on 2026-09-27/28"
+    purpose: "harness run: Lean gate rebuilds, exhaustive computations, SAT searches, censuses (2026-09-27 .. 2026-10-02)"
+    wall_hours: "TODO"
+    cpu_hours: "TODO: needs the server job records (overnight/jobs/*.json, systemd units mh-*); server not reachable on 2026-10-03"
+    peak_memory_gb: "TODO"
+    source: "not collected"
+human_time:
+  - person: "TODO: operator"
+    hours: "TODO"
+    activity: "steering of the harness, approvals"
+outputs:
+  lean_lines: 81622               # claimed sources: pack3/src 53348 + pack4/src 6801 + pack5/src 1293 + pack2 StarDMS2 20180 (wc -l, 2026-10-03)
+  lean_files: 229                 # 99 + 125 + 4 + 1; whole artifact incl. orig/ and base/ copies: 335 files, 142668 lines
+  theorems_claimed: 45            # theorem names listed in PACKET.md sections 1.2-1.4, counted by hand: T1 16, T2 14, T3/T4 11, Lean-core 4
+  build_time: "pack3 20 min (lake) or 1422 s (per module); pack4 930 s; pack5 about 80 s; StarDMS2 73 s"
+  other: "786 informal facts in the fact graph (732 LLM verifier + GPT audit, 141 of them also Lean 4.20 gate; 45 LLM verifier only; 9 Lean-gate only; none human-approved - PACKET.md section 3.1); 4924 theorems audited in pack3 (audit_all.tsv); 6124 declaration headers unchanged by the port; GPT audit verdicts 627 correct, 37 wrong, 10 error"
+attempts:
+  succeeded:
+    - "reduction chain RH2 (Hyp and II imply DMS) down to named hypotheses on cyclically 4-edge-connected hosts, 98 modules"
+    - "finite base 10-16 vertices by generated tables checked with decide +kernel"
+    - "port Lean 4.20 to 4.33.1 with 15 proof hunks in 8 modules and compatibility options"
+    - "infinite families by periodic colouring + finite window check (BlockStar.star_of_windows); SAT-found colourings for GP(n,k), k <= 15, and Moebius ladders"
+    - "bounded_reduction: the chain's induction with hypotheses restricted to order <= N"
+  failed:
+    - "all five root pieces (P18, P16, P14, P23, P19) stop at infinite statements on the cyclically 4-edge-connected core (archive/findings/dms-c4c-core.md)"
+    - "fixed-radius local repair for the PMU induction step: refuted at r = 2 (8 of 8 shapes) and r = 3 (6 of 8) by explicit graphs (artifact/informal/c4c-ball_REPORT.md)"
+    - "FE-ALLPM-D at 20 vertices refuted; TD-RED-POLE with threshold 10 false (artifact/informal/p16_REPORT.md, p23-pole_REPORT.md)"
+    - "single-decide version of a GP window check hit the 6 GB cap and swap, 2026-10-02 13:38 UTC (artifact/lean/pack4/STATUS.md); split into chunk modules"
+    - "49 refuted or abandoned approaches in the baseline ledger (PACKET.md section 3.3)"
+notes: "Server-side usage (harness workers, verifier, audits, codex sessions) is not collected yet: archive/stats/server-harness.yaml and server-codex.yaml are TODO stubs. Laptop subagent attribution is by description regex; harness-development subagents are under shared/steering."

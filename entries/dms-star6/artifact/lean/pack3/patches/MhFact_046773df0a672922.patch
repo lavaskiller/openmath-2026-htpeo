@@ -1,0 +1,32 @@
+@@ why: Mathlib: SimpleGraph.symm / loopless are now fields of class type Std.Symm / Std.Irrefl (anonymous constructor added)
+<<<<
+  symm := fun _ _ ⟨h1, f, hf, hj⟩ => ⟨h1.symm, f, hf, Or.symm hj⟩
+  loopless := fun _ h => h.1 rfl
+====
+  symm := ⟨fun _ _ ⟨h1, f, hf, hj⟩ => ⟨h1.symm, f, hf, Or.symm hj⟩⟩
+  loopless := ⟨fun _ h => h.1 rfl⟩
+>>>>
+@@ why: Mathlib rename Set.Nat.card_coe_set_eq -> Nat.card_coe_set_eq
+<<<<
+    rw [Set.Nat.card_coe_set_eq, SimpleGraph.Subgraph.deleteVerts_verts
+====
+    rw [Nat.card_coe_set_eq, SimpleGraph.Subgraph.deleteVerts_verts
+>>>>
+@@ why: 4.33 transparency: unfolding MGraph.Inc inside the filter predicate in the same simp call blocks mem_filter (instance mismatch); unfold in a second step
+<<<<
+      ext x; simp only [mem_filter, mem_univ, true_and, mem_insert, mem_singleton, MGraph.Inc]
+====
+      ext x; simp only [mem_filter, mem_univ, true_and, mem_insert, mem_singleton]; simp only [MGraph.Inc]
+>>>>
+@@ count=2 why: same
+<<<<
+      ext x; simp only [mem_filter, mem_univ, true_and, mem_singleton, MGraph.Inc]
+====
+      ext x; simp only [mem_filter, mem_univ, true_and, mem_singleton]; simp only [MGraph.Inc]
+>>>>
+@@ why: same
+<<<<
+      ext x; simp only [mem_filter, mem_univ, true_and, Finset.notMem_empty, iff_false, MGraph.Inc]
+====
+      ext x; simp only [mem_filter, mem_univ, true_and, Finset.notMem_empty, iff_false]; simp only [MGraph.Inc]
+>>>>

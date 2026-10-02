@@ -1,0 +1,11 @@
+.lake/
+build/
+*.olean
+*.ilean
+__pycache__/
+.venv/
+.env
+*.tar.gz
+
+# build logs kept inside artifacts (axiom output, build results) are part of SHA256SUMS
+!entries/*/artifact/**/build/

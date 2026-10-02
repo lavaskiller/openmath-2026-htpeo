@@ -1,0 +1,3 @@
+'FlowerSnark.flower_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=830824 elapsed_s=6
+rc=0

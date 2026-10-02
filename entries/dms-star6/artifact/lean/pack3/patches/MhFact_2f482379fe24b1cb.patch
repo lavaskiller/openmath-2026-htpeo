@@ -1,0 +1,20 @@
+@@ why: 4.33: closing step of simpa does not unfold gE; added to the simp set
+<<<<
+    simpa only [rangeAll_eq, allR_eq, getR_eq, gER] using h5
+====
+    simpa only [rangeAll_eq, allR_eq, getR_eq, gER, gE] using h5
+>>>>
+@@ why: 4.33 kernel reports "deep recursion detected" on this certificate at the default maxRecDepth; raised locally
+<<<<
+theorem sh_cov24 :
+====
+set_option maxRecDepth 200000 in
+theorem sh_cov24 :
+>>>>
+@@ why: same
+<<<<
+theorem sh_cov25 :
+====
+set_option maxRecDepth 200000 in
+theorem sh_cov25 :
+>>>>

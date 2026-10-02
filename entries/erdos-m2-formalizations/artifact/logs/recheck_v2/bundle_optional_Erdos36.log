@@ -1,0 +1,14 @@
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:373:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:384:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:392:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:402:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:411:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:422:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:432:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:442:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:449:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:457:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:465:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos36.lean:472:8: warning: declaration uses `sorry`
+'Erdos36.minimum_overlap.variants.lower.erdos_1955' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

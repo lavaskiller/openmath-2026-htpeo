@@ -1,0 +1,94 @@
+# Entry metadata. Keep keys; write TODO (with a reason) where unknown.
+# Filled 2026-10-03 KST from PACKET.md (= packet FINAL DRAFT v2, prepared 2026-10-02T15:06Z) and artifact/.
+id: erdos-m2-formalizations
+title: "Lean 4.33.1 formalizations of known results: Erdos-problem variants (formal-conjectures statements) and Schoenberger/Petersen (connected case)"
+target:
+  problem: "Known results attached to Erdos problems 942, 44, 123, 918, 292, 395, 698, 939 (substantive), 295, 703, 748, 1136 (minor); perfect matchings in bridgeless cubic graphs (G-PM)"
+  problem_ids: ["G-PM", "E942", "E44", "E123", "E918", "E292", "E395", "E698", "E939", "E295", "E703", "E748", "E1136"]
+  status_before_event: "known mathematics; no prior formal proof found by the searches of PACKET.md section 7 (limits stated there)"
+mode: "M2"
+requested_band: "n/a"
+claims:                          # verbatim names, PACKET.md sections 1-2; M2 counts families, not theorems
+  - lean_name: "Star6.simple_schoenberger, Star6.simple_petersen_connected"
+    plain_words: "G-PM: in a connected bridgeless cubic simple graph every edge lies in a perfect matching and is avoided by one; such a graph has a perfect matching (connected case only)"
+    file: "artifact/bundle/Star6Simple.lean"
+  - lean_name: "Erdos942.erdos_942.variants.limsup"
+    plain_words: "E942 variant"
+    file: "artifact/bundle/Erdos942.lean"
+  - lean_name: "Erdos44.greedy_sidon_construction"
+    plain_words: "E44 variant"
+    file: "artifact/bundle/Erdos44.lean"
+  - lean_name: "Erdos123.erdos_123.variants.powers_2_3"
+    plain_words: "E123 variant"
+    file: "artifact/bundle/Erdos123.lean"
+  - lean_name: "Erdos918.erdos_918.variants.eq_aleph_0.parts.i, Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i, Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii"
+    plain_words: "E918 variants"
+    file: "artifact/bundle/Erdos918.lean"
+  - lean_name: "Erdos292.erdos_292.variants.mul, Erdos292.erdos_292.variants.two_mul, Erdos292.erdos_292.variants.prime_pow"
+    plain_words: "E292 variants"
+    file: "artifact/bundle/Erdos292.lean"
+  - lean_name: "Erdos395.erdos_395.variants.one"
+    plain_words: "E395 variant"
+    file: "artifact/bundle/Erdos395.lean"
+  - lean_name: "Erdos698.erdos_698.variants.erdos_szekeres"
+    plain_words: "E698 variant"
+    file: "artifact/bundle/Erdos698.lean"
+  - lean_name: "Erdos939.erdos_939.variants.seven, Erdos939.erdos_939.variants.eight"
+    plain_words: "E939 variants (r = 7 has a degenerate witness; PACKET.md section 9)"
+    file: "artifact/bundle/Erdos939.lean"
+  - lean_name: "Erdos295.exists_k"
+    plain_words: "E295 (minor / sanity)"
+    file: "artifact/bundle/Erdos295.lean"
+  - lean_name: "Erdos703.erdos_703.variants.zero"
+    plain_words: "E703 (minor / sanity)"
+    file: "artifact/bundle/Erdos703.lean"
+  - lean_name: "Erdos748.erdos_748.variants.lower_bound"
+    plain_words: "E748 (minor / sanity)"
+    file: "artifact/bundle/Erdos748.lean"
+  - lean_name: "Erdos1136.erdos_1136.variants.multiples_of_three"
+    plain_words: "E1136 (minor / sanity)"
+    file: "artifact/bundle/Erdos1136.lean"
+verification:
+  toolchain: "leanprover/lean4:v4.33.1"
+  mathlib: "as pinned by google-deepmind/formal-conjectures at df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1 (Erdos files); v4.33.1 commit 0df444a360ea for Star6Simple.lean"
+  axioms: "propext, Classical.choice, Quot.sound (artifact/VERIFY.md, artifact/logs/recheck_v2/*.log, artifact/bundle/Star6Simple.out)"
+  exceptions: "none in the targets; other untouched statements of the same formal-conjectures files still contain sorry (open problems, not claimed)"
+  build: "per file: lake env lean bundle/Erdos<n>.lean in formal-conjectures at the pinned commit; Star6Simple.lean needs the star6 library (entries/dms-star6/artifact/lean/pack3 + pack5; list in artifact/bundle/STAR6_DEPENDENCY.md)"
+  build_time_and_memory: "about a minute per Erdos file (E757, optional, a few minutes) - PACKET.md section 7; memory not recorded"
+hill:
+  name: ""
+  tree_hash: ""
+  experiment: ""
+  report_file: ""
+  metrics: {}
+submission:
+  packet: PACKET.md
+  submitted_at: "TODO: operator"
+  submission_id: "TODO: operator"
+  commit: "TODO: operator, after publishing (source artifact repo: local commit 9b341528c6ea83a7199bf45051ac1db483f9ee13 plus uncommitted final edits to 4 files; see NOTES.md)"
+  tag: "TODO: operator"
+people:
+  owner: "TODO: operator"
+  contributors:
+    - "Woohyuk Kang: operator; commit author"
+    - "TODO: operator - full roster and each human's contribution"
+  human_review: "none (PACKET.md section 0)"
+ai_and_tools:
+  models:
+    - "gpt-6-sol (codex CLI, unattended sessions on the server)"
+    - "claude-opus-5-5 (Claude Code helper sessions, laptop)"
+  roles: "GPT: all proofs of the Erdos families and the 115-line SimpleGraph translation in Star6Simple.lean. Claude: target selection, verification scripts (statement identity, axioms, forbidden tokens), prior-art search, packet. star6 library: see entries/dms-star6. Humans: decisions on scope; no human check of proofs."
+provenance:
+  baseline: "formal-conjectures at df3f12d7 (statements and definitions, not our work), Mathlib; for G-PM the star6 library"
+  event_work: "all proofs and auxiliary lemmas produced on 2026-10-02 (PACKET.md section 7); the Schoenberger module of the star6 library is dated 2026-09-29"
+  prior_art_checked: "2026-10-02: all 4155 pull-request heads of TheJustinSunPrize/awards, plby/lean-proofs, formal-conjectures main, GitHub code search (328 files), pinned Mathlib; private repositories, Zulip and forum attachments not searched (PACKET.md section 7)"
+known_limitations:
+  - "NEW means only: no prior formal proof found by the searches described; nothing stronger"
+  - "the main (often open) statement of each Erdos problem is not claimed"
+  - "Petersen's theorem is formalized for connected graphs only"
+  - "Star6Simple.lean cannot be rebuilt without the star6 library"
+  - "5 optional families (E757, E261, E36, E649, E508) are in artifact/bundle_optional and are not claimed by default"
+  - "no human review; team still to decide whether to include the 4 minor families"
+links:
+  - "https://github.com/google-deepmind/formal-conjectures (commit df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1)"
+  - "https://www.erdosproblems.com/"

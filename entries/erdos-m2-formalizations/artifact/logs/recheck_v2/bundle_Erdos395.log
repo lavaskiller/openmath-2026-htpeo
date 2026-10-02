@@ -1,0 +1,5 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos395.lean:59:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos395.lean:84:19: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+/home/lead/erdos-fc/m2/final/bundle/Erdos395.lean:107:8: warning: declaration uses `sorry`
+'Erdos395.erdos_395.variants.one' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

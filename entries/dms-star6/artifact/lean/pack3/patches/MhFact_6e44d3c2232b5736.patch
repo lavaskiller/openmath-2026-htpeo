@@ -1,0 +1,6 @@
+@@ count=2 why: 4.33 transparency: simp no longer identifies el[↑e] with el.get e when e : Fin (ofList n el hn).m; closed by rfl
+<<<<
+    simp [gE, List.getD_eq_getElem?_getD, List.getElem?_eq_getElem hlt]
+====
+    simp [gE, List.getD_eq_getElem?_getD, List.getElem?_eq_getElem hlt]; rfl
+>>>>

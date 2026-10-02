@@ -1,0 +1,8 @@
+'RamseyCert.colour_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.Template.numer_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.Template.total_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.K4_blue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.getD_map_range' depends on axioms: [propext]
+'RamseyCert.kTermA_eq' depends on axioms: [propext]
+'RamseyCert.fastK_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+TIME 12.73s MAXRSS 6330952KB

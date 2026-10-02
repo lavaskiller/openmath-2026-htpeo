@@ -1,0 +1,25 @@
+refs 4155 blobs scanned 12156
+== 508seven main-tree files: 0 []
+== 649tong main-tree files: 0 []
+== 942limsup main-tree files: 2 ['origin/HEAD:problems/catalog-0301-0400.md', 'origin/HEAD:problems/catalog-0801-0900.md']
+== 617 main-tree files: 1 ['origin/HEAD:problems/catalog-0101-0200.md']
+== 1136 main-tree files: 0 []
+== 508seven PRs: 2
+  #80 Formalize the r=7 case of JSP-000500 in Lean | lean=2/6 submissions/jsp-000500-inoader/JSP500/ColoredTerminal.lean | kw=seven color,seven-color
+  #1717 catalog: record Lean formalization for JSP-000205 | lean=1/1 submissions/jsp-000205-distance-one/Erdos205.lean | kw=hexagonal tiling
+== 649tong PRs: 6
+  #460 JSP-000307: Lean formalization of descending largest prime factors (witness n=13) | lean=1/2 submissions/jsp-000307/Erdos307.lean | kw=maxPrimeFac
+  #557 JSP-000307: Add increasing theorem and update to complete version | lean=1/2 submissions/jsp-000307-conditional/Erdos307.lean | kw=maxPrimeFac
+  #604 JSP-000307: Lean formalization of decreasing largest prime factors (witness n=13) | lean=1/3 submissions/jsp-000307/Jsp000307.lean | kw=maxPrimeFac
+  #1857 catalog: record Lean formalization for JSP-000640 | lean=1/3 submissions/JSP-000640/Erdos649.lean | kw=Erdos649
+  #2346 catalog: record Lean formalization for JSP-000649 | lean=0/1 submissions/JSP-000649/verification/sha256.txt | kw=Erdos649
+  #3399 JSP-000649: update catalog Lean proof to Yes | lean=0/1 submissions/JSP-000649/verification/sha256.txt | kw=Erdos649
+== 942limsup PRs: 0
+== 617 PRs: 6
+  #80 Formalize the r=7 case of JSP-000500 in Lean | lean=20/23 submissions/jsp-000500-inoader/JSP500/Audit.lean | kw=Erdos617,balanced coloring,balanced colouring,erdos_617
+  #277 Submit Lean formalization of the JSP-000668 K4 component (Erdős 811, Clemen–Wagner) | lean=2/2 submissions/jsp-000668-cyr/Challenge.lean | kw=balanced colouring
+  #490 JSP-000135: Lean formalization (Erdős 129 as written is false: Girão's bound R(n;3,r | lean=1/2 submissions/jsp-000135-baobingzhang/Erdos129.lean | kw=Erdős–Gyárfás
+  #1698 catalog: record Lean formalization for JSP-000140 | lean=1/1 submissions/jsp-000140-edge-coloring-clique/Erdos140.lean | kw=Erdős-Gyárfás
+  #2400 catalog: record Lean formalization for JSP-000617 | lean=0/1 submissions/JSP-000617/verification/sha256.txt | kw=Erdos617
+  #3206 JSP-000617: update catalog Lean proof to Yes | lean=0/1 submissions/JSP-000617/verification/sha256.txt | kw=Erdos617
+== 1136 PRs: 0

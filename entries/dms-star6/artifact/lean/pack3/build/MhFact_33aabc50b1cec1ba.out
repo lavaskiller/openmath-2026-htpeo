@@ -1,0 +1,100 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:28:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:91:0: warning: automatically included section variable(s) unused in theorem `RH2F.TriPiece.yne`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:97:0: warning: automatically included section variable(s) unused in theorem `RH2F.TriPiece.e_ne_inner`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:944:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5A_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:945:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5A_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:946:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5A_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:947:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5O_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:948:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5O_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:949:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5O_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:950:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5B_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:951:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5B_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:952:0: warning: automatically included section variable(s) unused in theorem `RH2F.s5B_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:1012:0: warning: automatically included section variable(s) unused in theorem `RH2F.TriPiece.inner_notCut`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:1029:32: warning: Variable name `hdom` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdom
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_33aabc50b1cec1ba.lean:1037:15: warning: Variable name `hG` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hG
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

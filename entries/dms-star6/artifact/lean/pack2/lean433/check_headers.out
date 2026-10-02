@@ -1,0 +1,44 @@
+StarCore: 43 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_1a8aa1c2b8a6bb8e: 27 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_d9fbe3906514b798: 23 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_3a172a440dfeed42: 16 headers, 0 changed/removed, 0 new, original == lean/: True
+StarCert: 12 headers, 0 changed/removed, 1 new, original == lean/: True
+   NEW: 'instance decK4s : Decidable (@Star k4subdiv 6 k4subdivCol) :='
+StarSix: 13 headers, 0 changed/removed, 0 new, original == lean/: True
+StarReduce: 26 headers, 0 changed/removed, 0 new, original == lean/: True
+StarLeaf: 13 headers, 0 changed/removed, 0 new, original == lean/: True
+StarRigid: 22 headers, 0 changed/removed, 0 new, original == lean/: True
+StarBottleneck: 13 headers, 0 changed/removed, 0 new, original == lean/: True
+StarChecker: 20 headers, 0 changed/removed, 0 new, original == lean/: True
+StarCompose: 7 headers, 0 changed/removed, 0 new, original == lean/: True
+StarMatching: 8 headers, 0 changed/removed, 0 new, original == lean/: True
+StarVizing: 8 headers, 0 changed/removed, 0 new, original == lean/: True
+StarExtension: 10 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_5c1eb3f583cf643f: 149 headers, 1 changed/removed, 10 new, original == lean/: True
+   CHANGED: 'theorem tG_check : ∀ h : Fin 9, (tG h).starCheck (fun _ => true) (tC h) = true :='
+   NEW: 'theorem tG_check_0 : (tG 0).starCheck (fun _ => true) (tC 0) = true :='
+   NEW: 'theorem tG_check_1 : (tG 1).starCheck (fun _ => true) (tC 1) = true :='
+   NEW: 'theorem tG_check_2 : (tG 2).starCheck (fun _ => true) (tC 2) = true :='
+   NEW: 'theorem tG_check_3 : (tG 3).starCheck (fun _ => true) (tC 3) = true :='
+   NEW: 'theorem tG_check_4 : (tG 4).starCheck (fun _ => true) (tC 4) = true :='
+   NEW: 'theorem tG_check_5 : (tG 5).starCheck (fun _ => true) (tC 5) = true :='
+   NEW: 'theorem tG_check_6 : (tG 6).starCheck (fun _ => true) (tC 6) = true :='
+   NEW: 'theorem tG_check_7 : (tG 7).starCheck (fun _ => true) (tC 7) = true :='
+   NEW: 'theorem tG_check_8 : (tG 8).starCheck (fun _ => true) (tC 8) = true :='
+   NEW: 'theorem tG_check : ∀ h : Fin 9, (tG h).starCheck (fun _ => true) (tC h) = true\n  | ⟨0, _⟩ => tG_check_0 | ⟨1, _⟩ => tG_check_1 | ⟨2, _⟩ => tG_check_2 | ⟨3, _⟩ ='
+MhFact_7bae7837ff8807e2: 92 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_f3a50a27efdf0d7f: 45 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_974f7197c1be8069: 4 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_63b9e393de697bd5: 36 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_a41e8f0a9a642563: 10 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_9c01b9b4366b1bad: 26 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_58c4b6496df1dd82: 39 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_4da62a86a36e387e: 2 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_d1ef48fd75072624: 48 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_7935d329f8fb5b2d: 14 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_7d291f6ca774e1da: 104 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_c64b6bd62b78d841: 112 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_657e581f1145250f: 63 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_341b6e5e1be16205: 98 headers, 0 changed/removed, 0 new, original == lean/: True
+MhFact_643ccea3769075c0: 128 headers, 0 changed/removed, 0 new, original == lean/: True
+TOTAL: 1231 declaration headers, 1 changed, 0 originals differing from lean/, 0 `axiom` declarations

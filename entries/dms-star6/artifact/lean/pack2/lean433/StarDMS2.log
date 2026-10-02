@@ -1,0 +1,121 @@
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+-- lean StarDMS2.lean
+StarDMS2.lean:6369:45: warning: This simp argument is unused:
+  Fin.addCases_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dbl, eo, vo, Fin.addCases_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:6375:30: warning: This simp argument is unused:
+  Fin.addCases_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dbl, eb, vo, vc, Fin.addCases_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:9647:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9655:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9663:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9671:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9679:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9687:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9695:20: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:9750:19: warning: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:11917:24: warning: Variable name `huw` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _huw
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+StarDMS2.lean:13244:60: warning: This simp argument is unused:
+  bne_iff_ne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, ne_eq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:13244:72: warning: This simp argument is unused:
+  ne_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, bne_iff_ne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:19555:90: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_ea), if_neg (Ne.symm bc_ea), if_neg (Ne.symm ca_ea), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:19558:35: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_eb), if_neg (Ne.symm bc_eb), if_neg (Ne.symm ca_eb),
+    if_neg (Ne.symm T.ea_ne_eb), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+StarDMS2.lean:19561:64: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_ec), if_neg (Ne.symm bc_ec), if_neg (Ne.symm ca_ec),
+    if_neg (Ne.symm T.ea_ne_ec), if_neg (Ne.symm T.eb_ne_ec), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'MGraph.dms_of_hole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'P05Lean.cubicSharp5_dms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DmsIIsLean.cs5s_dms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'P06Lean.cover_main' depends on axioms: [propext, Quot.sound]
+'MGraph.k4subdiv_star6' depends on axioms: [propext, Quot.sound]
+'RH2F.layer1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'star6_rh2_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'star6_ex1red_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+73.47 s elapsed, 2833428 KB peak RSS
+-- exit code 0

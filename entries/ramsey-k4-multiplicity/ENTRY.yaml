@@ -1,0 +1,80 @@
+# Entry metadata. Keep keys; write TODO (with a reason) where unknown.
+# Filled 2026-10-03 KST from PACKET.md and artifact/ (source of each value: PACKET.md section given in comments).
+id: ramsey-k4-multiplicity
+title: "Improved upper bound for the K4 Ramsey multiplicity constant c_4, with a Lean 4.33.1 certificate"
+target:
+  problem: "K4 Ramsey multiplicity constant c_4 (upper bound)"
+  problem_ids:
+    - "hill alejandrozu/clique-cluster-ramsey-multiplicity"
+    - "TODO: canonical OPDP problem/family id (not known to the packet writers; PACKET.md section 1)"
+  status_before_event: "open; best published upper bound 10486266368/768^4 (McKay, closing Note of arXiv:2206.04036v3), lower bound 0.0296 (Grzesik-Lee-Lidicky-Volec, as cited there)"
+mode: "M3A (proposed; M1 if the problem is in the frozen focus set - organisers decide)"
+requested_band: "P1, p = 0.05 (PACKET.md section 1.3)"
+claims:                          # PACKET.md section 1.1, namespace RamseyCert
+  - lean_name: "RamseyCert.sol_density"
+    plain_words: "the 1024-block template has density 200080655744752337972227066537 / 6638390640717004439491700265361"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.sol_lt_ref"
+    plain_words: "that density is below the hill reference 10486266368/768^4"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.sol_ppt"
+    plain_words: "the hill metric density_ppt equals 30139933996"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.sol_symm"
+    plain_words: "the template is symmetric"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.ramseyMultK4_le_sol"
+    plain_words: "c_4 (as liminf of min mono-K4 density) is at most that density"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.ramseyMultK4_lt_ref"
+    plain_words: "c_4 is strictly below the hill reference"
+    file: "artifact/lean/RamseyCert/Main.lean"
+  - lean_name: "RamseyCert.minMonoK4_density_le_sol"
+    plain_words: "for every m >= 4 some 2-colouring of K_m has mono-K4 density at most that value"
+    file: "artifact/lean/RamseyCert/Final.lean"
+  - lean_name: "RamseyCert.ramseyMultK4_limit_lt_ref"
+    plain_words: "the limit defining c_4 exists and is below the hill reference"
+    file: "artifact/lean/RamseyCert/Final.lean"
+verification:
+  toolchain: "leanprover/lean4:v4.33.1"
+  mathlib: "v4.33.1 (rev 0df444a360eaa60ab8c11dca51a86af692955474)"
+  axioms: "propext, Classical.choice, Quot.sound (artifact/lean/logs/RamseyCert.Main.log, RamseyCert.Final.log, Summary.log)"
+  exceptions: "decide +kernel on 32768-bit Nat literals (kernel GMP arithmetic); JSON->Lean transcription by tools/gen.py is not proved (re-checked by tools/check_data.py); Native.lean uses native_decide but is imported by nothing; hill _density vs _oracle not modelled (PACKET.md section 2.7)"
+  build: "per-module script: bash tools/build.sh . RamseyCert 6 (2112 modules via lean -o; a full lake build was not run)"
+  build_time_and_memory: "50 min wall on 6 processes, 16762 s summed per-file time (4.7 CPU-hours), max 3.30 GB RSS per process (artifact/lean/CERT_STATUS.md, build record)"
+hill:
+  name: "alejandrozu/clique-cluster-ramsey-multiplicity"
+  tree_hash: "d30eba780f9526ad4b8c3b6c57c96632cb5b0311"
+  experiment: "1ab2354d (merged), project clique-cluster-ramsey-multiplicity-attempt-16"
+  report_file: "artifact/runs/report_1ab2354d.json"
+  metrics: {density_ppt: 30139933996, reference_beaten: 1, template_blocks: 1024, weight_sum: 50759309}
+submission:
+  packet: PACKET.md
+  submitted_at: "TODO: operator (the hill experiment report is dated 2026-10-02T11:38:08Z; competition packet submission time not recorded here)"
+  submission_id: "TODO: operator (competition submission ID)"
+  commit: "TODO: operator, after publishing (source artifact repo: local commits 493882e -> c7df2ab -> 1151e0c91381ff78c38d91419ce1d1a0e613b27c, unpublished)"
+  tag: "TODO: operator (planned: ramsey-v1)"
+people:
+  owner: "TODO: operator"
+  contributors:
+    - "Woohyuk Kang: operator (steering of the agents, Autolab submission); commit author"
+    - "TODO: operator - full roster and each human's contribution"
+  human_review: "none (PACKET.md section 3.3)"
+ai_and_tools:
+  models:
+    - "claude-opus-5-5 (Claude Code, laptop sessions operating the server)"
+    - "gpt-6-sol (codex CLI, server)"
+  roles: "Claude: search code, Lean specification, generator, build tooling, glue, packet. GPT: proofs of Fast.lean, Limit.lean, Mono.lean against statements fixed beforehand by Claude; files recompiled and statements compared by the Claude agent. Humans: supervision and the Autolab submission; no human check of statements or proofs."
+provenance:
+  baseline: "the problem, the 768-vertex Cayley construction and McKay's value (arXiv:2206.04036), the hill with its evaluator and seed, Lean/Mathlib, the team's agent harness. No Ramsey-specific code of ours before 2026-09-28 (PACKET.md section 3.1)."
+  event_work: "2026-09-28/29: experiments f13f7e00, 4c734185, a3e68347, 0bcf1970 (search/v1). 2026-10-02: search/v2, solution.json, evaluation 1ab2354d, the whole Lean certificate."
+  prior_art_checked: "arXiv:2206.04036 text checked 2026-10-01/02 by the packet-writing agent; improvements after September 2024 not checked (TODO operator); leaderboard not read by the writers (operator reported first place on 2026-10-02 evening KST)."
+known_limitations:
+  - "partial advance: an upper bound only; c_4 is not determined"
+  - "per-module build, not re-run on a second machine"
+  - "search is randomised and not bit-reproducible; the template itself is the certificate"
+  - "report has final: false, mode validation (official: true); whether a final evaluation is required is open (PACKET.md section 3.5)"
+  - "no human review"
+links:
+  - "arXiv:2206.04036 (Parczyk, Pokutta, Spiegel, Szabo, New Ramsey multiplicity bounds and search heuristics)"
+  - "https://app.autolab.ai/projects/lavaskiller/clique-cluster-ramsey-multiplicity-attempt-16"

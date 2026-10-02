@@ -1,0 +1,6 @@
+GPn8.star5 : ∀ (n : ℕ), 17 ≤ n → MGraph.Star 5 (GPn8.col n)
+GPn8.family : ∀ (n : ℕ), 17 ≤ n → GPk.StarFam (GPk.gp n 8) 5
+'GPn8.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPn8.family' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=526532 elapsed_s=5
+rc=0

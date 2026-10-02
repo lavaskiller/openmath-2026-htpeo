@@ -1,0 +1,473 @@
+% star6_partial.tex -- DRAFT of partial results on the Dvorak--Mohar--Samal conjecture.
+% Source of every mathematical claim: the verified fact graph of project star6
+% (~/danus-projects/star6/fact_graph on the run server, snapshot 2026-09-30 ~21:50 KST).
+% Fact ids are given in LaTeX comments next to each result (short 8-hex prefixes;
+% full ids and verification status are listed in NOTES.md next to this file).
+% THIS PAPER DOES NOT PROVE THE CONJECTURE.
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{conjecture}{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Open Problem}
+\newtheorem{hypothesis}[theorem]{Statement}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\chis}{\chi'_{s}}
+\newcommand{\PM}{\mathrm{PM}}
+\newcommand{\Col}{\mathrm{Col}}
+\newcommand{\Blk}{\mathrm{Blk}}
+\newcommand{\hyp}[1]{\textup{(#1)}}
+\newcommand{\Lean}{\textsf{Lean}}
+
+\title[Partial results on the star 6-edge-colouring conjecture]{Reductions and partial results towards the\\ Dvo\v{r}\'ak--Mohar--\v{S}\'amal star 6-edge-colouring conjecture}
+\author{[Author names to be supplied by the operator]}
+\date{Draft, 30 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+Dvo\v{r}\'ak, Mohar and \v{S}\'amal conjectured that every subcubic multigraph has star chromatic index at most~$6$; the best published general bound is~$7$. We do \emph{not} prove the conjecture. We report a chain of reductions, obtained with the help of an automated proof-search system and checked by its verification pipeline, which shows that the conjecture (for finite loopless multigraphs) follows from five explicit statements about $2$-cut-reduced cubic multigraphs: two ``far-exchange'' statements on digon insertions of cyclically $4$-edge-connected simple cubic graphs, a pole-dominance statement, a restricted perfect-matching colouring property at triangles carrying one digon, and a leaf-attachment statement. The assembly of this chain, together with all finite small-case facts except three census-level hypotheses, is formalized in \Lean{} with only the standard axioms. We also record Lean-certified finite base cases (all $2$-cut-reduced cubic multigraphs on $10$ and $12$ vertices, and the digon insertions of small cyclically $4$-edge-connected hosts), partial results on each open statement, star colourings of several infinite families (generalized Petersen graphs $GP(k,2)$ with the spokes as a colour class, flower and Goldberg snarks, covers of the Petersen graph and of $K_4$), and an explicit account of which parts are machine-checked and which rest on model-based verification only.
+\end{abstract}
+
+\maketitle
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+
+A \emph{star edge colouring} of a multigraph is a proper edge colouring with no bicoloured path or cycle of length four. The \emph{star chromatic index} $\chis(G)$ is the least number of colours in such a colouring. Dvo\v{r}\'ak, Mohar and \v{S}\'amal~\cite{DMS13} proved that every subcubic multigraph satisfies $\chis(G)\le 7$ and conjectured the following.
+
+\begin{conjecture}[\hyp{DMS}, \cite{DMS13}]
+Every subcubic multigraph has star chromatic index at most $6$.
+\end{conjecture}
+
+The bound $6$ would be sharp ($K_{3,3}$ needs six colours~\cite{DMS13}). Partial results include the bound $6$ for subcubic multigraphs of maximum average degree below $5/2$ and the bound $5$ below $24/11$ (Lei, Shi and Song~\cite{LSS18}; see also~\cite{LSSW18}), and bounds for special classes such as Halin graphs and generalized Petersen graphs~\cite{HLW20,Zhu21,OD24}. The conjecture remains open.
+
+\subsection*{What this paper contains}
+This is a \emph{partial-results} report. Its mathematical content was produced by an automated multi-agent proof-search system (a fork of the \textsf{Danus} harness) working on the conjecture for \emph{finite loopless} multigraphs, and every result stated here is a fact that passed the system's verification pipeline (Section~\ref{sec:status} explains exactly what that means, result by result). Our contributions are:
+\begin{enumerate}[label=(\arabic*)]
+\item \textbf{A reduction theorem} (Main Theorem~\ref{thm:main}): DMS for loopless multigraphs follows from five explicitly stated statements \hyp{FE-EXT-D}$_{10}$, \hyp{FE-EXIST-D}$_{10}$, \hyp{POLE}, \hyp{TD-TRI}, \hyp{II$_D$} about $2$-cut-reduced cubic multigraphs on at least $10$ (in one case $6$) vertices. Along the way we record several equivalent or sufficient single-statement forms (Theorems~\ref{thm:I-II}--\ref{thm:hole}).
+\item \textbf{A formal version} (Theorem~\ref{thm:lean-cs4}): the whole reduction, including all its finite inputs except three census-level finite hypotheses, is proved in \Lean{} with standard axioms only.
+\item \textbf{Finite certified cases} (Section~\ref{sec:finite}): certificates for all small cases used, most of them kernel-checked in \Lean.
+\item \textbf{Partial progress on each open statement} (Section~\ref{sec:partial}), e.g.\ \hyp{POLE} holds up to $16$ vertices and \hyp{II$_D$} up to $14$ vertices.
+\item \textbf{Class results} (Section~\ref{sec:classes}), with a comparison to the literature.
+\item \textbf{Open problems and obstacles} (Section~\ref{sec:open}) and an honest \textbf{verification status} (Section~\ref{sec:status}).
+\end{enumerate}
+
+\subsection*{Caveats up front}
+None of the five hypotheses of Main Theorem~\ref{thm:main} is proved; each is supported by computation only in the ranges stated in Sections~\ref{sec:partial} and~\ref{sec:evidence}. Most of the facts were checked by a language-model verifier and a second-model cross-check audit rather than by a proof assistant; several related facts carry open audit disputes (Section~\ref{sec:status}). The novelty of most results has not been checked against the literature (Section~\ref{sec:novelty}).
+
+%======================================================================
+\section{Definitions and conventions}\label{sec:prelim}
+
+All multigraphs are finite and loopless; parallel edges are allowed and are distinct edges. Two distinct edges \emph{meet} if they share an endpoint (parallel edges meet). A multigraph is \emph{cubic} (resp.\ \emph{subcubic}) if every vertex is incident with exactly (resp.\ at most) three edges. For $S\subseteq V(X)$, $\delta(S)$ is the set of edges with exactly one endpoint in $S$; $S$ is a \emph{$k$-edge-cut side} if $\emptyset\ne S\ne V(X)$ and $|\delta(S)|=k$. A \emph{perfect matching} (PM) is a set of pairwise vertex-disjoint edges covering every vertex. For an edge $g$ and an edge set $N$ we write $[g\in N]\in\{0,1\}$.
+
+\begin{definition}[Star colourings]\label{def:star}
+A \emph{star edge colouring with $k$ colours} of $X$ is a map $c\colon E(X)\to\{1,\dots,k\}$ such that (i) distinct edges with a common endpoint get different colours, and (ii) $X$ has no path with exactly four edges (on five distinct vertices) and no cycle with exactly four edges (on four distinct vertices) whose consecutive edges $e_1,e_2,e_3,e_4$ satisfy $c(e_1)=c(e_3)$ and $c(e_2)=c(e_4)$. An edge set $N$ is a \emph{colour class} of $c$ if $N=c^{-1}(\mu)$ for some $\mu$. An \emph{MC colouring} is a star edge colouring with $6$ colours whose colour class $6$ is a perfect matching; $(X,N)$ is \emph{MC-colourable} if $X$ has an MC colouring with $c^{-1}(6)=N$.
+\end{definition}
+
+\begin{definition}[Classes]\label{def:classes}
+$\cG$ is the class of connected bridgeless loopless cubic multigraphs. A member $X$ of $\cG$ is \emph{$2$-cut-reduced} if every $2$-edge-cut side $S$ satisfies $|S|=2$ or $|V(X)\setminus S|=2$; $\cD\subseteq\cG$ is the class of $2$-cut-reduced members. $\cS$ is the class of simple $3$-edge-connected cubic graphs. A \emph{cyclic $3$-edge-cut side} of a cubic $X$ is a $3$-edge-cut side $S$ such that both $X[S]$ and $X[V(X)\setminus S]$ contain a cycle; a cubic graph is \emph{cyclically $4$-edge-connected} (c4c) if it is connected and, for every set $R$ of at most three edges, at most one component of $X-R$ contains a cycle. For $H\in\cS$, $s(H)$ is the least size of a cyclic $3$-edge-cut side of~$H$.
+\end{definition}
+
+\begin{definition}[Digon insertion]\label{def:digon}
+For a cubic graph $H$ and $D\subseteq E(H)$, the \emph{digon insertion} $H^D$ replaces every edge $ab\in D$ by two new vertices $u_{ab},v_{ab}$, the edges $au_{ab}$, $v_{ab}b$, and two parallel edges $u_{ab}v_{ab}$. Thus $|V(H^D)|=|V(H)|+2|D|$.
+\end{definition}
+% fdd83999 (H-ASM): every 2-cut-reduced member of G on >=10 vertices arises as H^D with H in S (Lean: layers 16-18, 81c52cea / c3375be1 / 345a55d7).
+
+\begin{definition}[Leaf graph]\label{def:leaf}
+For a loopless cubic multigraph $G_0$ and an edge $g$ of $G_0$ with ends $s\neq t$, the \emph{leaf graph} $T(G_0,g)$ is obtained from $G_0$ by deleting $g$ and adding two new vertices $x,\ell$ and the three edges $sx$, $xt$, $x\ell$. An edge $g$ of $X$ is \emph{eligible} if it has distinct ends $s,t$, no other edge joins $s$ and $t$, and $g$ lies in no $2$-edge-cut of $X$.
+\end{definition}
+
+\begin{definition}[EX1-good]\label{def:ex1}
+A connected loopless cubic multigraph $X$ is \emph{EX1-good} if for every edge $g$ and every $t\in\{0,1\}$ such that some PM $N$ of $X$ has $[g\in N]=t$, there is a PM $N$ of $X$ with $[g\in N]=t$ such that $(X,N)$ is MC-colourable.
+\end{definition}
+
+\begin{definition}[Far-exchange sets]\label{def:fe}
+Let $X$ be a loopless cubic multigraph and $P$ a PM of $X$. The \emph{distance} between two edges is the least number of edges of a path from an endpoint of one to an endpoint of the other. A set $C\subseteq E(X)\setminus P$ is a \emph{far-exchange set for $P$} if
+\begin{enumerate}[label=(\alph*)]
+\item every edge of $P$ meets at most one edge of $C$;
+\item[(b$'$)] no edge of $E(X)\setminus(P\cup C)$ that is parallel to no edge of $C$ has both endpoints incident with edges of $C$;
+\item[(c)] any two distinct edges of $P$ that meet no edge of $C$ are at distance at least $3$.
+\end{enumerate}
+\end{definition}
+% far-exchange sets: 898eb5ab (H-RED6), multigraph form; simple form = contract P09-FE-EXT.
+
+\begin{definition}[Poles and dominance]\label{def:pole}
+Let $X$ be a loopless cubic multigraph and $v$ a vertex whose three edges join it to three distinct vertices $x_1,x_2,x_3$. The \emph{pole} $Q(X,v)$ is $X-v$ together with three new vertices $o_t$ and \emph{port edges} $p_t=x_to_t$ ($t=1,2,3$). For $d\colon E(Q)\to\{1,\dots,6\}$, $\Col_t(d)$ is the set of colours of the two edges $f\neq p_t$ at $x_t$, and $\Blk_t(d)$ is the set of those colours $d(f)$, $f=x_tr$, for which $r$ is incident with an edge $f'\ne f$ with $d(f')=d(p_t)$. The map $d$ is an \emph{MC pole colouring} if it is a star edge colouring with $6$ colours and every vertex of $X-v$ is incident with exactly one edge of colour $6$.
+
+Let $i\in\{1,2,3\}$, $\{j,k\}=\{1,2,3\}\setminus\{i\}$. An \emph{admissible outside datum at M-port $i$} consists of pairwise distinct colours $a_1,a_2,a_3$ with $a_i=6$ and sets $B_t\subseteq O_t\subseteq\{1,\dots,6\}$ with $|O_t|=2$ such that: $O_i\subseteq\{1,\dots,5\}\setminus\{a_j,a_k\}$ and $B_i=O_i$; for $t\in\{j,k\}$, $6\in O_t$, $a_t\notin O_t$ and $B_t\subseteq O_t\setminus\{6,a_j,a_k\}$; and not both $a_k\in O_j$ and $a_j\in O_k$. An MC pole colouring $d$ is \emph{compatible} with the datum if $d(p_t)=a_t$ and $\Col_t(d)\cap O_t\cap(\Blk_t(d)\cup B_t)=\emptyset$ for $t=1,2,3$. The pole is \emph{dominant} if
+\begin{enumerate}[label=(D\arabic*)]
+\item for every $i$ and every admissible outside datum at M-port $i$ there is a compatible MC pole colouring; and
+\item for every edge $g$ of $X-v$ and $s\in\{0,1\}$ there is $i$ such that for every admissible outside datum at M-port $i$ there is a compatible MC pole colouring $d$ with $[d(g)=6]=s$.
+\end{enumerate}
+\end{definition}
+% poles & dominance: 87fba731 (3-cut brick; novelty "new").
+
+\begin{definition}[The property (TD)]\label{def:td}
+Let $X\in\cG$ and let $y_1,y_2,y_3,u,v$ be distinct vertices such that the edges incident with them are exactly $y_1y_2$, $y_1y_3$, $y_2u$, two parallel edges $uv$, $vy_3$, and three edges $e_t=y_tw_t$ with $w_1,w_2,w_3$ distinct and outside $\{y_1,y_2,y_3,u,v\}$ (a triangle carrying one digon); let $U=V(X)\setminus\{y_1,y_2,y_3,u,v\}$. \hyp{TD} holds for $(X;y_1,y_2,y_3,u,v)$ if for every edge $g$ of $X[U]$ and $t\in\{0,1\}$ such that some PM $N\ni e_1,y_2u,vy_3$ has $[g\in N]=t$, there is an MC colouring $c$ of $X$ with $c(e_1)=c(y_2u)=c(vy_3)=6$ and $[c(g)=6]=t$.
+\end{definition}
+% (TD): 7d38a456 (TRI-BRICK-TD), 71dbf09e (H-RED14).
+
+%======================================================================
+\section{The reduction chain}\label{sec:reduction}
+
+\subsection{From all subcubic multigraphs to two cubic statements}
+Consider
+\begin{itemize}
+\item[\hyp{I}] every bridgeless loopless cubic multigraph has a star edge colouring with $6$ colours;
+\item[\hyp{II}] for every bridgeless loopless cubic multigraph $G_0$ and every edge $g$ of $G_0$, $T(G_0,g)$ has a star edge colouring with $6$ colours.
+\end{itemize}
+
+\begin{theorem}\label{thm:I-II}
+\hyp{I} $\wedge$ \hyp{II} holds if and only if every finite loopless multigraph of maximum degree at most $3$ has a star edge colouring with $6$ colours.
+\end{theorem}
+% a13aecc6 (llm+crosscheck-audit, passed). Lean: 974f7197 DmsIILean.dms_of_I_II (lean-gate, audit passed).
+\begin{proof}[Proof outline]
+The converse is trivial. For the forward direction one argues by induction on $|E(H)|$. Components are coloured separately. A bridge with edges on both sides is handled by a gluing lemma for star $6$-colourings across a bridge.
+% 54d1051a
+Otherwise every bridge is pendant; the core $C$ obtained by deleting the leaves is connected, bridgeless, with degrees $2$ and $3$. If $C$ has no degree-$2$ vertex, $H=C$ and \hyp{I} applies. If it has $k\ge 2$ of them, $H$ embeds into a bridgeless cubic multigraph obtained by joining the (existing or new) leaves in a cycle (or a digon if $k=2$), and \hyp{I} applies to it. If $k=1$, suppressing the degree-$2$ vertex $y$ of $C$ yields a bridgeless cubic $G_0$ with a new edge $g$, and $H$ is a sub-multigraph of $T(G_0,g)$, so \hyp{II} applies. Star colourings restrict to sub-multigraphs.
+\end{proof}
+
+\subsection{Single-statement sufficient conditions}
+Two strengthenings give DMS on their own; both implications are formalized.
+
+\begin{theorem}[CubicSharp5$_s$ implies DMS]\label{thm:cs5}
+Suppose every connected bridgeless simple cubic graph other than $K_{3,3}$ and the prism $K_3\square K_2$ has a star edge colouring with $5$ colours. Then \hyp{I} and \hyp{II} hold, and hence every finite loopless multigraph with maximum degree at most $3$ has a star edge colouring with $6$ colours.
+\end{theorem}
+% b22aa112 (prose, llm+crosscheck-audit, passed; novelty "new"); Lean: d1ef48fd DmsIIsLean.cs5s_dms (Lean 4.20 core, no Mathlib, standard axioms; also builds under 4.33.1), with a41e8f0a (CS5s => DMS_I).
+The proof replaces each digon of a cubic multigraph by a rigid $5$-colourable gadget (the prism minus an edge), colours the resulting simple graph with $5$ colours, and uses the sixth colour on one edge of each digon; the leaf case is a finite case analysis on the position of $g$ relative to the digons, which is itself formalized.
+% 85bb5f97 (Pi-substitution), 58c4b649 (LeafRecipeLean.step4), 4da62a86 (LeafAllLean.leaf_all), 9c01b9b4 (claim W), 3a172a44, d9fbe390, 1a8aa1c2, 0c35d380 (Pi rigidity, Lean).
+
+\begin{theorem}[HOLE implies DMS]\label{thm:hole}
+Suppose that for every $X\in\cG$ not isomorphic to $K_{3,3}$ and every vertex $t$ there are a star edge colouring $c$ of $X$ with $6$ colours and a colour $\beta$ missing from all edges incident with the closed neighbourhood $N[t]$. Then every finite loopless multigraph with maximum degree at most $3$ has a star edge colouring with $6$ colours.
+\end{theorem}
+% 5c1eb3f5 MGraph.dms_of_hole (Lean 4.20 core, standard axioms; lean-gate + audit passed). Prose part (a) of 336b55e3.
+
+\begin{remark}
+The hypotheses of Theorems~\ref{thm:cs5} and~\ref{thm:hole} are open. For CubicSharp$5_s$ the only evidence is computational (Section~\ref{sec:evidence}); we did not pursue these routes further.
+\end{remark}
+
+\subsection{Perfect matchings as a colour class}
+The main route replaces \hyp{I} by a statement asking for a perfect matching as a colour class.
+
+\begin{itemize}
+\item[\hyp{H}] every $X\in\cD$ with $|V(X)|\ge 10$ is EX1-good.
+\item[\hyp{II$_D$}] for every $G_0\in\cD$ with $|V(G_0)|\ge 6$ and every eligible edge $g$ of $G_0$, $T(G_0,g)$ has a star edge colouring with $6$ colours.
+\end{itemize}
+
+\begin{theorem}[EX1 reduction]\label{thm:ex1red}
+If \hyp{H} holds, then every $X\in\cG$ with $|V(X)|\ge 10$ is EX1-good; in particular it has a PM $M$ and a star $6$-edge-colouring with $M$ as a colour class.
+\end{theorem}
+% 0e90cbc9 (EX1-RED; llm+crosscheck-audit passed); Lean: RH2F layers 1-9 (7d291f6c, c64b6bd6, 657e581f, 341b6e5e, 643ccea3, 09796da8, 6e44d3c2, ebeb33c5, 066dc781, 3e79907c).
+
+\begin{theorem}[Reduction to \hyp{H} and the leaf case]\label{thm:rh2}
+\begin{enumerate}[label=(\alph*)]
+\item \hyp{H} $\wedge$ \hyp{II} implies DMS for loopless multigraphs.
+\item \hyp{H} $\wedge$ \hyp{II$_D$} implies \hyp{II}; hence \hyp{H} $\wedge$ \hyp{II$_D$} implies DMS for loopless multigraphs.
+\end{enumerate}
+Both statements are proved in \Lean{} (Lean 4.20 with Mathlib v4.20.0, standard axioms only), and the Lean propositions for \hyp{H}, \hyp{II}, \hyp{II$_D$} and DMS are proved equivalent, in \Lean, to plain restatements of the prose over arbitrary finite types.
+\end{theorem}
+% (a) RH2 6bfcd4d5 (prose, passed). Lean complete: 3e79907c RH2F.layer9 (RH2F.Hyp -> RH2F.II -> RH2F.DMS, no further hypotheses). Fidelity: 6c78409a RH2Fid.fidelity_bundle.
+% (b) II-RED2 52408ddd (prose, passed); Lean: 90b4662c (layer 12, RH2F.dms_of_H_IID); fidelity for IID and Hyp: 03f44697 RH2Fid.fidelity_IID.
+\begin{proof}[Proof outline]
+(a) Components with at most $8$ vertices are handled by a finite base case
+% 79223146 (B8)
+and larger ones by Theorem~\ref{thm:ex1red}; this gives \hyp{I}, and Theorem~\ref{thm:I-II} finishes. (b) Under \hyp{H}, the leaf case reduces across $2$-edge-cuts and digons to $2$-cut-reduced hosts at eligible edges, using gluing lemmas for MC colourings across $2$-edge-cuts.
+% f32e854e (II-2CUT), 5c988ceb (SMALL-2SIDED), 1d175e82 (G2F), 90755fca (G2M), 5a68c9cb (SR).
+\end{proof}
+
+\subsection{From \hyp{H} to statements about c4c hosts}
+Every member of $\cD$ on at least $10$ vertices is a digon insertion $H^D$ of some $H\in\cS$.
+% fdd83999 (H-ASM)
+The hypothesis \hyp{H} is split along this structure: the c4c hosts are handled by two ``far-exchange'' statements, cyclic $3$-edge-cuts by a gluing (``brick'') lemma that needs pole dominance of one side, and the one configuration that the brick does not cover---a triangle side of minimum size carrying exactly one digon---by the property \hyp{TD}.
+
+\begin{hypothesis}[The five open statements]\label{stmt:five}
+\leavevmode
+\begin{itemize}
+\item[\hyp{FE-EXT-D}$_{10}$] For every c4c simple cubic graph $H$ with $|V(H)|\ge 10$, every $D\subseteq E(H)$ with $|V(H)|+2|D|\ge 16$, every PM $P$ of $X:=H^D$ and every far-exchange set $C$ for $P$ in $X$, $X$ has a star edge colouring $c$ with $6$ colours such that $c^{-1}(6)=P$ and $c^{-1}(5)=C$.
+\item[\hyp{FE-EXIST-D}$_{10}$] For every c4c simple cubic graph $H$ with $|V(H)|\ge 10$, every $D\subseteq E(H)$ with $|V(H)|+2|D|\ge 16$, every edge $g$ of $X:=H^D$ and every $t\in\{0,1\}$, there are a PM $P$ of $X$ with $[g\in P]=t$ and a far-exchange set $C$ for $P$ in~$X$.
+\item[\hyp{POLE}] For every $X\in\cD$ with $|V(X)|\ge 10$ and every vertex $v$ of $X$ whose three edges join it to three distinct vertices, the pole $Q(X,v)$ is dominant.
+\item[\hyp{TD-TRI}] For every $H\in\cS$ that is not c4c, every cyclic $3$-edge-cut side $S=\{y_1,y_2,y_3\}$ with $|S|=3=s(H)$, and every $D\subseteq E(H)$ with $|V(H)|+2|D|\ge 16$ such that the edges of $D$ incident with $S$ consist of exactly one edge $y_2y_3$ (after renaming), \hyp{TD} holds for $(H^D;y_1,y_2,y_3,u,v)$, where $u,v$ are the new vertices of the digon inserted into $y_2y_3$ ($u$ adjacent to $y_2$).
+\item[\hyp{II$_D$}] As above: for every $G_0\in\cD$ with $|V(G_0)|\ge 6$ and every eligible edge $g$, $T(G_0,g)$ is star $6$-edge-colourable.
+\end{itemize}
+\end{hypothesis}
+
+\begin{theorem}[Intermediate reductions]\label{thm:hred}
+\begin{enumerate}[label=(\alph*)]
+\item \hyp{FE-EXT-D}$_{10}$ $\wedge$ \hyp{FE-EXIST-D}$_{10}$ implies: for every c4c simple cubic $H$ with $|V(H)|\ge 10$ and every $D$ with $|V(H)|+2|D|\ge 16$, $H^D$ is EX1-good.
+\item For c4c simple cubic hosts on at most $8$ vertices the same conclusion holds unconditionally \textup{(Lemma SMALLHOST-D, Section~\ref{sec:finite})}.
+\item The conclusion of \textup{(a)}, \hyp{POLE} and \hyp{TD-TRI}, together with the finite facts of Section~\ref{sec:finite}, imply \hyp{H}.
+\end{enumerate}
+\end{theorem}
+% (a),(b): d2f6b988 (SMALLHOST-D + Cor. H-RED8), 898eb5ab (H-RED6). (c): 71dbf09e (H-RED14 (c)), via 7d38a456 (TRI-BRICK-TD), 87fba731 (3-cut brick), b35d0429 (TD-EXT). All llm+crosscheck-audit passed.
+\begin{proof}[Proof outline]
+(a) Given $g,t$, \hyp{FE-EXIST-D}$_{10}$ provides $(P,C)$ with $[g\in P]=t$, and \hyp{FE-EXT-D}$_{10}$ colours $H^D$ with $P$ as colour class $6$. (c) By induction over cyclic $3$-edge-cuts of the host: a $3$-edge-cut with distinct ends whose one contraction has a dominant pole and whose other contraction is EX1-good yields EX1-goodness of the whole graph (the ``3-cut brick''); \hyp{POLE} supplies dominance. At a minimum triangle side carrying exactly one digon the pole is not available in the needed form, and \hyp{TD} is used instead (Lemma TRI-BRICK-TD). The finite facts cover the hosts with $14$ vertices and the small contractions.
+\end{proof}
+
+\subsection{The main reduction theorem}
+
+\begin{theorem}[Main reduction; ROOT-CS4]\label{thm:main}
+If \hyp{FE-EXT-D}$_{10}$, \hyp{FE-EXIST-D}$_{10}$, \hyp{POLE}, \hyp{TD-TRI} and \hyp{II$_D$} hold, then \hyp{H} and \hyp{II} hold, and every finite loopless multigraph with maximum degree at most $3$ has a star edge colouring with $6$ colours.
+\end{theorem}
+% 6010cb59 ROOT-CS4 (llm+crosscheck-audit, audit passed; novelty unchecked). Chain: d2f6b988 (2) + 71dbf09e (c) => (H); 52408ddd => (II); 6bfcd4d5 => DMS.
+\begin{proof}
+Theorem~\ref{thm:hred}(a),(b),(c) give \hyp{H}; Theorem~\ref{thm:rh2}(b) gives \hyp{II} and DMS.
+\end{proof}
+
+\begin{remark}[Variants]\label{rem:variants}
+The same conclusion holds with \hyp{TD-TRI} replaced by an ``L-shape'' form \hyp{TD-L-TRI} (which implies it), and with \hyp{POLE} replaced by a single boundary-extension statement \hyp{W-EXT} (``one universal W-colouring per M-port'', which implies \hyp{POLE}). Moreover \hyp{POLE} is \emph{equivalent} to its restriction to members with at least $18$ vertices, split into those with no $3$-edge-cut with distinct ends and an explicitly described residue.
+\end{remark}
+% TDL-RED ec1a5506; T1DAT-L 79d4e3a6; W-RED 1a864fdc; POLE-RED-CF c727d40b; POLE-16 3462e827 (b). All llm+crosscheck-audit passed.
+
+\begin{remark}[Scope of the hypotheses]
+Only the two far-exchange statements are about c4c hosts. \hyp{POLE} and \hyp{II$_D$} range over all of $\cD$ (above $10$ resp.\ $6$ vertices), and \hyp{TD-TRI} over non-c4c hosts with a minimum triangle side. The restriction to c4c hosts in the far-exchange statements is essential: the analogous existence statement over all of $\cD$ is false, e.g.\ for an $18$-vertex simple $3$-edge-connected cubic graph (a modification of $K_{3,3}$) and an edge $g$ such that none of the $12$ PMs containing $g$ admits any far-exchange set.
+\end{remark}
+% counterexample: gm d05a8da9 (evidence 49724d73; dead end 2f2c7e54). Not a fact; recorded counterexample in global memory. Vacuous facts flagged: b771fa70, 2d98b252, f7fb5878.
+
+\subsection{The formal version}
+
+\begin{theorem}[\Lean]\label{thm:lean-cs4}
+In the project's \Lean{} library (Lean 4.20 with Mathlib v4.20.0; only the axioms \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}; no \texttt{sorry}, no \texttt{native\_decide}) the following are proved:
+\begin{enumerate}[label=(\arabic*)]
+\item \texttt{SMALLHOSTD} (Lemma SMALLHOST-D) unconditionally;
+\item $\texttt{BASE12}\to\texttt{SIMPLE14}\to\texttt{B14D}\to\texttt{FEEXTD10}\to\texttt{FEEXISTD10}\to\texttt{POLE}\to\texttt{TDTRI}\to\texttt{IID}\to\texttt{DMS}$;
+\item the same with $\texttt{WEXT}$, $\texttt{TDLTRI}$ in place of $\texttt{POLE}$, $\texttt{TDTRI}$.
+\end{enumerate}
+Here \texttt{BASE12}, \texttt{SIMPLE14}, \texttt{B14D} are the finite statements of Section~\ref{sec:finite} entered as named hypotheses.
+\end{theorem}
+% 2e993e3b RH2F.layer28 (lean-gate + audit passed). Built on layers 23-27: bde9371a (L23, H-RED14 (c), ROOT-CS4 from finite facts), 83263f89 (L24 W-RED), 85780d9a (L25 TD-EXT/TDL-RED), 57ea4db2 (L26 SMALLPD proved), 2f482379 (L27), certificates fe45f583, 77e9ac7f, c156979f, 923511b6.
+
+\begin{remark}[What the formal version does not yet cover]
+(i) \texttt{BASE12}, \texttt{SIMPLE14}, \texttt{B14D} are proved in prose with computer assistance and are \emph{partly} certified in separate \Lean{} modules (Section~\ref{sec:finite}), but these modules are not yet linked to the named hypotheses of Theorem~\ref{thm:lean-cs4}; in particular the completeness of the graph census lists is established by computation outside \Lean. (ii) Statement fidelity---that the \Lean{} propositions mean the prose statements---is proved in \Lean{} for \hyp{H}, \hyp{II}, \hyp{II$_D$} and DMS; for \texttt{FEEXTD10}, \texttt{FEEXISTD10}, \texttt{POLE}, \texttt{TDTRI} it was checked only by the model-based verifiers.
+\end{remark}
+% fidelity facts: 6c78409a, 03f44697. No fidelity fact for FEEXTD10/FEEXISTD10/POLE/TDTRI (searched fact graph for "fidelity": only 03f44697, 30194dab (pointer), 6c78409a).
+
+%======================================================================
+\section{Finite cases certified by computation}\label{sec:finite}
+
+\subsection{Method}
+Every finite fact below has the form ``every member of an explicit finite family is EX1-good'' (or a pole-dominance or leaf-colouring analogue). Certification in \Lean{} follows one pattern: the family is represented by an explicit list of edge lists (orbit representatives under automorphisms where applicable); for each representative, edge $g$ and $t\in\{0,1\}$, the certificate supplies an explicit colouring; a Boolean checker (e.g.\ a star $6$-colouring checker with a neighbour table, and a check that colour class $6$ is a PM with the prescribed status of $g$) is defined in \Lean; its \emph{soundness} theorem (checker returns \texttt{true} $\Rightarrow$ the mathematical property holds) is proved; and the checker is evaluated on the data by the kernel (\texttt{decide}), not by compiled code. Hence no trust in external code is needed for the certified statements, but the \emph{completeness} of a census list (that every graph of the class is isomorphic to a listed one) is, unless stated otherwise, a separate computation.
+% certificate machinery: ebeb33c5 (fastStar2, star_of_fast2, exCert), 2f482379 (ex3R shared-walk certificates), 57ea4db2 (kernel evaluation of Bool checker with proved soundness).
+
+\subsection{Results}
+\begin{proposition}[BASE12]\label{prop:base12}
+Every $X\in\cD$ with $|V(X)|\in\{10,12\}$ is EX1-good; in fact for every edge $g$ and $t\in\{0,1\}$ there is a PM $N$ with $[g\in N]=t$ such that $(X,N)$ is MC-colourable. \textup{(\Lean-certified.)}
+\end{proposition}
+% a20d73d9 OparBase.all_ok (llm+lean-gate+crosscheck-audit, passed). Uses TAB-A 22e13cb8, TAB-B 6729360b, TAB-C 1cbbdf1f (Lean).
+
+\begin{proposition}[SIMPLE14]\label{prop:s14}
+Every simple $3$-edge-connected cubic graph on $14$ vertices is EX1-good, in the same strong form. \textup{(Computer-assisted; \Lean{} certificates exist for all $341$ graphs of the census list, in five parts.)}
+\end{proposition}
+% 8f3cb2fc SIMPLE14 (llm+crosscheck-audit passed; computer-assisted, evidence 81d40588).
+% Lean parts: S14-L0 a9652ded (DISPUTED), S14-L1 ff0c230b (passed), S14-L2 fe114fb2 (passed), S14-L3 5078e44d (DISPUTED), S14-L4 d08514f7 (DISPUTED).
+% Disputes: the Lean certificate logic is sound; the audit objects that the identification of the Lean edge lists with census entries is not covered by the cited evidence (later evidence 4c8e34d9 addresses it). Summary fact SIMPLE14-L 6e1c0f3a (llm+audit passed) relies on these parts.
+
+\begin{proposition}[B14-D]\label{prop:b14d}
+Every non-simple $X\in\cD$ with $14$ vertices is EX1-good, in the same strong form. \textup{(Computer-assisted; the census has $984$ orbit representatives, of which parts $0$--$10$ out of $14$, i.e.\ representatives $R_0,\dots,R_{791}$, are \Lean-certified at the time of writing.)}
+\end{proposition}
+% aa531b4c B14-D (llm+crosscheck-audit passed). Lean parts B14D-L0..L10: 7981cf80, 784c2cca, 290df276, 5e1275fd, 4976bb29, 31347ad2, 80bd5b2f, e1a8991d, ae44e356, dadf5835, 6e89f4ac (all llm+lean-gate+audit passed). Parts 11-13 not in the fact graph at snapshot time.
+
+\begin{proposition}[SMALLHOST-D]\label{prop:smallhost}
+Let $H$ be a c4c simple cubic graph with $|V(H)|\le 8$ and $D\subseteq E(H)$ with $|V(H)|+2|D|\ge 16$. Then $H^D$ is EX1-good, in the strong form. \textup{(\Lean-proved, including the reduction to $451$ representative markings of the hosts $K_4$, $K_{3,3}$, $Q_3$ and the Wagner graph~$V_8$, at $1$, $13$, $129$ and $308$ markings respectively.)}
+\end{proposition}
+% d2f6b988 (prose), Lean: 2f482379 (L27 reduction), fe45f583/77e9ac7f/c156979f/923511b6 (parts 1-4), 2e993e3b (part 5 + SMALLHOSTD). The host classification (every member of G with <=8 vertices iso to some repG k) is also in Lean (cls, via 6e44d3c2/643ccea3).
+
+\begin{proposition}[Further finite facts]\label{prop:misc-finite}
+\leavevmode
+\begin{enumerate}[label=(\alph*)]
+\item Every connected bridgeless loopless cubic multigraph on at most $8$ vertices has a star edge colouring with $6$ colours; for every such $Y$ and every edge $g$, $T(Y,g)$ has an MC-leaf colouring (a star $6$-colouring in which every vertex meets exactly one edge of colour $6$).
+\item Every $X\in\cD$ with $10\le|V(X)|\le 14$ has an MC-leaf colouring of $T(X,g)$ at every eligible edge $g$.
+\item \textup{(SMALL-PD, the instance used)} The pole $Q(Y,z)$ is dominant when $Y$ is the prism, $K_{3,3}$ or $V_8$ and $z$ is any vertex, and when $Y$ is $K_4$ with a digon inserted into one edge $ab$ and $z\in\{a,b\}$. \textup{(\Lean.)} A more general computer-assisted version covers the poles of all digon insertions of $K_4$, $K_{3,3}$, $Q_3$, $V_8$ with two explicit families of possible exceptions.
+\end{enumerate}
+\end{proposition}
+% (a) B8 79223146; LMC8 9e8d3945 (llm+audit passed); Lean for the star-6 consequence: f4c06558 (layer 20 (1)).
+% (b) LMC14 18134123 (llm+audit passed; computer-assisted).
+% (c) SMALL-PD 86f2b7c4 (A); Lean 57ea4db2 (layer 26).
+
+%======================================================================
+\section{Partial results on the open statements}\label{sec:partial}
+
+\begin{theorem}[Small cases of the open statements]\label{thm:smallcases}
+\leavevmode
+\begin{enumerate}[label=(\alph*)]
+\item \hyp{POLE} holds for all $X\in\cD$ with $|V(X)|\in\{10,12,14,16\}$; in fact the poles admit W-colourings as required by \hyp{W-EXT}. \textup{(Computer-assisted.)}
+\item \hyp{II$_D$} holds for all $G_0$ with $|V(G_0)|\le 14$.
+\end{enumerate}
+\end{theorem}
+% (a) POLE-16 3462e827 (llm+crosscheck-audit passed; novelty "new"). (b) from LMC8 9e8d3945 and LMC14 18134123 (MC-leaf colouring is in particular a star 6-colouring); Lean layer 20 f4c06558 uses LMC14 as named hypothesis.
+
+\begin{theorem}[Far-exchange completion under spacing conditions]\label{thm:rl}
+Let $G$ be a finite simple cubic graph, $M$ a PM and $C$ a far-exchange set for $M$ (simple form). \textup{[For this draft we do not reproduce the notions of path gaps, cyclic gaps, exchanges and gap-distance used below (a cyclic gap is a cycle of $E(G)\setminus M$ containing no edge of $C$; path gaps are the corresponding paths); they must be imported for a final version.]}
+\begin{enumerate}[label=(\alph*)]
+\item If every endpoint of every exchange lies at gap-distance at least $2$ from the ends of its own path gap (with distinct gaps for distinct endpoints, and a small excluded position on gaps of length $4$), then $G$ has a star edge colouring $c$ with $6$ colours with $c^{-1}(6)=M$ and $c^{-1}(5)=C$.
+\item The same conclusion holds if every exchange endpoint is ``deep'' and endpoints on a common gap are at distance at least $4$ along it.
+\end{enumerate}
+\end{theorem}
+% (a) RL 3b6c304f (llm+audit passed; novelty "new"). (b) DEEP a4e7f9e5 (llm+audit passed; novelty "new"). Terminology (gaps, exchanges) from 45f4c669 (GEN), 6cf5e4e4 (W4); we do not reproduce the definitions here -- [GAP: definitions of path gap / cyclic gap / exchange endpoint to be imported for a final version].
+These cover the ``global'' part of \hyp{FE-EXT-D}$_{10}$ in the case $D=\emptyset$: a further reduction shows that far-exchange completion follows from the existence of explicit local data around each exchange, and the remaining difficulty is purely local (Section~\ref{sec:open}).
+% RED-P ec3c9e84, RED-C d3731493, RED-S 40bdfd9d (llm+audit passed). RED-L 51264ddc and RED-Q 7047a4b8 are audit-DISPUTED (RED-Q superseded by RED-S).
+
+%======================================================================
+\section{Star colourings of special families}\label{sec:classes}
+
+For integers $n\ge 5$ and $1\le k<n/2$ the generalized Petersen graph $GP(n,k)$ has vertices $u_i,v_i$ ($i\in\mathbb{Z}/n$) and edges $u_iu_{i+1}$, $u_iv_i$ (\emph{spokes}), $v_iv_{i+k}$.
+
+\begin{theorem}[Spokes as a colour class]\label{thm:gp2spokes}
+For every $k\ge 5$, $GP(k,2)$ has a star edge colouring $c$ with $6$ colours such that $c^{-1}(6)$ is exactly the set of spokes. \textup{(\Lean-proved.)}
+\end{theorem}
+% 1262231d GPSpokesMC.gp2_tables (llm+lean-gate+crosscheck-audit, passed; novelty "new"). Contract P07-LEAN-GP2.
+Thus these graphs satisfy the ``MC'' form (a PM as colour class) for a specific, prescribed perfect matching.
+
+\begin{theorem}[Star $5$-edge-colourable families]\label{thm:five}
+Each of the following graphs has a star edge colouring with $5$ colours:
+\begin{enumerate}[label=(\alph*)]
+\item the flower snarks $J_n$, $n\ge 5$ odd;
+\item the Goldberg snarks $G_k$, $k\ge 5$ odd;
+\item every finite simple graph admitting a covering map to the Petersen graph; every finite simple graph admitting a covering map to $K_4$;
+\item $GP(2m,k)$ for $m\ge 3$ and odd $k<m$; $GP(4m,k)$ for $m\ge 2$ and odd $k<2m$;
+\item $GP(10m,4)$, $GP(14m,6)$, $GP(17m,8)$, $GP(22m,10)$, $GP(26m,12)$, $GP(30m,14)$ for every $m\ge 1$;
+\item every graph obtained from a loopless cubic multigraph by replacing each vertex by a copy of the Petersen graph minus a vertex (more generally, an ``all-good'' inflation).
+\end{enumerate}
+Moreover star colourings pull back along covering maps: of simple graphs, and of multigraphs along parallel-respecting covers.
+\end{theorem}
+% (a) c97931f9; (b) 32a017c1; (c) 1bac0482 (Petersen covers), b9036846 (K4 covers + GP(4m,k)); (d) 9d871dcf, b9036846; (e) f8e1edfe, 6309f733, a491fe56; (f) aa607ed0; pull-back: 1bac0482 (a), e306b2d9; Lean multigraph version with K33 (6 colours) and Petersen (5 colours): 7935d329 P06Lean.cover_main.
+% All llm+crosscheck-audit passed (7935d329: lean+lean-gate, no audit field). None depends on a disputed fact.
+% EXCLUDED (audit-disputed): GP(n,2) star-5 for all n>=5 (f4aa886c; also 9c222061 llm-only, no audit); GP(n,3) n>=7 (7f9ca7cc).
+% EXCLUDED because they depend on those: e8914ee4 (lifting GP(n,k) from divisors), ec8309a4 (GP(5m,2) clean colourings).
+
+\begin{remark}
+Two further statements---star $5$-colourability of $GP(n,2)$ for all $n\ge5$ and of $GP(n,3)$ for all $n\ge 7$---were produced and verified by the language-model verifier, but their cross-check audits are \emph{disputed} (the written window-enumeration case split is not exhaustive, although the colourings were independently regenerated and confirmed for $n\le 399$ in the $GP(n,3)$ case). We do not claim them here, nor two results that depend on them. Families (c)--(f) of Theorem~\ref{thm:five} overlap with published work on generalized Petersen graphs (Section~\ref{sec:novelty}).
+\end{remark}
+
+%======================================================================
+\section{Computational evidence}\label{sec:evidence}
+
+\subsection{Global sweep (imported)}
+The project imported, from earlier (pre-harness) work, a record that every connected loopless graph in the following classes is star $6$-edge-colourable, about $30.7$ million graphs in total: simple cubic graphs with $n\le 22$ vertices ($7{,}875{,}918$ graphs, of which $7{,}319{,}447$ with $n=22$); simple subcubic graphs with $n\le 17$ ($22{,}473{,}106$); cubic multigraphs with $n\le 18$ ($376{,}509$); subcubic multigraphs with $n\le 10$ ($7{,}925$). The same record reports exact star chromatic indices for cubic graphs with $n\le 18$, and that among bridgeless cores in the swept range only $K_{3,3}$, the prism and two small multigraph gadgets need six colours.
+\emph{Caveat:} this sweep was not re-run by the harness; its artifact is recorded as an early snapshot, and it has the status ``computational evidence'', not ``verified fact''.
+% reference/handoff.md rows R76-R81 (imported ledger). Not a fact in the fact graph.
+
+\subsection{Evidence for the open statements}
+Recorded census results (all ``evidence'' status, not facts):
+\begin{itemize}
+\item \hyp{TD-TRI}: exhaustive over its exact scope at $|V(X)|=16$ and $18$ ($92{,}694$ instances, $2.79$M realizable pairs), a sample at $20$ vertices ($1.06$M pairs) and stress hosts on $12$--$100$ vertices, with $0$ misses; an independent census through $20$ vertices ($\approx 34$M pairs), also $0$ misses.
+\item \hyp{FE-EXIST-D}$_{10}$: exhaustive for $|V(X)|=16,18,20$ ($\approx 26$M pairs) and all $D$ on c4c hosts with $10$ and $12$ vertices; no failure.
+\item \hyp{FE-EXT-D}$_{10}$: targeted enclosed-exchange structures ($14{,}693$ structures, $0$ failures); for $D=\emptyset$, local-data constructions succeeded on all tested instances (one exchange: all c4c graphs with $n\in\{10,14\}$, $17{,}137$ instances, and all $6{,}100$ c4c graphs with $n=18$, $53{,}964$ instances; two exchanges: all $607$ c4c graphs with $n=16$, $4{,}801$ instances; random $n=30$), with capped enumerations.
+\item \hyp{II$_D$}: $120$ random hosts with $14$--$28$ vertices.
+\end{itemize}
+% ROADMAP.md (2026-09-30 16:34 KST) and REPORT.md rounds 33-37; evidence ids cfb8f4eb, daf1425f, 0ad00159, cc7631d5, 2dc6dd41, f5147e63. Evidence records not independently re-checked by the author of this draft.
+
+%======================================================================
+\section{Open problems}\label{sec:open}
+
+By Theorem~\ref{thm:main}, DMS for loopless multigraphs follows from:
+
+\begin{problem}[\hyp{FE-EXT-D}$_{10}$; contract P18, with the case $D=\emptyset$ as P09]\label{prob:p18}
+Prove Statement~\ref{stmt:five}\,\hyp{FE-EXT-D}$_{10}$.
+\end{problem}
+For $D=\emptyset$ the global part is reduced to local data (Theorem~\ref{thm:rl} and the reductions after it). The remaining single-exchange local lemma is a joint constraint problem in a bounded zone around the exchange (``ZONE''). Each piece is easy in isolation, but the joint choice under crowding is not: a deterministic greedy fails on $189$ of $3{,}189$ instances with $n\le 14$, although a small search repairs them; and labelled radius-$2$ neighbourhoods are essentially all distinct, so no finite catalogue will close the lemma. A crowding-tolerant argument is needed. With several exchanges at the minimum allowed distance $3$, the local zones interact in most instances, so the multi-exchange case is not a sum of single-exchange problems.
+% obstacles gm 567dd586 (ZONE), gm 383c539a (multi-exchange). Not facts.
+
+\begin{problem}[\hyp{FE-EXIST-D}$_{10}$; contract P16]\label{prob:p16}
+Prove Statement~\ref{stmt:five}\,\hyp{FE-EXIST-D}$_{10}$.
+\end{problem}
+This is a pure existence statement (a PM with prescribed status of $g$ plus an edge set; no colouring). The version over all of $\cD$ is false (Remark after Theorem~\ref{thm:main}), so any proof must use cyclic $4$-edge-connectivity of the host.
+
+\begin{problem}[\hyp{POLE}; contract P14]\label{prob:p14}
+Prove Statement~\ref{stmt:five}\,\hyp{POLE}. By Theorem~\ref{thm:smallcases}(a) and Remark~\ref{rem:variants} it suffices to treat members with at least $18$ vertices, split into those without a $3$-edge-cut with distinct ends and an explicit residue.
+\end{problem}
+A ``re-pairing'' route was abandoned after its existence hypothesis was found to be false.
+% REP-EXIST false: gm 82bb3f5c, 6b71d829.
+
+\begin{problem}[\hyp{TD-TRI}; contract P23]\label{prob:p23}
+Prove Statement~\ref{stmt:five}\,\hyp{TD-TRI}.
+\end{problem}
+A one-crossing gluing step for \hyp{TD} across a $3$-edge-cut with distinct ends is verified, but it only transfers pairs $(g,t)$ realized by a constrained PM crossing the cut exactly once; at $16$ vertices $25$--$30\%$ of the relevant cuts have pairs realized only by PMs crossing three times, so an induction over $3$-edge-cuts needs a separate three-crossing step (and a named c4c core statement).
+% BRICK-TD ed8c6359 (passed); obstacle gm 35a2a362; BRICK-TD3 53cbf7a3 (three-crossing gluing) is audit-DISPUTED; TRANSFER-3 1eda3cd3 llm-only, audit pending.
+
+\begin{problem}[\hyp{II$_D$}; contract P19]\label{prob:p19}
+Prove Statement~\ref{stmt:five}\,\hyp{II$_D$} for hosts with at least $16$ vertices.
+\end{problem}
+
+\begin{problem}
+Decide whether every connected bridgeless simple cubic graph other than $K_{3,3}$ and the prism is star $5$-edge-colourable (Theorem~\ref{thm:cs5}).
+\end{problem}
+
+%======================================================================
+\section{Status of verification}\label{sec:status}
+
+\subsection{How the results were produced}
+All results were generated by an automated system of language-model worker agents. A result enters the project's fact graph only after acceptance by a language-model verifier (``llm''). Most facts were additionally re-checked by an independent cross-check audit using a different model (``audit''), which re-reads the proof, checks non-vacuity of hypotheses and the consistency of internal citations; its verdict is \emph{passed} or \emph{disputed}. Facts stated as \Lean{} theorems were additionally compiled by a gate that rejects \texttt{sorry}, \texttt{native\_decide} and non-standard axioms (``Lean''). No human has checked the proofs in detail. The human operator only made scheduling decisions and resolved one dispute (below).
+
+\subsection{Status of the results in this paper}
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.43\textwidth}p{0.5\textwidth}@{}}
+\toprule
+Result & Verification \\
+\midrule
+Thm~\ref{thm:I-II} ((I)$\wedge$(II) $\Leftrightarrow$ DMS) & llm + audit; \Lean{} version of $\Rightarrow$ \\
+Thm~\ref{thm:cs5} (CubicSharp$5_s$ $\Rightarrow$ DMS) & llm + audit; \Lean{} \\
+Thm~\ref{thm:hole} (HOLE $\Rightarrow$ DMS) & \Lean{} (+ audit) \\
+Thm~\ref{thm:ex1red}, \ref{thm:rh2} & llm + audit; \Lean{} complete, with statement fidelity \\
+Thm~\ref{thm:hred}, Main Thm~\ref{thm:main} & llm + audit; \Lean{} modulo BASE12, SIMPLE14, B14D; fidelity of hypotheses not formally checked \\
+Prop~\ref{prop:base12}, \ref{prop:smallhost}, \ref{prop:misc-finite}(c) & \Lean{} \\
+Prop~\ref{prop:s14} & computer-assisted, llm + audit; \Lean{} parts, 3 of 5 audit-disputed \\
+Prop~\ref{prop:b14d} & computer-assisted, llm + audit; \Lean{} parts 11 of 14 \\
+Prop~\ref{prop:misc-finite}(a),(b), Thm~\ref{thm:smallcases} & computer-assisted, llm + audit \\
+Thm~\ref{thm:rl} & llm + audit \\
+Thm~\ref{thm:gp2spokes} & \Lean{} (+ audit) \\
+Thm~\ref{thm:five} & llm + audit (covers: also \Lean) \\
+Section~\ref{sec:evidence} & evidence only (not facts) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Open audit disputes}
+The following facts in the transitive support of the main chain carry a disputed cross-check audit:
+\begin{itemize}
+\item Lemma 2P (MC colourings across a $2$-edge-cut): an omitted subcase in a $4$-walk case split. The operator marked the dispute resolved: a separate audit-passed lemma covers the omitted subcases, and the formal proof of Theorem~\ref{thm:rh2} shows the disputed part is not used on the root path.
+\item Lemma LEAF-FLIP (a leaf-case lemma): the hand proof was judged sound; the dispute concerns an overstated scope of a computational cross-check cited in the write-up.
+\item Two \Lean{} layers in the import chain of Theorem~\ref{thm:lean-cs4}: layer 5 (an incorrect claim in the prose outline, not in the \Lean{} statement) and layer 19 (two conjuncts have hypotheses now known to be false, hence vacuous; they are not used by the main chain). For kernel-checked theorems these disputes do not affect validity, only the accompanying prose.
+\item Certificate parts S14-L0, S14-L3, S14-L4 (Proposition~\ref{prop:s14}): identification of \Lean{} edge lists with the census list.
+\end{itemize}
+Disputes in side branches not used by the main theorem: RED-L and RED-Q (reductions for \hyp{FE-EXT-D} with $D=\emptyset$), BRICK-TD3 and REQ, KILL-$\delta$, KILL-T, KILL-T5, CORE-FE, several colouring lemmas, and the $GP(n,2)$, $GP(n,3)$ results.
+% 8f2b69f6 (2P; dispute_resolved by operator, repaired_by 216c7379), 62497214 (LEAF-FLIP), 643ccea3 (L5), f7fb5878 (L19), e3b02d53 (CORE-FE, in L28 closure), a9652ded/5078e44d/d08514f7. Side: 51264ddc, 7047a4b8, 53cbf7a3, 8e1dc0ee, 7ee26126, bd3c34a7, d128e043.
+% Also in closures without audit verdict: 336b55e3 (llm+crosscheck), df88bfc2 (llm+audit+lean-gate, no verdict), 63b9e393 (lean+lean-gate).
+
+\subsection{Novelty}\label{sec:novelty}
+For most facts the harness's novelty check was not run (``unchecked''); a minority are marked ``new'', ``partly known'' or ``unclear'' by a model-based check, which is not a literature review. A light search by the author of this draft found:
+star $5$-edge-colourings of $GP(n,k)$ are known when $\gcd(n,k)\ge 3$ (Zhu et al.~\cite{Zhu21}, completed by Omoomi and Vahid Dastjerdi~\cite{OD24}, who also treat some cases with $\gcd=2$), so parts (d) and (e) of Theorem~\ref{thm:five} may overlap with~\cite{OD24}; that star colourings pull back along covering maps is elementary and likely folklore; values such as $\chis$ of the Petersen graph are classical~\cite{DMS13}. We found no reference for the reduction chain of Section~\ref{sec:reduction}, for Theorem~\ref{thm:gp2spokes}, or for the snark families, but a proper literature review is future work.
+
+%======================================================================
+\section*{Acknowledgements}
+The results were produced with an automated proof-search harness using language-model agents and the \Lean{} theorem prover. [Operator to complete.]
+
+\begin{thebibliography}{9}
+\bibitem{DMS13} Z.~Dvo\v{r}\'ak, B.~Mohar, R.~\v{S}\'amal, Star chromatic index, \emph{J. Graph Theory} \textbf{72} (2013), 313--326.
+\bibitem{LSS18} H.~Lei, Y.~Shi, Z.-X.~Song, Star chromatic index of subcubic multigraphs, \emph{J. Graph Theory} \textbf{88} (2018), 566--576; arXiv:1701.04105.
+\bibitem{LSSW18} H.~Lei, Y.~Shi, Z.-X.~Song, T.~Wang, Star $5$-edge-colorings of subcubic multigraphs, \emph{Discrete Math.} \textbf{341} (2018), 950--956.
+\bibitem{HLW20} X.~Hou, L.~Li, T.~Wang, Star edge-coloring of some special graphs, arXiv:2010.14349 (2020).
+\bibitem{Zhu21} E.~Zhu et al., [star edge colouring of generalized Petersen graphs], \emph{Discuss. Math. Graph Theory} \textbf{41}(2) (2021), 1265-- [metadata to be verified].
+\bibitem{OD24} B.~Omoomi, M.~Vahid Dastjerdi, Star edge coloring of generalized Petersen graphs, arXiv:2410.15024 (2024).
+\end{thebibliography}
+
+\end{document}

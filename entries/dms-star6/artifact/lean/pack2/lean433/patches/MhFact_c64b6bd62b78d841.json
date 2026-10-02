@@ -1,0 +1,14 @@
+[
+ {"old": "  simp [Cut2.toClo, h]\n", "new": "  simp [Cut2.toClo, h]\n  rfl\n", "count": 2,
+  "why": "4.33: simp leaves `Fin.last X.m = Fin.last X.m` (the two sides are typed Fin (addEdge ..).m and Fin (X.m+1)); closed by rfl"},
+ {"old": "  simp [Cut2.XD, Cut2.oD, addEdge_ends_old]\n",
+  "new": "  exact (addEdge_ends_old (G := addEdge X C.b1 C.b2) (Fin.castSucc d)).trans (addEdge_ends_old d)\n", "count": 1,
+  "why": "4.33: simp no longer rewrites with addEdge_ends_old through (addEdge ..).m; give the term"},
+ {"old": "  simp [Cut2.XD, Cut2.dl1, addEdge_ends_old, addEdge_ends_new]\n",
+  "new": "  exact (addEdge_ends_old (G := addEdge X C.b1 C.b2) (Fin.last X.m)).trans addEdge_ends_new\n", "count": 1,
+  "why": "same"},
+ {"old": "  unfold Joins; rw [C.XD_ends_old]\n", "new": "  unfold Joins; rw [C.XD_ends_old]; exact Iff.rfl\n", "count": 1,
+  "why": "4.33: rw no longer closes the resulting `A ↔ A` goal (as in the 09-28 port of addEdge_joins_old)"},
+ {"old": "  unfold Inc; rw [C.XD_ends_old]\n", "new": "  unfold Inc; rw [C.XD_ends_old]; exact Iff.rfl\n", "count": 1,
+  "why": "same"}
+]

@@ -1,0 +1,6 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos292.lean:59:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos292.lean:65:8: warning: declaration uses `sorry`
+'Erdos292.erdos_292.variants.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos292.erdos_292.variants.two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos292.erdos_292.variants.prime_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

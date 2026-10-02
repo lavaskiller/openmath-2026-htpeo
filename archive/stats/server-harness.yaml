@@ -1,0 +1,44 @@
+# star6 agent harness usage on the server (Claude workers, verify service, supervisor, decomposer, reviewer, audits).
+# TODO STUB: no numbers were collected.
+# Reason: on 2026-10-03 (KST) the server could not be reached from the laptop session that wrote this repository.
+reported_by: "helper-team-repo (Claude Code agent); stub, to be completed by the operator"
+period: {from: "TODO", to: "TODO"}
+status: "TODO - not collected"
+how_to_collect:
+  - "the script is scripts/mh-export-usage.sh in the harness repository: usage 'scripts/mh-export-usage.sh star6 [out.tar.gz] [--since YYYY-MM-DD]'"
+  - "as read in the laptop copy of the script (2026-10-03): it copies the whole project (workers, overnight, reviewer, fact_graph, verify runs, codex sessions, Claude transcripts) to a temporary staging directory, builds INDEX.json there and then makes the tarball; INDEX.json cannot be produced without the staging copy unless the embedded Python part is run directly on the live directories"
+  - "run it as a job, output under ~/team-stats/: cd ~/m_harness/harness && ~/.venvs/mh/bin/python -m danus.ops.jobs star6 teamstats 2G -- bash scripts/mh-export-usage.sh star6 ~/team-stats/ai-usage-star6.tar.gz"
+  - "keep the tarball on the server; record only: sha256sum ~/team-stats/ai-usage-star6.tar.gz"
+  - "extract the index only: tar -xzf ~/team-stats/ai-usage-star6.tar.gz -C ~/team-stats ./INDEX.json"
+  - "sum INDEX.json runs per (role, model): number of runs, output_tokens, cost_usd; record the date range of the logs"
+  - "limit of the script as written: an INDEX.json row has role, model, cost_usd, output_tokens, turns - it does NOT carry input or cache tokens. For input/cache tokens run tools/sum_claude_usage.py on the claude-sessions/ part (the server-side Claude Code project folders of the star6 project)"
+  - "the staging copy needs free disk space of about the project size and /tmp is used by mktemp: check df first"
+bundle:
+  path_on_server: "TODO"
+  sha256: "TODO"
+  size: "TODO"
+ai_usage:
+  - entry: "dms-star6"
+    provider: "Anthropic"
+    model: "TODO (Claude Opus / Sonnet; exact ids from INDEX.json)"
+    interface: "agent harness (Claude Code headless workers, verifier, supervisor)"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: "TODO"
+    cost_usd: "TODO (INDEX.json: claude_api_equivalent_cost_usd)"
+    plan_usage: "TODO; hand-written log: weekly window 99% on 2026-10-01 23:25 KST, Claude workers stopped from 15:49 that day until the deadline (PLAN.md)"
+    source: "TODO"
+by_role: "TODO: table role x model (runs, output tokens, cost) from INDEX.json"
+compute:
+  - entry: "dms-star6"
+    machine: "16-core server, 14 GB RAM"
+    purpose: "all star6 jobs (job specs with start times in the project's overnight/jobs/*.json; systemd user units mh-*)"
+    wall_hours: "TODO"
+    cpu_hours: "TODO: systemctl --user show <unit> -p CPUUsageNSec -p ExecMainStartTimestamp -p ExecMainExitTimestamp, where the unit records still exist"
+    peak_memory_gb: "TODO"
+    counted_in: "entries/dms-star6/STATS.yaml"
+    source: "TODO"
+notes: "Stub. GPT usage of the harness (GPT workers and audits run through codex) belongs to archive/stats/server-codex.yaml, not here, so that it is counted once."

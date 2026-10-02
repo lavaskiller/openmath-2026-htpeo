@@ -1,0 +1,6 @@
+@@ why: 4.33: the closing step of simpa no longer unfolds C.swap12.S to C.S; close with exact after simp
+<<<<
+exact (by rw [C.flip.vcount_clo, scount_flip] at hvB; simpa using hvB)
+====
+exact (by rw [C.flip.vcount_clo, scount_flip] at hvB; first | simpa using hvB | exact hvB | (simp at hvB; exact hvB))
+>>>>

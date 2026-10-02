@@ -1,0 +1,21 @@
+4 p 4 extra 1 ns 17 31 none 0.2
+4 p 5 extra 1 ns 19 39 FOUND 0.6
+4 written; small n without colouring: []
+5 p 4 extra 1 ns 19 35 none 0.4
+5 p 5 extra 1 ns 21 39 none 0.7
+5 p 3 extra 1 ns 17 29 none 0.9
+5 p 6 extra 1 ns 23 47 FOUND 1.4
+5 written; small n without colouring: []
+6 p 4 extra 1 ns 21 39 none 0.3
+6 p 5 extra 1 ns 23 44 none 1.0
+6 p 3 extra 1 ns 19 32 none 1.2
+6 p 6 extra 1 ns 25 47 none 1.6
+6 p 7 extra 1 ns 27 55 FOUND 2.4
+6 written; small n without colouring: []
+7 p 4 extra 1 ns 23 43 none 0.4
+7 p 5 extra 1 ns 25 49 none 1.2
+7 p 3 extra 1 ns 21 35 none 1.5
+7 p 6 extra 1 ns 27 53 none 2.6
+7 p 7 extra 1 ns 29 55 none 3.2
+7 p 8 extra 1 ns 31 63 FOUND 4.3
+7 written; small n without colouring: []

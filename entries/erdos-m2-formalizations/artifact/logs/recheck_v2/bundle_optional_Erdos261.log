@@ -1,0 +1,8 @@
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos261.lean:170:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos261.lean:176:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos261.lean:183:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos261.lean:198:8: warning: declaration uses `sorry`
+'Erdos261.erdos_261.variants.borwein_loring' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos261.erdos_261.variants.borwein_loring_property' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos261.erdos_261.parts.i' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

@@ -1,0 +1,44 @@
+-- Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+-- lean Main.lean ; exit code 0
+def RH2F.DMS : Prop :=
+∀ (G : MGraph), G.Subcubic → G.Loopless → ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+RH2Fid.fidelity_bundle : ((RH2F.Hyp ↔ RH2Fid.HP) ∧ (RH2F.II ↔ RH2Fid.IIP) ∧ (RH2F.DMS ↔ RH2Fid.DMSP)) ∧
+  (RH2Fid.HP → RH2Fid.IIP → RH2Fid.DMSP) ∧
+    (RH2Fid.LooplessP (RH2Fid.fullEn RH2Fid.wK4) ∧
+        RH2Fid.CubicP (RH2Fid.fullEn RH2Fid.wK4) ∧
+          RH2Fid.BridgelessP (RH2Fid.fullEn RH2Fid.wK4) ∧
+            RH2Fid.ConnectedP (RH2Fid.fullEn RH2Fid.wK4) ∧
+              RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.cK4 ∧
+                ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.cK4bad) ∧
+      (RH2Fid.StarP (RH2Fid.fullEn MGraph.k33) MGraph.k33Col ∧
+          ¬RH2Fid.StarP (RH2Fid.fullEn MGraph.k33) RH2Fid.cK33bad ∧ RH2Fid.TwoCutReducedP (RH2Fid.fullEn MGraph.k33)) ∧
+        (RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wPrism) RH2Fid.cPrism ∧
+            ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wPrism) RH2Fid.cPrismBad) ∧
+          (RH2Fid.CubicP (RH2Fid.fullEn RH2Fid.wDig) ∧
+              RH2Fid.BridgelessP (RH2Fid.fullEn RH2Fid.wDig) ∧
+                RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wDig) RH2Fid.cDig ∧
+                  ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wDig) RH2Fid.cDigBad) ∧
+            (RH2Fid.Star6P (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) ∧
+                ¬RH2Fid.CubicP (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) ∧
+                  RH2Fid.IsBridge (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) (Sum.inr 2)) ∧
+              ((RH2F.InG RH2Fid.wD8 fun x => True) ∧ ¬RH2Fid.TwoCutReducedP (RH2Fid.fullEn RH2Fid.wD8)) ∧
+                (RH2F.InG RH2Fid.wPet fun x => True) ∧
+                  (10 ≤ RH2F.vcount fun x => True) ∧ RH2F.TwoCutReducedOn fun x => True
+'RH2F.layer37' depends on axioms: [propext, Classical.choice, Quot.sound]
+'star6_dms_conditional_A' depends on axioms: [propext, Classical.choice, Quot.sound]
+'star6_dms_conditional_B' depends on axioms: [propext, Classical.choice, Quot.sound]
+'star6_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer37a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer35' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer32d' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.layer28' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.base12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.simple14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.b14d' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.feexist16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.feexistD10_of_18' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.iid16_of_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.cls16c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2F.rh2_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2P.layerP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RH2Fid.fidelity_bundle' depends on axioms: [propext, Classical.choice, Quot.sound]

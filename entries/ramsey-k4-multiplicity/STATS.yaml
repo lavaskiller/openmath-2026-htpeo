@@ -1,0 +1,84 @@
+# Resources used for this entry. Give the source of every number; write "estimate" where it is one.
+entry: ramsey-k4-multiplicity
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-09-28 KST", to: "2026-10-02 KST"}
+ai_usage:
+  - provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code (laptop helper sessions = subagents of the steering session)"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 3
+    input_tokens: 612
+    output_tokens: 3107
+    cache_read_tokens: 48550374
+    cache_write_tokens: 23444018
+    cost_usd: null
+    plan_usage: "TODO: operator (usage screen)"
+    counted_in: "archive/stats/claude-laptop.yaml"
+    source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 300 of 306 messages have only a stream-start usage record; visible assistant content of these sessions is 449906 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
+  - provider: "OpenAI"
+    model: "TODO: server not reachable on 2026-10-03 (recorded as gpt-6-sol in the packet)"
+    interface: "codex CLI (server; sessions ramseyfast, ramseylimit, ramseymono)"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: "TODO"
+    cost_usd: null
+    plan_usage: "TODO"
+    counted_in: "archive/stats/server-codex.yaml"
+    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+compute:
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "search (search/v2: SA/tabu, block splitting, weight optimisation, exact re-scoring), 2026-10-02"
+    wall_hours: 12
+    cpu_hours: "TODO: not recorded in the artifact; needs the server job records (several experiments ran in parallel)"
+    peak_memory_gb: "TODO"
+    source: "PACKET.md section 3.3 (about 12 hours wall - estimate); artifact/runs/ledger_server.tsv has 62 rows from 10-02 10:16 to 19:52 server local time"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build of the certificate (2048 per-block kernel checks + data, glue, main)"
+    wall_hours: 0.83
+    cpu_hours: 4.7
+    peak_memory_gb: 3.3
+    source: "artifact/lean/CERT_STATUS.md build record: 16762 s summed per-file wall time, 50 min total wall, max RSS 3.30 GB per process"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean native_decide cross-check (Native.lean, not part of the proof)"
+    wall_hours: 0.19
+    cpu_hours: 0.19
+    peak_memory_gb: "TODO"
+    source: "artifact/lean/CERT_STATUS.md: 679 s for the final solution (one process assumed - estimate); an earlier run for the superseded solution took 1045 s and is not added"
+  - machine: "laptop"
+    purpose: "evaluation: hill metric re-run in pure Python"
+    wall_hours: 0.055
+    cpu_hours: 0.055
+    peak_memory_gb: "TODO"
+    source: "PACKET.md section 2.2: 198 s, Python 3.12, 2026-10-02"
+  - machine: "laptop (WSL) Autolab node and server"
+    purpose: "2026-09-28/29 experiments (search/v1) and the official evaluations"
+    wall_hours: "TODO"
+    cpu_hours: "TODO: not recorded"
+    peak_memory_gb: "TODO"
+    source: "PACKET.md addendum lists the experiments; no run times recorded"
+human_time:
+  - person: "TODO: operator"
+    hours: "TODO"
+    activity: "steering, Autolab submission"
+outputs:
+  lean_lines: 104665              # find artifact -name '*.lean' | xargs cat | wc -l (2026-10-03); mostly generated numerals
+  lean_files: 2103
+  theorems_claimed: 8             # PACKET.md section 1.1
+  build_time: "50 min wall on 6 processes, 4.7 CPU-hours"
+  other: "static Lean files: Defs 134, Fast 455, Limit 467, Mono 225, Sym 63, SymDefs 17, Summary 32 lines (wc -l); 2048 generated chunk files; 62 exactly re-scored candidate solutions in the ledger; 6 Autolab experiments (5 merged, 1 failed); final density_ppt 30139933996"
+attempts:
+  succeeded:
+    - "splitting the 768-block template into 1024 blocks (near-twin splits), then weight optimisation and basin hopping (search/v2)"
+    - "weights-only refinement on the 768-block seed: first reference_beaten = 1 (experiment 0bcf1970, 2026-09-29)"
+    - "certificate as 2048 per-block decide +kernel files with packed 32768-bit numerals"
+    - "GPT proofs of Fast/Limit/Mono against statements fixed beforehand, recompiled independently"
+  failed:
+    - "experiment 2b482245 (2026-09-28): status failed in Autolab (PACKET.md addendum)"
+    - "certificate with several blocks per declaration: one file exceeded 5 GB; split to one block and colour per file (CERT_STATUS.md)"
+    - "test compile without a memory cap reached 13 GB and was OOM-killed on the server, 2026-10-02 18:37 KST (project log PLAN.md)"
+    - "search moves that did not help: see archive/findings/ramsey-search.md"
+notes: "Claude usage of the steering session and all server-side usage are not in this file's counted rows; see archive/stats/. Human time is left for the operator."

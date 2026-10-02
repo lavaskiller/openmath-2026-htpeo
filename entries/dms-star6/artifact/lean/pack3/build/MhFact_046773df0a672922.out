@@ -1,0 +1,22 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_046773df0a672922.lean:129:8: warning: This simp argument is unused:
+  SimpleGraph.Subgraph.deleteVerts_verts
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_046773df0a672922.lean:135:8: warning: This simp argument is unused:
+  SimpleGraph.Subgraph.deleteVerts_adj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_046773df0a672922.lean:434:6: warning: `Set.ncard_diff_add_ncard_of_subset` has been deprecated: Use `Set.ncard_sdiff_add_ncard_of_subset` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_046773df0a672922.lean:495:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```

@@ -1,0 +1,10 @@
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos757.lean:164:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos757.lean:170:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos757.lean:175:39: warning: Variable name `A` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _A
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Erdos757.erdos_757.variants.upperBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

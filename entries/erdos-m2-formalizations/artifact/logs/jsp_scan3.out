@@ -1,0 +1,61 @@
+refs 4155 blobs scanned 12156
+== 508 main-tree files: 1 ['origin/HEAD:problems/catalog-0501-0600.md']
+== 138 main-tree files: 2 ['origin/HEAD:problems/catalog-0101-0200.md', 'origin/HEAD:problems/catalog-0501-0600.md']
+== 942 main-tree files: 0 []
+== 770 main-tree files: 0 []
+== 273 main-tree files: 2 ['origin/HEAD:problems/catalog-0301-0400.md', 'origin/HEAD:problems/catalog-0601-0700.md']
+== 617 main-tree files: 2 ['origin/HEAD:problems/catalog-0101-0200.md', 'origin/HEAD:problems/catalog-0401-0500.md']
+== petersen main-tree files: 0 []
+== 508 PRs: 5
+  #270 JSP-000407: Lean proof of the classical bound χ(ℝ²) ≥ 4 (Moser spindle) for Erdős #5 | lean=3/6 submissions/jsp-000407-cyr/Audit.lean | kw=Erdos508,ErdosProblems/508.lean,Erdős #508,Erdős Problem #508,HadwigerNelson,Hadwiger–Nelson,Moser spind,UnitDistancePlaneGraph,chromatic nu
+  #1717 catalog: record Lean formalization for JSP-000205 | lean=1/2 submissions/jsp-000205-distance-one/Erdos205.lean | kw=Hadwiger-Nelson,Moser spind,chromatic number of the plane
+  #2347 catalog: record Lean formalization for JSP-000650 | lean=1/2 submissions/JSP-000508/Erdos508.lean | kw=Erdos508,erdosproblems.com/508
+  #2371 catalog: record Lean formalization for JSP-000508 | lean=1/2 submissions/JSP-000508/Erdos508.lean | kw=Erdos508,erdosproblems.com/508
+  #3157 JSP-000508: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000508/Erdos508.lean | kw=Erdos508,erdosproblems.com/508
+== 138 PRs: 7
+  #516 JSP-000142: Lean proof of van der Waerden's theorem, the existence result behind W(k | lean=3/6 submissions/jsp-000142-cyr/Audit.lean | kw=ContainsMonoAPofLength,Erdos138,ErdosProblems/138.lean,Erdős #138,Erdős Problem #138,erdos138,erdosproblems.com/138,monoAP_guarantee,van der
+  #577 JSP-000171: Lean formalization (Erdős 176, Spencer's exact value N(k,1) = 2^t(k−1)+1 | lean=1/1 submissions/jsp-000171-baobingzhang/Erdos176.lean | kw=van der Waerden
+  #909 JSP-000991: Lean certificate of a 2-colouring of [1,8] with no monochromatic 3-AP (V | lean=0/2 submissions/jsp-000991-cyr/README.md | kw=van der Waerden
+  #1715 catalog: record Lean formalization for JSP-000182 | lean=0/1 submissions/jsp-000182-rainbow-progression/README.md | kw=van der Waerden
+  #1721 catalog: record Lean formalization for JSP-001003 | lean=0/1 submissions/jsp-001003-two-coloring-sumprod/README.md | kw=van der Waerden
+  #2104 catalog: record Lean formalization for JSP-000138 | lean=1/2 submissions/JSP-000138/Erdos138.lean | kw=Erdos138,erdosproblems.com/138
+  #3072 JSP-000138: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000138/Erdos138.lean | kw=Erdos138,erdosproblems.com/138
+== 942 PRs: 3
+  #889 JSP-000783: Lean certificate for two powerful numbers between consecutive squares | lean=0/1 submissions/jsp-000783-cyr/sources/jsp-000783.md | kw=Powerful numbers in
+  #3575 JSP-000942: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000942/Erdos942.lean | kw=Erdos942,erdosproblems.com/942
+  #4355 JSP-000942: document no complete formalization known | lean=1/1 submissions/JSP-000942/Erdos942.lean | kw=Erdős Problem #942
+== 770 PRs: 4
+  #580 JSP-000631: Lean proof that h(n) = n+1 iff n+1 is prime (Erdős #770) | lean=3/6 submissions/jsp-000631-cyr/Audit.lean | kw=Erdos770,ErdosProblems/770.lean,Erdős #770,Erdős Problem #770,erdos770,erdos_770,erdosproblems.com/770,h_eq_add_one
+  #1906 catalog: record Lean formalization for JSP-000761 | lean=1/3 submissions/JSP-000761/Erdos770.lean | kw=Erdos770
+  #2433 catalog: record Lean formalization for JSP-000770 | lean=1/2 submissions/JSP-000770/Erdos770.lean | kw=Erdos770,erdosproblems.com/770
+  #3376 JSP-000770: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000770/Erdos770.lean | kw=Erdos770,erdosproblems.com/770
+== 273 PRs: 14
+  #23 Formalize selected JSP-000399 set-recovery results in Lean | lean=0/1 submissions/jsp-000399/README.md | kw=Selfridge
+  #56 Formalize Monier upper bound for JSP-000883 | lean=0/1 submissions/jsp-000883/PRIOR_ART.md | kw=Selfridge
+  #127 Submit Lean formalization of the Selfridge–Straus criteria for JSP-000399 | lean=4/5 submissions/jsp-000399-cyr/Challenge.lean | kw=Selfridge
+  #154 Include reproducible Cambie proof package in the submission PR | lean=0/3 submissions/jsp-000883-cambie/SCOPE_AND_PRIOR_ART.md | kw=Selfridge
+  #281 Fix Lean warning flag in verification script | lean=3/12 ubmissions/jsp-000234-selfridge-cover/Erdos273Selfridge.lean | kw=Erdos273,ErdosProblems/273.lean,Erdős 273,Selfridge,StrictCoveringSystem,erdos273,erdosproblems.com/273
+  #298 JSP-000924: submit verified known fourth-power Sierpinski family (partial scope) | lean=0/2 docs/submissions/jsp-000924-kz/PROVENANCE.md | kw=Selfridge
+  #299 JSP-000234: Lean certificate of Selfridge's covering system with moduli p − 1, p ≥ 3 | lean=3/6 submissions/jsp-000234-cyr/Audit.lean | kw=Erdos273,ErdosProblems/273.lean,Erdős #273,Erdős Problem #273,Selfridge,StrictCoveringSystem,erdos273,erdos_273,erdosproblems.com/273
+  #304 JSP-000065: Lean proof of Erdős's 1955 example limsup M(N)/N ≤ 1/2 for the minimum o | lean=1/2 submissions/jsp-000065-cyr/Erdos36MinimumOverlap/Main.lean | kw=Selfridge
+  #345 Submit Lean certificate for the known 27-element triple-sum exception in JSP-000399 | lean=0/1 docs/submissions/jsp-000399-kz/PROVENANCE.md | kw=Selfridge
+  #406 docs: submit JSP-000883 Monier bound with verified Lean evidence | lean=0/1 docs/submissions/jsp-000883-kz/PROOF.md | kw=Selfridge
+  #631 Add Lean proof of the universal exception variant for JSP-000883 | lean=3/5 evidence/jsp-000883-exists-exception/Erdos1063.lean | kw=Selfridge
+  #893 JSP-000910: Lean certificate that C(23,5) has no prime factor below 5 | lean=0/1 submissions/jsp-000910-cyr/sources/jsp-000910.md | kw=Selfridge
+  #1143 Add JSP-000697 Lean formalization (square-product intervals) | lean=1/2 submissions/jsp-000697/Jsp000697.lean | kw=Selfridge
+  #3527 JSP-000273: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000273/Erdos273.lean | kw=Erdos273,erdosproblems.com/273
+== 617 PRs: 13
+  #80 Formalize the r=7 case of JSP-000500 in Lean | lean=21/24 submissions/jsp-000500-inoader/JSP500/Audit.lean | kw=Erdos Problem 617,Erdos617,Erdős 617,Erdős Problem 617,Gyárfás,erdos_617,erdosproblems.com/617
+  #130 Extend Erdos 58 to arbitrary graphs with attributed verification evidence | lean=24/26 submissions/jsp-000078-MaxwellLaw/ErdosProblems/Erdos58.lean | kw=Gyarfas,Gyárfás
+  #397 cleanup: align with standard PR format (remove personal files, use community curator | lean=1/6 submissions/jsp-000078/Erdos78.lean | kw=Gyárfás
+  #490 JSP-000135: Lean formalization (Erdős 129 as written is false: Girão's bound R(n;3,r | lean=1/2 submissions/jsp-000135-baobingzhang/Erdos129.lean | kw=Gyárfás
+  #517 JSP-000078: submit sharp finite odd-cycle chromatic bound and evidence | lean=8/14 submissions/jsp-000078/JSP000078.lean | kw=Gyarfas,Gyárfás
+  #531 JSP-000149: Lean formalization (Erdős 149, Chung–Gyárfás–Tuza–Trotter: graphs with m | lean=1/2 submissions/jsp-000149-baobingzhang/Erdos149.lean | kw=Gyárfás
+  #581 JSP-000078: submit structural proofs and contribution-priority claim | lean=33/41 078-CHENLexiao8848-historical/JSP000078/GyarfasLemmaOne.lean | kw=Gyarfas,Gyárfás
+  #667 JSP-000082 / Erdős #64: formalize the infinite tree of minimum degree 3 | lean=1/1 submissions/jsp-000082-cyr/Erdos64InfiniteTree/Main.lean | kw=Gyárfás
+  #742 Link successful JSP-000628 proof CI | lean=1/1 ions/jsp-000628-jiang-full/ErdosProblems/Erdos58/Menger.lean | kw=Gyárfás
+  #808 JSP-000078: complete equality case and arbitrary-graph theorem | lean=46/62 00078-CHENLexiao8848-complete/JSP000078/GyarfasLemmaOne.lean | kw=Gyarfas,Gyárfás
+  #1698 catalog: record Lean formalization for JSP-000140 | lean=1/1 submissions/jsp-000140-edge-coloring-clique/Erdos140.lean | kw=Gyárfás
+  #2400 catalog: record Lean formalization for JSP-000617 | lean=1/2 submissions/JSP-000617/Erdos617.lean | kw=Erdos617,erdosproblems.com/617
+  #3206 JSP-000617: update catalog Lean proof to Yes | lean=1/2 submissions/JSP-000617/Erdos617.lean | kw=Erdos617,erdosproblems.com/617
+== petersen PRs: 0

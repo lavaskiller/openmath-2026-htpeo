@@ -1,0 +1,60 @@
+# Resources used for this entry. Give the source of every number; write "estimate" where it is one.
+entry: erdos-m2-formalizations
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-10-02 08:25 KST", to: "2026-10-03 00:06 KST"}
+ai_usage:
+  - provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code (laptop helper sessions = subagents of the steering session)"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 5
+    input_tokens: 456
+    output_tokens: 5602
+    cache_read_tokens: 39383532
+    cache_write_tokens: 2182148
+    cost_usd: null
+    plan_usage: "TODO: operator (usage screen)"
+    counted_in: "archive/stats/claude-laptop.yaml"
+    source: "tools/sum_claude_usage.py over the laptop project transcripts with archive/stats/claude_laptop_attribution_rules.json, snapshot 2026-10-03 00:10 KST. output_tokens is a LOWER BOUND: 212 of 228 messages have only a stream-start usage record; visible assistant content of these sessions is 332984 characters. The steering (main) session is not split by entry; see archive/stats/claude-laptop.yaml."
+  - provider: "OpenAI"
+    model: "TODO: server not reachable on 2026-10-03 (recorded as gpt-6-sol in the packet)"
+    interface: "codex CLI (server; unattended sessions under the Erdos work directory)"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: "TODO"
+    cost_usd: null
+    plan_usage: "weekly window 0% at 2026-10-02 08:20 KST, 12% at 18:10 KST (project log PLAN.md, hand-written; includes the Ramsey and DMS codex sessions of that day)"
+    counted_in: "archive/stats/server-codex.yaml"
+    source: "to be produced on the server with tools/sum_codex_usage.py (commands in archive/stats/server-codex.yaml)"
+compute:
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean compilation of candidate proofs by the codex sessions and the re-check of the bundle (lake env lean per file)"
+    wall_hours: "TODO"
+    cpu_hours: "TODO: not recorded in the artifact; each file compiles in about a minute (PACKET.md section 7); server not reachable on 2026-10-03"
+    peak_memory_gb: "TODO"
+    source: "not collected"
+human_time:
+  - person: "TODO: operator"
+    hours: "TODO"
+    activity: "scope decisions (duplicates excluded, level of the targets)"
+outputs:
+  lean_lines: 2791                # artifact/bundle/*.lean (13 files, the claimed set), wc -l 2026-10-03
+  lean_files: 13
+  theorems_claimed: 19            # 13 families: G-PM 2 theorems, 8 substantive Erdos families 13 theorems, 4 minor families 4 theorems (PACKET.md sections 0-2)
+  build_time: "about one minute per file"
+  other: "13 claimed families (9 substantive + 4 minor); 5 optional families with 8 theorems in bundle_optional (5 files, 1532 lines), not claimed by default; verified pool 63 rows, 56 distinct theorems, 36 families, 61 pass, 2 rejected (PACKET.md section 0); 4155 pull-request heads and 328 code-search files scanned for prior art"
+attempts:
+  succeeded:
+    - "unattended codex sessions proving formal-conjectures statements left as sorry, checked by verify_all.py (statement identity against the pinned commit, axioms, forbidden tokens)"
+    - "G-PM: Schoenberger and Petersen (connected case) for Mathlib SimpleGraph, translated from the star6 library"
+    - "prior-art pass over all pull-request heads of the awards repository and other public proof repositories"
+  failed:
+    - "most easy targets were duplicates of public formal proofs: see the excluded table in PACKET.md section 4 (31 rows)"
+    - "of eight advanced results of 2026-10-02 only E942 was new (PACKET.md section 0)"
+    - "E649 was called new in packet v1; wrong (already in plby/lean-proofs); moved to optional in v2"
+    - "third triage: 326 candidates skipped as hard, 12 failed (project log PLAN.md, 2026-10-02, hand-written)"
+    - "E617 r_eq_3 still in progress when the packet was generated; not included"
+notes: "All proofs were produced by codex sessions on the server; their token usage is not collected yet (archive/stats/server-codex.yaml is a TODO stub). The laptop numbers cover only the Claude helper sessions that verified, searched prior art and wrote the packet."

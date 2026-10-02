@@ -1,0 +1,27 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_3c53e18d818a023b.lean:152:48: warning: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.and_eq_true, Bool.or_eq_true] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_3c53e18d818a023b.lean:189:0: warning: automatically included section variable(s) unused in theorem `RH2F.c_of_cv`:
+  hel
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hel in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_3c53e18d818a023b.lean:196:48: warning: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, Bool.and_eq_true] at he
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_3c53e18d818a023b.lean:246:50: warning: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.and_eq_true, Bool.not_eq_true'] at key
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

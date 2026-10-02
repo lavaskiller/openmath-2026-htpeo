@@ -1,0 +1,6 @@
+Mobius.star5 : ∀ (n : ℕ), 4 ≤ n → MGraph.Star 5 (Mobius.col n)
+Mobius.mobius_family : ∀ (n : ℕ), 4 ≤ n → StarFamily (Mobius.mobius n) 5
+'Mobius.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mobius.mobius_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=1060316 elapsed_s=8
+rc=0

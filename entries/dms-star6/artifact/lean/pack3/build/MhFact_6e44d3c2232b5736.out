@@ -1,0 +1,35 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6e44d3c2232b5736.lean:75:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6e44d3c2232b5736.lean:109:15: warning: This simp argument is unused:
+  hpq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpr, hqr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6e44d3c2232b5736.lean:109:20: warning: This simp argument is unused:
+  hpr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpq, hqr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6e44d3c2232b5736.lean:109:25: warning: This simp argument is unused:
+  hqr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpq, hpr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_6e44d3c2232b5736.lean:367:15: warning: This simp argument is unused:
+  o1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [o2, o3, o4] at k4
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

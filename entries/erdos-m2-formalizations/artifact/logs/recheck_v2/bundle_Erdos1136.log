@@ -1,0 +1,12 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos1136.lean:52:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos1136.lean:74:12: warning: This simp argument is unused:
+  Finset.mem_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_range, and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos1136.lean:139:8: warning: declaration uses `sorry`
+'Erdos1136.erdos_1136.variants.multiples_of_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1136.erdos_1136.variants.upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

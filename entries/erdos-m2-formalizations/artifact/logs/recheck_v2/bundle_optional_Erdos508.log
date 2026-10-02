@@ -1,0 +1,74 @@
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:46:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:58:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:206:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:206:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:208:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:208:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:210:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:210:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:258:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:259:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:338:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:338:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:338:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:340:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:340:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:340:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:342:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:342:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle_optional/Erdos508.lean:342:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Erdos508.HadwigerNelsonAtLeast4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos508.HadwigerNelsonAtMostSeven' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

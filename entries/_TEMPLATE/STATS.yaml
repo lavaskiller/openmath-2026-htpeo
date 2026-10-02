@@ -1,0 +1,38 @@
+# Resources used for this entry. Give the source of every number; write "estimate" where it is one.
+entry: <entry-name>
+reported_by: ""
+period: {from: "", to: ""}        # dates with time zone
+ai_usage:
+  - provider: ""                  # Anthropic | OpenAI | ...
+    model: ""
+    interface: ""                 # Claude Code | codex CLI | API | web chat | agent harness
+    account_plan: ""              # e.g. Max, Pro, API key (no secrets)
+    sessions: 0                   # number of sessions / agent runs
+    input_tokens: 0
+    output_tokens: 0
+    cache_read_tokens: 0
+    cache_write_tokens: 0
+    cost_usd: null                # API-equivalent cost if the tool reports it
+    plan_usage: ""                # for subscriptions: e.g. "weekly window 0% -> 12%"
+    source: ""                    # command or file the numbers come from
+compute:
+  - machine: ""                   # e.g. "16-core server, 14 GB RAM", "laptop"
+    purpose: ""                   # search | Lean build | SAT | evaluation
+    wall_hours: 0
+    cpu_hours: 0
+    peak_memory_gb: 0
+    source: ""
+human_time:
+  - person: ""
+    hours: 0
+    activity: ""                  # steering, review, writing, submission
+outputs:
+  lean_lines: 0                   # wc -l over claimed sources
+  lean_files: 0
+  theorems_claimed: 0
+  build_time: ""
+  other: ""                       # e.g. "62 verified candidate solutions", "786 informal facts"
+attempts:
+  succeeded: []                   # one line each
+  failed: []                      # one line each: what, where it stopped
+notes: ""

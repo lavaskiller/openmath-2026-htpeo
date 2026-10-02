@@ -1,0 +1,94 @@
+# Entry metadata. Keep keys; write TODO (with a reason) where unknown.
+# Filled 2026-10-03 KST from PACKET.md and artifact/.
+id: dms-star6
+title: "Partial progress on the Dvorak-Mohar-Samal conjecture (star chromatic index of subcubic graphs <= 6), Lean 4.33.1"
+target:
+  problem: "Open Problem Garden: Star chromatic index of cubic graphs (is chi'_s(G) <= 6 for every subcubic G?)"
+  problem_ids:
+    - "OPG-37271"
+    - "TODO: canonical OPDP family id and source snapshot id (from the organisers; PACKET.md section 1)"
+  status_before_event: "open; best published bound 7 (Dvorak-Mohar-Samal, J. Graph Theory 72(3) 2013, arXiv:1011.3376)"
+mode: "M3A (proposed, pending admission)"
+requested_band: "P3 lower end, p = 0.15; fallback P2, p = 0.10 (PACKET.md section 1.6)"
+claims:                          # PACKET.md sections 1.2-1.4; the conjecture RH2F.DMS itself is NOT proved
+  - lean_name: "FlowerSnark.flower_family"
+    plain_words: "T1: flower snarks J_n, odd n >= 5, are star 5-edge-colourable"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "GoldbergSnark.goldberg_family"
+    plain_words: "T1: Goldberg snarks G_k, odd k >= 5, star 5-edge-colourable"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "GPetersen2.gp2_star, GPetersen2.gp2_spokes"
+    plain_words: "T1: GP(k,2), k >= 5, star 6-edge-colourable with the spokes as one colour class"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "gp_family (and gp_star5, GP2Five.star5, GP3Five.star5, GPk.family4 ...)"
+    plain_words: "T1: generalized Petersen graphs GP(n,k), 1 <= k <= 15, n >= 2k+1, except GP(3,1), star 5-edge-colourable"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "Inflation.inflate_star5"
+    plain_words: "T1: Petersen-type vertex inflation of any loopless multigraph with injective ports is star 5-edge-colourable"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "Mobius.mobius_family"
+    plain_words: "T1: Moebius ladders M_n, n >= 4, star 5-edge-colourable"
+    file: "artifact/lean/pack4/src/"
+  - lean_name: "Star6.star6_cubic_bridgeless_le14, Star6.matching_colour_class_10_14, Star6.star6_leaf_le14, Star6.star6_subcubic_le7, Star6.bounded_reduction"
+    plain_words: "T2: DMS for bridgeless cubic loopless multigraphs on <= 14 vertices and their leaf graphs; for all loopless subcubic multigraphs on <= 7 vertices"
+    file: "artifact/lean/pack5/src/Star6Corollaries.lean"
+  - lean_name: "Star6.dms_iff_cubic16, Star6.dms_of_hyp16_iid16, Star6.counterexample_cubic16, Star6.counterexample_reduced16, Star6.smallest_not_ex1, Star6.minimal_counterexample"
+    plain_words: "T2: DMS is equivalent to star 6-colourability of connected bridgeless cubic loopless multigraphs on >= 16 vertices and of their leaf graphs; shape of a counterexample"
+    file: "artifact/lean/pack5/src/Star6Equiv.lean"
+  - lean_name: "Star6.simple_star6_cubic_bridgeless_le14, Star6.simple_star6_subcubic_le7"
+    plain_words: "T2: the small-order theorems for Mathlib SimpleGraph"
+    file: "artifact/lean/pack5/src/Star6Simple.lean"
+  - lean_name: "RH2F.layer37 (star6_dms_conditional_A, star6_dms_conditional_B, RH2F.rh2_final)"
+    plain_words: "T3: DMS follows from named open hypotheses (FEEXTD10, FEEXISTD18, POLE, TDTRI, FEEXTTNE16, FEEXIST0NE16 / WEXT, TDLTRI, IID16); none of the hypotheses is proved"
+    file: "artifact/lean/pack3/src/"
+  - lean_name: "RH2F.base12, RH2F.simple14, RH2F.b14d, RH2F.feexist16, RH2F.cls16c, RH2Fid.fidelity_bundle, RH2P.layerP"
+    plain_words: "T4: finite certificates (10-14 vertices EX1-good, 16-vertex far-exchange existence, 607 c4c graphs on 16 vertices), statement-fidelity bundle, Schoenberger for multigraphs"
+    file: "artifact/lean/pack3/src/"
+  - lean_name: "MGraph.dms_of_hole, P05Lean.cubicSharp5_dms, DmsIIsLean.cs5s_dms, P06Lean.cover_main"
+    plain_words: "Lean-core file: HOLE => DMS, CubicSharp5 => DMS, cover pull-back (known argument, not claimed as an advance)"
+    file: "artifact/lean/pack2/lean433/StarDMS2.lean"
+verification:
+  toolchain: "leanprover/lean4:v4.33.1 (commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6)"
+  mathlib: "v4.33.1 (commit 0df444a360eaa60ab8c11dca51a86af692955474)"
+  axioms: "propext, Classical.choice, Quot.sound (artifact/lean/pack3/build/axioms.log, pack4/axioms.log, pack5/logs/*.out, pack2/lean433/StarDMS2.log)"
+  exceptions: "one baseline theorem MGraph.k4subdiv_star6 in StarCert uses native_decide and is not used by any claimed theorem (audit_all.tsv); port options set_option backward.isDefEq.respectTransparency false (73 modules) and maxRecDepth; family graphs are explicit edge lists checked against textbook definitions only by sanity_check.py (PACKET.md sections 2.3, 2.7)"
+  build: "pack3: lake build (or bash setup.sh && bash run433.sh); pack4: bash build_all.sh; pack5: python3 gen5.py && bash build5.sh (per-module, against pack3/build/*.olean); pack2: lean StarDMS2.lean"
+  build_time_and_memory: "pack3 lake build 20 min wall, per-module 1422 s / 3.2 GB max; pack4 930 s / 2.05 GB; pack5 about 20 s per module, < 3 GB; StarDMS2 73 s / 2.8 GB (PACKET.md section 2.2)"
+hill:                            # no committed hill for this target (PACKET.md section 2)
+  name: ""
+  tree_hash: ""
+  experiment: ""
+  report_file: ""
+  metrics: {}
+submission:
+  packet: PACKET.md
+  submitted_at: "TODO: operator"
+  submission_id: "TODO: operator"
+  commit: "TODO: operator, after publishing (source artifact repo: local commits 1a02f64 -> 0240e123d187ea3d86e0a3a675a4ae6346e0929c, unpublished)"
+  tag: "TODO: operator (planned: dms-v1)"
+people:
+  owner: "TODO: operator"
+  contributors:
+    - "Woohyuk Kang: operator of the agent harness; commit author"
+    - "TODO: operator - full roster and each human's contribution"
+  human_review: "none (PACKET.md section 4.3)"
+ai_and_tools:
+  models:
+    - "Claude Opus / Sonnet workers (agent harness on the server; exact model ids: TODO, from the harness INDEX.json, see archive/stats/server-harness.yaml)"
+    - "claude-opus-5-5 (Claude Code helper sessions, laptop)"
+    - "GPT via codex CLI on the server (recorded as gpt-6-sol in pack READMEs and as GPT-5.6-sol in packet v3; TODO operator: confirm)"
+  roles: "Harness workers (Claude, later also GPT): informal proof search, Lean modules for the Lean gate. Verification in the harness: LLM verifier (Claude Opus), GPT cross-check audit, Lean gate. Helper sessions (Claude): 4.33.1 port, families (pack4), corollaries (pack5), literature notes, packet. GPT: InflationA-E, Inflation, Star6Equiv, Star6Simple against statements fixed by Claude. Humans: steering; no human check."
+provenance:
+  baseline: "Lean library Star*.lean (20 modules, Lean 4.20, imported 2026-09-27; 12 of them in the artifact) and the handoff ledger of a pre-event investigation (PACKET.md section 4.1)"
+  event_work: "09-28: StarDMS2 results; 09-28..10-01: RH2 chain (86 modules of pack3); 10-01/02: port to 4.33.1, pack4 (families), pack5 (corollaries), informal studies and literature notes"
+  prior_art_checked: "artifact/docs/NOVELTY.md (2026-10-01) and checks of 2026-10-02 for generalized Petersen graphs and Moebius ladders (PACKET.md section 2.6); Zhu-Shao 2021 known only through summaries"
+known_limitations:
+  - "the conjecture is not proved; every hypothesis of the reduction chain is open"
+  - "informal material (786 facts, exhaustive computations, PMU evidence) is AI-verified or computed only, not Lean-checked, not human-reviewed; no credit requested for it"
+  - "pack4/pack5 are per-module builds against pack3 oleans; builds run on one machine only"
+  - "family graphs are not proved isomorphic to textbook/Mathlib definitions"
+  - "baseline commit hash and the window check of facts dated 2026-09-27: TODO operator"
+links:
+  - "arXiv:1011.3376 (Dvorak, Mohar, Samal, Star chromatic index)"
+  - "http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs"
+  - "arXiv:2410.15024 (Omoomi, Vahid Dastjerdi)"

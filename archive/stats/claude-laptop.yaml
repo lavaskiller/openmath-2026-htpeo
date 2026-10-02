@@ -1,0 +1,78 @@
+# Claude Code usage on the laptop for this project (steering session + its helper subagents).
+# Numbers only; no transcript content. Produced by tools/sum_claude_usage.py.
+reported_by: "helper-team-repo (Claude Code agent), for the operator; not human-reviewed"
+period: {from: "2026-09-27 23:35 KST", to: "2026-10-03 00:10 KST"}   # first and last message time stamps in the transcripts at the snapshot
+ai_usage:
+  - entry: "ramsey-k4-multiplicity"
+    provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 3
+    input_tokens: 612
+    output_tokens: 3107
+    cache_read_tokens: 48550374
+    cache_write_tokens: 23444018
+    cost_usd: null
+    plan_usage: "TODO: operator"
+    source: "by_group in the script output; 3 subagent transcripts; 300 of 306 messages without a final usage record (output is a lower bound); visible content 449906 chars"
+  - entry: "dms-star6"
+    provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 39
+    input_tokens: 3550
+    output_tokens: 192179
+    cache_read_tokens: 281275831
+    cache_write_tokens: 24914819
+    cost_usd: null
+    plan_usage: "TODO: operator"
+    source: "by_group; 39 subagent transcripts; 1521 of 1771 messages without a final usage record (lower bound); visible content 2860293 chars"
+  - entry: "erdos-m2-formalizations"
+    provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 5
+    input_tokens: 456
+    output_tokens: 5602
+    cache_read_tokens: 39383532
+    cache_write_tokens: 2182148
+    cost_usd: null
+    plan_usage: "TODO: operator"
+    source: "by_group; 5 subagent transcripts; 212 of 228 messages without a final usage record (lower bound); visible content 332984 chars"
+  - entry: "shared/steering"
+    provider: "Anthropic"
+    model: "claude-opus-5-5"
+    interface: "Claude Code"
+    account_plan: "laptop account, subscription plan (plan name: TODO operator)"
+    sessions: 19
+    input_tokens: 5130
+    output_tokens: 2165675
+    cache_read_tokens: 904424187
+    cache_write_tokens: 19419107
+    cost_usd: null
+    plan_usage: "TODO: operator"
+    source: "by_group; 6 main sessions (all of the steering of the three entries, the harness development and the star6 run supervision; not splittable by entry) + 13 subagent transcripts (harness development, surveys, hill recon, this repository); 310 of 2482 messages without a final usage record; visible content 3376060 chars"
+totals:                           # for reference; equal to the sum of the four rows above
+  transcripts: 66                 # 6 main + 60 subagent
+  unique_messages: 4787
+  duplicate_records_skipped: 5273
+  input_tokens: 9748
+  output_tokens: 2366563
+  cache_read_tokens: 1273633924
+  cache_write_tokens: 69960092
+  messages_without_final_usage: 2343
+  main_sessions: {input_tokens: 4420, output_tokens: 2143106, cache_read_tokens: 864566887, cache_write_tokens: 17405606, messages: 2127, messages_without_final_usage: 0}
+  subagents: {input_tokens: 5328, output_tokens: 223457, cache_read_tokens: 409067037, cache_write_tokens: 52554486, messages: 2660, messages_without_final_usage: 2343, visible_content_chars: 4135841}
+by_date_kst:                      # all groups together, model claude-opus-5-5
+  - {date: "2026-09-27", input_tokens: 140, output_tokens: 37216, cache_read_tokens: 6636003, cache_write_tokens: 334509, messages: 67}
+  - {date: "2026-09-28", input_tokens: 2932, output_tokens: 1166396, cache_read_tokens: 523271308, cache_write_tokens: 8543457, messages: 1442}
+  - {date: "2026-09-29", input_tokens: 642, output_tokens: 252115, cache_read_tokens: 113122097, cache_write_tokens: 4020466, messages: 312}
+  - {date: "2026-09-30", input_tokens: 1310, output_tokens: 259235, cache_read_tokens: 160326219, cache_write_tokens: 5991699, messages: 652}
+  - {date: "2026-10-01", input_tokens: 2448, output_tokens: 404879, cache_read_tokens: 237115535, cache_write_tokens: 18686284, messages: 1202}
+  - {date: "2026-10-02", input_tokens: 2228, output_tokens: 246080, cache_read_tokens: 228667724, cache_write_tokens: 31743671, messages: 1088}
+  - {date: "2026-10-03", input_tokens: 48, output_tokens: 642, cache_read_tokens: 4495038, cache_write_tokens: 640006, messages: 24}
+command: "python tools/sum_claude_usage.py <laptop Claude Code project folder of this project> --rules archive/stats/claude_laptop_attribution_rules.json --tz-hours 9 --json out.json"
+notes: "Snapshot 2026-10-03 00:10 KST; the sessions were still running (this repository was being written), so a later run gives slightly larger numbers. Output tokens of subagent transcripts are a lower bound: Claude Code stored only the stream-start usage record for 2343 of their 2660 messages (the main sessions have final records for all messages). Hidden reasoning is not stored, so no reliable estimate is given; the visible content length is recorded instead. Attribution to entries is by regular expressions on the subagent descriptions (claude_laptop_attribution_rules.json); everything else is shared/steering. One model only (claude-opus-5-5). cost_usd is not reported by the tool."

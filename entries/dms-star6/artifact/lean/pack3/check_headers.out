@@ -1,0 +1,114 @@
+StarCore: 43 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarCert: 12 headers, 0 changed/removed, 1 new, src == original: False, original == lean/: True
+   NEW: 'instance decK4s : Decidable (@Star k4subdiv 6 k4subdivCol) :='
+StarSix: 13 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarReduce: 26 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarLeaf: 13 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarRigid: 22 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarBottleneck: 13 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarChecker: 20 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarCompose: 7 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarMatching: 8 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarVizing: 8 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+StarExtension: 10 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_5c1eb3f583cf643f: 149 headers, 1 changed/removed, 10 new, src == original: False, original == lean/: True
+   CHANGED: 'theorem tG_check : ∀ h : Fin 9, (tG h).starCheck (fun _ => true) (tC h) = true :='
+   NEW: 'theorem tG_check_0 : (tG 0).starCheck (fun _ => true) (tC 0) = true :='
+   NEW: 'theorem tG_check_1 : (tG 1).starCheck (fun _ => true) (tC 1) = true :='
+   NEW: 'theorem tG_check_2 : (tG 2).starCheck (fun _ => true) (tC 2) = true :='
+   NEW: 'theorem tG_check_3 : (tG 3).starCheck (fun _ => true) (tC 3) = true :='
+   NEW: 'theorem tG_check_4 : (tG 4).starCheck (fun _ => true) (tC 4) = true :='
+   NEW: 'theorem tG_check_5 : (tG 5).starCheck (fun _ => true) (tC 5) = true :='
+   NEW: 'theorem tG_check_6 : (tG 6).starCheck (fun _ => true) (tC 6) = true :='
+   NEW: 'theorem tG_check_7 : (tG 7).starCheck (fun _ => true) (tC 7) = true :='
+   NEW: 'theorem tG_check_8 : (tG 8).starCheck (fun _ => true) (tC 8) = true :='
+   NEW: 'theorem tG_check : ∀ h : Fin 9, (tG h).starCheck (fun _ => true) (tC h) = true\n  | ⟨0, _⟩ => tG_check_0 | ⟨1, _⟩ => tG_check_1 | ⟨2, _⟩ => tG_check_2 | ⟨3, _⟩ ='
+MhFact_7d291f6ca774e1da: 104 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_c64b6bd62b78d841: 112 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_657e581f1145250f: 63 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_974f7197c1be8069: 4 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_341b6e5e1be16205: 98 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_643ccea3769075c0: 128 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_046773df0a672922: 37 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_09796da8a434e150: 57 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_6e44d3c2232b5736: 58 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_ebeb33c568dfe4e4: 99 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_066dc781a8de9c11: 75 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_3e79907cfcc0085b: 57 headers, 0 changed/removed, 0 new, src == original: True, original == lean/: True
+MhFact_75fc19c47ee38b89: 76 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_a030b9ec722eb795: 89 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_90b4662cdeba097d: 24 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_9e7dda3374e6b172: 106 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_413193082c4b8758: 40 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_81c52cea8147de67: 80 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_6c78409a046a3fe7: 189 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_c3375be11cf311ee: 97 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_345a55d7429fd4b1: 36 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_f7fb58786d241d68: 20 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_f4c06558ba3030b8: 48 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_30194dab4e05fdcf: 81 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_33aabc50b1cec1ba: 109 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_bde9371a01dd2855: 13 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_83263f8970f3987b: 40 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_85780d9a54267261: 21 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_57ea4db232a2b7f5: 101 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_2f482379fe24b1cb: 129 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_fe45f583e0b81581: 40 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_77e9ac7f87ab804f: 33 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_c156979f912a0408: 32 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_923511b69a46047e: 29 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_2e993e3b07378767: 26 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_54ed0ff9a1ed26b6: 183 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_eff6661027b6cbd2: 91 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_4f913d5550e57c85: 46 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_fbae65436c8cc8bf: 8 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_d39e578650322db3: 7 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_4b6dbe605eac3a1d: 7 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_724d35f964ae6f7d: 7 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_59c06cb7808fc140: 7 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_e1599bf3f3c26bdb: 9 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_cc801c1ba060f9c7: 28 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_def3ba43f6eccb6d: 40 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_256b4143cc30000f: 49 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_a8bfe25dadf921db: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_38b6f78a47fdf12e: 9 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_024845889158353d: 28 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_4e4dfbfc10836500: 24 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_7b9500b9ad8bca15: 25 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_5343a2db598602a9: 29 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_06139ad5904fa064: 14 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_96b352680829f174: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_c1bad3abf5f2e5e8: 22 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_144fd607d85ac5da: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_e68d717a207ff44f: 43 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_b536c7d8a4f139e4: 37 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_7217c8f0517c24a9: 38 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_79ac08d5cf0788b9: 34 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_55368cd7a0c74072: 34 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_6882aa6fa76ff8ed: 40 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_77a5aa23394eb0f0: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_6460e64b00785972: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_e63e13afc71071cb: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_b71709db7a82637a: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_5e8f7a0c3cb04161: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_1f8ebb817a59b41d: 31 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_7c9b506b16bbaf73: 22 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_66a4a19c81528d5b: 11 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_1b2e17f98116d9aa: 3 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_3c53e18d818a023b: 88 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_c03bb6e1daa663e4: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_78d98836f6372f68: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_4e63409f7b05a806: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_4b7436a78212f56a: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_916ccd41e9db4312: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_78a34517ee1a6fff: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_0e0e37a38e3c97d5: 136 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_f645e06d2ce727a3: 79 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_c35583f86422a75a: 411 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_51ff9480dc00823f: 716 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_6b1f8729194e23a3: 7 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+MhFact_ba4d9c5abd0afd83: 2 headers, 0 changed/removed, 0 new, src == original: False, original == lean/: True
+TOTAL: 6124 declaration headers, 1 changed, 81 modules differ from the 4.20 original, 0 originals differing from lean/, 0 `axiom` declarations, word counts in src: sorry=8 native_decide=4 (comments included)
+OPTION LINE inserted in 73 modules: set_option backward.isDefEq.respectTransparency false
+OPTION LINE inserted in 13 modules: set_option maxRecDepth 200000
+OPTION LINE inserted in 2 modules: set_option maxRecDepth 200000 in

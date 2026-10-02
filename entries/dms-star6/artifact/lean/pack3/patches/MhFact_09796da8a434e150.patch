@@ -1,0 +1,6 @@
+@@ why: Mathlib: Finset.card_sdiff changed meaning; the subset version is now card_sdiff_of_subset
+<<<<
+rw [card_sdiff hsub, ← hT', h8', hS6]
+====
+rw [card_sdiff_of_subset hsub, ← hT', h8', hS6]
+>>>>

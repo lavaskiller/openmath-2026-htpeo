@@ -1,0 +1,18 @@
+@@ why: Mathlib: Relation.ReflTransGen.symmetric is now stated with Std.Symm; replaced by a direct induction
+<<<<
+  Relation.ReflTransGen.symmetric (step_symm en F) h
+====
+  by
+    induction h with
+    | refl => exact Relation.ReflTransGen.refl
+    | tail _ hbc ih => exact Relation.ReflTransGen.head (step_symm en F hbc) ih
+>>>>
+@@ why: Mathlib: Relation.ReflTransGen.mono is now stated with ≤ on relations; replaced by a direct induction
+<<<<
+    Relation.ReflTransGen.mono (fun x y ⟨f, _, hf⟩ => ⟨f, trivial, hf⟩) hab
+====
+    by
+      induction hab with
+      | refl => exact Relation.ReflTransGen.refl
+      | tail _ hbc ih => exact ih.tail (let ⟨f, _, hf⟩ := hbc; ⟨f, trivial, hf⟩)
+>>>>

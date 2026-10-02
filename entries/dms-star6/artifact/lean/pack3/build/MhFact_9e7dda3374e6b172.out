@@ -1,0 +1,6 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_9e7dda3374e6b172.lean:499:49: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

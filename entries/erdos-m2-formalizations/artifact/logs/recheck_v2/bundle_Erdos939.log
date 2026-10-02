@@ -1,0 +1,22 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:61:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:77:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:92:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:104:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:207:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:210:68: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:213:68: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:216:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/lead/erdos-fc/m2/final/bundle/Erdos939.lean:219:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Erdos939.erdos_939.variants.seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos939.erdos_939.variants.eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

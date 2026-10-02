@@ -1,0 +1,26 @@
+GPk.star4 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab4)
+GPk.family4 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (10 * m) 4) 5
+GPk.star6 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab6)
+GPk.family6 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (14 * m) 6) 5
+GPk.star8 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab8)
+GPk.family8 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (17 * m) 8) 5
+GPk.star10 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab10)
+GPk.family10 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (22 * m) 10) 5
+GPk.star12 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab12)
+GPk.family12 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (26 * m) 12) 5
+GPk.star14 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab14)
+GPk.family14 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (30 * m) 14) 5
+'GPk.star4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family14' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=737196 elapsed_s=6
+rc=0

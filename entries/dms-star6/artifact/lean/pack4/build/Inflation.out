@@ -1,0 +1,3 @@
+'Inflation.inflate_star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=341572 elapsed_s=3
+rc=0

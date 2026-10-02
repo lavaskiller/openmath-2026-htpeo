@@ -1,0 +1,38 @@
+sol_numer : sol.numer = 200080655744752337972227066537
+sol_total : sol.total = 50759309
+sol_density : sol.density = 200080655744752337972227066537 / 6638390640717004439491700265361
+sol_lt_ref : sol.density < 10486266368 / 768 ^ 4
+sol_ppt : ⌈10 ^ 12 * sol.density⌉ = 30139933996
+sol_symm : sol.Symmetric
+K4R : K4 1024 (wOf W 32) (adjOf rowsR) = 99809658758227271141703184848
+K4Bneg : (K4 1024 (wOf W 32) fun a b => !adjOf rowsR a b) = 100270996986525066830523881689
+colour_total : ∀ (B n W md : ℕ) (rs : List ℕ) (all : List Ent),
+  md = 2 ^ B - 1 →
+    rs.length = n →
+      all = mkAll B n W rs →
+        (List.map (wOf W B) (List.range n)).sum < 2 ^ B - 1 →
+          (List.map (fun ea => kTermA md ea (nbhd all ea)) all).sum = K4 n (wOf W B) (adjOf rs)
+Template.numer_eq : ∀ (T : Template) (n : ℕ),
+  T.n = n →
+    ∀ (w : ℕ → ℕ) (adj : ℕ → ℕ → Bool),
+      (∀ (i : Fin T.n), T.w i = w ↑i) →
+        (∀ (i j : Fin T.n), T.red i j = adj ↑i ↑j) → T.numer = K4 n w adj + K4 n w fun a b => !adj a b
+blowup_count : ∀ (T : Template),
+  T.Symmetric → ∀ (t : ℕ), ∃ c, (∀ (u v : Fin (t * T.total)), c u v = c v u) ∧ 24 * monoK4 c ≤ t ^ 4 * T.numer
+ramseyMultK4_le_density : ∀ (T : Template), T.Symmetric → 0 < T.total → ramseyMultK4 ≤ ↑T.density
+ramseyMultK4_tendsto : Filter.Tendsto (fun m => ↑(minMonoK4 m) / ↑(m.choose 4)) Filter.atTop (nhds ramseyMultK4)
+ramseyMultK4_le_sol : ramseyMultK4 ≤ 200080655744752337972227066537 / 6638390640717004439491700265361
+ramseyMultK4_lt_ref : ramseyMultK4 < 10486266368 / 768 ^ 4
+minMonoK4_density_le_sol : ∀ (m : ℕ),
+  4 ≤ m → ↑(minMonoK4 m) / ↑(m.choose 4) ≤ 200080655744752337972227066537 / 6638390640717004439491700265361
+ramseyMultK4_limit_lt_ref : ∃ L,
+  Filter.Tendsto (fun m => ↑(minMonoK4 m) / ↑(m.choose 4)) Filter.atTop (nhds L) ∧ L < 10486266368 / 768 ^ 4
+'RamseyCert.sol_numer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_lt_ref' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_ppt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.ramseyMultK4_le_sol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.ramseyMultK4_lt_ref' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.minMonoK4_density_le_sol' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.ramseyMultK4_limit_lt_ref' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+p 2 ns 7 13 none
+p 3 ns 9 17 none
+p 4 ns 12 23 FOUND
+written; small n without colouring: [3]

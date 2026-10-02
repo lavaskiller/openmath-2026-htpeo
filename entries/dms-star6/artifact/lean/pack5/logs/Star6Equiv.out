@@ -1,0 +1,4 @@
+'Star6.colourable_of_dms_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Star6.leaf_of_dms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Star6.dms_iff_cubic16' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0

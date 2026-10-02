@@ -1,0 +1,4 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos942.lean:42:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos942.lean:276:8: warning: declaration uses `sorry`
+'Erdos942.erdos_942.variants.limsup' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

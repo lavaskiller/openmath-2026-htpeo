@@ -1,0 +1,45 @@
+# Entry metadata. Keep keys; write TODO (with a reason) where unknown.
+id: <entry-name>                 # folder name
+title: ""                        # one line
+target:
+  problem: ""                    # e.g. "K4 Ramsey multiplicity constant", "Erdős problem #1038"
+  problem_ids: []                # OPDP / Open Problem Garden / erdosproblems.com ids, hill name
+  status_before_event: ""        # open / partially known / known (with citation)
+mode: ""                         # M1 | M2 | M3A | M3B (as requested in the packet)
+requested_band: ""               # e.g. "P1, p = 0.05" — or "n/a" for M2
+claims:                          # the theorems actually claimed, verbatim names
+  - lean_name: ""
+    plain_words: ""
+    file: ""                     # path under artifact/
+verification:
+  toolchain: ""                  # e.g. leanprover/lean4:v4.33.1
+  mathlib: ""                    # tag or commit
+  axioms: ""                     # e.g. "propext, Classical.choice, Quot.sound"
+  exceptions: ""                 # anything outside standard axioms, native_decide, trust assumptions
+  build: ""                      # "lake build" | "per-module script" + command
+  build_time_and_memory: ""
+hill:                            # leave empty if the target has no hill
+  name: ""
+  tree_hash: ""
+  experiment: ""
+  report_file: ""                # path under artifact/
+  metrics: {}
+submission:
+  packet: PACKET.md
+  submitted_at: ""               # date + time with zone
+  submission_id: ""
+  commit: ""                     # hash the tag points to
+  tag: ""                        # e.g. ramsey-v1
+people:
+  owner: ""                      # who answers questions about this entry
+  contributors: []               # name: what they did
+  human_review: ""               # who read what; "none" if none
+ai_and_tools:
+  models: []                     # e.g. "claude-opus-5-5 (Claude Code)", "gpt-6-sol (codex)"
+  roles: ""                      # what the models did vs. what humans did
+provenance:
+  baseline: ""                   # what existed before the event window
+  event_work: ""                 # what was produced during the event
+  prior_art_checked: ""          # where you looked, when
+known_limitations: []            # honest list
+links: []                        # papers, problem pages, leaderboard

@@ -1,0 +1,52 @@
+# codex (GPT) usage on the server. TODO STUB: no numbers were collected.
+# Reason: on 2026-10-03 (KST) the server could not be reached from the laptop session that wrote this repository.
+reported_by: "helper-team-repo (Claude Code agent); stub, to be completed by the operator"
+period: {from: "TODO", to: "TODO"}
+status: "TODO - not collected"
+how_to_collect:
+  - "copy tools/sum_codex_usage.py and archive/stats/codex_server_attribution_rules.json to ~/team-stats/ on the server (write only under ~/team-stats/)"
+  - "cd ~/m_harness/harness && ~/.venvs/mh/bin/python -m danus.ops.jobs star6 teamstats 2G -- python3 ~/team-stats/sum_codex_usage.py ~/.codex/sessions --rules ~/team-stats/codex_server_attribution_rules.json --tz-hours 9 --since 2026-09-27T00:00:00+09:00 --until 2026-10-04T00:00:00+09:00 --sessions --json ~/team-stats/codex_usage.json"
+  - "check the 'unattributed' group in the output (sessions whose cwd matches no rule) and extend the rules if needed; audit / verification runs belong to dms-star6"
+  - "fill the rows below from by_group (one row per entry and model), by_date into by_date_kst, and record the command and the time of the run in source"
+  - "codex input_tokens includes cached input: put input_uncached into input_tokens and cached_input into cache_read_tokens; cache_write_tokens does not exist for codex (null)"
+ai_usage:
+  - entry: "ramsey-k4-multiplicity"
+    provider: "OpenAI"
+    model: "TODO (recorded as gpt-6-sol in the packet)"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "TODO"
+    source: "TODO: sessions with cwd under the Erdos work directory named ramseyfast, ramseylimit, ramseymono"
+  - entry: "dms-star6"
+    provider: "OpenAI"
+    model: "TODO (recorded as gpt-6-sol in the pack READMEs, GPT-5.6-sol in packet v3)"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "TODO"
+    source: "TODO: star6 GPT workers (workers/gpt-*), cross-check audits and verification runs, sessions dmspet and dmsiff"
+  - entry: "erdos-m2-formalizations"
+    provider: "OpenAI"
+    model: "TODO (recorded as gpt-6-sol in the packet)"
+    interface: "codex CLI"
+    account_plan: "server account, subscription plan"
+    sessions: "TODO"
+    input_tokens: "TODO"
+    output_tokens: "TODO"
+    cache_read_tokens: "TODO"
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "weekly window 0% at 2026-10-02 08:20 KST, 12% at 18:10 KST (project log PLAN.md, hand-written; all codex use of that day)"
+    source: "TODO: all other sessions with cwd under the Erdos work directory"
+notes: "Stub. tools/sum_codex_usage.py was tested only on six unrelated local codex rollouts on the laptop (format check: session totals equal the last cumulative token_count record); it has not been run on the server data."

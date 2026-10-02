@@ -1,0 +1,5 @@
+/home/lead/erdos-fc/m2/final/bundle/Erdos748.lean:59:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos748.lean:107:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/final/bundle/Erdos748.lean:115:8: warning: declaration uses `sorry`
+'Erdos748.erdos_748.variants.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

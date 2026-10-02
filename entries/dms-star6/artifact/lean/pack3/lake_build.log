@@ -1,0 +1,837 @@
+Fri Oct  2 02:46:39 AM KST 2026
+Lake version 5.0.0-src+819816b (Lean version 4.33.1)
+✔ [1/21] Built StarCore (392ms)
+✔ [3/21] Built StarSix (477ms)
+✔ [4/21] Built StarCert (4.4s)
+✔ [5/21] Built StarReduce (316ms)
+✔ [6/21] Built StarChecker (284ms)
+✔ [7/21] Built StarLeaf (7.5s)
+✔ [8/21] Built StarCompose (210ms)
+✔ [9/21] Built StarRigid (762ms)
+✔ [10/22] Built StarMatching (220ms)
+✔ [11/22] Built StarBottleneck (255ms)
+✔ [12/22] Built StarVizing (226ms)
+✔ [14/22] Built StarExtension (231ms)
+⚠ [15/22] Built MhFact_5c1eb3f583cf643f (14s)
+warning: src/MhFact_5c1eb3f583cf643f.lean:951:45: This simp argument is unused:
+  Fin.addCases_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dbl, eo, vo, Fin.addCases_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_5c1eb3f583cf643f.lean:957:30: This simp argument is unused:
+  Fin.addCases_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dbl, eb, vo, vc, Fin.addCases_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [16/25] Built MhFact_974f7197c1be8069 (253ms)
+⚠ [17/26] Built MhFact_7d291f6ca774e1da (1.9s)
+warning: src/MhFact_7d291f6ca774e1da.lean:1042:60: This simp argument is unused:
+  bne_iff_ne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, ne_eq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_7d291f6ca774e1da.lean:1042:72: This simp argument is unused:
+  ne_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, bne_iff_ne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [19/26] Built MhFact_c64b6bd62b78d841 (941ms)
+✔ [22/26] Built MhFact_657e581f1145250f (1.5s)
+✔ [24/26] Built MhFact_341b6e5e1be16205 (2.6s)
+⚠ [25/92] Built MhFact_643ccea3769075c0 (9.1s)
+warning: src/MhFact_643ccea3769075c0.lean:1638:90: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_ea), if_neg (Ne.symm bc_ea), if_neg (Ne.symm ca_ea), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_643ccea3769075c0.lean:1641:35: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_eb), if_neg (Ne.symm bc_eb), if_neg (Ne.symm ca_eb),
+    if_neg (Ne.symm T.ea_ne_eb), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_643ccea3769075c0.lean:1644:64: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [β, if_neg (Ne.symm ab_ec), if_neg (Ne.symm bc_ec), if_neg (Ne.symm ca_ec),
+    if_neg (Ne.symm T.ea_ne_ec), if_neg (Ne.symm T.eb_ne_ec), ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1277/1361] Built MhFact_046773df0a672922 (1.2s)
+warning: src/MhFact_046773df0a672922.lean:129:8: This simp argument is unused:
+  SimpleGraph.Subgraph.deleteVerts_verts
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_046773df0a672922.lean:135:8: This simp argument is unused:
+  SimpleGraph.Subgraph.deleteVerts_adj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_046773df0a672922.lean:434:6: `Set.ncard_diff_add_ncard_of_subset` has been deprecated: Use `Set.ncard_sdiff_add_ncard_of_subset` instead
+warning: src/MhFact_046773df0a672922.lean:495:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1282/1361] Built MhFact_09796da8a434e150 (7.8s)
+warning: src/MhFact_09796da8a434e150.lean:327:34: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cntB, Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_09796da8a434e150.lean:766:45: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_09796da8a434e150.lean:773:45: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_09796da8a434e150.lean:831:49: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_09796da8a434e150.lean:858:49: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1283/1361] Built MhFact_6e44d3c2232b5736 (4.6s)
+warning: src/MhFact_6e44d3c2232b5736.lean:75:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_6e44d3c2232b5736.lean:109:15: This simp argument is unused:
+  hpq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpr, hqr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_6e44d3c2232b5736.lean:109:20: This simp argument is unused:
+  hpr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpq, hqr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_6e44d3c2232b5736.lean:109:25: This simp argument is unused:
+  hqr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [β, hpq, hpr, hpq.symm, hpr.symm, hqr.symm] at hfg ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_6e44d3c2232b5736.lean:367:15: This simp argument is unused:
+  o1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [o2, o3, o4] at k4
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1284/1361] Built MhFact_ebeb33c568dfe4e4 (3.4s)
+warning: src/MhFact_ebeb33c568dfe4e4.lean:832:22: This simp argument is unused:
+  Bool.and_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [insideT, Bool.not_eq_true', Bool.or_eq_true] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [1285/1361] Built MhFact_066dc781a8de9c11 (6.1s)
+⚠ [1286/1361] Built MhFact_3e79907cfcc0085b (4.8s)
+warning: src/MhFact_3e79907cfcc0085b.lean:49:8: This simp argument is unused:
+  List.getElem?_set_self
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1287/1361] Built MhFact_6c78409a046a3fe7 (7.3s)
+warning: src/MhFact_6c78409a046a3fe7.lean:68:35: `Symmetric` has been deprecated: Use `Std.Symm` instead
+
+Note: The updated constant has a different type:
+  {α : Sort u} → (α → α → Prop) → Prop
+instead of
+  {α : Sort u_1} → (α → α → Prop) → Prop
+warning: src/MhFact_6c78409a046a3fe7.lean:223:32: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:239:9: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:592:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/MhFact_6c78409a046a3fe7.lean:593:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: src/MhFact_6c78409a046a3fe7.lean:820:35: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:820:35: This simp argument is unused:
+  Sym2.map_pair_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [subEn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_6c78409a046a3fe7.lean:862:45: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:1028:42: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:1034:34: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:1036:58: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:1037:58: `Sym2.map_pair_eq` has been deprecated: Use `Sym2.map_mk` instead
+warning: src/MhFact_6c78409a046a3fe7.lean:1073:26: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [o, oriG]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_6c78409a046a3fe7.lean:1245:15: This simp argument is unused:
+  Bool.and_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, decide_eq_true_eq] at hf
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1288/1361] Built MhFact_75fc19c47ee38b89 (2.5s)
+warning: src/MhFact_75fc19c47ee38b89.lean:858:39: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+warning: src/MhFact_75fc19c47ee38b89.lean:891:39: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+warning: src/MhFact_75fc19c47ee38b89.lean:893:39: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+warning: src/MhFact_75fc19c47ee38b89.lean:895:39: `Fin.coe_castSucc` has been deprecated: Use `Fin.val_castSucc` instead
+⚠ [1289/1361] Built MhFact_a030b9ec722eb795 (4.6s)
+warning: src/MhFact_a030b9ec722eb795.lean:206:48: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [leafEl, gE, List.getD_eq_getElem?_getD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_a030b9ec722eb795.lean:210:48: This simp argument is unused:
+  List.getElem?_append_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [leafEl, gE, List.getD_eq_getElem?_getD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1290/1361] Built MhFact_90b4662cdeba097d (1.4s)
+warning: src/MhFact_90b4662cdeba097d.lean:121:152: Unused tactic linter: `(simp at hvB; exact hvB)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: src/MhFact_90b4662cdeba097d.lean:121:152: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [1291/1361] Built MhFact_9e7dda3374e6b172 (1.4s)
+warning: src/MhFact_9e7dda3374e6b172.lean:499:49: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1292/1361] Built MhFact_413193082c4b8758 (983ms)
+warning: src/MhFact_413193082c4b8758.lean:176:109: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_413193082c4b8758.lean:381:32: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1293/1361] Built MhFact_81c52cea8147de67 (2.7s)
+warning: src/MhFact_81c52cea8147de67.lean:112:58: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+warning: src/MhFact_81c52cea8147de67.lean:114:58: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+warning: src/MhFact_81c52cea8147de67.lean:125:58: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+warning: src/MhFact_81c52cea8147de67.lean:310:78: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_81c52cea8147de67.lean:329:46: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_81c52cea8147de67.lean:577:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:600:74: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_81c52cea8147de67.lean:872:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:1099:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:1101:25: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:1102:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:1111:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_81c52cea8147de67.lean:1158:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1294/1361] Built MhFact_c3375be11cf311ee (1.6s)
+warning: src/MhFact_c3375be11cf311ee.lean:57:22: Variable name `Q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _Q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_c3375be11cf311ee.lean:254:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_c3375be11cf311ee.lean:263:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_c3375be11cf311ee.lean:265:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_c3375be11cf311ee.lean:694:21: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_c3375be11cf311ee.lean:1007:19: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_c3375be11cf311ee.lean:1007:44: Variable name `h10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_c3375be11cf311ee.lean:1224:20: Variable name `h2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_c3375be11cf311ee.lean:1224:45: Variable name `h10` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1295/1361] Built MhFact_345a55d7429fd4b1 (1.4s)
+warning: src/MhFact_345a55d7429fd4b1.lean:29:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_345a55d7429fd4b1.lean:113:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1296/1361] Built MhFact_f7fb58786d241d68 (910ms)
+warning: src/MhFact_f7fb58786d241d68.lean:29:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1297/1361] Built MhFact_30194dab4e05fdcf (2.5s)
+warning: src/MhFact_30194dab4e05fdcf.lean:47:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_30194dab4e05fdcf.lean:49:70: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_30194dab4e05fdcf.lean:372:15: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+warning: src/MhFact_30194dab4e05fdcf.lean:372:32: `Fin.coe_natAdd` has been deprecated: Use `Fin.val_natAdd` instead
+warning: src/MhFact_30194dab4e05fdcf.lean:377:15: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+warning: src/MhFact_30194dab4e05fdcf.lean:377:32: `Fin.coe_natAdd` has been deprecated: Use `Fin.val_natAdd` instead
+warning: src/MhFact_30194dab4e05fdcf.lean:491:7: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_30194dab4e05fdcf.lean:497:75: Variable name `f` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _f
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_30194dab4e05fdcf.lean:1134:22: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [1298/1361] Built MhFact_f4c06558ba3030b8 (11s)
+⚠ [1299/1361] Built MhFact_33aabc50b1cec1ba (9.4s)
+warning: src/MhFact_33aabc50b1cec1ba.lean:28:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_33aabc50b1cec1ba.lean:91:0: automatically included section variable(s) unused in theorem `RH2F.TriPiece.yne`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:97:0: automatically included section variable(s) unused in theorem `RH2F.TriPiece.e_ne_inner`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:944:0: automatically included section variable(s) unused in theorem `RH2F.s5A_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:945:0: automatically included section variable(s) unused in theorem `RH2F.s5A_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:946:0: automatically included section variable(s) unused in theorem `RH2F.s5A_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:947:0: automatically included section variable(s) unused in theorem `RH2F.s5O_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:948:0: automatically included section variable(s) unused in theorem `RH2F.s5O_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:949:0: automatically included section variable(s) unused in theorem `RH2F.s5O_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:950:0: automatically included section variable(s) unused in theorem `RH2F.s5B_i`:
+  hij
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:951:0: automatically included section variable(s) unused in theorem `RH2F.s5B_j`:
+  hik
+  hjk
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hik hjk in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:952:0: automatically included section variable(s) unused in theorem `RH2F.s5B_k`:
+  hij
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hij in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:1012:0: automatically included section variable(s) unused in theorem `RH2F.TriPiece.inner_notCut`:
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:1029:32: Variable name `hdom` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdom
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: src/MhFact_33aabc50b1cec1ba.lean:1037:15: Variable name `hG` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hG
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1300/1361] Built MhFact_bde9371a01dd2855 (1.7s)
+warning: src/MhFact_bde9371a01dd2855.lean:135:21: Variable name `hG` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hG
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [1301/1361] Built MhFact_83263f8970f3987b (1.6s)
+✔ [1302/1361] Built MhFact_85780d9a54267261 (8.0s)
+⚠ [1303/1361] Built MhFact_57ea4db232a2b7f5 (6.6s)
+warning: src/MhFact_57ea4db232a2b7f5.lean:192:45: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_57ea4db232a2b7f5.lean:199:28: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.mem_cons, List.not_mem_nil, or_false] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_57ea4db232a2b7f5.lean:659:69: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.and_eq_true, Bool.or_eq_true, bne_iff_ne, ne_eq, Bool.not_eq_true',
+    Bool.and_eq_false_imp] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_57ea4db232a2b7f5.lean:697:36: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [perms3, List.mem_cons, List.not_mem_nil, or_false] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1304/1361] Built MhFact_2f482379fe24b1cb (8.4s)
+warning: src/MhFact_2f482379fe24b1cb.lean:433:8: `List.take_succ` has been deprecated: Use `List.take_add_one` instead
+warning: src/MhFact_2f482379fe24b1cb.lean:438:30: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.getElem?_eq_getElem hlt, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_2f482379fe24b1cb.lean:966:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: src/MhFact_2f482379fe24b1cb.lean:1040:39: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_2f482379fe24b1cb.lean:1067:63: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: src/MhFact_2f482379fe24b1cb.lean:1108:45: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.nodup_cons, List.mem_cons, not_or, List.not_mem_nil, not_false_eq_true, List.nodup_nil,
+    and_true] at hnd
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_2f482379fe24b1cb.lean:1126:30: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_2f482379fe24b1cb.lean:1232:47: `List.take_succ` has been deprecated: Use `List.take_add_one` instead
+warning: src/MhFact_2f482379fe24b1cb.lean:1302:30: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true] at h1
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [1305/1361] Built MhFact_923511b69a46047e (12s)
+✔ [1306/1361] Built MhFact_c156979f912a0408 (11s)
+✔ [1307/1361] Built MhFact_77e9ac7f87ab804f (12s)
+✔ [1308/1361] Built MhFact_fe45f583e0b81581 (12s)
+✔ [1309/1361] Built MhFact_2e993e3b07378767 (9.4s)
+⚠ [1310/1361] Built MhFact_54ed0ff9a1ed26b6 (3.2s)
+warning: src/MhFact_54ed0ff9a1ed26b6.lean:84:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_54ed0ff9a1ed26b6.lean:124:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_54ed0ff9a1ed26b6.lean:188:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_54ed0ff9a1ed26b6.lean:835:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: src/MhFact_54ed0ff9a1ed26b6.lean:1413:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [1311/1361] Built MhFact_4f913d5550e57c85 (6.7s)
+⚠ [1312/1361] Built MhFact_eff6661027b6cbd2 (1.8s)
+warning: src/MhFact_eff6661027b6cbd2.lean:1383:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [1313/1361] Built MhFact_fbae65436c8cc8bf (5.4s)
+✔ [1314/1361] Built MhFact_d39e578650322db3 (7.1s)
+✔ [1315/1361] Built MhFact_4b6dbe605eac3a1d (7.1s)
+✔ [1316/1361] Built MhFact_724d35f964ae6f7d (7.2s)
+✔ [1317/1361] Built MhFact_59c06cb7808fc140 (7.1s)
+✔ [1318/1361] Built MhFact_e1599bf3f3c26bdb (5.6s)
+✔ [1319/1361] Built MhFact_cc801c1ba060f9c7 (6.7s)
+⚠ [1320/1361] Built MhFact_3c53e18d818a023b (11s)
+warning: src/MhFact_3c53e18d818a023b.lean:152:48: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.and_eq_true, Bool.or_eq_true] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_3c53e18d818a023b.lean:189:0: automatically included section variable(s) unused in theorem `RH2F.c_of_cv`:
+  hel
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hel in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: src/MhFact_3c53e18d818a023b.lean:196:48: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.or_eq_true, Bool.and_eq_true] at he
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: src/MhFact_3c53e18d818a023b.lean:246:50: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.and_eq_true, Bool.not_eq_true'] at key
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [1321/1361] Built MhFact_7c9b506b16bbaf73 (7.1s)
+✔ [1322/1361] Built MhFact_1f8ebb817a59b41d (10s)
+✔ [1323/1361] Built MhFact_5e8f7a0c3cb04161 (9.9s)
+✔ [1324/1361] Built MhFact_b71709db7a82637a (9.0s)
+✔ [1325/1361] Built MhFact_e63e13afc71071cb (9.8s)
+✔ [1326/1361] Built MhFact_6460e64b00785972 (9.8s)
+✔ [1327/1361] Built MhFact_77a5aa23394eb0f0 (7.3s)
+✔ [1328/1361] Built MhFact_6882aa6fa76ff8ed (11s)
+✔ [1329/1361] Built MhFact_55368cd7a0c74072 (10s)
+✔ [1330/1361] Built MhFact_79ac08d5cf0788b9 (10s)
+✔ [1331/1361] Built MhFact_7217c8f0517c24a9 (10s)
+✔ [1332/1361] Built MhFact_b536c7d8a4f139e4 (10s)
+✔ [1333/1361] Built MhFact_e68d717a207ff44f (8.7s)
+✔ [1334/1361] Built MhFact_144fd607d85ac5da (9.6s)
+✔ [1335/1361] Built MhFact_c1bad3abf5f2e5e8 (6.3s)
+✔ [1336/1361] Built MhFact_96b352680829f174 (9.0s)
+✔ [1337/1361] Built MhFact_06139ad5904fa064 (4.6s)
+✔ [1338/1361] Built MhFact_5343a2db598602a9 (9.6s)
+✔ [1339/1361] Built MhFact_7b9500b9ad8bca15 (6.9s)
+✔ [1340/1361] Built MhFact_4e4dfbfc10836500 (7.4s)
+✔ [1341/1361] Built MhFact_024845889158353d (5.7s)
+✔ [1342/1361] Built MhFact_a8bfe25dadf921db (7.9s)
+✔ [1343/1361] Built MhFact_256b4143cc30000f (8.8s)
+✔ [1344/1361] Built MhFact_def3ba43f6eccb6d (8.2s)
+✔ [1345/1361] Built MhFact_51ff9480dc00823f (56s)
+✔ [1346/1361] Built MhFact_c35583f86422a75a (76s)
+✔ [1347/1361] Built MhFact_f645e06d2ce727a3 (49s)
+✔ [1348/1361] Built MhFact_0e0e37a38e3c97d5 (85s)
+✔ [1349/1361] Built MhFact_78a34517ee1a6fff (86s)
+✔ [1350/1361] Built MhFact_916ccd41e9db4312 (76s)
+✔ [1351/1361] Built MhFact_4b7436a78212f56a (73s)
+✔ [1352/1361] Built MhFact_4e63409f7b05a806 (71s)
+✔ [1353/1361] Built MhFact_78d98836f6372f68 (73s)
+✔ [1354/1361] Built MhFact_c03bb6e1daa663e4 (67s)
+✔ [1355/1361] Built MhFact_38b6f78a47fdf12e (943ms)
+✔ [1356/1361] Built MhFact_6b1f8729194e23a3 (984ms)
+✔ [1357/1361] Built MhFact_66a4a19c81528d5b (1.0s)
+✔ [1358/1361] Built MhFact_1b2e17f98116d9aa (866ms)
+✔ [1359/1361] Built MhFact_ba4d9c5abd0afd83 (887ms)
+ℹ [1360/1361] Built Main (892ms)
+info: src/Main.lean:30:0: def RH2F.DMS : Prop :=
+∀ (G : MGraph), G.Subcubic → G.Loopless → ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+info: src/Main.lean:31:0: RH2Fid.fidelity_bundle : ((RH2F.Hyp ↔ RH2Fid.HP) ∧ (RH2F.II ↔ RH2Fid.IIP) ∧ (RH2F.DMS ↔ RH2Fid.DMSP)) ∧
+  (RH2Fid.HP → RH2Fid.IIP → RH2Fid.DMSP) ∧
+    (RH2Fid.LooplessP (RH2Fid.fullEn RH2Fid.wK4) ∧
+        RH2Fid.CubicP (RH2Fid.fullEn RH2Fid.wK4) ∧
+          RH2Fid.BridgelessP (RH2Fid.fullEn RH2Fid.wK4) ∧
+            RH2Fid.ConnectedP (RH2Fid.fullEn RH2Fid.wK4) ∧
+              RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.cK4 ∧
+                ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.cK4bad) ∧
+      (RH2Fid.StarP (RH2Fid.fullEn MGraph.k33) MGraph.k33Col ∧
+          ¬RH2Fid.StarP (RH2Fid.fullEn MGraph.k33) RH2Fid.cK33bad ∧ RH2Fid.TwoCutReducedP (RH2Fid.fullEn MGraph.k33)) ∧
+        (RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wPrism) RH2Fid.cPrism ∧
+            ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wPrism) RH2Fid.cPrismBad) ∧
+          (RH2Fid.CubicP (RH2Fid.fullEn RH2Fid.wDig) ∧
+              RH2Fid.BridgelessP (RH2Fid.fullEn RH2Fid.wDig) ∧
+                RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wDig) RH2Fid.cDig ∧
+                  ¬RH2Fid.StarP (RH2Fid.fullEn RH2Fid.wDig) RH2Fid.cDigBad) ∧
+            (RH2Fid.Star6P (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) ∧
+                ¬RH2Fid.CubicP (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) ∧
+                  RH2Fid.IsBridge (RH2Fid.enT (RH2Fid.fullEn RH2Fid.wK4) RH2Fid.g0 ⟨0, ⋯⟩ ⟨1, ⋯⟩) (Sum.inr 2)) ∧
+              ((RH2F.InG RH2Fid.wD8 fun x => True) ∧ ¬RH2Fid.TwoCutReducedP (RH2Fid.fullEn RH2Fid.wD8)) ∧
+                (RH2F.InG RH2Fid.wPet fun x => True) ∧
+                  (10 ≤ RH2F.vcount fun x => True) ∧ RH2F.TwoCutReducedOn fun x => True
+info: src/Main.lean:32:0: 'RH2F.layer37' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:33:0: 'star6_dms_conditional_A' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:34:0: 'star6_dms_conditional_B' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:35:0: 'star6_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:36:0: 'RH2F.layer37a' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:37:0: 'RH2F.layer35' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:38:0: 'RH2F.layer32d' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:39:0: 'RH2F.layer28' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:40:0: 'RH2F.base12' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:41:0: 'RH2F.simple14' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:42:0: 'RH2F.b14d' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:43:0: 'RH2F.feexist16' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:44:0: 'RH2F.feexistD10_of_18' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:45:0: 'RH2F.iid16_of_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:46:0: 'RH2F.cls16c' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:47:0: 'RH2F.rh2_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:48:0: 'RH2P.layerP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: src/Main.lean:49:0: 'RH2Fid.fidelity_bundle' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (1361 jobs).
+lake build rc=0
+Fri Oct  2 03:06:55 AM KST 2026

@@ -1,0 +1,73 @@
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:112:58: warning: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:114:58: warning: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:125:58: warning: `Fin.coe_castAdd` has been deprecated: Use `Fin.val_castAdd` instead
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:310:78: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:329:46: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:577:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:600:74: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:872:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:1099:10: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:1101:25: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:1102:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:1111:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+/home/lead/danus-projects/star6/lean433/pack3/src/MhFact_81c52cea8147de67.lean:1158:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```

@@ -1,0 +1,6 @@
+@@ why: 4.33: closing step of simpa does not unfold gE; added to the simp set
+<<<<
+    simpa only [rangeAll_eq, allR_eq, getR_eq, gER] using h5
+====
+    simpa only [rangeAll_eq, allR_eq, getR_eq, gER, gE] using h5
+>>>>

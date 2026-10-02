@@ -1,0 +1,3 @@
+'GoldbergSnark.goldberg_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+peak_anon_kb=1747148 elapsed_s=16
+rc=0

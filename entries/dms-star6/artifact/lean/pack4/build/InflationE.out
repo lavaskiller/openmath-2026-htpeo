@@ -1,0 +1,5 @@
+InflationE.lean:77:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+peak_anon_kb=754136 elapsed_s=6
+rc=0
