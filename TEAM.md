@@ -3,7 +3,7 @@
 Fill in your own block: replace every `____`. It takes two minutes. The packets in `entries/*/PACKET.md` and the Team section of the README refer to this file.
 After filling in, update the role line under your avatar in `README.md` and `README.ko.md` if it should say something else. Lines already filled in for you come from the repository and the leaderboards; correct them if wrong.
 
-"Already known" lines were read from the AutoLab leaderboard API at 2026-10-02T16:23Z (2026-10-03 01:23 KST) (raw responses in `archive/leaderboards/`) or from this repository; correct them if wrong.
+"Already known" lines were read from the AutoLab leaderboard API at 2026-10-02T18:04Z (2026-10-03 03:04 KST) (raw responses in `archive/leaderboards/`) or from this repository; correct them if wrong.
 
 ## @lavaskiller
 
@@ -26,6 +26,8 @@ Already known:
 
 - AutoLab account `lavaskiller` (owner of the Ramsey project `clique-cluster-ramsey-multiplicity-attempt-16`)
 - K4 Ramsey multiplicity hill: 1st of 12 (validation board, no ties), 30,139,933,996 ppt, 2026-10-02
+- Kobon triangles hill, board n = 39: 1st of 3, alone, 471 triangles, 2026-10-03 (experiment `38b81af6`); possibly a new best known value, literature check not human-verified. Files: [`entries/hills/kobon-n39-lavaskiller/`](entries/hills/kobon-n39-lavaskiller/)
+- Grothendieck constant witnesses hill: tied for 1st, 7 of 9 accounts, gap_ppm 1,414,213 / matrix_area 4 / certificate_bits 80, 2026-10-03 (experiment `2552e287`); known construction, not claimed as new. Files: [`entries/hills/grothendieck-lavaskiller/`](entries/hills/grothendieck-lavaskiller/)
 - Commit author of this repository
 
 ## @hl728

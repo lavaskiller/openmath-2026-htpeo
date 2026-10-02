@@ -83,13 +83,23 @@ def hill_rows(root, lang, boards):
                 res.append("보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음" if ko else
                            "reproduces the board's best value; not claimed as new mathematics")
             name = (b["name_ko"] if ko else b["name"]) + (" (%s)" % b["suffix"] if b["suffix"] else "")
-            folder = "entries/hills/%s-%s/" % (b["prefix"], o)
+            pre = lb.folder_prefix(b)
+            folder = "entries/hills/%s-%s/" % (pre, o)
             if not os.path.isdir(os.path.join(root, folder)):
                 raise SystemExit("missing folder for a hill result: " + folder)
-            files = ("[`hills/%s-%s`](%s) — " % (b["prefix"], o, folder)) + (
-                "담당 팀원이 파일 추가 예정" if ko else "files to be added by its owner")
+            extra = {}
+            if os.path.exists(os.path.join(root, folder, "HILL.yaml")):     # owner-written wording for this row
+                extra = load(os.path.join(root, folder, "HILL.yaml"))
+            if extra.get("result"):
+                res = [extra.get("result_ko") if ko and extra.get("result_ko") else extra["result"]]
+            if os.path.exists(os.path.join(root, folder, "report.json")):
+                what = extra.get("files_ko" if ko else "files") or ("해, 서명된 보고서" if ko else "solution, signed report")
+            else:
+                what = "담당 팀원이 파일 추가 예정" if ko else "files to be added by its owner"
+            files = "[`hills/%s-%s`](%s) — %s" % (pre, o, folder, what)
             best = min(r["rank"] for r in (v, f) if r)
-            rows.append(((0 if (v and v["rank"] == 1) else 1, best, i),
+            lead = 0 if (v and v["rank"] == 1 and v["tied"] == 1) else (1 if (v and v["rank"] == 1) else 2)
+            rows.append(((lead, best, i),
                          (name, "@" + o, "hill 결과" if ko else "hill result", "; ".join(res), "; ".join(st),
                           "hill 평가기(Python), Lean 산출물 없음" if ko else "hill evaluator (Python), no Lean artifact",
                           files)))

@@ -27,8 +27,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_charts as mc  # noqa: E402  (palette, typography, Svg helper)
 
-SNAPSHOT = "2026-10-02T16:23Z"
-SNAPSHOT_KST = "2026-10-03 01:23 KST"
+SNAPSHOT = "2026-10-02T18:04Z"
+SNAPSHOT_KST = "2026-10-03 03:04 KST"
 TEAM = ["lavaskiller", "hl728", "n0rang2", "thomasoh0408"]
 HILLS = [   # organisers' list: (file stem, display name, Korean name, folder prefix under entries/hills/)
     ("kobon-triangles", "Kobon triangles", "Kobon 삼각형", "kobon-triangles"),
@@ -39,6 +39,13 @@ HILLS = [   # organisers' list: (file stem, display name, Korean name, folder pr
     ("busy-beaver-6-certificates", "Busy Beaver 6 certificates", "Busy Beaver 6 인증서", "busy-beaver-6"),
     ("erdos-3", "Erdős 3", "Erdős 3", "erdos-3"),
 ]
+BOARD_FOLDER = {("kobon-triangles", "n = 39"): "kobon-n39"}   # folder prefix of a board, if not the hill's
+
+
+def folder_prefix(b):
+    return BOARD_FOLDER.get((b["stem"], b["suffix"]), b["prefix"])
+
+
 FULL_ENTRY = {"clique-cluster-ramsey-multiplicity": ("lavaskiller", "entries/ramsey-k4-multiplicity/")}
 RAMSEY_REFERENCE_PPT = 30142273432      # 10486266368 / 768^4 as density_ppt (hill reference)
 W = 720
@@ -282,9 +289,9 @@ def hills_block(root, boards, lang):
             files.append("[`%s`](%s)" % (full[1].rstrip("/").split("/")[-1], full[1]))
         owners = [r["owner"] for r in mine] + [r["owner"] for r in b["final"] if r["owner"] in TEAM]
         for o in dict.fromkeys(owners):
-            folder = "entries/hills/%s-%s/" % (b["prefix"], o)
+            folder = "entries/hills/%s-%s/" % (folder_prefix(b), o)
             if os.path.isdir(os.path.join(root, folder)):
-                files.append("[`hills/%s-%s`](%s)" % (b["prefix"], o, folder))
+                files.append("[`hills/%s-%s`](%s)" % (folder_prefix(b), o, folder))
         out.append("| %s | %d | %s | %s | %s | %s |" % (
             name, len(rows), leader, "<br/>".join(st) if st else "—", tied, " · ".join(files) if files else "—"))
     return "\n".join(out)

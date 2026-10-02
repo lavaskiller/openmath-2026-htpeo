@@ -71,6 +71,9 @@ English: [timeline.md](timeline.md)
 | 2026-10-02 23:34 KST | M2 패킷 v2 작성(14:34Z). 검증 풀 63행 중 61행 통과(검증 재실행 14:16 UTC). 주장 13개 묶음. 고급 결과 8개 중 E942만 새 형식화, E649는 선택으로 정정 | erdos-m2-formalizations | `erdos_m2_packet_final_v2.md` 머리줄, §0 |
 | 2026-10-02 23:45 KST | DMS 최종 패킷과 산출물 저장소(로컬 git) 완성. 요청 구간 p = 0.15 | dms-star6 | PLAN §4 "DMS 최종 패킷 완성(10-02 23:45 KST)"(PLAN 손 기록); `star6_packet_final.md` §1.6 |
 | 2026-10-03 00:10 KST | 팀 공용 저장소 틀 작성, 00:20에 세 항목 이관과 통계 추출 착수 | shared | PLAN §4 "팀 공용 저장소·아카이브 틀(10-03 00:10 KST)", "팀 저장소 틀에 세 항목 이관(10-03 00:20 KST)"(PLAN 손 기록) |
+| 2026-10-03 02:32 KST | Grothendieck constant witnesses hill: 실험 `2552e287`(계정 lavaskiller) 공식 평가, gap_ppm 1,414,213 / matrix_area 4 / certificate_bits 80. 알려진 CHSH형 2x2 witness이며 새것으로 주장하지 않음 | hills | `entries/hills/grothendieck-lavaskiller/report.json`(2026-10-02T17:31:54Z) |
+| 2026-10-03 02:58 KST | Kobon 삼각형 hill, n = 39 보드: 실험 `38b81af6`(계정 lavaskiller) 공식 평가, 삼각형 471개. 고전적 구성의 468보다 큼. 문헌 확인은 AI 보조 세션이 했고 사람이 검증하지 않음 | hills | `entries/hills/kobon-n39-lavaskiller/report.json`(2026-10-02T17:58:19Z), `NOTES.md` |
+| 2026-10-03 03:04 KST | 순위표 재조회(2026-10-02T18:04Z): Kobon n = 39 보드 471 / 470 / 468, lavaskiller 3명 중 1위; Grothendieck 공동 1위(9명 중 7명); Ramsey는 변동 없이 검증 보드 12명 중 1위. Ramsey 해를 최종(held-out) 보드에 올리려던 시도(실험 `217d0ba2`)는 hill이 "final" 매개변수를 받지 않아 실패. 계속된 탐색에서 나온 더 나은 Ramsey 값(30,139,923,154 ppt)은 제출하지 않음 | hills, ramsey-k4-multiplicity | `archive/leaderboards/`; 운영자 보고(실험 `217d0ba2`와 미제출 값은 이 저장소에 파일 없음) |
 | 2026-10-03 13:00 KST | 대회 마감(00:00 EDT). 세 패킷의 실제 제출 여부와 시각: TODO(출처 없음) — 세 패킷 모두 "작성자는 제출하지 않음"이라고만 적혀 있음 | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 9번; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` 머리줄 |
 
 ## 날짜 없는 사건

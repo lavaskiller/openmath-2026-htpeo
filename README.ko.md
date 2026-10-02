@@ -26,7 +26,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 ## 한눈에 보는 결과
 
-팀이 가진 것 전부를 한곳에 모았습니다: 먼저 Lean으로 검증한 항목, 다음에 팀원이 대회 hill에서 가진 결과. hill 순위는 AutoLab 순위표를 2026-10-02T16:23Z (2026-10-03 01:23 KST)에 조회한 값이며 마감 전까지 바뀔 수 있습니다. 순위에는 항상 보드의 계정 수를 함께 적고, 지표가 같은 계정은 같은 순위입니다(플랫폼은 동률 계정을 알파벳 순으로 늘어놓고 번호를 차례로 매깁니다).
+팀이 가진 것 전부를 한곳에 모았습니다: 먼저 Lean으로 검증한 항목, 다음에 팀원이 대회 hill에서 가진 결과. hill 순위는 AutoLab 순위표를 2026-10-02T18:04Z (2026-10-03 03:04 KST)에 조회한 값이며 마감 전까지 바뀔 수 있습니다. 순위에는 항상 보드의 계정 수를 함께 적고, 지표가 같은 계정은 같은 순위입니다(플랫폼은 동률 계정을 알파벳 순으로 늘어놓고 번호를 차례로 매깁니다).
 
 <!-- RESULTS:START -->
 **Lean으로 검증한 항목**
@@ -42,13 +42,15 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 | hill (보드) | 팀원 | 종류 | 결과 | 순위 | 검증 | 파일 |
 |---|---|---|---|---|---|---|
+| Kobon 삼각형 (n = 39) | @lavaskiller | hill 결과 | 39개 직선으로 삼각형 471개; n = 39 보드 선두; 고전적 구성의 468보다 큼; 알려진 최고값을 넘었을 가능성 — 문헌 확인은 사람이 검증하지 않음; Lean 산출물은 아직 없음 | 3계정 중 1위 | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-n39-lavaskiller`](entries/hills/kobon-n39-lavaskiller/) — 해, 서명된 보고서, 기록, 코드 |
 | Kobon 삼각형 (n = 18) | @thomasoh0408 | hill 결과 | triangles 93; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (15계정 중 12계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) — 담당 팀원이 파일 추가 예정 |
+| Grothendieck 상수 witness | @lavaskiller | hill 결과 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80; 알려진 구성(CHSH형 2x2 witness)이며 새 수학으로 주장하지 않음 | 공동 1위 (9계정 중 7계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/grothendieck-lavaskiller`](entries/hills/grothendieck-lavaskiller/) — 해, 서명된 보고서, 기록, 코드 |
 | Busy Beaver 6 인증서 | @n0rang2 | hill 결과 | steps 249,881, ones 554, tape_span 735; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (12계정 중 3계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) — 담당 팀원이 파일 추가 예정 |
 | K4 Ramsey 다중도 | @hl728 | hill 결과 | reference_beaten 1, density_ppt 30,141,921,123 (최종 보드); reference_beaten 1, density_ppt 30,141,720,946 (검증 보드) | 최종 모드 순위표의 유일한 기록(1명); 12계정 중 5위 (검증 보드) | hill 평가기(Python), Lean 산출물 없음 | [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) — 담당 팀원이 파일 추가 예정 |
 | K4 Ramsey 다중도 | @n0rang2 | hill 결과 | reference_beaten 1, density_ppt 30,142,185,839 | 12계정 중 8위 | hill 평가기(Python), Lean 산출물 없음 | [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) — 담당 팀원이 파일 추가 예정 |
 <!-- RESULTS:END -->
 
-두 표는 `entries/*/ENTRY.yaml`의 `readme:` 블록과 순위표 조회 원본에서 [`tools/make_results_table.py`](tools/make_results_table.py)가 만듭니다. 손으로 고치지 않습니다. hill 결과는 hill 평가기가 준 점수이고 Lean 산출물이 없습니다. 공동 1위인 두 결과는 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않습니다.
+두 표는 `entries/*/ENTRY.yaml`의 `readme:` 블록과 순위표 조회 원본에서 [`tools/make_results_table.py`](tools/make_results_table.py)가 만듭니다. 손으로 고치지 않습니다. hill 결과는 hill 평가기가 준 점수이고 Lean 산출물이 없습니다. 공동 1위인 결과들은 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않습니다. Kobon n = 39 결과는 그 보드의 선두이며, 알려진 최고값을 넘었는지는 AI의 문헌 검색으로만 확인했습니다.
 
 ### 대회 hill과 팀 순위
 
@@ -71,10 +73,10 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 | hill (보드) | 계정 수 | 선두 기록 | 팀 순위 | 선두와 동률? | 파일 |
 |---|---:|---|---|---|---|
 | Kobon 삼각형 (n = 18) | 15 | triangles 93 (12계정 동률) | 공동 1위 (15계정 중 12계정 동률) — @thomasoh0408 | 예: @thomasoh0408 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) |
-| Kobon 삼각형 (n = 39) | 2 | triangles 470 | — | — | — |
+| Kobon 삼각형 (n = 39) | 3 | triangles 471 | 3계정 중 1위 — @lavaskiller | 단독 선두: @lavaskiller | [`hills/kobon-n39-lavaskiller`](entries/hills/kobon-n39-lavaskiller/) |
 | K4 Ramsey 다중도 | 12 | reference_beaten 1, density_ppt 30,139,933,996 | 12계정 중 1위 — @lavaskiller<br/>12계정 중 5위 — @hl728<br/>12계정 중 8위 — @n0rang2<br/>최종 모드 순위표의 유일한 기록(1명) — @hl728 | 단독 선두: @lavaskiller | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) · [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) · [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) |
 | 3x3 행렬곱 텐서 | 10 | rank 23, support 138 | — | — | — |
-| Grothendieck 상수 witness | 8 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80 (6계정 동률) | — | — | — |
+| Grothendieck 상수 witness | 9 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80 (7계정 동률) | 공동 1위 (9계정 중 7계정 동률) — @lavaskiller | 예: @lavaskiller | [`hills/grothendieck-lavaskiller`](entries/hills/grothendieck-lavaskiller/) |
 | Collatz modular descent | 7 | coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 3 (2계정 동률) | — | — | — |
 | Busy Beaver 6 인증서 | 12 | steps 249,881, ones 554, tape_span 735 (3계정 동률) | 공동 1위 (12계정 중 3계정 동률) — @n0rang2 | 예: @n0rang2 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) |
 | Erdős 3 | 0 | 보드에 기록 없음 | — | — | — |
@@ -98,7 +100,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 ## 항목
 
-- **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `1ab2354d` 통과(`reference_beaten = 1`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-02T11:38:08Z)는 `passed: true`, `official: true`; 검증 보드 12계정 중 1위(위 표). 최종 모드(held-out) 평가는 아직 없음. 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님.
+- **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `1ab2354d` 통과(`reference_beaten = 1`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-02T11:38:08Z)는 `passed: true`, `official: true`; 검증 보드 12계정 중 1위(위 표). 최종 모드(held-out) 평가는 없음(같은 해를 최종 모드로 평가하려던 실험 `217d0ba2`는 hill이 명령줄에서 "final" 매개변수를 받지 않아 실패). 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님.
 - **2 · [`dms-star6`](entries/dms-star6/)** — **추측은 증명하지 못했습니다.** 무한 족(flower·Goldberg snark, GP(n,k) k ≤ 15, Möbius 사다리)의 5색, 14꼭짓점 이하 bridgeless 3정칙 다중그래프의 6색, 동치 [`dms_iff_cubic16`](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174), 조건부 환원 사슬. 한계: 환원 사슬의 가설은 모두 미해결.
 - **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
 - **4 · `erdos-1038`** — 팀원이 보고한 에르되시 문제 #1038의 완전한 Lean 풀이(Lean 4.34.1). 폴더와 검증 기록은 담당 팀원이 추가합니다. 추가 방법은 [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md)(요약)와 [CONTRIBUTING.md](CONTRIBUTING.md), 추가한 뒤 [`entries/PENDING.yaml`](entries/PENDING.yaml)의 행을 지우고 표를 다시 만듭니다.

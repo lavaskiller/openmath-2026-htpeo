@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-label="Ramsey validation board: improvement over the hill reference per account" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-<text x="0.0" y="16.0" font-size="15" text-anchor="start" fill="#f0f6fc" font-weight="600">K4 Ramsey multiplicity hill, validation board (read 2026-10-02T16:23Z)</text>
+<text x="0.0" y="16.0" font-size="15" text-anchor="start" fill="#f0f6fc" font-weight="600">K4 Ramsey multiplicity hill, validation board (read 2026-10-02T18:04Z)</text>
 <text x="0.0" y="34.0" font-size="12" text-anchor="start" fill="#c3c2b7">improvement over the hill reference: 30,142,273,432 minus the account's density_ppt (larger is better)</text>
 <text x="438.9" y="54.0" font-size="11" text-anchor="middle" fill="#c3c2b7">reference</text>
 <text x="138.0" y="77.0" font-size="12" text-anchor="end" fill="#f0f6fc" font-weight="600">#1 lavaskiller</text>
@@ -9,8 +9,8 @@
 <rect x="438.93" y="91.00" width="135.17" height="16.00" fill="#6e7681" rx="3"/>
 <text x="580.1" y="103.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,848,405</text>
 <text x="138.0" y="129.0" font-size="12" text-anchor="end" fill="#f0f6fc">#3 a-hamdi</text>
-<rect x="438.93" y="117.00" width="99.72" height="16.00" fill="#6e7681" rx="3"/>
-<text x="544.6" y="129.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,363,703</text>
+<rect x="438.93" y="117.00" width="103.26" height="16.00" fill="#6e7681" rx="3"/>
+<text x="548.2" y="129.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,412,032</text>
 <text x="138.0" y="155.0" font-size="12" text-anchor="end" fill="#f0f6fc">#4 rachtsy</text>
 <rect x="438.93" y="143.00" width="98.07" height="16.00" fill="#6e7681" rx="3"/>
 <text x="543.0" y="155.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,341,124</text>

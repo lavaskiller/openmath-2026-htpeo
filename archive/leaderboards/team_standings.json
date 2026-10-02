@@ -61,6 +61,19 @@
   "timestamp": "2026-09-29T14:09:44Z"
  },
  {
+  "hill": "grothendieck-constant-witnesses",
+  "mode": "validation",
+  "owner": "lavaskiller",
+  "rank": 4,
+  "of": 9,
+  "metrics": {
+   "gap_ppm": 1414213,
+   "matrix_area": 4,
+   "certificate_bits": 80
+  },
+  "timestamp": "2026-10-02T17:31:54Z"
+ },
+ {
   "hill": "kobon-triangles",
   "mode": "validation",
   "owner": "thomasoh0408",
@@ -70,5 +83,16 @@
    "triangles": 93
   },
   "timestamp": "2026-09-28T02:15:21Z"
+ },
+ {
+  "hill": "kobon-triangles",
+  "mode": "validation",
+  "owner": "lavaskiller",
+  "rank": 1,
+  "of": 3,
+  "metrics": {
+   "triangles": 471
+  },
+  "timestamp": "2026-10-02T17:58:19Z"
  }
 ]
