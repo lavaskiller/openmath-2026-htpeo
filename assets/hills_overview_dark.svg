@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 616" width="720" height="616" role="img" aria-label="Competition hills: accounts per board in rank order, ties grouped, team members highlighted" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="0.0" y="16.0" font-size="15" text-anchor="start" fill="#f0f6fc" font-weight="600">Competition hills and team standings (read 2026-10-02T16:23Z)</text>
+<text x="0.0" y="34.0" font-size="12" text-anchor="start" fill="#c3c2b7">validation boards, best result per account; ranks can change until the deadline</text>
+<text x="0.0" y="49.0" font-size="12" text-anchor="start" fill="#c3c2b7">ties share a rank: the platform lists accounts with identical metrics alphabetically</text>
+<circle cx="6.0" cy="68.0" r="5.0" fill="#6e7681"/>
+<text x="16.0" y="72.0" font-size="12" text-anchor="start" fill="#c3c2b7">account</text>
+<circle cx="88.0" cy="68.0" r="7.0" fill="#3987e5"/>
+<text x="100.0" y="72.0" font-size="12" text-anchor="start" fill="#c3c2b7">team member</text>
+<rect x="191.96" y="60.00" width="34.00" height="16.00" fill="#21262d" rx="8"/>
+<circle cx="202.0" cy="68.0" r="5.0" fill="#6e7681"/>
+<circle cx="216.0" cy="68.0" r="5.0" fill="#6e7681"/>
+<text x="232.0" y="72.0" font-size="12" text-anchor="start" fill="#c3c2b7">tied: identical metrics</text>
+<path d="M410.5 62.0 L416.5 68.0 L410.5 74.0 L404.5 68.0 Z" fill="#6e7681"/>
+<text x="421.5" y="72.0" font-size="12" text-anchor="start" fill="#c3c2b7">final (held-out) board</text>
+<text x="0.0" y="120.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Kobon triangles</text>
+<text x="0.0" y="136.0" font-size="11" text-anchor="start" fill="#c3c2b7">board n = 18</text>
+<rect x="222.00" y="105.00" width="262.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="353.0" y="101.0" font-size="10" text-anchor="middle" fill="#c3c2b7">12 tied</text>
+<circle cx="232.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="298.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="342.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="386.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="408.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="430.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="452.0" cy="116.0" r="7.0" fill="#3987e5"/>
+<text x="445.0" y="140.0" font-size="11" text-anchor="start" fill="#f0f6fc" font-weight="600">T1 thomasoh0408</text>
+<circle cx="474.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="496.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="518.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<circle cx="540.0" cy="116.0" r="5.0" fill="#6e7681"/>
+<text x="562.0" y="120.0" font-size="11" text-anchor="start" fill="#c3c2b7">15 accounts</text>
+<line x1="0.0" y1="152.0" x2="720.0" y2="152.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="184.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Kobon triangles</text>
+<text x="0.0" y="200.0" font-size="11" text-anchor="start" fill="#c3c2b7">board n = 39</text>
+<circle cx="232.0" cy="180.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="180.0" r="5.0" fill="#6e7681"/>
+<text x="276.0" y="184.0" font-size="11" text-anchor="start" fill="#c3c2b7">2 accounts</text>
+<line x1="0.0" y1="216.0" x2="720.0" y2="216.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="248.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">K4 Ramsey multiplicity</text>
+<circle cx="232.0" cy="244.0" r="7.0" fill="#3987e5"/>
+<text x="225.0" y="268.0" font-size="11" text-anchor="start" fill="#f0f6fc" font-weight="600">#1 lavaskiller</text>
+<circle cx="254.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="298.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="244.0" r="7.0" fill="#3987e5"/>
+<text x="313.0" y="281.0" font-size="11" text-anchor="start" fill="#f0f6fc" font-weight="600">#5 hl728</text>
+<circle cx="342.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="386.0" cy="244.0" r="7.0" fill="#3987e5"/>
+<text x="379.0" y="268.0" font-size="11" text-anchor="start" fill="#f0f6fc" font-weight="600">#8 n0rang2</text>
+<circle cx="408.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="430.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="452.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<circle cx="474.0" cy="244.0" r="5.0" fill="#6e7681"/>
+<text x="496.0" y="248.0" font-size="11" text-anchor="start" fill="#c3c2b7">12 accounts</text>
+<path d="M585.8 238.5 L591.3 244.0 L585.8 249.5 L580.3 244.0 Z" fill="#6e7681"/>
+<text x="720.0" y="268.0" font-size="11" text-anchor="end" fill="#f0f6fc" font-weight="600">final board, only entry (1 account): hl728</text>
+<line x1="0.0" y1="280.0" x2="720.0" y2="280.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="312.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">3x3 matrix-multiplication tensor</text>
+<rect x="244.00" y="297.00" width="130.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="309.0" y="293.0" font-size="10" text-anchor="middle" fill="#c3c2b7">6 tied</text>
+<rect x="376.00" y="297.00" width="64.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="408.0" y="293.0" font-size="10" text-anchor="middle" fill="#c3c2b7">3 tied</text>
+<circle cx="232.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="298.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="342.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="386.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="408.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<circle cx="430.0" cy="308.0" r="5.0" fill="#6e7681"/>
+<text x="452.0" y="312.0" font-size="11" text-anchor="start" fill="#c3c2b7">10 accounts</text>
+<line x1="0.0" y1="344.0" x2="720.0" y2="344.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="376.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Grothendieck constant witnesses</text>
+<rect x="222.00" y="361.00" width="130.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="287.0" y="357.0" font-size="10" text-anchor="middle" fill="#c3c2b7">6 tied</text>
+<rect x="354.00" y="361.00" width="42.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="375.0" y="357.0" font-size="10" text-anchor="middle" fill="#c3c2b7">2 tied</text>
+<circle cx="232.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="298.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="342.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<circle cx="386.0" cy="372.0" r="5.0" fill="#6e7681"/>
+<text x="408.0" y="376.0" font-size="11" text-anchor="start" fill="#c3c2b7">8 accounts</text>
+<line x1="0.0" y1="408.0" x2="720.0" y2="408.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="440.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Collatz modular descent</text>
+<rect x="222.00" y="425.00" width="42.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="243.0" y="421.0" font-size="10" text-anchor="middle" fill="#c3c2b7">2 tied</text>
+<circle cx="232.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="298.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="342.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="436.0" r="5.0" fill="#6e7681"/>
+<text x="386.0" y="440.0" font-size="11" text-anchor="start" fill="#c3c2b7">7 accounts</text>
+<line x1="0.0" y1="472.0" x2="720.0" y2="472.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="504.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Busy Beaver 6 certificates</text>
+<rect x="222.00" y="489.00" width="64.00" height="22.00" fill="#21262d" rx="11"/>
+<text x="254.0" y="485.0" font-size="10" text-anchor="middle" fill="#c3c2b7">3 tied</text>
+<circle cx="232.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="254.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="276.0" cy="500.0" r="7.0" fill="#3987e5"/>
+<text x="269.0" y="524.0" font-size="11" text-anchor="start" fill="#f0f6fc" font-weight="600">T1 n0rang2</text>
+<circle cx="298.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="320.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="342.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="364.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="386.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="408.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="430.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="452.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<circle cx="474.0" cy="500.0" r="5.0" fill="#6e7681"/>
+<text x="496.0" y="504.0" font-size="11" text-anchor="start" fill="#c3c2b7">12 accounts</text>
+<path d="M585.8 494.5 L591.3 500.0 L585.8 505.5 L580.3 500.0 Z" fill="#6e7681"/>
+<text x="601.8" y="504.0" font-size="11" text-anchor="start" fill="#c3c2b7">1 on final board</text>
+<line x1="0.0" y1="536.0" x2="720.0" y2="536.0" stroke="#30363d" stroke-width="1"/>
+<text x="0.0" y="568.0" font-size="13" text-anchor="start" fill="#f0f6fc" font-weight="600">Erdős 3</text>
+<text x="232.0" y="568.0" font-size="12" text-anchor="start" fill="#c3c2b7">no entries on the board in this snapshot</text>
+</svg>

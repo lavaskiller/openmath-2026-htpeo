@@ -12,9 +12,9 @@ After filling in, replace the placeholder line under your avatar in `README.md` 
 | Field | Value |
 |---|---|
 | GitHub | [@lavaskiller](https://github.com/lavaskiller) |
-| Name | ____ |
-| Affiliation | ____ |
-| E-mail | ____ |
+| Name | Woohyuk Kang |
+| Affiliation | HTPeo, KyungHee Univ. |
+| E-mail | woohyuk@khu.ac.kr |
 | Entries worked on | ____ (`ramsey-k4-multiplicity` / `dms-star6` / `erdos-m2-formalizations` / `erdos-1038` / hills) |
 | Role / contribution | ____ |
 | Human review done | packet ____ , sections ____ , date ____ |
@@ -25,7 +25,7 @@ After filling in, replace the placeholder line under your avatar in `README.md` 
 Already known:
 
 - AutoLab account `lavaskiller` (owner of the Ramsey project `clique-cluster-ramsey-multiplicity-attempt-16`)
-- K4 Ramsey multiplicity hill: rank 1 of 12 (validation), 30,139,933,996 ppt, 2026-10-02
+- K4 Ramsey multiplicity hill: 1st of 12 (validation board, no ties), 30,139,933,996 ppt, 2026-10-02
 - Commit author of this repository
 
 ## @hl728
@@ -47,7 +47,7 @@ Already known:
 
 Already known:
 
-- K4 Ramsey multiplicity hill: rank 1 of 1 on the final (held-out) board, 30,141,921,123 ppt, 2026-09-29
+- K4 Ramsey multiplicity hill: only entry on the final (held-out) board (1 account), 30,141,921,123 ppt, 2026-09-29
 - K4 Ramsey multiplicity hill: rank 5 of 12 (validation), 30,141,720,946 ppt, 2026-09-30
 - To upload: your hill files in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) (checklist inside)
 
@@ -70,7 +70,7 @@ Already known:
 
 Already known:
 
-- Busy Beaver 6 certificates hill: rank 3 of 12 (validation), 249,881 steps, 2026-09-28
+- Busy Beaver 6 certificates hill: tied for 1st, 3 of 12 accounts (validation; the platform lists tied accounts alphabetically), 249,881 steps; reproduces the board's best value; not claimed as new mathematics, 2026-09-28
 - K4 Ramsey multiplicity hill: rank 8 of 12 (validation), 30,142,185,839 ppt, 2026-09-30
 - To upload: your hill files in [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) (checklist inside)
 - To upload: your hill files in [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) (checklist inside)
@@ -94,7 +94,7 @@ Already known:
 
 Already known:
 
-- Kobon triangles hill: rank 11 of 15 (validation), 93 triangles, 2026-09-28
+- Kobon triangles hill: tied for 1st, 12 of 15 accounts (validation, board n = 18; the platform lists tied accounts alphabetically), 93 triangles; reproduces the board's best value; not claimed as new mathematics, 2026-09-28
 - GitHub id confirmed by the team (2026-10-03)
 - To upload: your hill files in [`entries/hills/kobon-triangles-thomasoh0408/`](entries/hills/kobon-triangles-thomasoh0408/) (checklist inside)
 

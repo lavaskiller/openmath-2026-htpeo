@@ -83,6 +83,7 @@ readme:                          # one-line summary for the README results table
   problem: "K4 Ramsey multiplicity constant c_4 (upper bound)"
   problem_ko: "K4 Ramsey 다중도 상수 c_4 (상계)"
   kind: "new result"
+  hill: "clique-cluster-ramsey-multiplicity|lavaskiller"   # leaderboard file stem | account, for the Standing column
   result: "c_4 ≤ 0.030139933996 (hill metric `density_ppt` 30,139,933,996). Previous best: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, the hill reference."
   result_ko: "c_4 ≤ 0.030139933996 (hill 지표 `density_ppt` 30,139,933,996). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값."
   verification: "Lean 4.33.1, standard axioms, per-module build; hill experiment passed"

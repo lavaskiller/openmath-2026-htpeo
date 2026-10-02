@@ -15,10 +15,12 @@ and formalizations of known results on Erdős problems — with an archive of wh
 <p align="center">
 <a href="#the-competition">Competition</a> ·
 <a href="#results-at-a-glance">Results</a> ·
+<a href="#competition-hills-and-team-standings">Hills</a> ·
 <a href="#verification-scope">Verification scope</a> ·
 <a href="#how-to-verify">How to verify</a> ·
 <a href="#resources-used">Resources</a> ·
 <a href="#team">Team</a> ·
+<a href="CONTRIBUTING.md">Contributing</a> ·
 <a href="archive/">Archive</a> ·
 <a href="README.ko.md">한국어</a>
 </p>
@@ -34,16 +36,67 @@ and formalizations of known results on Erdős problems — with an archive of wh
 
 ## Results at a glance
 
+Everything the team has, in one place: the Lean-checked entries first, then the results team members hold on the competition hills. Hill standings are from the AutoLab leaderboards as read at 2026-10-02T16:23Z (2026-10-03 01:23 KST); they are a snapshot and can change until the deadline. A rank is always given with the size of its board, and accounts with identical metrics share a rank.
+
 <!-- RESULTS:START -->
-| Entry | Problem | Kind | Result | Verification | Links |
-|---|---|---|---|---|---|
-| [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey multiplicity constant c_4 (upper bound) | new result | c_4 ≤ 0.030139933996 (hill metric `density_ppt` 30,139,933,996). Previous best: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, the hill reference. | Lean 4.33.1, standard axioms, per-module build; hill experiment passed | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json) |
-| [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal conjecture: star chromatic index ≤ 6 for subcubic graphs (open; best published bound 7) | partial results | Conjecture not proved. Proved: 5 colours for flower and Goldberg snarks, GP(n,k) with k ≤ 15, Möbius ladders; 6 colours for all bridgeless cubic multigraphs on ≤ 14 vertices; the equivalence `dms_iff_cubic16`; a reduction to named open hypotheses. | Lean 4.33.1, standard axioms; `lake build` (pack3), per-module (pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
-| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | Known results attached to 12 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs | formalization of known results | 13 families, 19 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet. | Lean 4.33.1, standard axioms, one file at a time; statements identical to the pinned formal-conjectures commit | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
-| `erdos-1038` | Erdős problem #1038 | reported by its owner | Complete Lean solution reported by a team member; not yet in this repository. | Lean 4.34.1 (as reported; not re-checked here) | to be added by its owner |
+**Lean-checked entries**
+
+| Entry | Problem | Kind | Result | Standing | Verification | Links |
+|---|---|---|---|---|---|---|
+| [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey multiplicity constant c_4 (upper bound) | new result | c_4 ≤ 0.030139933996 (hill metric `density_ppt` 30,139,933,996). Previous best: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, the hill reference. | 1st of 12, alone, on the validation board | Lean 4.33.1, standard axioms, per-module build; hill experiment passed | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json) |
+| [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal conjecture: star chromatic index ≤ 6 for subcubic graphs (open; best published bound 7) | partial results | Conjecture not proved. Proved: 5 colours for flower and Goldberg snarks, GP(n,k) with k ≤ 15, Möbius ladders; 6 colours for all bridgeless cubic multigraphs on ≤ 14 vertices; the equivalence `dms_iff_cubic16`; a reduction to named open hypotheses. | — | Lean 4.33.1, standard axioms; `lake build` (pack3), per-module (pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
+| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | Known results attached to 12 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs | formalization of known results | 13 families, 19 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet. | — | Lean 4.33.1, standard axioms, one file at a time; statements identical to the pinned formal-conjectures commit | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
+| `erdos-1038` | Erdős problem #1038 | reported by its owner | Complete Lean solution reported by a team member; not yet in this repository. | — | Lean 4.34.1 (as reported; not re-checked here) | to be added by its owner |
+
+**Hill results by team members** (best result per account on the AutoLab boards; ranks computed with ties sharing a rank)
+
+| Hill (board) | Member | Kind | Result | Standing | Verification | Files |
+|---|---|---|---|---|---|---|
+| Kobon triangles (n = 18) | @thomasoh0408 | hill result | triangles 93; reproduces the board's best value; not claimed as new mathematics | tied for 1st, 12 of 15 accounts | hill evaluator (Python), no Lean artifact | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) — files to be added by its owner |
+| Busy Beaver 6 certificates | @n0rang2 | hill result | steps 249,881, ones 554, tape_span 735; reproduces the board's best value; not claimed as new mathematics | tied for 1st, 3 of 12 accounts | hill evaluator (Python), no Lean artifact | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) — files to be added by its owner |
+| K4 Ramsey multiplicity | @hl728 | hill result | reference_beaten 1, density_ppt 30,141,921,123 (final board); reference_beaten 1, density_ppt 30,141,720,946 (validation board) | only entry on the final (held-out) board (1 account); 5th of 12 on the validation board | hill evaluator (Python), no Lean artifact | [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) — files to be added by its owner |
+| K4 Ramsey multiplicity | @n0rang2 | hill result | reference_beaten 1, density_ppt 30,142,185,839 | 8th of 12 | hill evaluator (Python), no Lean artifact | [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) — files to be added by its owner |
 <!-- RESULTS:END -->
 
-The table is generated from `entries/*/ENTRY.yaml` by [`tools/make_results_table.py`](tools/make_results_table.py). "Kind" uses a fixed vocabulary: *new result*, *partial results*, *formalization of known results*.
+Both tables are generated by [`tools/make_results_table.py`](tools/make_results_table.py) from `entries/*/ENTRY.yaml` and the leaderboard snapshot. "Kind" uses a fixed vocabulary: *new result*, *partial results*, *formalization of known results*, *hill result*. A hill result is a score given by the hill's evaluator; it comes with no Lean artifact, and the two results tied for 1st reproduce the best value on their board and are not claimed as new mathematics.
+
+### Competition hills and team standings
+
+One row per board of the seven hills on the organisers' list, accounts in rank order. The platform lists accounts with identical metrics alphabetically and numbers them consecutively; here they are drawn as one tied group that shares the rank.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hills_overview_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hills_overview_light.svg">
+  <img alt="Competition hills: accounts per board in rank order, ties grouped, team members highlighted" src="assets/hills_overview_light.svg" width="720">
+</picture>
+
+On the K4 Ramsey hill there are no ties: the entry of this repository leads the validation board by 491,031 ppt over the second account.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ramsey_leaderboard_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/ramsey_leaderboard_light.svg">
+  <img alt="Ramsey validation board: improvement over the hill reference per account" src="assets/ramsey_leaderboard_light.svg" width="720">
+</picture>
+
+<details>
+<summary>All boards as a table</summary>
+
+<!-- HILLS:START -->
+| Hill (board) | Accounts | Leader's result | Team standing | Tied with the leader? | Files |
+|---|---:|---|---|---|---|
+| Kobon triangles (n = 18) | 15 | triangles 93 (12 accounts tied) | tied for 1st, 12 of 15 accounts — @thomasoh0408 | yes: @thomasoh0408 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) |
+| Kobon triangles (n = 39) | 2 | triangles 470 | — | — | — |
+| K4 Ramsey multiplicity | 12 | reference_beaten 1, density_ppt 30,139,933,996 | 1st of 12 — @lavaskiller<br/>5th of 12 — @hl728<br/>8th of 12 — @n0rang2<br/>only entry on the final (held-out) board (1 account) — @hl728 | sole leader: @lavaskiller | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) · [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) · [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) |
+| 3x3 matrix-multiplication tensor | 10 | rank 23, support 138 | — | — | — |
+| Grothendieck constant witnesses | 8 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80 (6 accounts tied) | — | — | — |
+| Collatz modular descent | 7 | coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 3 (2 accounts tied) | — | — | — |
+| Busy Beaver 6 certificates | 12 | steps 249,881, ones 554, tape_span 735 (3 accounts tied) | tied for 1st, 3 of 12 accounts — @n0rang2 | yes: @n0rang2 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) |
+| Erdős 3 | 0 | no entries on the board | — | — | — |
+<!-- HILLS:END -->
+
+</details>
+
+Raw leaderboard responses: [`archive/leaderboards/`](archive/leaderboards/); figures and ranks: [`tools/make_leaderboard_charts.py`](tools/make_leaderboard_charts.py) ([computed ranks](assets/leaderboard_data.json)). Owners of hill results add their solution and signed report in their folder under [`entries/hills/`](entries/hills/); each folder has a checklist.
 
 ## Verification scope
 
@@ -70,7 +123,7 @@ theorem ramseyMultK4_limit_lt_ref :
 ```
 
 - Files: [`Final.lean`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean) (headline theorems), [`Main.lean`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Main.lean) (`sol_density`, `sol_ppt`), [`solution.json`](entries/ramsey-k4-multiplicity/artifact/solution.json), [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json), [packet](entries/ramsey-k4-multiplicity/PACKET.md), [notes](entries/ramsey-k4-multiplicity/NOTES.md).
-- Standing: the signed official hill report for experiment `1ab2354d` (2026-10-02T11:38:08Z) has `passed: true`, `official: true`, `density_ppt` 30,139,933,996, `reference_beaten = 1`. Hill leaderboard (validation mode, best per user) as read from the AutoLab API at 2026-10-02T16:18:50Z (2026-10-03 01:18 KST): **rank 1 of 12**; rank 2 is 30,140,425,027 (491,031 ppt behind), rank 3 is 30,140,909,729. Raw snapshot: [`leaderboard_2026-10-02T161850Z.json`](entries/ramsey-k4-multiplicity/leaderboard/leaderboard_2026-10-02T161850Z.json). The hill also has a final-mode ("held-out test set") board; this entry has no final-mode evaluation yet (its report is `final: false`). The ranking may change before the deadline.
+- Standing: the signed official hill report for experiment `1ab2354d` (2026-10-02T11:38:08Z) has `passed: true`, `official: true`, `density_ppt` 30,139,933,996, `reference_beaten = 1`; on the validation board it is 1st of 12 in the snapshot ([above](#competition-hills-and-team-standings)). It has no final-mode (held-out) evaluation yet: its report is `final: false`.
 - Limitation: an upper bound only, c_4 is not determined; the search is randomised, so the template itself is the certificate.
 
 ### 2 · Dvořák–Mohar–Šámal conjecture — `dms-star6`
@@ -115,17 +168,6 @@ theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDeg
 
 A complete Lean solution (Lean 4.34.1) reported by a team member. Its folder, statement and verification notes will be added by its owner; nothing about it has been re-checked in this repository.
 
-## Hill results by team members
-
-Besides the entries above, team members hold these results on the competition hills (leaderboard read 2026-10-02T16:23Z (2026-10-03 01:23 KST)). Their files are placeholders to be filled in by each owner: [`entries/hills/`](entries/hills/).
-
-| Owner | Hill | Rank | Result | Files |
-|---|---|---|---|---|
-| @hl728 | K4 Ramsey multiplicity | 1 of 1 (final); 5 of 12 (validation) | 30,141,921,123 ppt (final, 2026-09-29); 30,141,720,946 ppt (validation, 2026-09-30) | [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) — to be added by its owner |
-| @n0rang2 | K4 Ramsey multiplicity | 8 of 12 | 30,142,185,839 ppt (2026-09-30) | [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) — to be added by its owner |
-| @n0rang2 | Busy Beaver 6 certificates | 3 of 12 | 249,881 steps, 554 ones, tape span 735 — same values as rank 1 (2026-09-28) | [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) — to be added by its owner |
-| @thomasoh0408 | Kobon triangles | 11 of 15 | 93 triangles — same value as rank 1 (2026-09-28) | [`entries/hills/kobon-triangles-thomasoh0408/`](entries/hills/kobon-triangles-thomasoh0408/) — to be added by its owner |
-
 ## How to verify
 
 There is no Lean project at the repository root; each entry has its own. Exact commands, expected output, time and memory are in each artifact's README. Build products are not stored; `sha256sum -c SHA256SUMS` in each `artifact/` checks the files.
@@ -157,7 +199,7 @@ Details: [Ramsey README](entries/ramsey-k4-multiplicity/artifact/README.md) · [
 ```
 README.md / README.ko.md   <- this page, English and Korean
 TEAM.md                    <- roster, human-review record, release sign-off
-CONTRIBUTING.md            <- how to add an entry (Korean)
+CONTRIBUTING.md            <- contribution guidelines (Korean summary: CONTRIBUTING.ko.md)
 CITATION.cff
 entries/
   <entry>/ENTRY.yaml       <- machine-readable summary: claims, toolchain, axioms, limitations
@@ -166,13 +208,15 @@ entries/
   <entry>/STATS.yaml       <- resources used by this entry
   <entry>/NOTES.md         <- what worked and what did not
   PENDING.yaml             <- entries announced but not yet added
+  hills/<hill>-<id>/       <- hill results of team members (files added by each owner)
 archive/
   REPORT.md                <- team report: results and findings (Korean)
   timeline.md              <- dated log with sources
   findings/                <- topic notes, including failed approaches
   stats/                   <- raw usage numbers and SUMMARY.md
-assets/                    <- charts of this page (generated)
-tools/                     <- checksum, usage-summing, table and chart scripts (Python standard library)
+  leaderboards/            <- raw leaderboard snapshot, one file per hill
+assets/                    <- figures of this page (generated)
+tools/                     <- checksum, usage-summing, table, chart and leaderboard scripts (Python standard library)
 ```
 
 ## Resources used
@@ -262,7 +306,7 @@ Team **HTPeo** (team entrant).
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ.</sub><br/><sub><i>role — to fill in</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
@@ -271,18 +315,7 @@ Team **HTPeo** (team entrant).
 
 Each member fills in their own block in [TEAM.md](TEAM.md) (name, affiliation, e-mail, what they did, what they reviewed); the line under each avatar is then replaced by that member's role.
 
-### Hill standings of team members
-
-Read from the AutoLab leaderboard API at 2026-10-02T16:23Z (2026-10-03 01:23 KST); best result per account; ranks can change until the deadline. Raw responses: [`archive/leaderboards/`](archive/leaderboards/).
-
-| Member | Hill | Mode | Rank | Result | Recorded (UTC) |
-|---|---|---|---:|---|---|
-| @lavaskiller | K4 Ramsey multiplicity | validation | 1 of 12 | density 30,139,933,996 ppt | 2026-10-02 11:38 |
-| @hl728 | K4 Ramsey multiplicity | final (held-out) | 1 of 1 | density 30,141,921,123 ppt | 2026-09-29 14:09 |
-| @hl728 | K4 Ramsey multiplicity | validation | 5 of 12 | density 30,141,720,946 ppt | 2026-09-30 08:14 |
-| @n0rang2 | K4 Ramsey multiplicity | validation | 8 of 12 | density 30,142,185,839 ppt | 2026-09-30 08:15 |
-| @n0rang2 | Busy Beaver 6 certificates | validation | 3 of 12 | 249,881 steps (same value as rank 1) | 2026-09-28 15:54 |
-| @thomasoh0408 | Kobon triangles | validation | 11 of 15 | 93 triangles (same value as rank 1) | 2026-09-28 02:15 |
+Hill standings of the members are in [Results at a glance](#results-at-a-glance).
 
 **AI use.** Most proofs, search code and packet text were produced by AI systems steered by the team: Claude models (Anthropic; `claude-opus-5-5`, `claude-sonnet-5`, `claude-fable-5-1`) as harness workers, verifiers and Claude Code sessions, and GPT models (OpenAI; `gpt-6-sol`, `gpt-5.6-sol`) through the codex CLI for proofs against statements fixed beforehand and for cross-check audits. Roles per entry are in each `ENTRY.yaml` under `ai_and_tools`; usage is in [Resources used](#resources-used).
 

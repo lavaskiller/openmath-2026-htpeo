@@ -7,7 +7,7 @@
 
   | Name | Affiliation | E-mail | Role / contribution |
   |---|---|---|---|
-  | | | | |
+  | Woohyuk Kang | HTPeo, KyungHee Univ. | woohyuk@khu.ac.kr | |
   | | | | |
   | | | | |
 

@@ -6,7 +6,9 @@
 Blocks rewritten (text between the marker comments is replaced, everything else is left alone):
 
   <!-- RESULTS:START --> ... <!-- RESULTS:END -->      one row per entries/*/ENTRY.yaml that has a `readme:` block,
-                                                       plus the rows of entries/PENDING.yaml
+                                                       plus the rows of entries/PENDING.yaml; then one row per
+                                                       team member on a hill board (archive/leaderboards/, ranks
+                                                       with ties computed by make_leaderboard_charts.py)
   <!-- RESOURCES:START --> ... <!-- RESOURCES:END -->  per-entry resource numbers from archive/stats/*.yaml and
                                                        entries/*/STATS.yaml (rows with `counted_in:` are copies
                                                        and are skipped, as in summarize_stats.py)
@@ -20,14 +22,80 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from summarize_stats import load, aslist  # noqa: E402  (tiny YAML reader of this repository)
+import make_leaderboard_charts as lb  # noqa: E402  (ranks with ties from archive/leaderboards/)
 
 KINDS = ("new result", "partial results", "formalization of known results", "reported by its owner")
 KIND_KO = {"new result": "새 결과", "partial results": "부분 결과",
            "formalization of known results": "알려진 결과의 형식화", "reported by its owner": "담당 팀원 보고"}
 HEAD = {
-    "en": ("Entry", "Problem", "Kind", "Result", "Verification", "Links"),
-    "ko": ("항목", "대상 문제", "종류", "결과", "검증", "링크"),
+    "en": ("Entry", "Problem", "Kind", "Result", "Standing", "Verification", "Links"),
+    "ko": ("항목", "대상 문제", "종류", "결과", "순위", "검증", "링크"),
 }
+HILL_HEAD = {
+    "en": ("Hill (board)", "Member", "Kind", "Result", "Standing", "Verification", "Files"),
+    "ko": ("hill (보드)", "팀원", "종류", "결과", "순위", "검증", "파일"),
+}
+SUB = {
+    "en": ("**Lean-checked entries**", "**Hill results by team members** (best result per account on the "
+           "AutoLab boards; ranks computed with ties sharing a rank)"),
+    "ko": ("**Lean으로 검증한 항목**", "**팀원의 hill 결과** (AutoLab 보드의 계정별 최고 기록; 동률은 같은 순위)"),
+}
+
+
+def entry_standing(root, spec, lang, boards):
+    if not spec:
+        return "—"
+    stem, owner = spec.split("|")
+    out = []
+    for b in boards:
+        if b["stem"] != stem:
+            continue
+        for r in b["rows"]:
+            if r["owner"] == owner:
+                out.append(lb.standing(r, len(b["rows"]), lang) +
+                           (" (검증 보드, 단독 선두)" if lang == "ko" else ", alone, on the validation board"))
+    if not out:
+        raise SystemExit("hill standing %r not found in archive/leaderboards/" % spec)
+    return "; ".join(out)
+
+
+def hill_rows(root, lang, boards):
+    ko = lang == "ko"
+    rows = []
+    for i, b in enumerate(boards):
+        owners = [r["owner"] for r in b["rows"] + b["final"] if r["owner"] in lb.TEAM]
+        for o in dict.fromkeys(owners):
+            full = lb.FULL_ENTRY.get(b["stem"])
+            if full and full[0] == o:
+                continue                      # shown as a Lean-checked entry
+            v = next((r for r in b["rows"] if r["owner"] == o), None)
+            f = next((r for r in b["final"] if r["owner"] == o), None)
+            res, st = [], []
+            if f:
+                res.append(lb.fmt_metrics(f, b["axes"]) + (" (최종 보드)" if ko else " (final board)"))
+                st.append(lb.standing(f, len(b["final"]), lang, final=True) if len(b["final"]) == 1 else
+                          lb.standing(f, len(b["final"]), lang) + (" (최종 보드)" if ko else " on the final (held-out) board"))
+            if v:
+                res.append(lb.fmt_metrics(v, b["axes"]) + ((" (검증 보드)" if ko else " (validation board)") if f else ""))
+                st.append(lb.standing(v, len(b["rows"]), lang) +
+                          ((" (검증 보드)" if ko else " on the validation board") if f else ""))
+            if v and v["rank"] == 1 and v["tied"] > 1:
+                res.append("보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음" if ko else
+                           "reproduces the board's best value; not claimed as new mathematics")
+            name = (b["name_ko"] if ko else b["name"]) + (" (%s)" % b["suffix"] if b["suffix"] else "")
+            folder = "entries/hills/%s-%s/" % (b["prefix"], o)
+            if not os.path.isdir(os.path.join(root, folder)):
+                raise SystemExit("missing folder for a hill result: " + folder)
+            files = ("[`hills/%s-%s`](%s) — " % (b["prefix"], o, folder)) + (
+                "담당 팀원이 파일 추가 예정" if ko else "files to be added by its owner")
+            best = min(r["rank"] for r in (v, f) if r)
+            rows.append(((0 if (v and v["rank"] == 1) else 1, best, i),
+                         (name, "@" + o, "hill 결과" if ko else "hill result", "; ".join(res), "; ".join(st),
+                          "hill 평가기(Python), Lean 산출물 없음" if ko else "hill evaluator (Python), no Lean artifact",
+                          files)))
+    rows.sort(key=lambda t: t[0])
+    return [t[1] for t in rows]
+
 RES_HEAD = {
     "en": ("Entry", "Output tokens", "Uncached input", "Cache tokens", "Sessions",
            "Recorded wall hours", "Lean lines", "Claimed theorems"),
@@ -39,7 +107,7 @@ def num(x):
     return x if isinstance(x, (int, float)) and not isinstance(x, bool) else None
 
 
-def results_rows(root, lang):
+def results_rows(root, lang, boards):
     rows = []
     sfx = "_ko" if lang == "ko" else ""
     for path in sorted(glob.glob(os.path.join(root, "entries", "*", "ENTRY.yaml"))):
@@ -62,13 +130,13 @@ def results_rows(root, lang):
             links.append("[%s](%s%s)" % (text, base, target))
         kind = KIND_KO[r["kind"]] if lang == "ko" else r["kind"]
         rows.append((r.get("order", 99), "[`%s`](%s)" % (eid, base), r.get("problem" + sfx) or r["problem"], kind,
-                     r.get("result" + sfx) or r["result"], r.get("verification" + sfx) or r["verification"],
-                     " · ".join(links)))
+                     r.get("result" + sfx) or r["result"], entry_standing(root, r.get("hill"), lang, boards),
+                     r.get("verification" + sfx) or r["verification"], " · ".join(links)))
     pend = os.path.join(root, "entries", "PENDING.yaml")
     if os.path.exists(pend):
         for r in aslist(load(pend).get("pending")):
             rows.append((r.get("order", 99), "`%s`" % r["id"], r.get("problem" + sfx) or r["problem"],
-                         r.get("kind" + sfx) or r["kind"], r.get("result" + sfx) or r["result"],
+                         r.get("kind" + sfx) or r["kind"], r.get("result" + sfx) or r["result"], "—",
                          r.get("verification" + sfx) or r["verification"],
                          r.get("links_text" + sfx) or r["links_text"]))
     rows.sort(key=lambda t: t[0])
@@ -76,10 +144,16 @@ def results_rows(root, lang):
 
 
 def results_block(root, lang):
-    out = ["| " + " | ".join(HEAD[lang]) + " |", "|---|---|---|---|---|---|"]
-    for row in results_rows(root, lang):
-        out.append("| " + " | ".join(c.replace("|", "\\|") for c in row) + " |")
-    return "\n".join(out)
+    boards = lb.read_boards(root)
+
+    def line(row):
+        return "| " + " | ".join(c.replace("|", "&#124;") for c in row) + " |"
+
+    out = [SUB[lang][0], "", "| " + " | ".join(HEAD[lang]) + " |", "|---|---|---|---|---|---|---|"]
+    out += [line(row) for row in results_rows(root, lang, boards)]
+    out += ["", SUB[lang][1], "", "| " + " | ".join(HILL_HEAD[lang]) + " |", "|---|---|---|---|---|---|---|"]
+    out += [line(row) for row in hill_rows(root, lang, boards)]
+    return chr(10).join(out)
 
 
 def collect_usage(root):

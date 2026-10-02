@@ -9,7 +9,7 @@ Placeholder created from the leaderboard; **@hl728: please add the files and fil
 | Hill | `alejandrozu/clique-cluster-ramsey-multiplicity` (https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity) |
 | Account | `hl728` |
 | Mode | final (held-out) and validation |
-| Rank | 1 of 1 (final); 5 of 12 (validation) |
+| Standing | only entry on the final (held-out) board (1 account); 5th of 12 on the validation board |
 | Result | 30,141,921,123 ppt (final, 2026-09-29); 30,141,720,946 ppt (validation, 2026-09-30) |
 
 ## To add (checklist)

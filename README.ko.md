@@ -15,7 +15,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 <a href="archive/">아카이브</a>
 </p>
 
-심사자와 외부 독자를 위한 본문은 [README.md](README.md)(영어)입니다. 이 파일은 팀용 요약이고, 표 두 개는 같은 스크립트가 만듭니다.
+심사자와 외부 독자를 위한 본문은 [README.md](README.md)(영어)입니다. 이 파일은 팀용 요약이고, 표와 그림은 같은 스크립트가 만듭니다.
 
 ## 대회
 
@@ -26,16 +26,63 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 ## 한눈에 보는 결과
 
+팀이 가진 것 전부를 한곳에 모았습니다: 먼저 Lean으로 검증한 항목, 다음에 팀원이 대회 hill에서 가진 결과. hill 순위는 AutoLab 순위표를 2026-10-02T16:23Z (2026-10-03 01:23 KST)에 조회한 값이며 마감 전까지 바뀔 수 있습니다. 순위에는 항상 보드의 계정 수를 함께 적고, 지표가 같은 계정은 같은 순위입니다(플랫폼은 동률 계정을 알파벳 순으로 늘어놓고 번호를 차례로 매깁니다).
+
 <!-- RESULTS:START -->
-| 항목 | 대상 문제 | 종류 | 결과 | 검증 | 링크 |
-|---|---|---|---|---|---|
-| [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수 c_4 (상계) | 새 결과 | c_4 ≤ 0.030139933996 (hill 지표 `density_ppt` 30,139,933,996). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값. | Lean 4.33.1, 표준 공리, 모듈별 빌드; hill 실험 통과 | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json) |
-| [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측: subcubic 그래프의 star chromatic index ≤ 6 (미해결; 알려진 최선의 상계 7) | 부분 결과 | 추측 자체는 증명하지 못함. 증명한 것: flower·Goldberg snark, GP(n,k) (k ≤ 15), Möbius 사다리는 5색; 14꼭짓점 이하의 모든 bridgeless 3정칙 다중그래프는 6색; 동치 `dms_iff_cubic16`; 이름 붙인 미해결 가설들로의 환원. | Lean 4.33.1, 표준 공리; `lake build`(pack3), 모듈별 빌드(pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
-| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | 에르되시 문제 12개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭 | 알려진 결과의 형식화 | 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함. | Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일 | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
-| `erdos-1038` | 에르되시 문제 #1038 | 담당 팀원 보고 | 팀원이 완전한 Lean 풀이를 보고함. 아직 이 저장소에 없음. | Lean 4.34.1 (보고된 값, 여기서 재확인하지 않음) | 담당 팀원이 추가 예정 |
+**Lean으로 검증한 항목**
+
+| 항목 | 대상 문제 | 종류 | 결과 | 순위 | 검증 | 링크 |
+|---|---|---|---|---|---|---|
+| [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수 c_4 (상계) | 새 결과 | c_4 ≤ 0.030139933996 (hill 지표 `density_ppt` 30,139,933,996). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값. | 12계정 중 1위 (검증 보드, 단독 선두) | Lean 4.33.1, 표준 공리, 모듈별 빌드; hill 실험 통과 | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json) |
+| [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측: subcubic 그래프의 star chromatic index ≤ 6 (미해결; 알려진 최선의 상계 7) | 부분 결과 | 추측 자체는 증명하지 못함. 증명한 것: flower·Goldberg snark, GP(n,k) (k ≤ 15), Möbius 사다리는 5색; 14꼭짓점 이하의 모든 bridgeless 3정칙 다중그래프는 6색; 동치 `dms_iff_cubic16`; 이름 붙인 미해결 가설들로의 환원. | — | Lean 4.33.1, 표준 공리; `lake build`(pack3), 모듈별 빌드(pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
+| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | 에르되시 문제 12개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭 | 알려진 결과의 형식화 | 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함. | — | Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일 | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
+| `erdos-1038` | 에르되시 문제 #1038 | 담당 팀원 보고 | 팀원이 완전한 Lean 풀이를 보고함. 아직 이 저장소에 없음. | — | Lean 4.34.1 (보고된 값, 여기서 재확인하지 않음) | 담당 팀원이 추가 예정 |
+
+**팀원의 hill 결과** (AutoLab 보드의 계정별 최고 기록; 동률은 같은 순위)
+
+| hill (보드) | 팀원 | 종류 | 결과 | 순위 | 검증 | 파일 |
+|---|---|---|---|---|---|---|
+| Kobon 삼각형 (n = 18) | @thomasoh0408 | hill 결과 | triangles 93; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (15계정 중 12계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) — 담당 팀원이 파일 추가 예정 |
+| Busy Beaver 6 인증서 | @n0rang2 | hill 결과 | steps 249,881, ones 554, tape_span 735; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (12계정 중 3계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) — 담당 팀원이 파일 추가 예정 |
+| K4 Ramsey 다중도 | @hl728 | hill 결과 | reference_beaten 1, density_ppt 30,141,921,123 (최종 보드); reference_beaten 1, density_ppt 30,141,720,946 (검증 보드) | 최종 모드 순위표의 유일한 기록(1명); 12계정 중 5위 (검증 보드) | hill 평가기(Python), Lean 산출물 없음 | [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) — 담당 팀원이 파일 추가 예정 |
+| K4 Ramsey 다중도 | @n0rang2 | hill 결과 | reference_beaten 1, density_ppt 30,142,185,839 | 12계정 중 8위 | hill 평가기(Python), Lean 산출물 없음 | [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) — 담당 팀원이 파일 추가 예정 |
 <!-- RESULTS:END -->
 
-표는 `entries/*/ENTRY.yaml`의 `readme:` 블록에서 [`tools/make_results_table.py`](tools/make_results_table.py)가 만듭니다. 손으로 고치지 않습니다. "종류"는 *새 결과 / 부분 결과 / 알려진 결과의 형식화* 셋 중 하나입니다.
+두 표는 `entries/*/ENTRY.yaml`의 `readme:` 블록과 순위표 조회 원본에서 [`tools/make_results_table.py`](tools/make_results_table.py)가 만듭니다. 손으로 고치지 않습니다. hill 결과는 hill 평가기가 준 점수이고 Lean 산출물이 없습니다. 공동 1위인 두 결과는 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않습니다.
+
+### 대회 hill과 팀 순위
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hills_overview_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hills_overview_light.svg">
+  <img alt="대회 hill: 보드별 계정을 순위 순으로, 동률은 묶음으로, 팀원은 강조" src="assets/hills_overview_light.svg" width="720">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ramsey_leaderboard_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/ramsey_leaderboard_light.svg">
+  <img alt="Ramsey 검증 보드: 계정별 hill 기준값 대비 개선폭" src="assets/ramsey_leaderboard_light.svg" width="720">
+</picture>
+
+<details>
+<summary>모든 보드 표</summary>
+
+<!-- HILLS:START -->
+| hill (보드) | 계정 수 | 선두 기록 | 팀 순위 | 선두와 동률? | 파일 |
+|---|---:|---|---|---|---|
+| Kobon 삼각형 (n = 18) | 15 | triangles 93 (12계정 동률) | 공동 1위 (15계정 중 12계정 동률) — @thomasoh0408 | 예: @thomasoh0408 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) |
+| Kobon 삼각형 (n = 39) | 2 | triangles 470 | — | — | — |
+| K4 Ramsey 다중도 | 12 | reference_beaten 1, density_ppt 30,139,933,996 | 12계정 중 1위 — @lavaskiller<br/>12계정 중 5위 — @hl728<br/>12계정 중 8위 — @n0rang2<br/>최종 모드 순위표의 유일한 기록(1명) — @hl728 | 단독 선두: @lavaskiller | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) · [`hills/ramsey-hl728`](entries/hills/ramsey-hl728/) · [`hills/ramsey-n0rang2`](entries/hills/ramsey-n0rang2/) |
+| 3x3 행렬곱 텐서 | 10 | rank 23, support 138 | — | — | — |
+| Grothendieck 상수 witness | 8 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80 (6계정 동률) | — | — | — |
+| Collatz modular descent | 7 | coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 3 (2계정 동률) | — | — | — |
+| Busy Beaver 6 인증서 | 12 | steps 249,881, ones 554, tape_span 735 (3계정 동률) | 공동 1위 (12계정 중 3계정 동률) — @n0rang2 | 예: @n0rang2 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) |
+| Erdős 3 | 0 | 보드에 기록 없음 | — | — | — |
+<!-- HILLS:END -->
+
+</details>
+
+조회 원본: [`archive/leaderboards/`](archive/leaderboards/). 그림과 순위 계산: `python tools/make_leaderboard_charts.py`. hill 결과의 담당자는 [`entries/hills/`](entries/hills/)의 자기 폴더에 해와 서명된 보고서를 올립니다(폴더마다 체크리스트가 있습니다).
 
 ## 검증 범위
 
@@ -51,21 +98,10 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 ## 항목
 
-- **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `1ab2354d` 통과(`reference_beaten = 1`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-02T11:38:08Z)는 `passed: true`, `official: true`, `density_ppt` 30,139,933,996. 상태 동결 시점(09-27) 선두는 간접 기록으로 30,141,720,824. 팀은 2026-10-02(KST)에 hill 순위표 1위였다고 보고했으며, 순위표 화면은 추가 예정입니다(`assets/leaderboard_<date>.png`). 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님. hill 순위표(검증 모드, 사용자별 최고 기록) 2026-10-03 01:18 KST 조회 기준 **12명 중 1위**, 2위 30,140,425,027(49만 ppt 차). 최종 모드(held-out) 평가는 아직 없음. [조회 원본](entries/ramsey-k4-multiplicity/leaderboard/leaderboard_2026-10-02T161850Z.json)
+- **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `1ab2354d` 통과(`reference_beaten = 1`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-02T11:38:08Z)는 `passed: true`, `official: true`; 검증 보드 12계정 중 1위(위 표). 최종 모드(held-out) 평가는 아직 없음. 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님.
 - **2 · [`dms-star6`](entries/dms-star6/)** — **추측은 증명하지 못했습니다.** 무한 족(flower·Goldberg snark, GP(n,k) k ≤ 15, Möbius 사다리)의 5색, 14꼭짓점 이하 bridgeless 3정칙 다중그래프의 6색, 동치 [`dms_iff_cubic16`](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174), 조건부 환원 사슬. 한계: 환원 사슬의 가설은 모두 미해결.
 - **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
-- **4 · `erdos-1038`** — 팀원이 보고한 에르되시 문제 #1038의 완전한 Lean 풀이(Lean 4.34.1). 폴더와 검증 기록은 담당 팀원이 추가합니다. 추가 방법은 [CONTRIBUTING.md](CONTRIBUTING.md), 추가한 뒤 [`entries/PENDING.yaml`](entries/PENDING.yaml)의 행을 지우고 표를 다시 만듭니다.
-
-## 팀원의 hill 결과 (각자 올릴 자리)
-
-순위표 조회 2026-10-02T16:23Z (2026-10-03 01:23 KST) 기준입니다. 파일은 각 담당자가 [`entries/hills/`](entries/hills/)의 자기 폴더에 올립니다(폴더마다 올릴 것의 체크리스트가 있습니다).
-
-| 담당 | hill | 순위 | 올릴 곳 |
-|---|---|---|---|
-| @hl728 | K4 Ramsey 다중도 | 1 of 1 (final); 5 of 12 (validation) | [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) |
-| @n0rang2 | K4 Ramsey 다중도 | 8 of 12 | [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) |
-| @n0rang2 | Busy Beaver 6 | 3 of 12 | [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) |
-| @thomasoh0408 | Kobon 삼각형 | 11 of 15 | [`entries/hills/kobon-triangles-thomasoh0408/`](entries/hills/kobon-triangles-thomasoh0408/) |
+- **4 · `erdos-1038`** — 팀원이 보고한 에르되시 문제 #1038의 완전한 Lean 풀이(Lean 4.34.1). 폴더와 검증 기록은 담당 팀원이 추가합니다. 추가 방법은 [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md)(요약)와 [CONTRIBUTING.md](CONTRIBUTING.md), 추가한 뒤 [`entries/PENDING.yaml`](entries/PENDING.yaml)의 행을 지우고 표를 다시 만듭니다.
 
 ## 검증 방법
 
@@ -135,7 +171,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ.</sub><br/><sub><i>역할 — 각자 기입</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
     <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
@@ -144,23 +180,13 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 각자 [TEAM.md](TEAM.md)의 자기 칸(이름, 소속, 이메일, 한 일, 검토한 부분)을 채우고, 아바타 아래 줄을 자기 역할 한 줄로 바꿉니다.
 
-### 팀원의 hill 순위
-
-AutoLab 순위표 API 조회 2026-10-02T16:23Z (2026-10-03 01:23 KST) 기준, 계정별 최고 기록. 마감 전까지 바뀔 수 있습니다. 원본: [`archive/leaderboards/`](archive/leaderboards/).
-
-| 팀원 | hill | 모드 | 순위 | 기록 |
-|---|---|---|---:|---|
-| @lavaskiller | K4 Ramsey 다중도 | 검증 | 12명 중 1 | 밀도 30,139,933,996 ppt |
-| @hl728 | K4 Ramsey 다중도 | 최종(held-out) | 1명 중 1 | 밀도 30,141,921,123 ppt |
-| @hl728 | K4 Ramsey 다중도 | 검증 | 12명 중 5 | 밀도 30,141,720,946 ppt |
-| @n0rang2 | K4 Ramsey 다중도 | 검증 | 12명 중 8 | 밀도 30,142,185,839 ppt |
-| @n0rang2 | Busy Beaver 6 | 검증 | 12명 중 3 | 249,881 스텝(1위와 같은 값) |
-| @thomasoh0408 | Kobon 삼각형 | 검증 | 15명 중 11 | 삼각형 93개(1위와 같은 값) |
+팀원의 hill 순위는 [한눈에 보는 결과](#한눈에-보는-결과)에 있습니다.
 
 ## 아카이브와 그 밖
 
 - [archive/REPORT.md](archive/REPORT.md) — 팀 보고서(결과, 발견점, 자원).
 - [archive/timeline.md](archive/timeline.md) — 날짜별 기록과 출처.
 - [archive/findings/](archive/findings/) — 주제별 발견점과 실패한 시도.
-- [archive/STATS_REQUEST.md](archive/STATS_REQUEST.md) — 팀원별 통계를 뽑는 방법.
+- [archive/STATS_REQUEST.ko.md](archive/STATS_REQUEST.ko.md) — 팀원별 통계를 뽑는 방법(영어: [STATS_REQUEST.md](archive/STATS_REQUEST.md)).
+- [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md) — 올리는 규칙 요약(전문은 영어 [CONTRIBUTING.md](CONTRIBUTING.md)).
 - 인용 정보는 [CITATION.cff](CITATION.cff). 라이선스는 팀이 정할 예정이며, 저장소는 마감까지 팀 비공개입니다.

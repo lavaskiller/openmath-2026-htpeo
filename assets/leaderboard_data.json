@@ -1,0 +1,822 @@
+{
+ "snapshot": "2026-10-02T16:23Z",
+ "ranking": "standard competition ranking over the full metric tuple",
+ "boards": [
+  {
+   "hill": "alejandrozu/kobon-triangles",
+   "label": "arithmetic = exact-rational  ·  geometry = bounded-triangular-faces  ·  n = 18",
+   "validation": [
+    {
+     "owner": "a-hamdi",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 1,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-25T02:13:03Z"
+    },
+    {
+     "owner": "ashleychenyj",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 2,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-21T05:56:43Z"
+    },
+    {
+     "owner": "claudiagaes",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 3,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-27T18:03:23Z"
+    },
+    {
+     "owner": "claudioolmedo",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 4,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-20T19:52:53Z"
+    },
+    {
+     "owner": "fkaita",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 5,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-21T04:35:29Z"
+    },
+    {
+     "owner": "flaviabeppler",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 6,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-28T01:29:06Z"
+    },
+    {
+     "owner": "kevinsrun",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 7,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-27T20:28:29Z"
+    },
+    {
+     "owner": "rohith18p",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 8,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-27T19:21:08Z"
+    },
+    {
+     "owner": "solal24",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 9,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-27T19:20:33Z"
+    },
+    {
+     "owner": "srirangam-r",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 10,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-28T13:00:31Z"
+    },
+    {
+     "owner": "thomasoh0408",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 11,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-28T02:15:21Z"
+    },
+    {
+     "owner": "willow2014",
+     "rank": 1,
+     "tied": 12,
+     "api_rank": 12,
+     "metrics": {
+      "triangles": 93
+     },
+     "timestamp": "2026-09-28T01:21:03Z"
+    },
+    {
+     "owner": "ottogin",
+     "rank": 13,
+     "tied": 1,
+     "api_rank": 13,
+     "metrics": {
+      "triangles": 92
+     },
+     "timestamp": "2026-09-27T13:25:52Z"
+    },
+    {
+     "owner": "luizfelipebarbosa",
+     "rank": 14,
+     "tied": 1,
+     "api_rank": 14,
+     "metrics": {
+      "triangles": 91
+     },
+     "timestamp": "2026-09-20T19:48:50Z"
+    },
+    {
+     "owner": "alee792",
+     "rank": 15,
+     "tied": 1,
+     "api_rank": 15,
+     "metrics": {
+      "triangles": 90
+     },
+     "timestamp": "2026-09-21T00:43:34Z"
+    }
+   ],
+   "final": []
+  },
+  {
+   "hill": "alejandrozu/kobon-triangles",
+   "label": "arithmetic = exact-rational  ·  geometry = bounded-triangular-faces  ·  n = 39",
+   "validation": [
+    {
+     "owner": "rohith18p",
+     "rank": 1,
+     "tied": 1,
+     "api_rank": 1,
+     "metrics": {
+      "triangles": 470
+     },
+     "timestamp": "2026-09-27T19:45:26Z"
+    },
+    {
+     "owner": "octavianboji",
+     "rank": 2,
+     "tied": 1,
+     "api_rank": 2,
+     "metrics": {
+      "triangles": 468
+     },
+     "timestamp": "2026-09-27T18:39:18Z"
+    }
+   ],
+   "final": []
+  },
+  {
+   "hill": "alejandrozu/clique-cluster-ramsey-multiplicity",
+   "label": "protocol = k4-weighted-blowup-v1  ·  reference = 10486266368/768^4",
+   "validation": [
+    {
+     "owner": "lavaskiller",
+     "rank": 1,
+     "tied": 1,
+     "api_rank": 1,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30139933996
+     },
+     "timestamp": "2026-10-02T11:38:08Z"
+    },
+    {
+     "owner": "madhanj05",
+     "rank": 2,
+     "tied": 1,
+     "api_rank": 2,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30140425027
+     },
+     "timestamp": "2026-10-02T12:20:09Z"
+    },
+    {
+     "owner": "a-hamdi",
+     "rank": 3,
+     "tied": 1,
+     "api_rank": 3,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30140909729
+     },
+     "timestamp": "2026-10-02T09:39:47Z"
+    },
+    {
+     "owner": "rachtsy",
+     "rank": 4,
+     "tied": 1,
+     "api_rank": 4,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30140932308
+     },
+     "timestamp": "2026-10-02T05:51:27Z"
+    },
+    {
+     "owner": "hl728",
+     "rank": 5,
+     "tied": 1,
+     "api_rank": 5,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30141720946
+     },
+     "timestamp": "2026-09-30T08:14:36Z"
+    },
+    {
+     "owner": "yavol",
+     "rank": 6,
+     "tied": 1,
+     "api_rank": 6,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30141721098
+     },
+     "timestamp": "2026-09-21T01:17:47Z"
+    },
+    {
+     "owner": "danamouk",
+     "rank": 7,
+     "tied": 1,
+     "api_rank": 7,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30142036534
+     },
+     "timestamp": "2026-09-28T03:52:55Z"
+    },
+    {
+     "owner": "n0rang2",
+     "rank": 8,
+     "tied": 1,
+     "api_rank": 8,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30142185839
+     },
+     "timestamp": "2026-09-30T08:15:53Z"
+    },
+    {
+     "owner": "shaff622",
+     "rank": 9,
+     "tied": 1,
+     "api_rank": 9,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30142250482
+     },
+     "timestamp": "2026-09-27T18:28:36Z"
+    },
+    {
+     "owner": "rohith18p",
+     "rank": 10,
+     "tied": 1,
+     "api_rank": 10,
+     "metrics": {
+      "reference_beaten": 0,
+      "density_ppt": 30142314506
+     },
+     "timestamp": "2026-09-28T00:51:50Z"
+    },
+    {
+     "owner": "ottogin",
+     "rank": 11,
+     "tied": 1,
+     "api_rank": 11,
+     "metrics": {
+      "reference_beaten": 0,
+      "density_ppt": 30142649543
+     },
+     "timestamp": "2026-09-20T16:35:04Z"
+    },
+    {
+     "owner": "vyahhi",
+     "rank": 12,
+     "tied": 1,
+     "api_rank": 12,
+     "metrics": {
+      "reference_beaten": 0,
+      "density_ppt": 30144857036
+     },
+     "timestamp": "2026-09-28T00:39:43Z"
+    }
+   ],
+   "final": [
+    {
+     "owner": "hl728",
+     "rank": 1,
+     "tied": 1,
+     "api_rank": 1,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30141921123
+     },
+     "timestamp": "2026-09-29T14:09:44Z"
+    }
+   ]
+  },
+  {
+   "hill": "alejandrozu/matrix-multiplication-tensor-3x3",
+   "label": "coefficient_domain = exact-rationals  ·  tensor = 3x3-general-matrix-multiplication  ·  verification = 729-brent-identities",
+   "validation": [
+    {
+     "owner": "chandraguptsharma07",
+     "rank": 1,
+     "tied": 1,
+     "api_rank": 1,
+     "metrics": {
+      "rank": 23,
+      "support": 138
+     },
+     "timestamp": "2026-09-30T05:18:26Z"
+    },
+    {
+     "owner": "1c1jp5dhwy",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 2,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-09-21T02:50:30Z"
+    },
+    {
+     "owner": "a-hamdi",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 3,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-09-25T02:26:29Z"
+    },
+    {
+     "owner": "advaith-appajodu",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 4,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-09-28T04:32:31Z"
+    },
+    {
+     "owner": "rachtsy",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 5,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-10-01T23:15:15Z"
+    },
+    {
+     "owner": "wenyi-ai-wang",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 6,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-10-01T03:19:14Z"
+    },
+    {
+     "owner": "wilsonwu-ai",
+     "rank": 2,
+     "tied": 6,
+     "api_rank": 7,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-09-27T17:39:29Z"
+    },
+    {
+     "owner": "connorbuchheit",
+     "rank": 8,
+     "tied": 3,
+     "api_rank": 8,
+     "metrics": {
+      "rank": 23,
+      "support": 153
+     },
+     "timestamp": "2026-09-20T20:01:52Z"
+    },
+    {
+     "owner": "ottogin",
+     "rank": 8,
+     "tied": 3,
+     "api_rank": 9,
+     "metrics": {
+      "rank": 23,
+      "support": 153
+     },
+     "timestamp": "2026-09-20T16:49:19Z"
+    },
+    {
+     "owner": "srirangam-r",
+     "rank": 8,
+     "tied": 3,
+     "api_rank": 10,
+     "metrics": {
+      "rank": 23,
+      "support": 153
+     },
+     "timestamp": "2026-09-27T21:15:39Z"
+    }
+   ],
+   "final": []
+  },
+  {
+   "hill": "alejandrozu/grothendieck-constant-witnesses",
+   "label": "certificate = finite-rational-grothendieck-witness  ·  matrix_bounds = 2-8-by-2-8",
+   "validation": [
+    {
+     "owner": "a-hamdi",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 1,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-24T12:28:02Z"
+    },
+    {
+     "owner": "aaronatlan",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 2,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-27T23:31:35Z"
+    },
+    {
+     "owner": "ebaenamar",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 3,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-28T02:25:56Z"
+    },
+    {
+     "owner": "rachtsy",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 4,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-29T04:14:57Z"
+    },
+    {
+     "owner": "solal24",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 5,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-27T18:18:46Z"
+    },
+    {
+     "owner": "wilsonwu-ai",
+     "rank": 1,
+     "tied": 6,
+     "api_rank": 6,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 80
+     },
+     "timestamp": "2026-09-27T16:07:53Z"
+    },
+    {
+     "owner": "lazyluca",
+     "rank": 7,
+     "tied": 2,
+     "api_rank": 7,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 86
+     },
+     "timestamp": "2026-09-29T22:38:04Z"
+    },
+    {
+     "owner": "ottogin",
+     "rank": 7,
+     "tied": 2,
+     "api_rank": 8,
+     "metrics": {
+      "gap_ppm": 1414213,
+      "matrix_area": 4,
+      "certificate_bits": 86
+     },
+     "timestamp": "2026-09-20T16:46:39Z"
+    }
+   ],
+   "final": []
+  },
+  {
+   "hill": "alejandrozu/collatz-modular-descent",
+   "label": "certificate = accelerated-collatz-residue-descent  ·  target_family = private-odd-dyadic-residues",
+   "validation": [
+    {
+     "owner": "ottogin",
+     "rank": 1,
+     "tied": 2,
+     "api_rank": 1,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 3
+     },
+     "timestamp": "2026-09-20T16:46:44Z"
+    },
+    {
+     "owner": "yavol",
+     "rank": 1,
+     "tied": 2,
+     "api_rank": 2,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 3
+     },
+     "timestamp": "2026-09-21T00:56:25Z"
+    },
+    {
+     "owner": "wenyi-ai-wang",
+     "rank": 3,
+     "tied": 1,
+     "api_rank": 3,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 166
+     },
+     "timestamp": "2026-10-01T02:59:26Z"
+    },
+    {
+     "owner": "rachtsy",
+     "rank": 4,
+     "tied": 1,
+     "api_rank": 4,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 167
+     },
+     "timestamp": "2026-09-29T04:12:10Z"
+    },
+    {
+     "owner": "a-hamdi",
+     "rank": 5,
+     "tied": 1,
+     "api_rank": 5,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 256
+     },
+     "timestamp": "2026-10-02T03:29:50Z"
+    },
+    {
+     "owner": "felixisaac",
+     "rank": 6,
+     "tied": 1,
+     "api_rank": 6,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 269
+     },
+     "timestamp": "2026-09-21T01:36:33Z"
+    },
+    {
+     "owner": "chaewon-research",
+     "rank": 7,
+     "tied": 1,
+     "api_rank": 7,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 512
+     },
+     "timestamp": "2026-09-29T22:09:07Z"
+    }
+   ],
+   "final": []
+  },
+  {
+   "hill": "alejandrozu/busy-beaver-6-certificates",
+   "label": "initial_tape = bi-infinite-zero  ·  machine_model = 6-state-2-symbol-standard-tm",
+   "validation": [
+    {
+     "owner": "a-hamdi",
+     "rank": 1,
+     "tied": 3,
+     "api_rank": 1,
+     "metrics": {
+      "steps": 249881,
+      "ones": 554,
+      "tape_span": 735
+     },
+     "timestamp": "2026-09-28T18:13:47Z"
+    },
+    {
+     "owner": "eychcue",
+     "rank": 1,
+     "tied": 3,
+     "api_rank": 2,
+     "metrics": {
+      "steps": 249881,
+      "ones": 554,
+      "tape_span": 735
+     },
+     "timestamp": "2026-09-21T03:25:27Z"
+    },
+    {
+     "owner": "n0rang2",
+     "rank": 1,
+     "tied": 3,
+     "api_rank": 3,
+     "metrics": {
+      "steps": 249881,
+      "ones": 554,
+      "tape_span": 735
+     },
+     "timestamp": "2026-09-28T15:54:07Z"
+    },
+    {
+     "owner": "sergeicu",
+     "rank": 4,
+     "tied": 1,
+     "api_rank": 4,
+     "metrics": {
+      "steps": 249880,
+      "ones": 554,
+      "tape_span": 735
+     },
+     "timestamp": "2026-09-29T17:02:51Z"
+    },
+    {
+     "owner": "frido22",
+     "rank": 5,
+     "tied": 1,
+     "api_rank": 5,
+     "metrics": {
+      "steps": 249614,
+      "ones": 543,
+      "tape_span": 973
+     },
+     "timestamp": "2026-09-27T22:53:10Z"
+    },
+    {
+     "owner": "chaewon-research",
+     "rank": 6,
+     "tied": 1,
+     "api_rank": 6,
+     "metrics": {
+      "steps": 249614,
+      "ones": 542,
+      "tape_span": 973
+     },
+     "timestamp": "2026-09-30T03:49:22Z"
+    },
+    {
+     "owner": "yavol",
+     "rank": 7,
+     "tied": 1,
+     "api_rank": 7,
+     "metrics": {
+      "steps": 246872,
+      "ones": 480,
+      "tape_span": 629
+     },
+     "timestamp": "2026-09-21T06:28:53Z"
+    },
+    {
+     "owner": "vyahhi",
+     "rank": 8,
+     "tied": 1,
+     "api_rank": 8,
+     "metrics": {
+      "steps": 233892,
+      "ones": 539,
+      "tape_span": 720
+     },
+     "timestamp": "2026-09-28T02:38:01Z"
+    },
+    {
+     "owner": "extraton618",
+     "rank": 9,
+     "tied": 1,
+     "api_rank": 9,
+     "metrics": {
+      "steps": 232746,
+      "ones": 554,
+      "tape_span": 684
+     },
+     "timestamp": "2026-09-27T19:51:29Z"
+    },
+    {
+     "owner": "sasap91",
+     "rank": 10,
+     "tied": 1,
+     "api_rank": 10,
+     "metrics": {
+      "steps": 228641,
+      "ones": 647,
+      "tape_span": 864
+     },
+     "timestamp": "2026-09-27T22:47:12Z"
+    },
+    {
+     "owner": "cloud-post-code",
+     "rank": 11,
+     "tied": 1,
+     "api_rank": 11,
+     "metrics": {
+      "steps": 178727,
+      "ones": 180,
+      "tape_span": 539
+     },
+     "timestamp": "2026-09-27T19:48:48Z"
+    },
+    {
+     "owner": "ottogin",
+     "rank": 12,
+     "tied": 1,
+     "api_rank": 12,
+     "metrics": {
+      "steps": 6,
+      "ones": 6,
+      "tape_span": 7
+     },
+     "timestamp": "2026-09-20T15:18:55Z"
+    }
+   ],
+   "final": [
+    {
+     "owner": "vyahhi",
+     "rank": 1,
+     "tied": 1,
+     "api_rank": 1,
+     "metrics": {
+      "steps": 572171,
+      "ones": 1035,
+      "tape_span": 1380
+     },
+     "timestamp": "2026-09-27T23:10:09Z"
+    }
+   ]
+  },
+  {
+   "hill": "ottogin/erdos-3",
+   "label": "",
+   "validation": [],
+   "final": []
+  }
+ ]
+}

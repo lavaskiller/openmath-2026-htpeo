@@ -9,8 +9,8 @@ Placeholder created from the leaderboard; **@n0rang2: please add the files and f
 | Hill | `alejandrozu/busy-beaver-6-certificates` (https://app.autolab.ai/hills/alejandrozu/busy-beaver-6-certificates) |
 | Account | `n0rang2` |
 | Mode | validation |
-| Rank | 3 of 12 |
-| Result | 249,881 steps, 554 ones, tape span 735 — same values as rank 1 (2026-09-28) |
+| Standing | tied for 1st, 3 of 12 accounts (validation; the platform lists tied accounts alphabetically) |
+| Result | 249,881 steps, 554 ones, tape span 735 (2026-09-28) — reproduces the board's best value; not claimed as new mathematics |
 
 ## To add (checklist)
 

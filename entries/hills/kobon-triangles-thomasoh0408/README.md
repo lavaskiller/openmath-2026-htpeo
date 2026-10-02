@@ -9,8 +9,8 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 | Hill | `alejandrozu/kobon-triangles` (https://app.autolab.ai/hills/alejandrozu/kobon-triangles) |
 | Account | `thomasoh0408` |
 | Mode | validation |
-| Rank | 11 of 15 |
-| Result | 93 triangles — same value as rank 1 (2026-09-28) |
+| Standing | tied for 1st, 12 of 15 accounts (validation, board n = 18; the platform lists tied accounts alphabetically) |
+| Result | 93 triangles (2026-09-28) — reproduces the board's best value; not claimed as new mathematics |
 
 ## To add (checklist)
 

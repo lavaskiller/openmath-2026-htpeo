@@ -1,60 +1,148 @@
-# 올리는 규칙
+# Contributing
 
-## 1. 항목 하나 추가하기
+Guidelines for members of team HTPeo. Korean summary: [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md).
 
-1. `entries/_TEMPLATE/`를 `entries/<항목 이름>/`으로 복사합니다. 이름은 영어 소문자와 하이픈만 씁니다(예: `erdos-1038`).
-2. `ENTRY.yaml`을 채웁니다. 모르는 칸은 지우지 말고 `TODO`로 둡니다.
-3. `PACKET.md`에 대회에 낸 패킷을 그대로 넣습니다. 제출 후에는 고치지 않습니다(고칠 일이 있으면 4절).
-4. `artifact/`에 결과물을 넣습니다(2절의 포함/제외 기준).
-5. `STATS.yaml`을 채웁니다(뽑는 방법은 `archive/STATS_REQUEST.md`).
-6. 최상위 `README.md`의 항목 표에 한 줄을 추가합니다.
-7. 브랜치 `entry/<항목 이름>`에서 작업하고 PR로 올립니다. 다른 팀원 한 명이 3절의 점검표를 확인한 뒤 병합합니다.
+## Scope
 
-## 2. `artifact/`에 넣는 것과 넣지 않는 것
+This repository holds two things: the team's **entries** to the competition (`entries/`: packets, formal sources, hill results) and the **archive** of what we did and what it cost (`archive/`). It is not a development workspace: put finished, checkable material here, not search outputs or work in progress.
 
-넣는 것:
+## Quick start for a member
 
-- 형식 증명 소스(`.lean`), `lean-toolchain`, `lakefile`, `lake-manifest.json`
-- 해 파일, 인증서, 서명된 평가 보고서(`report.json`)
-- 재현 스크립트와 그 실행 로그 중 **공리 출력(`#print axioms`)과 빌드 결과**가 담긴 것
-- 탐색·생성 코드(소스만)
-- `README.md`(무엇이 어디 있는지, 재현 명령), `SHA256SUMS`
+```bash
+git clone https://github.com/lavaskiller/openmath-2026-htpeo && cd openmath-2026-htpeo
+git switch -c entry/<name>                 # or hill/<hill>-<id>, team/<id>, archive/<topic>
+# 1. fill in your block in TEAM.md
+# 2. add your files (sections below)
+python tools/make_results_table.py         # 3. regenerate tables ...
+python tools/make_leaderboard_charts.py    #    ... leaderboard figures and table
+python tools/make_charts.py                #    ... resource charts (only if stats changed)
+git add -A && git diff --cached            # 4. read what you are about to publish
+git commit -m "<name>: <what changed>" && git push -u origin HEAD   # 5. open a pull request
+```
 
-넣지 않는 것:
+Python 3 standard library only; nothing to install.
 
-- 빌드 산출물(`.lake/`, `build/`의 `.olean`), 가상환경, `__pycache__`
-- 탐색 중간 출력, 수 MB 넘는 로그
-- 비밀 정보: API 키, 토큰, 계정 비밀번호, `.env`, 개인 이메일 목록. 올리기 전에 `git diff --cached`를 한 번 읽습니다.
-- 다른 사람의 저작물 전문(논문 PDF 등). 링크와 서지 정보만 적습니다.
+## Add or update an entry
 
-파일 하나가 50MB를 넘으면 올리기 전에 팀에 알립니다(Git LFS를 쓸지 정합니다). 줄바꿈이 바뀌면 체크섬이 깨지므로 저장소에 `.gitattributes`(`* -text`)를 둡니다.
+1. Copy `entries/_TEMPLATE/` to `entries/<name>/` (lower-case letters, digits and hyphens, e.g. `erdos-1038`).
+2. Fill in `ENTRY.yaml`. Keep every key; where a value is unknown write `TODO` with the reason.
+   - `claims`: the exact Lean names, one line of plain words each, and the file that contains them.
+   - `verification`: toolchain, Mathlib revision, the axioms printed by `#print axioms`, exceptions, the build route.
+   - `readme`: the row of the landing-page table — `problem`, `kind` (exactly one of `new result`, `partial results`, `formalization of known results`), `result` (one line, previous best next to ours), `verification`, `links` (`"text|path relative to the entry"`; the generator refuses a path that does not exist). Add `hill: "<leaderboard file stem>|<account>"` if the entry is on a hill. Optional `*_ko` fields feed `README.ko.md`.
+3. Put the packet in `PACKET.md` exactly as submitted. **Do not edit it after submission**; see [Tags and immutability](#tags-and-immutability).
+4. Put the material in `artifact/` and write `artifact/README.md` (what is where, exact verification commands, expected output, time and memory).
+5. Fill in `STATS.yaml` (see [Statistics](#statistics)) and, if useful, `NOTES.md` (what worked, what did not).
+6. If the entry had a row in `entries/PENDING.yaml`, delete that row.
+7. Run the generators and open a pull request.
 
-## 3. 병합 전 점검표
+### What goes into `artifact/`
 
-- [ ] `ENTRY.yaml`의 필수 칸이 채워져 있다(TODO는 사유와 함께).
-- [ ] `artifact/SHA256SUMS`가 있고 `sha256sum -c`가 통과한다.
-- [ ] 패킷이 주장하는 정리 이름이 소스에 실제로 있고, 로그의 공리 출력이 패킷과 같다.
-- [ ] `sorry`, 새 `axiom`, `native_decide`가 주장 정리의 의존 범위에 없다(있으면 패킷에 밝혔다).
-- [ ] 비밀 정보와 빌드 산출물이 없다.
-- [ ] AI·도구 사용과 사람 검토 여부가 패킷과 `ENTRY.yaml`에 사실대로 적혀 있다.
+Include:
 
-## 4. 고정(변경 불가능한 참조)
+- formal sources (`.lean`), `lean-toolchain`, `lakefile`, `lake-manifest.json`;
+- solution files, certificates, the signed hill report;
+- verification scripts, and the logs that carry the **`#print axioms` output and build results**;
+- search or generator code (sources only);
+- `README.md` and `SHA256SUMS`.
 
-- 제출 시점의 내용은 항목별 태그로 고정합니다: `git tag -a <항목>-v1 -m "<항목> as submitted 2026-10-03"` 후 `git push origin <항목>-v1`.
-- 패킷의 "final commit" 칸에는 이 태그가 가리키는 커밋 해시와 저장소 URL을 적습니다.
-- 제출 후 수정이 필요하면 파일을 덮어쓰지 말고 새 커밋으로 올리고 `-v2` 태그를 답니다. 무엇이 왜 바뀌었는지는 항목의 `NOTES.md`에 적습니다.
-- 태그를 옮기거나 지우지 않습니다. 강제 push를 하지 않습니다.
+Exclude:
 
-## 5. 커밋과 문서 형식
+- build products (`.lake/`, `.olean`), virtual environments, `__pycache__`;
+- intermediate search output and logs larger than a few MB;
+- other people's works in full (paper PDFs): cite and link instead;
+- anything listed under [Secrets and privacy](#secrets-and-privacy).
 
-- 커밋 메시지: `<항목 이름>: <무엇을 했는지>` (예: `ramsey-k4-multiplicity: add Lean certificate sources`).
-- 문서는 Markdown. 수식은 평문이나 LaTeX 표기. 표는 값이 여러 열일 때만 씁니다.
-- 날짜는 `2026-10-02`, 시각은 시간대를 붙여 `21:08 KST`처럼 씁니다. 대회 마감은 2026-10-03 00:00 EDT(13:00 KST)입니다.
-- 수치를 적을 때는 출처를 같이 적습니다(어느 로그, 어느 명령). 추정치는 "추정"이라고 씁니다.
-- 검증 수준을 구분해서 씁니다: **Lean 커널 검증 / 계산으로 확인 / AI가 검증 / 사람이 검토**. 섞어 쓰지 않습니다.
+Tell the team before adding a file over 50 MB.
 
-## 6. 아카이브 문서에 기여하기
+## Add a hill result
 
-- `archive/REPORT.md`의 목차는 정해져 있습니다. 자기 항목에 해당하는 절을 채우고, 항목과 무관한 발견점은 `archive/findings/<주제>.md`로 따로 씁니다.
-- 실패한 시도도 적습니다. "무엇을 시도했고, 어디서 막혔고, 무엇으로 확인했는지"의 세 가지면 충분합니다.
-- 통계는 `archive/stats/<이름>.yaml`로 원본을 올리고, 합산은 `tools/`의 스크립트로 만듭니다(손으로 더하지 않습니다).
+A hill result is a score on an AutoLab hill without a Lean artifact. It lives in `entries/hills/<hill>-<github id>/`.
+
+- [ ] `solution.json` (or the submitted directory) exactly as evaluated
+- [ ] the signed hill report (`report.json`): it carries the hill hash, the metrics, the mode and the signature
+- [ ] AutoLab project name and experiment id
+- [ ] how the result was obtained; code in `code/`
+- [ ] whether it is a known construction (with its source) or something new
+- [ ] the mode: **validation** or **final (held-out)** — say which report belongs to which, and for a final-mode run the exact command or UI steps
+- [ ] `STATS.yaml` and the date and time of the evaluation, with time zone
+
+Then update the row in `entries/hills/README.md`, refresh the snapshot in `archive/leaderboards/` if the standing changed (note the read time in its README and in `SNAPSHOT` of `tools/make_leaderboard_charts.py`), and run the generators. To promote a hill result to a full entry, add an `ENTRY.yaml` and a packet as above.
+
+## Generated content
+
+Never edit by hand between marker comments or inside `assets/`. Change the data, run the script, commit the output together with the data.
+
+| Markers / files | Script | Data |
+|---|---|---|
+| `<!-- RESULTS:START/END -->`, `<!-- RESOURCES:START/END -->` in `README.md`, `README.ko.md` | `python tools/make_results_table.py` | `entries/*/ENTRY.yaml` (`readme:`), `entries/PENDING.yaml`, `archive/leaderboards/`, stats files |
+| `<!-- HILLS:START/END -->`, `assets/hills_overview_*.svg`, `assets/ramsey_leaderboard_*.svg`, `assets/leaderboard_data.json` | `python tools/make_leaderboard_charts.py` | `archive/leaderboards/lb_*.json` |
+| `assets/tokens_*.svg`, `assets/compute_by_purpose_*.svg`, `assets/chart_data.json` | `python tools/make_charts.py` | `archive/stats/*.yaml`, `entries/*/STATS.yaml` |
+| `archive/stats/SUMMARY.md` | `python tools/summarize_stats.py` | the same stats files |
+
+Before pushing, both of these must report "unchanged":
+
+```bash
+python tools/make_results_table.py --check
+python tools/make_leaderboard_charts.py --check
+```
+
+## Statistics
+
+Each member adds `archive/stats/<github id>.yaml` (template: `entries/_TEMPLATE/STATS.yaml`). What to report and how to extract it: [archive/STATS_REQUEST.md](archive/STATS_REQUEST.md). Use the scripts in [`tools/`](tools/README.md) and never add numbers by hand. Give the source of every number, mark estimates as "estimate" and lower bounds as "lower bound", and count shared usage once (`counted_in:` marks a copy).
+
+## Honesty rules
+
+Use exactly one verification level per statement and do not blend them:
+
+| Level | Meaning |
+|---|---|
+| **Lean kernel-checked** | a Lean declaration compiled with exit code 0, with its `#print axioms` output in a log in the repository |
+| **computed** | checked by a program (exhaustive search, evaluator, script); say which program |
+| **AI-checked** | checked only by a model (verifier agent, cross-check audit) |
+| **human-reviewed** | read and confirmed by a named person, with scope and date in `TEAM.md` |
+
+- No claim without a link to the file that supports it.
+- Put the previous best next to ours; say "partial" when it is partial and "formalization of a known result" when it is that.
+- Say what is **not** verified: `sorry`, new axioms, `native_decide` in the dependency cone of a claim, unproved transcription or correspondence steps, builds run on one machine only.
+- Ranks: compute them with ties sharing a rank (the platform lists tied accounts alphabetically) and always print the board size — "1st of 12", "tied for 1st, 3 of 12 accounts", "only entry on the board (1 account)". Never a bare "1st". A leaderboard figure is a snapshot: give its read time.
+- A passing hill is not a proof, and reproducing a board's best value is not new mathematics.
+- Disclose AI and tool use and the state of human review truthfully in the packet and in `ENTRY.yaml`.
+
+## Secrets and privacy
+
+Do not commit API keys, tokens, passwords, `.env` files, server addresses or host names, or account e-mail addresses. The only personal data in the repository is what a member writes into their own block of `TEAM.md`. Usage scripts output numbers only; do not commit their `--files` / `--sessions` output or any transcript. Refer to machines as "server" and "laptop". Read `git diff --cached` before every commit.
+
+## Checksums
+
+```bash
+bash tools/make_checksums.sh write entries/<name>     # after the artifact is complete
+bash tools/make_checksums.sh verify entries/<name>    # reviewers run this
+```
+
+`.gitattributes` (`* -text`) keeps line endings untouched so that checksums stay valid; do not change it.
+
+## Branches, commits, review
+
+- Work on a branch (`entry/<name>`, `hill/<hill>-<id>`, `team/<id>`, `archive/<topic>`) and open a pull request; another member reviews before merging.
+- Commit message: `<area>: <what changed>` in the imperative, e.g. `ramsey-k4-multiplicity: add Lean certificate sources`, `README: regenerate tables`.
+- Dates as `2026-10-02`; times with a zone, `21:08 KST`.
+
+Review checklist before merging:
+
+- [ ] `ENTRY.yaml` is complete (each `TODO` has a reason) and its `readme:` links resolve.
+- [ ] `artifact/SHA256SUMS` exists and `make_checksums.sh verify` passes.
+- [ ] Every claimed theorem name exists in the sources, and the axioms in the logs match the packet.
+- [ ] No `sorry`, new `axiom` or `native_decide` in the dependency cone of a claim, or it is disclosed.
+- [ ] No secrets, personal data or build products.
+- [ ] Generated content is up to date (both `--check` commands pass).
+- [ ] AI use and human review are stated as they were.
+
+## Tags and immutability
+
+- Fix the submitted state of an entry with an annotated tag: `git tag -a <entry>-v1 -m "<entry> as submitted 2026-10-03"`, then `git push origin <entry>-v1`. The packet's "final commit" field quotes the commit of that tag.
+- To change something after submission, add a new commit and tag `<entry>-v2`; record what changed and why in the entry's `NOTES.md`. Do not overwrite.
+- Never move or delete a tag. Never force-push.
+
+## Language
+
+`README.md` and `CONTRIBUTING.md` are in English (judges and outside readers); `README.ko.md` and `CONTRIBUTING.ko.md` are the Korean companions and may be shorter. Packets and artifact READMEs are in English. Archive notes (`archive/`) may be in either language. When you change an English page, update its Korean companion in the same pull request.

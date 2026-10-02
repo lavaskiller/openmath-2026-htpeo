@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-label="Ramsey validation board: improvement over the hill reference per account" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="0.0" y="16.0" font-size="15" text-anchor="start" fill="#f0f6fc" font-weight="600">K4 Ramsey multiplicity hill, validation board (read 2026-10-02T16:23Z)</text>
+<text x="0.0" y="34.0" font-size="12" text-anchor="start" fill="#c3c2b7">improvement over the hill reference: 30,142,273,432 minus the account's density_ppt (larger is better)</text>
+<text x="438.9" y="54.0" font-size="11" text-anchor="middle" fill="#c3c2b7">reference</text>
+<text x="138.0" y="77.0" font-size="12" text-anchor="end" fill="#f0f6fc" font-weight="600">#1 lavaskiller</text>
+<rect x="438.93" y="65.00" width="171.07" height="16.00" fill="#3987e5" rx="3"/>
+<text x="616.0" y="77.0" font-size="12" text-anchor="start" fill="#f0f6fc" font-weight="600">+2,339,436</text>
+<text x="138.0" y="103.0" font-size="12" text-anchor="end" fill="#f0f6fc">#2 madhanj05</text>
+<rect x="438.93" y="91.00" width="135.17" height="16.00" fill="#6e7681" rx="3"/>
+<text x="580.1" y="103.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,848,405</text>
+<text x="138.0" y="129.0" font-size="12" text-anchor="end" fill="#f0f6fc">#3 a-hamdi</text>
+<rect x="438.93" y="117.00" width="99.72" height="16.00" fill="#6e7681" rx="3"/>
+<text x="544.6" y="129.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,363,703</text>
+<text x="138.0" y="155.0" font-size="12" text-anchor="end" fill="#f0f6fc">#4 rachtsy</text>
+<rect x="438.93" y="143.00" width="98.07" height="16.00" fill="#6e7681" rx="3"/>
+<text x="543.0" y="155.0" font-size="12" text-anchor="start" fill="#f0f6fc">+1,341,124</text>
+<text x="138.0" y="181.0" font-size="12" text-anchor="end" fill="#f0f6fc" font-weight="600">#5 hl728</text>
+<rect x="438.93" y="169.00" width="40.40" height="16.00" fill="#3987e5" rx="3"/>
+<text x="485.3" y="181.0" font-size="12" text-anchor="start" fill="#f0f6fc" font-weight="600">+552,486</text>
+<text x="138.0" y="207.0" font-size="12" text-anchor="end" fill="#f0f6fc">#6 yavol</text>
+<rect x="438.93" y="195.00" width="40.39" height="16.00" fill="#6e7681" rx="3"/>
+<text x="485.3" y="207.0" font-size="12" text-anchor="start" fill="#f0f6fc">+552,334</text>
+<text x="138.0" y="233.0" font-size="12" text-anchor="end" fill="#f0f6fc">#7 danamouk</text>
+<rect x="438.93" y="221.00" width="17.32" height="16.00" fill="#6e7681" rx="3"/>
+<text x="462.3" y="233.0" font-size="12" text-anchor="start" fill="#f0f6fc">+236,898</text>
+<text x="138.0" y="259.0" font-size="12" text-anchor="end" fill="#f0f6fc" font-weight="600">#8 n0rang2</text>
+<rect x="438.93" y="247.00" width="6.41" height="16.00" fill="#3987e5" rx="3"/>
+<text x="451.3" y="259.0" font-size="12" text-anchor="start" fill="#f0f6fc" font-weight="600">+87,593</text>
+<text x="138.0" y="285.0" font-size="12" text-anchor="end" fill="#f0f6fc">#9 shaff622</text>
+<rect x="438.93" y="273.00" width="1.68" height="16.00" fill="#6e7681" rx="0.839116"/>
+<text x="446.6" y="285.0" font-size="12" text-anchor="start" fill="#f0f6fc">+22,950</text>
+<text x="138.0" y="311.0" font-size="12" text-anchor="end" fill="#f0f6fc">#10 rohith18p</text>
+<rect x="435.92" y="299.00" width="3.00" height="16.00" fill="#6e7681" rx="1.50178"/>
+<text x="429.9" y="311.0" font-size="12" text-anchor="end" fill="#f0f6fc">−41,074</text>
+<text x="138.0" y="337.0" font-size="12" text-anchor="end" fill="#f0f6fc">#11 ottogin</text>
+<rect x="411.42" y="325.00" width="27.50" height="16.00" fill="#6e7681" rx="3"/>
+<text x="405.4" y="337.0" font-size="12" text-anchor="end" fill="#f0f6fc">−376,111</text>
+<text x="138.0" y="363.0" font-size="12" text-anchor="end" fill="#f0f6fc">#12 vyahhi</text>
+<rect x="250.00" y="351.00" width="188.93" height="16.00" fill="#6e7681" rx="3"/>
+<text x="244.0" y="363.0" font-size="12" text-anchor="end" fill="#f0f6fc">−2,583,604</text>
+<line x1="438.9" y1="60.0" x2="438.9" y2="370.0" stroke="#484f58" stroke-width="1"/>
+<text x="0.0" y="396.0" font-size="11" text-anchor="start" fill="#c3c2b7">Blue: team accounts. Bars left of the line do not beat the reference (reference_beaten = 0).</text>
+</svg>

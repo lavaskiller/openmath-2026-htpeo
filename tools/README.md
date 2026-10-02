@@ -11,6 +11,7 @@ Scripts shared by all entries: checksum generation/verification, usage summation
 | `summarize_stats.py [repo_root]` | reads `entries/*/STATS.yaml` and `archive/stats/*.yaml`, writes `archive/stats/SUMMARY.md` |
 | `make_results_table.py [repo_root] [--check]` | rewrites the results table (`<!-- RESULTS:START/END -->`) and the resources table (`<!-- RESOURCES:START/END -->`) of `README.md` and `README.ko.md` from the `readme:` block of each `entries/*/ENTRY.yaml`, `entries/PENDING.yaml` and the stats files; stops if a link target is missing |
 | `make_charts.py [repo_root]` | writes the light/dark SVG charts of the README and `chart_data.json` into `assets/` from the stats files (output tokens by entry and by day, recorded wall hours by purpose) |
+| `make_leaderboard_charts.py [repo_root] [--check]` | reads `archive/leaderboards/lb_*.json`, computes ranks with ties (competition ranking over the full metric tuple; the API `rank` is not used), writes `assets/hills_overview_*.svg`, `assets/ramsey_leaderboard_*.svg`, `assets/leaderboard_data.json` and the table between `<!-- HILLS:START/END -->` in both READMEs. `make_results_table.py` imports it for the Standing column and the hill-result rows |
 
 Notes:
 

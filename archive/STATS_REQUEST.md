@@ -1,56 +1,58 @@
-# 통계 요청서
+# Statistics request
 
-아카이브 문서에 "무엇에 얼마를 썼는가"를 넣으려면 팀원마다 같은 형식의 수치가 필요합니다. 아래 항목을 `archive/stats/<이름>.yaml`(틀: `entries/_TEMPLATE/STATS.yaml`)로 올려 주세요. 항목별로 나눌 수 있으면 나누고, 어려우면 전체 합계와 대략의 비율을 적습니다.
+Korean original: [STATS_REQUEST.ko.md](STATS_REQUEST.ko.md).
 
-## 1. 요청하는 수치
+To say "what was spent on what" in the archive, we need the same figures in the same format from every member. Please add the items below as `archive/stats/<name>.yaml` (template: `entries/_TEMPLATE/STATS.yaml`). Split by entry where you can; where that is hard, give the total and a rough share per entry.
 
-| 구분 | 수치 | 왜 필요한가 |
+## 1. Figures requested
+
+| Group | Figures | Why |
 |---|---|---|
-| AI 사용 | 모델별 입력·출력·캐시 토큰, 세션(에이전트 실행) 수, 도구가 알려 주는 비용, 구독 사용량 변화 | 전체 토큰 활용, 모델별 비중, 결과당 비용 |
-| 계산 자원 | 기계 사양, 용도별 실행 시간(벽시계·CPU), 최대 메모리 | 탐색·빌드에 든 계산량 |
-| 사람 시간 | 사람별 시간과 활동(조종, 검토, 작성, 제출) | 사람이 한 일과 AI가 한 일의 구분 |
-| 산출물 | Lean 줄 수·파일 수, 주장 정리 수, 빌드 시간, 검증된 중간 결과 수 | 규모 |
-| 시도 | 성공한 접근과 실패한 접근(한 줄씩) | 발견점 절의 근거 |
-| 날짜 | 작업 시작·끝, 주요 시점 | 타임라인, 대회 기간 안의 작업임을 보이기 |
+| AI usage | input, output and cache tokens per model; number of sessions (agent runs); cost if the tool reports one; change of subscription usage | total token use, share per model, cost per result |
+| Compute | machine specification; run time per purpose (wall-clock and CPU); peak memory | compute spent on search and builds |
+| Human time | hours and activity per person (steering, review, writing, submission) | what people did and what AI did |
+| Outputs | Lean lines and files, number of claimed theorems, build time, number of verified intermediate results | scale |
+| Attempts | approaches that worked and approaches that failed (one line each) | basis of the findings section |
+| Dates | start and end of the work, main milestones | timeline; evidence that the work lies inside the event window |
 
-## 2. 수치를 뽑는 방법
+## 2. How to extract the figures
 
 **Claude Code**
 
-- 세션 기록은 `~/.claude/projects/<프로젝트 폴더>/*.jsonl`에 있습니다. 각 응답의 `usage` 칸에 `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens`가 있습니다.
-- 합산은 `tools/sum_claude_usage.py <폴더>`로 합니다(아직 없으면 요청해 주세요). 보조 에이전트 기록은 같은 폴더의 `subagents/` 아래에 있으니 함께 넣습니다.
-- 구독 플랜은 사용량 화면의 수치(5시간 창, 주간 창)와 초기화 횟수를 적습니다.
+- Session records are in `~/.claude/projects/<project folder>/*.jsonl`. Each reply has a `usage` field with `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens`.
+- Sum them with `tools/sum_claude_usage.py <folder>`. Subagent records are under `subagents/` in the same folder and are included.
+- For a subscription plan, note the figures of the usage screen (five-hour window, weekly window) and the number of resets.
 
-**codex(GPT)**
+**codex (GPT)**
 
-- 세션 기록은 `~/.codex/sessions/**/*.jsonl`에 있습니다. `token_count` 이벤트에 누적 토큰이 있습니다.
-- 구독 플랜은 주간 사용량 변화(예: 0% → 12%)와 초기화 횟수를 적습니다.
+- Session records are in `~/.codex/sessions/**/*.jsonl`. The `token_count` events carry cumulative tokens. Sum them with `tools/sum_codex_usage.py`.
+- For a subscription plan, note the change of weekly usage (for example 0% → 12%) and the number of resets.
 
-**에이전트 하네스(star6 run)**
+**Agent harness (star6 run)**
 
-- 서버에서 `scripts/mh-export-usage.sh star6 [out.tar.gz] [--since YYYY-MM-DD]`를 실행하면 모든 에이전트 실행의 프롬프트·응답과 `INDEX.json`(실행별 역할, 모델, 토큰, 비용)이 한 묶음으로 나옵니다. 합산표는 `INDEX.json`에서 만듭니다.
-- 묶음 자체는 크고 내부 기록이 들어 있으니 저장소에 올리지 않고, 합산 수치와 묶음의 체크섬만 올립니다.
+- On the server, `scripts/mh-export-usage.sh star6 [out.tar.gz] [--since YYYY-MM-DD]` bundles the prompts and replies of every agent run with an `INDEX.json` (role, model, tokens and cost per run). The summary is made from `INDEX.json`; `tools/sum_harness_usage.py` sums the run logs directly.
+- The bundle is large and contains internal records: do not commit it. Commit only the sums and the checksum of the bundle.
 
-**웹 채팅이나 기타 도구**
+**Web chat and other tools**
 
-- 토큰 수를 알 수 없으면 대화 수와 대략의 분량을 적고 "추정"이라고 표시합니다.
+- If token counts are not available, give the number of conversations and a rough volume, marked "estimate".
 
-**계산 자원**
+**Compute**
 
-- 작업 스케줄러나 systemd 기록(`systemctl --user show <unit> -p CPUUsageNSec -p ExecMainStartTimestamp -p ExecMainExitTimestamp`), 빌드 로그의 시간·메모리 줄, 탐색 기록의 시각으로 계산합니다.
-- 기록이 없으면 시작·끝 시각과 프로세스 수로 추정하고 "추정"이라고 적습니다.
+- Use scheduler or systemd records (`systemctl --user show <unit> -p CPUUsageNSec -p ExecMainStartTimestamp -p ExecMainExitTimestamp`), the time and memory lines of build logs, and the time stamps of search records.
+- Where there is no record, estimate from start and end times and the number of processes, and write "estimate".
 
-**산출물**
+**Outputs**
 
-- `find artifact -name '*.lean' | xargs wc -l`로 줄 수, 패킷의 주장 정리 목록으로 정리 수.
+- Lines: `find artifact -name '*.lean' | xargs wc -l`. Theorems: the list of claimed theorems in the packet.
 
-## 3. 올릴 때 주의
+## 3. When you commit
 
-- 계정 이메일, 키, 토큰, 서버 주소는 적지 않습니다. "서버 계정", "개인 계정"처럼만 구분합니다.
-- 수치마다 출처(명령 또는 파일)를 적습니다.
-- 여러 항목에 걸친 사용량은 한 번만 세도록, 어느 파일에 넣었는지 `notes`에 적습니다.
-- 마감 후에도 통계는 고칠 수 있습니다. 제출물(`entries/`의 태그)과는 따로 관리합니다.
+- Do not write account e-mail addresses, keys, tokens or server addresses. Distinguish accounts only as "server account", "personal account".
+- Give the source (command or file) of every figure.
+- Count usage that spans several entries once; say in `notes` which file holds it.
+- Statistics may be corrected after the deadline. They are managed separately from the submissions (the tags under `entries/`).
 
-## 4. 합산표에 들어갈 열
+## 4. Columns of the summary
 
-`archive/stats/SUMMARY.md`는 스크립트가 만듭니다. 열: 항목, 모델, 입력 토큰, 출력 토큰, 캐시 토큰, 세션 수, 비용(있으면), 계산 CPU시간, 사람 시간, Lean 줄 수, 주장 정리 수.
+`archive/stats/SUMMARY.md` is written by `tools/summarize_stats.py`. Columns: entry, model, input tokens, output tokens, cache tokens, sessions, cost (if any), compute CPU hours, human time, Lean lines, claimed theorems.
