@@ -49,4 +49,4 @@ API 키, 토큰, 비밀번호, `.env`, 서버 주소, 계정 이메일은 올리
 
 ## 언어
 
-`README.md`와 `CONTRIBUTING.md`는 영어, `README.ko.md`와 이 파일은 한국어 동반 문서입니다. 아카이브 기록은 어느 언어든 됩니다. 영어 문서를 고치면 한국어 문서도 같은 PR에서 고칩니다.
+영어가 기준입니다. 모든 문서의 본문은 영어 파일이고, 한국어 동반 문서(`*.ko.md`)는 README, CONTRIBUTING, `archive/STATS_REQUEST`, `archive/REPORT`, `archive/timeline`, `archive/findings/`에만 둡니다. 동반 문서에는 영어 파일에 없는 사실을 적지 않습니다. 한쪽을 고치면 다른 쪽도 같은 PR에서 고칩니다.

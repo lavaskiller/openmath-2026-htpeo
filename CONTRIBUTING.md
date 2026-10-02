@@ -145,4 +145,4 @@ Review checklist before merging:
 
 ## Language
 
-`README.md` and `CONTRIBUTING.md` are in English (judges and outside readers); `README.ko.md` and `CONTRIBUTING.ko.md` are the Korean companions and may be shorter. Packets and artifact READMEs are in English. Archive notes (`archive/`) may be in either language. When you change an English page, update its Korean companion in the same pull request.
+English is the standard language of this repository: every document has an English main file, and packets, artifact READMEs, entry notes and generated tables are English only. Korean companions (`*.ko.md`) exist for selected files, for the team: `README`, `CONTRIBUTING`, `archive/STATS_REQUEST`, `archive/REPORT`, `archive/timeline` and the notes in `archive/findings/`. Each pair links to the other at the top. A companion may be shorter, but it must not contain facts that are missing from the English file; when you change one, update the other in the same pull request.

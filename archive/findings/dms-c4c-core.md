@@ -1,84 +1,86 @@
-# DMS: 순환 4-변연결(c4c) 핵심에서 멈춘 지점과 PMU
+# DMS: where things stopped at the cyclically 4-edge-connected (c4c) core, and PMU
 
-대상: Dvořák–Mohar–Šámal 추측(subcubic 그래프의 star chromatic index ≤ 6; "Star chromatic index", J. Graph Theory 72(3), 2013, arXiv:1011.3376). 기간: 2026-10-01 ~ 2026-10-02(KST).
+한국어: [dms-c4c-core.ko.md](dms-c4c-core.ko.md)
 
-## 요약
+Subject: the Dvořák–Mohar–Šámal conjecture (star chromatic index ≤ 6 for subcubic graphs; "Star chromatic index", J. Graph Theory 72(3), 2013, arXiv:1011.3376). Period: 2026-10-01 ~ 2026-10-02 (KST).
 
-- 추측은 증명되지 않았다. Lean으로 확인된 것은 "이름 붙은 열린 가설들 ⇒ DMS" 형태의 환원과 유한 경우뿐이다.
-- 환원의 다섯 조각(P18, P16, P14, P23, P19)은 모두 열려 있고, 각각 자를 수 있는 작은 변 절단이 없는 c4c 3정칙 그래프에 대한 무한 명제에서 멈췄다.
-- c4c 핵심에 대한 명제 후보 PMU(모든 완벽 매칭이 어떤 star 6-채색의 색 클래스가 됨)는 n = 10~18 전수와 n = 20~40 표본에서 실패가 없다. 증명은 없다.
-- PMU의 귀납 단계를 "고정 반경 안에서만 다시 칠하는 국소 수선"으로 증명하는 길은 반지름 2와 3에서 명시적 그래프로 반증되었다. 발견된 실패는 모두 Kempe 교환 1회로 구제된다.
-- 순환 4-변 절단을 장치로 바꾸는 환원은 8·10·12꼭짓점 면에서만 확인되었고, 4-사이클 면은 환원되지 않아 핵심이 순환 5-변연결로 좁혀지지 않는다.
-- 이 노트의 조사 결과는 Lean으로 검증되지 않았고 사람이 검토하지 않았다(`star6_packet_final.md` §3 머리말).
+## Summary
 
-## 내용
+- The conjecture has not been proved. What has been confirmed in Lean is only a reduction of the form "named open hypotheses ⇒ DMS" and finite cases.
+- The five pieces of the reduction (P18, P16, P14, P23, P19) are all open, and each stopped at an infinite statement about c4c cubic graphs, which have no small edge cut to cut along.
+- The candidate statement for the c4c core, PMU (every perfect matching is a colour class of some star 6-colouring), has no failures in the exhaustive check for n = 10~18 and in samples for n = 20~40. There is no proof.
+- The route of proving the induction step of PMU by "local repair that recolours only within a fixed radius" was refuted by explicit graphs at radius 2 and 3. Every failure found is rescued by a single Kempe swap.
+- The reduction that replaces a cyclic 4-edge cut by a gadget was confirmed only for 8-, 10- and 12-vertex sides, and the 4-cycle side does not reduce, so the core does not narrow to cyclically 5-edge-connected.
+- The investigation results in this note have not been verified in Lean and have not been human-reviewed (preamble of `star6_packet_final.md` §3).
 
-### 1. 다섯 조각과 Lean 환원
+## Details
 
-- **Lean 커널 검증**: `RH2F.layer37`(Lean 4.33.1 + Mathlib v4.33.1, 98개 모듈, 공리 `[propext, Classical.choice, Quot.sound]`)이 `FEEXTD10 → FEEXISTD18 → POLE → TDTRI → FEEXTTNE16 → FEEXIST0NE16 → DMS`와 유한 명제 `BASE12`, `SIMPLE14`, `B14D`, `FEEXIST16`을 증명한다. 가설들은 증명되지 않았다. 출처: `star6_packet_final.md` §1.4, `star6_artifact/lean/pack3/STATUS.md`.
-- **AI가 검증**: 비형식 루트 조합 ROOT-CS4(fact `6010cb59`): P18 ∧ P16 ∧ P14(POLE) ∧ P23(TD-TRI) ∧ P19(II_D) ⇒ DMS. LLM 검증과 GPT 감사를 통과했다. 출처: PLAN §4 "이전 기록 (09-30 16:45~17:30)".
-- **AI가 검증 + 계산으로 확인**: Lean 가설과 계약 문장의 대응(FEEXTD10=P18, FEEXISTD10=P16, POLE=P14, TDTRI=P23, IID=P19)은 보조 세션이 조항별로 대조했고, 정의별 Lean식·산문식 비교 계산에서 불일치 0이었다. 출처: PLAN §4 "Lean 명제 대조 세션 완료(01:05)".
-- 사람이 검토: 없음.
+### 1. The five pieces and the Lean reduction
 
-### 2. 조각별로 멈춘 곳(2026-10-01)
+- **Lean kernel-checked**: `RH2F.layer37` (Lean 4.33.1 + Mathlib v4.33.1, 98 modules, axioms `[propext, Classical.choice, Quot.sound]`) proves `FEEXTD10 → FEEXISTD18 → POLE → TDTRI → FEEXTTNE16 → FEEXIST0NE16 → DMS` and the finite statements `BASE12`, `SIMPLE14`, `B14D`, `FEEXIST16`. The hypotheses have not been proved. Source: `star6_packet_final.md` §1.4, `star6_artifact/lean/pack3/STATUS.md`.
+- **AI-checked**: the informal root combination ROOT-CS4 (fact `6010cb59`): P18 ∧ P16 ∧ P14(POLE) ∧ P23(TD-TRI) ∧ P19(II_D) ⇒ DMS. It passed LLM verification and the GPT audit. Source: PLAN §4 "이전 기록 (09-30 16:45~17:30)".
+- **AI-checked + computed**: the correspondence between the Lean hypotheses and the contract sentences (FEEXTD10=P18, FEEXISTD10=P16, POLE=P14, TDTRI=P23, IID=P19) was compared clause by clause by an auxiliary session, and a per-definition computation comparing the Lean form with the prose form gave 0 mismatches. Source: PLAN §4 "Lean 명제 대조 세션 완료(01:05)".
+- Human-reviewed: none.
 
-| 조각 | 확인된 것 | 멈춘 곳 | 출처 |
+### 2. Where each piece stopped (2026-10-01)
+
+| Piece | What was confirmed | Where it stopped | Source |
 |---|---|---|---|
-| P23 (TD-TRI) | 환원 TD-RED(fact `b4e4863f`)는 적대적 점검에서 빈틈 없음. n=10~16의 먼 쪽 14,926개 위반 0 | 남은 (TD-CORE)가 유한 검사로 줄지 않음. 남은 명제는 c4c 골격 위의 (TD-C4C)/(TDD-C4C) | `informal/p23-check_REPORT.md`; PLAN §4 결과 (1), (2) |
-| P16 (FE-EXIST-D) | 본래 형태(status form)는 N=20 전수(X 401,621개, 완벽 매칭 약 2,200만)에서 성립 | fact 진전 최소. 증명 방향 없음 | `informal/p16_REPORT.md`; PLAN §4 "다섯 조각 현황(09:15)" |
-| P18 / P09 (FE-EXT-D) | (KR)의 교환 1개·창 무시 경우만 Vizing 부채꼴 논증으로 거의 증명(교차 배치 한 경우는 빈틈) | 창을 고려하면 약 2~20% 실패, k≥2는 손대지 못함. 장애물 fact `567dd586`: 남은 ZONE은 유한 목록으로 닫을 수 없음 | PLAN §4 결과 (3) p09-kr, "이전 기록 (09-30 16:45~17:30)" |
-| P14 (POLE) | 10~16꼭짓점은 POLE-16(fact `3462e827`)으로 성립 | 재배치 경로의 존재 명제가 반증됨(아래 "실패/반증된 접근"). (C4C-DOM-D)₌₁₈ 전수 조사는 10-01 23:35 기준 진행 중 | PLAN §4 "P14 사전 조사 세션 완료(01:15)", "23:35 조치"; `star6_packet_final.md` §3.1 |
-| P19 (II_D) | 세 경로(LEAF-UNIV, NE, pole) 모두 18꼭짓점 안팎까지 반례 없음. (FE-EXT-T-NE)₁₆은 16꼭짓점 전수 약 5,818만 경우 실패 0 | Theorem O1로 국소 증명 불가. 승인된 어떤 과제도 NE 명제를 함의하지 않음 | PLAN §4 "P19 증명 세션 완료(23:55)", "P19 NE 경로 세션 완료(00:35)" |
+| P23 (TD-TRI) | The reduction TD-RED (fact `b4e4863f`) showed no gap under adversarial checking. 0 violations among the 14,926 far sides for n=10~16 | The remaining (TD-CORE) does not reduce to a finite check. The remaining statements are (TD-C4C)/(TDD-C4C) on the c4c skeleton | `informal/p23-check_REPORT.md`; PLAN §4 results (1), (2) |
+| P16 (FE-EXIST-D) | The original form (status form) holds in the exhaustive check for N=20 (401,621 X, about 22 million perfect matchings) | Minimal fact progress. No proof direction | `informal/p16_REPORT.md`; PLAN §4 "다섯 조각 현황(09:15)" |
+| P18 / P09 (FE-EXT-D) | Only the case of (KR) with one swap and the window ignored is nearly proved by a Vizing fan argument (one case, the crossing configuration, is a gap) | With the window taken into account, about 2~20% fail, and k≥2 was not touched. Obstruction fact `567dd586`: the remaining ZONE cannot be closed by a finite list | PLAN §4 result (3) p09-kr, "이전 기록 (09-30 16:45~17:30)" |
+| P14 (POLE) | 10~16 vertices hold by POLE-16 (fact `3462e827`) | The existence statement for the relocation path was refuted (see "Failed/refuted approaches" below). The exhaustive survey of (C4C-DOM-D)₌₁₈ was in progress as of 10-01 23:35 | PLAN §4 "P14 사전 조사 세션 완료(01:15)", "23:35 조치"; `star6_packet_final.md` §3.1 |
+| P19 (II_D) | All three routes (LEAF-UNIV, NE, pole) have no counterexample up to around 18 vertices. (FE-EXT-T-NE)₁₆ has 0 failures in the exhaustive 16-vertex check of about 58.18 million cases | Local proof is impossible by Theorem O1. None of the approved tasks implies the NE statement | PLAN §4 "P19 증명 세션 완료(23:55)", "P19 NE 경로 세션 완료(00:35)" |
 
-- 검증 수준: 표의 수치는 모두 **계산으로 확인**(서버에서 스크립트를 한 번 실행, 독립 재실행 없음). TD-RED 점검, Theorem O1, Lemma V는 **AI가 검증**(또는 AI가 쓴 손 증명)이다. 사람이 검토하지 않았다.
-- 공통 진단(운영 기록): 이 프로젝트에서 성공한 무한 명제(RH2 뼈대, H-RED 계열, TD-RED)는 모두 작은 변 절단·digon·삼각형에서 잘라 줄이는 최소 반례 귀납이었다. 남은 다섯 조각은 자를 곳이 없는 c4c 핵심에서 멈췄다. 출처: PLAN §4 "공통 병목 진단".
-- 문헌 조사(AI 세션, 사람 미검토): 6색은 성긴 부류에서만 해결되어 있고, 엔트로피 압축/LLL은 Δ=3에서 22색 수준이라 제외했다. 출처: PLAN §4 "조사 결과(두 세션 완료)".
+- Verification level: the figures in the table are all **computed** (a script run once on the server, no independent re-run). The TD-RED check, Theorem O1 and Lemma V are **AI-checked** (or hand proofs written by AI). Not human-reviewed.
+- Common diagnosis (operations record): the infinite statements that succeeded in this project (the RH2 skeleton, the H-RED family, TD-RED) were all minimal-counterexample inductions that cut and reduce at small edge cuts, digons and triangles. The remaining five pieces stopped at the c4c core, where there is nowhere to cut. Source: PLAN §4 "공통 병목 진단".
+- Literature survey (AI session, not human-reviewed): 6 colours is settled only for sparse classes, and entropy compression/LLL is at the level of 22 colours for Δ=3, so it was excluded. Source: PLAN §4 "조사 결과(두 세션 완료)".
 
 ### 3. PMU
 
-명제(추측): n ≥ 10인 모든 c4c 단순 3정칙 그래프 G와 모든 완벽 매칭 M에 대해, 색 6의 색 클래스가 정확히 M인 star 6-변-채색이 존재한다.
+Statement (conjecture): for every c4c simple cubic graph G with n ≥ 10 and every perfect matching M, there exists a star 6-edge-colouring in which the colour class of colour 6 is exactly M.
 
-- **계산으로 확인**: n = 10~18의 모든 c4c 그래프의 완벽 매칭 193,521개 전수에서 실패 0. n = 20/24/30/40 표본 88,144개에서 실패 0. 실패하는 것은 K3,3(매칭 6개 전부)과 n=8의 16개 중 5개뿐이다. 출처: `informal/c4c-ext_REPORT.md` "Proposed hypothesis"(evidence `071a1c01e5f8f204`). n ≥ 20 표본은 균등 표본이 아니다(같은 보고서 Setup).
-- **계산으로 확인**: 제거 가능한 변은 n ≤ 18 전수에서 K4와 Q3에만 없고, n = 10~18에서는 모든 c4c 그래프에 n/2개 이상 있다. 출처: 같은 보고서 "Removable edges".
-- 귀납 단계 후보(mcPfix): M 안의 제거 가능한 변 e를 빼고 M′ = M − e로 둔다. 반지름 2에서 600쌍 중 321 성립, 3 실패, 276 시간 초과. 반지름 3에서 실패 0(313 성립, 527 시간 초과). 시간 초과는 미결이다. **계산으로 확인**. 출처: 같은 보고서 "Results", "Proposed hypothesis".
-- 빈틈(제거 가능한 변이 없는 매칭): n = 10/12/14/16/18에서 2/18/29/138/540쌍(합 727쌍, 그래프 462개). **계산으로 확인**. 출처: `informal/c4c-norem_REPORT.md` §1.
-- **AI가 검증**(보고서 안의 손 증명, 감사 기록 없음) + **계산으로 확인**: Lemma NR — c4c 단순 3정칙(n ≥ 8)에서 변이 제거 가능한 것과 어떤 순환 4-변 절단에도 속하지 않는 것이 동치. n = 8~18의 모든 변과 n = 20~32 표본 그래프 2,460개에서 불일치 0. 출처: `c4c-norem_REPORT.md` §1.
-- **계산으로 확인**: 둘째 환원(4-사이클 삭제 또는 K2로 축소)은 n = 16·18의 678쌍 전부와 n = 20·24·28 표본 445쌍 전부를 덮는다. n = 14의 2쌍은 덮지 못하므로 기저는 n = 10·12·14 계산, 단계는 n ≥ 16이 된다. 채색 확장은 반지름 3에서 실패 0, 반지름 2에서 1건 실패. 출처: `c4c-norem_REPORT.md` 머리말, §2, §4.
-- 사람이 검토: 없음. PMU에 대해 증명된 것은 없다(`star6_packet_final.md` §3.2).
+- **Computed**: 0 failures in the exhaustive check of the 193,521 perfect matchings of all c4c graphs with n = 10~18. 0 failures in the 88,144 samples for n = 20/24/30/40. The only failures are K3,3 (all 6 matchings) and 5 of the 16 for n=8. Source: `informal/c4c-ext_REPORT.md` "Proposed hypothesis" (evidence `071a1c01e5f8f204`). The n ≥ 20 samples are not uniform samples (Setup of the same report).
+- **Computed**: in the exhaustive check for n ≤ 18, only K4 and Q3 have no removable edge, and for n = 10~18 every c4c graph has at least n/2 of them. Source: same report, "Removable edges".
+- Induction-step candidate (mcPfix): remove a removable edge e in M and set M′ = M − e. At radius 2, of 600 pairs, 321 hold, 3 fail, 276 time out. At radius 3, 0 failures (313 hold, 527 time out). The timeouts are unresolved. **Computed**. Source: same report, "Results", "Proposed hypothesis".
+- Gap (matchings with no removable edge): for n = 10/12/14/16/18 there are 2/18/29/138/540 pairs (727 pairs in total, 462 graphs). **Computed**. Source: `informal/c4c-norem_REPORT.md` §1.
+- **AI-checked** (hand proof inside the report, no audit record) + **computed**: Lemma NR — in a c4c simple cubic graph (n ≥ 8), an edge being removable is equivalent to it belonging to no cyclic 4-edge cut. 0 mismatches over all edges for n = 8~18 and over 2,460 sampled graphs for n = 20~32. Source: `c4c-norem_REPORT.md` §1.
+- **Computed**: the second reduction (delete a 4-cycle or contract it to K2) covers all 678 pairs for n = 16·18 and all 445 sampled pairs for n = 20·24·28. It does not cover the 2 pairs for n = 14, so the base becomes the computation for n = 10·12·14 and the step is n ≥ 16. Colouring extension has 0 failures at radius 3 and 1 failure at radius 2. Source: `c4c-norem_REPORT.md` preamble, §2, §4.
+- Human-reviewed: none. Nothing has been proved about PMU (`star6_packet_final.md` §3.2).
 
-### 4. 4-변 절단 장치
+### 4. The 4-edge-cut gadget
 
-- **AI가 검증**(증명 개요만 있음): 붙이기 보조정리. 포트마다 상태 (c_i, l_i) 240개. 양쪽 채색은 절단 변의 색이 같고 모든 i, y에서 l_i(y) + l′_i(y) ≤ 2일 때에만 G의 star 채색으로 합쳐진다. 환경 상태 수는 일반 38,400,000, 매칭 색(MC) 8,458,240. 출처: `informal/c4c-4cut_REPORT.md` "Boundary state and gluing lemma", "Counts".
-- **계산으로 확인**: 장치 K2 하나가 8·10·12꼭짓점의 허용 면을 모두 대체한다(9/9, 50/50, 410/410). n=12는 표본 계산이며 긍정 판정에 대해서만 건전하다. 무차별 검사기와의 대조에서 불일치 0. 출처: 같은 보고서 머리말, "Limits".
-- 결과의 쓰임: 꼭짓점 수가 최소인 반례에는 8·10·12꼭짓점 허용 면을 가진 4-변 절단이 없다. MC에서는 10꼭짓점 전부와 8꼭짓점 9개 중 5개에만 해당한다. 출처: 같은 보고서 "What a worker would need".
+- **AI-checked** (proof outline only): gluing lemma. 240 states (c_i, l_i) per port. The colourings of the two sides merge into a star colouring of G if and only if the colours of the cut edges agree and l_i(y) + l′_i(y) ≤ 2 for all i, y. The number of environment states is 38,400,000 in general and 8,458,240 for matching colour (MC). Source: `informal/c4c-4cut_REPORT.md` "Boundary state and gluing lemma", "Counts".
+- **Computed**: the single gadget K2 replaces all admissible sides with 8, 10 and 12 vertices (9/9, 50/50, 410/410). n=12 is a sampled computation and is sound only for positive verdicts. 0 mismatches in the cross-check against a brute-force checker. Source: same report, preamble, "Limits".
+- Use of the result: a counterexample with the minimum number of vertices has no 4-edge cut with an admissible side of 8, 10 or 12 vertices. In MC this applies only to all of the 10-vertex ones and 5 of the 9 8-vertex ones. Source: same report, "What a worker would need".
 
-## 실패/반증된 접근
+## Failed/refuted approaches
 
-- **고정 반경 국소 수선(PMU 귀납 단계의 "모든 c′" 형태)**. 시도: 삽입 자리 주변 모양 8종에 대해 "모든 경계 채색이 반경 r 안에서 수선된다"를 SAT + CEGAR로 판정. 멈춘 곳: r = 2에서 8종 모두 실패, r = 3에서 6종 실패(2종은 45분 상한 시간 초과). 확인: 실제 c4c 그래프로 실현 — 트리형 n = 318(반경 2 불가, 3 가능), n = 574(반경 3 불가, 4 가능), 8종 모두 r = 2에서 n = 258~510. 실현된 모든 경우 Kempe 교환 1회(성분 3변 이하)가 구제. **계산으로 확인**. 출처: `informal/c4c-ball_REPORT.md` §3, §4.
-  - 기전(보고서의 설명): M을 축약하면 비-M 변이 4-정칙 그래프 G/M의 고유 5-변-채색이 되어 각 꼭짓점이 색 하나만 비운다. 고정된 경계 색이 공 내부를 경직시킨다. 무작위 c′는 늘 수선되고 악의적 c′만 실패한다. 출처: 같은 보고서 §5.
-  - 반경 4 이상은 미결(한쪽 탐침이 CEGAR 7,872회, 50분에 시간 초과). 출처: 같은 보고서 §5.
-- **일반 채색의 반경 1 수선**. n = 40에서 명시적 c′ 1개로 반증. 반경 0은 거의 모든 쌍에서 어떤 c′가 확장되지 않음. 발견된 r=0 실패 1,336건은 Kempe 교환 1회로 모두 구제. **계산으로 확인**. 출처: `c4c-ext_REPORT.md` "Results".
-- **가설 없는 MC 채색의 고정 반경 수선**. 새 두 변이 색 6이면 수선에 매칭 교대 사이클이 필요해 국소적이지 않다. r=2 실패가 n = 14/16/20/24/30에서 8/7/42/50/50쌍. **계산으로 확인**. 출처: `c4c-ext_REPORT.md` "Results", "Failure patterns".
-- **P19의 반지름 2 이하 국소 증명(LEAF-LOCAL)**. Theorem O1(손 증명, **AI가 검증**)로 원리적으로 불가. LEAF-LOCAL(1)은 44꼭짓점 반례(evidence `b44b4c3cf72cbb37`, **계산으로 확인**). 출처: PLAN §4 "P19 증명 세션 완료(23:55)", "P19 국소 검사 세션 완료(10-01 00:10)".
-- **4-변 절단 환원으로 핵심을 순환 5-변연결로 좁히기**. 4-사이클 면 C4는 일반·MC 모두 3꼭짓점 이하 장치로 환원되지 않는다. 일반 모드에서 6꼭짓점 면 하나도 환원 불가. 일반 명제 (H-RED)는 무한 족이고 12꼭짓점 너머는 미증명. **계산으로 확인**. 출처: `c4c-4cut_REPORT.md` 머리말, "Results".
-- **(FE-ALLPM-D)₂₀("모든 완벽 매칭" 형태)**. N=20 전수에서 나쁜 매칭 2종(18꼭짓점 호스트 + digon 1개). **계산으로 확인**. 출처: `informal/p16_REPORT.md`.
-- **TD-RED-POLE(문턱 10)**. 10꼭짓점 Y0, 극 v=8에서 (D3P-SDR) 실패. 문턱 12에서는 n = 12/14/16 전수(극 1,105/11,854/150,183개)와 n=18 표본 494,748개에서 실패 0. **계산으로 확인**. 출처: `informal/p23-pole_REPORT.md`.
-- **P14 재배치 경로의 존재 명제**. P25는 크기 20에서 154,792개 중 49개 실패(evidence `91f4850e`, 반례 `977968d5`). 조건을 (d★)로 고친 P28도 falsifier가 반증(크기 20, D=∅). **계산으로 확인**. 출처: PLAN §4 "P14 사전 조사 세션 완료(01:15)", "23:35 조치".
+- **Fixed-radius local repair (the "all c′" form of the PMU induction step)**. Tried: for 8 shapes of the neighbourhood of the insertion site, deciding "every boundary colouring is repaired within radius r" with SAT + CEGAR. Where it stopped: all 8 shapes fail at r = 2, 6 shapes fail at r = 3 (2 shapes timed out at the 45-minute cap). Confirmation: realized by actual c4c graphs — tree-type n = 318 (radius 2 impossible, 3 possible), n = 574 (radius 3 impossible, 4 possible), all 8 shapes at r = 2 with n = 258~510. In every realized case a single Kempe swap (component of at most 3 edges) rescues it. **Computed**. Source: `informal/c4c-ball_REPORT.md` §3, §4.
+  - Mechanism (the report's explanation): contracting M makes the non-M edges a proper 5-edge-colouring of the 4-regular graph G/M, so each vertex is missing exactly one colour. The fixed boundary colours make the interior of the ball rigid. A random c′ is always repaired and only an adversarial c′ fails. Source: same report §5.
+  - Radius 4 and above is unresolved (one probe timed out after 7,872 CEGAR rounds and 50 minutes). Source: same report §5.
+- **Radius-1 repair of general colourings**. Refuted at n = 40 by 1 explicit c′. At radius 0, for almost every pair some c′ does not extend. The 1,336 r=0 failures found are all rescued by a single Kempe swap. **Computed**. Source: `c4c-ext_REPORT.md` "Results".
+- **Fixed-radius repair of MC colourings without a hypothesis**. If the two new edges have colour 6, the repair needs a matching-alternating cycle and so is not local. r=2 failures for n = 14/16/20/24/30 are 8/7/42/50/50 pairs. **Computed**. Source: `c4c-ext_REPORT.md` "Results", "Failure patterns".
+- **Local proof of P19 at radius 2 or less (LEAF-LOCAL)**. Impossible in principle by Theorem O1 (hand proof, **AI-checked**). LEAF-LOCAL(1) has a 44-vertex counterexample (evidence `b44b4c3cf72cbb37`, **computed**). Source: PLAN §4 "P19 증명 세션 완료(23:55)", "P19 국소 검사 세션 완료(10-01 00:10)".
+- **Narrowing the core to cyclically 5-edge-connected by the 4-edge-cut reduction**. The 4-cycle side C4 does not reduce to a gadget with at most 3 vertices, in either the general or the MC mode. In general mode one 6-vertex side is also irreducible. The general statement (H-RED) is an infinite family and is unproved beyond 12 vertices. **Computed**. Source: `c4c-4cut_REPORT.md` preamble, "Results".
+- **(FE-ALLPM-D)₂₀ (the "every perfect matching" form)**. 2 kinds of bad matching in the exhaustive check for N=20 (18-vertex host + 1 digon). **Computed**. Source: `informal/p16_REPORT.md`.
+- **TD-RED-POLE (threshold 10)**. (D3P-SDR) fails at the 10-vertex Y0, pole v=8. At threshold 12 there are 0 failures in the exhaustive check for n = 12/14/16 (1,105/11,854/150,183 poles) and in 494,748 samples for n=18. **Computed**. Source: `informal/p23-pole_REPORT.md`.
+- **The existence statement for the P14 relocation path**. P25 fails for 49 out of 154,792 at size 20 (evidence `91f4850e`, counterexample `977968d5`). P28, with the condition corrected to (d★), was also refuted by the falsifier (size 20, D=∅). **Computed**. Source: PLAN §4 "P14 사전 조사 세션 완료(01:15)", "23:35 조치".
 
-## 남은 질문
+## Open questions
 
-- (NR-2) 모든 M-변이 순환 4-변 절단에 속하는 쌍(n ≥ 16)에 쓸 수 있는 4-사이클이 항상 있는가. 증명 아이디어 없음. n = 14에서는 거짓(2쌍). 출처: `c4c-norem_REPORT.md` §4.
-- PMU를 삽입 자리에서 유연한 c′를 넘겨주는 자기 재생산 명제로 강화할 수 있는가, 또는 Kempe/교대 사슬을 쓰는 비국소 수선 논증(Vizing형)이 가능한가. 출처: `c4c-ball_REPORT.md` §6; PLAN §4 "c4c 핵심 공략 종합(10-02)".
-- 반경 4 이상에서 "모든 c′" 형태가 성립하는가. r = 3에서 모양 c4e2, c5u는 미결. 출처: `c4c-ball_REPORT.md` §3, §5.
-- PMU 조사는 단순 그래프만 다뤘다. 프로젝트 설정의 digon, 극 조각, 삼각형으로의 이식은 하지 않았다. 출처: `c4c-ext_REPORT.md` "Not covered".
-- (H-RED): 8꼭짓점 이상의 모든 허용 4-pole이 K2로 대체되는가. 출처: `c4c-4cut_REPORT.md`.
-- PMU가 다섯 조각 중 어느 것을 정확히 함의하는지에 대한 기록: TODO(출처 없음).
-- 운영 측 평가: 마감 안에 증명할 가능성은 없다고 보고 대회 이후 과제로 기록했다. 출처: PLAN §4 "c4c 핵심 공략 종합(10-02)".
+- (NR-2) For pairs (n ≥ 16) in which every M-edge belongs to a cyclic 4-edge cut, is there always a usable 4-cycle. No proof idea. False for n = 14 (2 pairs). Source: `c4c-norem_REPORT.md` §4.
+- Can PMU be strengthened into a self-reproducing statement that hands over a flexible c′ at the insertion site, or is a non-local repair argument using Kempe/alternating chains (Vizing-type) possible. Source: `c4c-ball_REPORT.md` §6; PLAN §4 "c4c 핵심 공략 종합(10-02)".
+- Does the "all c′" form hold at radius 4 and above. At r = 3 the shapes c4e2 and c5u are unresolved. Source: `c4c-ball_REPORT.md` §3, §5.
+- The PMU investigation covered simple graphs only. It was not ported to the digons, pole pieces and triangles of the project setting. Source: `c4c-ext_REPORT.md` "Not covered".
+- (H-RED): is every admissible 4-pole with 8 or more vertices replaced by K2. Source: `c4c-4cut_REPORT.md`.
+- Record of exactly which of the five pieces PMU implies: TODO (no source).
+- Assessment on the operations side: proving it within the deadline was judged not to be possible, and it was recorded as a post-competition task. Source: PLAN §4 "c4c 핵심 공략 종합(10-02)".
 
-## 출처
+## Sources
 
-- `harness/docs/mh/PLAN.md` §4(10-01, 10-02 항목). 손으로 쓴 운영 기록이며 세션 완료 시각은 이 기록에서만 나온다.
+- `harness/docs/mh/PLAN.md` §4 (entries for 10-01, 10-02). This is a hand-written operations record, and the session completion times come only from this record.
 - `openmath/star6_artifact/informal/c4c-ext_REPORT.md`, `c4c-4cut_REPORT.md`, `c4c-ball_REPORT.md`, `c4c-norem_REPORT.md`, `p23-check_REPORT.md`, `p23-pole_REPORT.md`, `p16_REPORT.md`.
 - `openmath/star6_packet_final.md` §1.4, §3, §4.1; `openmath/star6_artifact/lean/pack3/STATUS.md`.
-- 증거 기록(evidence)과 반례 파일은 서버의 프로젝트 저장소에 있고 이 저장소에는 없다(`star6_packet_final.md` §4.4).
-- 수치 사이의 차이: PLAN은 K2 대체를 "8·10·12꼭짓점 … 유한·검증됨"으로 요약하지만 보고서는 n=12가 표본 계산이라고 적는다. 이 노트는 보고서를 따랐다.
+- The evidence records and counterexample files are in the project store on the server and are not in this repository (`star6_packet_final.md` §4.4).
+- Discrepancy between figures: PLAN summarizes the K2 replacement as "8·10·12꼭짓점 … 유한·검증됨" ("8·10·12 vertices … finite, verified"), but the report states that n=12 is a sampled computation. This note followed the report.

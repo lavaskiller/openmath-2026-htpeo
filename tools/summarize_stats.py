@@ -311,18 +311,19 @@ def main(argv=None):
             notes.append((rel, str(d["notes"])))
 
     L = []
-    L.append("# 통계 합산표 (SUMMARY)")
+    L.append("# Statistics summary")
     L.append("")
-    L.append("이 파일은 `tools/summarize_stats.py`가 만듭니다. 손으로 고치지 않습니다. "
-             "원본: `entries/*/STATS.yaml`, `archive/stats/*.yaml`.")
+    L.append("This file is written by `tools/summarize_stats.py`. Do not edit it by hand. "
+             "Sources: `entries/*/STATS.yaml`, `archive/stats/*.yaml`.")
     L.append("")
-    L.append("- `TODO`는 원본에 수치가 아직 없다는 뜻이고, `+TODO`는 합에 빠진 항이 있다는 뜻입니다.")
-    L.append("- 캐시 토큰 = 캐시 읽기 + 캐시 쓰기. 출처와 추정 여부는 각 원본 파일의 `source`, `notes`에 있습니다.")
-    L.append("- `counted_in`이 붙은 행(다른 파일 수치의 사본) %d개는 세지 않았습니다." % skipped)
+    L.append("- `TODO` means the source has no number yet; `+TODO` means a term is missing from the sum.")
+    L.append("- Cache tokens = cache read + cache write. Sources, and whether a figure is an estimate, are in the "
+             "`source` and `notes` fields of each source file.")
+    L.append("- %d rows marked `counted_in` (copies of figures held in another file) were not counted." % skipped)
     L.append("")
-    L.append("## 1. AI 사용량 (항목 × 모델)")
+    L.append("## 1. AI usage (entry × model)")
     L.append("")
-    L.append("| 항목 | 모델 | 인터페이스 | 입력 토큰 | 출력 토큰 | 캐시 토큰 | 세션 수 | 비용(USD) |")
+    L.append("| Entry | Model | Interface | Input tokens | Output tokens | Cache tokens | Sessions | Cost (USD) |")
     L.append("|---|---|---|---:|---:|---:|---:|---:|")
     by_model = {}
     for key in sorted(usage):
@@ -336,9 +337,9 @@ def main(argv=None):
         for c in USAGE_COLS:
             m[c].merge(a[c])
     L.append("")
-    L.append("## 2. 모델별 합계")
+    L.append("## 2. Totals per model")
     L.append("")
-    L.append("| 모델 | 입력 토큰 | 출력 토큰 | 캐시 읽기 | 캐시 쓰기 | 세션 수 | 비용(USD) |")
+    L.append("| Model | Input tokens | Output tokens | Cache read | Cache write | Sessions | Cost (USD) |")
     L.append("|---|---:|---:|---:|---:|---:|---:|")
     for m in sorted(by_model):
         a = by_model[m]
@@ -346,9 +347,9 @@ def main(argv=None):
             m, a["input_tokens"], a["output_tokens"], a["cache_read_tokens"], a["cache_write_tokens"],
             a["sessions"], a["cost_usd"]))
     L.append("")
-    L.append("## 3. 항목별 합계")
+    L.append("## 3. Totals per entry")
     L.append("")
-    L.append("| 항목 | 입력 토큰 | 출력 토큰 | 캐시 토큰 | 세션 수 | 비용(USD) | 계산 CPU시간 | 사람 시간 | Lean 줄 수 | 주장 정리 수 |")
+    L.append("| Entry | Input tokens | Output tokens | Cache tokens | Sessions | Cost (USD) | Compute CPU hours | Human time | Lean lines | Claimed theorems |")
     L.append("|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
     for e in sorted(per_entry):
         tot = {c: Num() for c in USAGE_COLS}
@@ -364,19 +365,19 @@ def main(argv=None):
             e, tot["input_tokens"], tot["output_tokens"], cache, tot["sessions"], tot["cost_usd"],
             pe["cpu_hours"], pe["human_hours"], pe["lean_lines"], pe["theorems_claimed"]))
     L.append("")
-    L.append("## 4. 읽은 파일")
+    L.append("## 4. Files read")
     L.append("")
     for p in files:
         L.append("- `%s`" % os.path.relpath(p, root).replace("\\", "/"))
     if notes:
         L.append("")
-        L.append("## 5. 원본의 notes")
+        L.append("## 5. Notes of the source files")
         L.append("")
         for rel, n in notes:
             L.append("- `%s`: %s" % (rel, " ".join(n.split())))
     if problems:
         L.append("")
-        L.append("## 읽지 못한 파일")
+        L.append("## Files that could not be read")
         L.append("")
         for pr in problems:
             L.append("- %s" % pr)

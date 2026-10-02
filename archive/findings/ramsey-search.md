@@ -1,90 +1,92 @@
-# K4 Ramsey 다중도 상계: 탐색에서 무엇이 값을 움직였는가
+# K4 Ramsey multiplicity upper bound: what moved the value during the search
 
-대상: K4 Ramsey 다중도 상수 c_4(K_n의 2-변-채색에서 단색 K4 밀도 최솟값의 극한)의 상계. hill 지표는 `density_ppt = ⌈10^12 · density⌉`이고 낮을수록 좋다. 선행 결과: Parczyk–Pokutta–Spiegel–Szabó, "New Ramsey multiplicity bounds and search heuristics", arXiv:2206.04036.
+한국어: [ramsey-search.ko.md](ramsey-search.ko.md)
 
-## 요약
+Subject: an upper bound on the K4 Ramsey multiplicity constant c_4 (the limit of the minimum monochromatic K4 density over 2-edge-colourings of K_n). The hill metric is `density_ppt = ⌈10^12 · density⌉`, lower is better. Prior result: Parczyk–Pokutta–Spiegel–Szabó, "New Ramsey multiplicity bounds and search heuristics", arXiv:2206.04036.
 
-- 최종 해는 1024 블록 가중 blow-up 템플릿이고 `density_ppt = 30,139,933,996`이다. hill 기준값 B*(30,142,273,432, 위 논문 맺음 Note의 768꼭짓점 그래프 값)보다 2,339,436 ppt 낮다.
-- 가장 크게 기여한 것은 768 블록을 1024 블록으로 나누는 분할(약 130만 ppt)이고, 그다음이 L-BFGS 가중치 최적화(20~25만 ppt)이다. 수치는 탐색 세션의 보고다.
-- 단일 뒤집기 tabu/SA, 균등 분할은 통하지 않았다. seed 색칠에서 가중치만 조정하는 것은 B*는 넘지만 폭이 작았다.
-- 부등식 `c_4 ≤ P < B*`는 Lean 4.33.1 커널로 검증되었다. 탐색 과정 자체는 증명이 신뢰하지 않는다. 사람이 검토한 것은 없다.
+## Summary
 
-## 내용
+- The final solution is a 1024-block weighted blow-up template with `density_ppt = 30,139,933,996`. This is 2,339,436 ppt below the hill reference value B* (30,142,273,432, the value of the 768-vertex graph in the concluding Note of the paper above).
+- The largest contribution came from the split of 768 blocks into 1024 blocks (about 1.3 million ppt), followed by L-BFGS weight optimization (200 to 250 thousand ppt). These figures are as reported by the search session.
+- Single-flip tabu/SA and uniform splitting did not work. Adjusting only the weights on the seed colouring did beat B*, but by a small margin.
+- The inequality `c_4 ≤ P < B*` was checked by the Lean 4.33.1 kernel. The proof does not trust the search process itself. Nothing has been human-reviewed.
 
-### 1. 수치
+## Details
 
-| 항목 | 값 | 검증 수준 | 출처 |
+### 1. Figures
+
+| Item | Value | Verification level | Source |
 |---|---|---|---|
-| 최종 밀도 P | 200080655744752337972227066537 / 6638390640717004439491700265361 (분모 = 50759309^4) | Lean 커널 검증(`sol_density`) | `ramsey_packet.md` §1.1 |
-| hill 지표 | 30,139,933,996 ppt | Lean 커널 검증(`sol_ppt`); 계산으로 확인(hill 공식 보고서, 노트북 재실행 198초) | `ramsey_packet.md` §1.1, §2.2; `runs/report_1ab2354d.json` |
-| 기준값 B* | 10486266368 / 768^4 ≈ 30,142,273,432 ppt | 패킷 작성 세션이 arXiv 본문과 대조(AI가 검증) | `ramsey_packet.md` §2.5 |
-| B* − P | 2,339,436 ppt (≈ 2.34·10^-6) | 위 두 값의 차 | PLAN §4 "Ramsey 탐색 종료"; `ramsey_packet.md` §1.1 |
-| 논문 Theorem 1.1 대비 | 4.92·10^-6 개선 | AI가 검증(문헌 대조) | `ramsey_packet.md` §1.3 |
-| 하한 0.0296까지의 간격 중 좁힌 비율 | 약 0.43% | 계산(패킷의 산술) | `ramsey_packet.md` §1.3 |
-| 09-27 순위표 선두(간접 기록) 대비 | 1,786,828 ppt 낮음 | 간접 기록과의 차 | PLAN §4 "Ramsey 탐색 종료" |
-| `c_4 ≤ P`, `c_4 < B*` | `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, 극한 존재 `ramseyMultK4_limit_lt_ref` | Lean 커널 검증(표준 공리, 주 연쇄에 `native_decide` 없음) | `ramsey_packet.md` §1.1, §2.6 |
+| Final density P | 200080655744752337972227066537 / 6638390640717004439491700265361 (denominator = 50759309^4) | Lean kernel-checked (`sol_density`) | `ramsey_packet.md` §1.1 |
+| Hill metric | 30,139,933,996 ppt | Lean kernel-checked (`sol_ppt`); computed (official hill report, re-run on the laptop in 198 s) | `ramsey_packet.md` §1.1, §2.2; `runs/report_1ab2354d.json` |
+| Reference value B* | 10486266368 / 768^4 ≈ 30,142,273,432 ppt | The packet-writing session compared it against the arXiv text (AI-checked) | `ramsey_packet.md` §2.5 |
+| B* − P | 2,339,436 ppt (≈ 2.34·10^-6) | Difference of the two values above | PLAN §4 "Ramsey 탐색 종료"; `ramsey_packet.md` §1.1 |
+| Versus Theorem 1.1 of the paper | Improvement of 4.92·10^-6 | AI-checked (comparison with the literature) | `ramsey_packet.md` §1.3 |
+| Fraction of the gap to the lower bound 0.0296 that was closed | About 0.43% | Computed (arithmetic in the packet) | `ramsey_packet.md` §1.3 |
+| Versus the leaderboard leader of 09-27 (indirect record) | 1,786,828 ppt lower | Difference from the indirect record | PLAN §4 "Ramsey 탐색 종료" |
+| `c_4 ≤ P`, `c_4 < B*` | `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, existence of the limit `ramseyMultK4_limit_lt_ref` | Lean kernel-checked (standard axioms, no `native_decide` in the main chain) | `ramsey_packet.md` §1.1, §2.6 |
 
-사람이 검토: 없음. Lean 명제, 전사, 명제 대응, 문헌 문단 모두 사람이 확인하지 않았다(`ramsey_packet.md` §3.3). 실시간 순위표는 작성 세션이 읽지 않았고, 운영자가 2026-10-02 저녁에 1위라고 알린 것만 기록되어 있다(같은 문서 Addendum).
+Human-reviewed: none. The Lean statements, the transcription, the statement correspondence and the literature paragraphs have all gone unchecked by a human (`ramsey_packet.md` §3.3). The writing session did not read the live leaderboard; the only thing on record is that the operator reported first place on the evening of 2026-10-02 (Addendum of the same document).
 
-### 2. 탐색 경과
+### 2. Course of the search
 
-- 2026-09-28~29(`search/v1/`): 기준 실행, seed에서의 국소 탐색, 가중치 조정, 대칭(궤도) 탐색. Autolab 실험 6건 중 `reference_beaten = 1`이 처음 나온 것은 2026-09-29의 `0bcf1970`(768 블록, 가중치만 조정)이다. 그 실험의 ppt는 기록되지 않았다. 출처: `ramsey_packet.md` §3.1, Addendum 표.
-- 2026-10-02(`search/v2/`): 서버에서 약 12시간. 후보마다 hill 평가기 코드로 정확히 다시 채점해 ledger에 기록했다(62줄). 출처: `ramsey_packet.md` §3.1, §3.3; `runs/ledger_server.tsv`.
+- 2026-09-28~29 (`search/v1/`): baseline run, local search from the seed, weight adjustment, symmetric (orbit) search. Among 6 Autolab experiments, the first to give `reference_beaten = 1` was `0bcf1970` on 2026-09-29 (768 blocks, weights only adjusted). The ppt of that experiment was not recorded. Source: `ramsey_packet.md` §3.1, Addendum table.
+- 2026-10-02 (`search/v2/`): about 12 hours on the server. Every candidate was re-scored exactly with the hill evaluator code and recorded in the ledger (62 lines). Source: `ramsey_packet.md` §3.1, §3.3; `runs/ledger_server.tsv`.
 
-ledger에서 읽은 경과(계산으로 확인 — hill 평가기 코드의 정수 계산; 시각은 서버 시각, 시간대 미기록):
+Course as read from the ledger (computed — integer arithmetic of the hill evaluator code; times are server time, time zone not recorded):
 
-| 시각 | ppt | 블록 수 | job 표지 | 비고 |
+| Time | ppt | Blocks | Job label | Note |
 |---|---|---|---|---|
-| 10:16 | 30,141,883,715 | 768 | E4 | 첫 줄. 분할 전 |
-| 10:19 | 30,140,885,560 | 1024 | S2 | 1024 분할 첫 줄. 직전 줄보다 998,155 ppt 낮음 |
-| 10:55 | 30,140,606,048 | 1024 | KW1 | 1024 블록 해의 가중치 실험(`jobK.sh` 주석) |
-| 11:01 | 30,140,555,790 | 1024 | L2 | 설계된 분할 + 복합 이동 SA(`jobL.sh` 주석) |
-| 11:59 | 30,140,211,743 | 1024 | N1f | 표지 N의 job 설명: TODO(출처 없음) |
-| 14:49 | 30,139,996,397 | 1024 | N2f | 처음으로 30,140,000,000 아래 |
-| 17:50 | 30,139,956,561 | 1024 | Y2 | basin hopping(`jobY.sh` 주석) |
-| 19:52 | 30,139,933,996 | 1024 | Y1 | 최종 |
+| 10:16 | 30,141,883,715 | 768 | E4 | First line. Before the split |
+| 10:19 | 30,140,885,560 | 1024 | S2 | First line of the 1024 split. 998,155 ppt below the preceding line |
+| 10:55 | 30,140,606,048 | 1024 | KW1 | Weight experiment on the 1024-block solution (`jobK.sh` comment) |
+| 11:01 | 30,140,555,790 | 1024 | L2 | Designed split + compound-move SA (`jobL.sh` comment) |
+| 11:59 | 30,140,211,743 | 1024 | N1f | Description of the job with label N: TODO (no source) |
+| 14:49 | 30,139,996,397 | 1024 | N2f | First time below 30,140,000,000 |
+| 17:50 | 30,139,956,561 | 1024 | Y2 | basin hopping (`jobY.sh` comment) |
+| 19:52 | 30,139,933,996 | 1024 | Y1 | Final |
 
-09:50 KST 중간 보고의 30,142,153,848 ppt(가중치 최적화, 768 블록)는 hill 평가기 검증 전의 값이고 ledger에 없다. 출처: PLAN §4 "Ramsey 탐색 중간(09:50 KST)".
+The 30,142,153,848 ppt of the 09:50 KST interim report (weight optimization, 768 blocks) is a value from before hill-evaluator verification and is not in the ledger. Source: PLAN §4 "Ramsey 탐색 중간(09:50 KST)".
 
-### 3. 통한 것
+### 3. What worked
 
-아래 기여 크기는 탐색 세션의 보고이며 따로 분리 실험으로 확인한 기록은 없다(PLAN §4 "Ramsey 탐색 종료(10-02 20:15 KST)"). ledger와 맞춰 볼 수 있는 것만 옆에 적었다.
+The contribution sizes below are as reported by the search session; there is no record of them being confirmed by separate ablation experiments (PLAN §4 "Ramsey 탐색 종료(10-02 20:15 KST)"). Only what can be matched against the ledger is noted alongside.
 
-- seed 구조 파악: seed는 192개 기본 블록 × 4개 근쌍둥이(768 블록)이고, 뒤집기가 일어나는 꼭짓점 쌍 궤도는 자기동형군의 28개 "soft" 궤도뿐이다. 탐색을 이 궤도로 제한했다. 출처: PLAN 같은 항목; `ramsey_packet.md` §3.1 "Search method".
-- 정확한 증분 평가기(`tabu.c`, `sa.py`): 모든 뒤집기의 변화량을 표로 유지해 O(1) 제안. 출처: `search/v2/sa.py` 머리 주석; `ramsey_packet.md` §3.1.
-- 복합 이동(회전, 교대 4-사이클): 색칠 뒤집기는 꼭짓점을 공유할 때만 상호작용하므로 한 쌍씩 뒤집는 대신 묶어서 움직였다. 출처: PLAN §4 "Ramsey 탐색 중간(09:50 KST)"; `search/v2/jobE.sh`, `jobG.sh` 주석.
-- 1024 블록 분할(근쌍둥이 분할: 블록 하나를 둘로 나누고 두 반쪽 사이 쌍을 반대 색으로): 보고된 기여 약 130만 ppt, 최대. ledger에서는 분할 첫 줄에서 998,155 ppt가 한 번에 내려갔다. 출처: PLAN 같은 항목; `search/v2/twin.py`, `split4.py` 머리 주석; ledger 1~2행.
-- L-BFGS 가중치 최적화 후 65535 이하 정수 가중치로 반올림: 보고된 기여 20~25만 ppt. 최종 해의 가중치 범위는 17994~65535, 가중치 합 50759309. 출처: PLAN 같은 항목; `ramsey_packet.md` §2, §3.1.
-- 막판 basin hopping(SA 구간 → quench → 가중치 재적합): ledger의 Y 표지 7줄(17:50~19:52)에서 30,139,958,907 → 30,139,933,996, 약 2.5만 ppt. 종료 시점에도 주기당 약 1만 ppt씩 내려가고 있었다. 출처: ledger 55~62행; PLAN 같은 항목.
+- Understanding the seed structure: the seed is 192 base blocks × 4 near-twins (768 blocks), and the vertex-pair orbits on which flips occur are only the 28 "soft" orbits of the automorphism group. The search was restricted to these orbits. Source: same PLAN entry; `ramsey_packet.md` §3.1 "Search method".
+- Exact incremental evaluator (`tabu.c`, `sa.py`): keeps a table of the change for every flip, giving O(1) proposals. Source: header comment of `search/v2/sa.py`; `ramsey_packet.md` §3.1.
+- Compound moves (rotations, alternating 4-cycles): colouring flips interact only when they share a vertex, so instead of flipping one pair at a time they were moved in bundles. Source: PLAN §4 "Ramsey 탐색 중간(09:50 KST)"; comments in `search/v2/jobE.sh`, `jobG.sh`.
+- 1024-block split (near-twin split: divide one block in two and give the pairs between the two halves the opposite colour): reported contribution about 1.3 million ppt, the largest. In the ledger, 998,155 ppt dropped at once on the first line of the split. Source: same PLAN entry; header comments of `search/v2/twin.py`, `split4.py`; ledger rows 1~2.
+- L-BFGS weight optimization followed by rounding to integer weights of at most 65535: reported contribution 200 to 250 thousand ppt. The weights of the final solution range over 17994~65535, with weight sum 50759309. Source: same PLAN entry; `ramsey_packet.md` §2, §3.1.
+- Last-stage basin hopping (SA segment → quench → weight refit): over the 7 lines with label Y in the ledger (17:50~19:52), 30,139,958,907 → 30,139,933,996, about 25 thousand ppt. At the time of termination it was still dropping by about 10 thousand ppt per cycle. Source: ledger rows 55~62; same PLAN entry.
 
-### 4. Lean 인증서 쪽에서 통한 설계
+### 4. Design that worked on the Lean certificate side
 
-- 블록·색별 2048개 파일을 각각 `decide +kernel`로 검사. 32768비트 자연수에 마스크와 가중치를 채워 커널의 GMP 연산으로 안쪽 합을 계산한다. 파일별 시간 합 16,762초(4.7 CPU시간), 6프로세스로 50분, 프로세스당 최대 3.30GB. **Lean 커널 검증**. 출처: `lean/CERT_STATUS.md` Build record.
-- 일반 보조정리(`Fast.lean`, `Limit.lean`, `Mono.lean`)는 Claude 세션이 명제를 고정하고 GPT가 증명했다. 다시 컴파일하고 명제가 지정한 것과 같은지 비교한 것은 AI 세션이다(**AI가 검증**; 증명 자체는 Lean 커널 검증). 출처: `ramsey_packet.md` §3.3.
-- 신뢰 경계로 남은 것: JSON → Lean 전사는 스크립트(`gen.py`)이고 별도 스크립트(`check_data.py`)로 대조. hill의 빠른 `_density` 루틴은 Lean에 모델링하지 않았고 수치 일치만 확인. 전체 `lake build`는 실행하지 않고 모듈별로 빌드. 다른 기계에서의 재빌드 없음. 출처: `ramsey_packet.md` §2.7.
+- 2048 files, one per block and colour, each checked with `decide +kernel`. Masks and weights are packed into 32768-bit natural numbers and the inner sum is computed with the kernel's GMP arithmetic. Sum of per-file times 16,762 s (4.7 CPU hours), 50 minutes with 6 processes, at most 3.30GB per process. **Lean kernel-checked**. Source: `lean/CERT_STATUS.md` Build record.
+- For the general lemmas (`Fast.lean`, `Limit.lean`, `Mono.lean`) a Claude session fixed the statements and GPT proved them. It was an AI session that recompiled them and compared whether the statements were the same as those specified (**AI-checked**; the proofs themselves are Lean kernel-checked). Source: `ramsey_packet.md` §3.3.
+- What remains as trust boundary: the JSON → Lean transcription is a script (`gen.py`), cross-checked by a separate script (`check_data.py`). The hill's fast `_density` routine is not modelled in Lean; only numerical agreement was checked. A full `lake build` was not run; the build was done module by module. No rebuild on a different machine. Source: `ramsey_packet.md` §2.7.
 
-## 실패/반증된 접근
+## Failed/refuted approaches
 
-- **단일 뒤집기 tabu/SA**. 시도: seed와 이전 최선에서 한 쌍씩 뒤집는 tabu, 빠른 SA. 멈춘 곳: 통하지 않음으로 보고. 확인 방법의 수치 기록: TODO(출처 없음). 출처: PLAN §4 "Ramsey 탐색 종료"; `search/v2/jobA.sh`, `jobB.sh` 주석.
-- **seed 색칠에서 가중치만 최적화**. 768 블록에서 가중치만 조정하면 B*는 넘는다(2026-09-29 실험 `0bcf1970`; 10-02 09:50 중간값 30,142,153,848은 B*보다 약 12만 ppt 낮음). 그러나 09-27 선두 기록에는 약 43만 ppt 모자랐다. PLAN은 이것을 "안 통한 것"으로 분류한다. 출처: PLAN §4 "Ramsey 탐색 중간", "Ramsey 탐색 종료"; `ramsey_packet.md` Addendum.
-- **균등 분할**. 통하지 않음으로 보고. 수치 기록: TODO(출처 없음). 출처: PLAN §4 "Ramsey 탐색 종료".
-- **인증서의 첫 설계**(평범한 구조적 재귀, 모든 파일에 `import Mathlib`): 반복당 약 45µs, 5.7KB. 192 블록을 한 파일에 넣으면 5GB를 넘었다. 원시 재귀와 얇은 import로 약 4배 줄이고 블록·색마다 파일을 나눴다. 출처: `lean/CERT_STATUS.md` Build record.
-- **상한 없는 시험 컴파일**: 2026-10-02 18:37 KST경 13GB까지 올라 OOM 종료. 이후 모든 컴파일에 상한. 출처: PLAN §4 "Ramsey Lean 인증서 완료" 중 "사고 기록"(손 기록).
-- 시도하지 않은 것: seed와 다른 템플릿. 출처: PLAN §4 "Ramsey 탐색 종료".
+- **Single-flip tabu/SA**. Tried: tabu flipping one pair at a time from the seed and from the previous best, and fast SA. Where it stopped: reported as not working. Numerical record of how this was confirmed: TODO (no source). Source: PLAN §4 "Ramsey 탐색 종료"; comments in `search/v2/jobA.sh`, `jobB.sh`.
+- **Optimizing only the weights on the seed colouring**. Adjusting only the weights at 768 blocks does beat B* (experiment `0bcf1970` of 2026-09-29; the 10-02 09:50 interim value 30,142,153,848 is about 120 thousand ppt below B*). However, it fell about 430 thousand ppt short of the 09-27 leader record. PLAN classifies this under "안 통한 것" ("what did not work"). Source: PLAN §4 "Ramsey 탐색 중간", "Ramsey 탐색 종료"; `ramsey_packet.md` Addendum.
+- **Uniform splitting**. Reported as not working. Numerical record: TODO (no source). Source: PLAN §4 "Ramsey 탐색 종료".
+- **First design of the certificate** (plain structural recursion, `import Mathlib` in every file): about 45µs and 5.7KB per iteration. Putting 192 blocks in one file exceeded 5GB. It was reduced about 4-fold with primitive recursion and thin imports, and the files were split per block and colour. Source: `lean/CERT_STATUS.md` Build record.
+- **Test compilation without a cap**: around 2026-10-02 18:37 KST it rose to 13GB and was OOM-killed. After that, every compilation had a cap. Source: "사고 기록" (incident record) within PLAN §4 "Ramsey Lean 인증서 완료" (hand-written record).
+- Not tried: templates other than the seed. Source: PLAN §4 "Ramsey 탐색 종료".
 
-## 남은 질문
+## Open questions
 
-- 탐색을 더 돌리면 값이 얼마나 더 내려가는가. 종료 시점에 수렴하지 않았다. 해가 바뀌면 인증서(약 50분), 재제출, 패킷 갱신이 필요하다. 출처: PLAN §4 "Ramsey 개선에 star6 결과를 쓸 수 있는가".
-- 다른 템플릿(다른 Cayley 구성, 1024 이외의 블록 수)에서 같은 이동이 통하는가. 시도 기록 없음.
-- 2024-09 이후 B*보다 낮은 값이 출판되었는지 확인되지 않았다. 출처: `ramsey_packet.md` §2.5.
-- 방법은 인용 논문과 같은 계열(알려진 768꼭짓점 구성의 blow-up 위 국소 탐색)이고 새 아이디어가 아니다. 패킷도 구간 P1(p = 0.05)만 요청했다. 출처: `ramsey_packet.md` §1.3.
-- 보고서가 `mode: validation`, `final: false`이다. 최종 모드 평가가 따로 필요한지 확인되지 않았다. 출처: `ramsey_packet.md` §3.5.
+- How much further does the value drop if the search is run longer. It had not converged at the time of termination. If the solution changes, the certificate (about 50 minutes), a resubmission and a packet update are needed. Source: PLAN §4 "Ramsey 개선에 star6 결과를 쓸 수 있는가".
+- Do the same moves work on other templates (other Cayley constructions, block counts other than 1024). No record of an attempt.
+- It has not been confirmed whether a value below B* has been published since 2024-09. Source: `ramsey_packet.md` §2.5.
+- The method belongs to the same line as the cited paper (local search on a blow-up of the known 768-vertex construction) and is not a new idea. The packet also requested only band P1 (p = 0.05). Source: `ramsey_packet.md` §1.3.
+- The report has `mode: validation`, `final: false`. It has not been confirmed whether a separate final-mode evaluation is needed. Source: `ramsey_packet.md` §3.5.
 
-## 출처
+## Sources
 
 - `openmath/ramsey_packet.md` §1~§3, Addendum.
-- `openmath/ramsey_artifact/runs/ledger_server.tsv`(62줄), `runs/report_1ab2354d.json`.
+- `openmath/ramsey_artifact/runs/ledger_server.tsv` (62 lines), `runs/report_1ab2354d.json`.
 - `openmath/ramsey_artifact/lean/CERT_STATUS.md`, `openmath/ramsey_artifact/README.md`.
-- `openmath/ramsey_artifact/search/v2/`의 `job*.sh`, `sa.py`, `twin.py`, `split4.py` 머리 주석.
-- `harness/docs/mh/PLAN.md` §4의 Ramsey 항목(손으로 쓴 운영 기록; 기여 크기와 "통한 것/안 통한 것" 분류는 여기에서만 나온다).
-- 시각 불일치: 최종 해가 ledger 19:52, `CERT_STATUS.md` 11:12 UTC(20:12 KST), PLAN 20:15 KST. 평가 보고서 11:38:08Z(20:38 KST)와 PLAN의 "21:08 평가 통과".
+- Header comments of `job*.sh`, `sa.py`, `twin.py`, `split4.py` in `openmath/ramsey_artifact/search/v2/`.
+- The Ramsey entries of `harness/docs/mh/PLAN.md` §4 (hand-written operations record; the contribution sizes and the "worked / did not work" classification come only from here).
+- Time discrepancies: the final solution is at 19:52 in the ledger, 11:12 UTC (20:12 KST) in `CERT_STATUS.md`, and 20:15 KST in PLAN. The evaluation report is at 11:38:08Z (20:38 KST) versus PLAN's "21:08 평가 통과" ("21:08 evaluation passed").

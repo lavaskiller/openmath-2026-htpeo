@@ -1,14 +1,14 @@
-# 통계 합산표 (SUMMARY)
+# Statistics summary
 
-이 파일은 `tools/summarize_stats.py`가 만듭니다. 손으로 고치지 않습니다. 원본: `entries/*/STATS.yaml`, `archive/stats/*.yaml`.
+This file is written by `tools/summarize_stats.py`. Do not edit it by hand. Sources: `entries/*/STATS.yaml`, `archive/stats/*.yaml`.
 
-- `TODO`는 원본에 수치가 아직 없다는 뜻이고, `+TODO`는 합에 빠진 항이 있다는 뜻입니다.
-- 캐시 토큰 = 캐시 읽기 + 캐시 쓰기. 출처와 추정 여부는 각 원본 파일의 `source`, `notes`에 있습니다.
-- `counted_in`이 붙은 행(다른 파일 수치의 사본) 7개는 세지 않았습니다.
+- `TODO` means the source has no number yet; `+TODO` means a term is missing from the sum.
+- Cache tokens = cache read + cache write. Sources, and whether a figure is an estimate, are in the `source` and `notes` fields of each source file.
+- 7 rows marked `counted_in` (copies of figures held in another file) were not counted.
 
-## 1. AI 사용량 (항목 × 모델)
+## 1. AI usage (entry × model)
 
-| 항목 | 모델 | 인터페이스 | 입력 토큰 | 출력 토큰 | 캐시 토큰 | 세션 수 | 비용(USD) |
+| Entry | Model | Interface | Input tokens | Output tokens | Cache tokens | Sessions | Cost (USD) |
 |---|---|---|---:|---:|---:|---:|---:|
 | dms-star6 | claude-fable-5-1 | agent harness (Claude Code headless sessions) | 27,596 | 6,242,202 | 346,370,128 |  | 704.2 |
 | dms-star6 | claude-haiku-4-5-20251001 | agent harness (side model of the tool) | 424 | 3,634 | 1,047,629 |  | 3.0 |
@@ -25,9 +25,9 @@
 | ramsey-k4-multiplicity | gpt-6-sol | codex CLI | 459,277 | 112,386 | 19,127,936 | 3 |  |
 | shared/steering | claude-opus-5-5 | Claude Code | 5,130 | 2,165,675 | 923,843,294 | 19 |  |
 
-## 2. 모델별 합계
+## 2. Totals per model
 
-| 모델 | 입력 토큰 | 출력 토큰 | 캐시 읽기 | 캐시 쓰기 | 세션 수 | 비용(USD) |
+| Model | Input tokens | Output tokens | Cache read | Cache write | Sessions | Cost (USD) |
 |---|---:|---:|---:|---:|---:|---:|
 | claude-fable-5-1 | 27,596 | 6,242,202 | 326,183,572 | 20,186,556 |  | 704.2 |
 | claude-haiku-4-5-20251001 | 424 | 3,634 | 966,566 | 81,063 |  | 3.0 |
@@ -38,16 +38,16 @@
 | gpt-6-astra | 137,341 | 7,010 | 675,072 |  | 7 |  |
 | gpt-6-sol | 50,621,623 | 8,671,081 | 1,757,668,352 |  | 534 |  |
 
-## 3. 항목별 합계
+## 3. Totals per entry
 
-| 항목 | 입력 토큰 | 출력 토큰 | 캐시 토큰 | 세션 수 | 비용(USD) | 계산 CPU시간 | 사람 시간 | Lean 줄 수 | 주장 정리 수 |
+| Entry | Input tokens | Output tokens | Cache tokens | Sessions | Cost (USD) | Compute CPU hours | Human time | Lean lines | Claimed theorems |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | dms-star6 | 79,895,063 | 78,313,222 | 9,635,136,505 | 2,094 | 3,718.0 | 2.2 +TODO | TODO | 81,622 | 45 |
 | erdos-m2-formalizations | 3,716,184 | 860,456 | 244,039,536 | 26 |  | TODO | TODO | 2,791 | 19 |
 | ramsey-k4-multiplicity | 459,889 | 115,493 | 91,122,328 | 6 |  | 4.9 +TODO | TODO | 104,665 | 8 |
 | shared/steering | 5,130 | 2,165,675 | 923,843,294 | 19 |  |  |  |  |  |
 
-## 4. 읽은 파일
+## 4. Files read
 
 - `entries/dms-star6/STATS.yaml`
 - `entries/erdos-m2-formalizations/STATS.yaml`
@@ -56,7 +56,7 @@
 - `archive/stats/server-codex.yaml`
 - `archive/stats/server-harness.yaml`
 
-## 5. 원본의 notes
+## 5. Notes of the source files
 
 - `entries/dms-star6/STATS.yaml`: The usage rows here are copies (counted_in) of rows in archive/stats/. Laptop subagent attribution is by description regex; harness-development subagents are under shared/steering. The Lean gate rebuilds inside worker rounds are not separately recorded.
 - `entries/erdos-m2-formalizations/STATS.yaml`: The usage rows here are copies (counted_in) of rows in archive/stats/. All proofs were produced by the codex sessions on the server; the laptop numbers cover only the Claude helper sessions that verified, searched prior art and wrote the packet.

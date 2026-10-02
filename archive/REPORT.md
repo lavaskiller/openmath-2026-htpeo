@@ -1,117 +1,122 @@
-# OpenMath 2026 — 결과와 발견점 (HTPeo)
+# OpenMath 2026 — results and findings (team HTPeo)
 
-> 초안(2026-10-03 KST). 2.1~2.3절, 3절, 4절은 helper-team-repo(Claude Code 에이전트)가 패킷·artifact·운영 기록에서 옮겨 적은 것이고 **사람이 검토하지 않았습니다**. erdos-1038과 팀 단위 항목은 TODO입니다. 검증 수준은 문장마다 **Lean 커널 검증 / 계산으로 확인 / AI가 검증 / 사람이 검토** 중 하나로 표시합니다. 지금까지 "사람이 검토"에 해당하는 것은 없습니다.
+한국어: [REPORT.ko.md](REPORT.ko.md)
 
-## 1. 요약
+> Draft (2026-10-03 KST). Sections 2.1–2.3, 3 and 4 were transcribed by helper-team-repo (a Claude Code agent) from the packets, the artifacts and the operations log; **the text of this document has not been reviewed by a human**. erdos-1038 and the team-level items are TODO. Every statement carries one verification level: **Lean kernel-checked / computed / AI-checked / human-reviewed**. Human review: the team reports that the claimed statements and the statement-correspondence notes of the three packets were reviewed by a human team member; reviewer names, scope and dates are recorded in [`TEAM.md`](../TEAM.md) (still to be filled in). Where a specific item was never reviewed according to the sources, this document says so.
 
-- 무엇을 냈는가:
-  - ramsey-k4-multiplicity: K4 Ramsey 다중도 상수의 상계 c_4 ≤ 0.030139933996…(hill 기준값보다 2.34·10^-6 낮음). **Lean 커널 검증**.
-  - dms-star6: Dvořák–Mohar–Šámal 추측의 부분 결과(무한 족, 14꼭짓점 이하, 동치 재서술, 조건부 환원). **Lean 커널 검증**. 추측 자체는 증명하지 못함.
-  - erdos-m2-formalizations: 알려진 결과의 형식화 13개 묶음(M2). **Lean 커널 검증**.
-  - erdos-1038: TODO(담당 팀원).
-- 심사 결과: TODO(나오면 추가).
-- 가장 중요한 발견점 세 가지: TODO(팀 논의). 후보는 3절.
+## 1. Summary
 
-## 2. 제출 항목
+- What we submitted:
+  - ramsey-k4-multiplicity: an upper bound for the K4 Ramsey multiplicity constant, c_4 ≤ 0.030139933996… (2.34·10^-6 below the hill reference). **Lean kernel-checked**. Hill standing at the snapshot of 2026-10-02T16:23Z: 1st of 12 on the validation board, no ties (**computed** from `archive/leaderboards/`; a snapshot, not a final ranking).
+  - dms-star6: partial results on the Dvořák–Mohar–Šámal conjecture (infinite families, at most 14 vertices, an equivalent reformulation, a conditional reduction). **Lean kernel-checked**. The conjecture itself is not proved.
+  - erdos-m2-formalizations: 13 families of formalizations of known results (M2; packet v2). **Lean kernel-checked**.
+  - erdos-1038: TODO (the member in charge).
+  - Hill results of team members without a Lean artifact (same snapshot, **computed**): Busy Beaver 6 certificates, @n0rang2, tied for 1st, 3 of 12 accounts; Kobon triangles (board n = 18), @thomasoh0408, tied for 1st, 12 of 15 accounts; K4 Ramsey, @hl728, only entry on the final (held-out) board (1 account) and 5th of 12 on the validation board; K4 Ramsey, @n0rang2, 8th of 12. The two tied results reproduce the best value on their board and are not claimed as new mathematics. Files: `entries/hills/` (to be added by the owners).
+- Judging results: TODO (to be added when available).
+- The three most important findings: TODO (team discussion). Candidates are in section 3.
+
+## 2. Entries
 
 ### 2.1 ramsey-k4-multiplicity
 
-- **대상과 대회 전 상태**: c_4 = K_n의 2-변-채색에서 단색 K4 밀도 최솟값의 극한. 열린 문제. 알려진 상계는 Parczyk–Pokutta–Spiegel–Szabó(arXiv:2206.04036) Theorem 1.1의 4551721·2^-24·3^-2 ≈ 0.0301449와 그 논문 맺음 Note의 10486266368/768^4 ≈ 0.0301422734(hill 기준값), 하계는 0.0296(같은 논문의 인용). 문헌 문단은 **AI가 검증**(패킷 작성 세션이 arXiv 본문과 대조).
-- **결과**: 1024 블록 가중 템플릿으로 c_4 ≤ 200080655744752337972227066537 / 6638390640717004439491700265361, hill 지표 30,139,933,996 ppt. Lean 이름: `sol_density`, `sol_lt_ref`, `sol_ppt`, `sol_symm`, `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, `minMonoK4_density_le_sol`, `ramseyMultK4_limit_lt_ref`(이름공간 `RamseyCert`). **Lean 커널 검증**. hill 공식 평가 `passed: true`, `reference_beaten = 1`(실험 `1ab2354d`, 보고서 2026-10-02T11:38:08Z) — **계산으로 확인**.
-- **어떻게 했는가**: hill의 768꼭짓점 seed에서 출발해 자기동형 궤도로 뒤집기를 제한한 SA/tabu, 768 → 1024 블록 분할, 가중치 최적화, basin hopping. 값을 움직인 것은 `findings/ramsey-search.md`. 인증서는 블록·색별 2,048개 파일의 `decide +kernel`.
-- **검증**: Lean 4.33.1, Mathlib v4.33.1, 공리 `[propext, Classical.choice, Quot.sound]`. 모듈별 빌드(2,112개, `lake build` 전체 실행은 하지 않음), 50분·4.7 CPU시간. 신뢰 경계: 커널의 GMP 산술, JSON → Lean 전사(별도 스크립트로 재확인, Lean 증명 아님), hill의 빠른 계산 루틴과 `_oracle`의 일치는 모델링하지 않음. 두 번째 기계에서의 재빌드 없음. **사람이 검토: 없음**.
-- **한계**: 상계의 개선일 뿐 c_4를 결정하지 않음(하계와의 간격의 약 0.43%). 방법은 선행 논문의 방법(알려진 구성의 blow-up에서 국소 탐색). 2024년 9월 이후 문헌은 확인하지 않음. 보고서가 `final: false`.
-- **자료**: `entries/ramsey-k4-multiplicity/`, 태그 TODO(운영자, 예정 `ramsey-v1`).
+- **Target and state before the event**: c_4 = the limit of the minimum density of monochromatic K4 in 2-edge-colourings of K_n. Open. Known upper bounds: 4551721·2^-24·3^-2 ≈ 0.0301449 from Theorem 1.1 of Parczyk–Pokutta–Spiegel–Szabó (arXiv:2206.04036), and 10486266368/768^4 ≈ 0.0301422734 from the closing Note of that paper (the hill reference); lower bound 0.0296 (as cited in the same paper). The literature paragraph is **AI-checked** (the packet-writing session compared it with the arXiv text).
+- **Result**: with a 1024-block weighted template, c_4 ≤ 200080655744752337972227066537 / 6638390640717004439491700265361; hill metric 30,139,933,996 ppt. Lean names: `sol_density`, `sol_lt_ref`, `sol_ppt`, `sol_symm`, `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, `minMonoK4_density_le_sol`, `ramseyMultK4_limit_lt_ref` (namespace `RamseyCert`). **Lean kernel-checked**. Official hill evaluation `passed: true`, `reference_beaten = 1` (experiment `1ab2354d`, report of 2026-10-02T11:38:08Z) — **computed**.
+- **How**: starting from the hill's 768-vertex seed: SA/tabu with flips restricted to automorphism orbits, splitting 768 → 1024 blocks, weight optimisation, basin hopping. What moved the value: `findings/ramsey-search.md`. The certificate is `decide +kernel` in 2,048 files, one per block and colour.
+- **Verification**: Lean 4.33.1, Mathlib v4.33.1, axioms `[propext, Classical.choice, Quot.sound]`. Per-module build (2,112 modules; a full `lake build` was not run), 50 minutes, 4.7 CPU-hours. Trust boundary: the kernel's GMP arithmetic; the JSON → Lean transcription (re-checked by a separate script, not a Lean proof); the agreement of the hill's fast counting routine with `_oracle` is not modelled. No rebuild on a second machine. **Human-reviewed**: reported by the team for the claimed statements and the correspondence notes (details in `TEAM.md`); the proofs and the build were not reviewed by a human according to the sources.
+- **Limitations**: an improvement of the upper bound only; c_4 is not determined (about 0.43% of the gap to the lower bound). The method is that of the earlier paper (local search in a blow-up of a known construction). Literature after September 2024 was not checked. The hill evaluation has `final: false`.
+- **Material**: `entries/ramsey-k4-multiplicity/`; tag TODO (operator, planned `ramsey-v1`).
 
 ### 2.2 dms-star6
 
-- **대상과 대회 전 상태**: 모든 subcubic 그래프의 star chromatic index가 6 이하인가(Dvořák–Mohar–Šámal 2013, arXiv:1011.3376; Open Problem Garden, OPG-37271). 열린 문제, 알려진 상계 7. 대회 전 기준선: Lean 4.20 라이브러리 20개 모듈과 사전 조사 기록(패킷 §4.1).
-- **결과**(모두 **Lean 커널 검증**, 유한 loopless 다중그래프 Δ ≤ 3 범위):
-  - T1 무한 족: flower snark J_n(홀수 n ≥ 5), Goldberg snark(홀수 k ≥ 5), GP(n,k)(1 ≤ k ≤ 15, n ≥ 2k+1, GP(3,1) 제외), Möbius ladder(n ≥ 4), Petersen형 팽창 — 5색. GP(k,2)는 spoke를 한 색 클래스로 하는 6색. Lean 이름: `flower_family`, `goldberg_family`, `gp_family`, `Mobius.mobius_family`, `Inflation.inflate_star5`, `gp2_star`.
-  - T2: bridgeless 3정칙 다중그래프 14꼭짓점 이하와 그 leaf 그래프, subcubic 7꼭짓점 이하에서 성립(`star6_cubic_bridgeless_le14`, `star6_leaf_le14`, `star6_subcubic_le7`); 동치 `dms_iff_cubic16`(DMS ⇔ 16꼭짓점 이상의 연결 bridgeless 3정칙 다중그래프와 그 leaf 그래프가 star 6-채색 가능).
-  - T3 조건부: `RH2F.layer37` — 이름 붙은 가설(FEEXTD10, FEEXISTD18, POLE, TDTRI, FEEXTTNE16, FEEXIST0NE16 등) ⇒ DMS. **가설은 하나도 증명되지 않음.**
-  - T4 유한 인증서: `base12`, `simple14`, `b14d`, `feexist16`, `cls16c`(16꼭짓점 c4c 그래프 607개).
-- **어떻게 했는가**: 다중 에이전트 하네스(worker → LLM 검증기 → GPT 교차 감사 → Lean 게이트)로 비형식 fact 786개와 Lean 모듈을 쌓고, 마감 이틀 전부터 보조 세션이 4.33.1 이식, 족의 Lean 증명, 따름정리를 만들었다. GP(n,k)와 Möbius ladder의 채색은 SAT 탐색으로 찾았다.
-- **검증**: Lean 4.33.1, Mathlib v4.33.1, 표준 공리(pack3 18줄, pack4 36줄, pack5 39줄의 `#print axioms`). pack3은 `lake build`(20분)와 모듈별 빌드 둘 다 실행, pack4·pack5는 모듈별 빌드만. 기준선 정리 하나가 `native_decide`를 쓰지만 주장 정리의 의존 범위 밖. 족 그래프가 교과서 정의와 같다는 것은 Python 점검뿐. 비형식 자료(fact 그래프, 전수 계산, PMU 근거)는 **AI가 검증** 또는 **계산으로 확인**(한 번 실행)이고 점수를 청구하지 않음. **사람이 검토: 없음**.
-- **한계**: 추측은 열려 있음. 족들은 일반 추측의 장애물을 없애지 않음. 일반 subcubic 그래프의 유한 범위는 7꼭짓점. 일부 족(GP의 일부, 덮개 정리)은 문헌에 있음(패킷 §2.6).
-- **자료**: `entries/dms-star6/`, 태그 TODO(운영자, 예정 `dms-v1`). 조사 기록: `findings/dms-c4c-core.md`.
+- **Target and state before the event**: is the star chromatic index of every subcubic graph at most 6 (Dvořák–Mohar–Šámal 2013, arXiv:1011.3376; Open Problem Garden, OPG-37271)? Open; known upper bound 7. Baseline before the event: a Lean 4.20 library of 20 modules and the records of a preliminary investigation (packet §4.1).
+- **Results** (all **Lean kernel-checked**, for finite loopless multigraphs with Δ ≤ 3):
+  - T1, infinite families: flower snarks J_n (odd n ≥ 5), Goldberg snarks (odd k ≥ 5), GP(n,k) (1 ≤ k ≤ 15, n ≥ 2k+1, except GP(3,1)), Möbius ladders (n ≥ 4), Petersen-type inflation — 5 colours. GP(k,2): 6 colours with the spokes as one colour class. Lean names: `flower_family`, `goldberg_family`, `gp_family`, `Mobius.mobius_family`, `Inflation.inflate_star5`, `gp2_star`.
+  - T2: holds for bridgeless cubic multigraphs on at most 14 vertices and their leaf graphs, and for subcubic multigraphs on at most 7 vertices (`star6_cubic_bridgeless_le14`, `star6_leaf_le14`, `star6_subcubic_le7`); the equivalence `dms_iff_cubic16` (DMS ⇔ connected bridgeless cubic multigraphs on at least 16 vertices and their leaf graphs are star 6-colourable).
+  - T3, conditional: `RH2F.layer37` — named hypotheses (FEEXTD10, FEEXISTD18, POLE, TDTRI, FEEXTTNE16, FEEXIST0NE16 and others) ⇒ DMS. **None of the hypotheses is proved.**
+  - T4, finite certificates: `base12`, `simple14`, `b14d`, `feexist16`, `cls16c` (607 c4c graphs on 16 vertices).
+- **How**: a multi-agent harness (worker → LLM verifier → GPT cross-check audit → Lean gate) accumulated 786 informal facts and the Lean modules; from two days before the deadline, helper sessions produced the port to 4.33.1, the Lean proofs of the families and the corollaries. The colourings of GP(n,k) and of the Möbius ladders were found by SAT search.
+- **Verification**: Lean 4.33.1, Mathlib v4.33.1, standard axioms (`#print axioms`: 18 lines in pack3, 36 in pack4, 39 in pack5). pack3 was built both with `lake build` (20 minutes) and module by module; pack4 and pack5 module by module only. One baseline theorem uses `native_decide` but lies outside the dependency cone of the claimed theorems. That the family graphs agree with the textbook definitions is checked by a Python script only. The informal material (fact graph, exhaustive computations, the evidence for PMU) is **AI-checked** or **computed** (run once) and no credit is requested for it; it was not reviewed by a human. **Human-reviewed**: reported by the team for the claimed statements and the correspondence notes (details in `TEAM.md`).
+- **Limitations**: the conjecture is open. The families do not remove the obstacle of the general conjecture. The finite range for general subcubic graphs is 7 vertices. Some families (part of GP, the cover theorem) are in the literature (packet §2.6).
+- **Material**: `entries/dms-star6/`; tag TODO (operator, planned `dms-v1`). Investigation record: `findings/dms-c4c-core.md`.
 
 ### 2.3 erdos-m2-formalizations
 
-- **대상과 대회 전 상태**: 에르되시 문제들에 딸린 알려진 결과(formal-conjectures 커밋 `df3f12d7`에서 `sorry`로 남아 있던 명제)와 Schönberger 정리·Petersen 정리(연결된 경우). 수학은 알려져 있고, 패킷 §7의 검색에서 선행 형식 증명을 찾지 못한 것들.
-- **결과**: 13개 묶음, 정리 19개 — 실질 9개(G-PM, E942, E44, E123, E918, E292, E395, E698, E939), 사소·점검용 4개(E295, E703, E748, E1136). 선택 5개 묶음(E757, E261, E36, E649, E508)은 주장하지 않음. **Lean 커널 검증**.
-- **어떻게 했는가**: GPT(codex 무인 세션)가 증명, Claude가 대상 선정·검증 스크립트·선행 형식화 조사·패킷. `findings/formalization-workflow.md`.
-- **검증**: Lean 4.33.1, FC가 고정한 Mathlib, 표준 공리. 명제가 고정 커밋과 글자 단위로 같은지 스크립트로 확인(**계산으로 확인**). 선행 형식화 조사는 **AI가 검증**. **사람이 검토: 없음**.
-- **한계**: "새것"은 검색에서 못 찾았다는 뜻뿐. 각 문제의 주 명제는 주장하지 않음. Petersen 정리는 연결 그래프만. `Star6Simple.lean`은 star6 라이브러리가 있어야 빌드됨.
-- **자료**: `entries/erdos-m2-formalizations/`, 태그 TODO(운영자).
+- **Target and state before the event**: known results attached to Erdős problems (statements left as `sorry` in formal-conjectures at commit `df3f12d7`) and Schönberger's and Petersen's theorems (connected case). The mathematics is known; these are the ones for which the searches of packet §7 found no earlier formal proof.
+- **Result**: 13 families, 19 theorems — 9 substantive (G-PM, E942, E44, E123, E918, E292, E395, E698, E939) and 4 minor / sanity ones (E295, E703, E748, E1136). The 5 optional families (E757, E261, E36, E649, E508) are not claimed. **Lean kernel-checked**.
+- **How**: GPT (unattended codex sessions) wrote the proofs; Claude did target selection, the verification scripts, the prior-formalization search and the packet. `findings/formalization-workflow.md`.
+- **Verification**: Lean 4.33.1, the Mathlib pinned by FC, standard axioms. That each statement is character-for-character identical to the pinned commit is checked by a script (**computed**). The prior-formalization search is **AI-checked**. **Human-reviewed**: reported by the team for the claimed statements and the correspondence notes (details in `TEAM.md`); the proofs were not reviewed by a human according to the sources.
+- **Limitations**: "new" means only that the searches did not find it. The main statement of each problem is not claimed. Petersen's theorem for connected graphs only. `Star6Simple.lean` builds only with the star6 library.
+- **Material**: `entries/erdos-m2-formalizations/`; tag TODO (operator).
 
 ### 2.4 erdos-1038
 
-TODO(담당 팀원).
+TODO (the member in charge).
 
-## 3. 발견점
+## 3. Findings
 
-### 3.1 수학
+### 3.1 Mathematics
 
-- 새로 알게 된 것 — 증명된 것(**Lean 커널 검증**): 2.1~2.3절의 정리. 특히 DMS가 16꼭짓점 이상의 bridgeless 3정칙 다중그래프와 그 leaf 그래프의 문제와 동치라는 것, 위 족들이 5색으로 충분하다는 것, c_4의 새 상계.
-- 새로 알게 된 것 — 근거만 있는 것(**계산으로 확인**, 증명 없음, 독립 재실행 없음): PMU(순환 4-변연결 단순 3정칙 그래프, 10꼭짓점 이상에서 모든 완벽 매칭이 어떤 star 6-채색의 색 클래스가 된다)는 n = 10~18의 완벽 매칭 193,521개 전수와 n = 20/24/30/40의 표본 88,144개에서 실패 0. K₃,₃과 n = 8에서는 실패. 출처: DMS 패킷 §3.2, `findings/dms-c4c-core.md`.
-- 반증된 접근과 그 반례(**계산으로 확인**): 고정 반경 국소 수선은 반지름 2(8개 모양 전부), 반지름 3(8개 중 6개)에서 명시적 c4c 그래프(n = 258~574)로 반증. 발견된 경우는 모두 Kempe 교환 한 번으로 구제됨. (FE-ALLPM-D)는 20꼭짓점에서 반증. TD-RED-POLE은 문턱 10에서 거짓. 출처: DMS 패킷 §3.3.
-- Ramsey: 768 블록 seed의 가중치만 조정해도 기준값을 넘지만 폭이 작고, 1024 블록 분할이 가장 크게 기여(`findings/ramsey-search.md`; 기여 크기는 탐색 세션의 보고).
-- 남은 열린 질문: DMS 환원의 가설 전부(c4c 핵심의 무한 명제), PMU, 순환 4-변 절단의 4-사이클 면 환원; c_4의 값.
+- Newly known — proved (**Lean kernel-checked**): the theorems of sections 2.1–2.3. In particular: DMS is equivalent to the problem for bridgeless cubic multigraphs on at least 16 vertices and their leaf graphs; 5 colours suffice for the families above; the new upper bound for c_4.
+- Newly known — evidence only (**computed**, no proof, no independent re-run): PMU (in a cyclically 4-edge-connected simple cubic graph on at least 10 vertices, every perfect matching is a colour class of some star 6-edge-colouring) had 0 failures over all 193,521 perfect matchings for n = 10–18 and over a sample of 88,144 for n = 20/24/30/40. It fails for K₃,₃ and for n = 8. Source: DMS packet §3.2, `findings/dms-c4c-core.md`.
+- Refuted approaches and their counterexamples (**computed**): fixed-radius local repair is refuted at radius 2 (all 8 shapes) and radius 3 (6 of 8) by explicit c4c graphs (n = 258–574). Every case found is rescued by a single Kempe exchange. (FE-ALLPM-D) is refuted at 20 vertices. TD-RED-POLE is false at threshold 10. Source: DMS packet §3.3.
+- Ramsey: adjusting only the weights of the 768-block seed already beats the reference, but by a small margin; the split into 1024 blocks contributes most (`findings/ramsey-search.md`; the sizes of the contributions are as stated by the search session).
+- Open questions that remain: all hypotheses of the DMS reduction (infinite statements on the c4c core), PMU, the reduction of 4-cycle faces of cyclic 4-edge cuts; the value of c_4.
 
-### 3.2 방법
+### 3.2 Methods
 
-- AI 에이전트 운용: 명제를 한 모델이 고정하고 다른 모델이 증명한 뒤 독립적으로 다시 컴파일·대조하는 분담이 세 항목에서 모두 쓰였다. 비형식 fact는 LLM 검증기에 더해 다른 모델 계열의 감사를 거쳤고 감사는 627회 "맞음", 37회 "틀림"을 냈다. 상세: `findings/formalization-workflow.md`.
-- 형식화: 유한 검사는 생성한 표 + `decide +kernel`, 큰 검사는 파일을 잘게 나누는 것이 통했다(파일당 메모리 2~3.3 GB). `decide` 하나로 한 큰 검사는 메모리 상한에 걸렸다. Lean 4.20 → 4.33.1 이식은 8개 모듈 15군데 수정과 호환 옵션으로 끝났고 빌드 시간이 4,248초에서 1,422초로 줄었다(`entries/dms-star6/artifact/lean/pack3/README.md`).
-- 탐색·계산: `findings/ramsey-search.md`.
-- 사고와 조치: 서버 메모리 사고 3건과 상한, 사용량 한도로 인한 worker 정지(`findings/formalization-workflow.md` §4~5), 노트북 WSL 커널 패닉 10회와 서버 이전(`timeline.md`).
-- 쉬운 에르되시 대상은 대부분 공개 형식 증명과 중복이었다(제외 31행). 중복 검사를 대상 선정 앞에 두는 편이 낫다.
+- Operating AI agents: the division of labour "one model fixes the statement, another proves it, then an independent recompilation and comparison" was used in all three entries. Informal facts went through the LLM verifier and, in addition, an audit by a different model family; the audit returned "correct" 627 times and "wrong" 37 times. Details: `findings/formalization-workflow.md`.
+- Formalization: for finite checks, generated tables + `decide +kernel` worked, and for large checks, splitting into small files (2–3.3 GB of memory per file). One large check done with a single `decide` hit the memory cap. The port from Lean 4.20 to 4.33.1 needed changes at 15 places in 8 modules plus compatibility options, and build time fell from 4,248 s to 1,422 s (`entries/dms-star6/artifact/lean/pack3/README.md`).
+- Search and computation: `findings/ramsey-search.md`.
+- Incidents and measures: three server memory incidents and the caps, worker stops caused by usage limits (`findings/formalization-workflow.md` §4–5), 10 kernel panics of the laptop WSL and the move to the server (`timeline.md`).
+- Most easy Erdős targets were duplicates of public formal proofs (31 excluded rows). It is better to run the duplicate check before selecting targets.
 
-### 3.3 대회 운영에서 배운 것
+### 3.3 What we learned about running the competition
 
-TODO(팀 논의). 기록에 있는 것: 부분 진전의 모든 주장이 개별 형식화될 필요는 "꼭 그렇지는 않지만 강력히 권장"이라는 주최 측 답변(2026-10-02, `timeline.md`); 제안 문제(M3A)의 인정 여부는 심사 때 결정.
+TODO (team discussion). On record: the organisers' answer that individual formalization of every claim of a partial advance is "not necessarily required but strongly recommended" (2026-10-02, `timeline.md`); whether a proposed problem (M3A) is admitted is decided at judging. Leaderboards: the platform numbers accounts with identical metrics consecutively in alphabetical order, so we compute ranks with ties sharing a rank and always state the board size; a board with one account is described as "only entry (1 account)".
 
-## 4. 자원과 통계
+## 4. Resources and statistics
 
-수치는 모두 도구가 남긴 기록을 스크립트로 합산한 것이다(**계산으로 확인**; 사람이 검토하지 않음). 합산표는 `archive/stats/SUMMARY.md`(스크립트 생성), 원본은 `entries/*/STATS.yaml`, `archive/stats/*.yaml`.
+All figures are sums, made by scripts, of records left by the tools (**computed**; not reviewed by a human). Summary: `archive/stats/SUMMARY.md` (script-generated); sources: `entries/*/STATS.yaml`, `archive/stats/*.yaml`. Charts: the "Resources used" section of the top-level `README.md`.
 
-**AI 사용량(토큰)**
+**AI usage (tokens)**
 
-| 출처 | 기간(KST) | 입력 | 출력 | 캐시 읽기 | 캐시 쓰기 | 세션 | 비고 |
+| Source | Period (KST) | Input | Output | Cache read | Cache write | Sessions | Remarks |
 |---|---|---:|---:|---:|---:|---:|---|
-| 서버 하네스의 Claude(worker 4, 검증기, 감독·분해·검토·반증) | 09-28 ~ 10-02 | 90,808 | 67,133,867 | 7,123,153,571 | 178,393,628 | 1,151 | 전부 dms-star6. 모델별 출력: opus-5-5 52.7M, sonnet-5 8.2M, fable-5-1 6.2M |
-| 서버 codex(GPT) | 09-28 ~ 10-03 | 83,975,710 | 11,954,416 | 2,249,000,448 | — | 928 | 입력은 캐시 제외분. gpt-6-sol 534개 세션, gpt-5.6-sol 386개 |
-| 노트북 Claude Code(조종 세션 + 보조 에이전트) | 09-27 ~ 10-03 | 9,748 | 2,366,563 | 1,273,633,924 | 69,960,092 | 66 | 보조 에이전트 출력은 하한 |
+| Claude in the server harness (4 workers, verifier, supervisor, decomposer, reviewer, falsifier) | 09-28 – 10-02 | 90,808 | 67,133,867 | 7,123,153,571 | 178,393,628 | 1,151 | all dms-star6. Output per model: opus-5-5 52.7M, sonnet-5 8.2M, fable-5-1 6.2M |
+| codex (GPT) on the server | 09-28 – 10-03 | 83,975,710 | 11,954,416 | 2,249,000,448 | — | 928 | input excludes cached input. gpt-6-sol 534 sessions, gpt-5.6-sol 386 |
+| Claude Code on the laptop (steering session + helper agents) | 09-27 – 10-03 | 9,748 | 2,366,563 | 1,273,633,924 | 69,960,092 | 66 | helper-agent output is a lower bound |
 
-- 항목별 GPT: dms-star6 904개 세션(입력 79.8M, 출력 11.0M, 캐시 2,027M — 그중 검증·감사 822개 세션, GPT worker 68개 세션), erdos-m2-formalizations 21개 세션(입력 3.7M, 출력 0.85M, 캐시 202M), ramsey-k4-multiplicity 3개 세션(입력 0.46M, 출력 0.11M, 캐시 19M). 출처: `archive/stats/server-codex.yaml`.
-- 항목별 Claude: 서버 하네스는 전부 dms-star6. 노트북은 보조 에이전트만 나눌 수 있다(dms-star6 39개, ramsey 3개, erdos-m2 5개 세션). 조종 세션(출력 2.14M)은 shared/steering.
-- 비용: 구독 플랜을 썼고 토큰당 청구는 없다. 도구가 보고한 API 정가 환산액은 서버 하네스의 Claude에 대해 **3,717.96 USD(하한)** — 결과 기록이 있는 실행 1,103개의 합이고, 결과 기록 없이 끝난 실행 60개와 실행 로그가 없는 검토·반증 실행은 빠져 있다(실행 로그 기준 출력 53.7M 토큰, 세션 기록 기준 67.1M). 역할별: 검증 1,148, worker opar 939, lean 619, core 446, compute 432, 분해 83, 감독 50 USD. codex와 노트북 Claude Code는 환산액을 보고하지 않는다. 출처: `archive/stats/server-harness.yaml`.
-- 날짜별(서버 Claude 출력 토큰): 09-28 18.4M, 09-29 19.3M, 09-30 13.5M, 10-01 15.6M, 10-02 0.3M. GPT 출력: 09-28 0.2M, 09-29 1.2M, 09-30 2.1M, 10-01 5.8M, 10-02 2.7M. Claude worker가 멈춘 10-01 오후 이후 GPT 쪽으로 옮겨 간 것이 보인다.
-- 빠진 것: star6 run이 서버로 옮기기 전 노트북(WSL)에서 돈 첫 부분(09-27/28)의 Claude 사용량은 수집하지 못했다. 노트북 보조 에이전트의 출력 토큰은 하한이다(기록 2,660개 중 2,343개에 스트림 시작 시점 값만 있음).
+Total output: 81,454,846 tokens in 2,145 sessions (`archive/stats/SUMMARY.md`).
 
-**계산**
+- GPT per entry: dms-star6 904 sessions (input 79.8M, output 11.0M, cache 2,027M — of these 822 verify/audit sessions and 68 GPT-worker sessions), erdos-m2-formalizations 21 sessions (input 3.7M, output 0.85M, cache 202M), ramsey-k4-multiplicity 3 sessions (input 0.46M, output 0.11M, cache 19M). Source: `archive/stats/server-codex.yaml`.
+- Claude per entry: the server harness is all dms-star6. On the laptop only the helper agents can be split (dms-star6 39 sessions, ramsey 3, erdos-m2 5). The steering session (output 2.14M) is shared/steering.
+- Cost: subscription plans were used and nothing was billed per token. The API-list-price equivalent given by the tool for Claude in the server harness is **3,717.96 USD (lower bound)** — the sum over the 1,103 runs that have a result record; the 60 runs that ended without one and the reviewer and falsifier runs, which have no run log, are missing (53.7M output tokens by the run logs against 67.1M by the session records). By role: verify 1,148, worker opar 939, lean 619, core 446, compute 432, decomposer 83, supervisor 50 USD. codex and Claude Code on the laptop give no equivalent. Source: `archive/stats/server-harness.yaml`.
+- Per day (output tokens of Claude on the server): 09-28 18.4M, 09-29 19.3M, 09-30 13.5M, 10-01 15.6M, 10-02 0.3M. GPT output: 09-28 0.2M, 09-29 1.2M, 09-30 2.1M, 10-01 5.8M, 10-02 2.7M. The shift to GPT after the Claude workers stopped on the afternoon of 10-01 is visible.
+- Missing: the Claude usage of the first part of the star6 run on the laptop (WSL), before the move to the server (09-27/28), was not collected. The output tokens of the laptop helper agents are a lower bound (2,343 of 2,660 records carry only the stream-start value). Usage for erdos-1038 and for the members' hill results is not included.
 
-- Ramsey: 인증서 4.7 CPU시간·50분·프로세스당 3.3 GB(`CERT_STATUS.md`); 탐색은 서버 로그 기준 2026-10-01 23:55 ~ 10-02 11:12 UTC(11.3시간 벽시계), CPU 시간 미기록.
-- DMS Lean 빌드: pack3 1,422초(모듈별)·20분(`lake build`), Lean 4.20에서는 4,248초; pack4 930초; pack5 약 80초(추정).
-- DMS 하네스 job(서버 job 기록 695개, 벽시계는 "로그 수정 시각 − 시작 시각"의 합이라 **추정**, CPU 시간 미기록): worker 계산 213개 7.2시간(각 2 GB 상한), GPT 감사 453개 50.6시간, 검토·분해 14개 18.2시간, Lean 준비 6개 0.4시간.
-- 에르되시: codex 세션 21개의 세션 시간 합 9.6시간(추정; 컴파일 포함, CPU 시간 아님).
+**Compute**
 
-**산출물**: Lean 줄 수(주장 소스) Ramsey 104,665(대부분 생성된 수치), DMS 81,622, 에르되시 2,791; 주장 정리 8 / 45(패킷의 이름 목록을 손으로 센 것) / 19; DMS 비형식 fact 786개.
+- Ramsey: certificate 4.7 CPU-hours, 50 minutes, 3.3 GB per process (`CERT_STATUS.md`); search, by the server logs, 2026-10-01 23:55 – 10-02 11:12 UTC (11.3 hours wall-clock), CPU time not recorded.
+- DMS Lean builds: pack3 1,422 s (per module) and 20 minutes (`lake build`); 4,248 s on Lean 4.20; pack4 930 s; pack5 about 80 s (estimate).
+- DMS harness jobs (695 job records on the server; wall-clock is the sum of "log modification time − start time" and therefore an **estimate**; CPU time not recorded): 213 worker computations 7.2 hours (cap 2 GB each), 453 GPT audits 50.6 hours, 14 review/decompose runs 18.2 hours, 6 Lean set-up jobs 0.4 hours.
+- Erdős: sum of the session times of the 21 codex sessions 9.6 hours (estimate; includes compilation, not CPU time).
 
-**사용량 한도**: codex 기록의 한도 스냅숏으로 보면 GPT 주간 창이 10-01과 10-02에 100%에 닿았다가 초기화되었다. Claude 쪽 경과는 `findings/formalization-workflow.md` §5.
+**Outputs**: Lean lines (claimed sources) Ramsey 104,665 (mostly generated numerals), DMS 81,622, Erdős 2,791; claimed theorems 8 / 45 (the packet's list of names, counted by hand) / 19; 786 informal DMS facts.
 
-**TODO**: 사람 시간(운영자), 구독 플랜 이름과 실제 지출, 결과당 비용, 노트북 WSL 구간의 사용량.
+**Usage limits**: by the limit snapshots in the codex records, the GPT weekly window reached 100% on 10-01 and on 10-02 and was reset. For Claude see `findings/formalization-workflow.md` §5.
 
-## 5. 타임라인
+**TODO**: human time (operator), names of the subscription plans and actual spending, cost per result, usage of the laptop-WSL part.
 
-`archive/timeline.md`. 요약: TODO(팀).
+## 5. Timeline
 
-## 6. 다음 단계
+`archive/timeline.md`. Summary: TODO (team).
 
-TODO(팀): 대회 이후 이어갈 연구, 공개 계획.
+## 6. Next steps
 
-## 부록
+TODO (team): research to continue after the competition, publication plan.
 
-- A. 팀원과 역할: TODO
-- B. 도구와 모델 목록: 각 `entries/<이름>/ENTRY.yaml`의 `ai_and_tools`; 팀 전체 목록은 TODO
-- C. 참고 문헌: 각 패킷의 문헌 절; 팀 전체 목록은 TODO
+## Appendix
+
+- A. Members and roles: `TEAM.md` (each member fills in their own block).
+- B. Tools and models: `ai_and_tools` in each `entries/<name>/ENTRY.yaml`; a team-wide list is TODO.
+- C. References: the literature section of each packet; a team-wide list is TODO.

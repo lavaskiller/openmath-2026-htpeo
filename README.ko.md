@@ -184,9 +184,9 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 ## 아카이브와 그 밖
 
-- [archive/REPORT.md](archive/REPORT.md) — 팀 보고서(결과, 발견점, 자원).
-- [archive/timeline.md](archive/timeline.md) — 날짜별 기록과 출처.
-- [archive/findings/](archive/findings/) — 주제별 발견점과 실패한 시도.
+- [archive/REPORT.ko.md](archive/REPORT.ko.md) — 팀 보고서(결과, 발견점, 자원). 기준 문서는 영어 [REPORT.md](archive/REPORT.md).
+- [archive/timeline.ko.md](archive/timeline.ko.md) — 날짜별 기록과 출처(영어: [timeline.md](archive/timeline.md)).
+- [archive/findings/](archive/findings/) — 주제별 발견점과 실패한 시도(영어 본문과 `*.ko.md`).
 - [archive/STATS_REQUEST.ko.md](archive/STATS_REQUEST.ko.md) — 팀원별 통계를 뽑는 방법(영어: [STATS_REQUEST.md](archive/STATS_REQUEST.md)).
 - [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md) — 올리는 규칙 요약(전문은 영어 [CONTRIBUTING.md](CONTRIBUTING.md)).
 - 인용 정보는 [CITATION.cff](CITATION.cff). 라이선스는 팀이 정할 예정이며, 저장소는 마감까지 팀 비공개입니다.

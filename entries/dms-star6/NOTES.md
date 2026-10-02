@@ -1,45 +1,45 @@
-# dms-star6 — 과정 기록
+# dms-star6 — Process notes
 
-작성: helper-team-repo(Claude Code 에이전트), 2026-10-03 KST. 사람이 검토하지 않았습니다. 출처는 `PACKET.md`, `artifact/README.md`, `artifact/lean/pack*/README.md`·`STATUS.md`, `artifact/informal/*_REPORT.md`, 프로젝트 운영 기록(PLAN.md, 손으로 쓴 기록)입니다. c4c 핵심에 대한 조사는 `archive/findings/dms-c4c-core.md`에 따로 있습니다.
+Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-reviewed. Sources are `PACKET.md`, `artifact/README.md`, `artifact/lean/pack*/README.md` and `STATUS.md`, `artifact/informal/*_REPORT.md`, and the project operations records (PLAN.md, hand-written notes). The investigation of the c4c core is separately in `archive/findings/dms-c4c-core.md`.
 
-**추측은 증명되지 않았습니다.** Lean으로 확인된 것은 특수한 경우, 작은 크기, 동치 재서술, 그리고 "이름 붙은 열린 가설 ⇒ 추측" 형태의 정리입니다.
+**The conjecture has not been proved.** What has been confirmed in Lean are special cases, small sizes, equivalent restatements, and theorems of the form "named open hypothesis ⇒ conjecture".
 
-## 이 폴더의 내용
+## Contents of this folder
 
-- `PACKET.md`: `star6_packet_final.md` 그대로(원본 저장소의 사본과 `cmp`로 같음).
-- `artifact/`: 로컬 저장소 `star6_artifact`의 커밋 `0240e123d187ea3d86e0a3a675a4ae6346e0929c`에서 추적 파일 672개를 `git archive`로 복사(21.1 MB). `sha256sum -c SHA256SUMS`: 671개 전부 OK(2026-10-03).
-- 안쪽 목록: `lean/pack4/SHA256SUMS` 311개 OK, `lean/pack5/SHA256SUMS` 6개 OK. `lean/pack3/SHA256SUMS`는 `lean/pack3/src/`를 기준으로 쓴 목록이라 `src/` 안에서 실행해야 하며 그렇게 하면 100개 OK입니다(`pack3/`에서 실행하면 전부 실패로 나옵니다).
+- `PACKET.md`: `star6_packet_final.md` as is (identical to the copy in the original repository, by `cmp`).
+- `artifact/`: the 672 tracked files copied with `git archive` from commit `0240e123d187ea3d86e0a3a675a4ae6346e0929c` of the local repository `star6_artifact` (21.1 MB). `sha256sum -c SHA256SUMS`: all 671 OK (2026-10-03).
+- Inner lists: `lean/pack4/SHA256SUMS` 311 OK, `lean/pack5/SHA256SUMS` 6 OK. `lean/pack3/SHA256SUMS` is a list written relative to `lean/pack3/src/`, so it must be run inside `src/`, and when run that way 100 are OK (run from `pack3/`, everything is reported as failed).
 
-## 통한 것
+## What worked
 
-- **Lean 커널 검증**: 환원 사슬(98개 모듈, `RH2F.layer37`). 2-변 절단, 3-변 절단, digon 제거를 따라 순환 4-변연결 단순 3정칙 그래프의 가설들로 내려갑니다. 유한 기저(10~16꼭짓점)는 생성한 표를 `decide +kernel`로 확인. 출처: `PACKET.md` §1.4, §2.5.
-- **Lean 커널 검증**: 무한 족(flower snark, Goldberg snark, GP(n,k) k ≤ 15, Möbius ladder, Petersen형 팽창). "주기 부분 + 이음매" 채색과 유한 창 검사(`BlockStar.star_of_windows`). GP(n,k)와 Möbius ladder의 채색은 SAT 탐색으로 찾았고 비형식 증명이 없습니다. 출처: `PACKET.md` §1.2, §2.5.
-- **Lean 커널 검증**: 사슬의 귀납을 가설을 크기 N 이하로 제한해 다시 돌린 `bounded_reduction`에서 14꼭짓점 이하 정리와 동치 `dms_iff_cubic16`이 나왔습니다. 출처: `PACKET.md` §1.3.
-- Lean 4.20 → 4.33.1 이식: 8개 모듈의 증명 15군데 수정과 호환 옵션. 선언 머리 6,124개가 바뀌지 않았음을 스크립트로 확인(**계산으로 확인**). 같은 98개 모듈의 빌드가 4,248초·6.3 GB(4.20)에서 1,422초·3.2 GB(4.33.1)로 줄었습니다. 출처: `artifact/lean/pack3/README.md`, `pack2/README.md`.
-- 하네스 운용: worker(Claude, 나중에 GPT 3명 추가)가 fact를 내고, LLM 검증기와 다른 모델 계열(GPT)의 교차 감사, Lean 게이트가 받아들입니다. fact 786개 중 732개가 검증기 + GPT 감사를 통과했고 그중 141개는 Lean 4.20 게이트도 통과(**AI가 검증**, 일부 Lean). GPT 감사는 627회 "맞음", 37회 "틀림", 10회 "오류"를 냈습니다. 출처: `PACKET.md` §3.1.
+- **Lean kernel-checked**: The reduction chain (98 modules, `RH2F.layer37`). Following 2-edge cuts, 3-edge cuts, and digon removal, it descends to hypotheses about cyclically 4-edge-connected simple cubic graphs. The finite base (10 to 16 vertices) is checked by `decide +kernel` on generated tables. Source: `PACKET.md` §1.4, §2.5.
+- **Lean kernel-checked**: Infinite families (flower snarks, Goldberg snarks, GP(n,k) with k ≤ 15, Möbius ladders, Petersen-type inflations). "Periodic part + seam" colorings and a finite window check (`BlockStar.star_of_windows`). The colorings of GP(n,k) and the Möbius ladders were found by SAT search and have no informal proof. Source: `PACKET.md` §1.2, §2.5.
+- **Lean kernel-checked**: `bounded_reduction`, which reruns the induction of the chain with the hypotheses restricted to size at most N, yielded the theorem for at most 14 vertices and the equivalence `dms_iff_cubic16`. Source: `PACKET.md` §1.3.
+- Port from Lean 4.20 to 4.33.1: fixes at 15 places in the proofs of 8 modules, plus compatibility options. A script confirmed that the 6,124 declaration headers did not change (**computed**). The build of the same 98 modules went down from 4,248 seconds and 6.3 GB (4.20) to 1,422 seconds and 3.2 GB (4.33.1). Source: `artifact/lean/pack3/README.md`, `pack2/README.md`.
+- Harness operation: workers (Claude, later 3 GPT workers added) produce facts, which are accepted by an LLM verifier, a cross-audit by a different model family (GPT), and a Lean gate. Of 786 facts, 732 passed the verifier + GPT audit, and 141 of those also passed the Lean 4.20 gate (**AI-checked**, partly Lean). The GPT audit returned "correct" 627 times, "wrong" 37 times, and "error" 10 times. Source: `PACKET.md` §3.1.
 
-## 안 통한 것
+## What did not work
 
-- 다섯 조각(P18, P16, P14, P23, P19)이 모두 c4c 핵심의 무한 명제에서 멈췄습니다. 출처: `archive/findings/dms-c4c-core.md`.
-- 고정 반경 국소 수선: 반지름 2에서 8개 모양 전부, 반지름 3에서 8개 중 6개가 명시적 그래프(n = 258~574)로 반증(**계산으로 확인**, 한 번 실행). 출처: `artifact/informal/c4c-ball_REPORT.md`.
-- (FE-ALLPM-D)는 20꼭짓점에서 반증, TD-RED-POLE은 문턱 10에서 거짓. 출처: `artifact/informal/p16_REPORT.md`, `p23-pole_REPORT.md`.
-- 기준선 기록에 반증되거나 버린 접근 49개. 출처: `PACKET.md` §3.3.
-- GP 창 검사를 `decide` 하나로 한 버전이 6 GB 상한과 swap에 걸려 수동 중지(2026-10-02 13:38 UTC). 창 검사를 조각 모듈로 나눴습니다. 출처: `artifact/lean/pack4/STATUS.md`.
-- 서버 Claude 계정의 주간 사용량이 2026-10-01에 99%에 이르러 Claude worker 4명이 15:49부터 마감까지 정지했습니다. 출처: PLAN.md(손 기록).
+- All five pieces (P18, P16, P14, P23, P19) stopped at the infinite statement of the c4c core. Source: `archive/findings/dms-c4c-core.md`.
+- Fixed-radius local repair: at radius 2 all 8 shapes, and at radius 3 6 of the 8, were refuted by explicit graphs (n = 258 to 574) (**computed**, run once). Source: `artifact/informal/c4c-ball_REPORT.md`.
+- (FE-ALLPM-D) is refuted at 20 vertices, and TD-RED-POLE is false at threshold 10. Source: `artifact/informal/p16_REPORT.md`, `p23-pole_REPORT.md`.
+- 49 refuted or abandoned approaches in the baseline record. Source: `PACKET.md` §3.3.
+- The version that did the GP window check with a single `decide` hit the 6 GB cap and swap and was stopped manually (2026-10-02 13:38 UTC). The window check was split into piece modules. Source: `artifact/lean/pack4/STATUS.md`.
+- The weekly usage of the server's Claude account reached 99% on 2026-10-01, and the 4 Claude workers were halted from 15:49 until the deadline. Source: PLAN.md (hand-written record).
 
-## 검증 수준 요약
+## Summary of verification levels
 
-- Lean 커널 검증: `PACKET.md` §1.2~1.4의 정리.
-- 계산으로 확인(스크립트 한 번 실행, 독립 재실행 없음): `PACKET.md` §3.2~3.3의 전수 조사와 반례.
-- AI가 검증: fact 그래프의 비형식 보조정리, 문헌 조사(`artifact/docs/NOVELTY.md`).
-- 사람이 검토: 없음.
+- Lean kernel-checked: the theorems of `PACKET.md` §1.2 to 1.4.
+- Computed (script run once, no independent rerun): the exhaustive checks and counterexamples of `PACKET.md` §3.2 to 3.3.
+- AI-checked: the informal lemmas of the fact graph, the literature survey (`artifact/docs/NOVELTY.md`).
+- Human-reviewed: none.
 
-## 공개 전 확인할 점
+## Points to check before publication
 
-- `artifact/` 안의 빌드 로그와 문서에 서버의 홈 디렉터리 경로가 들어 있습니다(패킷 §4.4에 밝혀져 있음). 비밀 정보는 아닙니다.
-- `artifact/paper/`의 논문 초안은 2026-09-30 상태이고 패킷과 맞지 않는 부분이 있습니다(패킷 §3.4).
+- The build logs and documents inside `artifact/` contain the server's home directory path (disclosed in packet §4.4). This is not secret information.
+- The paper draft in `artifact/paper/` is in its 2026-09-30 state and has parts that do not match the packet (packet §3.4).
 
-## 운영자가 채울 것
+## For the operator to fill in
 
-- 제출 ID, 공개 커밋과 태그, 담당자, 기준선 커밋, 사람 검토 기록, 사람 시간.
-- 서버 쪽 사용량과 계산 시간: `archive/stats/server-harness.yaml`, `server-codex.yaml`의 절차.
+- Submission ID, public commit and tag, person in charge, baseline commit, human review record, human time.
+- Server-side usage and compute time: the procedures in `archive/stats/server-harness.yaml` and `server-codex.yaml`.

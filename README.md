@@ -197,9 +197,9 @@ Details: [Ramsey README](entries/ramsey-k4-multiplicity/artifact/README.md) · [
 ## Repository layout
 
 ```
-README.md / README.ko.md   <- this page, English and Korean
+README.md                  <- this page (English is the standard; *.ko.md files are Korean companions)
 TEAM.md                    <- roster, human-review record, release sign-off
-CONTRIBUTING.md            <- contribution guidelines (Korean summary: CONTRIBUTING.ko.md)
+CONTRIBUTING.md            <- contribution guidelines
 CITATION.cff
 entries/
   <entry>/ENTRY.yaml       <- machine-readable summary: claims, toolchain, axioms, limitations
@@ -210,7 +210,7 @@ entries/
   PENDING.yaml             <- entries announced but not yet added
   hills/<hill>-<id>/       <- hill results of team members (files added by each owner)
 archive/
-  REPORT.md                <- team report: results and findings (Korean)
+  REPORT.md                <- team report: results and findings
   timeline.md              <- dated log with sources
   findings/                <- topic notes, including failed approaches
   stats/                   <- raw usage numbers and SUMMARY.md
@@ -321,8 +321,8 @@ Hill standings of the members are in [Results at a glance](#results-at-a-glance)
 
 ## Archive
 
-- [archive/REPORT.md](archive/REPORT.md) — the team report: results, findings, resources (Korean).
-- [archive/timeline.md](archive/timeline.md) — dated log with the source of every row.
+- [archive/REPORT.md](archive/REPORT.md) — the team report: results, findings, resources ([한국어](archive/REPORT.ko.md)).
+- [archive/timeline.md](archive/timeline.md) — dated log with the source of every row ([한국어](archive/timeline.ko.md)).
 - [archive/findings/ramsey-search.md](archive/findings/ramsey-search.md) — which search moves helped and which did not.
 - [archive/findings/dms-c4c-core.md](archive/findings/dms-c4c-core.md) — where every route to the conjecture stops, with refuted approaches.
 - [archive/findings/formalization-workflow.md](archive/findings/formalization-workflow.md) — how proofs were produced and checked, and the duplicates found.
