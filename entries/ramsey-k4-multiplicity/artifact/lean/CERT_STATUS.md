@@ -44,7 +44,7 @@ Cross-checks outside Lean:
   (`~/ramsey/v2/hill/eval.py`) on the same file; the density equals the ledger fraction; gcd of weights = 1;
 * `tools/check_data.py` confirms that `RamseyCert/Data/Base.lean` transcribes `solution.json`.
 
-## Build record (server htpeobigdata, 16 cores, 14 GB RAM)
+## Build record (team server, 16 cores, 14 GB RAM)
 * 11:18–11:20 UTC data layers; 11:19:45–12:07:26 the 2048 per-block kernel checks (two jobs of 3 `lean`
   processes each, 6 G cap per job): sum of per-file wall times 16762 s (4.7 CPU-hours), mean 8.2 s, max
   11.1 s per file, max RSS 3.30 GB per process (≈ 1.6 GB of it shared mapped `.olean`s);

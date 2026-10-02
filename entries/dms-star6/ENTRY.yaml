@@ -65,13 +65,13 @@ submission:
   submitted_at: "TODO: operator"
   submission_id: "TODO: operator"
   commit: "TODO: operator, after publishing (source artifact repo: local commits 1a02f64 -> 0240e123d187ea3d86e0a3a675a4ae6346e0929c, unpublished)"
-  tag: "TODO: operator (planned: dms-v1)"
+  tag: "dms-v1"
 people:
   owner: "TODO: operator"
   contributors:
     - "Woohyuk Kang: operator of the agent harness; commit author"
     - "TODO: operator - full roster and each human's contribution"
-  human_review: "none (PACKET.md section 4.3)"
+  human_review: "reviewed by a human team member (reported by the team on 2026-10-03); reviewer names and scope to be filled in"
 ai_and_tools:
   models:
     - "Claude Opus / Sonnet workers (agent harness on the server; exact model ids: TODO, from the harness INDEX.json, see archive/stats/server-harness.yaml)"

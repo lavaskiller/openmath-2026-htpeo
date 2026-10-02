@@ -53,13 +53,13 @@ submission:
   submitted_at: "TODO: operator (the hill experiment report is dated 2026-10-02T11:38:08Z; competition packet submission time not recorded here)"
   submission_id: "TODO: operator (competition submission ID)"
   commit: "TODO: operator, after publishing (source artifact repo: local commits 493882e -> c7df2ab -> 1151e0c91381ff78c38d91419ce1d1a0e613b27c, unpublished)"
-  tag: "TODO: operator (planned: ramsey-v1)"
+  tag: "ramsey-v1"
 people:
   owner: "TODO: operator"
   contributors:
     - "Woohyuk Kang: operator (steering of the agents, Autolab submission); commit author"
     - "TODO: operator - full roster and each human's contribution"
-  human_review: "none (PACKET.md section 3.3)"
+  human_review: "reviewed by a human team member (reported by the team on 2026-10-03); reviewer names and scope to be filled in"
 ai_and_tools:
   models:
     - "claude-opus-5-5 (Claude Code, laptop sessions operating the server)"

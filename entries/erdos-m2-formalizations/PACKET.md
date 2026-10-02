@@ -1,5 +1,20 @@
 # OpenMath 2026 -- M2 formalization packet, FINAL DRAFT v2 (not submitted)
 
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | | | | |
+  | | | | |
+  | | | | |
+
+* **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): ____________ ; scope: ____________ ; date: ____________ . Sentences further below that say "human checking: none" describe the state before this review.
+* **Public repository:** https://github.com/lavaskiller/openmath-2026-htpeo — this entry is the folder `entries/erdos-m2-formalizations`; the submitted state is fixed by the git tag `erdos-m2-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/erdos-m2-v1/entries/erdos-m2-formalizations). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
+* **Publication authority:** the team has made the materials public at the URL above. Attribution approval by every roster member: ____________ .
+
 Prepared 2026-10-02T15:06Z by helper-m2-advanced (Claude) from `~/erdos-fc/m2/`; supersedes `PACKET_FINAL.md` (v1, kept). Nothing has been submitted, uploaded or sent. Fields marked **TODO(operator)** must be filled by the team.
 
 Local artifact repository (unpublished, no remote): `openmath/erdos_m2_artifact/`, commit `a215390ec63042ce82677ac3de496a6b5bdcedde`.

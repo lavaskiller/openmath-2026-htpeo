@@ -66,13 +66,13 @@ submission:
   submitted_at: "TODO: operator"
   submission_id: "TODO: operator"
   commit: "TODO: operator, after publishing (source artifact repo: local commit 9b341528c6ea83a7199bf45051ac1db483f9ee13 plus uncommitted final edits to 4 files; see NOTES.md)"
-  tag: "TODO: operator"
+  tag: "erdos-m2-v1"
 people:
   owner: "TODO: operator"
   contributors:
     - "Woohyuk Kang: operator; commit author"
     - "TODO: operator - full roster and each human's contribution"
-  human_review: "none (PACKET.md section 0)"
+  human_review: "reviewed by a human team member (reported by the team on 2026-10-03); reviewer names and scope to be filled in"
 ai_and_tools:
   models:
     - "gpt-6-sol (codex CLI, unattended sessions on the server)"

@@ -1,5 +1,20 @@
 # OpenMath 2026 submission packet — improved upper bound for the K4 Ramsey multiplicity constant
 
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | | | | |
+  | | | | |
+  | | | | |
+
+* **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): ____________ ; scope: ____________ ; date: ____________ . Sentences further below that say "human checking: none" describe the state before this review.
+* **Public repository:** https://github.com/lavaskiller/openmath-2026-htpeo — this entry is the folder `entries/ramsey-k4-multiplicity`; the submitted state is fixed by the git tag `ramsey-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/ramsey-v1/entries/ramsey-k4-multiplicity). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
+* **Publication authority:** the team has made the materials public at the URL above. Attribution approval by every roster member: ____________ .
+
 Packet version: v1 (2026-10-02). State: **draft — nothing has been submitted by the author of this packet;
 operator TODOs are listed in section 5.** Structure follows handbook section 8.
 

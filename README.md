@@ -1,4 +1,4 @@
-# OpenMath 2026 — <팀 이름> 제출물과 아카이브
+# OpenMath 2026 — HTPeo 제출물과 아카이브
 
 이 저장소는 두 가지를 담습니다.
 
@@ -11,10 +11,10 @@
 
 | 항목 | 대상 문제 | 모드 | 형식 검증 | 상태 | 담당 | 고정 태그 |
 |---|---|---|---|---|---|---|
-| [ramsey-k4-multiplicity](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수의 상계 | M3A(제안) | Lean 4.33.1, 표준 공리 | hill 통과·패킷 완성 | TODO | `ramsey-v1`(예정, 아직 없음) |
-| [dms-star6](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측(star chromatic index ≤ 6) — 부분 결과 | M3A(제안) | Lean 4.33.1, 표준 공리 | 패킷 완성 | TODO | `dms-v1`(예정, 아직 없음) |
+| [ramsey-k4-multiplicity](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수의 상계 | M3A(제안) | Lean 4.33.1, 표준 공리 | hill 통과·패킷 완성 | TODO | `ramsey-v1` |
+| [dms-star6](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측(star chromatic index ≤ 6) — 부분 결과 | M3A(제안) | Lean 4.33.1, 표준 공리 | 패킷 완성 | TODO | `dms-v1` |
 | [erdos-1038](entries/erdos-1038/) | 에르되시 문제 #1038 | | Lean 4.34.1, 표준 공리 | | | |
-| [erdos-m2-formalizations](entries/erdos-m2-formalizations/) | 에르되시 문제들의 알려진 결과 형식화(13개 묶음) | M2 | Lean 4.33.1, 표준 공리 | 패킷 완성(v2) | TODO | TODO |
+| [erdos-m2-formalizations](entries/erdos-m2-formalizations/) | 에르되시 문제들의 알려진 결과 형식화(13개 묶음) | M2 | Lean 4.33.1, 표준 공리 | 패킷 완성(v2) | TODO | `erdos-m2-v1` |
 
 (표의 빈칸은 담당자가 채웁니다. 상태는 `작업 중 / 패킷 완성 / 제출됨 / 심사 결과` 중 하나.)
 

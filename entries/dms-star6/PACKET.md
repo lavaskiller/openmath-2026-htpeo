@@ -1,5 +1,20 @@
 # OpenMath 2026 submission packet — partial progress on the Dvořák–Mohar–Šámal conjecture (star chromatic index of subcubic graphs)
 
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | | | | |
+  | | | | |
+  | | | | |
+
+* **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): ____________ ; scope: ____________ ; date: ____________ . Sentences further below that say "human checking: none" describe the state before this review.
+* **Public repository:** https://github.com/lavaskiller/openmath-2026-htpeo — this entry is the folder `entries/dms-star6`; the submitted state is fixed by the git tag `dms-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/dms-v1/entries/dms-star6). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
+* **Publication authority:** the team has made the materials public at the URL above. Attribution approval by every roster member: ____________ .
+
 Packet version: **final v1 (2026-10-02)**; it replaces the drafts v1–v3 and absorbs the two addenda of
 2026-10-02. State: **nothing has been submitted by the writers of this packet; operator TODOs are listed in
 section 6.** Structure follows handbook section 8.
