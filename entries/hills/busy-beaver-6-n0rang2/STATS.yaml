@@ -1,0 +1,69 @@
+# Missing measurements are null, not zero. Sources: evidence/provenance.md.
+entry: busy-beaver-6-n0rang2
+reported_by: "n0rang2; assembled from workspace records with Codex"
+period: {from: "2026-09-28 KST", to: "2026-10-03 KST"}
+ai_usage:
+  - provider: "Anthropic"
+    model: "Claude Haiku 4.5 (AutoLab configuration; low effort)"
+    interface: "AutoLab coding-agent project"
+    account_plan: "unrecorded"
+    sessions: null
+    input_tokens: null
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
+    cost_usd: 0.19
+    plan_usage: "USD 2 model cap; cap is not spending"
+    source: "Historical Credits-page display at 2026-09-29 01:05 KST in loop-log.md; project-wide, not per-witness billing; evidence/provenance.md"
+  - provider: "Anthropic"
+    model: "unrecorded"
+    interface: "Claude Code"
+    account_plan: "unrecorded"
+    sessions: null
+    input_tokens: null
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "unrecorded"
+    source: "Workspace loop-log.md records Claude Code use but no model/usage totals; evidence/provenance.md"
+  - provider: "OpenAI"
+    model: "unrecorded in this packet"
+    interface: "Codex desktop; repository packaging and replay verification"
+    account_plan: "unrecorded"
+    sessions: null
+    input_tokens: null
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "unrecorded"
+    source: "Packaging performed 2026-10-03 KST; no usage export captured"
+compute:
+  - machine: "local Windows/WSL workstation; hardware unrecorded"
+    purpose: "Node.js max-first-use and neighbourhood search; Python replay"
+    wall_hours: null
+    cpu_hours: null
+    peak_memory_gb: null
+    source: "Workspace loop-log.md; discovery totals not measured"
+  - machine: "one small rented CPU node"
+    purpose: "AutoLab validation evaluation"
+    wall_hours: null
+    cpu_hours: null
+    peak_memory_gb: null
+    cost_usd: 0.02
+    source: "Historical project-wide Credits display at 2026-09-29 01:05 KST; evidence/provenance.md"
+human_time:
+  - person: "n0rang2"
+    hours: null
+    activity: "steering and submission; time unrecorded"
+outputs:
+  lean_lines: 0
+  lean_files: 0
+  theorems_claimed: 0
+  build_time: "No Lean sources or build claim in this hill packet"
+  other: "One accepted validation witness: 249881 steps, 554 ones, span 735; deterministic replay and signed report"
+attempts:
+  succeeded: ["8297fb64 m249881: accepted validation witness"]
+  failed: ["efe147cd m255799: rejected validation attempt", "10b5bbca m250258: rejected validation attempt"]
+notes: "Unknown totals are unrecorded, not zero. Historical project display: USD 0.20 total versus USD 0.19 models plus USD 0.02 compute; discrepancy retained. Costs cover other experiments, not just this witness. No final evaluation. Nested hill STATS files are outside the current resource generators' entries/*/STATS.yaml input glob."

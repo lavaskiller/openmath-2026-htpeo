@@ -1,0 +1,58 @@
+{
+  "hill": "busy-beaver-6-certificates",
+  "tree_hash": "86931c1b2f99d69c7bb19598f36739670768fe95",
+  "commit": "dcd25c7a099fbc2d9ba55c5537bb2e767218ffa4",
+  "submission_hash": "sha256:d20b3b90fcb053b3a13b84877ca5cdf39f9bd57d6651b9a3573dc413b750cfb9",
+  "submission_git": "exp/autolab-3b2ac3c5f78c2a9a-bb6-certific-147fea9e/8297fb64@0dd67fa",
+  "passed": true,
+  "config": [
+    {
+      "name": "machine_model",
+      "value": "6-state-2-symbol-standard-tm",
+      "primary": true
+    },
+    {
+      "name": "initial_tape",
+      "value": "bi-infinite-zero",
+      "primary": true
+    },
+    {
+      "name": "mode",
+      "value": "validation",
+      "primary": false
+    }
+  ],
+  "metrics": [
+    {
+      "name": "steps",
+      "value": 249881,
+      "direction": "max"
+    },
+    {
+      "name": "ones",
+      "value": 554,
+      "direction": "max"
+    },
+    {
+      "name": "tape_span",
+      "value": 735,
+      "direction": "max"
+    }
+  ],
+  "details": {
+    "halting_verified": true,
+    "states_reached": 6
+  },
+  "params": {},
+  "final": false,
+  "official": true,
+  "official_reason": null,
+  "hill_spec_version": 2,
+  "tool": {
+    "version": "0.11.0",
+    "sha256": "970e4a3fcb74c27e0c56b62efd22b4fab82a755229a8aef8f90bbc00a9cfe275"
+  },
+  "timestamp": "2026-09-28T15:54:07Z",
+  "report_version": 1,
+  "signature": "hmac-sha256:89c9bfbbc1db477f287579d3339262ea826394b80f206b36be495c8399ac1986"
+}
