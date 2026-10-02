@@ -43,6 +43,8 @@ def results_rows(root, lang):
     rows = []
     sfx = "_ko" if lang == "ko" else ""
     for path in sorted(glob.glob(os.path.join(root, "entries", "*", "ENTRY.yaml"))):
+        if "_TEMPLATE" in path:
+            continue
         d = load(path)
         r = d.get("readme") if isinstance(d, dict) else None
         if not r:

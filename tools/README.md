@@ -9,6 +9,8 @@ Scripts shared by all entries: checksum generation/verification, usage summation
 | `sum_codex_usage.py [<dir>] [--since ISO] [--until ISO] [--rules rules.json] [--json out.json] [--sessions]` | sums codex rollouts (`~/.codex/sessions/**/*.jsonl`) from the cumulative `token_count` records, per model, date and cwd group |
 | `sum_harness_usage.py <project_dir> [--verify-runs DIR] [--json out.json]` | sums Claude usage of a harness run from its stream-json run logs (`result` records: tokens per model and API-equivalent cost), per role, model and date; reports runs without a result record as partial (lower bound) |
 | `summarize_stats.py [repo_root]` | reads `entries/*/STATS.yaml` and `archive/stats/*.yaml`, writes `archive/stats/SUMMARY.md` |
+| `make_results_table.py [repo_root] [--check]` | rewrites the results table (`<!-- RESULTS:START/END -->`) and the resources table (`<!-- RESOURCES:START/END -->`) of `README.md` and `README.ko.md` from the `readme:` block of each `entries/*/ENTRY.yaml`, `entries/PENDING.yaml` and the stats files; stops if a link target is missing |
+| `make_charts.py [repo_root]` | writes the light/dark SVG charts of the README and `chart_data.json` into `assets/` from the stats files (output tokens by entry and by day, recorded wall hours by purpose) |
 
 Notes:
 

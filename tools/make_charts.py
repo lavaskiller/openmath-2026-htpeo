@@ -176,7 +176,7 @@ def chart_entries(by_entry, theme, path):
             w = (x1 - x0) * v / vmax
             if w >= 0.4:
                 s.rect(x, y + 2, max(w - (2 if w > 6 else 0), 0.4), 20, s.t["series"][f])
-                if w > 44:
+                if w > 30:
                     s.text(x + w / 2, y + 36, mil(v).replace(" M", ""), 11, anchor="middle", ink="ink2")
                 x += w
         s.text(x + 6, y + 16, mil(sum(by_entry[name])), 12, weight="600")
@@ -256,7 +256,7 @@ def main(argv):
         json.dump(data, fh, indent=1, ensure_ascii=False, sort_keys=True)
         fh.write("\n")
     print(json.dumps(data["totals"]))
-    print(json.dumps(compute, ensure_ascii=False))
+    print(json.dumps(compute))
     print("6 SVG files written to assets/ (well-formed XML, no label overlaps by the width estimate)")
 
 

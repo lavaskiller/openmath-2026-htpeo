@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+title: "HTPeo entries to OpenMath 2026: Lean-checked results on the K4 Ramsey multiplicity constant, the Dvořák–Mohar–Šámal conjecture and Erdős problems"
+authors:
+  - name: "HTPeo team"   # placeholder until the roster in TEAM.md is filled in
+date-released: "2026-10-03"
+repository-code: "https://github.com/lavaskiller/openmath-2026-htpeo"
+keywords:
+  - Lean 4
+  - Mathlib
+  - Ramsey multiplicity
+  - star edge colouring
+  - Erdős problems

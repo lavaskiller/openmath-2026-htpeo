@@ -13,6 +13,7 @@ and formalizations of known results on Erdős problems — with an archive of wh
 </p>
 
 <p align="center">
+<a href="#the-competition">Competition</a> ·
 <a href="#results-at-a-glance">Results</a> ·
 <a href="#verification-scope">Verification scope</a> ·
 <a href="#how-to-verify">How to verify</a> ·
@@ -21,6 +22,15 @@ and formalizations of known results on Erdős problems — with an archive of wh
 <a href="archive/">Archive</a> ·
 <a href="README.ko.md">한국어</a>
 </p>
+
+## The competition
+
+| | |
+|---|---|
+| Event | "OpenMath 2026" in our packets; the official handbook is titled *Open Problems Hack at MIT* ([handbook](https://rsihouse.ai/openmath/handbook.pdf), [event page](https://luma.com/yzp9abvr)). Only formalized results count. |
+| Window | Hybrid opening at MIT CSAIL and status freeze at noon Eastern on Sunday 27 September 2026; everything had to be submitted before 00:00 EDT on Saturday, 3 October. |
+| Platform | [AutoLab](https://app.autolab.ai): a *Hill* is a versioned task with an evaluator. In the handbook's words, a passing Hill "is not itself a mathematical proof"; formal checking, statement fidelity, literature status, attribution and review are separate gates. |
+| Our modes | Ramsey and DMS are proposed under M3A (original open problems outside the curated focus set, admission decided by the organisers); the formalizations are M2 (known mathematics, a separate leaderboard counting accepted families). |
 
 ## Results at a glance
 
@@ -60,6 +70,7 @@ theorem ramseyMultK4_limit_lt_ref :
 ```
 
 - Files: [`Final.lean`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Final.lean) (headline theorems), [`Main.lean`](entries/ramsey-k4-multiplicity/artifact/lean/RamseyCert/Main.lean) (`sol_density`, `sol_ppt`), [`solution.json`](entries/ramsey-k4-multiplicity/artifact/solution.json), [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_1ab2354d.json), [packet](entries/ramsey-k4-multiplicity/PACKET.md), [notes](entries/ramsey-k4-multiplicity/NOTES.md).
+- Standing: the signed official hill report for experiment `1ab2354d` (2026-10-02T11:38:08Z) has `passed: true`, `official: true`, `density_ppt` 30,139,933,996, `reference_beaten = 1`. A second-hand record gives the leaderboard leader at the status freeze (27 September) as 30,141,720,824. Reported by the team as 1st on the hill leaderboard on 2026-10-02 KST; leaderboard snapshot to be added: `assets/leaderboard_<date>.png`.
 - Limitation: an upper bound only, c_4 is not determined; the search is randomised, so the template itself is the certificate.
 
 ### 2 · Dvořák–Mohar–Šámal conjecture — `dms-star6`

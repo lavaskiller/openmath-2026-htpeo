@@ -43,3 +43,10 @@ provenance:
   prior_art_checked: ""          # where you looked, when
 known_limitations: []            # honest list
 links: []                        # papers, problem pages, leaderboard
+readme:                          # row of the README results table (python tools/make_results_table.py)
+  order: 99
+  problem: ""                    # problem_ko / result_ko / verification_ko: optional Korean versions for README.ko.md
+  kind: ""                       # exactly one of: new result | partial results | formalization of known results
+  result: ""                     # one line; put the previous best next to ours where there is one
+  verification: ""               # toolchain, axioms, build route
+  links: []                      # items "text|path relative to this entry folder" (the script checks that each path exists)
