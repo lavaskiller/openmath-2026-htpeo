@@ -56,6 +56,17 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 - **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
 - **4 · `erdos-1038`** — 팀원이 보고한 에르되시 문제 #1038의 완전한 Lean 풀이(Lean 4.34.1). 폴더와 검증 기록은 담당 팀원이 추가합니다. 추가 방법은 [CONTRIBUTING.md](CONTRIBUTING.md), 추가한 뒤 [`entries/PENDING.yaml`](entries/PENDING.yaml)의 행을 지우고 표를 다시 만듭니다.
 
+## 팀원의 hill 결과 (각자 올릴 자리)
+
+순위표 조회 2026-10-02T16:23Z (2026-10-03 01:23 KST) 기준입니다. 파일은 각 담당자가 [`entries/hills/`](entries/hills/)의 자기 폴더에 올립니다(폴더마다 올릴 것의 체크리스트가 있습니다).
+
+| 담당 | hill | 순위 | 올릴 곳 |
+|---|---|---|---|
+| @hl728 | K4 Ramsey 다중도 | 1 of 1 (final); 5 of 12 (validation) | [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) |
+| @n0rang2 | K4 Ramsey 다중도 | 8 of 12 | [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) |
+| @n0rang2 | Busy Beaver 6 | 3 of 12 | [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) |
+| @thomasoh0408 | Kobon 삼각형 | 11 of 15 | [`entries/hills/kobon-triangles-thomasoh0408/`](entries/hills/kobon-triangles-thomasoh0408/) |
+
 ## 검증 방법
 
 저장소 루트에는 Lean 프로젝트가 없습니다. 항목마다 따로 있고, 정확한 명령·예상 출력·시간·메모리는 각 artifact의 README에 있습니다: [Ramsey](entries/ramsey-k4-multiplicity/artifact/README.md) · [DMS](entries/dms-star6/artifact/README.md) · [에르되시](entries/erdos-m2-formalizations/artifact/VERIFY.md). 파일 무결성은 각 `artifact/`에서 `sha256sum -c SHA256SUMS`.

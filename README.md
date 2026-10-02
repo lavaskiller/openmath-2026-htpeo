@@ -115,6 +115,17 @@ theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDeg
 
 A complete Lean solution (Lean 4.34.1) reported by a team member. Its folder, statement and verification notes will be added by its owner; nothing about it has been re-checked in this repository.
 
+## Hill results by team members
+
+Besides the entries above, team members hold these results on the competition hills (leaderboard read 2026-10-02T16:23Z (2026-10-03 01:23 KST)). Their files are placeholders to be filled in by each owner: [`entries/hills/`](entries/hills/).
+
+| Owner | Hill | Rank | Result | Files |
+|---|---|---|---|---|
+| @hl728 | K4 Ramsey multiplicity | 1 of 1 (final); 5 of 12 (validation) | 30,141,921,123 ppt (final, 2026-09-29); 30,141,720,946 ppt (validation, 2026-09-30) | [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) — to be added by its owner |
+| @n0rang2 | K4 Ramsey multiplicity | 8 of 12 | 30,142,185,839 ppt (2026-09-30) | [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) — to be added by its owner |
+| @n0rang2 | Busy Beaver 6 certificates | 3 of 12 | 249,881 steps, 554 ones, tape span 735 — same values as rank 1 (2026-09-28) | [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) — to be added by its owner |
+| @thomasoh0408 | Kobon triangles | 11 of 15 | 93 triangles — same value as rank 1 (2026-09-28) | [`entries/hills/kobon-triangles-thomasoh0408/`](entries/hills/kobon-triangles-thomasoh0408/) — to be added by its owner |
+
 ## How to verify
 
 There is no Lean project at the repository root; each entry has its own. Exact commands, expected output, time and memory are in each artifact's README. Build products are not stored; `sha256sum -c SHA256SUMS` in each `artifact/` checks the files.
