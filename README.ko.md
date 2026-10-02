@@ -42,7 +42,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 | hill (보드) | 팀원 | 종류 | 결과 | 순위 | 검증 | 파일 |
 |---|---|---|---|---|---|---|
-| Kobon 삼각형 (n = 39) | @lavaskiller | hill 결과 | 39개 직선으로 삼각형 471개; n = 39 보드 선두; 고전적 구성의 468보다 큼; 알려진 최고값을 넘었을 가능성 — 문헌 확인은 사람이 검증하지 않음; Lean 산출물은 아직 없음 | 3계정 중 1위 | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-n39-lavaskiller`](entries/hills/kobon-n39-lavaskiller/) — 해, 서명된 보고서, 기록, 코드 |
+| Kobon 삼각형 (n = 39) | @lavaskiller | hill 결과 | 39개 직선으로 삼각형 471개; n = 39 보드 선두; 고전적 구성의 468보다 큼; 알려진 최고값을 넘었을 가능성 — 문헌 확인은 사람이 검증하지 않음; 삼각형 471개의 Lean 인증서(존재 명제) | 3계정 중 1위 | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-n39-lavaskiller`](entries/hills/kobon-n39-lavaskiller/) — 해, 서명된 보고서, 기록, 코드, Lean 인증서 |
 | Kobon 삼각형 (n = 18) | @thomasoh0408 | hill 결과 | triangles 93; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (15계정 중 12계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/kobon-triangles-thomasoh0408`](entries/hills/kobon-triangles-thomasoh0408/) — 담당 팀원이 파일 추가 예정 |
 | Grothendieck 상수 witness | @lavaskiller | hill 결과 | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80; 알려진 구성(CHSH형 2x2 witness)이며 새 수학으로 주장하지 않음 | 공동 1위 (9계정 중 7계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/grothendieck-lavaskiller`](entries/hills/grothendieck-lavaskiller/) — 해, 서명된 보고서, 기록, 코드 |
 | Busy Beaver 6 인증서 | @n0rang2 | hill 결과 | steps 249,881, ones 554, tape_span 735; 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음 | 공동 1위 (12계정 중 3계정 동률) | hill 평가기(Python), Lean 산출물 없음 | [`hills/busy-beaver-6-n0rang2`](entries/hills/busy-beaver-6-n0rang2/) — 담당 팀원이 파일 추가 예정 |

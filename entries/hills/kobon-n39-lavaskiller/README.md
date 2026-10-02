@@ -16,7 +16,8 @@
 
 - 471 is above the 468 = n(n−3)/3 of the classical Füredi–Palásti arrangement, from which the search started. The upper bound is ⌊39·37/3⌋ = 481, so this is not a perfect arrangement.
 - **Possibly a new best known value** for 39 lines: no arrangement with more than 468 was found in OEIS A006066 or in the Parpalak–Utkin gallery. That literature check was done by an AI helper, is not exhaustive and is **not human-verified**. The board's 470 shows that others reach similar values by local search.
-- Verification level: **computed** (the hill's evaluator, exact rational arithmetic). There is no Lean artifact yet.
+- Verification level: **Lean-checked** (Lean 4.33.1 + Mathlib v4.33.1, standard axioms only). `Kobon.kobon_nonoverlapping` in [`lean/KobonCert/Main.lean`](lean/KobonCert/Main.lean) states that there are 39 pairwise distinct lines and 471 index triples, each bounding a nondegenerate triangle whose open interior meets none of the 39 lines, with the 471 open triangles pairwise disjoint. `Kobon.certificate` checks that the count and the face list equal those of the signed report.
+- Not proved: the hill's `eval.py` is transcribed by hand, not formalised; K(39) as a maximum is not formalised (the certificate is an existence statement); no external checker was run. The full list is in [`lean/CERT_STATUS.md`](lean/CERT_STATUS.md).
 - A search for more triangles was still running when this folder was written; the entry may be superseded.
 
 ## Files
@@ -26,6 +27,7 @@
 | [`solution.json`](solution.json) | the 39 lines with integer coefficients, exactly as evaluated |
 | [`report.json`](report.json) | the signed hill report (hill hash, metric, mode, signature) |
 | [`NOTES.md`](NOTES.md) | the working notes of the search session: method, what else was tried, known vs new. Its board lines refer to the earlier snapshot of 16:23Z |
+| [`lean/`](lean/) | Lean certificate project: sources, build logs with `#print axioms`, generator and data check, `SHA256SUMS` |
 | [`code/fp.py`](code/fp.py) | Füredi–Palásti generator and exact recount with the hill evaluator |
 | [`code/kobon_sa.c`](code/kobon_sa.c) | simulated annealing on the 78 line parameters |
 | [`code/kob_remove.py`](code/kob_remove.py) | line-deletion experiments on public arrangements (worse; see the notes) |

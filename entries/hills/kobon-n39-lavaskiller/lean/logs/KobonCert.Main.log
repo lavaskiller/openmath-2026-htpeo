@@ -1,0 +1,8 @@
+'Kobon.kobon_nonoverlapping' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.triFaces_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.certificate' depends on axioms: [propext]
+'Kobon.sol_simple' does not depend on any axioms
+'Kobon.triCheck_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.sol_triFaces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.kobon_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+TIME 1.19s MAXRSS 1800596KB

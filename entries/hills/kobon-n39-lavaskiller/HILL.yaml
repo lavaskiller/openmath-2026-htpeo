@@ -1,5 +1,5 @@
 # Extra text for the README hill-results row (tools/make_results_table.py).
-result: "471 triangles with 39 lines; leads the n = 39 board; above the classical 468 construction; possibly a new best known value — literature check not human-verified; no Lean artifact yet"
-result_ko: "39개 직선으로 삼각형 471개; n = 39 보드 선두; 고전적 구성의 468보다 큼; 알려진 최고값을 넘었을 가능성 — 문헌 확인은 사람이 검증하지 않음; Lean 산출물은 아직 없음"
-files: "solution, signed report, notes, code"
-files_ko: "해, 서명된 보고서, 기록, 코드"
+result: "471 triangles with 39 lines; leads the n = 39 board; above the classical 468 construction; possibly a new best known value — literature check not human-verified; Lean certificate of the 471 triangles (existence statement)"
+result_ko: "39개 직선으로 삼각형 471개; n = 39 보드 선두; 고전적 구성의 468보다 큼; 알려진 최고값을 넘었을 가능성 — 문헌 확인은 사람이 검증하지 않음; 삼각형 471개의 Lean 인증서(존재 명제)"
+files: "solution, signed report, notes, code, Lean certificate"
+files_ko: "해, 서명된 보고서, 기록, 코드, Lean 인증서"
