@@ -92,3 +92,18 @@ links:
   - "arXiv:1011.3376 (Dvorak, Mohar, Samal, Star chromatic index)"
   - "http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs"
   - "arXiv:2410.15024 (Omoomi, Vahid Dastjerdi)"
+readme:                          # one-line summary for the README results table (tools/make_results_table.py)
+  order: 2
+  problem: "Dvořák–Mohar–Šámal conjecture: star chromatic index ≤ 6 for subcubic graphs (open; best published bound 7)"
+  problem_ko: "Dvořák–Mohar–Šámal 추측: subcubic 그래프의 star chromatic index ≤ 6 (미해결; 알려진 최선의 상계 7)"
+  kind: "partial results"
+  result: "Conjecture not proved. Proved: 5 colours for flower and Goldberg snarks, GP(n,k) with k ≤ 15, Möbius ladders; 6 colours for all bridgeless cubic multigraphs on ≤ 14 vertices; the equivalence `dms_iff_cubic16`; a reduction to named open hypotheses."
+  result_ko: "추측 자체는 증명하지 못함. 증명한 것: flower·Goldberg snark, GP(n,k) (k ≤ 15), Möbius 사다리는 5색; 14꼭짓점 이하의 모든 bridgeless 3정칙 다중그래프는 6색; 동치 `dms_iff_cubic16`; 이름 붙인 미해결 가설들로의 환원."
+  verification: "Lean 4.33.1, standard axioms; `lake build` (pack3), per-module (pack4, pack5)"
+  verification_ko: "Lean 4.33.1, 표준 공리; `lake build`(pack3), 모듈별 빌드(pack4, pack5)"
+  links:
+    - "packet|PACKET.md"
+    - "families|artifact/lean/pack4/src/Families.lean#L68"
+    - "≤ 14 vertices|artifact/lean/pack5/src/Star6Corollaries.lean#L48"
+    - "equivalence|artifact/lean/pack5/src/Star6Equiv.lean#L174"
+    - "axioms|artifact/lean/pack3/build/axioms.log"

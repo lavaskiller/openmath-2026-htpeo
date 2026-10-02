@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 371" width="560" height="371" role="img" aria-label="Output tokens per day, stacked by agent family, with milestones" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<text x="0.0" y="16.0" font-size="15" text-anchor="start" fill="#f0f6fc" font-weight="600">Output tokens per day (KST) by agent family</text>
+<text x="0.0" y="34.0" font-size="12" text-anchor="start" fill="#c3c2b7">millions of output tokens; numbered days are explained below</text>
+<rect x="0.00" y="49.00" width="10.00" height="10.00" fill="#3987e5" rx="2"/>
+<text x="14.0" y="58.0" font-size="12" text-anchor="start" fill="#c3c2b7">Claude, server harness</text>
+<rect x="177.84" y="49.00" width="10.00" height="10.00" fill="#d95926" rx="2"/>
+<text x="191.8" y="58.0" font-size="12" text-anchor="start" fill="#c3c2b7">Claude, laptop sessions</text>
+<rect x="362.40" y="49.00" width="10.00" height="10.00" fill="#199e70" rx="2"/>
+<text x="376.4" y="58.0" font-size="12" text-anchor="start" fill="#c3c2b7">GPT (codex CLI)</text>
+<line x1="30.0" y1="250.0" x2="556.0" y2="250.0" stroke="#484f58" stroke-width="1"/>
+<text x="24.0" y="254.0" font-size="11" text-anchor="end" fill="#c3c2b7">0</text>
+<line x1="30.0" y1="216.0" x2="556.0" y2="216.0" stroke="#30363d" stroke-width="1"/>
+<text x="24.0" y="220.0" font-size="11" text-anchor="end" fill="#c3c2b7">5</text>
+<line x1="30.0" y1="182.0" x2="556.0" y2="182.0" stroke="#30363d" stroke-width="1"/>
+<text x="24.0" y="186.0" font-size="11" text-anchor="end" fill="#c3c2b7">10</text>
+<line x1="30.0" y1="148.0" x2="556.0" y2="148.0" stroke="#30363d" stroke-width="1"/>
+<text x="24.0" y="152.0" font-size="11" text-anchor="end" fill="#c3c2b7">15</text>
+<line x1="30.0" y1="114.0" x2="556.0" y2="114.0" stroke="#30363d" stroke-width="1"/>
+<text x="24.0" y="118.0" font-size="11" text-anchor="end" fill="#c3c2b7">20</text>
+<line x1="30.0" y1="80.0" x2="556.0" y2="80.0" stroke="#30363d" stroke-width="1"/>
+<text x="24.0" y="84.0" font-size="11" text-anchor="end" fill="#c3c2b7">25</text>
+<text x="67.6" y="244.0" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">0.04</text>
+<text x="67.6" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">09-27</text>
+<rect x="122.71" y="126.89" width="40.00" height="123.11" fill="#3987e5"/>
+<rect x="122.71" y="118.95" width="40.00" height="5.93" fill="#d95926"/>
+<rect x="122.71" y="115.51" width="40.00" height="1.45" fill="#199e70"/>
+<text x="142.7" y="109.5" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">19.8</text>
+<text x="142.7" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">09-28 [1]</text>
+<rect x="197.86" y="121.00" width="40.00" height="129.00" fill="#3987e5"/>
+<rect x="197.86" y="117.29" width="40.00" height="1.71" fill="#d95926"/>
+<rect x="197.86" y="111.19" width="40.00" height="6.09" fill="#199e70"/>
+<text x="217.9" y="103.2" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">20.7</text>
+<text x="217.9" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">09-29</text>
+<rect x="273.00" y="159.91" width="40.00" height="90.09" fill="#3987e5"/>
+<rect x="273.00" y="156.15" width="40.00" height="1.76" fill="#d95926"/>
+<rect x="273.00" y="144.05" width="40.00" height="12.10" fill="#199e70"/>
+<text x="293.0" y="136.0" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">15.9</text>
+<text x="293.0" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">09-30 [2]</text>
+<rect x="348.14" y="145.68" width="40.00" height="104.32" fill="#3987e5"/>
+<rect x="348.14" y="140.93" width="40.00" height="2.75" fill="#d95926"/>
+<rect x="348.14" y="103.49" width="40.00" height="37.44" fill="#199e70"/>
+<text x="368.1" y="95.5" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">21.8</text>
+<text x="368.1" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">10-01 [3]</text>
+<rect x="423.29" y="248.01" width="40.00" height="1.99" fill="#3987e5"/>
+<rect x="423.29" y="246.34" width="40.00" height="1.67" fill="#d95926"/>
+<rect x="423.29" y="230.27" width="40.00" height="16.07" fill="#199e70"/>
+<text x="443.3" y="222.3" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">3.20</text>
+<text x="443.3" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">10-02 [4]</text>
+<text x="518.4" y="244.0" font-size="12" text-anchor="middle" fill="#f0f6fc" font-weight="600">0.02</text>
+<text x="518.4" y="267.0" font-size="11" text-anchor="middle" fill="#c3c2b7">10-03 [5]</text>
+<text x="0.0" y="292.0" font-size="11" text-anchor="start" fill="#c3c2b7">[1] 09-28  state freeze 01:00 KST; star6 run moved to the server</text>
+<text x="0.0" y="309.0" font-size="11" text-anchor="start" fill="#c3c2b7">[2] 09-30  reduction chain (Hyp, II imply DMS) complete in Lean</text>
+<text x="0.0" y="326.0" font-size="11" text-anchor="start" fill="#c3c2b7">[3] 10-01  Claude workers stopped at the weekly limit; GPT workers continue</text>
+<text x="0.0" y="343.0" font-size="11" text-anchor="start" fill="#c3c2b7">[4] 10-02  Ramsey hill evaluation passed; Lean packs and packets finished</text>
+<text x="0.0" y="360.0" font-size="11" text-anchor="start" fill="#c3c2b7">[5] 10-03  deadline 13:00 KST (data collected about 01:00 KST)</text>
+</svg>

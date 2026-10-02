@@ -1,0 +1,85 @@
+{
+ "families": [
+  "Claude, server harness",
+  "Claude, laptop sessions",
+  "GPT (codex CLI)"
+ ],
+ "output_tokens_by_day_kst": {
+  "2026-09-27": [
+   0,
+   37216,
+   0
+  ],
+  "2026-09-28": [
+   18399079,
+   1166396,
+   212879
+  ],
+  "2026-09-29": [
+   19264672,
+   252115,
+   1189894
+  ],
+  "2026-09-30": [
+   13542842,
+   259235,
+   2073518
+  ],
+  "2026-10-01": [
+   15634952,
+   404879,
+   5800449
+  ],
+  "2026-10-02": [
+   292322,
+   246080,
+   2657670
+  ],
+  "2026-10-03": [
+   0,
+   642,
+   20006
+  ]
+ },
+ "output_tokens_by_entry": {
+  "dms-star6": [
+   67133867,
+   192179,
+   10987176
+  ],
+  "erdos-m2-formalizations": [
+   0,
+   5602,
+   854854
+  ],
+  "ramsey-k4-multiplicity": [
+   0,
+   3107,
+   112386
+  ],
+  "shared/steering": [
+   0,
+   2165675,
+   0
+  ]
+ },
+ "totals": {
+  "output_tokens": 81454846,
+  "output_tokens_by_day_sum": 81454846,
+  "output_tokens_by_family": [
+   67133867,
+   2366563,
+   11954416
+  ]
+ },
+ "unit": "output tokens; wall hours",
+ "wall_hours_by_purpose": {
+  "Erdős proving sessions (codex)": 9.6,
+  "GPT cross-check audit jobs (DMS)": 50.59,
+  "Hill metric re-run (laptop)": 0.055,
+  "Lean builds and checks, all entries": 2.84,
+  "Ramsey search (server)": 12,
+  "Review / decompose / consult (DMS)": 18.18,
+  "Worker computations, SAT (DMS)": 7.24
+ }
+}

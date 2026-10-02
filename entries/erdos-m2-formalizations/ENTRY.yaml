@@ -92,3 +92,17 @@ known_limitations:
 links:
   - "https://github.com/google-deepmind/formal-conjectures (commit df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1)"
   - "https://www.erdosproblems.com/"
+readme:                          # one-line summary for the README results table (tools/make_results_table.py)
+  order: 3
+  problem: "Known results attached to 12 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs"
+  problem_ko: "에르되시 문제 12개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭"
+  kind: "formalization of known results"
+  result: "13 families, 19 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet."
+  result_ko: "13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함."
+  verification: "Lean 4.33.1, standard axioms, one file at a time; statements identical to the pinned formal-conjectures commit"
+  verification_ko: "Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일"
+  links:
+    - "packet|PACKET.md"
+    - "files|artifact/bundle/"
+    - "Petersen|artifact/bundle/Star6Simple.lean#L155"
+    - "expected axioms|artifact/VERIFY.md"

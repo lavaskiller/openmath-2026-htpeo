@@ -78,3 +78,17 @@ known_limitations:
 links:
   - "arXiv:2206.04036 (Parczyk, Pokutta, Spiegel, Szabo, New Ramsey multiplicity bounds and search heuristics)"
   - "https://app.autolab.ai/projects/lavaskiller/clique-cluster-ramsey-multiplicity-attempt-16"
+readme:                          # one-line summary for the README results table (tools/make_results_table.py)
+  order: 1
+  problem: "K4 Ramsey multiplicity constant c_4 (upper bound)"
+  problem_ko: "K4 Ramsey 다중도 상수 c_4 (상계)"
+  kind: "new result"
+  result: "c_4 ≤ 0.030139933996 (hill metric `density_ppt` 30,139,933,996). Previous best: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, the hill reference."
+  result_ko: "c_4 ≤ 0.030139933996 (hill 지표 `density_ppt` 30,139,933,996). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값."
+  verification: "Lean 4.33.1, standard axioms, per-module build; hill experiment passed"
+  verification_ko: "Lean 4.33.1, 표준 공리, 모듈별 빌드; hill 실험 통과"
+  links:
+    - "packet|PACKET.md"
+    - "theorem|artifact/lean/RamseyCert/Final.lean#L39"
+    - "axioms|artifact/lean/logs/RamseyCert.Final.log"
+    - "hill report|artifact/runs/report_1ab2354d.json"

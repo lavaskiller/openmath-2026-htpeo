@@ -1,0 +1,15 @@
+# Entries announced by a team member that have no folder under entries/ yet.
+# tools/make_results_table.py shows them as rows of the README table. Delete a row here when its folder is added.
+pending:
+  - id: "erdos-1038"
+    order: 4
+    problem: "Erdős problem #1038"
+    problem_ko: "에르되시 문제 #1038"
+    kind: "reported by its owner"
+    kind_ko: "담당 팀원 보고"
+    result: "Complete Lean solution reported by a team member; not yet in this repository."
+    result_ko: "팀원이 완전한 Lean 풀이를 보고함. 아직 이 저장소에 없음."
+    verification: "Lean 4.34.1 (as reported; not re-checked here)"
+    verification_ko: "Lean 4.34.1 (보고된 값, 여기서 재확인하지 않음)"
+    links_text: "to be added by its owner"
+    links_text_ko: "담당 팀원이 추가 예정"
