@@ -1,7 +1,7 @@
 # Extra text for the README hill-results row (tools/make_results_table.py).
 result: "steps 249,881, ones 554, tape_span 735; reproduces the board's best value; not claimed as new mathematics; the halting time, state coverage, span and ones count are proved in Lean; maximality under the hidden budget is not proved"
 result_ko: "249,881 스텝, 1의 개수 554, 테이프 폭 735; 보드 최고값 재현; 새로운 수학이라고 주장하지 않음; 정지 시각·상태 방문·폭·1의 개수는 Lean으로 증명; 비공개 예산 아래의 최대성은 증명되지 않음"
-files: "solution, Lean certificate (signed report still to be added by its owner)"
-files_ko: "해, Lean 인증서 (서명된 보고서는 담당 팀원이 추가 예정)"
+files: "solution, signed report, method, code, resource disclosure, replay evidence, Lean certificate"
+files_ko: "해, 서명된 보고서, 방법, 코드, 자원 사용 기록, 재현 근거, Lean 인증서"
 verification: "hill evaluator (Python); Lean 4.33.1 certificate without Mathlib, axioms propext and Quot.sound"
 verification_ko: "hill 평가기(Python); Mathlib 없는 Lean 4.33.1 인증서, 공리 propext·Quot.sound"

@@ -1,0 +1,30 @@
+{
+  "verified_on": "2026-10-03 KST",
+  "verification_level": "computed; no Lean build or independent HMAC verification claimed",
+  "replay_command": "python code/check.py solution.json 2000000",
+  "replay": {
+    "halted": true,
+    "steps": 249881,
+    "ones": 554,
+    "tape_span_incl_final_move": 735,
+    "all_states_visited": true,
+    "visited": "ABCDEF"
+  },
+  "generated_certificate_matches": true,
+  "solution_matches_original_submission_git_blob": "0dd67fa:solution.json",
+  "solution_matches_source_copies": [
+    "certificate/solution.json",
+    "submissions/m249881/solution.json"
+  ],
+  "solution_sha256": "7da08c157b8ad91f185051d2c99fcaa9608b186eca6ba4e568abd6e4b4617652",
+  "report_sha256": "e14fba417ac96873e3b25e142a08daa5827efea117dba456a1bda18d71ede41f",
+  "report_metrics_match_replay": true,
+  "report_signature_format_valid": true,
+  "report_hmac_independently_verified": false,
+  "node_syntax_checks": [
+    "node --check code/mfu.js",
+    "node --check code/nbr.js"
+  ],
+  "stats_yaml_parsed": true,
+  "readme_relative_links_resolve": true
+}
