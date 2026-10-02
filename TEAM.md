@@ -60,13 +60,13 @@ Already known:
 | Field | Value |
 |---|---|
 | GitHub | [@n0rang2](https://github.com/n0rang2) |
-| Name | ____ |
-| Affiliation | ____ |
-| E-mail | ____ |
+| Name | Sanghyeon Lee |
+| Affiliation | Korea Univ. Security |
+| E-mail | ymhlsh4065@korea.ac.kr |
 | Entries worked on | `entries/hills/busy-beaver-6-n0rang2/`, `entries/hills/ramsey-n0rang2/` |
 | Role / contribution | Busy Beaver 6 and K4 Ramsey hills (from the leaderboard; to be completed by the member) |
 | Human review done | packet ____ , sections ____ , date ____ |
-| AI tools and accounts used | ____ (models, interface; no account e-mails or keys) |
+| AI tools and accounts used | Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra, gpt-6.1-Sol); subscription plans |
 | Time spent (hours, rough) | ____ |
 | Approves attribution and release | ____ (name, date) |
 
