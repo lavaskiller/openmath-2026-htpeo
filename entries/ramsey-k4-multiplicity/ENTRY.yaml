@@ -55,7 +55,7 @@ submission:
   commit: "TODO: operator, after publishing (source artifact repo: local commits 493882e -> c7df2ab -> 1151e0c91381ff78c38d91419ce1d1a0e613b27c, unpublished)"
   tag: "ramsey-v1"
 people:
-  owner: "TODO: operator"
+  owner: "@lavaskiller (Woohyuk Kang)"
   contributors:
     - "Woohyuk Kang: operator (steering of the agents, Autolab submission); commit author"
     - "TODO: operator - full roster and each human's contribution"

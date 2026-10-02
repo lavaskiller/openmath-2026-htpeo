@@ -306,14 +306,14 @@ Team **HTPeo** (team entrant).
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ.</sub><br/><sub><i>role — to fill in</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ. CS&amp;E</sub><br/><sub>agent harness (DMS), Ramsey search and Lean certificate, Erdős formalizations, packets</sub></td>
+    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>K4 Ramsey hill (validation and final-board evaluation)</sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Busy Beaver 6 and K4 Ramsey hills</sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Kobon triangles hill</sub></td>
   </tr>
 </table>
 
-Each member fills in their own block in [TEAM.md](TEAM.md) (name, affiliation, e-mail, what they did, what they reviewed); the line under each avatar is then replaced by that member's role.
+Roles of @hl728, @n0rang2 and @thomasoh0408 are taken from the hill leaderboards and will be completed by each member in [TEAM.md](TEAM.md), which also records names, affiliations, contributions and reviews.
 
 Hill standings of the members are in [Results at a glance](#results-at-a-glance).
 
@@ -338,7 +338,7 @@ Metadata is in [CITATION.cff](CITATION.cff).
 
 ```bibtex
 @misc{htpeo2026openmath,
-  author = {{HTPeo team}},
+  author = {Kang, Woohyuk and {HTPeo team}},
   title  = {HTPeo entries to OpenMath 2026: Lean-checked results on the K4 Ramsey multiplicity constant,
             the Dvořák–Mohar–Šámal conjecture and Erdős problems},
   year   = {2026},

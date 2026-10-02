@@ -67,7 +67,7 @@ submission:
   commit: "TODO: operator, after publishing (source artifact repo: local commits 1a02f64 -> 0240e123d187ea3d86e0a3a675a4ae6346e0929c, unpublished)"
   tag: "dms-v1"
 people:
-  owner: "TODO: operator"
+  owner: "@lavaskiller (Woohyuk Kang)"
   contributors:
     - "Woohyuk Kang: operator of the agent harness; commit author"
     - "TODO: operator - full roster and each human's contribution"

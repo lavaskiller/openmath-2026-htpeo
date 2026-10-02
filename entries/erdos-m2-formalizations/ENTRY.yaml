@@ -68,7 +68,7 @@ submission:
   commit: "TODO: operator, after publishing (source artifact repo: local commit 9b341528c6ea83a7199bf45051ac1db483f9ee13 plus uncommitted final edits to 4 files; see NOTES.md)"
   tag: "erdos-m2-v1"
 people:
-  owner: "TODO: operator"
+  owner: "@lavaskiller (Woohyuk Kang)"
   contributors:
     - "Woohyuk Kang: operator; commit author"
     - "TODO: operator - full roster and each human's contribution"

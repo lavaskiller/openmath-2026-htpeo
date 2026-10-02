@@ -171,14 +171,14 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ.</sub><br/><sub><i>역할 — 각자 기입</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
-    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ. CS&amp;E</sub><br/><sub>에이전트 하네스(DMS), Ramsey 탐색과 Lean 인증서, 에르되시 형식화, 패킷</sub></td>
+    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>K4 Ramsey hill (검증 보드와 최종 보드 평가)</sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Busy Beaver 6, K4 Ramsey hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Kobon 삼각형 hill</sub></td>
   </tr>
 </table>
 
-각자 [TEAM.md](TEAM.md)의 자기 칸(이름, 소속, 이메일, 한 일, 검토한 부분)을 채우고, 아바타 아래 줄을 자기 역할 한 줄로 바꿉니다.
+@hl728, @n0rang2, @thomasoh0408의 역할은 hill 순위표에서 가져온 것이며 각자 [TEAM.md](TEAM.md)에서 완성합니다. 이름, 소속, 한 일, 검토한 부분도 각자 TEAM.md의 자기 칸에 적습니다.
 
 팀원의 hill 순위는 [한눈에 보는 결과](#한눈에-보는-결과)에 있습니다.
 
