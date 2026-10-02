@@ -192,9 +192,9 @@ def chart_overview(boards, theme, path):
                 cx = xf + j * step
                 mine = r["owner"] in TEAM
                 sole = len(b["final"]) == 1       # a one-account board has no rank: neutral marker, "only entry"
-                diamond(s, cx, cy, 7 if (mine and not sole) else 5.5, team_c if (mine and not sole) else plain)
+                diamond(s, cx, cy, 7 if mine else 5.5, team_c if mine else plain)   # a team result is always marked as ours
                 if mine and sole:
-                    s.text(W, cy + 24, "final board, only entry (1 account): %s" % r["owner"], 11,
+                    s.text(W, cy + 24, "final (held-out) board: %s, only entry (1 account)" % r["owner"], 11,
                            anchor="end", weight="600", check=False)
                 elif mine:
                     place_label(s, cx - 7, cy + 24, "%s %s (final)" % (rank_text(r), r["owner"]), lines)

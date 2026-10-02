@@ -79,7 +79,7 @@ Statement (conjecture): for every c4c simple cubic graph G with n ≥ 10 and eve
 
 ## Sources
 
-- `harness/docs/mh/PLAN.md` §4 (entries for 10-01, 10-02). This is a hand-written operations record, and the session completion times come only from this record.
+- `harness/docs/mh/PLAN.md` §4 (entries for 10-01, 10-02). This is a manually kept log, and the session completion times come only from this record.
 - `openmath/star6_artifact/informal/c4c-ext_REPORT.md`, `c4c-4cut_REPORT.md`, `c4c-ball_REPORT.md`, `c4c-norem_REPORT.md`, `p23-check_REPORT.md`, `p23-pole_REPORT.md`, `p16_REPORT.md`.
 - `openmath/star6_packet_final.md` §1.4, §3, §4.1; `openmath/star6_artifact/lean/pack3/STATUS.md`.
 - The evidence records and counterexample files are in the project store on the server and are not in this repository (`star6_packet_final.md` §4.4).

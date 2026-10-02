@@ -1,6 +1,6 @@
 # ramsey-k4-multiplicity — Process notes
 
-Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-reviewed. Sources are `PACKET.md`, `artifact/README.md`, `artifact/lean/CERT_STATUS.md`, `artifact/runs/ledger_server.tsv`, and the project operations records (PLAN.md, hand-written notes). The detailed course of the search is in `archive/findings/ramsey-search.md`.
+Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-reviewed. Sources are `PACKET.md`, `artifact/README.md`, `artifact/lean/CERT_STATUS.md`, `artifact/runs/ledger_server.tsv`, and the project operations records (PLAN.md, manually kept log). The detailed course of the search is in `archive/findings/ramsey-search.md`.
 
 ## Contents of this folder
 
@@ -19,7 +19,7 @@ Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-revi
 
 - Experiment `2b482245` (2026-09-28): failed in Autolab. Source: `PACKET.md` Addendum.
 - A certificate with several blocks in one declaration: a single file exceeded 5 GB, so it was split into one file per block and color. Source: `CERT_STATUS.md`.
-- A test compile run without a memory cap rose to 13 GB and was terminated by OOM (around 2026-10-02 18:37 KST). After that a cap was applied to every compile. Source: PLAN.md (hand-written record).
+- A test compile run without a memory cap rose to 13 GB and was terminated by OOM (around 2026-10-02 18:37 KST). After that a cap was applied to every compile. Source: PLAN.md (manually kept log).
 - The search is randomized and time-limited, so rerunning it does not produce the same template (not needed for the proof).
 
 ## Inconsistencies between records

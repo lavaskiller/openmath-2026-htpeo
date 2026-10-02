@@ -1,6 +1,6 @@
 # dms-star6 — Process notes
 
-Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-reviewed. Sources are `PACKET.md`, `artifact/README.md`, `artifact/lean/pack*/README.md` and `STATUS.md`, `artifact/informal/*_REPORT.md`, and the project operations records (PLAN.md, hand-written notes). The investigation of the c4c core is separately in `archive/findings/dms-c4c-core.md`.
+Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-reviewed. Sources are `PACKET.md`, `artifact/README.md`, `artifact/lean/pack*/README.md` and `STATUS.md`, `artifact/informal/*_REPORT.md`, and the project operations records (PLAN.md, manually kept log). The investigation of the c4c core is separately in `archive/findings/dms-c4c-core.md`.
 
 **The conjecture has not been proved.** What has been confirmed in Lean are special cases, small sizes, equivalent restatements, and theorems of the form "named open hypothesis ⇒ conjecture".
 
@@ -25,14 +25,14 @@ Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-revi
 - (FE-ALLPM-D) is refuted at 20 vertices, and TD-RED-POLE is false at threshold 10. Source: `artifact/informal/p16_REPORT.md`, `p23-pole_REPORT.md`.
 - 49 refuted or abandoned approaches in the baseline record. Source: `PACKET.md` §3.3.
 - The version that did the GP window check with a single `decide` hit the 6 GB cap and swap and was stopped manually (2026-10-02 13:38 UTC). The window check was split into piece modules. Source: `artifact/lean/pack4/STATUS.md`.
-- The weekly usage of the server's Claude account reached 99% on 2026-10-01, and the 4 Claude workers were halted from 15:49 until the deadline. Source: PLAN.md (hand-written record).
+- The weekly usage of the server's Claude account reached 99% on 2026-10-01, and the 4 Claude workers were halted from 15:49 until the deadline. Source: PLAN.md (manually kept log).
 
 ## Summary of verification levels
 
 - Lean kernel-checked: the theorems of `PACKET.md` §1.2 to 1.4.
 - Computed (script run once, no independent rerun): the exhaustive checks and counterexamples of `PACKET.md` §3.2 to 3.3.
 - AI-checked: the informal lemmas of the fact graph, the literature survey (`artifact/docs/NOVELTY.md`).
-- Human-reviewed: none.
+- Human-reviewed: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`); the informal material was not reviewed by a human.
 
 ## Points to check before publication
 

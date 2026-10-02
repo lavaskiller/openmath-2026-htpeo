@@ -9,7 +9,7 @@ Subject: an upper bound on the K4 Ramsey multiplicity constant c_4 (the limit of
 - The final solution is a 1024-block weighted blow-up template with `density_ppt = 30,139,933,996`. This is 2,339,436 ppt below the hill reference value B* (30,142,273,432, the value of the 768-vertex graph in the concluding Note of the paper above).
 - The largest contribution came from the split of 768 blocks into 1024 blocks (about 1.3 million ppt), followed by L-BFGS weight optimization (200 to 250 thousand ppt). These figures are as reported by the search session.
 - Single-flip tabu/SA and uniform splitting did not work. Adjusting only the weights on the seed colouring did beat B*, but by a small margin.
-- The inequality `c_4 ≤ P < B*` was checked by the Lean 4.33.1 kernel. The proof does not trust the search process itself. Nothing has been human-reviewed.
+- The inequality `c_4 ≤ P < B*` was checked by the Lean 4.33.1 kernel. The proof does not trust the search process itself. Human review: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`); the search and this note were not reviewed by a human.
 
 ## Details
 
@@ -26,7 +26,7 @@ Subject: an upper bound on the K4 Ramsey multiplicity constant c_4 (the limit of
 | Versus the leaderboard leader of 09-27 (indirect record) | 1,786,828 ppt lower | Difference from the indirect record | PLAN §4 "Ramsey 탐색 종료" |
 | `c_4 ≤ P`, `c_4 < B*` | `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, existence of the limit `ramseyMultK4_limit_lt_ref` | Lean kernel-checked (standard axioms, no `native_decide` in the main chain) | `ramsey_packet.md` §1.1, §2.6 |
 
-Human-reviewed: none. The Lean statements, the transcription, the statement correspondence and the literature paragraphs have all gone unchecked by a human (`ramsey_packet.md` §3.3). The writing session did not read the live leaderboard; the only thing on record is that the operator reported first place on the evening of 2026-10-02 (Addendum of the same document).
+Human-reviewed: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`). When the packet was written, the Lean statements, the transcription, the statement correspondence and the literature paragraphs had not been checked by a human (`ramsey_packet.md` §3.3); the transcription and the literature paragraphs are not covered by the reported review. The writing session did not read the live leaderboard; the only thing on record is that the operator reported first place on the evening of 2026-10-02 (Addendum of the same document).
 
 ### 2. Course of the search
 
@@ -54,7 +54,7 @@ The contribution sizes below are as reported by the search session; there is no 
 
 - Understanding the seed structure: the seed is 192 base blocks × 4 near-twins (768 blocks), and the vertex-pair orbits on which flips occur are only the 28 "soft" orbits of the automorphism group. The search was restricted to these orbits. Source: same PLAN entry; `ramsey_packet.md` §3.1 "Search method".
 - Exact incremental evaluator (`tabu.c`, `sa.py`): keeps a table of the change for every flip, giving O(1) proposals. Source: header comment of `search/v2/sa.py`; `ramsey_packet.md` §3.1.
-- Compound moves (rotations, alternating 4-cycles): colouring flips interact only when they share a vertex, so instead of flipping one pair at a time they were moved in bundles. Source: PLAN §4 "Ramsey 탐색 중간(09:50 KST)"; comments in `search/v2/jobE.sh`, `jobG.sh`.
+- Compound moves (rotations, alternating 4-cycles): colouring flips interact only when they share a vertex, so instead of flipping one pair at a time they were moved in groups. Source: PLAN §4 "Ramsey 탐색 중간(09:50 KST)"; comments in `search/v2/jobE.sh`, `jobG.sh`.
 - 1024-block split (near-twin split: divide one block in two and give the pairs between the two halves the opposite colour): reported contribution about 1.3 million ppt, the largest. In the ledger, 998,155 ppt dropped at once on the first line of the split. Source: same PLAN entry; header comments of `search/v2/twin.py`, `split4.py`; ledger rows 1~2.
 - L-BFGS weight optimization followed by rounding to integer weights of at most 65535: reported contribution 200 to 250 thousand ppt. The weights of the final solution range over 17994~65535, with weight sum 50759309. Source: same PLAN entry; `ramsey_packet.md` §2, §3.1.
 - Last-stage basin hopping (SA segment → quench → weight refit): over the 7 lines with label Y in the ledger (17:50~19:52), 30,139,958,907 → 30,139,933,996, about 25 thousand ppt. At the time of termination it was still dropping by about 10 thousand ppt per cycle. Source: ledger rows 55~62; same PLAN entry.
@@ -71,7 +71,7 @@ The contribution sizes below are as reported by the search session; there is no 
 - **Optimizing only the weights on the seed colouring**. Adjusting only the weights at 768 blocks does beat B* (experiment `0bcf1970` of 2026-09-29; the 10-02 09:50 interim value 30,142,153,848 is about 120 thousand ppt below B*). However, it fell about 430 thousand ppt short of the 09-27 leader record. PLAN classifies this under "안 통한 것" ("what did not work"). Source: PLAN §4 "Ramsey 탐색 중간", "Ramsey 탐색 종료"; `ramsey_packet.md` Addendum.
 - **Uniform splitting**. Reported as not working. Numerical record: TODO (no source). Source: PLAN §4 "Ramsey 탐색 종료".
 - **First design of the certificate** (plain structural recursion, `import Mathlib` in every file): about 45µs and 5.7KB per iteration. Putting 192 blocks in one file exceeded 5GB. It was reduced about 4-fold with primitive recursion and thin imports, and the files were split per block and colour. Source: `lean/CERT_STATUS.md` Build record.
-- **Test compilation without a cap**: around 2026-10-02 18:37 KST it rose to 13GB and was OOM-killed. After that, every compilation had a cap. Source: "사고 기록" (incident record) within PLAN §4 "Ramsey Lean 인증서 완료" (hand-written record).
+- **Test compilation without a cap**: around 2026-10-02 18:37 KST it rose to 13GB and was OOM-killed. After that, every compilation had a cap. Source: "사고 기록" (incident record) within PLAN §4 "Ramsey Lean 인증서 완료" (manually kept log).
 - Not tried: templates other than the seed. Source: PLAN §4 "Ramsey 탐색 종료".
 
 ## Open questions
@@ -88,5 +88,5 @@ The contribution sizes below are as reported by the search session; there is no 
 - `openmath/ramsey_artifact/runs/ledger_server.tsv` (62 lines), `runs/report_1ab2354d.json`.
 - `openmath/ramsey_artifact/lean/CERT_STATUS.md`, `openmath/ramsey_artifact/README.md`.
 - Header comments of `job*.sh`, `sa.py`, `twin.py`, `split4.py` in `openmath/ramsey_artifact/search/v2/`.
-- The Ramsey entries of `harness/docs/mh/PLAN.md` §4 (hand-written operations record; the contribution sizes and the "worked / did not work" classification come only from here).
+- The Ramsey entries of `harness/docs/mh/PLAN.md` §4 (manually kept log; the contribution sizes and the "worked / did not work" classification come only from here).
 - Time discrepancies: the final solution is at 19:52 in the ledger, 11:12 UTC (20:12 KST) in `CERT_STATUS.md`, and 20:15 KST in PLAN. The evaluation report is at 11:38:08Z (20:38 KST) versus PLAN's "21:08 평가 통과" ("21:08 evaluation passed").

@@ -60,7 +60,7 @@ TODO (the member in charge).
 - Newly known — evidence only (**computed**, no proof, no independent re-run): PMU (in a cyclically 4-edge-connected simple cubic graph on at least 10 vertices, every perfect matching is a colour class of some star 6-edge-colouring) had 0 failures over all 193,521 perfect matchings for n = 10–18 and over a sample of 88,144 for n = 20/24/30/40. It fails for K₃,₃ and for n = 8. Source: DMS packet §3.2, `findings/dms-c4c-core.md`.
 - Refuted approaches and their counterexamples (**computed**): fixed-radius local repair is refuted at radius 2 (all 8 shapes) and radius 3 (6 of 8) by explicit c4c graphs (n = 258–574). Every case found is rescued by a single Kempe exchange. (FE-ALLPM-D) is refuted at 20 vertices. TD-RED-POLE is false at threshold 10. Source: DMS packet §3.3.
 - Ramsey: adjusting only the weights of the 768-block seed already beats the reference, but by a small margin; the split into 1024 blocks contributes most (`findings/ramsey-search.md`; the sizes of the contributions are as stated by the search session).
-- Open questions that remain: all hypotheses of the DMS reduction (infinite statements on the c4c core), PMU, the reduction of 4-cycle faces of cyclic 4-edge cuts; the value of c_4.
+- Open questions that remain: all hypotheses of the DMS reduction (infinite statements on the c4c core), PMU, the reduction of 4-cycle sides of cyclic 4-edge cuts; the value of c_4.
 
 ### 3.2 Methods
 
