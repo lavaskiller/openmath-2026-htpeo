@@ -1,0 +1,74 @@
+[
+ {
+  "hill": "busy-beaver-6-certificates",
+  "mode": "validation",
+  "owner": "n0rang2",
+  "rank": 3,
+  "of": 12,
+  "metrics": {
+   "steps": 249881,
+   "ones": 554,
+   "tape_span": 735
+  },
+  "timestamp": "2026-09-28T15:54:07Z"
+ },
+ {
+  "hill": "clique-cluster-ramsey-multiplicity",
+  "mode": "validation",
+  "owner": "lavaskiller",
+  "rank": 1,
+  "of": 12,
+  "metrics": {
+   "reference_beaten": 1,
+   "density_ppt": 30139933996
+  },
+  "timestamp": "2026-10-02T11:38:08Z"
+ },
+ {
+  "hill": "clique-cluster-ramsey-multiplicity",
+  "mode": "validation",
+  "owner": "hl728",
+  "rank": 5,
+  "of": 12,
+  "metrics": {
+   "reference_beaten": 1,
+   "density_ppt": 30141720946
+  },
+  "timestamp": "2026-09-30T08:14:36Z"
+ },
+ {
+  "hill": "clique-cluster-ramsey-multiplicity",
+  "mode": "validation",
+  "owner": "n0rang2",
+  "rank": 8,
+  "of": 12,
+  "metrics": {
+   "reference_beaten": 1,
+   "density_ppt": 30142185839
+  },
+  "timestamp": "2026-09-30T08:15:53Z"
+ },
+ {
+  "hill": "clique-cluster-ramsey-multiplicity",
+  "mode": "final",
+  "owner": "hl728",
+  "rank": 1,
+  "of": 1,
+  "metrics": {
+   "reference_beaten": 1,
+   "density_ppt": 30141921123
+  },
+  "timestamp": "2026-09-29T14:09:44Z"
+ },
+ {
+  "hill": "kobon-triangles",
+  "mode": "validation",
+  "owner": "thomasoh0408",
+  "rank": 11,
+  "of": 15,
+  "metrics": {
+   "triangles": 93
+  },
+  "timestamp": "2026-09-28T02:15:21Z"
+ }
+]

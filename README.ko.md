@@ -69,25 +69,40 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 2026-09-27~10-03(KST)에 기록된 AI 사용량은 출력 토큰 약 **8,150만**, 세션 2,145개입니다: 서버 하네스의 Claude 6,710만, 노트북 Claude Code 240만, codex CLI의 GPT 1,200만. 주의: 노트북 보조 세션의 출력은 하한이고, 하네스의 첫 몇 시간(노트북 WSL)과 `erdos-1038` 작업은 들어 있지 않습니다. 모두 구독 요금제였고, 비용 수치는 하네스에 대해 도구가 보고한 API 정가 환산 3,718달러 이상(하한, 토큰당 청구된 것은 없음)뿐입니다. CPU 시간은 대부분 기록이 없고 사람 시간은 기록하지 않았습니다.
 
-<p>
+### 토큰이 어디에 쓰였나
+
+거의 전부가 DMS 항목입니다(일주일간 돌린 에이전트 하네스). 에르되시 형식화는 출력 86만, Ramsey 인증서는 12만 토큰입니다.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tokens_by_entry_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/tokens_by_entry_light.svg">
-  <img alt="항목별 출력 토큰 (에이전트 계열별)" src="assets/tokens_by_entry_light.svg" width="49%">
+  <img alt="항목별 출력 토큰 (에이전트 계열별)" src="assets/tokens_by_entry_light.svg" width="720">
 </picture>
+
+### 언제 쓰였나
+
+하네스는 09-28부터 10-01까지 전체 규모로 돌았고, 10-01에 Claude worker가 주간 한도에 닿은 뒤로는 GPT worker가 이어갔습니다.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tokens_per_day_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/tokens_per_day_light.svg">
-  <img alt="날짜별 출력 토큰 (에이전트 계열별)" src="assets/tokens_per_day_light.svg" width="49%">
+  <img alt="날짜별 출력 토큰 (에이전트 계열별)" src="assets/tokens_per_day_light.svg" width="720">
 </picture>
-</p>
-<p>
+
+### 계산
+
+서버 job의 용도별 기록된 wall 시간입니다. 감사·에이전트 job은 대부분 모델 응답을 기다리는 시간이라 CPU 시간이 아닙니다. Ramsey 인증서 자체는 4.7 CPU시간.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/compute_by_purpose_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/compute_by_purpose_light.svg">
-  <img alt="용도별 기록된 wall 시간" src="assets/compute_by_purpose_light.svg" width="62%">
+  <img alt="용도별 기록된 wall 시간" src="assets/compute_by_purpose_light.svg" width="720">
 </picture>
-</p>
+
+### 수치와 주의
+
+<details>
+<summary>항목별 표 (토큰, 세션, 시간, Lean 줄 수, 정리 수)</summary>
 
 <!-- RESOURCES:START -->
 | 항목 | 출력 토큰 | 입력(캐시 제외) | 캐시 토큰 | 세션 수 | 기록된 wall 시간 | Lean 줄 수 | 주장 정리 수 |
@@ -101,17 +116,35 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 "+"는 수치가 없는 계산 행이 있다는 뜻입니다. job들이 동시에 돌았으므로 wall 시간의 합은 경과 시간도 CPU 시간도 아닙니다. 원본과 출처: [archive/stats/SUMMARY.md](archive/stats/SUMMARY.md), [archive/stats/](archive/stats/). 그림은 `python tools/make_charts.py`, 표는 `python tools/make_results_table.py`로 다시 만듭니다.
 
+</details>
+
 ## 팀
+
+팀 **HTPeo**.
 
 <table>
   <tr>
-    <td align="center" width="150"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>—</sub></td>
-    <td align="center" width="150"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>—</sub></td>
-    <td align="center" width="150"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>—</sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>역할 — 각자 기입</i></sub></td>
   </tr>
 </table>
 
-이름, 소속, 맡은 일, 사람 검토 기록은 각자 [TEAM.md](TEAM.md)에 적습니다. 적은 뒤 README 두 파일의 "—"를 맡은 일 한 줄로 바꿉니다.
+각자 [TEAM.md](TEAM.md)의 자기 칸(이름, 소속, 이메일, 한 일, 검토한 부분)을 채우고, 아바타 아래 줄을 자기 역할 한 줄로 바꿉니다.
+
+### 팀원의 hill 순위
+
+AutoLab 순위표 API 조회 2026-10-02T16:23Z (2026-10-03 01:23 KST) 기준, 계정별 최고 기록. 마감 전까지 바뀔 수 있습니다. 원본: [`archive/leaderboards/`](archive/leaderboards/).
+
+| 팀원 | hill | 모드 | 순위 | 기록 |
+|---|---|---|---:|---|
+| @lavaskiller | K4 Ramsey 다중도 | 검증 | 12명 중 1 | 밀도 30,139,933,996 ppt |
+| @hl728 | K4 Ramsey 다중도 | 최종(held-out) | 1명 중 1 | 밀도 30,141,921,123 ppt |
+| @hl728 | K4 Ramsey 다중도 | 검증 | 12명 중 5 | 밀도 30,141,720,946 ppt |
+| @n0rang2 | K4 Ramsey 다중도 | 검증 | 12명 중 8 | 밀도 30,142,185,839 ppt |
+| @n0rang2 | Busy Beaver 6 | 검증 | 12명 중 3 | 249,881 스텝(1위와 같은 값) |
+| @thomasoh0408 | Kobon 삼각형 | 검증 | 15명 중 11 | 삼각형 93개(1위와 같은 값) |
 
 ## 아카이브와 그 밖
 

@@ -166,27 +166,48 @@ tools/                     <- checksum, usage-summing, table and chart scripts (
 
 ## Resources used
 
-Between 2026-09-27 and 2026-10-03 (KST) the recorded AI usage was about **81.5 million output tokens** in 2,145 sessions: 67.1 M by Claude models in the server agent harness, 2.4 M by Claude Code on the laptop, 12.0 M by GPT models through the codex CLI. Uncached input was 84.1 M tokens and cache traffic 10.9 billion tokens. Caveats: the laptop subagent output is a lower bound; the first hours of the harness run on the laptop (WSL) and the `erdos-1038` work are not included; all usage was under subscription plans, and the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token). Compute ran on one 16-core, 14 GB server and a laptop; CPU time was mostly not recorded and human time is not recorded.
+Between 2026-09-27 and 2026-10-03 (KST) the recorded AI usage was about **81.5 million output tokens** in 2,145 sessions: 67.1 M by Claude models in the server agent harness, 2.4 M by Claude Code on the laptop, 12.0 M by GPT models through the codex CLI. Uncached input was 84.1 M tokens and cache traffic 10.9 billion tokens.
 
-<p>
+| | Output tokens | Share |
+|---|---:|---:|
+| Claude, server agent harness | 67.1 M | 82% |
+| GPT, codex CLI | 12.0 M | 15% |
+| Claude Code, laptop sessions | 2.4 M | 3% |
+
+### Where the tokens went
+
+Almost all usage belongs to the DMS entry: the week-long agent harness produced the informal fact graph and the Lean chain. The Erdős formalizations took 0.86 M output tokens and the Ramsey certificate 0.12 M.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tokens_by_entry_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/tokens_by_entry_light.svg">
-  <img alt="Output tokens by entry, stacked by agent family" src="assets/tokens_by_entry_light.svg" width="49%">
+  <img alt="Output tokens by entry, stacked by agent family" src="assets/tokens_by_entry_light.svg" width="720">
 </picture>
+
+### When they were used
+
+The harness ran at full size from 28 September to 1 October, when the Claude workers reached the weekly limit; GPT workers carried the last two days.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tokens_per_day_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/tokens_per_day_light.svg">
-  <img alt="Output tokens per day, stacked by agent family, with milestones" src="assets/tokens_per_day_light.svg" width="49%">
+  <img alt="Output tokens per day, stacked by agent family, with milestones" src="assets/tokens_per_day_light.svg" width="720">
 </picture>
-</p>
-<p>
+
+### Compute
+
+Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mostly wait on a model, so these are not CPU hours; the Ramsey certificate itself took 4.7 CPU-hours.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/compute_by_purpose_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/compute_by_purpose_light.svg">
-  <img alt="Recorded wall-clock hours by purpose" src="assets/compute_by_purpose_light.svg" width="62%">
+  <img alt="Recorded wall-clock hours by purpose" src="assets/compute_by_purpose_light.svg" width="720">
 </picture>
-</p>
+
+### Numbers and caveats
+
+<details>
+<summary>Per-entry table (tokens, sessions, hours, Lean lines, theorems)</summary>
 
 <!-- RESOURCES:START -->
 | Entry | Output tokens | Uncached input | Cache tokens | Sessions | Recorded wall hours | Lean lines | Claimed theorems |
@@ -199,6 +220,10 @@ Between 2026-09-27 and 2026-10-03 (KST) the recorded AI usage was about **81.5 m
 <!-- RESOURCES:END -->
 
 "Cache tokens" is cache read plus cache write. "Recorded wall hours" sums the compute rows that have a number; "+" marks rows without one, and jobs overlapped in time, so this is neither elapsed time nor CPU time. Most of the Ramsey Lean lines are generated numerals. Raw numbers and their sources: [SUMMARY.md](archive/stats/SUMMARY.md), [server-harness.yaml](archive/stats/server-harness.yaml), [server-codex.yaml](archive/stats/server-codex.yaml), [claude-laptop.yaml](archive/stats/claude-laptop.yaml), [chart data](assets/chart_data.json). Charts are drawn by [`tools/make_charts.py`](tools/make_charts.py).
+
+</details>
+
+Caveats: the laptop subagent output is a lower bound; the first hours of the harness run on the laptop (WSL) and the `erdos-1038` work are not included; all usage was under subscription plans, and the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token). Compute ran on one 16-core, 14 GB server and a laptop; CPU time was mostly not recorded and human time is not recorded.
 
 ## Timeline
 
@@ -222,15 +247,31 @@ Dated entries with sources, including incidents and discrepancies between source
 
 ## Team
 
+Team **HTPeo** (team entrant).
+
 <table>
   <tr>
-    <td align="center" width="150"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>—</sub></td>
-    <td align="center" width="150"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>—</sub></td>
-    <td align="center" width="150"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>—</sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub><i>role — to fill in</i></sub></td>
   </tr>
 </table>
 
-Team HTPeo (team entrant). Names, affiliations, contributions and the full roster are recorded in [TEAM.md](TEAM.md).
+Each member fills in their own block in [TEAM.md](TEAM.md) (name, affiliation, e-mail, what they did, what they reviewed); the line under each avatar is then replaced by that member's role.
+
+### Hill standings of team members
+
+Read from the AutoLab leaderboard API at 2026-10-02T16:23Z (2026-10-03 01:23 KST); best result per account; ranks can change until the deadline. Raw responses: [`archive/leaderboards/`](archive/leaderboards/).
+
+| Member | Hill | Mode | Rank | Result | Recorded (UTC) |
+|---|---|---|---:|---|---|
+| @lavaskiller | K4 Ramsey multiplicity | validation | 1 of 12 | density 30,139,933,996 ppt | 2026-10-02 11:38 |
+| @hl728 | K4 Ramsey multiplicity | final (held-out) | 1 of 1 | density 30,141,921,123 ppt | 2026-09-29 14:09 |
+| @hl728 | K4 Ramsey multiplicity | validation | 5 of 12 | density 30,141,720,946 ppt | 2026-09-30 08:14 |
+| @n0rang2 | K4 Ramsey multiplicity | validation | 8 of 12 | density 30,142,185,839 ppt | 2026-09-30 08:15 |
+| @n0rang2 | Busy Beaver 6 certificates | validation | 3 of 12 | 249,881 steps (same value as rank 1) | 2026-09-28 15:54 |
+| @thomasoh0408 | Kobon triangles | validation | 11 of 15 | 93 triangles (same value as rank 1) | 2026-09-28 02:15 |
 
 **AI use.** Most proofs, search code and packet text were produced by AI systems steered by the team: Claude models (Anthropic; `claude-opus-5-5`, `claude-sonnet-5`, `claude-fable-5-1`) as harness workers, verifiers and Claude Code sessions, and GPT models (OpenAI; `gpt-6-sol`, `gpt-5.6-sol`) through the codex CLI for proofs against statements fixed beforehand and for cross-check audits. Roles per entry are in each `ENTRY.yaml` under `ai_and_tools`; usage is in [Resources used](#resources-used).
 
