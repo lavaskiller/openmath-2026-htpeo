@@ -14,7 +14,8 @@
 ## What this is and is not
 
 - A **known construction**: the CHSH matrix `[[1,1],[1,-1]]` with rotations from the Pythagorean triples 3-4-5 and 28-195-197. It reproduces the board's best value and is not claimed as new mathematics.
-- Verification level: **computed** (the hill's evaluator). No Lean artifact.
+- Verification level: **Lean-checked** (Lean 4.33.1 + Mathlib v4.33.1, standard axioms only), project in [`lean/`](lean/). `Groth.certificate` checks the submitted rational witness on a transcription of the evaluator (sign optimum 2, vector objective 2786/985, ratio 1393/985, `gap_ppm` 1414213, 80 bits). `Groth.witness_lower_bound` proves over the reals that every constant K satisfying the finite-dimensional Grothendieck inequality has K ≥ 1393/985; `Groth.groth_bound_ge_sqrt2` gives K ≥ √2 with exact vectors; `Groth.chsh_vec_le` (Tsirelson's bound) shows that no witness on this matrix scores above `gap_ppm` 1414213.
+- Not proved: the Python evaluator is transcribed by hand, not formalised; nothing is shown about other matrices; all of this is classical (CHSH, Tsirelson, K_G ≥ √2), no novelty. Full list in [`lean/CERT_STATUS.md`](lean/CERT_STATUS.md).
 - `code/search_bits.py` is an exhaustive search over rational unit vectors with denominator ≤ 65536; the helper session's notes say it shows that no 2x2 certificate with 79 bits or fewer reaches this gap. That claim was **not re-checked** and is not claimed here.
 
 ## Files
@@ -23,6 +24,7 @@
 |---|---|
 | [`solution.json`](solution.json) | the witness exactly as evaluated |
 | [`report.json`](report.json) | the signed hill report |
+| [`lean/`](lean/) | Lean certificate project: sources, build logs with `#print axioms`, data check, `SHA256SUMS` |
 | [`NOTES.md`](NOTES.md) | the working notes of the session. Its board line refers to the earlier snapshot of 16:23Z |
 | [`code/search_bits.py`](code/search_bits.py) | the bit-cost search, with its output [`search_65536_le79.json`](code/search_65536_le79.json) and [log](code/search_65536_le79.log) |
 

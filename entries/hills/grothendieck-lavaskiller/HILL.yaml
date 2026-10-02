@@ -1,5 +1,7 @@
 # Extra text for the README hill-results row (tools/make_results_table.py).
 result: "gap_ppm 1,414,213, matrix_area 4, certificate_bits 80; known construction (CHSH-type 2x2 witness), not claimed as new mathematics"
 result_ko: "gap_ppm 1,414,213, matrix_area 4, certificate_bits 80; 알려진 구성(CHSH형 2x2 witness)이며 새 수학으로 주장하지 않음"
-files: "solution, signed report, notes, code"
-files_ko: "해, 서명된 보고서, 기록, 코드"
+files: "solution, signed report, notes, code, Lean certificate"
+files_ko: "해, 서명된 보고서, 기록, 코드, Lean 인증서"
+verification: "hill evaluator (Python); Lean 4.33.1 + Mathlib certificate of the witness and of the bound for this matrix, standard axioms only"
+verification_ko: "hill 평가기(Python); witness와 이 행렬의 상한에 대한 Lean 4.33.1 + Mathlib 인증서, 표준 공리만 사용"

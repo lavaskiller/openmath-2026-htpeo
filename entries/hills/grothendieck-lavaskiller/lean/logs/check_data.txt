@@ -1,0 +1,11 @@
+matrix == solution.json[matrix]: True
+leftV == solution.json[left_vectors]: True
+rightV == solution.json[right_vectors]: True
+statement contains 'signOpt matrix = 2': True
+statement contains 'vectorObj matrix leftV rightV = 2786 / 985': True
+statement contains 'ratio matrix leftV rightV = 1393 / 985': True
+statement contains 'gapPpm matrix leftV rightV = 1414213': True
+statement contains 'area matrix = 4': True
+statement contains 'certBits leftV rightV = 80': True
+report passed/official: True True hill: grothendieck-constant-witnesses
+ALL OK
