@@ -51,7 +51,7 @@ Already known:
 
 - K4 Ramsey multiplicity hill: only entry on the final (held-out) board (1 account), 30,141,921,123 ppt, 2026-09-29
 - K4 Ramsey multiplicity hill: 5th of 12 (validation board), 30,141,720,946 ppt, 2026-09-30
-- To upload: your hill files in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) (checklist inside)
+- To upload: the final-board `solution.json` and signed `report.json` in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) (the rest of that checklist is optional)
 
 ## @n0rang2
 
@@ -74,7 +74,7 @@ Already known:
 
 - Busy Beaver 6 certificates hill: tied for 1st, 3 of 12 accounts (validation; the platform lists tied accounts alphabetically), 249,881 steps; reproduces the board's best value; not claimed as new mathematics, 2026-09-28
 - K4 Ramsey multiplicity hill: 8th of 12 (validation board), 30,142,185,839 ppt, 2026-09-30
-- To upload: your hill files in [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) (checklist inside)
+- [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) is a leaderboard record only: nothing to upload there (the team's result on that hill is `ramsey-k4-multiplicity`)
 - To upload: your hill files in [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) (checklist inside)
 
 ## @thomasoh0408
