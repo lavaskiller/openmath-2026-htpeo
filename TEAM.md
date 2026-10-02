@@ -75,7 +75,7 @@ Already known:
 - Busy Beaver 6 certificates hill: tied for 1st, 3 of 12 accounts (validation; the platform lists tied accounts alphabetically), 249,881 steps; reproduces the board's best value; not claimed as new mathematics, 2026-09-28
 - K4 Ramsey multiplicity hill: 8th of 12 (validation board), 30,142,185,839 ppt, 2026-09-30
 - [`entries/hills/ramsey-n0rang2/`](entries/hills/ramsey-n0rang2/) is a leaderboard record only: nothing to upload there (the team's result on that hill is `ramsey-k4-multiplicity`)
-- To upload: your hill files in [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) (checklist inside)
+- Uploaded: [`entries/hills/busy-beaver-6-n0rang2/`](entries/hills/busy-beaver-6-n0rang2/) (checklist complete, Lean certificate included)
 
 ## @thomasoh0408
 
