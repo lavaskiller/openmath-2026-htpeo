@@ -158,7 +158,7 @@ Why the remaining hypotheses are hard: [archive/findings/dms-c4c-core.md](archiv
 
 ### 3 · Formalizations of known results — `erdos-m2-formalizations`
 
-Thirteen families (19 theorems): variants attached to Erdős problems 942, 44, 123, 918, 292, 395, 698, 939 and four minor ones (295, 703, 748, 1136), stated exactly as in `google-deepmind/formal-conjectures`, plus Schönberger's and Petersen's theorems for Mathlib's `SimpleGraph` (connected case).
+Seventeen families (24 theorems): variants attached to Erdős problems 942, 44, 123, 918, 292, 395, 698, 939, 477 and seven minor ones (295, 703, 748, 1136, 358, 619, 1148; the 477, 358, 619 and 1148 families were added on 2026-10-03), stated exactly as in `google-deepmind/formal-conjectures`, plus Schönberger's and Petersen's theorems for Mathlib's `SimpleGraph` (connected case).
 
 ```lean
 theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G) :

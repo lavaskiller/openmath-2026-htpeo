@@ -104,7 +104,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 - **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `bc2c24e3` 통과(`reference_beaten = 1`; 10-03 개선된 틀, 이전 실험 `1ab2354d`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-03T02:43:23Z, `density_ppt` 30,139,911,990)는 `passed: true`, `official: true`; 검증 보드 13계정 중 1위(위 표). 최종 모드(held-out) 평가는 없음(같은 해를 최종 모드로 평가하려던 실험 `217d0ba2`는 hill이 명령줄에서 "final" 매개변수를 받지 않아 실패). 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님.
 - **2 · [`dms-star6`](entries/dms-star6/)** — **추측은 증명하지 못했습니다.** 무한 족(flower·Goldberg snark, GP(n,k) k ≤ 15, Möbius 사다리)의 5색, 14꼭짓점 이하 bridgeless 3정칙 다중그래프의 6색, 동치 [`dms_iff_cubic16`](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174), 조건부 환원 사슬. 한계: 환원 사슬의 가설은 모두 미해결.
-- **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
+- **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 17개 묶음, 정리 24개(10-03에 E477, E358, E619, E1148 추가). Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
 - **4 · `erdos-1038`** — 팀원이 보고한 에르되시 문제 #1038의 완전한 Lean 풀이(Lean 4.34.1). 폴더와 검증 기록은 담당 팀원이 추가합니다. 추가 방법은 [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md)(요약)와 [CONTRIBUTING.md](CONTRIBUTING.md), 추가한 뒤 [`entries/PENDING.yaml`](entries/PENDING.yaml)의 행을 지우고 표를 다시 만듭니다.
 
 ## 검증 방법
