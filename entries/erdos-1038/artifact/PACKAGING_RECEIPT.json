@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-03T03:34:11.455484+00:00",
+  "status": "passed",
+  "original_archive_sha256": "c4eb54d3496bb654e54773801ac027b9360215018b83e29768e008c93194a502",
+  "updated_archive_sha256": "285ab4e2ddff7f6e46c693fb66766f83428d2c13ac3a1d879e67ebbdd38cfebd",
+  "proof_and_configuration_bytes_identical_to_original": true,
+  "proof_modules_including_root": 315,
+  "new_cached_declaration_axiom_checks": 26,
+  "candidate_declaration_checks": 8,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "new_clean_build_performed": false,
+  "original_clean_project_build_date": "2026-10-01",
+  "documentation_changes": [
+    "current attribution and prior-art status",
+    "four bounded implementation comparisons",
+    "completed formal status",
+    "candidate exact types"
+  ],
+  "raw_long_build_log": "original ZIP retained; new ZIP contains a status extract with original log hash",
+  "official_submission_status": "not registered/submitted on AutoLab by this packaging operation",
+  "source_of_26_checks": "VerifyContributions.lean and contribution-axioms.log",
+  "human_review": "none declared by Hyunjin Lee"
+}

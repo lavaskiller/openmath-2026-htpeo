@@ -47,7 +47,7 @@ Everything the team has, in one place: the Lean-checked entries first, then the 
 | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey multiplicity constant c_4 (upper bound) | new result | c_4 ≤ 0.030139911990 (hill metric `density_ppt` 30,139,911,990). Previous best: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, the hill reference. | 1st of 13, alone, on the validation board | Lean 4.33.1, standard axioms, per-module build; hill experiment passed | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean_v2/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_bc2c24e3.json) |
 | [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal conjecture: star chromatic index ≤ 6 for subcubic graphs (open; best published bound 7) | partial results | Conjecture not proved. Proved: 5 colours for flower and Goldberg snarks, GP(n,k) with k ≤ 15, Möbius ladders; 6 colours for all bridgeless cubic multigraphs on ≤ 14 vertices; the equivalence `dms_iff_cubic16`; a reduction to named open hypotheses. | — | Lean 4.33.1, standard axioms; `lake build` (pack3), per-module (pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
 | [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | Known results attached to 16 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs | formalization of known results | 17 families, 24 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet. | — | Lean 4.33.1, standard axioms, one file at a time; statements identical to the pinned formal-conjectures commit | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
-| `erdos-1038` | Erdős problem #1038 | reported by its owner | Lean solution by a team member (Lean 4.34.1), checked on 2026-10-03: a formal proof of the same result was already public (plby/lean-proofs, 2026-09-15, from S. Wang's claim), and on our server (Lean 4.33.1) only the supremum and the classical lower bound were rebuilt. Not claimed by the team. | — | Lean 4.34.1 as reported; partially rebuilt with 4.33.1 (exact infimum not rebuilt: memory) | [`erdos-1038`](entries/erdos-1038/) — package and partial rebuild; not claimed |
+| [`erdos-1038`](entries/erdos-1038/) | Erdős #1038 and accompanying reusable formal developments | formalization of known results | Known extrema implemented in 315 Lean modules (with @n0rang2); 8 reusable declarations proposed for M2 review, not part of the team's claimed set. A formal proof of the main result was already public; no credit is claimed for it. | — | Lean 4.34.1, pinned Mathlib, standard axioms; recorded clean project build and 26 renewed declaration/axiom checks; no human review | [packet](entries/erdos-1038/PACKET.md) · [differences](entries/erdos-1038/artifact/CONTRIBUTIONS.md) · [informal proof](entries/erdos-1038/artifact/EP1038_paper.md) · [sources](entries/erdos-1038/artifact/erdos1038-openmath-20261003.zip) · [axioms](entries/erdos-1038/artifact/contribution-axioms.log) |
 
 **Hill results by team members** (best result per account on the AutoLab boards; ranks computed with ties sharing a rank)
 
@@ -171,7 +171,7 @@ theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDeg
 
 ### 4 · Erdős problem #1038 — `erdos-1038`
 
-A Lean solution (Lean 4.34.1) by a team member. **Not claimed by the team**: when it was checked on 2026-10-03, a formal proof of the same result had already been public since 2026-09-15 (plby/lean-proofs, imported from S. Wang's proof claim), and with our toolchain (Lean 4.33.1) only the supremum 2√2 and the classical lower bound were rebuilt; the exact infimum module exceeded the memory budget. Package and rebuild records: [`entries/erdos-1038/`](entries/erdos-1038/). The owner says the solution was written after reading that paper: same idea and structure, different Lean implementation.
+The owner's complete pinned Lean 4.34.1 source and updated informal proof are now in [the entry](entries/erdos-1038/PACKET.md). The known main theorem remains excluded from new-solution credit. [Eight reusable declarations](entries/erdos-1038/artifact/CONTRIBUTIONS.md) are proposed for M2 novelty/admission review; no accepted family count is claimed. The 315-module clean project build and final checks were recorded on the owner's pinned environment; the earlier memory-limited team server replay used 4.33.1 and is [preserved as history](entries/erdos-1038/BASELINE_STATUS.md). Human review for this entry is none. Worked on by @hl728 together with @n0rang2. The M2 proposal is recorded here but is **not part of the team's claimed set**: it would first need a comparison with the earlier public formal proof.
 
 ## How to verify
 
@@ -226,7 +226,7 @@ tools/                     <- checksum, usage-summing, table, chart and leaderbo
 
 ## Resources used
 
-Between 2026-09-27 and 2026-10-03 (KST) the recorded AI usage of @lavaskiller's server and laptop (other members' accounts are not included; see [below](#whose-usage-these-numbers-cover)) was about **81.5 million output tokens** in 2,145 sessions: 67.1 M by Claude models in the server agent harness, 2.4 M by Claude Code on the laptop, 12.0 M by GPT models through the codex CLI. Uncached input was 84.1 M tokens and cache traffic 10.9 billion tokens.
+Between 2026-09-27 and 2026-10-03 (KST) the recorded AI usage was about **85.8 million output tokens** in 2,262 session records: 81.5 M in 2,145 sessions on @lavaskiller's server and laptop (67.1 M by Claude models in the server agent harness, 2.4 M by Claude Code on the laptop, 12.0 M by GPT models through the codex CLI), and 4.4 M in @hl728's Codex sessions, recovered from the Codex counters ([`archive/stats/hl728.yaml`](archive/stats/hl728.yaml)). The usage of @n0rang2 and @thomasoh0408 was not recorded as numbers and is not included ([below](#whose-usage-these-numbers-cover)). All usage was under subscription plans; the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token).
 
 | | Output tokens | Share |
 |---|---:|---:|
@@ -273,21 +273,28 @@ Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mo
 | Entry | Output tokens | Uncached input | Cache tokens | Sessions | Recorded wall hours | Lean lines | Claimed theorems |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `dms-star6` | 78,313,222 | 79,895,063 | 9,635,136,505 | 2,094 | 77.8 + | 81,622 | 45 |
+| `erdos-1038` | 1,976,196 | 14,695,245 | 329,726,976 | 8 | 0.0 + | 167,407 | 0 |
+| matrix-research | 1,941,769 | 10,910,916 | 384,744,960 | 28 |  |  |  |
 | `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 24 |
+| ramsey-hl728 | 246,161 | 1,742,427 | 46,953,344 | 2 |  |  |  |
 | `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 16.1 + | 104,665 | 8 |
+| automatic-review-overhead | 53,074 | 3,850,303 | 18,096,384 | 74 |  |  |  |
 | shared/steering | 2,165,675 | 5,130 | 923,843,294 | 19 |  |  |  |
-| **Total** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **77** |
+| shared-research-steering-and-packaging | 162,984 | 2,102,608 | 47,276,928 | 5 |  |  |  |
+| **Total** | **85,835,030** | **117,377,765** | **11,720,940,255** | **2,262** | | **356,485** | **77** |
 <!-- RESOURCES:END -->
 
 "Cache tokens" is cache read plus cache write. "Recorded wall hours" sums the compute rows that have a number; "+" marks rows without one, and jobs overlapped in time, so this is neither elapsed time nor CPU time. Most of the Ramsey Lean lines are generated numerals. Raw numbers and their sources: [SUMMARY.md](archive/stats/SUMMARY.md), [server-harness.yaml](archive/stats/server-harness.yaml), [server-codex.yaml](archive/stats/server-codex.yaml), [claude-laptop.yaml](archive/stats/claude-laptop.yaml), [chart data](assets/chart_data.json). Charts are drawn by [`tools/make_charts.py`](tools/make_charts.py).
 
 </details>
 
-Caveats: the laptop subagent output is a lower bound; the first hours of the harness run on the laptop (WSL) and the `erdos-1038` work are not included; all usage was under subscription plans, and the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token). Compute ran on one 16-core, 14 GB server and a laptop; CPU time was mostly not recorded and human time is not recorded.
+**Additional @hl728 disclosure (2026-10-03 03:38 UTC):** 4,380,184 output tokens, 33,301,499 uncached input and 826,798,592 cached input; 864,480,275 inclusive input+output tokens in 116 unique recorded Codex sessions, a conservative recovered lower bound. The per-entry table and [SUMMARY.md](archive/stats/SUMMARY.md) include this addition; the older plots above retain their stated server/team-laptop scope. Web GPT/hosted counters and actual billed/API-equivalent cost are unavailable. Human work is approximately 20 hours or more, counted once; implementation and review limits are in [TEAM.md](TEAM.md) and [member statistics](archive/stats/hl728.yaml).
+
+Caveats for the earlier chart snapshot: the laptop subagent output is a lower bound; the first hours of the harness run on the laptop (WSL) and the `erdos-1038` work are not included; all usage was under subscription plans, and the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token). Compute ran on one 16-core, 14 GB server and a laptop; CPU time was mostly not recorded and human time for those server/team-laptop records was not recorded.
 
 ### Whose usage these numbers cover
 
-**All numbers above are @lavaskiller's usage only**: the team server (harness jobs, codex sessions, Lean builds, Ramsey search) and the Claude Code sessions on the team laptop. The other members' own accounts and computers are **not** included, and they are not added to the totals because they were not recorded as numbers. What each member declared (from [`TEAM.md`](TEAM.md) and the hill folders, 2026-10-03):
+**The numbers above cover @lavaskiller's usage** (the team server: harness jobs, codex sessions, Lean builds, Ramsey search; and the Claude Code sessions on the team laptop) **and @hl728's Codex sessions** (rows `erdos-1038`, `ramsey-hl728`, matrix-research, automatic-review-overhead and shared-research…, from [`archive/stats/hl728.yaml`](archive/stats/hl728.yaml)). The accounts and computers of @n0rang2 and @thomasoh0408 are **not** included, because their usage was not recorded as numbers. What each member declared (from [`TEAM.md`](TEAM.md) and the hill folders, 2026-10-03):
 
 | Member | AI tools declared | Compute declared | Human time declared |
 |---|---|---|---|

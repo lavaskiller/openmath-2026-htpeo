@@ -37,7 +37,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수 c_4 (상계) | 새 결과 | c_4 ≤ 0.030139911990 (hill 지표 `density_ppt` 30,139,911,990). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값. | 13계정 중 1위 (검증 보드, 단독 선두) | Lean 4.33.1, 표준 공리, 모듈별 빌드; hill 실험 통과 | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean_v2/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_bc2c24e3.json) |
 | [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측: subcubic 그래프의 star chromatic index ≤ 6 (미해결; 알려진 최선의 상계 7) | 부분 결과 | 추측 자체는 증명하지 못함. 증명한 것: flower·Goldberg snark, GP(n,k) (k ≤ 15), Möbius 사다리는 5색; 14꼭짓점 이하의 모든 bridgeless 3정칙 다중그래프는 6색; 동치 `dms_iff_cubic16`; 이름 붙인 미해결 가설들로의 환원. | — | Lean 4.33.1, 표준 공리; `lake build`(pack3), 모듈별 빌드(pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
 | [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | 에르되시 문제 16개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭 | 알려진 결과의 형식화 | 17개 묶음, 정리 24개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함. | — | Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일 | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
-| `erdos-1038` | 에르되시 문제 #1038 | 담당 팀원 보고 | 팀원의 Lean 풀이(Lean 4.34.1). 10-03 확인: 같은 결과의 형식 증명이 이미 공개돼 있었고(plby/lean-proofs, 09-15, S. Wang의 주장 기반), 우리 서버(Lean 4.33.1)에서는 상한과 고전적 하한만 재빌드됨. 팀 주장에서 제외. | — | 보고된 Lean 4.34.1; 4.33.1로 일부만 재빌드(정확한 하한값은 메모리 부족으로 미재빌드) | [`erdos-1038`](entries/erdos-1038/) — 패키지와 부분 재빌드; 주장하지 않음 |
+| [`erdos-1038`](entries/erdos-1038/) | 에르되시 #1038 및 관련 재사용 가능한 형식 증명 | 알려진 결과의 형식화 | 알려진 극값 결과의 Lean 모듈 315개 구현(@n0rang2와 공동). 재사용 가능한 정리 8개를 M2 검토 후보로 제시하나 팀 주장에는 미포함. 주정리는 형식 증명이 이미 공개돼 있어 점수를 청구하지 않음. | — | Lean 4.34.1·고정 Mathlib·표준 공리. 기록된 전체 프로젝트 빌드와 정리·공리 26개 재검사. 인간 검토 없음. | [packet](entries/erdos-1038/PACKET.md) · [differences](entries/erdos-1038/artifact/CONTRIBUTIONS.md) · [informal proof](entries/erdos-1038/artifact/EP1038_paper.md) · [sources](entries/erdos-1038/artifact/erdos1038-openmath-20261003.zip) · [axioms](entries/erdos-1038/artifact/contribution-axioms.log) |
 
 **팀원의 hill 결과** (AutoLab 보드의 계정별 최고 기록; 동률은 같은 순위)
 
@@ -106,7 +106,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 - **1 · [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/)** — 1024 블록 가중 2-색칠 틀. 단색 K4 밀도가 hill 기준값보다 낮음. hill 실험 `bc2c24e3` 통과(`reference_beaten = 1`; 10-03 개선된 틀, 이전 실험 `1ab2354d`). 대표 정리: [`ramseyMultK4_limit_lt_ref`](entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Final.lean#L39). 순위: 서명된 공식 보고서(2026-10-03T02:43:23Z, `density_ppt` 30,139,911,990)는 `passed: true`, `official: true`; 검증 보드 13계정 중 1위(위 표). 최종 모드(held-out) 평가는 없음(같은 해를 최종 모드로 평가하려던 실험 `217d0ba2`는 hill이 명령줄에서 "final" 매개변수를 받지 않아 실패). 한계: 상계일 뿐이며 c_4의 값을 정한 것이 아님.
 - **2 · [`dms-star6`](entries/dms-star6/)** — **추측은 증명하지 못했습니다.** 무한 족(flower·Goldberg snark, GP(n,k) k ≤ 15, Möbius 사다리)의 5색, 14꼭짓점 이하 bridgeless 3정칙 다중그래프의 6색, 동치 [`dms_iff_cubic16`](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174), 조건부 환원 사슬. 한계: 환원 사슬의 가설은 모두 미해결.
 - **3 · [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/)** — 17개 묶음, 정리 24개(10-03에 E477, E358, E619, E1148 추가). Schönberger 정리와 Petersen 정리(연결된 경우, [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155)) 포함. 한계: "새것"은 패킷에 적은 검색에서 선행 형식 증명을 못 찾았다는 뜻뿐.
-- **4 · `erdos-1038`** — 팀원의 에르되시 문제 #1038 Lean 풀이(Lean 4.34.1). **팀 주장에서 제외**: 10-03 확인 결과 같은 결과의 형식 증명이 09-15부터 공개돼 있었고(plby/lean-proofs, S. Wang의 증명 주장 기반), 우리 도구(Lean 4.33.1)로는 상한 2√2와 고전적 하한만 재빌드됨(정확한 하한값 모듈은 메모리 초과). 패키지와 재빌드 기록: [`entries/erdos-1038/`](entries/erdos-1038/). 담당 팀원 설명: 그 논문을 보고 다시 푼 것으로, 아이디어와 얼개는 같고 Lean 구현이 다름.
+- **4 · `erdos-1038`** — [전체 Lean 소스·갱신한 informal proof·패킷](entries/erdos-1038/PACKET.md)을 추가했습니다. 기존 주정리의 신규 해결 점수 청구 제외는 유지하며, [재사용 가능한 정리 8개](entries/erdos-1038/artifact/CONTRIBUTIONS.md)는 M2 신규성·승인 검토 후보입니다. 승인된 묶음 수는 미확정이고 인간 검토는 없습니다. 완전한 4.34.1 검증 기록과 별도의 4.33.1 서버 메모리 제한 이력을 구분합니다. @hl728이 @n0rang2와 함께 작업. M2 후보 제안은 기록만 하며 **팀의 주장에는 포함하지 않습니다**: 먼저 이미 공개된 형식 증명과의 비교가 필요합니다.
 
 ## 검증 방법
 
@@ -119,7 +119,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 ## 사용한 자원
 
-2026-09-27~10-03(KST)에 기록된 @lavaskiller의 서버·노트북 AI 사용량(다른 팀원 계정은 미포함, 아래 "이 수치가 누구의 사용량인지" 참고)은 출력 토큰 약 **8,150만**, 세션 2,145개입니다: 서버 하네스의 Claude 6,710만, 노트북 Claude Code 240만, codex CLI의 GPT 1,200만. 주의: 노트북 보조 세션의 출력은 하한이고, 하네스의 첫 몇 시간(노트북 WSL)과 `erdos-1038` 작업은 들어 있지 않습니다. 모두 구독 요금제였고, 비용 수치는 하네스에 대해 도구가 보고한 API 정가 환산 3,718달러 이상(하한, 토큰당 청구된 것은 없음)뿐입니다. CPU 시간은 대부분 기록이 없고 사람 시간은 기록하지 않았습니다.
+2026-09-27~10-03(KST)에 기록된 AI 사용량은 출력 토큰 약 **8,580만**, 세션 기록 2,262개입니다: @lavaskiller의 서버·노트북 8,150만(세션 2,145개; 서버 하네스의 Claude 6,710만, 노트북 Claude Code 240만, codex CLI의 GPT 1,200만)과 @hl728의 Codex 세션 440만(Codex 카운터에서 복원, [`archive/stats/hl728.yaml`](archive/stats/hl728.yaml)). @n0rang2와 @thomasoh0408의 사용량은 숫자로 기록되지 않아 포함하지 않았습니다. 모두 구독 요금제였고, 비용 수치는 하네스에 대해 도구가 보고한 API 정가 환산 3,718달러 이상(하한)뿐입니다.
 
 ### 토큰이 어디에 쓰였나
 
@@ -160,10 +160,15 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 | 항목 | 출력 토큰 | 입력(캐시 제외) | 캐시 토큰 | 세션 수 | 기록된 wall 시간 | Lean 줄 수 | 주장 정리 수 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `dms-star6` | 78,313,222 | 79,895,063 | 9,635,136,505 | 2,094 | 77.8 + | 81,622 | 45 |
+| `erdos-1038` | 1,976,196 | 14,695,245 | 329,726,976 | 8 | 0.0 + | 167,407 | 0 |
+| matrix-research | 1,941,769 | 10,910,916 | 384,744,960 | 28 |  |  |  |
 | `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 24 |
+| ramsey-hl728 | 246,161 | 1,742,427 | 46,953,344 | 2 |  |  |  |
 | `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 16.1 + | 104,665 | 8 |
+| automatic-review-overhead | 53,074 | 3,850,303 | 18,096,384 | 74 |  |  |  |
 | shared/steering | 2,165,675 | 5,130 | 923,843,294 | 19 |  |  |  |
-| **합계** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **77** |
+| shared-research-steering-and-packaging | 162,984 | 2,102,608 | 47,276,928 | 5 |  |  |  |
+| **합계** | **85,835,030** | **117,377,765** | **11,720,940,255** | **2,262** | | **356,485** | **77** |
 <!-- RESOURCES:END -->
 
 "+"는 수치가 없는 계산 행이 있다는 뜻입니다. job들이 동시에 돌았으므로 wall 시간의 합은 경과 시간도 CPU 시간도 아닙니다. 원본과 출처: [archive/stats/SUMMARY.md](archive/stats/SUMMARY.md), [archive/stats/](archive/stats/). 그림은 `python tools/make_charts.py`, 표는 `python tools/make_results_table.py`로 다시 만듭니다.
@@ -172,7 +177,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 ### 이 수치가 누구의 사용량인지
 
-**위 수치는 모두 @lavaskiller의 사용량만입니다**: 팀 서버(하네스 job, codex 세션, Lean 빌드, Ramsey 탐색)와 팀 노트북의 Claude Code 세션. 다른 팀원의 개인 계정과 PC 사용량은 **포함하지 않았고**, 숫자로 기록되지 않아 합계에도 더하지 않았습니다. 팀원별 신고 내용([`TEAM.md`](TEAM.md)와 hill 폴더, 2026-10-03 기준):
+**위 수치는 @lavaskiller의 사용량**(팀 서버의 하네스 job, codex 세션, Lean 빌드, Ramsey 탐색과 팀 노트북의 Claude Code 세션)**과 @hl728의 Codex 세션**([`archive/stats/hl728.yaml`](archive/stats/hl728.yaml))을 합친 것입니다. @n0rang2와 @thomasoh0408의 계정과 PC 사용량은 숫자로 기록되지 않아 **포함하지 않았습니다**. 팀원별 신고 내용([`TEAM.md`](TEAM.md)와 hill 폴더, 2026-10-03 기준):
 
 | 팀원 | 신고한 AI 도구 | 신고한 계산 자원 | 신고한 사람 시간 |
 |---|---|---|---|

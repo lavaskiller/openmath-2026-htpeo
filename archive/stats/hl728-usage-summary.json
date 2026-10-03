@@ -1,0 +1,252 @@
+{
+  "recorded_at_utc": "2026-10-03T03:38:22.754226+00:00",
+  "period_from_utc": "2026-09-27T16:00:00Z",
+  "scope": "Recorded Codex sessions in this OpenMath workspace, including research, workers, shared steering and automatic review overhead; ChatGPT web and hosted AutoLab model use excluded because their counters are unavailable",
+  "method": "Read cumulative token_count counters from all physical continuation segments. Use increments within each stream, deduplicate identical timestamp/cumulative snapshots across copied history. For an unresolved first/reset cumulative snapshot count only last_token_usage, never the inherited cumulative total.",
+  "classification": "lower bound for recorded Codex usage; first-counter uncertainty and unavailable web/hosted counters disclosed",
+  "physical_segments_scanned": 187,
+  "sessions_with_recorded_usage": 116,
+  "snapshot_streams_without_usable_first_usage": 0,
+  "source_counter_bundle_sha256": "0e5894786ef3ea9e9b34c944111ee2dfa5a116e02966a5e93a697d56d820a04d",
+  "totals": {
+    "input_tokens": 860100091,
+    "cached_input_tokens": 826798592,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4380184,
+    "reasoning_output_tokens": 1719438,
+    "total_tokens": 864480275,
+    "sessions": 116,
+    "events": 7484,
+    "initial_snapshot_lower_bound_events": 135,
+    "uncached_input_tokens": 33301499
+  },
+  "by_model": {
+    "codex-auto-review": {
+      "input_tokens": 21946687,
+      "cached_input_tokens": 18096384,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 53074,
+      "reasoning_output_tokens": 24241,
+      "total_tokens": 21999761,
+      "sessions": 74,
+      "events": 447,
+      "initial_snapshot_lower_bound_events": 74,
+      "uncached_input_tokens": 3850303
+    },
+    "gpt-6-astra": {
+      "input_tokens": 38811337,
+      "cached_input_tokens": 37515392,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 185098,
+      "reasoning_output_tokens": 85087,
+      "total_tokens": 38996435,
+      "sessions": 2,
+      "events": 316,
+      "initial_snapshot_lower_bound_events": 2,
+      "uncached_input_tokens": 1295945
+    },
+    "gpt-6.1-sol": {
+      "input_tokens": 799342067,
+      "cached_input_tokens": 771186816,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4142012,
+      "reasoning_output_tokens": 1610110,
+      "total_tokens": 803484079,
+      "sessions": 41,
+      "events": 6721,
+      "initial_snapshot_lower_bound_events": 59,
+      "uncached_input_tokens": 28155251
+    }
+  },
+  "by_group_and_model": [
+    {
+      "entry_group": "automatic-review-overhead",
+      "model": "codex-auto-review",
+      "input_tokens": 21946687,
+      "cached_input_tokens": 18096384,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 53074,
+      "reasoning_output_tokens": 24241,
+      "total_tokens": 21999761,
+      "sessions": 74,
+      "events": 447,
+      "initial_snapshot_lower_bound_events": 74,
+      "uncached_input_tokens": 3850303
+    },
+    {
+      "entry_group": "erdos-1038",
+      "model": "gpt-6.1-sol",
+      "input_tokens": 344422221,
+      "cached_input_tokens": 329726976,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1976196,
+      "reasoning_output_tokens": 731016,
+      "total_tokens": 346398417,
+      "sessions": 8,
+      "events": 2698,
+      "initial_snapshot_lower_bound_events": 25,
+      "uncached_input_tokens": 14695245
+    },
+    {
+      "entry_group": "matrix-research",
+      "model": "gpt-6.1-sol",
+      "input_tokens": 395655876,
+      "cached_input_tokens": 384744960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1941769,
+      "reasoning_output_tokens": 777072,
+      "total_tokens": 397597645,
+      "sessions": 28,
+      "events": 3592,
+      "initial_snapshot_lower_bound_events": 28,
+      "uncached_input_tokens": 10910916
+    },
+    {
+      "entry_group": "ramsey-hl728",
+      "model": "gpt-6-astra",
+      "input_tokens": 38480931,
+      "cached_input_tokens": 37196160,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 183898,
+      "reasoning_output_tokens": 85040,
+      "total_tokens": 38664829,
+      "sessions": 1,
+      "events": 305,
+      "initial_snapshot_lower_bound_events": 1,
+      "uncached_input_tokens": 1284771
+    },
+    {
+      "entry_group": "ramsey-hl728",
+      "model": "gpt-6.1-sol",
+      "input_tokens": 10214840,
+      "cached_input_tokens": 9757184,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 62263,
+      "reasoning_output_tokens": 30163,
+      "total_tokens": 10277103,
+      "sessions": 1,
+      "events": 76,
+      "initial_snapshot_lower_bound_events": 0,
+      "uncached_input_tokens": 457656
+    },
+    {
+      "entry_group": "shared-research-steering-and-packaging",
+      "model": "gpt-6-astra",
+      "input_tokens": 330406,
+      "cached_input_tokens": 319232,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1200,
+      "reasoning_output_tokens": 47,
+      "total_tokens": 331606,
+      "sessions": 1,
+      "events": 11,
+      "initial_snapshot_lower_bound_events": 1,
+      "uncached_input_tokens": 11174
+    },
+    {
+      "entry_group": "shared-research-steering-and-packaging",
+      "model": "gpt-6.1-sol",
+      "input_tokens": 49049130,
+      "cached_input_tokens": 46957696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 161784,
+      "reasoning_output_tokens": 71859,
+      "total_tokens": 49210914,
+      "sessions": 4,
+      "events": 355,
+      "initial_snapshot_lower_bound_events": 6,
+      "uncached_input_tokens": 2091434
+    }
+  ],
+  "by_day_utc": {
+    "2026-09-28": {
+      "input_tokens": 1488709,
+      "cached_input_tokens": 1354752,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9621,
+      "reasoning_output_tokens": 2915,
+      "total_tokens": 1498330,
+      "sessions": 4,
+      "events": 43,
+      "initial_snapshot_lower_bound_events": 4,
+      "uncached_input_tokens": 133957
+    },
+    "2026-09-29": {
+      "input_tokens": 42439990,
+      "cached_input_tokens": 40677248,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 183549,
+      "reasoning_output_tokens": 85243,
+      "total_tokens": 42623539,
+      "sessions": 5,
+      "events": 358,
+      "initial_snapshot_lower_bound_events": 3,
+      "uncached_input_tokens": 1762742
+    },
+    "2026-09-30": {
+      "input_tokens": 267878838,
+      "cached_input_tokens": 255042944,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1408397,
+      "reasoning_output_tokens": 470384,
+      "total_tokens": 269287235,
+      "sessions": 25,
+      "events": 2198,
+      "initial_snapshot_lower_bound_events": 42,
+      "uncached_input_tokens": 12835894
+    },
+    "2026-10-01": {
+      "input_tokens": 187412556,
+      "cached_input_tokens": 179970176,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1048766,
+      "reasoning_output_tokens": 441860,
+      "total_tokens": 188461322,
+      "sessions": 35,
+      "events": 1620,
+      "initial_snapshot_lower_bound_events": 34,
+      "uncached_input_tokens": 7442380
+    },
+    "2026-10-02": {
+      "input_tokens": 244124241,
+      "cached_input_tokens": 236975232,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1245780,
+      "reasoning_output_tokens": 524947,
+      "total_tokens": 245370021,
+      "sessions": 34,
+      "events": 2291,
+      "initial_snapshot_lower_bound_events": 32,
+      "uncached_input_tokens": 7149009
+    },
+    "2026-10-03": {
+      "input_tokens": 116755757,
+      "cached_input_tokens": 112778240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 484071,
+      "reasoning_output_tokens": 194089,
+      "total_tokens": 117239828,
+      "sessions": 23,
+      "events": 974,
+      "initial_snapshot_lower_bound_events": 20,
+      "uncached_input_tokens": 3977517
+    }
+  },
+  "account_privacy": "Only aggregate figures are exported; no raw transcripts, prompts, account IDs, session IDs or local paths",
+  "cost": {
+    "billed_usd": null,
+    "api_equivalent_usd": null,
+    "reason": "Codex records expose tokens, not per-task billing or authoritative prices for these model IDs; web plan, hosted credits and effective rates are unavailable. Subscription cost is not a per-token charge."
+  },
+  "human_time": {
+    "hours": 20,
+    "qualifier": "approximately 20 hours or more; owner estimate across OpenMath including ChatGPT web, not time inferred from token/event timestamps; count once"
+  },
+  "notes": [
+    "input_tokens includes cached_input_tokens; do not add the cached subset again",
+    "reasoning_output_tokens is a subset of output_tokens; do not add it again",
+    "cache_write_input_tokens is taken from recorded counters, including explicitly recorded zeros",
+    "Session grouping can include mixed-topic work; it is not a mathematical authorship/allocation measure",
+    "Automatic-review overhead is separated from user-directed proof/research models"
+  ]
+}

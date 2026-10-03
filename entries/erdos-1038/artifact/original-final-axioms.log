@@ -1,0 +1,54 @@
+Erdos1038.erdos_1038.parts.i (n : ℕ) :
+  ENNReal.ofReal EP1038.Stage9.Dval = ⨅ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1}
+'Erdos1038.erdos_1038.parts.i' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.parts.ii (n : ℕ) : 2 * 2 ^ (1 / 2) = ⨆ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1}
+'Erdos1038.erdos_1038.parts.ii' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.variants.inf_upperBound (n : ℕ) :
+  ⨅ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1} < 1.835
+'Erdos1038.erdos_1038.variants.inf_upperBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.varaints.inf_lowerBound (n : ℕ) :
+  2 ^ (4 / 3) - 1 ≤ ⨅ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1}
+'Erdos1038.erdos_1038.varaints.inf_lowerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.inf_nonattainment (f : Polynomial ℝ)
+  (hf : f.Monic ∧ f ≠ 1 ∧ (Multiset.filter (fun x => x ∈ Set.Icc (-1) 1) f.roots).card = f.natDegree) :
+  MeasureTheory.volume {x | |Polynomial.eval x f| < 1} ≠ ⨅ p, MeasureTheory.volume {x | |Polynomial.eval x ↑p| < 1}
+'Erdos1038.erdos_1038.inf_nonattainment' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.D_enclosure :
+  18344304757 / 10000000000 ≤ EP1038.Stage9.Dval ∧ EP1038.Stage9.Dval < 18344304757628 / 10000000000000
+'Erdos1038.erdos_1038.D_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.filtered_roots_iff (p : Polynomial ℝ) :
+  (Multiset.filter (fun x => x ∈ Set.Icc (-1) 1) p.roots).card = p.natDegree ↔
+    p.roots.card = p.natDegree ∧ ∀ x ∈ p.roots, x ∈ Set.Icc (-1) 1
+'EP1038.DeepMind.filtered_roots_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.inf_admissible_iff (p : Polynomial ℝ) : EP1038.DeepMind.InfAdmissible p ↔ EP1038.Admissible p
+'EP1038.DeepMind.inf_admissible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.sup_admissible_iff (p : Polynomial ℝ) : EP1038.DeepMind.SupAdmissible p ↔ EP1038.Admissible p ∨ p = 1
+'EP1038.DeepMind.sup_admissible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.officialInf_eq_localInf : EP1038.DeepMind.officialInf = EP1038.DeepMind.localInf
+'EP1038.DeepMind.officialInf_eq_localInf' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.officialSup_eq_localSup : EP1038.DeepMind.officialSup = EP1038.DeepMind.localSup
+'EP1038.DeepMind.officialSup_eq_localSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.official_equality_iff (p : Polynomial ℝ) (hp : EP1038.DeepMind.InfAdmissible p) :
+  MeasureTheory.volume {x | |Polynomial.eval x p| < 1} = 2 * 2 ^ (1 / 2) ↔ ∃ m, 1 ≤ m ∧ p = (Polynomial.X ^ 2 - 1) ^ m
+'EP1038.DeepMind.official_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.ReferenceCert.COV (k : ℝ) : 29 / 20 < k → EP1038.ReferenceCert.RatioCertified k
+'EP1038.ReferenceCert.COV' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.ReferenceCert.universal_strict_lower {p : Polynomial ℝ} (hp : EP1038.Admissible p) :
+  EP1038.Stage9.Dval < (EP1038.sublevelMeasure p).toReal
+'EP1038.ReferenceCert.universal_strict_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.ReferenceCert.exact_infimum_and_nonattainment :
+  EP1038.DeepMind.officialInf = ENNReal.ofReal EP1038.Stage9.Dval ∧
+    ∀ (p : Polynomial ℝ),
+      EP1038.DeepMind.InfAdmissible p →
+        MeasureTheory.volume {x | |Polynomial.eval x p| < 1} ≠ EP1038.DeepMind.officialInf
+'EP1038.ReferenceCert.exact_infimum_and_nonattainment' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DLowerCert.actual_numerical_family_lower : EP1038.DLowerCert.NumericalFamilyLower
+'EP1038.DLowerCert.actual_numerical_family_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DLowerCert.actual_numerical_D_enclosure : EP1038.DLowerCert.NumericalDEnclosure
+'EP1038.DLowerCert.actual_numerical_D_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.Stage9.sharpness {q : ℝ} (hq : q ∈ EP1038.Stage9.Qadm) {ε : ℝ} (hε : 0 < ε) :
+  ∃ n r,
+    0 < n ∧
+      (∀ (i : Fin n), r i ∈ Set.Icc (-1) 1) ∧
+        MeasureTheory.volume (EP1038.sublevel r) < ENNReal.ofReal (EP1038.Stage9.Lam q + ε)
+'EP1038.Stage9.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]
