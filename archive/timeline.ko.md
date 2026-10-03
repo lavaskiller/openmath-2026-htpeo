@@ -10,6 +10,7 @@ English: [timeline.md](timeline.md)
 |---|---|---|---|
 | 2026-09-27 | 대회 전 기준선으로 Lean 라이브러리(`Star*.lean` 20개 모듈, Lean 4.20)와 인계 기록(`reference/handoff.md` 718줄)을 가져옴. 기준선에는 약 3,070만 그래프의 계산 조사(반례 없음)가 들어 있음 | dms-star6 | `star6_packet_final.md` §4.1, §3.2 |
 | 2026-09-28 01:00 KST | 상태 동결 시각(2026-09-27 16:00 UTC). 이 시각의 hill 순위표 선두는 30,141,720,824 ppt(간접 기록) | shared | `ramsey_packet.md` §3.1, §3.2 |
+| 2026-09-28 01:21 KST | Kobon 삼각형 hill, n = 18 보드: @thomasoh0408의 공식 평가(실험 `6216e4ca`), 삼각형 93개 — 보드 최고값(동점). 출처: `entries/hills/kobon-triangles-thomasoh0408/report.json`. |
 | 2026-09-28 07:35~13:35 KST | 노트북 WSL에서 machine check로 커널 패닉 10회. fact 파일 0바이트, 기록에 NUL 구멍이 생겨 라운드 로그의 해시로 복원 | shared | PLAN §6 사고 표(PLAN 손 기록; 날짜는 PLAN §0) |
 | 2026-09-28 | star6 실행을 노트북에서 서버로 이전. 서버 서비스의 메모리 상한 11G | shared | PLAN §0 결정 요약(시각 기록 없음) |
 | 2026-09-28 14:25 KST | Ramsey 작업 폴더의 가장 이른 파일(hill 사본과 seed). 이 날 Autolab 실험 `f13f7e00`(기준 실행), `4c734185`(국소 탐색) 병합, 둘 다 `reference_beaten = 0`; `2b482245` 실패 | ramsey-k4-multiplicity | `ramsey_packet.md` §3.1("local time"), Addendum 표 |
@@ -21,6 +22,7 @@ English: [timeline.md](timeline.md)
 | 2026-09-28 22:33 KST | 감독자 판단(gm `94ba34e5`): 세 경로가 모두 순환 4-변연결(c4c) 그래프에서 막힘 | dms-star6 | PLAN "이전 기록 (22:33)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-28 22:45 KST | 과제 T3c-RED-EXM, T3c-EXM-MC 신설. T3c-EXM-MC는 23:31에 운영자 승인 | dms-star6 | PLAN "이전 기록 (22:33)", "(04:40)", §5 1f |
 | 2026-09-28 23:36 KST | Claude 5시간 창 95%로 전원 정지. 23:40에 모드를 `max`로 바꿔 주간 창을 다 쓰고 초기화권을 쓰기로 결정 | shared | PLAN "이전 기록 (23:40)"(PLAN 손 기록; 날짜는 문맥) |
+| 2026-09-29 00:54 KST | Busy Beaver 6 hill: @n0rang2의 공식 평가(실험 `8297fb64`), 249,881 스텝, 1의 개수 554, 폭 735 — 보드 최고값(동점). 출처: `entries/hills/busy-beaver-6-n0rang2/report.json`. |
 | 2026-09-29 04:25 KST | 주간 초기화권 사용 뒤에도 조절기가 오래된 "100% 거부" 기록을 읽어 2시간 넘게 정지해 있던 것을 probe로 풀고 4명 재개 | shared | PLAN "이전 기록 (04:40)", §6 사고 표(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-29 04:30 KST | decomposer가 전선을 c4c 핵심으로 정하고 far-exchange 집합 도구와 과제 P09·P10을 제안. "교환 1번이면 충분" 등 4개 가설 반증 | dms-star6 | PLAN "이전 기록 (05:20)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-29 09:10 KST | RH2(fact `6bfcd4d5`: (H) ∧ (II) ⇒ 루트)를 계획으로 채택. 10:05 GPT 교차검증 15개 중 14개 통과(Lemma 2P만 이의) | dms-star6 | PLAN "이전 기록 (09:15)", "(09-29 13:35~09-30 02:20)" |
@@ -29,10 +31,12 @@ English: [timeline.md](timeline.md)
 | 2026-09-29 14:20~17:55 KST | 서버 메모리 사고: Lean 모듈이 있는 fact의 감사 job이 4GB 상한에서 OOM 반복. 밀린 실패 유닛 11개가 8GB로 한꺼번에 재실행되어 부하 61, ssh 일시 불통. Lean 라이브러리 전체 재빌드가 11GB 한도 안에서 죽어 lean의 제출 2건 거부. 17:50 상시 감사 끔, 게이트를 증분 빌드로 변경 | shared | PLAN "이전 기록 (09:15)" 중 "오후 사고(14:20~17:55)와 조치"(PLAN 손 기록) |
 | 2026-09-29 17:34 KST | Claude 5시간 창 100%로 전원 정지(19:20 초기화). 주간 창 47%(아침 9%) | shared | 같은 절(PLAN 손 기록) |
 | 2026-09-29 18:25 KST | Lean 게이트에 Mathlib v4.20.0 적용 | dms-star6 | PLAN "Mathlib 도입(18:25 적용 완료)" |
+| 2026-09-29 23:09 KST | K4 Ramsey hill 최종(held-out) 보드: @hl728의 평가, density_ppt 30,141,921,123 — 그 보드의 유일한 기록. 출처: `entries/hills/ramsey-hl728/report.json`. |
 | 2026-09-30 01:49~05:20 KST | Claude 5시간 창 101%로 전원 정지(3.5시간) | shared | PLAN "이전 기록 (09-30 02:55)" |
 | 2026-09-30 02:55 KST | RH2가 Lean으로 완성됨: fact `3e79907c` `RH2F.layer9`(`Hyp → II → DMS`, 표준 공리). 시각은 기록 절의 제목 시각 | dms-star6 | PLAN "이전 기록 (09-30 02:55)" |
 | 2026-09-30 03:00 KST | 상시 감사 재개. Lean fact는 한 번에 하나씩 8GB job, 나머지는 4GB job | shared | 같은 절 "운영자 결정(03:00)" 5번 |
 | 2026-09-30 16:45 KST | 루트 조합 ROOT-CS4(fact `6010cb59`, 감사 통과): P18 ∧ P16 ∧ P14 ∧ P23 ∧ P19 ⇒ DMS. NE 경로는 18꼭짓점 반례(evidence `49724d73`)로 폐기. 교차검증·감사 모델을 gpt-6-sol로 변경 | dms-star6 | PLAN "이전 기록 (09-30 16:45~17:30)" |
+| 2026-09-30 17:14 KST | K4 Ramsey hill 검증 보드: @hl728 30,141,720,946(17:14), @n0rang2 30,142,185,839(17:15). 출처: `entries/hills/ramsey-hl728/validation-report.json`, 순위표 스냅샷. |
 | 2026-09-30 22:05 KST | 감사 이의 방침을 코드로 강제(열린 이의가 있는 fact에 기대는 과제 종결 제출 거부). 22:18 Claude 5시간 창 108%로 전원 정지(01:20 초기화) | shared | PLAN §4 "감사 이의 방침을 코드로 강제(22:05)", "22:55 정정과 점검" |
 | 2026-09-30 22:20 KST | 부분 결과 논문 초안(10쪽) 완료. 검증 fact 375개 | dms-star6 | PLAN §4 "22:20"; `star6_packet_final.md` §3.4 |
 | 2026-09-30 23:55 KST | P19 증명 세션: Theorem O1(손 증명) — 반지름 2 이하 국소 증명(LEAF-LOCAL)은 원리적으로 불가능. 10-01 00:10에 LEAF-LOCAL(1)의 44꼭짓점 반례(evidence `b44b4c3cf72cbb37`) | dms-star6 | PLAN §4 "P19 증명 세션 완료(23:55)", "P19 국소 검사 세션 완료(10-01 00:10)" |
@@ -74,6 +78,10 @@ English: [timeline.md](timeline.md)
 | 2026-10-03 02:32 KST | Grothendieck constant witnesses hill: 실험 `2552e287`(계정 lavaskiller) 공식 평가, gap_ppm 1,414,213 / matrix_area 4 / certificate_bits 80. 알려진 CHSH형 2x2 witness이며 새것으로 주장하지 않음 | hills | `entries/hills/grothendieck-lavaskiller/report.json`(2026-10-02T17:31:54Z) |
 | 2026-10-03 02:58 KST | Kobon 삼각형 hill, n = 39 보드: 실험 `38b81af6`(계정 lavaskiller) 공식 평가, 삼각형 471개. 고전적 구성의 468보다 큼. 문헌 확인은 AI 보조 세션이 했고 사람이 검증하지 않음 | hills | `entries/hills/kobon-n39-lavaskiller/report.json`(2026-10-02T17:58:19Z), `NOTES.md` |
 | 2026-10-03 03:04 KST | 순위표 재조회(2026-10-02T18:04Z): Kobon n = 39 보드 471 / 470 / 468, lavaskiller 3명 중 1위; Grothendieck 공동 1위(9명 중 7명); Ramsey는 변동 없이 검증 보드 12명 중 1위. Ramsey 해를 최종(held-out) 보드에 올리려던 시도(실험 `217d0ba2`)는 hill이 "final" 매개변수를 받지 않아 실패. 계속된 탐색에서 나온 더 나은 Ramsey 값(30,139,923,154 ppt)은 제출하지 않음 | hills, ramsey-k4-multiplicity | `archive/leaderboards/`; 운영자 보고(실험 `217d0ba2`와 미제출 값은 이 저장소에 파일 없음) |
+| 2026-10-03 04:20 KST | 팀 저장소: @n0rang2의 PR #1(Busy Beaver 6 체크리스트, 서명 보고서, 탐색 코드, 재현 근거)을 Lean 인증서와 함께 병합. |
+| 2026-10-03 10:49–11:15 KST | @n0rang2가 PR #2–#4(Busy Beaver 6 패킷, 최대성 탐색 기록, Lean 빌드 수정)를 병합. |
+| 2026-10-03 11:01–12:00 KST | @thomasoh0408가 Kobon n = 18 보고서, 코드, README를 올림. |
+| 2026-10-03 11:45 KST | @hl728의 PR #5(최종 보드와 검증 보드의 해, 서명 보고서, 접수 기록) 병합. |
 | 2026-10-03 13:00 KST | 대회 마감(00:00 EDT). 세 패킷의 실제 제출 여부와 시각: TODO(출처 없음) — 세 패킷 모두 "작성자는 제출하지 않음"이라고만 적혀 있음 | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 9번; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` 머리줄 |
 | 2026-10-03 03:55–04:10 KST | hill 결과 3건의 Lean 인증서: Kobon n = 39(삼각형 471개), Busy Beaver 6(n0rang2의 프로젝트, Lean 4.33.1로 재빌드), Grothendieck witness. |
 | 2026-10-03 07:05–07:21 KST | Collatz(규칙 234개, 8명 중 5위)와 3x3 텐서(support 139, 동점 2위) 제출; 둘 다 선두 아님. |
