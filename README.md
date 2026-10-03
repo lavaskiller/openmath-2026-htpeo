@@ -170,7 +170,7 @@ theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDeg
 
 ### 4 · Erdős problem #1038 — `erdos-1038`
 
-A complete Lean solution (Lean 4.34.1) reported by a team member. Its folder, statement and verification notes will be added by its owner; nothing about it has been re-checked in this repository.
+A Lean solution (Lean 4.34.1) by a team member. **Not claimed by the team**: when it was checked on 2026-10-03, a formal proof of the same result had already been public since 2026-09-15 (plby/lean-proofs, imported from S. Wang's proof claim), and with our toolchain (Lean 4.33.1) only the supremum 2√2 and the classical lower bound were rebuilt; the exact infimum module exceeded the memory budget. The files stay with their owner.
 
 ## How to verify
 
