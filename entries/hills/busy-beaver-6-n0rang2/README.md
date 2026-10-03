@@ -1,99 +1,110 @@
-# Busy Beaver 6 certificates — result of @n0rang2
+# Submission packet: BB6 witness 249,881 (Lean 4 certificate)
 
-An independently found, exactly replayable 6-state, 2-symbol machine that halts after **249,881 steps**, with **554 ones** and **tape span 735**. This reproduces the validation board's best metric tuple; it is not claimed as new mathematics or as a maximum over all machines.
+Fields marked **TODO (entrant)** can only be filled in by the entrant. Everything else was checked against the files in this folder on 2026-10-03.
+
+For a plain-language account of the search, the budget probes and the unfinished maximality attempt, see [`REPORT.md`](REPORT.md).
+
+## 1. Identity and target
 
 | Field | Value |
 |---|---|
-| Hill | [`alejandrozu/busy-beaver-6-certificates`](https://app.autolab.ai/hills/alejandrozu/busy-beaver-6-certificates) |
-| Account | `n0rang2` |
-| AutoLab project | `n0rang2/bb6-certificates-submit` |
-| Experiment | `8297fb64-76d7-41fa-b6d4-5b6e24fc3d31` (`m249881`, merged) |
-| Evaluation | validation; `official: true`, `passed: true`, `final: false` |
-| Evaluation time | **2026-09-28 15:54:07 UTC = 2026-09-29 00:54:07 KST (UTC+09:00)** |
-| Hill tree hash | `86931c1b2f99d69c7bb19598f36739670768fe95` |
-| Standing | tied for 1st, 3 of 12 accounts, in the repository's 2026-10-03 03:04 KST snapshot |
+| Hill | AutoLab `alejandrozu/busy-beaver-6-certificates`, v0.1.0, tree `86931c1b2f99d69c7bb19598f36739670768fe95` |
+| Autolab owner / climb | `n0rang2` / `n0rang2/bb6-certificates-submit` |
+| Accepted experiment | `8297fb64-76d7-41fa-b6d4-5b6e24fc3d31` (`m249881`), status merged, validation split, evaluated 2026-09-28 15:54:07 UTC. The signed hill report is [`report.json`](report.json) |
+| Submitted commit | `0dd67fa12a0e530cc0fcee66ea77234f27715fcd` (its `solution.json` has the same content as `solution.json` here) |
+| Problem / family ID, modality | **TODO (entrant)** |
+| Roster, class, affiliations, contributions | **TODO (entrant)** |
+| Claimed completeness | Complete for the exact claim in §2. No claim is made that 249,881 is the maximum (see §5). |
 
-The leaderboard's UTC date is September 28; the evaluation occurred on September 29 in Korea. The standing uses ties over all three metrics, not consecutive display numbers. See the [archived leaderboard](../../../archive/leaderboards/lb_busy-beaver-6-certificates.json).
+## 2. Exact claim
 
-## Completed checklist
+The machine `0LE1LA_1LC1RH_1RA1RF_0RF0RD_1RD1LB_1LC1RD` (`solution.json`) is started in state A at cell 0 on an all-zero bi-infinite tape. Then:
 
-- [x] [`solution.json`](solution.json) exactly as evaluated; matches the original submission Git blob `0dd67fa:solution.json` and the source certificate/submission copies byte for byte.
-- [x] Original signed hill [`report.json`](report.json), recovered from `autolab logs 8297fb64`; includes hill hash, metrics, mode, timestamp and signature. The signature is preserved; no independent HMAC verification is claimed.
-- [x] AutoLab project and experiment ID: listed above and in [`evidence/provenance.md`](evidence/provenance.md).
-- [x] Method and code: max-first-use search plus neighbourhood exploration; sources in [`code/`](code/) and commands below.
-- [x] Novelty/source: independently found, but reproduces eychcue's earlier 2026-09-21 leaderboard metric tuple; no new-mathematics claim. Equality up to state relabelling was not established.
-- [x] Final-mode reproduction: **not applicable**; no final/held-out evaluation was performed for this entry. This is a validation report, not a final result.
-- [x] AI tools and rough resources: [`STATS.yaml`](STATS.yaml), with unknown quantities marked as unrecorded rather than zero.
-- [x] Evaluation date, time and time zone: signed report timestamp and UTC/KST conversion above.
+1. it halts after exactly **249,881** steps (the transition into H counts as a step);
+2. it reaches all six working states A–F before halting;
+3. the head range over times 0..249,881 spans **735** cells;
+4. **554** cells in that range hold 1, and every cell outside it holds 0;
+5. for every budget B, the evaluator's `_run` accepts it iff 249,881 ≤ B.
 
-The row in [`../README.md`](../README.md) and the generated English/Korean landing-page hill rows are updated. A separate `ENTRY.yaml` is not needed: the generator already lists this hill result from the archived leaderboard and signed report. This packet does not promote it to a full Lean entry.
+Lean statement: `BB6.Certificate` and `BB6.Accepts` in `LeanProject/LeanProject/Witness249881.lean` and `Model.lean`.
 
-## Method and prior result
+## 3. Formal artifact
 
-```text
-0LE1LA_1LC1RH_1RA1RF_0RF0RD_1RD1LB_1LC1RD
+- Prover: core Lean 4 `leanprover/lean4:v4.34.1` (pinned in `LeanProject/lean-toolchain`). No Mathlib, no other dependencies (`lake-manifest.json` lists no packages).
+- No `sorry`, `admit`, `native_decide`, `implemented_by`, `extern`, `unsafe` or `axiom` declarations. Kernel computations use `decide +kernel` only.
+- Axioms: every main theorem depends only on `[propext, Quot.sound]`. `AxiomCheck.lean` prints them during the build.
+
+Main declarations (namespace `BB6`):
+
+| Declaration | File | What it proves |
+|---|---|---|
+| `bb6_certificate`, `bb6_accepts` | `Direct.lean` | §2, by kernel evaluation of the 249,880-step run |
+| `bb6_certificate_structural`, `bb6_accepts_structural` | `Structural.lean` | §2, from sweep rules proved for every block count k |
+| `bb6_certificate_counter`, `bb6_accepts_counter` | `Counter.lean` | §2, from the base-3 counter law for arbitrary counter states |
+| `bb6_certificate_phase` | `Phase.lean` | §2, from the closed-form cycle law (20 phases) |
+| `Counter.halting_family` | `Phase.lean` | exact first halting time `Tfam ms` from start configuration `zfam ms`, for every run list `ms` |
+| `Counter.big_halting` | `Phase.lean` | a family member that halts at step 317,933,687,064,137,791,756,643,725,923 |
+| `Counter.blank_hits_family` | `Phase.lean` | the blank run reaches `zfam [1,6,21,66]` at step 77,730, and 77,730 + 172,151 = 249,881 |
+
+### Reproduce
+
+```powershell
+cd LeanProject
+lake build
 ```
 
-Start in A at cell 0 on an all-zero bi-infinite tape. Each transition writes, moves one cell and changes state. The transition into H counts as a step, and the final landing cell counts toward tape span. All six states A–F are reached; the final span is cells -7 through 727 inclusive.
-
-[`code/mfu.js`](code/mfu.js) searches halt-free machines for a transition first used very late. Changing that entry to H preserves the preceding run: first use after T transitions yields a halt at T+1. Local single/double mutations optimize this time; [`code/nbr.js`](code/nbr.js) explores neighbours. Heuristic stopping rules mean this is not an exhaustive maximality proof.
-
-Here B1 is first used after 249,880 transitions; replacing it with `[1, "R", "H"]` gives 249,881 steps. All other entries are first used by step 33. [`evidence/certificate.json`](evidence/certificate.json) records exact metrics and first-use times. [`code/hunt.c`](code/hunt.c) is the subsequent C search/checker, not the original discovery program.
-
-The workspace records independent discovery on 2026-09-28 using the JS search. The [archived leaderboard](../../../archive/leaderboards/lb_busy-beaver-6-certificates.json) shows eychcue with the same tuple at `2026-09-21T03:25:27Z`. Matching metrics do not establish identical transition tables. No literature novelty check or global maximality is claimed. See [provenance and resource evidence](evidence/provenance.md).
-
-## Reproduce the exact result
-
-From this entry directory, with Python 3 (standard library only):
-
-```bash
-python code/check.py solution.json 2000000
-python code/firstuse.py solution.json
-python code/cert.py solution.json replay-output
+```powershell
+python scripts/check.py solution.json 2000000
 ```
 
-The first command must print:
-
-```json
-{"halted": true, "steps": 249881, "ones": 554, "tape_span_incl_final_move": 735, "all_states_visited": true, "visited": "ABCDEF"}
+```powershell
+cd scripts
+python gen_witness_data.py 0LE1LA_1LC1RH_1RA1RF_0RF0RD_1RD1LB_1LC1RD 249880 249881 ../LeanProject/LeanProject/WitnessData.lean
 ```
 
-The generator also produces space-time PNGs. Its certificate should match the committed certificate as JSON. [`evidence/verification.json`](evidence/verification.json) records packaging-time checks.
+Results actually obtained from this folder on 2026-10-03 (Windows 11, Lean 4.34.1, Python 3.10):
 
-For exploratory search (Node.js, no packages):
+- `lake build` from a clean copy (no `.lake`): `Build completed successfully (13 jobs)`, exit 0, 189 s (run 10:31 KST; log in `LeanProject/logs/build.log`). Every `#print axioms` line reports `[propext, Quot.sound]`, `[propext]` or no axioms.
+- `check.py`: `halted: true, steps: 249881, ones: 554, tape_span_incl_final_move: 735, all_states_visited: true`.
+- `gen_witness_data.py`: the regenerated `WitnessData.lean` is byte-identical to the shipped file. This file is hint data only; wrong data would make the Lean checks fail, not pass.
 
-```bash
-node code/mfu.js 60 1 240000 250000 262144 candidates.jsonl
-node code/nbr.js 60 1 240000 250000 200000 249881 1000 candidates.jsonl neighbours.jsonl seeds.jsonl
-```
+### Statement correspondence
 
-These illustrate the original code; they do not guarantee rediscovery in 60 seconds. Workers use fresh random seeds, and the original discovery seed/invocation was not preserved. The replay commands are deterministic.
+`Model.lean` restates the public `eval.py` semantics: start state A at head 0 on a zero tape; each step writes, moves and changes state; the transition into H also writes and moves and is counted; `tape_span` is the head range including the final move. Two parts stay in prose (`proof.md`, "Definitions and assumptions used"): JSON loading of `solution.json` and the evaluator's range check 10 ≤ B ≤ 2,000,000.
 
-In an AutoLab checkout of `n0rang2/bb6-certificates-submit`, retrieve the original validation evidence with:
+## 4. Derivation
 
-```bash
-autolab logs 8297fb64
-```
+`proof.md` contains the mathematical proof of each Lean route: Stage 4 (zipper simulation lemmas), Stage 5 (sweep rules), Stage 6 (counter law), and Stage 7 (cycle law and halting family). The `search/…` analysis scripts that `proof.md` mentions are empirical cross-checks only. They are not part of the proof and are not included here; `scripts/search/` holds only the search programs.
 
-This reads an existing run. The recorded submission command was `autolab submit --name m249881`; the source log says the accepted submission was completed outside that agent's blocked attempt. No `--final` command is claimed.
+## 5. Provenance and limits
 
-## Lean certificate (added 2026-10-03 04:10 KST)
+- **Prior identical result.** The AutoLab validation board lists an entry with identical metrics (249,881 / 554 / 735) by `eychcue`, dated 2026-09-21, before the event opened. This machine was found independently on 2026-09-28 by our own search, but the 249,881 lower bound itself was already public. The new contribution made during the event is the Lean formalization (all four certificate routes, the counter law, and the infinite halting family).
+- **Not claimed.** That 249,881 is the largest halting time under the hill budget. A computer-assisted attempt (REPORT.md §5) excluded 31 of 32 structural classes, but it was stopped on 2026-10-03 at 09:54 KST with 634 + 113 subtrees still open. It is not in Lean, has not been reviewed by a person, and is not part of this submission. Its status files are in `evidence/maximality/`.
+- **Budget facts (platform results).** Validation budget: 249,881 ≤ B_val < 250,258 (experiment `10b5bbca`, 250,258 steps, rejected). The test split has not been evaluated for this machine.
+- **AI/tool disclosure.** Search, proofs, Lean code and reviews were produced with Claude (Anthropic) in Claude Code. Other tools: Lean 4.34.1, Python 3.10, Node.js, gcc (WSL). Compute: one local Windows PC. Autolab cost: $0.20 as of 2026-09-29 01:05 KST (later submissions not re-checked). Per the workspace records, OpenAI Codex ran the maximality attempt (C#, CUDA on one GPU). Its status files are included as evidence only and carry no claim. **TODO (entrant):** confirm this list, list what the humans checked themselves, and add other models or outside help, if any.
+- **Publication authority.** **TODO (entrant):** attribution approval and permission to release under the competition terms.
 
-The Lean project sent by @n0rang2 (`LeanProject.zip`, sha256 `5542151549f2a0f7e205116ee2f9ae9554d8f86faf78b2166ff54788d2fe7171`) is in [`lean/`](lean/). It was built by @lavaskiller's session on the team server with Lean 4.33.1 (core only, no Mathlib): all 12 modules built, exit code 0, 47 s, log in [`lean/logs/build.log`](lean/logs/build.log).
+## Files
 
-- `BB6.bb6_certificate` ([`Direct.lean`](lean/LeanProject/Direct.lean), statement `Certificate` in [`Witness249881.lean`](lean/LeanProject/Witness249881.lean)): the machine halts after exactly 249,881 steps, reaches all six working states, the head positions span 735 cells, 554 cells of the span hold 1 and every cell outside holds 0.
-- `BB6.bb6_accepts`: for every budget B, the machine is accepted with budget B if and only if 249,881 ≤ B.
-- The same two statements are proved three more ways (`_structural`, `_counter`, `_phase`).
-- Axioms reported by `#print axioms`: `propext`, `Quot.sound` (56 of the 65 audited statements; one uses `propext` only; eight use none). No `sorry`, `native_decide` or added axioms in the sources.
+| Path | Purpose |
+|---|---|
+| `REPORT.md` | Plain-language report: search, budget probes, maximality attempt |
+| `solution.json` | Accepted hill submission |
+| `LeanProject/` | Lean 4 package (source only; `lake build` creates `.lake/`); `logs/build.log` holds the clean build with `#print axioms` output |
+| `proof.md` | Mathematical derivation |
+| `scripts/check.py`, `scripts/verify_lines.py`, `scripts/firstuse.py` | Independent replay, batch replay, first-use times |
+| `scripts/gen_witness_data.py`, `scripts/zipper_lit.py` | Generates `WitnessData.lean` |
+| `scripts/search/` | Search code (`mfu.js`, `nbr.js`, `hunt.c`) |
+| `evidence/search/` | 24 replayed witnesses; the rejected 250,258 and 255,799 submissions |
+| `evidence/maximality/` | Status and audit files of the unfinished maximality attempt |
+| `SHA256SUMS` | Checksums of every other file in this folder |
 
-Limits:
+Files added earlier by the team (kept unchanged):
 
-- **One change was needed to build**: the sources use `ite_eq_left` / `ite_eq_right`, which Lean 4.33.1 does not provide. [`lean/LeanProject/Compat.lean`](lean/LeanProject/Compat.lean) defines them (two one-line lemmas from `if_pos` / `if_neg`) and `Zipper.lean` imports it. The toolchain the project was written with is not recorded: ____
-- [`Model.lean`](lean/LeanProject/Model.lean) is a hand-written model of the hill's `eval.py`; the evaluator itself is not formalised. The model refers to a `proof.md`, which is not in this folder.
-- **Maximality is not proved.** The validation budget is hidden (249,881 ≤ B ≤ 250,257 from accepted and rejected runs). A separate computation by @n0rang2's session reports that 31 of 32 structural classes contain no machine halting in 249,882–249,999 steps and that the last class was unfinished when stopped (20,322 open sub-ranges, no hit); that computation is not in this repository and is not Lean-checked.
-
-## Verification scope
-
-The official evaluator accepted the run, and the included independent Python replay checks its metrics. The server signature is retained verbatim; SHA-256 checks prove file identity/integrity, not HMAC authenticity.
-
-The Lean proofs of the halting time, state coverage, span and ones count are in [`lean/`](lean/) (section "Lean certificate" above; added after this checklist was written). The unfinished maximality research in the source folder is outside this packet, and no maximality is claimed. Unknown AI usage and resource totals are disclosed in `STATS.yaml`.
+| Path | Purpose |
+|---|---|
+| `report.json` | Signed hill report of experiment `8297fb64`, recovered with `autolab logs 8297fb64` |
+| `HILL.yaml`, `STATS.yaml` | Row text for the repository's hill table; AI-tool and resource disclosure |
+| `code/` | Same search and replay sources as `scripts/` (`check.py`, `firstuse.py`, `mfu.js`, `nbr.js`, `hunt.c` are byte-identical), plus `cert.py` |
+| `evidence/certificate.json`, `evidence/provenance.md`, `evidence/verification.json` | First-use data, provenance record, packaging-time checks |
+| `lean/` | The same Lean sources ported to Lean 4.33.1 by the team server: `Compat.lean` adds `ite_eq_left`/`ite_eq_right`, imported by `Zipper.lean`; build log in `lean/logs/build.log`. The original package, pinned to Lean 4.34.1 and needing no shim, is `LeanProject/` |
