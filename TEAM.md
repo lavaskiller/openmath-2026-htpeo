@@ -40,18 +40,21 @@ Already known:
 | Name | Hyunjin Lee |
 | Affiliation | University of Cambridge |
 | E-mail | hl728@cam.ac.uk |
-| Entries worked on | `entries/hills/ramsey-hl728/` (submitted); separate local research on Erdős problem #1038 and the 3×3 matrix-multiplication hill |
-| Role / contribution | Directed AI-assisted literature research and local K4 Ramsey template refinement; selected and submitted validation/final hill reports; preserved the evaluated certificates, signed reports and receipts, and documented provenance and limits. Separately directed Erdős #1038 Lean formalization, numerical certification and audits, and public-seed 3×3 matrix-multiplication search; these are separate from the submitted Ramsey hill record. |
-| Human review done | Not performed, as declared by Hyunjin Lee on 2026-10-03. The computed and AI-assisted checks in the Ramsey [README](entries/hills/ramsey-hl728/README.md) and [NOTES](entries/hills/ramsey-hl728/NOTES.md) are not human review. |
-| AI tools and accounts used | Personal OpenAI account via ChatGPT on the web (model identifiers not recorded) and Codex desktop/agent/CLI sessions (`gpt-6-astra`, `gpt-6.1-sol`, confirmed in local session metadata); Codex worker agents assisted research, implementation and audits. AutoLab account `hl728`, hosted seed climb and `autolab`/`hills` CLI for evaluations/submissions; the hosted seed agent model is not recorded here. Python exact arithmetic and scientific/symbolic tools; Lean 4 and Mathlib for the separate Erdős work. Local session metadata confirms the model identifiers; no account e-mails, keys or raw conversations are included. |
-| Time spent (hours, rough) | Approximately 20 hours or more (member-reported rough estimate, confirmed by Hyunjin Lee on 2026-10-03), including work using ChatGPT on the web and directing, checking and documenting the OpenMath work. This is human time; unattended agent/search/build time is excluded. |
-| Approves attribution and release | Yes — Hyunjin Lee, 2026-10-03; personally confirmed attribution and release of this profile and the current Ramsey hill submission records. |
+| Entries worked on | `entries/hills/ramsey-hl728/` (held-out/validation records); `entries/erdos-1038/` (full known-proof artifact and provisional M2 candidates); local 3×3 matrix-multiplication research (no new submitted team result established) |
+| Role / contribution | Directed AI-assisted Ramsey research, template refinement and hill evaluations; preserved exact certificates and signed reports. Continued Erdős #1038 work from @n0rang2 after reading Shouqiao Wang’s paper; this was not an independent discovery of its proof idea. Directed Lean implementation, numerical certificates, prior-art/statement/axiom audits and packet preparation. Compared the cyclic polarization and cell-average Riesz route, Bernstein/Lipschitz and ramp approximation, explicit partition certificate, and direct measurable convex support route; see [CONTRIBUTIONS](entries/erdos-1038/artifact/CONTRIBUTIONS.md), [informal proof](entries/erdos-1038/artifact/EP1038_paper.md), [exact statements](entries/erdos-1038/artifact/EXACT_STATEMENTS.md). The known main theorem is excluded from new-solution credit; eight reusable declarations form a related provisional M2 candidate, with novelty/admission unconfirmed. Also directed public-seed matrix search. |
+| Human review done | Not performed, as personally declared on 2026-10-03. AI-assisted checks are not human review. Erdős evidence: recorded pinned Lean 4.34.1 build of 315 proof modules; cached type/standard-axiom checks of 26 main/candidate declarations on 2026-10-03. Official acceptance and comprehensive prior-art comparison remain pending. |
+| AI tools and accounts used | Personal OpenAI account: ChatGPT web (model/usage counters unavailable), Codex desktop/CLI and workers (`gpt-6-astra`, `gpt-6.1-sol`); automatic review overhead separately recorded. AutoLab account `hl728`, hosted seed agent (model/usage unavailable), `autolab`/`hills`; Python exact/symbolic/scientific tools, Lean 4 and Mathlib. Recorded Codex lower bound as of 2026-10-03 03:38 UTC: 860,100,091 input tokens including 826,798,592 cached, 4,380,184 output, 864,480,275 total; reasoning 1,719,438 is included in output. 116 unique sessions. Actual billed cost, API-equivalent cost and subscription usage unknown (not zero); web/hosted counters excluded. Model/entry/day breakdown, deduplication and source digest: [usage summary](archive/stats/hl728-usage-summary.json), [member statistics](archive/stats/hl728.yaml). No raw transcripts or credentials published. |
+| Time spent (hours, rough) | Approximately 20 hours or more, owner-reported on 2026-10-03, including ChatGPT web, research direction, writing and submission preparation. Human time excludes unattended agents/builds and is counted once across entries in archive/stats/hl728.yaml; per-entry allocation unavailable. |
+| Approves attribution and release | Yes — Hyunjin Lee, 2026-10-03; personally confirmed profile/Ramsey attribution and release, and explicitly requested publication of the Erdős Lean artifact, implementation comparison, informal proof and resource disclosure. Prior authors retain attribution; no consent on behalf of other members is asserted. |
 
 Already known:
 
 - K4 Ramsey multiplicity hill: only entry on the final (held-out) board (1 account), 30,141,921,123 ppt, 2026-09-29
 - K4 Ramsey multiplicity hill: 5th of 12 (validation board), 30,141,720,946 ppt, 2026-09-30
 - Uploaded: the exact final-board `solution.json` and signed `report.json`, the later validation pair, submission receipts and provenance notes in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/); [PR #5](https://github.com/lavaskiller/openmath-2026-htpeo/pull/5) merged on 2026-10-03.
+
+
+- Erdős owner artifact: [entries/erdos-1038](entries/erdos-1038/); original archive retained, revised documentation with identical proof/configuration bytes; 315 Lean proof files / 167,407 lines. Official submission ID, receipt and signed event baseline unavailable. The old team memory-limited replay is retained in BASELINE_STATUS.md.
 
 ## @n0rang2
 
@@ -107,5 +110,5 @@ Already known:
 | Team name | HTPeo |
 | Entrant class | Team |
 | Contact e-mail | woohyuk@khu.ac.kr |
-| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: not claimed (a formal proof was already public; see `entries/PENDING.yaml`) |
+| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: @hl728 (owner artifact / provisional M2 candidates; known main theorem not claimed; see `entries/erdos-1038/PACKET.md`) |
 | Usage statistics | each member adds `archive/stats/<github id>.yaml` (see `archive/STATS_REQUEST.md`) |
