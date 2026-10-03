@@ -1,38 +1,38 @@
 # Resources used for this entry. Give the source of every number; write "estimate" where it is one.
-entry: <entry-name>
-reported_by: ""
-period: {from: "", to: ""}        # dates with time zone
+entry: kobon-triangles-attempt-14
+reported_by: "thomasoh0408"
+period: {from: "2026-09-28 KST", to: "2026-10-03 KST"}        # dates with time zone
 ai_usage:
-  - provider: ""                  # Anthropic | OpenAI | ...
-    model: ""
-    interface: ""                 # Claude Code | codex CLI | API | web chat | agent harness
-    account_plan: ""              # e.g. Max, Pro, API key (no secrets)
-    sessions: 0                   # number of sessions / agent runs
-    input_tokens: 0
-    output_tokens: 0
-    cache_read_tokens: 0
-    cache_write_tokens: 0
+  - provider: "Anthropic"                  # Anthropic | OpenAI | ...
+    model: "Claude Opus 5.5"
+    interface: "Autolab coding-agent project"                 # Claude Code | codex CLI | API | web chat | agent harness
+    account_plan: "unrecorded"              # e.g. Max, Pro, API key (no secrets)
+    sessions: null                   # number of sessions / agent runs
+    input_tokens: null
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
     cost_usd: null                # API-equivalent cost if the tool reports it
-    plan_usage: ""                # for subscriptions: e.g. "weekly window 0% -> 12%"
+    plan_usage: "unrecorded"                # for subscriptions: e.g. "weekly window 0% -> 12%"
     source: ""                    # command or file the numbers come from
 compute:
-  - machine: ""                   # e.g. "16-core server, 14 GB RAM", "laptop"
+  - machine: "local Windows/WSL workstation; hardware unrecorded"                   # e.g. "16-core server, 14 GB RAM", "laptop"
     purpose: ""                   # search | Lean build | SAT | evaluation
     wall_hours: 0
     cpu_hours: 0
     peak_memory_gb: 0
     source: ""
 human_time:
-  - person: ""
-    hours: 0
-    activity: ""                  # steering, review, writing, submission
+  - person: "thomasoh0408"
+    hours: null
+    activity: "steering, review and submission"                  # steering, review, writing, submission
 outputs:
   lean_lines: 0                   # wc -l over claimed sources
   lean_files: 0
   theorems_claimed: 0
-  build_time: ""
+  build_time: "No lean sources or build claim in this field"
   other: ""                       # e.g. "62 verified candidate solutions", "786 informal facts"
 attempts:
-  succeeded: []                   # one line each
+  succeeded: ["6216e4ca 93"]                   # one line each
   failed: []                      # one line each: what, where it stopped
 notes: ""
