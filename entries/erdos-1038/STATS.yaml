@@ -1,0 +1,61 @@
+entry: "erdos-1038"
+reported_by: "Hyunjin Lee (@hl728)"
+period:
+  from: "2026-09-27T16:00:00Z (competition window; not a signed starting snapshot)"
+  to: "2026-10-03T03:38:22.754226+00:00"
+ai_usage:
+  -
+    entry: "erdos-1038"
+    provider: "OpenAI"
+    model: "gpt-6.1-sol"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 8
+    input_tokens: 14695245
+    output_tokens: 1976196
+    cache_read_tokens: 329726976
+    cache_write_tokens: 0
+    reasoning_output_tokens: 731016
+    uncached_input_tokens: 14695245
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    counted_in: "archive/stats/hl728.yaml"
+    input_tokens_including_cache: 344422221
+compute:
+  -
+    machine: "personal laptop (arm64 macOS)"
+    purpose: "Lean build and numerical/certificate development"
+    wall_hours: "TODO: original build elapsed field differs from timestamp span"
+    cpu_hours: "TODO: not recorded"
+    peak_memory_gb: "TODO: not recorded"
+    source: "artifact/package_verification.json; memory was not measured"
+human_time: []
+outputs:
+  lean_lines: 167407
+  lean_files: 315
+  theorems_claimed: 8
+  build_time: "recorded 2026-10-01 clean project build; 2026-10-03 cached declaration checks"
+  other: "315 proof modules; 18 main/reference checks plus 8 candidate checks = 26; accepted M2 families not established"
+attempts:
+  succeeded:
+    - "315-module extracted-source project build and 18 final checks recorded 2026-10-01"
+    - "26 main/candidate type and standard-axiom checks passed 2026-10-03"
+  failed:
+    - "Team server 4.33.1 infimum rebuild exceeded memory (baseline report); separate from successful owner pinned 4.34.1 build"
+notes: "Unknowns are unknown, not zero. Lean lines/files computed from the archived proof closure; 8 candidate names listed in ENTRY.yaml. Total owner human estimate shared across entries is in TEAM.md. No resource/efficiency comparison or billing estimate is claimed. Scoped recorded Codex input 344422221, output 1976196, cached input 329726976, 8 session streams: copied from archive/stats/hl728.yaml and not counted twice. Shared human estimate of >=20h is counted once in that file. Web, hosted use, billed cost and effective rates unavailable. See aggregate methodology and source digest in hl728-usage-summary.json. Repository input column uses uncached tokens for compatibility with sum_codex_usage.py; inclusive input remains in JSON and input_tokens_including_cache. Missing web/hosted rows are under unrecorded_usage so chart/table generators cannot silently render unknown usage as zero."
+unrecorded_usage:
+  -
+    entry: "shared-web-and-hosted"
+    provider: "OpenAI / hosted AutoLab"
+    model: "not recorded"
+    interface: "ChatGPT web and AutoLab hosted seed agent"
+    sessions: "TODO: conversations/runs not reliably exported"
+    input_tokens: "TODO: counters unavailable"
+    output_tokens: "TODO: counters unavailable"
+    cache_read_tokens: "TODO: counters unavailable"
+    cache_write_tokens: "TODO: counters unavailable"
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "owner disclosure; no billing export"
+    counted_in: "archive/stats/hl728.yaml"

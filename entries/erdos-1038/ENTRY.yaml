@@ -1,0 +1,104 @@
+id: "erdos-1038"
+title: "Erdős #1038: complete known-result Lean implementation and reusable M2 candidates"
+target:
+  problem: "Reusable rearrangement, scalar-certificate and adjoint/supporting developments accompanying Erdős #1038"
+  problem_ids:
+    - "Erdos 1038"
+    - "htpeo-ep1038-reusable-v1 (local proposed label)"
+  status_before_event: "known main mathematical and formal result; Wang July 19 source and public plby port; reusable-target novelty not established"
+mode: "M2"
+requested_band: "n/a; admission and accepted family count pending"
+claims:
+  -
+    lean_name: "EP1038.Riesz.discrete_riesz"
+    plain_words: "Cyclic rearrangement for real arrays and a symmetric decreasing cyclic kernel; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/Riesz.lean"
+  -
+    lean_name: "EP1038.Circ.circle_rearrangement"
+    plain_words: "Centered-arc bound for bounded symmetric decreasing periodic kernels and arbitrary measurable periodic densities between zero and one; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/CircRearr.lean"
+  -
+    lean_name: "EP1038.Arc.scalar_pos"
+    plain_words: "Scalar positivity from explicit finite partition bounds, with all endpoint and margin hypotheses; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/ScalarRed.lean"
+  -
+    lean_name: "EP1038.Stage12.scalarPositive_partition"
+    plain_words: "Transfer of the partition certificate to an actual separated reference; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/ActualBlockReduction.lean"
+  -
+    lean_name: "EP1038.Stage11.L_XLip"
+    plain_words: "Adjoint identity for cosine-coordinate Lipschitz functions using Bernstein approximation; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/BernsteinLipschitz.lean"
+  -
+    lean_name: "EP1038.Stage11.finite_jump_adjoint_eq"
+    plain_words: "Adjoint integrability and identity for a Lipschitz remainder plus arbitrary finite interior jumps; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/JumpAdjointEquality.lean"
+  -
+    lean_name: "EP1038.Stage10.convex_supporting_sep"
+    plain_words: "Width-supporting inequality for bounded positive measurable functions under explicit separation hypotheses; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/Stage10C13.lean"
+  -
+    lean_name: "EP1038.Stage10.convex_supporting_contact"
+    plain_words: "Corresponding contact inequality under its explicit contact and endpoint hypotheses; candidate M2 contribution pending novelty/admission review"
+    file: "artifact/Stage10C13.lean"
+verification:
+  toolchain: "leanprover/lean4:v4.34.1"
+  mathlib: "d13f23b723b8a846827a245b89c10fc7d3f11612"
+  axioms: "propext, Classical.choice, Quot.sound"
+  exceptions: "none in scanned proof closure; unchanged uncompiled reference outside build root retains placeholders"
+  build: "unzip artifact/erdos1038-openmath-20261003.zip; sh scripts/build.sh from extracted root; cd Lean; lake env lean ../VerifyContributions.lean"
+  build_time_and_memory: "2026-10-01 recorded elapsed field 1033.446 seconds conflicts with start/end span; memory and CPU time unrecorded; no performance claim"
+hill:
+  name: ""
+  tree_hash: ""
+  experiment: ""
+  report_file: ""
+  metrics: {}
+submission:
+  packet: "PACKET.md"
+  submitted_at: "TODO: official server timestamp not available; GitHub upload is candidate record"
+  submission_id: "TODO: official target admission/submission not established"
+  commit: "TODO: final reviewed immutable GitHub commit is identified by PR/version history; not guessed here"
+  tag: "TODO: team to annotate reviewed final commit as erdos-1038-v1"
+people:
+  owner: "Hyunjin Lee (@hl728)"
+  contributors:
+    - "Hyunjin Lee: directed continuation, completion, source comparison, packaging and authorised upload"
+    - "@n0rang2: supplied initial informal proof/partial Lean project; earlier detailed contribution allocation unrecorded"
+  human_review: "none declared by Hyunjin Lee on 2026-10-03; qualified reviews pending"
+ai_and_tools:
+  models:
+    - "gpt-6-astra (Codex)"
+    - "gpt-6.1-sol (Codex)"
+    - "ChatGPT web (exact model not recorded)"
+  roles: "AI implementation/exposition/certificate generation and audits under owner direction; Lean/Python checks; see PACKET.md and STATS.yaml"
+provenance:
+  baseline: "e8b587a89ec8bd16f860d3fb1c1aa4166042341f (downloaded team snapshot); Wang prior main theorem; supplied starting draft; no signed September 27 owner baseline"
+  event_work: "recorded September 30-October 1 formal completion; October 2 comparison; October 3 documentation/candidate checks; proof bytes unchanged from October 1 archive"
+  prior_art_checked: "pinned Mathlib textual searches and detailed Wang checked-source comparison October 2; public plby provenance read October 3; complete ecosystem/port comparison pending"
+known_limitations:
+  - "Known #1038 main theorem excluded from new-solution credit"
+  - "Candidate reusable M2 delta and family count require novelty/admission review"
+  - "No human mathematical review declared"
+  - "Signed pre-event baseline and initial contribution allocation unavailable"
+  - "Official AutoLab Hill/Climb/report/receipt not available"
+  - "No faster-build or more-precise-extrema claim"
+links:
+  - "https://rsihouse.ai/openmath/handbook.pdf"
+  - "https://github.com/ShouqiaoW/erdos/tree/d28713ac8245ca86a686b8c67370a8d19d81b242/1038"
+  - "https://github.com/plby/lean-proofs/blob/main/ErdosProblems/Erdos1038.md"
+readme:
+  order: 4
+  problem: "Erdős #1038 and accompanying reusable formal developments"
+  problem_ko: "에르되시 #1038 및 관련 재사용 가능한 형식 증명"
+  kind: "formalization of known results"
+  result: "Known extrema implemented in 315 Lean modules; 8 reusable declarations proposed for M2 review. Main-result novelty/duplicate credit excluded; family admission pending."
+  result_ko: "알려진 극값 결과의 Lean 모듈 315개 구현. 재사용 가능한 정리 8개를 M2 검토 후보로 제시. 주정리의 신규 해결·중복 점수는 청구하지 않으며 묶음 승인 대기."
+  verification: "Lean 4.34.1, pinned Mathlib, standard axioms; recorded clean project build and 26 renewed declaration/axiom checks; no human review"
+  verification_ko: "Lean 4.34.1·고정 Mathlib·표준 공리. 기록된 전체 프로젝트 빌드와 정리·공리 26개 재검사. 인간 검토 없음."
+  links:
+    - "packet|PACKET.md"
+    - "differences|artifact/CONTRIBUTIONS.md"
+    - "informal proof|artifact/EP1038_paper.md"
+    - "sources|artifact/erdos1038-openmath-20261003.zip"
+    - "axioms|artifact/contribution-axioms.log"

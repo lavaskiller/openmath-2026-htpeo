@@ -1,0 +1,22 @@
+# Previous team status (preserved)
+
+The following is the unmodified #1038 pending record from downloaded team commit e8b587a89ec8bd16f860d3fb1c1aa4166042341f. Its exclusion of the known main result is not reversed by proposing reusable M2 candidates. The separate 4.33.1 memory-limited replay is preserved as history.
+
+```yaml
+# Entries announced by a team member that have no folder under entries/ yet.
+# tools/make_results_table.py shows them as rows of the README table. Delete a row here when its folder is added.
+pending:
+  - id: "erdos-1038"
+    order: 4
+    problem: "Erdős problem #1038"
+    problem_ko: "에르되시 문제 #1038"
+    kind: "reported by its owner"
+    kind_ko: "담당 팀원 보고"
+    result: "Lean solution by a team member (Lean 4.34.1), checked on 2026-10-03: a formal proof of the same result was already public (plby/lean-proofs, 2026-09-15, from S. Wang's claim), and on our server (Lean 4.33.1) only the supremum and the classical lower bound were rebuilt. Not claimed by the team."
+    result_ko: "팀원의 Lean 풀이(Lean 4.34.1). 10-03 확인: 같은 결과의 형식 증명이 이미 공개돼 있었고(plby/lean-proofs, 09-15, S. Wang의 주장 기반), 우리 서버(Lean 4.33.1)에서는 상한과 고전적 하한만 재빌드됨. 팀 주장에서 제외."
+    verification: "Lean 4.34.1 as reported; partially rebuilt with 4.33.1 (exact infimum not rebuilt: memory)"
+    verification_ko: "보고된 Lean 4.34.1; 4.33.1로 일부만 재빌드(정확한 하한값은 메모리 부족으로 미재빌드)"
+    links_text: "not claimed; files stay with their owner"
+    links_text_ko: "주장하지 않음; 파일은 담당 팀원 보관"
+
+```
