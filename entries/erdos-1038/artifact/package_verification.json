@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-01T14:46:57.440075+00:00",
+  "lean_version": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "lake_version": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)",
+  "build_command": "lake --no-cache --log-level=info --no-ansi build LeanProject",
+  "axiom_command": "lake env lean Verify.lean",
+  "fresh_build_exit_code": 0,
+  "fresh_build_started_at_utc": "2026-10-01T12:00:06.254055+00:00",
+  "fresh_build_finished_at_utc": "2026-10-01T13:57:34.639087+00:00",
+  "fresh_build_elapsed_seconds": 1033.446,
+  "project_build_started_empty": true,
+  "project_olean_files_created": 315,
+  "external_dependency_checkouts_and_compiled_caches_reused": true,
+  "external_dependencies_pinned_and_tracked_sources_clean": true,
+  "full_mathlib_source_rebuild_performed": false,
+  "build_error_messages": 0,
+  "proof_module_count_including_root": 315,
+  "scanned_lean_files_including_verify": 316,
+  "local_import_closure_complete": true,
+  "source_scan_forbidden_tokens": [],
+  "final_theorem_axiom_checks": 18,
+  "allowed_axiom_dependencies": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "exact_reference_heads": [
+    "Erdos1038.erdos_1038.parts.i",
+    "Erdos1038.erdos_1038.parts.ii",
+    "Erdos1038.erdos_1038.variants.inf_upperBound",
+    "Erdos1038.erdos_1038.varaints.inf_lowerBound"
+  ],
+  "answer_in_part_i": "ENNReal.ofReal EP1038.Stage9.Dval",
+  "source_archive_build_input_sha256": "55d88c13087b76896f12f6a276e8eef0a135aa9e64f17e2db0d7dee9a5b4bd1d",
+  "final_package_proof_and_config_bytes_identical_to_extracted_build_input": true,
+  "upstream_Formal_Conjectures_repository_build_performed": false,
+  "notes": [
+    "The uncompiled reference file retains original placeholders and is outside the proof build root.",
+    "Working history documents include earlier provisional statuses and old experiment links.",
+    "Project sources were compiled from an extracted source-only archive; external pinned dependency caches were reused."
+  ]
+}

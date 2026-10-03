@@ -1,0 +1,44 @@
+{
+  "lean": {
+    "exact_byte_files": 0,
+    "exact_token_files": 0,
+    "literal_tokens": {
+      "pairs": 4,
+      "largest_detected_tokens": 42
+    },
+    "identifier_abstracted": {
+      "pairs": 0,
+      "largest_detected_tokens": 0
+    },
+    "identifier_abstracted_39_tokens": {
+      "pairs": 31,
+      "largest_detected_tokens": 68
+    },
+    "identifier_numeral_abstracted_39_tokens": {
+      "pairs": 33,
+      "largest_detected_tokens": 68
+    }
+  },
+  "python": {
+    "exact_byte_files": 0,
+    "exact_token_files": 0,
+    "literal_tokens": {
+      "pairs": 0,
+      "largest_detected_tokens": 0
+    },
+    "identifier_abstracted": {
+      "pairs": 0,
+      "largest_detected_tokens": 0
+    },
+    "identifier_abstracted_39_tokens": {
+      "pairs": 4,
+      "largest_detected_tokens": 42
+    },
+    "identifier_numeral_abstracted_39_tokens": {
+      "pairs": 4,
+      "largest_detected_tokens": 42
+    }
+  },
+  "python_ast_exact_abstracted_functions": 0,
+  "lean_exact_raw_approximate_declarations": 1
+}
