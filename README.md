@@ -292,7 +292,7 @@ Caveats: the laptop subagent output is a lower bound; the first hours of the har
 |---|---|---|---|
 | @hl728 | ChatGPT on the web (personal OpenAI account, models not recorded); Codex desktop / agent / CLI (`gpt-6-astra`, `gpt-6.1-sol`) | local Mac, at most 4 worker processes; search rounds of about 56 and 58 minutes ([NOTES](entries/hills/ramsey-hl728/NOTES.md)) | about 20 hours or more |
 | @n0rang2 | AutoLab coding agent (Claude Haiku 4.5), Claude Code, Codex desktop; [`STATS.yaml`](entries/hills/busy-beaver-6-n0rang2/STATS.yaml) | search of about 1.6·10^8 machines on a personal computer (from the BB6 note @n0rang2 shared with the team, not in this repository); hours not recorded | not given |
-| @thomasoh0408 | Claude Code (claude-opus-5-5), codex CLI (gpt-6-Sol, gpt-6-Astra), as listed in `TEAM.md` | not given (the uploaded `STATS.yaml` is the empty template) | not given |
+| @thomasoh0408 | AutoLab coding-agent project with Claude Opus 5.5 ([`STATS.yaml`](entries/hills/kobon-triangles-thomasoh0408/STATS.yaml)); Claude Code, codex CLI (gpt-6-Sol, gpt-6-Astra) listed in `TEAM.md` | local Windows/WSL workstation, hardware and hours not recorded | not given |
 
 Token counts and costs of these accounts were not recorded.
 

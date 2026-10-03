@@ -177,7 +177,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 |---|---|---|---|
 | @hl728 | ChatGPT 웹(개인 OpenAI 계정, 모델 기록 없음); Codex 데스크톱·에이전트·CLI(`gpt-6-astra`, `gpt-6.1-sol`) | 개인 Mac, 작업자 최대 4개; 탐색 1회 약 56분, 약 58분([NOTES](entries/hills/ramsey-hl728/NOTES.md)) | 약 20시간 이상 |
 | @n0rang2 | AutoLab 코딩 에이전트(Claude Haiku 4.5), Claude Code, Codex 데스크톱; [`STATS.yaml`](entries/hills/busy-beaver-6-n0rang2/STATS.yaml) | 개인 PC에서 기계 약 1.6·10^8개 탐색(@n0rang2가 팀에 공유한 BB6 노트 기준, 이 저장소에는 없음); 시간 기록 없음 | 미기재 |
-| @thomasoh0408 | Claude Code(claude-opus-5-5), codex CLI(gpt-6-Sol, gpt-6-Astra) — `TEAM.md` 기재 | 미기재(올린 `STATS.yaml`은 빈 템플릿) | 미기재 |
+| @thomasoh0408 | AutoLab 코딩 에이전트 프로젝트, Claude Opus 5.5([`STATS.yaml`](entries/hills/kobon-triangles-thomasoh0408/STATS.yaml)); Claude Code, codex CLI(gpt-6-Sol, gpt-6-Astra) — `TEAM.md` 기재 | 로컬 Windows/WSL 워크스테이션, 사양과 시간 기록 없음 | 미기재 |
 
 이 계정들의 토큰 수와 비용은 기록되지 않았습니다.
 
