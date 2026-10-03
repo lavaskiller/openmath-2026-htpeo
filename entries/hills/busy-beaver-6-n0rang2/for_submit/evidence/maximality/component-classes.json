@@ -1,0 +1,540 @@
+{
+  "states": 6,
+  "class_count": 32,
+  "graph_cover_complete": true,
+  "complete_runtime_analysis": false,
+  "global_maximality_proved": false,
+  "classes": [
+    {
+      "class_id": 1,
+      "ordered_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "universal_time_bound": 36,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 2,
+      "ordered_component_sizes": [
+        2,
+        2,
+        2
+      ],
+      "universal_time_bound": 49392,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 3,
+      "ordered_component_sizes": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "universal_time_bound": 16891,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 4,
+      "ordered_component_sizes": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "universal_time_bound": 16847,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 5,
+      "ordered_component_sizes": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "universal_time_bound": 15904,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 6,
+      "ordered_component_sizes": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "universal_time_bound": 16803,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 7,
+      "ordered_component_sizes": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "universal_time_bound": 15860,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 8,
+      "ordered_component_sizes": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "universal_time_bound": 14945,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 9,
+      "ordered_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "universal_time_bound": 720,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 10,
+      "ordered_component_sizes": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "universal_time_bound": 676,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 11,
+      "ordered_component_sizes": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "universal_time_bound": 632,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 12,
+      "ordered_component_sizes": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "universal_time_bound": 588,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 13,
+      "ordered_component_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "universal_time_bound": 544,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 14,
+      "ordered_component_sizes": [
+        3,
+        3
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-three-gap-proof-ko.md"
+    },
+    {
+      "class_id": 15,
+      "ordered_component_sizes": [
+        1,
+        2,
+        3
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-three-gap-proof-ko.md"
+    },
+    {
+      "class_id": 16,
+      "ordered_component_sizes": [
+        1,
+        3,
+        2
+      ],
+      "universal_time_bound": 49392,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 17,
+      "ordered_component_sizes": [
+        2,
+        1,
+        3
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-three-gap-proof-ko.md"
+    },
+    {
+      "class_id": 18,
+      "ordered_component_sizes": [
+        2,
+        3,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 19,
+      "ordered_component_sizes": [
+        3,
+        1,
+        2
+      ],
+      "universal_time_bound": 49392,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 20,
+      "ordered_component_sizes": [
+        3,
+        2,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 21,
+      "ordered_component_sizes": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-three-gap-proof-ko.md"
+    },
+    {
+      "class_id": 22,
+      "ordered_component_sizes": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 23,
+      "ordered_component_sizes": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 24,
+      "ordered_component_sizes": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 25,
+      "ordered_component_sizes": [
+        2,
+        4
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-four-gap-proof-ko.md"
+    },
+    {
+      "class_id": 26,
+      "ordered_component_sizes": [
+        4,
+        2
+      ],
+      "universal_time_bound": 49392,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-pair-gap-proof-ko.md"
+    },
+    {
+      "class_id": 27,
+      "ordered_component_sizes": [
+        1,
+        1,
+        4
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-four-gap-proof-ko.md"
+    },
+    {
+      "class_id": 28,
+      "ordered_component_sizes": [
+        1,
+        4,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 29,
+      "ordered_component_sizes": [
+        4,
+        1,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 30,
+      "ordered_component_sizes": [
+        1,
+        5
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-five-gap-proof-ko.md"
+    },
+    {
+      "class_id": 31,
+      "ordered_component_sizes": [
+        5,
+        1
+      ],
+      "universal_time_bound": 249727,
+      "gap_excluded_by_current_structural_theorems": true,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328,
+      "target_gap": [
+        249882,
+        249999
+      ],
+      "proof_file": "terminal-singleton-gap-proof-ko.md"
+    },
+    {
+      "class_id": 32,
+      "ordered_component_sizes": [
+        6
+      ],
+      "universal_time_bound": null,
+      "gap_excluded_by_current_structural_theorems": false,
+      "conditional_bound_if_each_component_has_one_sided_cycle_signs": 5328
+    }
+  ],
+  "excluded_class_count": 31,
+  "unresolved_class_count": 1,
+  "unresolved_ordered_component_sizes": [
+    [
+      6
+    ]
+  ],
+  "updated_utc": "2026-10-02T14:24:24.308888+00:00"
+}

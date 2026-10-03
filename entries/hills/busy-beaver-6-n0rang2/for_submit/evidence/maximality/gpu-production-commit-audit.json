@@ -1,0 +1,28 @@
+{
+  "observed_utc": "2026-10-02T22:48:55.814670+00:00",
+  "chain_snapshot_sha256": "5229238cc8160dafe5a56a80a0f47c618a7ad1693d5365b941aa01b0933da840",
+  "fresh_entire_snapshot_source_hash_scope_audit_passed": true,
+  "actual_gpu_production_parts": [
+    {
+      "prefix": "gpu-replacement-000027",
+      "certificate_sha256": "eda85b5dd8e8a218ce5f821216794bef993010c8fcdfb03782fa69539a72bf9b",
+      "verifier_sha256": "599c2dc28790ebab8a7cade38dd466aa15e85f3030bb6bdc2c335fa4ed9e7f80",
+      "root_count": 16,
+      "remaining_open_subtrees": 0,
+      "closed_terminal_subtrees": 1994,
+      "interval_halt_leaves": 0,
+      "timing": {
+        "actual_cpu_checker_complete": true,
+        "gpu_generation_seconds": 0.9081903000005696,
+        "verification_seconds": 1.5175813999994716,
+        "total_seconds": 2.4257719999986875,
+        "gpu_certificate_producer": true
+      }
+    }
+  ],
+  "remaining_open_subtrees": 90,
+  "interval_halt_leaves": 0,
+  "global_exclusion_proved": false,
+  "live_controller_was_not_stopped_or_modified": true,
+  "trust_boundary": "Actual registered C# acceptance is required; GPU and JSON are not trusted proof kernels."
+}

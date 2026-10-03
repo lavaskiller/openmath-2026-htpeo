@@ -1,0 +1,65 @@
+{
+  "cancelled_utc": "2026-10-03T00:54:15.678305+00:00",
+  "human_explicitly_cancelled_all_remaining_work": true,
+  "automation_6_deleted": true,
+  "controller_and_worker_processes_confirmed_terminated": true,
+  "all_proof_files_preserved": true,
+  "global_maximality_proved": false,
+  "fresh_full_chain_audit_performed_after_cancellation": false,
+  "forests": {
+    "root-one-spectrum": {
+      "chain_sha256": "78dc320743aea4804cff7e835bd4b514324f6a20b80ea480c7e6f56d2a5149e2",
+      "committed_replacement_certificates": 6784,
+      "epoch_certificates": 453,
+      "last_controller_report": {
+        "execution_status": "draining_stop_file",
+        "scheduler": "checked_forest_replacements",
+        "pid": 27536,
+        "updated_utc": "2026-10-03T00:53:08.941165+00:00",
+        "elapsed_seconds": 7523.030999999999,
+        "wall_limit_seconds": 0,
+        "workers": 16,
+        "gpu_workers": 1,
+        "in_flight_parts": 5,
+        "in_flight_gpu_parts": 0,
+        "leased_open_subtrees": 634,
+        "order": "deep",
+        "reserved_external_subtrees": 0,
+        "remaining_open_subtrees": 634,
+        "verified_closed_terminal_subtrees": 31226702460,
+        "verified_replacement_parts": 6784,
+        "global_exclusion_proved": false
+      },
+      "remaining_scope_count_not_reaudited_after_force_stop": true,
+      "unfinished_or_uncommitted_part_files_preserved_and_not_adopted": true,
+      "snapshot_directory": "C:\\Users\\user\\Documents\\ChatGPT\\Openmath\\H06. Busy Beaver 6 Certificates\\global-maximality\\root-one-spectrum\\human-cancelled-snapshot-20261003"
+    },
+    "upper-extension-250257": {
+      "chain_sha256": "f79a0060ce4e04f6c966c89a0fcae35220cce25a237ce15053c7f84cc67b25e7",
+      "committed_replacement_certificates": 53,
+      "epoch_certificates": 1,
+      "last_controller_report": {
+        "execution_status": "draining_stop_file",
+        "scheduler": "checked_forest_replacements",
+        "pid": 31788,
+        "updated_utc": "2026-10-03T00:53:04.291768+00:00",
+        "elapsed_seconds": 7750.952999999998,
+        "wall_limit_seconds": 0,
+        "workers": 1,
+        "gpu_workers": 1,
+        "in_flight_parts": 1,
+        "in_flight_gpu_parts": 0,
+        "leased_open_subtrees": 113,
+        "order": "deep",
+        "reserved_external_subtrees": 0,
+        "remaining_open_subtrees": 113,
+        "verified_closed_terminal_subtrees": 977956372,
+        "verified_replacement_parts": 53,
+        "global_exclusion_proved": false
+      },
+      "remaining_scope_count_not_reaudited_after_force_stop": true,
+      "unfinished_or_uncommitted_part_files_preserved_and_not_adopted": true,
+      "snapshot_directory": "C:\\Users\\user\\Documents\\ChatGPT\\Openmath\\H06. Busy Beaver 6 Certificates\\global-maximality\\upper-extension-250257\\human-cancelled-snapshot-20261003"
+    }
+  }
+}
