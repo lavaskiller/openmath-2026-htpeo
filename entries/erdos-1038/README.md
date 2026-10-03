@@ -15,6 +15,13 @@ Added 2026-10-03 12:35 KST by @lavaskiller's session at the owner's request, in 
 - The owner's account (team Discord, 2026-10-03 11:51–11:55 KST): the solution was written after reading that paper; the proof idea and overall structure are the same, the implementation (the Lean development) differs. The owner's write-up of the exact differences is pending.
 - So this is at most a second, independently implemented formalization of a known result. The team does not claim it as new and does not count it in the M2 entry.
 
+## History (team chat, 2026-09-28 to 10-02)
+
+- 09-28/29: @n0rang2 obtained the mathematical proof with Claude, wrote it up (`EP1038_paper.md` in the package) and had it cross-checked with GPT-6 Astra (some misstated lemmas and numerical intervals, no counterexample or open gap in the main chain found); Lean formalization started.
+- 09-30: @hl728 joined the Lean formalization with @n0rang2's files, and found a published proposed solution with the same approach (multiscalar.ai).
+- 10-01 evening: the Lean proof was completed, and @hl728 found that a Lean proof had already been published (github.com/ShouqiaoW/erdos, problem 1038); the team's work turned out to reconstruct it, not identically.
+- 10-02 early morning: @hl728 checked that the public source compiles; it also proves uniqueness and finer numerical bounds than the team's package.
+
 ## Our partial rebuild (Lean 4.33.1, team server)
 
 Files: [`artifact/rebuild_lean_4.33.1/`](artifact/rebuild_lean_4.33.1/). Only Lean 4.33.1 + Mathlib v4.33.1 were available, so the package was compiled module by module after mechanical compatibility edits that change no statement (`compat.py`, `compat_manual.py`, full diff `compat.diff`: `ite_eq_left/right` → `if_pos/if_neg`; closing instance-equality side goals after `convert`; one extra Mathlib import in three modules).

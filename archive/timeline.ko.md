@@ -19,11 +19,13 @@ English: [timeline.md](timeline.md)
 | 2026-09-28 16:11 KST | 과제 P08(CubicSharp5_s) 신설. T5-BORROW 경로는 반례(prism ⊔ K4, fact `2db8c214`)로 폐기 | dms-star6 | PLAN "이전 기록 (16:15)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-28 17:55~19:20 KST | Claude 5시간 창 94%로 worker 전원 정지, 19:20 초기화 뒤 재개 | shared | PLAN "이전 기록 (19:40)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-28 19:40 KST | CubicSharp5_s ⇒ DMS를 Lean으로 형식화(fact `d1ef48fd`, 표준 공리). 두 경로의 의존 fact 18개가 GPT 사후 감사 통과 | dms-star6 | PLAN "이전 기록 (19:40)"; `star6_packet_final.md` §4.1(09-28 모듈) |
+| 2026-09-28 20:02 KST | 에르되시 #1038(팀 채팅): @n0rang2가 Claude로 수학 증명을 얻었다고 보고, 추가 검증 필요. |
 | 2026-09-28 22:33 KST | 감독자 판단(gm `94ba34e5`): 세 경로가 모두 순환 4-변연결(c4c) 그래프에서 막힘 | dms-star6 | PLAN "이전 기록 (22:33)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-28 22:45 KST | 과제 T3c-RED-EXM, T3c-EXM-MC 신설. T3c-EXM-MC는 23:31에 운영자 승인 | dms-star6 | PLAN "이전 기록 (22:33)", "(04:40)", §5 1f |
 | 2026-09-28 23:36 KST | Claude 5시간 창 95%로 전원 정지. 23:40에 모드를 `max`로 바꿔 주간 창을 다 쓰고 초기화권을 쓰기로 결정 | shared | PLAN "이전 기록 (23:40)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-29 | Autolab 실험 `a3e68347`(`reference_beaten = 0`), `0bcf1970`(768 블록, 가중치만 조정, 처음으로 `reference_beaten = 1`) 병합. `0bcf1970`의 ppt 값은 기록되지 않음 | ramsey-k4-multiplicity | `ramsey_packet.md` Addendum 표 |
 | 2026-09-29 00:54 KST | Busy Beaver 6 hill: @n0rang2의 공식 평가(실험 `8297fb64`), 249,881 스텝, 1의 개수 554, 폭 735 — 보드 최고값(동점). 출처: `entries/hills/busy-beaver-6-n0rang2/report.json`. |
+| 2026-09-29 02:39 KST | 에르되시 #1038: @n0rang2가 증명을 논문(`EP1038_paper.md`)으로 정리하고 GPT-6 Astra로 교차 검증: 잘못 서술된 보조정리와 수치 구간은 있으나 주정리 반례나 핵심 공백은 없음. Lean 형식화 시작. |
 | 2026-09-29 04:25 KST | 주간 초기화권 사용 뒤에도 조절기가 오래된 "100% 거부" 기록을 읽어 2시간 넘게 정지해 있던 것을 probe로 풀고 4명 재개 | shared | PLAN "이전 기록 (04:40)", §6 사고 표(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-29 04:30 KST | decomposer가 전선을 c4c 핵심으로 정하고 far-exchange 집합 도구와 과제 P09·P10을 제안. "교환 1번이면 충분" 등 4개 가설 반증 | dms-star6 | PLAN "이전 기록 (05:20)"(PLAN 손 기록; 날짜는 문맥) |
 | 2026-09-29 09:10 KST | RH2(fact `6bfcd4d5`: (H) ∧ (II) ⇒ 루트)를 계획으로 채택. 10:05 GPT 교차검증 15개 중 14개 통과(Lemma 2P만 이의) | dms-star6 | PLAN "이전 기록 (09:15)", "(09-29 13:35~09-30 02:20)" |
@@ -35,8 +37,10 @@ English: [timeline.md](timeline.md)
 | 2026-09-30 01:49~05:20 KST | Claude 5시간 창 101%로 전원 정지(3.5시간) | shared | PLAN "이전 기록 (09-30 02:55)" |
 | 2026-09-30 02:55 KST | RH2가 Lean으로 완성됨: fact `3e79907c` `RH2F.layer9`(`Hyp → II → DMS`, 표준 공리). 시각은 기록 절의 제목 시각 | dms-star6 | PLAN "이전 기록 (09-30 02:55)" |
 | 2026-09-30 03:00 KST | 상시 감사 재개. Lean fact는 한 번에 하나씩 8GB job, 나머지는 4GB job | shared | 같은 절 "운영자 결정(03:00)" 5번 |
+| 2026-09-30 16:21–17:05 KST | 에르되시 #1038: 형식화 진행 중; @n0rang2가 Lean 파일, 논문, 인증서 파일을 @hl728에게 보내고 @hl728이 형식화에 합류. |
 | 2026-09-30 16:45 KST | 루트 조합 ROOT-CS4(fact `6010cb59`, 감사 통과): P18 ∧ P16 ∧ P14 ∧ P23 ∧ P19 ⇒ DMS. NE 경로는 18꼭짓점 반례(evidence `49724d73`)로 폐기. 교차검증·감사 모델을 gpt-6-sol로 변경 | dms-star6 | PLAN "이전 기록 (09-30 16:45~17:30)" |
 | 2026-09-30 17:14 KST | K4 Ramsey hill 검증 보드: @hl728 30,141,720,946(17:14), @n0rang2 30,142,185,839(17:15). 출처: `entries/hills/ramsey-hl728/validation-report.json`, 순위표 스냅샷. |
+| 2026-09-30 18:06 KST | 에르되시 #1038: @hl728이 같은 방식의 공개된 풀이 제안(multiscalar.ai, 당시 Lean 검증 없음)을 발견. |
 | 2026-09-30 22:05 KST | 감사 이의 방침을 코드로 강제(열린 이의가 있는 fact에 기대는 과제 종결 제출 거부). 22:18 Claude 5시간 창 108%로 전원 정지(01:20 초기화) | shared | PLAN §4 "감사 이의 방침을 코드로 강제(22:05)", "22:55 정정과 점검" |
 | 2026-09-30 22:20 KST | 부분 결과 논문 초안(10쪽) 완료. 검증 fact 375개 | dms-star6 | PLAN §4 "22:20"; `star6_packet_final.md` §3.4 |
 | 2026-09-30 23:55 KST | P19 증명 세션: Theorem O1(손 증명) — 반지름 2 이하 국소 증명(LEAF-LOCAL)은 원리적으로 불가능. 10-01 00:10에 LEAF-LOCAL(1)의 44꼭짓점 반례(evidence `b44b4c3cf72cbb37`) | dms-star6 | PLAN §4 "P19 증명 세션 완료(23:55)", "P19 국소 검사 세션 완료(10-01 00:10)" |
@@ -49,8 +53,10 @@ English: [timeline.md](timeline.md)
 | 2026-10-01 10:40 KST | c4c-ext 최종: 명제 후보 PMU(n=10~18 전수 완벽 매칭 193,521개 실패 0). 반지름 1 수선은 n=40 반례로 거짓 | dms-star6 | PLAN §4 "c4c-ext 최종(10:40)"; `informal/c4c-ext_REPORT.md` |
 | 2026-10-01 10:55 KST | c4c-4cut 최종: 장치 K2가 8·10·12꼭짓점 허용 면을 대체, 4-사이클 면은 환원 불가 | dms-star6 | PLAN §4 "c4c-4cut 최종(10:55)"; `informal/c4c-4cut_REPORT.md` |
 | 2026-10-01 15:49 KST | Claude worker 4명 정지(5시간 창 93%, 이후 주간 99%). 23:50에 마감까지 정지 확정, GPT worker 3명만 가동. 23:25 기준 검증 fact 761개 | shared | PLAN §4 "전체 상황(10-01 23:25)", "23:50 재확인·방향 전환"(PLAN 손 기록) |
+| 2026-10-01 20:20–21:10 KST | 에르되시 #1038: @hl728이 Lean 증명 완성을 보고한 뒤, Lean 증명이 이미 공개돼 있음(github.com/ShouqiaoW/erdos, 1038)을 발견; 팀 작업은 그것을 재구성한 셈이며 완전히 같지는 않지만 점수 주장은 어렵게 됨. |
 | 2026-10-01 23:55 KST | helper-lean-pack 가동(Lean 결과 포장, 4.33.1 이식). c4c-ball·c4c-norem 세션은 23:19 시작 | dms-star6 | PLAN §4 "남은 1.5일 우선순위", "전체 상황(10-01 23:25)" |
 | 2026-10-02 00:10~00:40 KST | API 과부하(529)로 보조 세션 3개가 여러 번 끊김. 서버 job은 영향 없음 | shared | PLAN §4 "10-02 00:10~00:40" |
+| 2026-10-02 00:27–05:12 KST | 에르되시 #1038: @hl728이 공개 Lean 소스를 검증(유일성과 더 정밀한 수치 범위까지 포함)하고 컴파일됨을 확인. |
 | 2026-10-02 00:45 KST | c4c-norem 완료: Lemma NR, 제거 가능한 변 없는 쌍 727개(n≤18), 둘째 환원이 n=16·18의 678쌍을 모두 덮음 | dms-star6 | PLAN §4 "c4c-norem 완료(10-02 00:45)"; `informal/c4c-norem_REPORT.md` |
 | 2026-10-02 01:10 KST | Lean 포장 완료(pack2): Lean 4.20 + Mathlib에서 층 37 폐포 98/98 모듈, Lean 4.33.1 단일 파일 20,180줄 | dms-star6 | PLAN §4 "Lean 포장 완료(10-02 01:10)" |
 | 2026-10-02 01:25 KST | c4c-ball 완료: PMU 귀납 단계의 "모든 c′" 형태(고정 반경 수선)가 r=2·3에서 반증됨 | dms-star6 | PLAN §4 "c4c-ball 완료(10-02 01:25)"; `informal/c4c-ball_REPORT.md` |
