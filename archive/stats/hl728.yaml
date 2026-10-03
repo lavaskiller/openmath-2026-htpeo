@@ -1,0 +1,155 @@
+entry: "hl728-shared"
+reported_by: "Hyunjin Lee (@hl728)"
+period:
+  from: "2026-09-27T16:00:00Z"
+  to: "2026-10-03T03:38:22.754226+00:00"
+ai_usage:
+  -
+    entry: "automatic-review-overhead"
+    provider: "OpenAI"
+    model: "codex-auto-review"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 74
+    input_tokens: 3850303
+    output_tokens: 53074
+    cache_read_tokens: 18096384
+    cache_write_tokens: 0
+    reasoning_output_tokens: 24241
+    uncached_input_tokens: 3850303
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 21946687
+  -
+    entry: "erdos-1038"
+    provider: "OpenAI"
+    model: "gpt-6.1-sol"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 8
+    input_tokens: 14695245
+    output_tokens: 1976196
+    cache_read_tokens: 329726976
+    cache_write_tokens: 0
+    reasoning_output_tokens: 731016
+    uncached_input_tokens: 14695245
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 344422221
+  -
+    entry: "matrix-research"
+    provider: "OpenAI"
+    model: "gpt-6.1-sol"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 28
+    input_tokens: 10910916
+    output_tokens: 1941769
+    cache_read_tokens: 384744960
+    cache_write_tokens: 0
+    reasoning_output_tokens: 777072
+    uncached_input_tokens: 10910916
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 395655876
+  -
+    entry: "ramsey-hl728"
+    provider: "OpenAI"
+    model: "gpt-6-astra"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 1
+    input_tokens: 1284771
+    output_tokens: 183898
+    cache_read_tokens: 37196160
+    cache_write_tokens: 0
+    reasoning_output_tokens: 85040
+    uncached_input_tokens: 1284771
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 38480931
+  -
+    entry: "ramsey-hl728"
+    provider: "OpenAI"
+    model: "gpt-6.1-sol"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 1
+    input_tokens: 457656
+    output_tokens: 62263
+    cache_read_tokens: 9757184
+    cache_write_tokens: 0
+    reasoning_output_tokens: 30163
+    uncached_input_tokens: 457656
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 10214840
+  -
+    entry: "shared-research-steering-and-packaging"
+    provider: "OpenAI"
+    model: "gpt-6-astra"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 1
+    input_tokens: 11174
+    output_tokens: 1200
+    cache_read_tokens: 319232
+    cache_write_tokens: 0
+    reasoning_output_tokens: 47
+    uncached_input_tokens: 11174
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 330406
+  -
+    entry: "shared-research-steering-and-packaging"
+    provider: "OpenAI"
+    model: "gpt-6.1-sol"
+    interface: "Codex desktop/agent/CLI; automatic-review overhead separately identified"
+    account_plan: "personal account; plan not recorded"
+    sessions: 4
+    input_tokens: 2091434
+    output_tokens: 161784
+    cache_read_tokens: 46957696
+    cache_write_tokens: 0
+    reasoning_output_tokens: 71859
+    uncached_input_tokens: 2091434
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "archive/stats/hl728-usage-summary.json; deduplicated counter increments; conservative lower bound; input_tokens follows repository table convention (uncached); inclusive input retained separately"
+    input_tokens_including_cache: 49049130
+compute: []
+human_time:
+  -
+    person: "Hyunjin Lee"
+    hours: 20
+    activity: "estimate, approximately 20 hours or more across all OpenMath work including ChatGPT web, directing research and preparing records; unattended agent time excluded; count once"
+    source: "owner self-report 2026-10-03; TEAM.md"
+outputs: {}
+attempts:
+  succeeded:
+    - "Ramsey exact held-out certificate and signed report preserved"
+    - "Erdos pinned source build recorded; 26 declaration type/axiom checks passed"
+  failed:
+    - "Erdos prior team replay under Lean 4.33.1 exceeded memory"
+    - "Matrix public-seed searches did not establish a new submitted team result"
+notes: "Authoritative owner totals, counted once across entries. Recorded lower bound: input 860100091 (including 826798592 cached), output 4380184; total 864480275. Reasoning 1719438 is a subset of output. Input already includes cache; do not add cache again. 116 unique sessions; per-model/group session counts overlap when a session changes models. First/reset snapshots use last_token_usage, copied histories are deduplicated. Scope includes mixed-topic shared steering and automatic review overhead. ChatGPT web/hosted usage and current work after snapshot are unavailable/excluded. Billed cost and API-equivalent cost unknown, not zero: no billing or authoritative effective-rate export. No raw sessions, credentials or personal account identifiers published. Repository input column uses uncached tokens for compatibility with sum_codex_usage.py; inclusive input remains in JSON and input_tokens_including_cache. Missing web/hosted rows are under unrecorded_usage so chart/table generators cannot silently render unknown usage as zero."
+unrecorded_usage:
+  -
+    entry: "shared-web-and-hosted"
+    provider: "OpenAI / hosted AutoLab"
+    model: "not recorded"
+    interface: "ChatGPT web and AutoLab hosted seed agent"
+    sessions: "TODO: conversations/runs not reliably exported"
+    input_tokens: "TODO: counters unavailable"
+    output_tokens: "TODO: counters unavailable"
+    cache_read_tokens: "TODO: counters unavailable"
+    cache_write_tokens: "TODO: counters unavailable"
+    cost_usd: null
+    plan_usage: "not recorded"
+    source: "owner disclosure; no billing export"
