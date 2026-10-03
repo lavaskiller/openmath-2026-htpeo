@@ -1,0 +1,20 @@
+Erdos1038.erdos_1038.parts.ii (n : ℕ) : 2 * 2 ^ (1 / 2) = ⨆ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1}
+'Erdos1038.erdos_1038.parts.ii' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos1038.erdos_1038.varaints.inf_lowerBound (n : ℕ) :
+  2 ^ (4 / 3) - 1 ≤ ⨅ f, MeasureTheory.volume {x | |Polynomial.eval x ↑f| < 1}
+'Erdos1038.erdos_1038.varaints.inf_lowerBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.filtered_roots_iff (p : Polynomial ℝ) :
+  (Multiset.filter (fun x => x ∈ Set.Icc (-1) 1) p.roots).card = p.natDegree ↔
+    p.roots.card = p.natDegree ∧ ∀ x ∈ p.roots, x ∈ Set.Icc (-1) 1
+'EP1038.DeepMind.filtered_roots_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.inf_admissible_iff (p : Polynomial ℝ) : EP1038.DeepMind.InfAdmissible p ↔ EP1038.Admissible p
+'EP1038.DeepMind.inf_admissible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.sup_admissible_iff (p : Polynomial ℝ) : EP1038.DeepMind.SupAdmissible p ↔ EP1038.Admissible p ∨ p = 1
+'EP1038.DeepMind.sup_admissible_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.officialInf_eq_localInf : EP1038.DeepMind.officialInf = EP1038.DeepMind.localInf
+'EP1038.DeepMind.officialInf_eq_localInf' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.officialSup_eq_localSup : EP1038.DeepMind.officialSup = EP1038.DeepMind.localSup
+'EP1038.DeepMind.officialSup_eq_localSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+EP1038.DeepMind.official_equality_iff (p : Polynomial ℝ) (hp : EP1038.DeepMind.InfAdmissible p) :
+  MeasureTheory.volume {x | |Polynomial.eval x p| < 1} = 2 * 2 ^ (1 / 2) ↔ ∃ m, 1 ≤ m ∧ p = (Polynomial.X ^ 2 - 1) ^ m
+'EP1038.DeepMind.official_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

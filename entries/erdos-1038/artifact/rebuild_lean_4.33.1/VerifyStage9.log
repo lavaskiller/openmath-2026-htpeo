@@ -1,0 +1,6 @@
+EP1038.Stage9.sharpness {q : ℝ} (hq : q ∈ EP1038.Stage9.Qadm) {ε : ℝ} (hε : 0 < ε) :
+  ∃ n r,
+    0 < n ∧
+      (∀ (i : Fin n), r i ∈ Set.Icc (-1) 1) ∧
+        MeasureTheory.volume (EP1038.sublevel r) < ENNReal.ofReal (EP1038.Stage9.Lam q + ε)
+'EP1038.Stage9.sharpness' depends on axioms: [propext, Classical.choice, Quot.sound]

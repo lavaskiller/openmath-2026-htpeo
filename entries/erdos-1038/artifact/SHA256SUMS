@@ -1,0 +1,12 @@
+c4eb54d3496bb654e54773801ac027b9360215018b83e29768e008c93194a502 *./erdos1038-lean-20261001.zip
+9832bde552572e2c8f027ad960aba05a7019c0f4a669cb642488402fb7960b44 *./rebuild_lean_4.33.1/VerifyBridge.lean
+2d407466d8ba4050cd1d4d3ef7c89d6d1c8ee90285ada2c55dd1ffae857f3366 *./rebuild_lean_4.33.1/VerifyBridge.log
+447427ae0e0cc4766b0142ffe4c7fc505e45a315c137e311748373abefeeb48b *./rebuild_lean_4.33.1/VerifyStage9.lean
+a0dd8e683c78ba0abd059bf009c93a1777b36a5aa0542e1fe20938822d032e31 *./rebuild_lean_4.33.1/VerifyStage9.log
+7d100d2b448da248c4b08f05ce8289a39d25829fe8631de6368e510c8d4a39ac *./rebuild_lean_4.33.1/build_status.txt
+35a889c2b3c9eff7a7121cf7770dc3efdbdb03dbe65377b3821a44c463c53800 *./rebuild_lean_4.33.1/build_status_final.txt
+26bc6e6d1a7469b4f67f30b7247983058aad860c8b1f370da7c91fb00652f0ef *./rebuild_lean_4.33.1/compat.diff
+ad376e0c6041151a96ee6baf46463fdf0b9dedabae6eb75b2fac80496261a76e *./rebuild_lean_4.33.1/compat.py
+10bb0bd7606f723704faaecdb87cbc5e6d8153372e2a52cb93e877d304977c7a *./rebuild_lean_4.33.1/compat_manual.py
+87b849d8f61174c6e0b54748135c948b7f280641394ffe7f0402ac8531c6872e *./rebuild_lean_4.33.1/genmk.py
+c7f38fa2353104a9c46d7104d087d4523354a025565ae072a82c26caf8a814f2 *./rebuild_lean_4.33.1/one.sh

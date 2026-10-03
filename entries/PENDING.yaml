@@ -1,4 +1,4 @@
-# Entries announced by a team member that have no folder under entries/ yet.
+# Entries announced by a team member that have no ENTRY.yaml (erdos-1038 has a folder but is not claimed).
 # tools/make_results_table.py shows them as rows of the README table. Delete a row here when its folder is added.
 pending:
   - id: "erdos-1038"
@@ -11,5 +11,5 @@ pending:
     result_ko: "팀원의 Lean 풀이(Lean 4.34.1). 10-03 확인: 같은 결과의 형식 증명이 이미 공개돼 있었고(plby/lean-proofs, 09-15, S. Wang의 주장 기반), 우리 서버(Lean 4.33.1)에서는 상한과 고전적 하한만 재빌드됨. 팀 주장에서 제외."
     verification: "Lean 4.34.1 as reported; partially rebuilt with 4.33.1 (exact infimum not rebuilt: memory)"
     verification_ko: "보고된 Lean 4.34.1; 4.33.1로 일부만 재빌드(정확한 하한값은 메모리 부족으로 미재빌드)"
-    links_text: "not claimed; files stay with their owner"
-    links_text_ko: "주장하지 않음; 파일은 담당 팀원 보관"
+    links_text: "[`erdos-1038`](entries/erdos-1038/) — package and partial rebuild; not claimed"
+    links_text_ko: "[`erdos-1038`](entries/erdos-1038/) — 패키지와 부분 재빌드; 주장하지 않음"
