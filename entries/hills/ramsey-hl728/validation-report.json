@@ -1,0 +1,65 @@
+{
+  "hill": "clique-cluster-ramsey-multiplicity",
+  "tree_hash": "d30eba780f9526ad4b8c3b6c57c96632cb5b0311",
+  "commit": "a97b93c118b29df95ed4986c33a78a658d3f2989",
+  "submission_hash": "sha256:15604268cc9997c33882b77118d9a60d4b250126a4554cc378298c0377fe2cfa",
+  "submission_git": "codex/ramsey-local-one-hour@086bd2a",
+  "passed": true,
+  "config": [
+    {
+      "name": "protocol",
+      "value": "k4-weighted-blowup-v1",
+      "primary": true
+    },
+    {
+      "name": "reference",
+      "value": "10486266368/768^4",
+      "primary": true
+    },
+    {
+      "name": "mode",
+      "value": "validation",
+      "primary": false
+    }
+  ],
+  "metrics": [
+    {
+      "name": "reference_beaten",
+      "value": 1,
+      "direction": "max"
+    },
+    {
+      "name": "density_ppt",
+      "value": 30141720946,
+      "direction": "min"
+    }
+  ],
+  "details": {
+    "exact_density": "12427533938421324776666259885/412303397045424596831631461041",
+    "red_numerator": "6186769785804530370648374112",
+    "blue_numerator": "6240764152616794406017885773",
+    "raw_denominator": "412303397045424596831631461041",
+    "exact_reference": "20480989/679477248",
+    "exact_reference_gap": "154779644850444274673924522053069/280150777565476436046666464498357895168",
+    "template_blocks": 1024,
+    "weight_sum": 25339861,
+    "asymptotic_bound": "c4 <= exact_density by the weighted blow-up lemma",
+    "target_achieved": true,
+    "parent_problem_resolved": false,
+    "research_status": "candidate improvement on the frozen reference; novelty and formal review required",
+    "audit_suite": "validation-oracle-v1",
+    "trust_boundary": "Python integer certificate check plus mathematical lifting lemma; no approved proof-assistant acceptance is asserted"
+  },
+  "params": {},
+  "final": false,
+  "official": true,
+  "official_reason": null,
+  "hill_spec_version": 2,
+  "tool": {
+    "version": "0.12.0",
+    "sha256": "411a5ae2484f10550fcc865e17aa14899441aac2be6d9ad29dc09b56dc7f1054"
+  },
+  "timestamp": "2026-09-30T08:14:36Z",
+  "report_version": 1,
+  "signature": "hmac-sha256:2eb857bc20635f8096f600bca9a258779a481c5f5c6d375388142b12875844d8"
+}

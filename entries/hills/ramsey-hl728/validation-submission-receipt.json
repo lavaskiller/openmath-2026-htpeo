@@ -1,0 +1,17 @@
+{
+  "confirmed_at_utc": "2026-09-30T08:23:56.490913+00:00",
+  "hill": "alejandrozu/clique-cluster-ramsey-multiplicity",
+  "owner": "hl728",
+  "report": "round3/reports/003-periodic24.json",
+  "final": false,
+  "group_label": "protocol = k4-weighted-blowup-v1  \u00b7  reference = 10486266368/768^4",
+  "rank_at_confirmation": 4,
+  "metrics": {
+    "reference_beaten": 1,
+    "density_ppt": 30141720946
+  },
+  "leaderboard_timestamp": "2026-09-30T08:14:36Z",
+  "tree_hash": "d30eba780f9526ad4b8c3b6c57c96632cb5b0311",
+  "leaderboard_url": "https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity/leaderboard",
+  "confirmation": "AutoLab CLI submission succeeded; authenticated leaderboard GET confirmed the new score in the general evaluation group."
+}
