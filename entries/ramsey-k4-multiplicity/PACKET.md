@@ -28,9 +28,9 @@ The claim of this packet is now made for an improved template; the earlier one s
   | @n0rang2 | | | Busy Beaver 6 and K4 Ramsey hills |
   | @thomasoh0408 | | | Kobon triangles hill |
 
-* **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): ____________ ; scope: ____________ ; date: ____________ . Sentences further below that say "human checking: none" describe the state before this review.
+* **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): Woohyuk Kang (@lavaskiller) ; scope: the summary, the claimed statements and the statement-correspondence notes, read during the working sessions — not a line-by-line check of the proofs (scope entered as an estimate at the member's request, from the session records) ; date: 2026-10-03 . Sentences further below that say "human checking: none" describe the state before this review.
 * **Repository:** https://github.com/lavaskiller/openmath-2026-htpeo (private to the team until the competition deadline; it will be opened, or access given to the organisers, on request / after the deadline) — this entry is the folder `entries/ramsey-k4-multiplicity`; the submitted state is fixed by the git tag `ramsey-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/ramsey-v1/entries/ramsey-k4-multiplicity). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
-* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: ____________ . Attribution approval by every roster member: ____________ .
+* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: Woohyuk Kang (@lavaskiller), 2026-10-03 . Attribution approval by every roster member: @lavaskiller 2026-10-03; @hl728, @n0rang2, @thomasoh0408 to be recorded in `TEAM.md` .
 
 Packet version: v1 (2026-10-02). State: **draft — nothing has been submitted by the author of this packet;
 operator TODOs are listed in section 5.** Structure follows handbook section 8.

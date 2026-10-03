@@ -105,7 +105,7 @@ Total output: 81,454,846 tokens in 2,145 sessions (`archive/stats/SUMMARY.md`).
 
 **Usage limits**: by the limit snapshots in the codex records, the GPT weekly window reached 100% on 10-01 and on 10-02 and was reset. For Claude see `findings/formalization-workflow.md` §5.
 
-**TODO**: human time (operator), names of the subscription plans and actual spending, cost per result, usage of the laptop-WSL part.
+Human time of the operator: about 52 hours (estimate from the session records, see `TEAM.md`). **TODO**: names of the subscription plans and actual spending, cost per result, usage of the laptop-WSL part.
 
 ## 5. Timeline
 
