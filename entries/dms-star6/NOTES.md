@@ -32,7 +32,7 @@ Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-revi
 - Lean kernel-checked: the theorems of `PACKET.md` §1.2 to 1.4.
 - Computed (script run once, no independent rerun): the exhaustive checks and counterexamples of `PACKET.md` §3.2 to 3.3.
 - AI-checked: the informal lemmas of the fact graph, the literature survey (`artifact/docs/NOVELTY.md`).
-- Human-reviewed: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`); the informal material was not reviewed by a human.
+- Human-reviewed: no. Woohyuk Kang and Hyunjin Lee declared on 2026-10-03 that they did no human review; the other members did not state one.
 
 ## Points to check before publication
 

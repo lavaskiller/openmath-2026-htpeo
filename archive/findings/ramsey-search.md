@@ -9,7 +9,7 @@ Subject: an upper bound on the K4 Ramsey multiplicity constant c_4 (the limit of
 - The final solution is a 1024-block weighted blow-up template with `density_ppt = 30,139,933,996`. This is 2,339,436 ppt below the hill reference value B* (30,142,273,432, the value of the 768-vertex graph in the concluding Note of the paper above).
 - The largest contribution came from the split of 768 blocks into 1024 blocks (about 1.3 million ppt), followed by L-BFGS weight optimization (200 to 250 thousand ppt). These figures are as reported by the search session.
 - Single-flip tabu/SA and uniform splitting did not work. Adjusting only the weights on the seed colouring did beat B*, but by a small margin.
-- The inequality `c_4 ≤ P < B*` was checked by the Lean 4.33.1 kernel. The proof does not trust the search process itself. Human review: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`); the search and this note were not reviewed by a human.
+- The inequality `c_4 ≤ P < B*` was checked by the Lean 4.33.1 kernel. The proof does not trust the search process itself. Human review: no human review (Woohyuk Kang and Hyunjin Lee declared on 2026-10-03 that they did none; the other members did not state one).md`); the search and this note were not reviewed by a human.
 
 ## Details
 
@@ -26,7 +26,7 @@ Subject: an upper bound on the K4 Ramsey multiplicity constant c_4 (the limit of
 | Versus the leaderboard leader of 09-27 (indirect record) | 1,786,828 ppt lower | Difference from the indirect record | PLAN §4 "Ramsey 탐색 종료" |
 | `c_4 ≤ P`, `c_4 < B*` | `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, existence of the limit `ramseyMultK4_limit_lt_ref` | Lean kernel-checked (standard axioms, no `native_decide` in the main chain) | `ramsey_packet.md` §1.1, §2.6 |
 
-Human-reviewed: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`). When the packet was written, the Lean statements, the transcription, the statement correspondence and the literature paragraphs had not been checked by a human (`ramsey_packet.md` §3.3); the transcription and the literature paragraphs are not covered by the reported review. The writing session did not read the live leaderboard; the only thing on record is that the operator reported first place on the evening of 2026-10-02 (Addendum of the same document).
+Human-reviewed: no. Woohyuk Kang and Hyunjin Lee declared on 2026-10-03 that they did no human review; the other members did not state one.
 
 ### 2. Course of the search
 

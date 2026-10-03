@@ -33,7 +33,7 @@ Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-revi
 - "New" means that no prior formal proof was found in the searches described in `PACKET.md` §7. Private repositories, Zulip, and forum attachments were not searched.
 - `Star6Simple.lean` cannot be rebuilt without the star6 library (`artifact/bundle/STAR6_DEPENDENCY.md`; the library is at `entries/dms-star6/artifact/lean/`).
 - `artifact/scripts/` uses absolute paths of the server, so it does not run as is (for audit purposes).
-- Human-reviewed: the team reports that the claimed statements and the statement-correspondence notes of the packet were reviewed by a human team member (details in `TEAM.md`); the proofs were not reviewed by a human.
+- Human-reviewed: no. Woohyuk Kang and Hyunjin Lee declared on 2026-10-03 that they did no human review; the other members did not state one.
 
 ## For the operator to fill in
 

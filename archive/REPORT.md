@@ -2,7 +2,7 @@
 
 한국어: [REPORT.ko.md](REPORT.ko.md)
 
-> Draft (2026-10-03 KST). Sections 2.1–2.3, 3 and 4 were transcribed by helper-team-repo (a Claude Code agent) from the packets, the artifacts and the operations log; **the text of this document has not been reviewed by a human**. erdos-1038 and the team-level items are TODO. Every statement carries one verification level: **Lean kernel-checked / computed / AI-checked / human-reviewed**. Human review: the team reports that the claimed statements and the statement-correspondence notes of the three packets were reviewed by a human team member; reviewer names, scope and dates are recorded in [`TEAM.md`](../TEAM.md) (still to be filled in). Where a specific item was never reviewed according to the sources, this document says so.
+> Draft (2026-10-03 KST). Sections 2.1–2.3, 3 and 4 were transcribed by helper-team-repo (a Claude Code agent) from the packets, the artifacts and the operations log; **the text of this document has not been reviewed by a human**. erdos-1038 and the team-level items are TODO. Every statement carries one verification level: **Lean kernel-checked / computed / AI-checked / human-reviewed**. Human review: no human review (Woohyuk Kang and Hyunjin Lee declared on 2026-10-03 that they did none; the other members did not state one).md`](../TEAM.md) (still to be filled in). Where a specific item was never reviewed according to the sources, this document says so.
 
 ## 1. Summary
 

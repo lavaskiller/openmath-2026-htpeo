@@ -2,7 +2,7 @@
 
 English: [REPORT.md](REPORT.md)
 
-> 초안(2026-10-03 KST). 2.1~2.3절, 3절, 4절은 helper-team-repo(Claude Code 에이전트)가 패킷·artifact·운영 기록에서 옮겨 적은 것이고 **이 문서의 글은 사람이 검토하지 않았습니다**. erdos-1038과 팀 단위 항목은 TODO입니다. 검증 수준은 문장마다 **Lean 커널 검증 / 계산으로 확인 / AI가 검증 / 사람이 검토** 중 하나로 표시합니다. 사람 검토: 팀은 세 패킷의 주장 정리와 명제 대응 부분을 팀원이 검토했다고 보고했습니다. 검토자 이름·범위·날짜는 [`TEAM.md`](../TEAM.md)에 적습니다(아직 채워야 함). 출처에 따르면 한 번도 검토되지 않은 항목은 이 문서에서 그렇게 적습니다.
+> 초안(2026-10-03 KST). 2.1~2.3절, 3절, 4절은 helper-team-repo(Claude Code 에이전트)가 패킷·artifact·운영 기록에서 옮겨 적은 것이고 **이 문서의 글은 사람이 검토하지 않았습니다**. erdos-1038과 팀 단위 항목은 TODO입니다. 검증 수준은 문장마다 **Lean 커널 검증 / 계산으로 확인 / AI가 검증 / 사람이 검토** 중 하나로 표시합니다. 사람 검토: 팀은 세 패킷의 주장 정리와 명제 대응 부분을 사람 검토 없음(Woohyuk Kang과 Hyunjin Lee는 2026-10-03에 하지 않았다고 밝혔고, 나머지 팀원은 적지 않음). 검토자 이름·범위·날짜는 [`TEAM.md`](../TEAM.md)에 적습니다(아직 채워야 함). 출처에 따르면 한 번도 검토되지 않은 항목은 이 문서에서 그렇게 적습니다.
 
 ## 1. 요약
 
@@ -22,7 +22,7 @@ English: [REPORT.md](REPORT.md)
 - **대상과 대회 전 상태**: c_4 = K_n의 2-변-채색에서 단색 K4 밀도 최솟값의 극한. 열린 문제. 알려진 상계는 Parczyk–Pokutta–Spiegel–Szabó(arXiv:2206.04036) Theorem 1.1의 4551721·2^-24·3^-2 ≈ 0.0301449와 그 논문 맺음 Note의 10486266368/768^4 ≈ 0.0301422734(hill 기준값), 하계는 0.0296(같은 논문의 인용). 문헌 문단은 **AI가 검증**(패킷 작성 세션이 arXiv 본문과 대조).
 - **결과**: 1024 블록 가중 템플릿으로 c_4 ≤ 200080655744752337972227066537 / 6638390640717004439491700265361, hill 지표 30,139,933,996 ppt. Lean 이름: `sol_density`, `sol_lt_ref`, `sol_ppt`, `sol_symm`, `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`, `minMonoK4_density_le_sol`, `ramseyMultK4_limit_lt_ref`(이름공간 `RamseyCert`). **Lean 커널 검증**. hill 공식 평가 `passed: true`, `reference_beaten = 1`(실험 `1ab2354d`, 보고서 2026-10-02T11:38:08Z) — **계산으로 확인**.
 - **어떻게 했는가**: hill의 768꼭짓점 seed에서 출발해 자기동형 궤도로 뒤집기를 제한한 SA/tabu, 768 → 1024 블록 분할, 가중치 최적화, basin hopping. 값을 움직인 것은 `findings/ramsey-search.md`. 인증서는 블록·색별 2,048개 파일의 `decide +kernel`.
-- **검증**: Lean 4.33.1, Mathlib v4.33.1, 공리 `[propext, Classical.choice, Quot.sound]`. 모듈별 빌드(2,112개, `lake build` 전체 실행은 하지 않음), 50분·4.7 CPU시간. 신뢰 경계: 커널의 GMP 산술, JSON → Lean 전사(별도 스크립트로 재확인, Lean 증명 아님), hill의 빠른 계산 루틴과 `_oracle`의 일치는 모델링하지 않음. 두 번째 기계에서의 재빌드 없음. **사람이 검토**: 팀이 주장 정리와 명제 대응 부분을 검토했다고 보고함(세부는 `TEAM.md`). 출처에 따르면 증명과 빌드는 사람이 검토하지 않음.
+- **검증**: Lean 4.33.1, Mathlib v4.33.1, 공리 `[propext, Classical.choice, Quot.sound]`. 모듈별 빌드(2,112개, `lake build` 전체 실행은 하지 않음), 50분·4.7 CPU시간. 신뢰 경계: 커널의 GMP 산술, JSON → Lean 전사(별도 스크립트로 재확인, Lean 증명 아님), hill의 빠른 계산 루틴과 `_oracle`의 일치는 모델링하지 않음. 두 번째 기계에서의 재빌드 없음. **사람 검토 없음**(Woohyuk Kang과 Hyunjin Lee는 하지 않았다고 밝힘, 나머지 팀원은 미기재).md`). 출처에 따르면 증명과 빌드는 사람이 검토하지 않음.
 - **한계**: 상계의 개선일 뿐 c_4를 결정하지 않음(하계와의 간격의 약 0.43%). 방법은 선행 논문의 방법(알려진 구성의 blow-up에서 국소 탐색). 2024년 9월 이후 문헌은 확인하지 않음. hill 평가가 `final: false`.
 - **자료**: `entries/ramsey-k4-multiplicity/`, 태그 TODO(운영자, 예정 `ramsey-v1`).
 
@@ -35,7 +35,7 @@ English: [REPORT.md](REPORT.md)
   - T3 조건부: `RH2F.layer37` — 이름 붙은 가설(FEEXTD10, FEEXISTD18, POLE, TDTRI, FEEXTTNE16, FEEXIST0NE16 등) ⇒ DMS. **가설은 하나도 증명되지 않음.**
   - T4 유한 인증서: `base12`, `simple14`, `b14d`, `feexist16`, `cls16c`(16꼭짓점 c4c 그래프 607개).
 - **어떻게 했는가**: 다중 에이전트 하네스(worker → LLM 검증기 → GPT 교차 감사 → Lean 게이트)로 비형식 fact 786개와 Lean 모듈을 쌓고, 마감 이틀 전부터 보조 세션이 4.33.1 이식, 족의 Lean 증명, 따름정리를 만들었다. GP(n,k)와 Möbius ladder의 채색은 SAT 탐색으로 찾았다.
-- **검증**: Lean 4.33.1, Mathlib v4.33.1, 표준 공리(pack3 18줄, pack4 36줄, pack5 39줄의 `#print axioms`). pack3은 `lake build`(20분)와 모듈별 빌드 둘 다 실행, pack4·pack5는 모듈별 빌드만. 기준선 정리 하나가 `native_decide`를 쓰지만 주장 정리의 의존 범위 밖. 족 그래프가 교과서 정의와 같다는 것은 Python 점검뿐. 비형식 자료(fact 그래프, 전수 계산, PMU 근거)는 **AI가 검증** 또는 **계산으로 확인**(한 번 실행)이고 점수를 청구하지 않으며, 사람이 검토하지 않음. **사람이 검토**: 팀이 주장 정리와 명제 대응 부분을 검토했다고 보고함(세부는 `TEAM.md`).
+- **검증**: Lean 4.33.1, Mathlib v4.33.1, 표준 공리(pack3 18줄, pack4 36줄, pack5 39줄의 `#print axioms`). pack3은 `lake build`(20분)와 모듈별 빌드 둘 다 실행, pack4·pack5는 모듈별 빌드만. 기준선 정리 하나가 `native_decide`를 쓰지만 주장 정리의 의존 범위 밖. 족 그래프가 교과서 정의와 같다는 것은 Python 점검뿐. 비형식 자료(fact 그래프, 전수 계산, PMU 근거)는 **AI가 검증** 또는 **계산으로 확인**(한 번 실행)이고 점수를 청구하지 않으며, 사람이 검토하지 않음. **사람 검토 없음**(Woohyuk Kang과 Hyunjin Lee는 하지 않았다고 밝힘, 나머지 팀원은 미기재).md`).
 - **한계**: 추측은 열려 있음. 족들은 일반 추측의 장애물을 없애지 않음. 일반 subcubic 그래프의 유한 범위는 7꼭짓점. 일부 족(GP의 일부, 덮개 정리)은 문헌에 있음(패킷 §2.6).
 - **자료**: `entries/dms-star6/`, 태그 TODO(운영자, 예정 `dms-v1`). 조사 기록: `findings/dms-c4c-core.md`.
 
@@ -44,7 +44,7 @@ English: [REPORT.md](REPORT.md)
 - **대상과 대회 전 상태**: 에르되시 문제들에 딸린 알려진 결과(formal-conjectures 커밋 `df3f12d7`에서 `sorry`로 남아 있던 명제)와 Schönberger 정리·Petersen 정리(연결된 경우). 수학은 알려져 있고, 패킷 §7의 검색에서 선행 형식 증명을 찾지 못한 것들.
 - **결과**: 13개 묶음, 정리 19개 — 실질 9개(G-PM, E942, E44, E123, E918, E292, E395, E698, E939), 사소·점검용 4개(E295, E703, E748, E1136). 선택 5개 묶음(E757, E261, E36, E649, E508)은 주장하지 않음. **Lean 커널 검증**.
 - **어떻게 했는가**: GPT(codex 무인 세션)가 증명, Claude가 대상 선정·검증 스크립트·선행 형식화 조사·패킷. `findings/formalization-workflow.md`.
-- **검증**: Lean 4.33.1, FC가 고정한 Mathlib, 표준 공리. 명제가 고정 커밋과 글자 단위로 같은지 스크립트로 확인(**계산으로 확인**). 선행 형식화 조사는 **AI가 검증**. **사람이 검토**: 팀이 주장 정리와 명제 대응 부분을 검토했다고 보고함(세부는 `TEAM.md`). 출처에 따르면 증명은 사람이 검토하지 않음.
+- **검증**: Lean 4.33.1, FC가 고정한 Mathlib, 표준 공리. 명제가 고정 커밋과 글자 단위로 같은지 스크립트로 확인(**계산으로 확인**). 선행 형식화 조사는 **AI가 검증**. **사람 검토 없음**(Woohyuk Kang과 Hyunjin Lee는 하지 않았다고 밝힘, 나머지 팀원은 미기재).md`). 출처에 따르면 증명은 사람이 검토하지 않음.
 - **한계**: "새것"은 검색에서 못 찾았다는 뜻뿐. 각 문제의 주 명제는 주장하지 않음. Petersen 정리는 연결 그래프만. `Star6Simple.lean`은 star6 라이브러리가 있어야 빌드됨.
 - **자료**: `entries/erdos-m2-formalizations/`, 태그 TODO(운영자).
 

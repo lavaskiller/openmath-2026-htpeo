@@ -99,7 +99,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 >
 > **기계가 검증하지 않은 것.** (1) DMS pack4의 그래프 족은 변 목록으로 정의했고, 교과서 정의와 같은지는 [Python 스크립트](entries/dms-star6/artifact/lean/pack4/sanity_check.py)로만 확인했습니다(동형 증명 없음). (2) Ramsey 데이터는 `solution.json`에서 Lean으로 [스크립트](entries/ramsey-k4-multiplicity/artifact/lean/tools/gen.py)가 옮겨 적고 [다른 스크립트](entries/ramsey-k4-multiplicity/artifact/lean/tools/check_data.py)로 다시 확인했습니다. (3) 형식 명제가 원래 문제와 같은 뜻인지는 각 패킷의 대응 설명을 보십시오.
 >
-> **사람 검토.** Woohyuk Kang(@lavaskiller)이 2026-10-03에 패킷 세 개의 요약, 주장 명제, 명제 대응 설명을 읽었습니다. 증명을 한 줄씩 검사한 것은 아닙니다. Hyunjin Lee(@hl728)는 본인 몫의 사람 검토가 없었다고 밝혔고, 나머지 두 팀원은 검토 여부를 적지 않았습니다. 자세한 내용: [TEAM.md](TEAM.md).
+> **사람 검토.** 없음. Woohyuk Kang(@lavaskiller)과 Hyunjin Lee(@hl728)는 사람 검토를 하지 않았다고 밝혔고, 나머지 두 팀원은 검토 여부를 적지 않았습니다. 검증은 Lean 커널, 위의 로그와 스크립트, AI 모델의 교차 검증으로만 이루어졌습니다. 자세한 내용: [TEAM.md](TEAM.md).
 
 ## 항목
 

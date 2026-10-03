@@ -17,7 +17,7 @@ After filling in, update the role line under your avatar in `README.md` and `REA
 | E-mail | woohyuk@khu.ac.kr |
 | Entries worked on | `ramsey-k4-multiplicity`, `dms-star6`, `erdos-m2-formalizations` |
 | Role / contribution | Operated the multi-agent harness that produced the DMS fact graph and Lean chain; ran the K4 Ramsey search, its hill submission and the Lean certificate; ran the Erdős formalization sessions, their verification and prior-art checks; assembled the packets and this repository. |
-| Human review done | reported done by the member (2026-10-03); packets and sections: the three packets (Ramsey, DMS, M2) — summary, claimed statements and statement-correspondence notes; README and hill entries. Not a line-by-line check of the proofs. (Estimate entered at the member's request, from the session records.) |
+| Human review done | Not performed, as declared by Woohyuk Kang on 2026-10-03. The checks are the Lean kernel, the build and axiom logs, scripts, and cross-checks by AI models; none of them is a human review. |
 | AI tools and accounts used | Claude Code sessions (claude-opus-5-5); agent harness with Claude workers (claude-opus-5-5, claude-sonnet-5, claude-fable-5-1) and GPT workers through the codex CLI (gpt-5.6-sol until 2026-09-30, gpt-6-sol after); subscription plans |
 | Time spent (hours, rough) | about 52 (estimate: active time over the 492 operator messages of the Claude Code sessions on the team laptop, 2026-09-27 to 2026-10-03 KST, gaps over 30 minutes counted as 30 minutes; Discord, server and offline time not included) |
 | Approves attribution and release | Woohyuk Kang, 2026-10-03 (entered at the member's instruction) |

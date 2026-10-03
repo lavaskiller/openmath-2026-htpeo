@@ -113,7 +113,7 @@ Raw leaderboard responses: [`archive/leaderboards/`](archive/leaderboards/); fig
 >
 > **Not machine-checked.** (1) The graph families of DMS pack4 are explicit edge lists; their agreement with the textbook definitions is checked by a [Python script](entries/dms-star6/artifact/lean/pack4/sanity_check.py), not proved as an isomorphism. (2) The Ramsey data is transcribed from `solution.json` to Lean by a [script](entries/ramsey-k4-multiplicity/artifact/lean/tools/gen.py) and re-checked by [another](entries/ramsey-k4-multiplicity/artifact/lean/tools/check_data.py); the transcription itself is not proved. (3) That each formal statement says what the informal problem says: see the correspondence notes in each packet.
 >
-> **Human review.** Woohyuk Kang (@lavaskiller) read the summaries, the claimed statements and the statement-correspondence notes of the three packets on 2026-10-03; this was not a line-by-line check of the proofs. Hyunjin Lee (@hl728) declared that no human review was done on their part; the other two members did not state a review. Details: [TEAM.md](TEAM.md).
+> **Human review.** None. Woohyuk Kang (@lavaskiller) and Hyunjin Lee (@hl728) declared that they did no human review; the other two members did not state one. What is checked is checked by the Lean kernel, the logs and scripts listed above, and cross-checks by AI models. Details: [TEAM.md](TEAM.md).
 
 ## Entries
 

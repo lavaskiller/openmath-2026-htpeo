@@ -71,7 +71,7 @@ people:
   contributors:
     - "Woohyuk Kang: operator of the agent harness; commit author"
     - "TODO: operator - full roster and each human's contribution"
-  human_review: "Woohyuk Kang (@lavaskiller), 2026-10-03: summary, claimed statements and statement-correspondence notes of the packet; not a line-by-line check of the proofs (TEAM.md)"
+  human_review: "none: no human review (declared by Woohyuk Kang and Hyunjin Lee on 2026-10-03; the other members did not state one)"
 ai_and_tools:
   models:
     - "Claude Opus / Sonnet workers (agent harness on the server; exact model ids: TODO, from the harness INDEX.json, see archive/stats/server-harness.yaml)"
