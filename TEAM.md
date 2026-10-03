@@ -63,10 +63,10 @@ Already known:
 | Name | Sanghyeon Lee |
 | Affiliation | Korea Univ. Security |
 | E-mail | ymhlsh4065@korea.ac.kr |
-| Entries worked on | `entries/hills/busy-beaver-6-n0rang2/`, `entries/hills/ramsey-n0rang2/` |
-| Role / contribution | Busy Beaver 6 and K4 Ramsey hills (from the leaderboard; to be completed by the member) |
+| Entries worked on | `entries/hills/busy-beaver-6-n0rang2/`, `entries/hills/ramsey-n0rang2/`, `entries/erdos-1038/` (with @hl728) |
+| Role / contribution | Busy Beaver 6 hill: the 249,881-step machine, its Lean certificates, the replay evidence and the structural maximality computation; K4 Ramsey hill (validation board); Erdős #1038 with @hl728 (from the uploaded files and the team chat) |
 | Human review done | packet ____ , sections ____ , date ____ |
-| AI tools and accounts used | Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra, gpt-6.1-Sol); subscription plans |
+| AI tools and accounts used | AutoLab coding agent (Claude Haiku 4.5), Codex desktop (see `entries/hills/busy-beaver-6-n0rang2/STATS.yaml`); Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra, gpt-6.1-Sol); subscription plans |
 | Time spent (hours, rough) | ____ |
 | Approves attribution and release | ____ (name, date) |
 
@@ -88,9 +88,9 @@ Already known:
 | Affiliation | Seoul National Univ. TI |
 | E-mail | thomasoh0408@snu.ac.kr |
 | Entries worked on | `entries/hills/kobon-triangles-thomasoh0408/` |
-| Role / contribution | Kobon triangles hill (from the leaderboard; to be completed by the member) |
+| Role / contribution | Kobon triangles hill, board n = 18: 93 triangles (tied for 1st), with an AutoLab coding agent; report, code and STATS uploaded |
 | Human review done | packet ____ , sections ____ , date ____ |
-| AI tools and accounts used | Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra); subscription plans |
+| AI tools and accounts used | AutoLab coding-agent project with Claude Opus 5.5 (see `entries/hills/kobon-triangles-thomasoh0408/STATS.yaml`); Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra); subscription plans |
 | Time spent (hours, rough) | ____ |
 | Approves attribution and release | ____ (name, date) |
 
@@ -107,5 +107,5 @@ Already known:
 | Team name | HTPeo |
 | Entrant class | Team |
 | Contact e-mail | woohyuk@khu.ac.kr |
-| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: @hl728 with 상현 (Sanghyeon), not claimed (a formal proof was already public; see `entries/erdos-1038/`) |
+| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: @hl728 with @n0rang2, not claimed (a formal proof was already public; see `entries/erdos-1038/`) |
 | Usage statistics | each member adds `archive/stats/<github id>.yaml` (see `archive/STATS_REQUEST.md`) |

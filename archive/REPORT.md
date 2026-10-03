@@ -86,7 +86,7 @@ All figures are sums, made by scripts, of records left by the tools (**computed*
 | codex (GPT) on the server | 09-28 – 10-03 | 83,975,710 | 11,954,416 | 2,249,000,448 | — | 928 | input excludes cached input. gpt-6-sol 534 sessions, gpt-5.6-sol 386 |
 | Claude Code on the laptop (steering session + helper agents) | 09-27 – 10-03 | 9,748 | 2,366,563 | 1,273,633,924 | 69,960,092 | 66 | helper-agent output is a lower bound |
 
-Total output: 81,454,846 tokens in 2,145 sessions (`archive/stats/SUMMARY.md`).
+Total output: 81,454,846 tokens in 2,145 sessions (`archive/stats/SUMMARY.md`). These are @lavaskiller's server and laptop only; the other members' own usage was not recorded as numbers (their declarations: README, "Whose usage these numbers cover").
 
 - GPT per entry: dms-star6 904 sessions (input 79.8M, output 11.0M, cache 2,027M — of these 822 verify/audit sessions and 68 GPT-worker sessions), erdos-m2-formalizations 21 sessions (input 3.7M, output 0.85M, cache 202M), ramsey-k4-multiplicity 3 sessions (input 0.46M, output 0.11M, cache 19M). Source: `archive/stats/server-codex.yaml`.
 - Claude per entry: the server harness is all dms-star6. On the laptop only the helper agents can be split (dms-star6 39 sessions, ramsey 3, erdos-m2 5). The steering session (output 2.14M) is shared/steering.

@@ -1,6 +1,6 @@
 # Erdős problem #1038 — Lean solution package of @hl728 (not claimed by the team)
 
-Worked on by @hl728 together with team member 상현 (Sanghyeon; as reported by @lavaskiller on 2026-10-03 — GitHub account and exact share of the work not recorded here).
+Worked on by @hl728 together with @n0rang2 (Sanghyeon Lee), as reported by @lavaskiller on 2026-10-03; the share of the work is not recorded here.
 
 Added 2026-10-03 12:35 KST by @lavaskiller's session at the owner's request, in a hurry before the deadline; the owner could not upload it in time. Statements below are summarised from the package and from our partial rebuild; the owner's own description is pending.
 

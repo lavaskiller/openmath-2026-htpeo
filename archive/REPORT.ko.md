@@ -86,7 +86,7 @@ TODO(팀 논의). 기록에 있는 것: 부분 진전의 모든 주장이 개별
 | 서버 codex(GPT) | 09-28 ~ 10-03 | 83,975,710 | 11,954,416 | 2,249,000,448 | — | 928 | 입력은 캐시 제외분. gpt-6-sol 534개 세션, gpt-5.6-sol 386개 |
 | 노트북 Claude Code(조종 세션 + 보조 에이전트) | 09-27 ~ 10-03 | 9,748 | 2,366,563 | 1,273,633,924 | 69,960,092 | 66 | 보조 에이전트 출력은 하한 |
 
-출력 합계: 81,454,846 토큰, 세션 2,145개(`archive/stats/SUMMARY.md`).
+출력 합계: 81,454,846 토큰, 세션 2,145개(`archive/stats/SUMMARY.md`). @lavaskiller의 서버와 노트북 사용량만이며, 다른 팀원의 사용량은 숫자로 기록되지 않았습니다(신고 내용: README "이 수치가 누구의 사용량인지").
 
 - 항목별 GPT: dms-star6 904개 세션(입력 79.8M, 출력 11.0M, 캐시 2,027M — 그중 검증·감사 822개 세션, GPT worker 68개 세션), erdos-m2-formalizations 21개 세션(입력 3.7M, 출력 0.85M, 캐시 202M), ramsey-k4-multiplicity 3개 세션(입력 0.46M, 출력 0.11M, 캐시 19M). 출처: `archive/stats/server-codex.yaml`.
 - 항목별 Claude: 서버 하네스는 전부 dms-star6. 노트북은 보조 에이전트만 나눌 수 있다(dms-star6 39개, ramsey 3개, erdos-m2 5개 세션). 조종 세션(출력 2.14M)은 shared/steering.

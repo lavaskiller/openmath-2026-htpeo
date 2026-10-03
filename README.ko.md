@@ -118,7 +118,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 ## 사용한 자원
 
-2026-09-27~10-03(KST)에 기록된 AI 사용량은 출력 토큰 약 **8,150만**, 세션 2,145개입니다: 서버 하네스의 Claude 6,710만, 노트북 Claude Code 240만, codex CLI의 GPT 1,200만. 주의: 노트북 보조 세션의 출력은 하한이고, 하네스의 첫 몇 시간(노트북 WSL)과 `erdos-1038` 작업은 들어 있지 않습니다. 모두 구독 요금제였고, 비용 수치는 하네스에 대해 도구가 보고한 API 정가 환산 3,718달러 이상(하한, 토큰당 청구된 것은 없음)뿐입니다. CPU 시간은 대부분 기록이 없고 사람 시간은 기록하지 않았습니다.
+2026-09-27~10-03(KST)에 기록된 @lavaskiller의 서버·노트북 AI 사용량(다른 팀원 계정은 미포함, 아래 "이 수치가 누구의 사용량인지" 참고)은 출력 토큰 약 **8,150만**, 세션 2,145개입니다: 서버 하네스의 Claude 6,710만, 노트북 Claude Code 240만, codex CLI의 GPT 1,200만. 주의: 노트북 보조 세션의 출력은 하한이고, 하네스의 첫 몇 시간(노트북 WSL)과 `erdos-1038` 작업은 들어 있지 않습니다. 모두 구독 요금제였고, 비용 수치는 하네스에 대해 도구가 보고한 API 정가 환산 3,718달러 이상(하한, 토큰당 청구된 것은 없음)뿐입니다. CPU 시간은 대부분 기록이 없고 사람 시간은 기록하지 않았습니다.
 
 ### 토큰이 어디에 쓰였나
 
@@ -189,12 +189,12 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
   <tr>
     <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ. CS&amp;E</sub><br/><sub>에이전트 하네스(DMS), Ramsey 탐색과 Lean 인증서, 에르되시 형식화, 패킷</sub></td>
     <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>Hyunjin Lee<br/>University of Cambridge<br/>K4 Ramsey hill (검증 보드와 최종 보드 평가)</sub></td>
-    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Busy Beaver 6, K4 Ramsey hill</sub></td>
-    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Kobon 삼각형 hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Sanghyeon Lee<br/>Korea Univ. Security<br/>Busy Beaver 6, K4 Ramsey hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Youchan Oh<br/>Seoul National Univ. TI<br/>Kobon 삼각형 hill</sub></td>
   </tr>
 </table>
 
-@hl728, @n0rang2, @thomasoh0408의 역할은 hill 순위표에서 가져온 것이며 각자 [TEAM.md](TEAM.md)에서 완성합니다. 이름, 소속, 한 일, 검토한 부분도 각자 TEAM.md의 자기 칸에 적습니다.
+이름, 소속, 역할은 각 팀원이 채운 [TEAM.md](TEAM.md)에서 가져왔습니다(기여, AI 도구, 시간, 승인도 그곳에 있습니다).
 
 팀원의 hill 순위는 [한눈에 보는 결과](#한눈에-보는-결과)에 있습니다.
 
