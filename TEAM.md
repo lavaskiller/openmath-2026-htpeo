@@ -90,7 +90,7 @@ Already known:
 | Entries worked on | `entries/hills/kobon-triangles-thomasoh0408/` |
 | Role / contribution | Kobon triangles hill (from the leaderboard; to be completed by the member) |
 | Human review done | packet ____ , sections ____ , date ____ |
-| AI tools and accounts used | ____ (models, interface; no account e-mails or keys) |
+| AI tools and accounts used | Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra); subscription plans |
 | Time spent (hours, rough) | ____ |
 | Approves attribution and release | ____ (name, date) |
 
