@@ -1,0 +1,2272 @@
+{
+  "audited_utc": "2026-10-02T16:03:07.662761+00:00",
+  "last_five_state_component_target_gap_excluded": true,
+  "ordered_component_size_classes_newly_excluded": 1,
+  "target_gap": [
+    249882,
+    249999
+  ],
+  "component_interval": [
+    249881,
+    249998
+  ],
+  "initial_ones": [
+    -1
+  ],
+  "complete_all_seeded_tables_for_required_input": true,
+  "parts_count": 249,
+  "closed_terminal_subtrees": 619865678,
+  "branching_nodes": 32626203,
+  "remaining_open_subtrees": 0,
+  "actual_kernel_interval_halt_leaves": 0,
+  "fresh_entire_chain_scope_hash_audit": true,
+  "fresh_actual_checker_replay": true,
+  "fresh_actual_checker_replayed_parts": 249,
+  "generator_sha256": "6c1d512c0997d64c8459f72fc6762ce4038be726397dadc46743777193f05783",
+  "checker_sha256": "17c138c638f00de5a0217958d59077cc2a2d2a2bfbccea216e33540a87b9a7cd",
+  "chain_sha256": "7ed4ccbef7975e8e703c175ef7a9a3f901b9eb0932aeec9e6573b2b095c08bcd",
+  "parts": [
+    {
+      "prefix": "terminal-five-spectrum-part-000001",
+      "roots": 1,
+      "certificate_sha256": "dbf89d611bbabde3c8ebd7b169a1ad4c03bb3218e06a30264e6d79bb5045439e",
+      "closed_leaves": 15837514,
+      "branches": 833638,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000002",
+      "roots": 8,
+      "certificate_sha256": "c7ee523d7c246326249203040683a42875c33d6099cd350b04fb6f004d1a274e",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000003",
+      "roots": 8,
+      "certificate_sha256": "1d5876bbb50343ff408063db64b72c2063bf0d378e4f693f5811fd8840501966",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000004",
+      "roots": 8,
+      "certificate_sha256": "0047b1f2e0a34fa37696d7f9cea1ffd2847fcd6a56db2d74e4d892e3b56d9d3d",
+      "closed_leaves": 160,
+      "branches": 8,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000005",
+      "roots": 8,
+      "certificate_sha256": "8bf288d1e6cd5de016fe8b37ddc939679e8e9c24023388ade076d0993920b30a",
+      "closed_leaves": 121646,
+      "branches": 6402,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000006",
+      "roots": 8,
+      "certificate_sha256": "81232310fe9e6871bf6a22923a11525bb7722516fee9923ea8a3344485fc1e02",
+      "closed_leaves": 15244913,
+      "branches": 802447,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000008",
+      "roots": 8,
+      "certificate_sha256": "06b00d8688f80e345667c9ea7a6edcc736c5d217bd74eccae51bf47a976023d1",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000009",
+      "roots": 8,
+      "certificate_sha256": "a5c02eae4913e73fdea63319010a62a80592b0b4c8d06a6573939b26e9a938e1",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000010",
+      "roots": 8,
+      "certificate_sha256": "e1d5f8d49177ee8b9832902a1c6a17942e81015c8d5ff1ca7a998624e20514b6",
+      "closed_leaves": 43651,
+      "branches": 2297,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000007",
+      "roots": 1,
+      "certificate_sha256": "ebe789cc8a28c201dbefb0d37494f39c244ae0d1ca9732fce3837212bcb7c544",
+      "closed_leaves": 18087371,
+      "branches": 952086,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000012",
+      "roots": 8,
+      "certificate_sha256": "03123cd7a936b6bbd78e89f179762e885e46ceecdd928b776ed406cb8f2a6496",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000013",
+      "roots": 8,
+      "certificate_sha256": "e3351ba754652aebbca4bf30641d9ec6615de4dc16ed836b0f3eafb8091f086d",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000014",
+      "roots": 8,
+      "certificate_sha256": "745358a7c9e8d58ceeeb44c9155745cc723e142c2aa834828843e8cfb0f596fa",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000015",
+      "roots": 8,
+      "certificate_sha256": "f2eae562b4982761112dcbf14661ef157d4a0a7666a8c4dd4446910593c591c8",
+      "closed_leaves": 103,
+      "branches": 5,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000016",
+      "roots": 8,
+      "certificate_sha256": "efcb36c6337a7bc35fea8ac647906485ac135cbbd2c4b220b14a2a66aa47db99",
+      "closed_leaves": 1186,
+      "branches": 62,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000017",
+      "roots": 8,
+      "certificate_sha256": "2fdeed555f50e48464fdde5674937970366ec42246f02ff4ee3e62601212eee8",
+      "closed_leaves": 1183463,
+      "branches": 62289,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000011",
+      "roots": 8,
+      "certificate_sha256": "312f77d53db121e4c48d7c6c15e729c8b52b715e4968590568c2f196178df127",
+      "closed_leaves": 14044265,
+      "branches": 739266,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000019",
+      "roots": 8,
+      "certificate_sha256": "b0270c47ad9c32089a34a9941e3822150c522fe51f92bbc6bcee6618461cf0bb",
+      "closed_leaves": 2725,
+      "branches": 143,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000020",
+      "roots": 8,
+      "certificate_sha256": "ba2ea8f1c9597062f66f3c4522d212961c6074d981326b277b58f2d34b749e51",
+      "closed_leaves": 86420,
+      "branches": 4548,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000021",
+      "roots": 8,
+      "certificate_sha256": "629a573398c7cc621921b70933f4c9f0b34ab10b7c82e3811d394250c1ac4650",
+      "closed_leaves": 134661,
+      "branches": 7087,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000018",
+      "roots": 8,
+      "certificate_sha256": "115cb0ab6c76a11b50fadf22ec8f8614d939182a6da4062b313b68d521086458",
+      "closed_leaves": 13278793,
+      "branches": 698918,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000023",
+      "roots": 8,
+      "certificate_sha256": "b49bbd11ec9d547c3c108b4ee06b58590da53572fe8dfd7c6cfdaebca2130da9",
+      "closed_leaves": 1509,
+      "branches": 79,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000024",
+      "roots": 8,
+      "certificate_sha256": "7156564c0b54a73c69c016286a105a7561358930b295b5cbddb242f3fbb8e239",
+      "closed_leaves": 13859,
+      "branches": 729,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000025",
+      "roots": 8,
+      "certificate_sha256": "1f355a02d650ed4a5e6d8eb6d46dfb57029548dff0d60c8f12e0eda3aaaad93e",
+      "closed_leaves": 1775311,
+      "branches": 93437,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000026",
+      "roots": 8,
+      "certificate_sha256": "859acf44ef4dcf333e4b0cbe4813288e3f1d8f960d8a7fa853733fd533b8aea2",
+      "closed_leaves": 2881073,
+      "branches": 151635,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000022",
+      "roots": 8,
+      "certificate_sha256": "b924c723a0a067fdf67917d33add43ca7ebb7f73f1779e2f6d47e4deef8af400",
+      "closed_leaves": 12496816,
+      "branches": 657785,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000028",
+      "roots": 8,
+      "certificate_sha256": "7363623546f8ce1b6436e507ab27291f2eca359c0e95358f29cea77ef805fad5",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000029",
+      "roots": 8,
+      "certificate_sha256": "d758ce3a9076657fdb71fbcff4dc1fbbe03322f646da96241aa93e124e9d074b",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000030",
+      "roots": 8,
+      "certificate_sha256": "6248f271c7a47bc6f1598f83dd8edf79fecbcf0b5c9f7e29571ba908c5a45d42",
+      "closed_leaves": 103,
+      "branches": 5,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000031",
+      "roots": 8,
+      "certificate_sha256": "937e7efc584b1e607ddc2055c2649ccb5c1714f0c466a5d55744f11554a5f0ce",
+      "closed_leaves": 1015,
+      "branches": 53,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000032",
+      "roots": 8,
+      "certificate_sha256": "a73a3bfdb4adda4a1cb3a37ccf3fbcdce64fdc0a46384f4dab2690db8ee49698",
+      "closed_leaves": 13156,
+      "branches": 692,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000033",
+      "roots": 8,
+      "certificate_sha256": "6c71be6c607732105c620a85d091ab69eb8de07e2b4f099dc87b382163e27512",
+      "closed_leaves": 22276,
+      "branches": 1172,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000034",
+      "roots": 8,
+      "certificate_sha256": "9f3322e4dd8005c14ed5dd16f9709589d71d518bc629453a8d430114b548573f",
+      "closed_leaves": 202643,
+      "branches": 10665,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000027",
+      "roots": 8,
+      "certificate_sha256": "e84fb673b3f26e32ccb7c78e86d9d30b724da707bd475754a15304d611592f30",
+      "closed_leaves": 7195992,
+      "branches": 378736,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000035",
+      "roots": 8,
+      "certificate_sha256": "aa84b346e4a927e7898bd87cb2fc01ae4b8f349c974c0fe1e0f5a55fb9ddc6f4",
+      "closed_leaves": 12387334,
+      "branches": 651970,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000036",
+      "roots": 8,
+      "certificate_sha256": "ca833aab7801bb2096c704e96685623ea5d1df6c0a0a363571edddf1afced5f2",
+      "closed_leaves": 15062814,
+      "branches": 792818,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000038",
+      "roots": 8,
+      "certificate_sha256": "104f448bba3e293b79c74099e1d3db6eadfbcbbd51579f6435365ee0f40fe6c6",
+      "closed_leaves": 2801,
+      "branches": 147,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000039",
+      "roots": 8,
+      "certificate_sha256": "d05f46a9f1f15739e39813a23dee1cdf479b6ad18c307a8234e72e2940301c93",
+      "closed_leaves": 7931,
+      "branches": 417,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000040",
+      "roots": 8,
+      "certificate_sha256": "d876fa47916c4cfe1b964c263decbcef00aedf5f58f28bc8f4a62786fc0d151b",
+      "closed_leaves": 89707,
+      "branches": 4721,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000041",
+      "roots": 8,
+      "certificate_sha256": "7adcb8ad1277dfa273323932a96ccb7210c9bdf7a3787220788bf80600aba6eb",
+      "closed_leaves": 271803,
+      "branches": 14305,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000037",
+      "roots": 5,
+      "certificate_sha256": "499443b198813f53045f77f461cc58911dd0a6a7284d3b42c9834d07c856ce4a",
+      "closed_leaves": 12731331,
+      "branches": 670122,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000043",
+      "roots": 8,
+      "certificate_sha256": "e7b3277da6cdd427c9ce75fb88a3e33affd9640322308384a619bf2a9616b2a6",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000044",
+      "roots": 8,
+      "certificate_sha256": "7b863ec1cc220df0f10305fcdaed6ae11bc8e735b68c7c7baa9376ab672ba0e1",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000045",
+      "roots": 8,
+      "certificate_sha256": "b7c927c5eb2d699f3452e51f63d50067b83f57d33c1c0eae6f0160c0e9262d36",
+      "closed_leaves": 160,
+      "branches": 8,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000046",
+      "roots": 8,
+      "certificate_sha256": "b81dc2c5382caf5b6c4d3c7e3749a308122944069f882655fcc79ac43e0d390e",
+      "closed_leaves": 63791,
+      "branches": 3357,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000042",
+      "roots": 8,
+      "certificate_sha256": "f1a9ac750ffa408ddb695cbf3260014243643af4ce723f7f40bb696d5d8c5881",
+      "closed_leaves": 5297208,
+      "branches": 278800,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000047",
+      "roots": 8,
+      "certificate_sha256": "ced30f37221c4ce3e6d8ce72b06a4091b024751b19a12611d05962941fece06b",
+      "closed_leaves": 11104677,
+      "branches": 584461,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000049",
+      "roots": 8,
+      "certificate_sha256": "6443e4ca7b60752f3a65262cdf0c79a9b500e29642655e73d57300e1b789bf5c",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000050",
+      "roots": 8,
+      "certificate_sha256": "b28b83173ac6c1c91050ca8c5af317177d85bf77b9f1eb38939fd11ae28c6e90",
+      "closed_leaves": 787,
+      "branches": 41,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000051",
+      "roots": 8,
+      "certificate_sha256": "0af93f6567169d2cf3a31c180563cfd9fbaa883ce72e3f71c5ee7fb1a2578c33",
+      "closed_leaves": 8672,
+      "branches": 456,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000052",
+      "roots": 8,
+      "certificate_sha256": "df255a40331a21ea746e47a309579144813298e8d1313b91185cc040c49c74fe",
+      "closed_leaves": 16557,
+      "branches": 871,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000048",
+      "roots": 8,
+      "certificate_sha256": "784b8d9ca7a486e22dd1f671871bc342ff72d366b478a2b945658a25d21c63e0",
+      "closed_leaves": 13057088,
+      "branches": 687240,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000054",
+      "roots": 8,
+      "certificate_sha256": "b85f1343aacd85beeceacf4c2c0ed5147ffc596aa8f46eb7873979c3874c55e4",
+      "closed_leaves": 27,
+      "branches": 1,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000055",
+      "roots": 8,
+      "certificate_sha256": "135ff47645d7afb7342e4dd0e2526d5669da4cf6f253a13c8bcb3786bc4da909",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000056",
+      "roots": 8,
+      "certificate_sha256": "3cf9f8cfe12f18292c288b131319a494f78bdececaaa5171abefa4679187f13d",
+      "closed_leaves": 122,
+      "branches": 6,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000057",
+      "roots": 8,
+      "certificate_sha256": "90f573b495bf0baf6999174c49388fc89d85e1d66154c39e761bb09d72766e52",
+      "closed_leaves": 901,
+      "branches": 47,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000058",
+      "roots": 8,
+      "certificate_sha256": "b6b405b345f83978d2225c37220e19768bf1972f2d7e702b4607796b20fbab57",
+      "closed_leaves": 2345,
+      "branches": 123,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000059",
+      "roots": 8,
+      "certificate_sha256": "4c9ff89d2da0b33443772c08e839b9c2d85e3a78a34c3bb69eeeee5e03e16686",
+      "closed_leaves": 153433,
+      "branches": 8075,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000060",
+      "roots": 8,
+      "certificate_sha256": "023d2c6075d36ea7bb29be4f62a08f5249c4726d4ec15e8babb95249f932a632",
+      "closed_leaves": 148626,
+      "branches": 7822,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000061",
+      "roots": 8,
+      "certificate_sha256": "b638a4bac338312b60c5fa7d10ad0245b440dc0a5759981b337e90f1f7d4f52b",
+      "closed_leaves": 14795125,
+      "branches": 778731,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000062",
+      "roots": 8,
+      "certificate_sha256": "2cc256d7449df28848b9c590f72678ced5d6ab8a3518df141c8b9b15a2426b4a",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000063",
+      "roots": 8,
+      "certificate_sha256": "e73bd42000bf11cbf29550b500bc5402999af567592bfb3c785f3923a63db16f",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000064",
+      "roots": 8,
+      "certificate_sha256": "8902e64001fd79aa62b0461cc85fc9a59f2dd537ee5a7522572863e71c2fa6ce",
+      "closed_leaves": 312,
+      "branches": 16,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000065",
+      "roots": 8,
+      "certificate_sha256": "1f77b57b8ef988609d5df15c36d7178f3e650ac8dcecfcc155eed8dceef959fe",
+      "closed_leaves": 2008555,
+      "branches": 105713,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000053",
+      "roots": 8,
+      "certificate_sha256": "f5ee0dfd450a39d90748f3f96e93a31550063c726ec484aa350384e3b3962e99",
+      "closed_leaves": 10698417,
+      "branches": 563100,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000067",
+      "roots": 8,
+      "certificate_sha256": "31a813f39a2bbad32fdd324a137250cb4fdf894a449733ae5bb8472a79783e0d",
+      "closed_leaves": 160,
+      "branches": 8,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000068",
+      "roots": 8,
+      "certificate_sha256": "f05bc39b96807836a3815f78a9328469ac76f7e5681b7e16c0f7911fd974312a",
+      "closed_leaves": 103,
+      "branches": 5,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000069",
+      "roots": 8,
+      "certificate_sha256": "d754b07da9aad6cf8a9afde3660cb0ecfd5111f956ad9597395d340d15b5673d",
+      "closed_leaves": 110314,
+      "branches": 5806,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000070",
+      "roots": 8,
+      "certificate_sha256": "bb6d63b8c7aed8400228034ddca30ff6cc47e351373fb60c9ab9d980300315f0",
+      "closed_leaves": 1152383,
+      "branches": 60653,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000071",
+      "roots": 8,
+      "certificate_sha256": "c0c0496f3c8104dd96f52bfa7c70df8ea2fca36103f0b639c0c6648e2054ad0f",
+      "closed_leaves": 8733108,
+      "branches": 459648,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000066",
+      "roots": 8,
+      "certificate_sha256": "8ba5ff5669b8a2f99de303812018b2e16a49a35ac25dd77a1cc44ddc9ef9efa2",
+      "closed_leaves": 10544300,
+      "branches": 554983,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000073",
+      "roots": 8,
+      "certificate_sha256": "1517a0b6c730e6470c3182292883097a5f265d934e1c826be1dc98a764b40bb1",
+      "closed_leaves": 103,
+      "branches": 5,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000074",
+      "roots": 8,
+      "certificate_sha256": "9c74f56f5284ba4ff87f489f3199f31f2d9daffe4bfa93fb55dbc5ce6f43aada",
+      "closed_leaves": 464,
+      "branches": 24,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000075",
+      "roots": 8,
+      "certificate_sha256": "e56af97e6f3b4c74685057ba490009c96ed7696a2f6aedd4d7df1e8da314d201",
+      "closed_leaves": 2193,
+      "branches": 115,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000076",
+      "roots": 8,
+      "certificate_sha256": "73d73f3fa8ca5357741efd6f44378271487e39b520756791d41f901c41baf1a4",
+      "closed_leaves": 7570,
+      "branches": 398,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000072",
+      "roots": 8,
+      "certificate_sha256": "e3e4b9762e512f8aa400a793b0dab46efa7deeb6b39e5dcda12b540b38925496",
+      "closed_leaves": 10050027,
+      "branches": 528957,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000077",
+      "roots": 8,
+      "certificate_sha256": "8a7f6855174a14af01422557506f0c568cb7b8ce3c4ec91c4a48f359ad2ca6fd",
+      "closed_leaves": 12508900,
+      "branches": 658416,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000079",
+      "roots": 8,
+      "certificate_sha256": "979138fc585e2499463d33d00e08bf96635ab638e20c4cf31e497d5687b2b456",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000080",
+      "roots": 8,
+      "certificate_sha256": "0f271d3d4d8332fa9e19fe8bfa07f72dd4159391fe3cd382b10760cc7b1e4f84",
+      "closed_leaves": 23815,
+      "branches": 1253,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000081",
+      "roots": 8,
+      "certificate_sha256": "c54650fe9528cfce20c3ced8902b5e98ad7f9de12b1b519db0d032340b137559",
+      "closed_leaves": 4705244,
+      "branches": 247644,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000078",
+      "roots": 2,
+      "certificate_sha256": "79a160826e5e1a37d7ff602b87a9aaa24922896afb8e43f335285a701ebf44f4",
+      "closed_leaves": 12170146,
+      "branches": 640607,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000083",
+      "roots": 8,
+      "certificate_sha256": "b7560622d130fc0a2855f25b616f2dd0e11a46aaf0b9d5368874eba06f3a1507",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000084",
+      "roots": 8,
+      "certificate_sha256": "e6250cab2607277e048c53237e7bc014157df5f5fc0da585633b926f5da2bbb2",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000085",
+      "roots": 8,
+      "certificate_sha256": "ce30fa89f8dd0592b58ac810f9933a52bde56cf9d22c9376341befb3b41ec84c",
+      "closed_leaves": 6734,
+      "branches": 354,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000086",
+      "roots": 8,
+      "certificate_sha256": "5d268886ccd135b94801bffcb26e12735c824b9ea1e5e64012dc144bb7504944",
+      "closed_leaves": 5195,
+      "branches": 273,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000087",
+      "roots": 8,
+      "certificate_sha256": "566b2550cf32ac6435340ea11b774b1438f2be73e6ebf7e2100713319313a4ef",
+      "closed_leaves": 985614,
+      "branches": 51874,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000082",
+      "roots": 8,
+      "certificate_sha256": "76298c38e1ae56a1678b87c0b64cfb7b3dcbe5878e174929949e995467a6df88",
+      "closed_leaves": 16118339,
+      "branches": 848406,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000089",
+      "roots": 8,
+      "certificate_sha256": "89c4246cfe8c6f27c5dc674d1a923485aabcca9644e0f9c4292ee101cffdedd8",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000090",
+      "roots": 8,
+      "certificate_sha256": "f79f9765fa64c6183e9ad960dc05e835b1c87055b81cc796e2cffef4a1f4fc1a",
+      "closed_leaves": 977,
+      "branches": 51,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000091",
+      "roots": 8,
+      "certificate_sha256": "4b77626a264554ae43aa5f3542c0f25a634e9eec8a561462716866376a321a20",
+      "closed_leaves": 1129,
+      "branches": 59,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000092",
+      "roots": 8,
+      "certificate_sha256": "b4a0e8eb0dfd7ea965b8dc9112969569400737635f2c0865c517fba8bd4f8bbf",
+      "closed_leaves": 1056144,
+      "branches": 55588,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000093",
+      "roots": 8,
+      "certificate_sha256": "dc5d1259052ae77150ba909175fe2bfc0178d8af3417e85528559058abf0e94b",
+      "closed_leaves": 924204,
+      "branches": 48648,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000088",
+      "roots": 8,
+      "certificate_sha256": "c845767c7e3a5911972d868b4c7695c5d716f09dd9c6bed305f61d3c4f3236d3",
+      "closed_leaves": 14794242,
+      "branches": 778704,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000095",
+      "roots": 8,
+      "certificate_sha256": "dd5bd16300a3264328688bf14d4fae0e02b166e3495da387d607fecc10a5ddcc",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000096",
+      "roots": 8,
+      "certificate_sha256": "1ca990630ae907dafae8059ed02d7d06f9be3526fc3cd637beacb53492e2c3d1",
+      "closed_leaves": 749,
+      "branches": 39,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000097",
+      "roots": 8,
+      "certificate_sha256": "4e986ffb46051eccf1b902619f045b2982a5889575d290b50b5b70d216811e42",
+      "closed_leaves": 4663,
+      "branches": 245,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000098",
+      "roots": 8,
+      "certificate_sha256": "3266101b33eb41fb5df075c1b550c87f20897e0afcf63a620cc6a97ffd5753b8",
+      "closed_leaves": 11617,
+      "branches": 611,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000099",
+      "roots": 8,
+      "certificate_sha256": "a6ad1eefe7baa233b87e4a46208c2926a1cd43d4b13c5b39a05b07e328e50b58",
+      "closed_leaves": 119575,
+      "branches": 6293,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000094",
+      "roots": 8,
+      "certificate_sha256": "e92b0ff1e998b36e4b39e6c57451924a30b88beb974af33251444cf803d394bf",
+      "closed_leaves": 14196494,
+      "branches": 747209,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000101",
+      "roots": 8,
+      "certificate_sha256": "3417dda332db87a5d708e6bbfd26d441da3cba866b66cca903b51695aeba5c3f",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000102",
+      "roots": 8,
+      "certificate_sha256": "73736a8a01761937f30d5b248abf2983c8f33e7a261a65b3122421ffdaa1064c",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000103",
+      "roots": 8,
+      "certificate_sha256": "ea97e20f5766e6e7e8ed909b2354913818f89e4d80fe84fc5db5d17c3d67a0c0",
+      "closed_leaves": 6639,
+      "branches": 349,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000100",
+      "roots": 8,
+      "certificate_sha256": "dc1c5279c4c9519e76aebcd5278685cd262e4edecf6772392e8fea6b25accd73",
+      "closed_leaves": 11633381,
+      "branches": 612295,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000104",
+      "roots": 8,
+      "certificate_sha256": "dcc587221cf3c978d4e01c42af5581c4103f03fa5579551e87b91bbe7a20741b",
+      "closed_leaves": 612169,
+      "branches": 32219,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000105",
+      "roots": 8,
+      "certificate_sha256": "55b67341ec9ed6d644d31985d509027c7f86c3bde634c46ffbd4776bc152f323",
+      "closed_leaves": 2561892,
+      "branches": 134836,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000106",
+      "roots": 8,
+      "certificate_sha256": "1b1048eb5689ce9804f5a61c6105fde217a9bf1c6fd863341df653435a2035bd",
+      "closed_leaves": 4054304,
+      "branches": 213384,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000107",
+      "roots": 8,
+      "certificate_sha256": "f5c9afbc5203921ebff5acf12eadca5a632085745fd1ad5aff5b6acb279787b6",
+      "closed_leaves": 13437947,
+      "branches": 707263,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000109",
+      "roots": 8,
+      "certificate_sha256": "e96f205b9ba7678d402a7bf38d8928824584a68d3a15fa74678436b254b813ae",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000110",
+      "roots": 8,
+      "certificate_sha256": "e56cf54079348d0984503b8bbc684fec2dd5527119ef5de967e11fe0d89833c8",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000111",
+      "roots": 8,
+      "certificate_sha256": "0debc61bfc8d8ff8d62c6b772b459ff59375bd2257dde81a6b7e261733b2ec9b",
+      "closed_leaves": 7893,
+      "branches": 415,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000112",
+      "roots": 8,
+      "certificate_sha256": "894c1329f4228f855b4bd028ab39f35547dff75a48f4763e2b45d3de479c65ca",
+      "closed_leaves": 21991,
+      "branches": 1157,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000113",
+      "roots": 8,
+      "certificate_sha256": "bd533727b63597e3e623426091783cf21fbd0820a623606750037ca5211bafc0",
+      "closed_leaves": 48553,
+      "branches": 2555,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000114",
+      "roots": 8,
+      "certificate_sha256": "f84bcab5b3276ed730ba06704a512230b421675303f824f1c6a74e29d22111bf",
+      "closed_leaves": 191699,
+      "branches": 10089,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000108",
+      "roots": 8,
+      "certificate_sha256": "5edffa088b5b79f069a186ca6d1397c59ce435f902506c5baa392028cc01e6ef",
+      "closed_leaves": 8913153,
+      "branches": 469147,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000116",
+      "roots": 8,
+      "certificate_sha256": "0df34ba41656cb0bffc91753210b3695b93aab70f6a911bc72d8992fef22b84f",
+      "closed_leaves": 198,
+      "branches": 10,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000117",
+      "roots": 8,
+      "certificate_sha256": "668b2f2b60cc05287c6823d4c061d6bd6ed5c8a8757b2a2bc50fc00031148033",
+      "closed_leaves": 673,
+      "branches": 35,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000118",
+      "roots": 8,
+      "certificate_sha256": "12b4a6ad82117703febe7ae2f9fb5ce7e1aa60ac0a4b129f6cf8508fcca41f96",
+      "closed_leaves": 5252,
+      "branches": 276,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000119",
+      "roots": 8,
+      "certificate_sha256": "dcc1f572f43cc6024746eecd954619d76a835172d40cc745af15823464e8f7b2",
+      "closed_leaves": 61055,
+      "branches": 3213,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000115",
+      "roots": 8,
+      "certificate_sha256": "14a801daed3c6439dde21e35f6669bfa25371e58347d054a2ff406898975d710",
+      "closed_leaves": 3007657,
+      "branches": 158307,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000121",
+      "roots": 5,
+      "certificate_sha256": "01fb9589bd3405f5c8d19cf83ffca2208f66632b89415fdeb6079309d013e34c",
+      "closed_leaves": 11673205,
+      "branches": 614444,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000122",
+      "roots": 8,
+      "certificate_sha256": "79e3bdb70171ab11155caeb547c543ac64fa1f8b89eff62512880c3c5cc14073",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000123",
+      "roots": 8,
+      "certificate_sha256": "2c4e953b9dafbbcb5581563d5ebf19f87f0e6e13e2047023da306234bd2b53c4",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000124",
+      "roots": 8,
+      "certificate_sha256": "a83efe6126bae2819d051a30899dd1c1f045732c54221683b98c45a7abf80674",
+      "closed_leaves": 160,
+      "branches": 8,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000125",
+      "roots": 8,
+      "certificate_sha256": "002d83aa5753bbefbc01957e64a9f9311e1a4a0a31d44c366812cdfa6e8de48b",
+      "closed_leaves": 32756,
+      "branches": 1724,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000120",
+      "roots": 8,
+      "certificate_sha256": "4d794f36a2bfe8415abc3cb689952757649f466ff9b906568270090d2cfa63f2",
+      "closed_leaves": 12800095,
+      "branches": 673755,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000126",
+      "roots": 8,
+      "certificate_sha256": "be4669fdda31cdd87f55e0fef4822c839e9f694cbe0380184c75df60aaa1c301",
+      "closed_leaves": 95323,
+      "branches": 5017,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000127",
+      "roots": 8,
+      "certificate_sha256": "ddd87fe8f416cb7793b9c72f40ad4a726fde9d5fc8b4f06eee381f67e03857a6",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000128",
+      "roots": 8,
+      "certificate_sha256": "11b93f62101ed06af8b780410e14260a8d3793e23b3c43d62e86250b2c04b182",
+      "closed_leaves": 29819,
+      "branches": 1569,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000129",
+      "roots": 8,
+      "certificate_sha256": "cb4447f5fb61dfb3984150ed5bffed49a378bfea5de0282dc8f77da20c9a0a6b",
+      "closed_leaves": 136618,
+      "branches": 7190,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000130",
+      "roots": 8,
+      "certificate_sha256": "7e4c75973f8e1f5e294008e7b2649195301e093110c8f41a48b280d4f1eee857",
+      "closed_leaves": 83038,
+      "branches": 4370,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000131",
+      "roots": 8,
+      "certificate_sha256": "4d440460b88363eed32f2df020e94aa38a847790f53f7a5a40d135e2ac6ff29a",
+      "closed_leaves": 1221134,
+      "branches": 64270,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000132",
+      "roots": 8,
+      "certificate_sha256": "26f3d3157cf96bdf9c7d0db67cd1c5efe165ea4bd3a0273de5a35e4ffac1ff4c",
+      "closed_leaves": 11244325,
+      "branches": 591821,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000134",
+      "roots": 8,
+      "certificate_sha256": "c11408d68e06bcaf9fb93c2266d8e670547facb054f285625781640758b6fae1",
+      "closed_leaves": 122,
+      "branches": 6,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000135",
+      "roots": 8,
+      "certificate_sha256": "77b3d1ec8ac3ab1850f386727a5cb0bd36f5f7584409dc6b7f778df2da8441eb",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000136",
+      "roots": 8,
+      "certificate_sha256": "1ef32b8c120827e5bec434c560f8d2415a7a2c458152737f71080ae287600f9a",
+      "closed_leaves": 71600,
+      "branches": 3768,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000137",
+      "roots": 8,
+      "certificate_sha256": "a6b31358761838ea99849f7a40652360b019ea9f83144545a3caf1ac2b1f565b",
+      "closed_leaves": 159912,
+      "branches": 8416,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000138",
+      "roots": 8,
+      "certificate_sha256": "96843395de2e98a6208a8a8275cba34e153f8806b8c9c15845e8418dcdd6174a",
+      "closed_leaves": 1233317,
+      "branches": 64911,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000133",
+      "roots": 8,
+      "certificate_sha256": "f9972e7a296fb642c8d44c70ab89e2bf6ffb5846b492e2ceb0e51b5988d3911c",
+      "closed_leaves": 10873575,
+      "branches": 572337,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000139",
+      "roots": 8,
+      "certificate_sha256": "8201458b3be898c214f0e38a2c772b49f9f0ffa03dee82f007e7a0bc27f6d123",
+      "closed_leaves": 11075860,
+      "branches": 582942,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000141",
+      "roots": 8,
+      "certificate_sha256": "3acfeb789bfd1a89b7de6e00bcd4d4363d5553ae03fa20a69caecb8d930890f0",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000142",
+      "roots": 8,
+      "certificate_sha256": "02822360ab2ab4f63c6aa891b3cfe375a919722794e123a4e7d9edb8a038efda",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000143",
+      "roots": 8,
+      "certificate_sha256": "2a7eacca7a3278be34fa510f42f555c60e8b45072726af4e16c57de48e967877",
+      "closed_leaves": 692,
+      "branches": 36,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000144",
+      "roots": 8,
+      "certificate_sha256": "0a14400cb471e2de7977de1d79071ae52b9f0fb2bd274b6177d9587a2f4ec86d",
+      "closed_leaves": 10002,
+      "branches": 526,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000145",
+      "roots": 8,
+      "certificate_sha256": "a77865c3c1305d03472dff31adf9626e37739630b5582387f87d86a026760029",
+      "closed_leaves": 146954,
+      "branches": 7734,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000140",
+      "roots": 8,
+      "certificate_sha256": "c6699095be5ef44ba47d463e7d857aa2c30c7404e9c7358b552d8671455ff9ec",
+      "closed_leaves": 10308557,
+      "branches": 542558,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000147",
+      "roots": 8,
+      "certificate_sha256": "56d805b8fa2d4129ff5d975395873f862ee56d04c3e49e3ac53e3da3aa60ce27",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000148",
+      "roots": 8,
+      "certificate_sha256": "3d67f7675d3e3b62741cd1071a2b251f70e6a1efab064f39e14eb042ffa3c8f6",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000149",
+      "roots": 8,
+      "certificate_sha256": "799dfd55dcc9d8666805f04ac93d5da1d6e0894a29c2731bc24e6b087e81e6e7",
+      "closed_leaves": 882,
+      "branches": 46,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000150",
+      "roots": 8,
+      "certificate_sha256": "0b58ec607e8580bc4323a390dee025fdd690b6a7c9421430f0444f79906d3f9a",
+      "closed_leaves": 2725,
+      "branches": 143,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000151",
+      "roots": 8,
+      "certificate_sha256": "3d5d033245fc9936944cfaf96dcdbde384a5f755cce5ffcdf0bae71f3e48fe43",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000152",
+      "roots": 8,
+      "certificate_sha256": "406aab5c5c773a2eb5b9fb4ee1c7033cf9505ce7d0d6bfc28ce5a98eeabf067d",
+      "closed_leaves": 1821235,
+      "branches": 95861,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000146",
+      "roots": 8,
+      "certificate_sha256": "5bc9164167894f80cfa8b0208ccce40d4db379a46a66c2d95997e957f184f47c",
+      "closed_leaves": 8183327,
+      "branches": 430701,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000153",
+      "roots": 8,
+      "certificate_sha256": "a32a8de8e591e32c08b8f49d02aeae5a5ee2d667edd3f13c8be579e7217b74c3",
+      "closed_leaves": 9405472,
+      "branches": 495092,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000155",
+      "roots": 8,
+      "certificate_sha256": "5bfec9631b0d045db3980f153a75765bff52600d4771ffc7a68fe52be31abe16",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000156",
+      "roots": 8,
+      "certificate_sha256": "d06b22ade1de8d5d3ea35e2853d04a66d778a181780a72490027c0ca8f40f0be",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000157",
+      "roots": 8,
+      "certificate_sha256": "d66b20abc81454cd258753de63595ec6189b9538ea0a918a7d41f45302109173",
+      "closed_leaves": 996,
+      "branches": 52,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000158",
+      "roots": 8,
+      "certificate_sha256": "03e8a507754cd31b57a6e862075347fd460cd8747c8c09334b46b6a807e465e9",
+      "closed_leaves": 11997,
+      "branches": 631,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000154",
+      "roots": 3,
+      "certificate_sha256": "7ab43842a6d7567f98250640722cdc51d1a5e87d05774d08b15f9758bf5ff0bb",
+      "closed_leaves": 5539436,
+      "branches": 291583,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000160",
+      "roots": 8,
+      "certificate_sha256": "ff70a893a6c0d0a7be45409bf97a879f7d6670dd2c4dbebf1ac4a63fcada9d8f",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000161",
+      "roots": 8,
+      "certificate_sha256": "a02d52f778371949d9a72a566d715677d6792f70ad0e8abe87f86369e1230c0e",
+      "closed_leaves": 236,
+      "branches": 12,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000162",
+      "roots": 8,
+      "certificate_sha256": "717318c5bc9655b26e0f0855f0bbcf37f1eac6ae8f3f079707da4e1b0a0b30a9",
+      "closed_leaves": 76103,
+      "branches": 4005,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000163",
+      "roots": 8,
+      "certificate_sha256": "1d851ba05709d07f7e0acaec084443aecd3ba5cad11d1254e333fe4c333fe33b",
+      "closed_leaves": 171692,
+      "branches": 9036,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000159",
+      "roots": 8,
+      "certificate_sha256": "2e31947a90d5ddef5935633a00daada0b368f57341e5173a847baa4f779689d1",
+      "closed_leaves": 11040614,
+      "branches": 581159,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000165",
+      "roots": 8,
+      "certificate_sha256": "471c5e4df924c96dd9f57f2bd9bffeafa8041eb796bc99e673d5ab6ddc2610be",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000164",
+      "roots": 8,
+      "certificate_sha256": "2f43bfd8869e277b58870bb52c2e7d561bffad21f7fa12b14741b059d2ef4d18",
+      "closed_leaves": 10020794,
+      "branches": 527451,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000166",
+      "roots": 8,
+      "certificate_sha256": "b96a2dab4b6ccdb092161a2f2356702aa68ba9f961f947503973949c848dfbfe",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000167",
+      "roots": 8,
+      "certificate_sha256": "7fe67ed10a50c409d3edcd8b3a6a6331fbf9e72ed17cfe5bdca716db3f25b800",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000168",
+      "roots": 8,
+      "certificate_sha256": "b385070320001905994a87181cc05f39c066a365b7f56d911df1f55abc3d9c98",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000169",
+      "roots": 8,
+      "certificate_sha256": "ab25e1f59f490ea3101dc60ff4f11fd10e0e99128695009d4666f6d1cee0c8cd",
+      "closed_leaves": 882,
+      "branches": 46,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000171",
+      "roots": 8,
+      "certificate_sha256": "4a98129cdbe5e4e52568916fee2111064c0183606dcc1167ed4461171227e585",
+      "closed_leaves": 4530,
+      "branches": 238,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000170",
+      "roots": 8,
+      "certificate_sha256": "7ec6aecaa503dcc4eaffb01813e88ac4061c0559cee08794cad950b778172860",
+      "closed_leaves": 3713,
+      "branches": 195,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000172",
+      "roots": 8,
+      "certificate_sha256": "aaf02ca428b4403192fbaeb38eec0dc84c925520532164d0d88395700fb5f1f3",
+      "closed_leaves": 7627,
+      "branches": 401,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000173",
+      "roots": 8,
+      "certificate_sha256": "05382f93d55bfe6414d700887c4fd382c9f143c00514a0c33fb2306787eecb98",
+      "closed_leaves": 1102122,
+      "branches": 58006,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000174",
+      "roots": 8,
+      "certificate_sha256": "298149b8adca1d51e0f05a6bbc99b0484b6f270baf5cf33b8754d94ef894cdfb",
+      "closed_leaves": 1465457,
+      "branches": 77135,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000176",
+      "roots": 6,
+      "certificate_sha256": "623ce8eaebaec050826d1e3ef17e07a8ee2a6ae89facad37a8b5f4586914fa7f",
+      "closed_leaves": 11040474,
+      "branches": 581129,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000177",
+      "roots": 8,
+      "certificate_sha256": "4add060aabede018eb8a00037973d1527dda1d05aac25ff8fb2a6597649dfc12",
+      "closed_leaves": 27,
+      "branches": 1,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000178",
+      "roots": 8,
+      "certificate_sha256": "05b3942930d8f93569c2f54e2eb5aa471ae66d22c716dfdfde8c4e4f91cc9835",
+      "closed_leaves": 141,
+      "branches": 7,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000179",
+      "roots": 8,
+      "certificate_sha256": "ccc1c0e8795278b3b47299870e1893e0291061dd2eba6a8cad82297087081f4b",
+      "closed_leaves": 426,
+      "branches": 22,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000175",
+      "roots": 8,
+      "certificate_sha256": "2d64d42bf023dc15836672e097073ce692e1f7dc7123cb19157cc6c2b04eff08",
+      "closed_leaves": 11929567,
+      "branches": 627888,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000181",
+      "roots": 8,
+      "certificate_sha256": "6ccb2b5c8dac9d3e569636aaf528a7a9f4b21b239e804638857e7cf787e0c6dd",
+      "closed_leaves": 27,
+      "branches": 1,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000182",
+      "roots": 8,
+      "certificate_sha256": "48ac3ddceab1c21968ed30b5741766043b75a0eb3bd0e7f98f037d77e9b2affa",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000183",
+      "roots": 8,
+      "certificate_sha256": "04c3b6d7e6d2a607739add811a685e97c88b813d86dc457e2f61fa38b0c6a472",
+      "closed_leaves": 4264,
+      "branches": 224,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000184",
+      "roots": 8,
+      "certificate_sha256": "0ba701a41819a0eea73babf963eafe57c267baf4a8cc08941c3d1a7509de5a40",
+      "closed_leaves": 116782,
+      "branches": 6146,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000185",
+      "roots": 8,
+      "certificate_sha256": "3633f376421b4b05cd773e24bf7e809f58e5f3c7cf689b26be6d2160e1e1f028",
+      "closed_leaves": 1397610,
+      "branches": 73558,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000186",
+      "roots": 8,
+      "certificate_sha256": "2ca5cb356beac623ceb77f502b2d8b2576a0ced0525de9c3b02aec95a8eb7205",
+      "closed_leaves": 2888521,
+      "branches": 152027,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000180",
+      "roots": 8,
+      "certificate_sha256": "e168e282e9b7c5849a95da605f52c83aad0e4821dbf6da8035714aadbcb6a71a",
+      "closed_leaves": 5401367,
+      "branches": 284309,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000187",
+      "roots": 8,
+      "certificate_sha256": "3f5d66fb9eccf89824bcc5c4777a6a55e25403f817350b1199acde1a5269353d",
+      "closed_leaves": 10164304,
+      "branches": 534968,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000188",
+      "roots": 8,
+      "certificate_sha256": "b69417b3ff49955c43216f3b7c36a9792c13f825f043022201b6f1177ad332a5",
+      "closed_leaves": 8761368,
+      "branches": 461148,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000190",
+      "roots": 8,
+      "certificate_sha256": "c404e6359ffd704d99b0ca830636250fbdefa8e33cc654300b50982d275b60ec",
+      "closed_leaves": 217,
+      "branches": 11,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000191",
+      "roots": 8,
+      "certificate_sha256": "e56303ed391afc87f661518bdfe999ecd39ede462e55451cd81ba5c6c799fb18",
+      "closed_leaves": 8634,
+      "branches": 454,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000192",
+      "roots": 8,
+      "certificate_sha256": "f91e5303f273251d71ff8c9c42ba28d6eb0f9e1078479998e2d70f764074d028",
+      "closed_leaves": 155086,
+      "branches": 8162,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000193",
+      "roots": 8,
+      "certificate_sha256": "0400a169e865fe4d161d1ede2cfe70be50b7a1454a01225d0fb464c7ce870a06",
+      "closed_leaves": 831562,
+      "branches": 43766,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000194",
+      "roots": 8,
+      "certificate_sha256": "a695af04477cba33838602c9279c586270738e4e7ed9fda8432addffb422371b",
+      "closed_leaves": 2137603,
+      "branches": 112505,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000189",
+      "roots": 4,
+      "certificate_sha256": "7fa91e7b90f41dbab775b7c6b0d051fb5861e27ee75bc450d0c4440d2c8474aa",
+      "closed_leaves": 9412910,
+      "branches": 495443,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000196",
+      "roots": 8,
+      "certificate_sha256": "a129f975dc9b70a870cbdce7078b385d86bf119eab7fa6602da3686b7525809d",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000197",
+      "roots": 8,
+      "certificate_sha256": "e99ae0b4768562edfd7bd9de51a3b8e5bc81778cd55ebaa0631700c668843c10",
+      "closed_leaves": 103,
+      "branches": 5,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000198",
+      "roots": 8,
+      "certificate_sha256": "4cd4499358d37eebca58b085b54609812ee6e7914fcd79bef8e74c1f0dfa6a3b",
+      "closed_leaves": 369,
+      "branches": 19,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000199",
+      "roots": 8,
+      "certificate_sha256": "9fbef057ab9540f58a6c36054188f01111bfb15a50c3a682ebc5908d86ad75e0",
+      "closed_leaves": 11161,
+      "branches": 587,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000200",
+      "roots": 8,
+      "certificate_sha256": "a7b33e50d294f24ab342fe0be74b5c9f327e2084732c9adbfeb40ab0223ddd32",
+      "closed_leaves": 715738,
+      "branches": 37670,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000201",
+      "roots": 8,
+      "certificate_sha256": "44d0fa9a7ce7d646eda55f7b502bc84a2c3360e9b797b483e5a06038f682f0e5",
+      "closed_leaves": 2211152,
+      "branches": 116376,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000195",
+      "roots": 8,
+      "certificate_sha256": "22d4d799acd8cd1ad3422680e5f2eb18736fc4a17eb9bed343f5c2da4964a8ce",
+      "closed_leaves": 10131548,
+      "branches": 533267,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000203",
+      "roots": 8,
+      "certificate_sha256": "79cf76e0d86639c27b0f73caa785a19e2efcf4f7f99c985fcd144f9f89b50433",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000204",
+      "roots": 8,
+      "certificate_sha256": "382b4d4b17925c1856cf38a978736fe5980773089ba7da67e9f702d0f66bb859",
+      "closed_leaves": 84,
+      "branches": 4,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000205",
+      "roots": 8,
+      "certificate_sha256": "9edfbbeb40b108e49a6472c9142f0a04666c24a8fec8d48ff8925922883eaec4",
+      "closed_leaves": 1129,
+      "branches": 59,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000206",
+      "roots": 8,
+      "certificate_sha256": "07b0a33a54ae19bc49d66933f4aacfe2713549068a6f12ac53cf474bba0cc8ed",
+      "closed_leaves": 1300,
+      "branches": 68,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000207",
+      "roots": 8,
+      "certificate_sha256": "1cdf0109308eea0cae7e2a15e7d488ec3e66177052ca3726ca63040811162360",
+      "closed_leaves": 51365,
+      "branches": 2703,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000208",
+      "roots": 8,
+      "certificate_sha256": "151dc9768d43510fe03a1acd8ece97bd9b13f866740b2bef9543d296dec6f477",
+      "closed_leaves": 225614,
+      "branches": 11874,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000202",
+      "roots": 3,
+      "certificate_sha256": "865ae1598dce94dfd8cf5e57e17d17a2b660caa65fb9971e36314d3a88200038",
+      "closed_leaves": 12101369,
+      "branches": 636947,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000210",
+      "roots": 8,
+      "certificate_sha256": "af3318821cb3c226cf3cc7bec7765142ac2f21eadc601ce86415a8ba0d69a5eb",
+      "closed_leaves": 65,
+      "branches": 3,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000211",
+      "roots": 8,
+      "certificate_sha256": "9aebe8418e7f619801e05eebe6a1f72622aca492d0d1b75e30c0901ab29586c1",
+      "closed_leaves": 692,
+      "branches": 36,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000212",
+      "roots": 8,
+      "certificate_sha256": "08000638a6a1d5d8c3c279058f3afcf290ea52720ee2298d9726fe2a764d5bef",
+      "closed_leaves": 863,
+      "branches": 45,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000213",
+      "roots": 8,
+      "certificate_sha256": "a76b5ae5ab9ffc29d0a22456d92533a74998befbf4612f0ea7a8ed44ca9df587",
+      "closed_leaves": 466306,
+      "branches": 24542,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000209",
+      "roots": 8,
+      "certificate_sha256": "9ab3df464b9c056e261fa1997c6d80818216703149850e12e01d55e1695225ac",
+      "closed_leaves": 8098287,
+      "branches": 426228,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000215",
+      "roots": 8,
+      "certificate_sha256": "b65972a7ae66f41a13c71e5910b7886c301926d901516fd730181b647b670bce",
+      "closed_leaves": 8,
+      "branches": 0,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000216",
+      "roots": 8,
+      "certificate_sha256": "26eda2b6897509cf0bea8426a5c070598e6626791d6294a51779b5e0a35e8b83",
+      "closed_leaves": 217,
+      "branches": 11,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000217",
+      "roots": 8,
+      "certificate_sha256": "ef1ccc3e804ed316176c8c120b1e897c7ad3d789c2bbf4bbc82ca2c847295efa",
+      "closed_leaves": 882,
+      "branches": 46,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000218",
+      "roots": 8,
+      "certificate_sha256": "f88209b7ec08132a8fbfb3c34a90bff46cdf9924321d8ff2bc3babe15e259a67",
+      "closed_leaves": 6810,
+      "branches": 358,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000219",
+      "roots": 8,
+      "certificate_sha256": "d3d0944bbb7f817597031e5e069aec9ddccfabddf37df44e7a469ece03b9895e",
+      "closed_leaves": 14201,
+      "branches": 747,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000220",
+      "roots": 8,
+      "certificate_sha256": "f071eef1b12158494d955aced09a85abb11eb9376836508cc41ce6e1d7f3a3a9",
+      "closed_leaves": 818110,
+      "branches": 43058,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000214",
+      "roots": 8,
+      "certificate_sha256": "a01d2a4b76dca7e5ec880ea95fc8c56bcdf42c30b920cd149fc4441861f78f4c",
+      "closed_leaves": 9930863,
+      "branches": 522695,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000222",
+      "roots": 8,
+      "certificate_sha256": "b69d79daf52bf193771a6541b4cef983c173ffce3d7bda27a711f1bc9cf085af",
+      "closed_leaves": 122,
+      "branches": 6,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000223",
+      "roots": 8,
+      "certificate_sha256": "bc013a89770104b6aab77da6e88c9640a947496a0e4f3facbda6a795bc411965",
+      "closed_leaves": 673,
+      "branches": 35,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000224",
+      "roots": 8,
+      "certificate_sha256": "cae97e3a927264ab9218b670534a3314e4bc75b5c382a16d5e99c417edf7d469",
+      "closed_leaves": 559,
+      "branches": 29,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000225",
+      "roots": 8,
+      "certificate_sha256": "c948252e91e8bd888a5b81e092148770be88b99e98f8aea298fd6609e5ef07bf",
+      "closed_leaves": 5328,
+      "branches": 280,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000226",
+      "roots": 8,
+      "certificate_sha256": "87ebbb5f700377d164c37cfe161fb2bca039baa3478539cf516a3391cefa9857",
+      "closed_leaves": 6563,
+      "branches": 345,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000227",
+      "roots": 8,
+      "certificate_sha256": "f87670a47e4227f113523f493e540572df6f97d21f9bb63ad34c0998322c1c01",
+      "closed_leaves": 85622,
+      "branches": 4506,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000228",
+      "roots": 8,
+      "certificate_sha256": "5ee858656f94026265536cffa8401837e11815b7a41785390d67d3eb6ea951b0",
+      "closed_leaves": 1100051,
+      "branches": 57897,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000221",
+      "roots": 8,
+      "certificate_sha256": "19da5b8f2d0d97055f098d13172ce450ae0eb0bad75ddc1e31d8294bea0d95ee",
+      "closed_leaves": 4270670,
+      "branches": 224775,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000230",
+      "roots": 8,
+      "certificate_sha256": "d4a383304aa41d8567ab6794b2a1a0d8d960aa1bf23891aa3440508e1d4d7a60",
+      "closed_leaves": 27,
+      "branches": 1,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000231",
+      "roots": 8,
+      "certificate_sha256": "c9526c83b05261bfbf18fa940202c15e33244ba9fe0374c73f6ddd918549192e",
+      "closed_leaves": 122,
+      "branches": 6,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000232",
+      "roots": 8,
+      "certificate_sha256": "81450869981bc0336a31cad409efd988709c5376207605d6b11a22c17d3b3dbe",
+      "closed_leaves": 863,
+      "branches": 45,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000233",
+      "roots": 8,
+      "certificate_sha256": "af9ea2063e6c29a1f7d73b0ed55dd4bbc783f7909cea4ab9dc51884d230d953a",
+      "closed_leaves": 9774,
+      "branches": 514,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000234",
+      "roots": 8,
+      "certificate_sha256": "26d8bbed90beb3c8bbaae2708b7e8152ea6f0155194b7e1c56573474f940c26c",
+      "closed_leaves": 18153,
+      "branches": 955,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000229",
+      "roots": 8,
+      "certificate_sha256": "81e82f62311015797fd6f214792e99f80fbf9f16d9400736df46251c2f08075f",
+      "closed_leaves": 3857875,
+      "branches": 203053,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000235",
+      "roots": 8,
+      "certificate_sha256": "eb743d9a76f77c7fb97255cd1d0b61ac58b6ff2ea8def9a6f14bcd64ff97d32d",
+      "closed_leaves": 1809511,
+      "branches": 95237,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000236",
+      "roots": 8,
+      "certificate_sha256": "e01304407bd4c7f164ca85265458145db0d81eb3279cd77eae8e4b8db732c174",
+      "closed_leaves": 3802535,
+      "branches": 200133,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000237",
+      "roots": 8,
+      "certificate_sha256": "0269fdc34c7a3193a139da907642bc77ca34ca20a6696d7d7a006abf4d2814cc",
+      "closed_leaves": 6205914,
+      "branches": 326629,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000239",
+      "roots": 8,
+      "certificate_sha256": "3092923eb5ed744298f3a51c9599bd1b257100a72ddbe8caca0a2a0cc9c335a5",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000240",
+      "roots": 8,
+      "certificate_sha256": "1b34c534c5e4b5d5625312edbab0a5c59c255b52692cfc9441aab736f5db5f3c",
+      "closed_leaves": 46,
+      "branches": 2,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000241",
+      "roots": 8,
+      "certificate_sha256": "cdc0ff8847cdc61b00eff63819c51f980032431a2d405c9f1630c48c6887b718",
+      "closed_leaves": 45475,
+      "branches": 2393,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000242",
+      "roots": 8,
+      "certificate_sha256": "6d04811c1749a3ede27e27dd0f0620debbe77ba5f543f8931d04a77fc60264de",
+      "closed_leaves": 194606,
+      "branches": 10242,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000243",
+      "roots": 8,
+      "certificate_sha256": "e8f8bec2ce10288bd3687f8ee568acf0827083ae10514d0931b4c8487ff722b8",
+      "closed_leaves": 1978174,
+      "branches": 104114,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000238",
+      "roots": 6,
+      "certificate_sha256": "ed713811167bccc2fe3a42c0577612b667bcc17e907b08cf48755a67090e9125",
+      "closed_leaves": 5351314,
+      "branches": 281680,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000245",
+      "roots": 8,
+      "certificate_sha256": "8f1fd55a966e543ac06aecff4dff64ddaa9d20cdd6d7cfafc9f6464fb1792d8a",
+      "closed_leaves": 27,
+      "branches": 1,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000246",
+      "roots": 8,
+      "certificate_sha256": "bafcae54c5f6421c4628a8d944aa0e39b0af6d1b5c656eff4fa781faeeba55e2",
+      "closed_leaves": 312,
+      "branches": 16,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000247",
+      "roots": 8,
+      "certificate_sha256": "a9926c2ce8393084018c82557b9c36e5bc48ab3a0d69d4a2187d3e104318dcb7",
+      "closed_leaves": 1357,
+      "branches": 71,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000248",
+      "roots": 8,
+      "certificate_sha256": "6f17c5c8e8c4301dff885c71d049a6bc536d8db639a202e217b5fb0585d8bf5b",
+      "closed_leaves": 204144,
+      "branches": 10744,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000244",
+      "roots": 5,
+      "certificate_sha256": "20954a45718b5cc0f42e0dd3c1e06339942e468c9a1a6809c4060b2187c4a236",
+      "closed_leaves": 3336026,
+      "branches": 175587,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    },
+    {
+      "prefix": "terminal-five-spectrum-part-000249",
+      "roots": 4,
+      "certificate_sha256": "a174ee53ebca85eca054c640c692d9a69f691c211366d94375b6b74a47c6137d",
+      "closed_leaves": 5101823,
+      "branches": 268537,
+      "actual_ready_checker_completed": true,
+      "fresh_actual_checker_replay": true
+    }
+  ],
+  "global_six_state_maximality_proved": false
+}

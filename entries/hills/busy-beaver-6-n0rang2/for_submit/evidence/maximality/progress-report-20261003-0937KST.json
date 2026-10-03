@@ -1,0 +1,113 @@
+{
+  "recorded_utc": "2026-10-03T00:37:45.217395+00:00",
+  "recorded_kst": "2026-10-03T09:37:45.217395+09:00",
+  "comparison_path": "C:\\Users\\user\\Documents\\ChatGPT\\Openmath\\H06. Busy Beaver 6 Certificates\\global-maximality\\scheduled-progress-last-report.json",
+  "forests": {
+    "root-one-spectrum": {
+      "execution_status": "running",
+      "scheduler": "checked_forest_replacements",
+      "pid": 27536,
+      "updated_utc": "2026-10-03T00:37:40.783594+00:00",
+      "elapsed_seconds": 6594.874999999996,
+      "wall_limit_seconds": 0,
+      "workers": 16,
+      "gpu_workers": 1,
+      "in_flight_parts": 11,
+      "in_flight_gpu_parts": 0,
+      "leased_open_subtrees": 1473,
+      "order": "deep",
+      "reserved_external_subtrees": 0,
+      "remaining_open_subtrees": 1473,
+      "verified_closed_terminal_subtrees": 30493751344,
+      "verified_replacement_parts": 6733,
+      "global_exclusion_proved": false
+    },
+    "upper-extension-250257": {
+      "execution_status": "running",
+      "scheduler": "checked_forest_replacements",
+      "pid": 31788,
+      "updated_utc": "2026-10-03T00:37:35.258945+00:00",
+      "elapsed_seconds": 6821.922000000002,
+      "wall_limit_seconds": 0,
+      "workers": 1,
+      "gpu_workers": 1,
+      "in_flight_parts": 1,
+      "in_flight_gpu_parts": 0,
+      "leased_open_subtrees": 121,
+      "order": "deep",
+      "reserved_external_subtrees": 0,
+      "remaining_open_subtrees": 121,
+      "verified_closed_terminal_subtrees": 914539407,
+      "verified_replacement_parts": 49,
+      "global_exclusion_proved": false
+    }
+  },
+  "certificate_counts": {
+    "root-one-spectrum": {
+      "epoch_certificates": 453,
+      "replacement_certificates": 6733,
+      "gpu_replacement_certificates": 188
+    },
+    "upper-extension-250257": {
+      "epoch_certificates": 1,
+      "replacement_certificates": 49,
+      "gpu_replacement_certificates": 12
+    }
+  },
+  "calculations": [
+    {
+      "name": "root-one-spectrum",
+      "remaining_open": 1473,
+      "recent": {
+        "elapsed_minutes": 15.09825425,
+        "new_certificates": 44,
+        "certificates_per_hour": 174.85465248407775,
+        "net_scope_decrease": 417,
+        "net_scope_decrease_per_hour": 1657.1452292241006,
+        "conditional_remaining_hours": 0.8888780379796163
+      },
+      "long": {
+        "elapsed_minutes": 336.6020207166667,
+        "new_certificates": 691,
+        "certificates_per_hour": 123.17216608422792,
+        "net_scope_decrease": 18593,
+        "net_scope_decrease_per_hour": 3314.2403531172936,
+        "conditional_remaining_hours": 0.44444573810542504
+      },
+      "new_gpu_certificates": 21,
+      "new_cpu_certificates": 23,
+      "new_part_target_hits": 0,
+      "new_parts_hash_source_and_actual_ready_checked": true
+    },
+    {
+      "name": "upper-extension-250257",
+      "remaining_open": 121,
+      "recent": {
+        "elapsed_minutes": 14.966941116666668,
+        "new_certificates": 2,
+        "certificates_per_hour": 8.01767034857725,
+        "net_scope_decrease": -16,
+        "net_scope_decrease_per_hour": -64.141362788618,
+        "conditional_remaining_hours": null
+      },
+      "long": {
+        "elapsed_minutes": 336.51967673333337,
+        "new_certificates": 49,
+        "certificates_per_hour": 8.736487650704984,
+        "net_scope_decrease": 16,
+        "net_scope_decrease_per_hour": 2.8527306614546886,
+        "conditional_remaining_hours": 42.41550092159722
+      },
+      "new_gpu_certificates": 1,
+      "new_cpu_certificates": 1,
+      "new_part_target_hits": 0,
+      "new_parts_hash_source_and_actual_ready_checked": true
+    }
+  ],
+  "global_maximality_proved": false,
+  "live_proof_sources_or_jobs_modified": false,
+  "total_remaining_open": 1594,
+  "recent_combined_conditional_remaining_hours": null,
+  "long_combined_conditional_remaining_hours": 42.41550092159722,
+  "estimate_limitations": "Conditional net-decrease projection only; branching and unequal scope costs can invalidate it. Short observation windows may not represent future throughput. Final whole-chain audits are additional."
+}

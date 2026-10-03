@@ -1,0 +1,33 @@
+{
+  "chain_links_valid": true,
+  "bounds": {
+    "states": 6,
+    "budget": 249999,
+    "minimum": 249882
+  },
+  "starts_from_canonical_one_write_core_root": true,
+  "zero_prefix_reduction": true,
+  "core_interval_minimum": 249877,
+  "verified_closed_terminal_subtrees": 20146346602,
+  "verified_branching_nodes": 875952185,
+  "independent_literal_transitions": 4694495195761,
+  "interval_halt_leaves": 0,
+  "remaining_open_subtrees": 20322,
+  "verified_replacement_parts": 6027,
+  "global_exclusion_proved": false,
+  "status": "incomplete",
+  "trust_boundary": "The C# kernel must actually accept every listed certificate; JSON reports alone are not proof inputs.",
+  "audited_utc": "2026-10-02T18:38:26.655978+00:00",
+  "chain_sha256": "16fe00f534a5bef90b997b429064a58be178f17e1a2d1c491e645fe772357611",
+  "fresh_entire_committed_chain_source_hash_scope_audit": true,
+  "execution_status": "stopped_by_human",
+  "active_workers": 0,
+  "structural_classes_excluded": 31,
+  "structural_classes_remaining": [
+    "(6)"
+  ],
+  "uncommitted_ready_parts_not_counted": [],
+  "unfinished_files_preserved": true,
+  "global_maximality_proved": false,
+  "automation_paused": true
+}

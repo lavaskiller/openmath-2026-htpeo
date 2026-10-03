@@ -1,0 +1,1620 @@
+{
+  "audited_utc": "2026-10-02T16:02:43.749891+00:00",
+  "last_three_state_component_target_gap_excluded": true,
+  "ordered_component_size_classes_newly_excluded": 4,
+  "exact_prefix_inputs": 205,
+  "shorter_prefix_excluded_inputs": 22,
+  "certified_reflection_input_classes": 95,
+  "fresh_actual_checker_replay": true,
+  "independent_three_state_product_controls": 4,
+  "independent_raw_three_state_tables_checked": 67108864,
+  "complete_all_seeded_tables_for_every_required_input": true,
+  "target_gap": [
+    249882,
+    249999
+  ],
+  "remaining_open_subtrees": 0,
+  "actual_kernel_interval_halt_leaves": 0,
+  "closed_terminal_subtrees": 3806899,
+  "branching_nodes": 346224,
+  "generator_sha256": "6c1d512c0997d64c8459f72fc6762ce4038be726397dadc46743777193f05783",
+  "checker_sha256": "17c138c638f00de5a0217958d59077cc2a2d2a2bfbccea216e33540a87b9a7cd",
+  "plan_sha256": "ac702fef35ab6a084671745148f0c16ad955814570f53468533ed437a25b41dc",
+  "parts": [
+    {
+      "prefix": "terminal-three-spectrum-000",
+      "seed": [
+        -3,
+        -2
+      ],
+      "interval": [
+        249994,
+        249996
+      ],
+      "certificate_sha256": "2d2c18817bd513d968678866137ad68237b1f0f8e4f83594614de104876763a5",
+      "closed_leaves": 29436,
+      "branches": 2677,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-001",
+      "seed": [
+        -2,
+        0
+      ],
+      "interval": [
+        249995,
+        249995
+      ],
+      "certificate_sha256": "c7026abaa5c80358162faf83eea59c9f12c991d2296f29e19f0b83eb77f24fb9",
+      "closed_leaves": 35753,
+      "branches": 3252,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-002",
+      "seed": [
+        -3,
+        -2,
+        -1
+      ],
+      "interval": [
+        249994,
+        249996
+      ],
+      "certificate_sha256": "720aa865155820f63f9140c4b6350b0a1d01459766a2e4f072d43b5fe5d9cb14",
+      "closed_leaves": 32263,
+      "branches": 2934,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-003",
+      "seed": [
+        -2,
+        -1,
+        0
+      ],
+      "interval": [
+        249995,
+        249995
+      ],
+      "certificate_sha256": "f65352791b912179f8d6b06dd7d97fbfc2f1658dd6f08e3de6a912c599d620da",
+      "closed_leaves": 37744,
+      "branches": 3433,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-004",
+      "seed": [
+        -2,
+        0,
+        1
+      ],
+      "interval": [
+        249994,
+        249994
+      ],
+      "certificate_sha256": "b1233d2dd663797b4ff28b74efbccdcdb55d13ba754c57af44ef92f57a48cf20",
+      "closed_leaves": 45015,
+      "branches": 4094,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-005",
+      "seed": [
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249994,
+        249996
+      ],
+      "certificate_sha256": "cd8765b76b8db38dfca0e2de6da70c0192809c4cdc12d04e0c19655992e6d7ad",
+      "closed_leaves": 42364,
+      "branches": 3853,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-006",
+      "seed": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249994,
+        249994
+      ],
+      "certificate_sha256": "7f386a170c33960c47ac32ec988cebc0cee4129702d8b925f3eed76f8c0e2883",
+      "closed_leaves": 44883,
+      "branches": 4082,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-007",
+      "seed": [
+        -5
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "c23adfea3abacbbb244f8a16050b866612fb045607f3055bb1222996fdfa92d7",
+      "closed_leaves": 22440,
+      "branches": 2041,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-008",
+      "seed": [
+        -4
+      ],
+      "interval": [
+        249872,
+        249992
+      ],
+      "certificate_sha256": "abc7ff3df213ad8c3287971a529fed7bdb810a8d1a1dff7508e40728b822e54f",
+      "closed_leaves": 22748,
+      "branches": 2069,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-009",
+      "seed": [
+        -3
+      ],
+      "interval": [
+        249868,
+        249996
+      ],
+      "certificate_sha256": "934e2a513ddac4c1378ad23332a90f04fa9d99ecf5136936caed17a55fd3674e",
+      "closed_leaves": 22473,
+      "branches": 2044,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-010",
+      "seed": [
+        -5,
+        -4
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "69497ecefb9c2f0d282dc84cf28ad781d1610993d6b5882e70d5cad3c1042498",
+      "closed_leaves": 29337,
+      "branches": 2668,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-011",
+      "seed": [
+        -5,
+        -3
+      ],
+      "interval": [
+        249872,
+        249991
+      ],
+      "certificate_sha256": "0804bc7b34755822e6d4ef9d25c468fcbba9f3fc182fb7146deda44fd648d007",
+      "closed_leaves": 27401,
+      "branches": 2492,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-012",
+      "seed": [
+        -5,
+        -2
+      ],
+      "interval": [
+        249868,
+        249991
+      ],
+      "certificate_sha256": "5d283a8820681faf799cd5445fbc0ffae56022d06c8448b5c977101aecf9e5f2",
+      "closed_leaves": 27313,
+      "branches": 2484,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-013",
+      "seed": [
+        -5,
+        -1
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "8fc512292ab8af373d8a8b4218825166546ecfa5161b05d8ad711bb7008454ef",
+      "closed_leaves": 28985,
+      "branches": 2636,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-014",
+      "seed": [
+        -4,
+        -3
+      ],
+      "interval": [
+        249868,
+        249992
+      ],
+      "certificate_sha256": "a44c8ae4b82fbeeaebd237cc5b668dcd8f0c0a0419b03c936de7bbfd13654d02",
+      "closed_leaves": 29183,
+      "branches": 2654,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-015",
+      "seed": [
+        -4,
+        -2
+      ],
+      "interval": [
+        249872,
+        249994
+      ],
+      "certificate_sha256": "88b4688f13e44b0babcafc030e7479eba0a2af1d57268feed8f55c4f3c348c37",
+      "closed_leaves": 28061,
+      "branches": 2552,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-016",
+      "seed": [
+        -4,
+        -1
+      ],
+      "interval": [
+        249872,
+        249992
+      ],
+      "certificate_sha256": "a6e33367ab3dbdf261416fa5d7be5484b98f661cb97eaa34c4bc3cb7e57ae461",
+      "closed_leaves": 29458,
+      "branches": 2679,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-017",
+      "seed": [
+        -4,
+        0
+      ],
+      "interval": [
+        249868,
+        249992
+      ],
+      "certificate_sha256": "c10eed03192f18bc58232f9218661815a4bba8a92daf1ce6422c7d83dc0fa5b4",
+      "closed_leaves": 35907,
+      "branches": 3266,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-018",
+      "seed": [
+        -3,
+        -1
+      ],
+      "interval": [
+        249868,
+        249996
+      ],
+      "certificate_sha256": "ac36f05420ee0a388e53759ef08464d3c00d58ea4aa10dff22a1463fa3ab7b32",
+      "closed_leaves": 29051,
+      "branches": 2642,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-019",
+      "seed": [
+        -3,
+        1
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "b7582a61ade3b4fd5571bc5dfbd60dbda3ac6154dd38a4bfd8cba802169eff0e",
+      "closed_leaves": 37282,
+      "branches": 3391,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-020",
+      "seed": [
+        -2,
+        2
+      ],
+      "interval": [
+        249868,
+        249992
+      ],
+      "certificate_sha256": "0c7a086688a351e37d97929d277e49a3a0b665cd3e8046301c33b64349d91e37",
+      "closed_leaves": 37656,
+      "branches": 3425,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-021",
+      "seed": [
+        -1,
+        1
+      ],
+      "interval": [
+        249868,
+        249996
+      ],
+      "certificate_sha256": "b6392e322f400ea8d0d155b3bccb5d22621c0ffb96f81b2180b348448707523e",
+      "closed_leaves": 36930,
+      "branches": 3359,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-022",
+      "seed": [
+        -5,
+        -4,
+        -3
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "51be2b040d1e5cf715bb81bee8c2a9a4417bf52b8b29efae4b6420cf1ef7ea48",
+      "closed_leaves": 31328,
+      "branches": 2849,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-023",
+      "seed": [
+        -5,
+        -4,
+        -2
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "2f44b4e70234ac337196279c4cb6602a3e8c8adead18b8aa01aa30eb723758c6",
+      "closed_leaves": 33121,
+      "branches": 3012,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-024",
+      "seed": [
+        -5,
+        -4,
+        -1
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "d76406f629d3b0d86c960e07d83e8d27e737c59754afa2d6b659da911ab25d41",
+      "closed_leaves": 32439,
+      "branches": 2950,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-025",
+      "seed": [
+        -5,
+        -3,
+        -2
+      ],
+      "interval": [
+        249873,
+        249991
+      ],
+      "certificate_sha256": "10138d19a538eefd0206247853f288c1d411d6b5df54caf0c00c262ce1368fde",
+      "closed_leaves": 33451,
+      "branches": 3042,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-026",
+      "seed": [
+        -5,
+        -3,
+        -1
+      ],
+      "interval": [
+        249872,
+        249991
+      ],
+      "certificate_sha256": "69be345922069b4f7187fcc26d46a4c4ba29c936381157e04eac64ea175e5180",
+      "closed_leaves": 29150,
+      "branches": 2651,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-027",
+      "seed": [
+        -5,
+        -3,
+        0
+      ],
+      "interval": [
+        249867,
+        249988
+      ],
+      "certificate_sha256": "1be4a88932f61a275a26f001fc51d1ff56509ecc97c982e2e638638277fa5348",
+      "closed_leaves": 38393,
+      "branches": 3492,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-028",
+      "seed": [
+        -5,
+        -3,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "d808a54276b5621741fcec8f47ab5a4c35c7dbaab6dcf879a5c8642154fee468",
+      "closed_leaves": 42012,
+      "branches": 3821,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-029",
+      "seed": [
+        -5,
+        -2,
+        -1
+      ],
+      "interval": [
+        249868,
+        249991
+      ],
+      "certificate_sha256": "60c4d3cb80cdc9d5a3dcf0d61a50363c4733a0251d4aaee7bbbe058db0e0d5b6",
+      "closed_leaves": 33451,
+      "branches": 3042,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-030",
+      "seed": [
+        -4,
+        -3,
+        -2
+      ],
+      "interval": [
+        249868,
+        249994
+      ],
+      "certificate_sha256": "046d14879a890f5838f2b9baea1acdb801c242bf3c46ebb6b5b9e01960d33b35",
+      "closed_leaves": 31603,
+      "branches": 2874,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-031",
+      "seed": [
+        -4,
+        -3,
+        -1
+      ],
+      "interval": [
+        249868,
+        249992
+      ],
+      "certificate_sha256": "875639c5e4a235009f1a6f088436e74aa7fd25d88890b65d0ed8569369e62113",
+      "closed_leaves": 33528,
+      "branches": 3049,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-032",
+      "seed": [
+        -4,
+        -3,
+        0
+      ],
+      "interval": [
+        249865,
+        249992
+      ],
+      "certificate_sha256": "adcab18977e6d13f9cf0b0167da91cf247a5b70f28df5b1918c7866abf9ed736",
+      "closed_leaves": 38206,
+      "branches": 3475,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-033",
+      "seed": [
+        -4,
+        -3,
+        1
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "a53902b655561718b7f3e6ccb14922369bc87221ef60699a5e327fdb97a31e81",
+      "closed_leaves": 42749,
+      "branches": 3888,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-034",
+      "seed": [
+        -4,
+        -2,
+        -1
+      ],
+      "interval": [
+        249872,
+        249994
+      ],
+      "certificate_sha256": "a9f53af310ad2915a42252a52e6c438cb27a75f3eaf89b8a43dc27cacbe71de8",
+      "closed_leaves": 34518,
+      "branches": 3139,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-035",
+      "seed": [
+        -4,
+        -2,
+        0
+      ],
+      "interval": [
+        249863,
+        249992
+      ],
+      "certificate_sha256": "13d9adb48399c2e1efd6214be12cd783da077fd53bb4d15e7c79ef37b88a41a3",
+      "closed_leaves": 37073,
+      "branches": 3372,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-036",
+      "seed": [
+        -4,
+        -2,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "387e27e792441ddac5933af75d8005b22d22af7fe872efce9d1dd160e95cb34e",
+      "closed_leaves": 42639,
+      "branches": 3878,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-037",
+      "seed": [
+        -4,
+        -1,
+        0
+      ],
+      "interval": [
+        249868,
+        249992
+      ],
+      "certificate_sha256": "756694b65100fde907be0170fe88841252e83ed1c8be7f9e3819d4afa53f7c96",
+      "closed_leaves": 41176,
+      "branches": 3745,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-038",
+      "seed": [
+        -3,
+        -2,
+        1
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "e8d5f721451d08bc730332807c79a4456216fc47ead060fd61eda8f891467b27",
+      "closed_leaves": 42771,
+      "branches": 3890,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-039",
+      "seed": [
+        -3,
+        -1,
+        1
+      ],
+      "interval": [
+        249872,
+        249991
+      ],
+      "certificate_sha256": "6bfbf1e179cfa8093289c5b8f9051589f495ba69b04f9d98bd7e0d21970f47d9",
+      "closed_leaves": 43145,
+      "branches": 3924,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-040",
+      "seed": [
+        -3,
+        -1,
+        2
+      ],
+      "interval": [
+        249867,
+        249988
+      ],
+      "certificate_sha256": "f0099c4577c2d95ea9cb644a69b726a222ad9dc11271340f026184a1f06c9395",
+      "closed_leaves": 43948,
+      "branches": 3997,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-041",
+      "seed": [
+        -3,
+        -1,
+        3
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "a08e10c2da1f37992fb5c1b914fbe9468726791b86fe734573537832e18cbc75",
+      "closed_leaves": 43651,
+      "branches": 3970,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-042",
+      "seed": [
+        -3,
+        0,
+        1
+      ],
+      "interval": [
+        249868,
+        249991
+      ],
+      "certificate_sha256": "471809bfd0c6437dab4c8558a8e3fb4683c028fcda740631d8a7aa650c2bc81f",
+      "closed_leaves": 45697,
+      "branches": 4156,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-043",
+      "seed": [
+        -3,
+        0,
+        2
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "cd17e811fc34dc16e86e872a20a98d473dac4fdcf9c64a176e51c7a796033640",
+      "closed_leaves": 47831,
+      "branches": 4350,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-044",
+      "seed": [
+        -3,
+        1,
+        2
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "7002c247ccbe97d0e3e3a77fc88368a9e3ef7b038c326d67ea0e8458bd4aaad0",
+      "closed_leaves": 44223,
+      "branches": 4022,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-045",
+      "seed": [
+        -2,
+        -1,
+        2
+      ],
+      "interval": [
+        249865,
+        249992
+      ],
+      "certificate_sha256": "490e08285d5d83e1e93aa806fb6913ce4e28a46e04284f930877fd08b1073916",
+      "closed_leaves": 44850,
+      "branches": 4079,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-046",
+      "seed": [
+        -2,
+        0,
+        2
+      ],
+      "interval": [
+        249863,
+        249992
+      ],
+      "certificate_sha256": "1d1d9c40bc8d53abbd5cc362309cd6d6b5544920f65d4710d817c4a6da8d8404",
+      "closed_leaves": 47710,
+      "branches": 4339,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-047",
+      "seed": [
+        -6,
+        -5,
+        -4,
+        -3
+      ],
+      "interval": [
+        249866,
+        249983
+      ],
+      "certificate_sha256": "7ff5220f4449c96b7aa5231c26a111d506e68262bbef708ead3d6cce3a39d1da",
+      "closed_leaves": 30217,
+      "branches": 2748,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-048",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2
+      ],
+      "interval": [
+        249866,
+        249991
+      ],
+      "certificate_sha256": "bf6c48879cab89297233009c4ce9869d1f194de12936469d506c09c58dc4a527",
+      "closed_leaves": 30437,
+      "branches": 2768,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-049",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -1
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "846b9b1c032145c5463288c1d9c8924d63ba9d2847d4e4f67478d95fc4637ba6",
+      "closed_leaves": 34199,
+      "branches": 3110,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-050",
+      "seed": [
+        -5,
+        -4,
+        -2,
+        -1
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "8e8a1ac43b0cb9ecbca43b21acd4c30a9daea04a20a6167a2255c88369f97552",
+      "closed_leaves": 32912,
+      "branches": 2993,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-051",
+      "seed": [
+        -5,
+        -4,
+        -2,
+        0
+      ],
+      "interval": [
+        249862,
+        249979
+      ],
+      "certificate_sha256": "cec2e37882edd255caf15225aee1798ade8a6be9713aa5f761f773d92eb6cb42",
+      "closed_leaves": 41385,
+      "branches": 3764,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-052",
+      "seed": [
+        -5,
+        -3,
+        -2,
+        -1
+      ],
+      "interval": [
+        249873,
+        249991
+      ],
+      "certificate_sha256": "6ddfbe79e4c39d5315e083cf817d7ad42960beb4cbc470f755c67d0f84624401",
+      "closed_leaves": 34815,
+      "branches": 3166,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-053",
+      "seed": [
+        -5,
+        -3,
+        -1,
+        0
+      ],
+      "interval": [
+        249867,
+        249988
+      ],
+      "certificate_sha256": "1ba7db7ae9c4dd4eede1afb75818f1234c43770b9fa160fa5eb18de214b962d2",
+      "closed_leaves": 42243,
+      "branches": 3842,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-054",
+      "seed": [
+        -5,
+        -3,
+        -1,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "5bdca7f4c6a22d137e05cca2bf045587023c01fd8e454c51deefc5b9b663d667",
+      "closed_leaves": 43167,
+      "branches": 3926,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-055",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        -1
+      ],
+      "interval": [
+        249866,
+        249994
+      ],
+      "certificate_sha256": "bde95cfd3ed5142a75db4f8f169b103b26f5f2ebe51af6ec6b224790a530bf26",
+      "closed_leaves": 31537,
+      "branches": 2868,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-056",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "interval": [
+        249861,
+        249992
+      ],
+      "certificate_sha256": "8c992021ff1d15f07d5b1f6fc5c47ee8bb1dcf55e076c05f3f41faf5ce67fd2d",
+      "closed_leaves": 40945,
+      "branches": 3724,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-057",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        1
+      ],
+      "interval": [
+        249870,
+        249988
+      ],
+      "certificate_sha256": "4fe16f90cdb24fc4000615044b2399b96ab167f5c0ab274e5fcac005cd7b7731",
+      "closed_leaves": 45114,
+      "branches": 4103,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-058",
+      "seed": [
+        -4,
+        -3,
+        -1,
+        0
+      ],
+      "interval": [
+        249865,
+        249992
+      ],
+      "certificate_sha256": "9d364ec9aca59e8de418da174f96df1ee5bcdaa3fdb2f8107e0c06030df542e5",
+      "closed_leaves": 41572,
+      "branches": 3781,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-059",
+      "seed": [
+        -4,
+        -3,
+        -1,
+        1
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "44357bbb040849c36f594af3060d5d5c218fc2cffd6a28d77e82e69f4acc43af",
+      "closed_leaves": 47578,
+      "branches": 4327,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-060",
+      "seed": [
+        -4,
+        -3,
+        0,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "e6f343058dcc1c6b9c0dbf0692a7a635e7d8e960bc33341ea003ba11f3439e7a",
+      "closed_leaves": 47325,
+      "branches": 4304,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-061",
+      "seed": [
+        -4,
+        -2,
+        -1,
+        0
+      ],
+      "interval": [
+        249863,
+        249992
+      ],
+      "certificate_sha256": "75260590dfafc8773bb62a52a57575736a777e9f0add0479b31ed46259cfa212",
+      "closed_leaves": 43299,
+      "branches": 3938,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-062",
+      "seed": [
+        -4,
+        -2,
+        -1,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "344cf3fe720c00f80977fab6e437d0895b4fd0af37a0c51fcca7bc751d15c9b0",
+      "closed_leaves": 47721,
+      "branches": 4340,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-063",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        1
+      ],
+      "interval": [
+        249869,
+        249991
+      ],
+      "certificate_sha256": "619dfb3c21a4b475a8c6efcf5e4f4e6008d6a6c4fdb6023f623375447c585fc4",
+      "closed_leaves": 45455,
+      "branches": 4134,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-064",
+      "seed": [
+        -3,
+        -2,
+        0,
+        1
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "42bc8d08739e0e4777f5139187db3bde6837f6c9dd8870a06d5a0e2e28d7bd6f",
+      "closed_leaves": 47633,
+      "branches": 4332,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-065",
+      "seed": [
+        -3,
+        -2,
+        0,
+        2
+      ],
+      "interval": [
+        249862,
+        249979
+      ],
+      "certificate_sha256": "b43bb2fc69f4533de151eddce23b098d457f00cf37d992bc7b807e8c9abe7219",
+      "closed_leaves": 50900,
+      "branches": 4629,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-066",
+      "seed": [
+        -3,
+        -2,
+        1,
+        2
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "c6c68365db1e39844132de396b1d645d64231b84276a41e881826e2e5ccb8d2e",
+      "closed_leaves": 49965,
+      "branches": 4544,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-067",
+      "seed": [
+        -3,
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249871,
+        249991
+      ],
+      "certificate_sha256": "f098304018863e2d1167df89bca6c3e86afcb18d17938e10947b4a2e4c73202a",
+      "closed_leaves": 49129,
+      "branches": 4468,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-068",
+      "seed": [
+        -3,
+        -1,
+        0,
+        2
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "41900c1c0c52f6dd9963185cb84d29beaaca05b7c8bd78627085dc09b0b518bf",
+      "closed_leaves": 51846,
+      "branches": 4715,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-069",
+      "seed": [
+        -3,
+        -1,
+        1,
+        2
+      ],
+      "interval": [
+        249867,
+        249988
+      ],
+      "certificate_sha256": "0ce28c1c53cb74bd5fab4cd20775b3bd845b04d8b827d77fe6be6017a7569172",
+      "closed_leaves": 49063,
+      "branches": 4462,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-070",
+      "seed": [
+        -3,
+        -1,
+        1,
+        3
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "bbc262fa5e2a3a9dbe3e4808cb6e4b3cc184a1c446f6d2cc00713a570fcdcc51",
+      "closed_leaves": 49426,
+      "branches": 4495,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-071",
+      "seed": [
+        -3,
+        0,
+        1,
+        2
+      ],
+      "interval": [
+        249870,
+        249988
+      ],
+      "certificate_sha256": "98d6435a9018c04900e9ae60440364f9fa1b9159d3f81c9ff6aa54b9a0683ded",
+      "closed_leaves": 48249,
+      "branches": 4388,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-072",
+      "seed": [
+        -2,
+        -1,
+        0,
+        2
+      ],
+      "interval": [
+        249861,
+        249992
+      ],
+      "certificate_sha256": "e4957dc203bfeb36b080f633969462385fe9038e002fa0ef5f22b0bd549ea20a",
+      "closed_leaves": 48084,
+      "branches": 4373,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-073",
+      "seed": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "interval": [
+        249865,
+        249992
+      ],
+      "certificate_sha256": "a560ac8cceb6072a73aa088cf77cb8ee233853e89dec320027c22ac803142928",
+      "closed_leaves": 49316,
+      "branches": 4485,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-074",
+      "seed": [
+        -6,
+        -5,
+        -4,
+        -3,
+        -1
+      ],
+      "interval": [
+        249866,
+        249983
+      ],
+      "certificate_sha256": "3a096d8f939c82fd347ffdd14c55d14959903a6d15e941790bc88644c6ffe4b8",
+      "closed_leaves": 33814,
+      "branches": 3075,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-075",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1
+      ],
+      "interval": [
+        249866,
+        249991
+      ],
+      "certificate_sha256": "8e80f3adbf8689adb9daf1f88b83051e97ee63494439104f21eb5eb4690dfa93",
+      "closed_leaves": 32483,
+      "branches": 2954,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-076",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "79f7cb3eae3884a67538bbe596bf36c855c654a3eafc6126435c6fddba9e9e9b",
+      "closed_leaves": 39988,
+      "branches": 3637,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-077",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "ef8c67d830b70ac2de9bf72f66e0763d8ac788b05b077b372359ac2228672478",
+      "closed_leaves": 43794,
+      "branches": 3983,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-078",
+      "seed": [
+        -5,
+        -4,
+        -2,
+        -1,
+        0
+      ],
+      "interval": [
+        249862,
+        249979
+      ],
+      "certificate_sha256": "b87d3e7d5367091206c247ce481bc1b2799796305d2dcadf47894b453bd3baf5",
+      "closed_leaves": 42331,
+      "branches": 3850,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-079",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0
+      ],
+      "interval": [
+        249861,
+        249992
+      ],
+      "certificate_sha256": "5788472f048e492b498b2b23eeaf46395dac7676eb3ff3bf4d2f55967f3d32dc",
+      "closed_leaves": 37777,
+      "branches": 3436,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-080",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        -1,
+        1
+      ],
+      "interval": [
+        249866,
+        249988
+      ],
+      "certificate_sha256": "4ca9e0a852881b56c052728c5d78cf27dd0f283e1936320e2ad4a06a2b2d7d04",
+      "closed_leaves": 44344,
+      "branches": 4033,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-081",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        0,
+        1
+      ],
+      "interval": [
+        249868,
+        249987
+      ],
+      "certificate_sha256": "b557e07c6e64b4dd7697eb5483d817fb66e192d5df9690d5d955316dfffcf384",
+      "closed_leaves": 49239,
+      "branches": 4478,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-082",
+      "seed": [
+        -4,
+        -3,
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "32e7d745ce5dcc547b02ba1d53fd4eba969f7d1c4abd0a5102fca2f6c6cdc562",
+      "closed_leaves": 48711,
+      "branches": 4430,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-083",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249864,
+        249991
+      ],
+      "certificate_sha256": "e24b852598ae8f0ca6daa0571b22b93655f7f4c9f1a2f9c4a623cee326b87c12",
+      "closed_leaves": 45158,
+      "branches": 4107,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-084",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        0,
+        2
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "cb206a6f9d2070f672a56662f35a3238c02d2b22e89557a4efd7cdeb4fb1cddc",
+      "closed_leaves": 47809,
+      "branches": 4348,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-085",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        0,
+        3
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "5e96f2d2cd4e9512eb8e8dd2805b511cb5950cf228447f676b4d0a807c5f4eb1",
+      "closed_leaves": 48678,
+      "branches": 4427,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-086",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "84bf1542db67fa74cdf33590436d5cc6026ec936e427c1d6c516b62245c27a13",
+      "closed_leaves": 51461,
+      "branches": 4680,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-087",
+      "seed": [
+        -3,
+        -2,
+        0,
+        1,
+        2
+      ],
+      "interval": [
+        249862,
+        249987
+      ],
+      "certificate_sha256": "7b50447083654e18053e51d40e00b27b019caf631b35508df0da21b49416711c",
+      "closed_leaves": 50537,
+      "branches": 4596,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-088",
+      "seed": [
+        -3,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "interval": [
+        249870,
+        249988
+      ],
+      "certificate_sha256": "40b4df5b4b5d36dbec4330b62a716d64bf02c604a35b256ba7d00448e5afdca4",
+      "closed_leaves": 51582,
+      "branches": 4691,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-089",
+      "seed": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "interval": [
+        249861,
+        249992
+      ],
+      "certificate_sha256": "55e2ef6a2daa4eb739d90daba74a4dbd0e91076966e6c958c6c412122639fb2e",
+      "closed_leaves": 47512,
+      "branches": 4321,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-090",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0
+      ],
+      "interval": [
+        249871,
+        249988
+      ],
+      "certificate_sha256": "a4b584bd901c6d4d128ce30283bdc5636bc6ea1df41ef340ea563348f9ba2a84",
+      "closed_leaves": 37744,
+      "branches": 3433,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-091",
+      "seed": [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        1
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "c0d0bd84804fe31b49e6e7e9ed61c5a3b77a46dedc0d669f9240d2c4a8384230",
+      "closed_leaves": 45719,
+      "branches": 4158,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-092",
+      "seed": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "interval": [
+        249868,
+        249987
+      ],
+      "certificate_sha256": "713b897a198f79cf3da32ecf6c00c597758eb7e7c7ed7b6c51afd86c7bc7be4c",
+      "closed_leaves": 44861,
+      "branches": 4080,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-093",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "interval": [
+        249868,
+        249988
+      ],
+      "certificate_sha256": "6c0cf0a3718efd56baa3e61318a9009e14c759f0b52d07c92d4ce0680f270520",
+      "closed_leaves": 47644,
+      "branches": 4333,
+      "actual_kernel_interval_hits": 0
+    },
+    {
+      "prefix": "terminal-three-spectrum-094",
+      "seed": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        3
+      ],
+      "interval": [
+        249869,
+        249986
+      ],
+      "certificate_sha256": "67bc0af6b37190bc932ec62ce772f360bbf9887073382809a4500ce2606f4c0e",
+      "closed_leaves": 51835,
+      "branches": 4714,
+      "actual_kernel_interval_hits": 0
+    }
+  ],
+  "total_excluded_ordered_component_size_classes": 28,
+  "remaining_ordered_component_size_classes": [
+    [
+      2,
+      4
+    ],
+    [
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      6
+    ]
+  ],
+  "global_six_state_maximality_proved": false
+}

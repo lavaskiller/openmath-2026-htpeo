@@ -1,0 +1,84 @@
+# lake build log
+# command: lake build (clean copy, no .lake), run 2026-10-03 10:31 KST
+# toolchain: leanprover/lean4:v4.34.1
+# Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)
+# exit code: 0, elapsed: 189 s
+# note: the progress check-mark glyphs were captured through cmd.exe and appear as '??'
+
+✔ [2/13] Built LeanProject.Model (15s)
+✔ [3/13] Built LeanProject.Zipper (1.5s)
+✔ [4/13] Built LeanProject.Accel (1.2s)
+✔ [5/13] Built LeanProject.WitnessData (1.3s)
+✔ [6/13] Built LeanProject.Witness249881 (26s)
+✔ [7/13] Built LeanProject.Structural (129s)
+✔ [8/13] Built LeanProject.Direct (129s)
+✔ [9/13] Built LeanProject.Counter (8.8s)
+✔ [10/13] Built LeanProject.Phase (2.1s)
+ℹ [11/13] Built LeanProject.AxiomCheck (902ms)
+info: LeanProject/AxiomCheck.lean:8:0: 'BB6.bb6_certificate' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:9:0: 'BB6.bb6_accepts' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:10:0: 'BB6.bb6_certificate_structural' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:11:0: 'BB6.bb6_accepts_structural' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:12:0: 'BB6.runZ_249880_structural' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:13:0: 'BB6.sweepL' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:14:0: 'BB6.sweepR' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:15:0: 'BB6.accRun_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:16:0: 'BB6.bb6_certificate_counter' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:17:0: 'BB6.bb6_accepts_counter' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:18:0: 'BB6.Counter.runZ_249880_counter' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:19:0: 'BB6.Counter.ctrStep_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:20:0: 'BB6.Counter.ctrRun_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:21:0: 'BB6.Counter.event_of_absorbs' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:22:0: 'BB6.Counter.ev_E0' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:23:0: 'BB6.Counter.ev_Te' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:24:0: 'BB6.Counter.ev_H' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:25:0: 'BB6.Counter.halt_next' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:26:0: 'BB6.Counter.ev_H_halts' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:27:0: 'BB6.Counter.event_cost' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:28:0: 'BB6.Counter.ev_E1' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:29:0: 'BB6.Counter.ev_Ta' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:30:0: 'BB6.Counter.ev_Tb0' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:31:0: 'BB6.Counter.ev_Tb1' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:32:0: 'BB6.Counter.ev_Tc' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:33:0: 'BB6.Counter.ev_Td' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:34:0: 'BB6.Counter.ev_Te'' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:35:0: 'BB6.Counter.left_phase' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:36:0: 'BB6.Counter.right_phase' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:37:0: 'BB6.Counter.topStep_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:38:0: 'BB6.Counter.startup' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:39:0: 'BB6.Counter.counter_computation' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:40:0: 'BB6.Counter.Cfin_halting' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:41:0: 'BB6.Counter.halting_segment' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:42:0: 'BB6.bb6_certificate_phase' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:43:0: 'BB6.Counter.lift' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:44:0: 'BB6.Counter.cycle' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:45:0: 'BB6.Counter.halting_cycle' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:46:0: 'BB6.Counter.halting_family' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:47:0: 'BB6.Counter.big_halting' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:48:0: 'BB6.Counter.big_example' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:49:0: 'BB6.Counter.runZ_249880_phase' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:50:0: 'BB6.Counter.blank_hits_family' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:51:0: 'BB6.Counter.pStep_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:52:0: 'BB6.Counter.pRun_sound' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:53:0: 'BB6.Counter.Psi_split' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:54:0: 'BB6.Counter.Psi_ge' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:55:0: 'BB6.Counter.Phi_rec' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:56:0: 'BB6.Counter.phase_computation' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:57:0: 'BB6.Counter.halting_phase' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:58:0: 'BB6.Counter.halting_cycle_halts' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:59:0: 'BB6.Counter.runZ_not_H_of_le' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:60:0: 'BB6.Counter.blank_halts_via_family' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:61:0: 'BB6.Counter.Gr_add' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:62:0: 'BB6.Counter.Phi_add' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:63:0: 'BB6.Counter.lawTa' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:64:0: 'BB6.Counter.lawTb0' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:65:0: 'BB6.Counter.lawTb1' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:66:0: 'BB6.Counter.lawTc' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:67:0: 'BB6.Counter.lawTd' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:68:0: 'BB6.Counter.lawTe' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:69:0: 'BB6.Counter.lawH' depends on axioms: [propext, Quot.sound]
+info: LeanProject/AxiomCheck.lean:70:0: 'BB6.Counter.runZ_H_stable' depends on axioms: [propext]
+info: LeanProject/AxiomCheck.lean:71:0: 'BB6.Counter.P4_toZ' does not depend on any axioms
+info: LeanProject/AxiomCheck.lean:72:0: 'BB6.Counter.Pfin_halting' does not depend on any axioms
+✔ [12/13] Built LeanProject (856ms)
+Build completed successfully (13 jobs).
