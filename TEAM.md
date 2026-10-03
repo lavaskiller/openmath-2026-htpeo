@@ -84,9 +84,9 @@ Already known:
 | Field | Value |
 |---|---|
 | GitHub | [@thomasoh0408](https://github.com/thomasoh0408) |
-| Name | ____ |
-| Affiliation | ____ |
-| E-mail | ____ |
+| Name | Youchan Oh |
+| Affiliation | Seoul National Univ. TI |
+| E-mail | thomasoh0408@snu.ac.kr |
 | Entries worked on | `entries/hills/kobon-triangles-thomasoh0408/` |
 | Role / contribution | Kobon triangles hill (from the leaderboard; to be completed by the member) |
 | Human review done | packet ____ , sections ____ , date ____ |
