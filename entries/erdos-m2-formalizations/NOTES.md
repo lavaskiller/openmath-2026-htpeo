@@ -10,7 +10,7 @@ Written by: helper-team-repo (Claude Code agent), 2026-10-03 KST. Not human-revi
 
 ## Scope of claims
 
-- Claimed: 13 families = 9 substantive (G-PM, E942, E44, E123, E918, E292, E395, E698, E939) + 4 minor / sanity ones (E295, E703, E748, E1136; whether to include them is a team decision). 19 theorems.
+- Claimed (since 2026-10-03, see PACKET.md section 0): 17 families; before that: 13 families = 9 substantive (G-PM, E942, E44, E123, E918, E292, E395, E698, E939) + 4 minor / sanity ones (E295, E703, E748, E1136; whether to include them is a team decision). 19 theorems.
 - Not claimed (optional): E757, E261, E36, E649, E508 — no formal proof of the FC statement was found, but the same mathematics has already been publicly formalized under a different definition (`artifact/bundle_optional/`).
 - The main statement of each problem (mostly open problems) is not claimed.
 

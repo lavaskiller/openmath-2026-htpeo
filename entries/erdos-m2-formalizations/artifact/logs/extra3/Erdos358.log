@@ -1,0 +1,6 @@
+/home/lead/erdos-fc/m2/extra3/Erdos358.lean:216:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos358.lean:228:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos358.lean:237:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos358.lean:246:8: warning: declaration uses `sorry`
+'Erdos358.f_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

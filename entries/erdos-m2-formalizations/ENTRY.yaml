@@ -3,8 +3,8 @@
 id: erdos-m2-formalizations
 title: "Lean 4.33.1 formalizations of known results: Erdos-problem variants (formal-conjectures statements) and Schoenberger/Petersen (connected case)"
 target:
-  problem: "Known results attached to Erdos problems 942, 44, 123, 918, 292, 395, 698, 939 (substantive), 295, 703, 748, 1136 (minor); perfect matchings in bridgeless cubic graphs (G-PM)"
-  problem_ids: ["G-PM", "E942", "E44", "E123", "E918", "E292", "E395", "E698", "E939", "E295", "E703", "E748", "E1136"]
+  problem: "Known results attached to Erdos problems 942, 44, 123, 918, 292, 395, 698, 939, 477 (substantive), 295, 703, 748, 1136, 358, 619, 1148 (minor); perfect matchings in bridgeless cubic graphs (G-PM)"
+  problem_ids: ["G-PM", "E942", "E44", "E123", "E918", "E292", "E395", "E698", "E939", "E295", "E703", "E748", "E1136", "E477", "E358", "E619", "E1148"]
   status_before_event: "known mathematics; no prior formal proof found by the searches of PACKET.md section 7 (limits stated there)"
 mode: "M2"
 requested_band: "n/a"
@@ -48,6 +48,18 @@ claims:                          # verbatim names, PACKET.md sections 1-2; M2 co
   - lean_name: "Erdos1136.erdos_1136.variants.multiples_of_three"
     plain_words: "E1136 (minor / sanity)"
     file: "artifact/bundle/Erdos1136.lean"
+  - lean_name: "Erdos477.erdos_477.variants.S_sq, Erdos477.erdos_477.variants.degree_two_dvd_condition_b_ne_zero"
+    plain_words: "E477 variants (added 2026-10-03)"
+    file: "artifact/bundle/Erdos477.lean"
+  - lean_name: "Erdos358.f_id"
+    plain_words: "E358 (minor / textbook, added 2026-10-03)"
+    file: "artifact/bundle/Erdos358.lean"
+  - lean_name: "Erdos619.erdos_619.variants.add_edges_diam_three"
+    plain_words: "E619 (minor, added 2026-10-03)"
+    file: "artifact/bundle/Erdos619.lean"
+  - lean_name: "Erdos1148.erdos_1148.variants.weaker"
+    plain_words: "E1148 (minor, added 2026-10-03)"
+    file: "artifact/bundle/Erdos1148.lean"
 verification:
   toolchain: "leanprover/lean4:v4.33.1"
   mathlib: "as pinned by google-deepmind/formal-conjectures at df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1 (Erdos files); v4.33.1 commit 0df444a360ea for Star6Simple.lean"
@@ -94,11 +106,11 @@ links:
   - "https://www.erdosproblems.com/"
 readme:                          # one-line summary for the README results table (tools/make_results_table.py)
   order: 3
-  problem: "Known results attached to 12 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs"
-  problem_ko: "에르되시 문제 12개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭"
+  problem: "Known results attached to 16 Erdős problems (formal-conjectures statements) and perfect matchings in bridgeless cubic graphs"
+  problem_ko: "에르되시 문제 16개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭"
   kind: "formalization of known results"
-  result: "13 families, 19 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet."
-  result_ko: "13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함."
+  result: "17 families, 24 theorems, including Schönberger's and Petersen's theorems (connected case). No prior formal proof found by the searches described in the packet."
+  result_ko: "17개 묶음, 정리 24개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함."
   verification: "Lean 4.33.1, standard axioms, one file at a time; statements identical to the pinned formal-conjectures commit"
   verification_ko: "Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일"
   links:

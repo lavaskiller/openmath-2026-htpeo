@@ -23,9 +23,9 @@ Local artifact repository (unpublished, no remote): `openmath/erdos_m2_artifact/
 ## 0. Summary
 
 - Mechanically verified pool: 63 rows / 56 distinct theorems / 36 Erdos-problem families, of which 61 rows pass (compile rc 0, statement textually identical to the pinned FC commit, axioms within [propext, Classical.choice, Quot.sound]) and 2 are rejected (proof was already in FC); `verify_all.py` re-run 2026-10-02 14:16 UTC including the five 'advanced' sessions adv1..adv5.
-- **Claimed set: 13 families** = 9 substantive (section 1: G-PM + 8 Erdos families, 13 Erdos theorems) + 4 minor/sanity (section 2, 4 theorems, team to decide).
-  - Substantive, ordered by level: G-PM (Schoenberger's theorem and Petersen's theorem, connected case, from the star6 library), E942, E44, E123, E918, E292, E395, E698, E939
-  - Minor / sanity: E295, E703, E748, E1136
+- **Claimed set: 17 families** = 10 substantive (section 1: G-PM + 9 Erdos families, 15 Erdos theorems) + 7 minor/sanity (section 2, 7 theorems, team to decide). E477 (section 1.10) and E358, E619, E1148 (sections 2.5-2.7) were added on 2026-10-03; until then the claimed set was 13 families.
+  - Substantive, ordered by level: G-PM (Schoenberger's theorem and Petersen's theorem, connected case, from the star6 library), E942, E44, E123, E918, E292, E395, E698, E939, E477
+  - Minor / sanity: E295, E703, E748, E1136, E358, E619, E1148
 - Optional, NOT claimed by default (section 3): 8 theorems in 5 families (E757, E261, E36, E649, E508) -- the FC statement has no prior formal proof that we could find, but the same mathematics was already formalized publicly under different definitions.
 - **What changed against v1.** (a) New substantive families: G-PM and E942. (b) **Correction: E649 is moved from 'substantive' to 'optional'**: plby/lean-proofs already proves Sampaio's instance (and Tong's theorem) with its own definition of P(n); v1 was wrong to call it new. (c) Of the eight 'advanced' results produced on 2026-10-02 (E508 x2, E138, E942, E649 tong, E770, E273, E1136 mueller), the exhaustive prior-art pass found that **only E942 is new**: E508 `4 ≤ χ`, E138, E770, E273 are exact duplicates of JSP pull requests of 2026-09-16/17, E1136 mueller is plby's theorem (with plby code copied), E508 `χ ≤ 7` and E649 tong are formalized elsewhere under other definitions (optional). All eight are mechanically verified and are genuine proofs (section 4 and the notes in sections 1 and 3); they are simply not first formalizations.
 - Excluded as duplicates (section 4): E508 `HadwigerNelsonAtLeast4`, E138, E770, E273, E1136 `mueller` (this pass); E1063, E859, E835, E1074, E1193, E282, E291, E302, E317, E367, E423, E865, E885, E1008 (earlier); inside claimed/optional families `erdos_698.variants.erdos_szekeres_sharp`, `erdos_1136.variants.upper_bound` and `HadwigerNelsonAtLeast4` stay proved in the files but are not claimed. E723 and E120 were skipped by the proving sessions as duplicates of conjectures-io contributions. E617 `r_eq_3`: still in progress (session adv5) when this packet was generated; not included.
@@ -305,6 +305,27 @@ theorem Star6.simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegula
 
 - Significance tier: Minor-to-substantive (explicit certificates).
 
+### 1.10. Family E477 -- Erdos problem 477
+
+- FC file + commit: `FormalConjectures/ErdosProblems/477.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/477
+- Bundle file: `bundle/Erdos477.lean` (sha256 `6f36a324a5c890fa4c7e38df2da86e8a12144bfc29877d7de99e14b78bfc3e1d`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos477.erdos_477.variants.S_sq`, `Erdos477.erdos_477.variants.degree_two_dvd_condition_b_ne_zero`
+- Source theorem / citation: Sekanina 1959 [Sek59] for f = X^2; the FC docstring for the quadratic case (AlphaProof for X^2 - X + 1, then generalised to a | b).
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 12] theorem erdos_477.variants.S_sq :
+    letI f := X ^ 2
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+@[category research solved, AMS 12] theorem erdos_477.variants.degree_two_dvd_condition_b_ne_zero {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0) (hab : a ∣ b) :
+    let f := a • X ^ 2 + b • X + C c
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- FC has `sorry`; plby proves only the sixth-power case; TheJustinSunPrize PR heads contain only generic templates; GitHub code search finds only stubs. The AlphaProof proof of the X^2 - X + 1 instance was not found publicly.
+- Genuinely new formal contribution: First formal proofs found of these two FC variants: no set A of integers makes every integer uniquely a + f(n), for f = X^2 and for f = aX^2 + bX + c with a | b. Argument: every multiple of 4a (for X^2: every odd number and every multiple of 4) is a difference of two values of f, which bounds how many elements of A can lie in one residue class, while A must be unbounded; pigeonhole in ZMod |4a|.
+- Statement-correspondence note: Only Mathlib definitions are used. The hypothesis b ≠ 0 of the FC statement is not used by the proof.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Substantive-low (elementary, about 180 added lines).
+
 ## 2. Minor / sanity (no prior formal proof found, but trivial or helper-level -- team decides whether to include)
 
 Handbook 4.1 requires each counted contribution to be 'new, faithful, useful, and reusable'; the items below are new and faithful, but their usefulness is small. Including them risks looking like count-padding; excluding them costs at most 4 families.
@@ -422,6 +443,55 @@ Handbook 4.1 requires each counted contribution to be 'new, faithful, useful, an
   > 
   > The FC docstring gives Müller's residue-class construction. Its formal target requires both avoiding powers of two and density `1/2`; neither conjunct was completed here. Establishing density for the infinite union of classes modulo `2^(i+2)` is the main remaining obstacle.
 
+- Significance tier: Minor / trivial.
+
+### 2.5. Family E358 -- Erdos problem 358
+
+- FC file + commit: `FormalConjectures/ErdosProblems/358.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/358
+- Bundle file: `bundle/Erdos358.lean` (sha256 `bbaccc0fbda2b195d0bed0327d46d4eaf0a2ce29616cb565eceb37df7b712c68`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos358.f_id`
+- Source theorem / citation: Sylvester: representations of n as a sum of consecutive positive integers correspond to the odd divisors of n (textbook).
+- Statements (verbatim from FC):
+```lean
+@[category textbook, AMS 5 11] theorem f_id : f id = fun n ↦ #{d ∈ n.divisors | Odd d}
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- plby `Erdos358` has no odd-divisor statement; no TheJustinSunPrize PR; no FC-Bench task; not found in Mathlib/Archive (it may exist elsewhere under other definitions).
+- Genuinely new formal contribution: Formal proof of the FC lemma `f_id` (bijection through (v + 1 - u)(u + v) = 2n).
+- Statement-correspondence note: Uses FC's `f` and `intervalRepresentations`. n = 0 holds only by convention (infinitely many representations; `Nat.card` of an infinite set is 0 and `divisors 0 = ∅`).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Minor / textbook.
+
+### 2.6. Family E619 -- Erdos problem 619
+
+- FC file + commit: `FormalConjectures/ErdosProblems/619.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/619
+- Bundle file: `bundle/Erdos619.lean` (sha256 `f596f21e1353bf6e9292d7f0cd9772c265dfc705ca855868e0a9e166149132ab`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos619.erdos_619.variants.add_edges_diam_three`
+- Source theorem / citation: Erdős-Gyárfás-Ruszinkó 1998 [EGR98], preliminary observation: a maximal triangle-free supergraph has diameter at most 2.
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 5] theorem erdos_619.variants.add_edges_diam_three {V : Type*} [Fintype V] (G : SimpleGraph V) (hG : G.Connected) (hG' : G.CliqueFree 3) :
+    ∃ H : SimpleGraph V, G ≤ H ∧ H.CliqueFree 3 ∧ H.ediam ≤ 3
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- FC has `sorry` (also in the older FC revision that proves the main problem); nick-kuhn/erdos-619, plby, TheJustinSunPrize: nothing.
+- Genuinely new formal contribution: Formal proof of the FC variant (maximal triangle-free supergraph).
+- Statement-correspondence note: Easy; it is not the quantitative bounds of EGR98 (`h_three_le`, `h_five_le`, not proved). Connectivity is not needed by the proof.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Minor.
+
+### 2.7. Family E1148 -- Erdos problem 1148
+
+- FC file + commit: `FormalConjectures/ErdosProblems/1148.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/1148
+- Bundle file: `bundle/Erdos1148.lean` (sha256 `e44647fb459d160b9c3499ba926a048c35c608587d54f87c5a66fa12c935534e`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos1148.erdos_1148.variants.weaker`
+- Source theorem / citation: [Va99] via FC, where it is called obvious: every n is x^2 + y^2 - z^2 with x^2, y^2, z^2 at most n + 2 sqrt n.
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 11] theorem erdos_1148.variants.weaker : ∀ n, erdos_1148_weaker_prop n
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- plby `Erdos1148` proves the main 'eventually at most n' result and other lemmas, not this version; no TheJustinSunPrize PR; the FC-Bench task has no oracle.
+- Genuinely new formal contribution: Formal proof of the FC variant (explicit witnesses from s = floor(sqrt n)).
+- Statement-correspondence note: FC's `erdos_1148_weaker_prop` uses truncated ℕ subtraction; the witnesses always have x^2 + y^2 ≥ z^2, so truncation is never used. FC's own `erdos_1148.variants.lower_bound` in the same file uses `decide +native`; the claimed theorem does not depend on it.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
 - Significance tier: Minor / trivial.
 
 ## 3. Optional families -- FC statement new, mathematics already formalized elsewhere (NOT claimed by default)
@@ -582,6 +652,8 @@ Handbook 3.2: 'Renaming declarations, re-exporting library results, or restating
 
 | Family | Theorem | Verdict | Evidence |
 | --- | --- | --- | --- |
+| E494 | `erdos_494.variants.k_eq_2_card_not_pow_two` (Selfridge-Straus) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/127 (2026-09-16); proved again on 2026-10-03 (`artifact/logs/extra3/`), not claimed |
+| E825 | `erdos_825.variants.necessary_cond` (weird number 70) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/685 and https://github.com/TheJustinSunPrize/awards/pull/400; proved again on 2026-10-03, not claimed |
 | E36 | `minimum_overlap.variants.upper.erdos_1955` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/304 (exact FC statement, 2026-09-16) |
 | E138 | `monoAP_guarantee_set_nonempty` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/516 (2026-09-17, exact FC statement `monoAP_guarantee_set_nonempty`, same Hales-Jewett derivation) ; https://github.com/AllenGrahamHart/FormalConjectures-Bench/blob/0d031f72/oracles/erdosproblems-138-difference/Submission.lean (`vdw_nonempty (r k) : (monoAP_guarantee_set r k).Nonempty`, l. 197; the proof linked from FC's `formal_proof` tag of `erdos_138.variants.difference`). Also a thin wrapper: Mathlib has Hales-Jewett `Combinatorics.Line.exists_mono_in_high_dimension` and the van der Waerden corollary `Combinatorics.exists_mono_homothetic_copy` |
 | E273 | `erdos_273.variants.three` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/299 (2026-09-16, `erdos_273_three`, Selfridge's twelve moduli dividing 360, exact FC content) , https://github.com/TheJustinSunPrize/awards/pull/281 (`variants_three`, `exact_public_statement`) |

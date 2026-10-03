@@ -1,0 +1,12 @@
+/home/lead/erdos-fc/m2/extra3/Erdos619.lean:70:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos619.lean:88:25: warning: Variable name `hG` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hG
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/home/lead/erdos-fc/m2/extra3/Erdos619.lean:172:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos619.lean:182:8: warning: declaration uses `sorry`
+/home/lead/erdos-fc/m2/extra3/Erdos619.lean:193:8: warning: declaration uses `sorry`
+'Erdos619.erdos_619.variants.add_edges_diam_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+leancheck rc=0

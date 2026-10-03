@@ -43,7 +43,7 @@ human_time:
 outputs:
   lean_lines: 2791                # artifact/bundle/*.lean (13 files, the claimed set), wc -l 2026-10-03
   lean_files: 13
-  theorems_claimed: 19            # 13 families: G-PM 2 theorems, 8 substantive Erdos families 13 theorems, 4 minor families 4 theorems (PACKET.md sections 0-2)
+  theorems_claimed: 24            # 13 families: G-PM 2 theorems, 8 substantive Erdos families 13 theorems, 4 minor families 4 theorems (PACKET.md sections 0-2)
   build_time: "about one minute per file"
   other: "13 claimed families (9 substantive + 4 minor); 5 optional families with 8 theorems in bundle_optional (5 files, 1532 lines), not claimed by default; verified pool 63 rows, 56 distinct theorems, 36 families, 61 pass, 2 rejected (PACKET.md section 0); 4155 pull-request heads and 328 code-search files scanned for prior art"
 attempts:

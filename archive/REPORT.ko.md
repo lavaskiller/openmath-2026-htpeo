@@ -9,7 +9,7 @@ English: [REPORT.md](REPORT.md)
 - 무엇을 냈는가:
   - ramsey-k4-multiplicity: K4 Ramsey 다중도 상수의 상계 c_4 ≤ 0.030139933996…(hill 기준값보다 2.34·10^-6 낮음). **Lean 커널 검증**. 2026-10-02T16:23Z 조회 기준 hill 순위: 검증 보드 12명 중 1위, 동률 없음(`archive/leaderboards/`에서 **계산으로 확인**; 조회 시점의 값이며 최종 순위가 아님).
   - dms-star6: Dvořák–Mohar–Šámal 추측의 부분 결과(무한 족, 14꼭짓점 이하, 동치 재서술, 조건부 환원). **Lean 커널 검증**. 추측 자체는 증명하지 못함.
-  - erdos-m2-formalizations: 알려진 결과의 형식화 13개 묶음(M2, 패킷 v2). **Lean 커널 검증**.
+  - erdos-m2-formalizations: 알려진 결과의 형식화 17개 묶음(10-03에 E477, E358, E619, E1148을 추가하기 전에는 13개)(M2, 패킷 v2). **Lean 커널 검증**.
   - erdos-1038: TODO(담당 팀원).
   - Lean 산출물이 없는 팀원의 hill 결과(같은 조회, **계산으로 확인**): Busy Beaver 6 인증서, @n0rang2, 공동 1위(12명 중 3명); Kobon 삼각형(보드 n = 18), @thomasoh0408, 공동 1위(15명 중 12명); K4 Ramsey, @hl728, 최종(held-out) 보드의 유일한 기록(1명)이고 검증 보드 12명 중 5위; K4 Ramsey, @n0rang2, 12명 중 8위. 공동 1위인 두 결과는 보드의 최고값을 재현한 것이며 새 수학으로 주장하지 않음. 파일: `entries/hills/`(담당자가 추가 예정).
 - 심사 결과: TODO(나오면 추가).

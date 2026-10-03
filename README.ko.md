@@ -35,7 +35,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 |---|---|---|---|---|---|---|
 | [`ramsey-k4-multiplicity`](entries/ramsey-k4-multiplicity/) | K4 Ramsey 다중도 상수 c_4 (상계) | 새 결과 | c_4 ≤ 0.030139911990 (hill 지표 `density_ppt` 30,139,911,990). 이전 최고: 10486266368/768^4 ≈ 0.030142273432 (30,142,273,432), McKay, hill 기준값. | 13계정 중 1위 (검증 보드, 단독 선두) | Lean 4.33.1, 표준 공리, 모듈별 빌드; hill 실험 통과 | [packet](entries/ramsey-k4-multiplicity/PACKET.md) · [theorem](entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Final.lean#L39) · [axioms](entries/ramsey-k4-multiplicity/artifact/lean_v2/logs/RamseyCert.Final.log) · [hill report](entries/ramsey-k4-multiplicity/artifact/runs/report_bc2c24e3.json) |
 | [`dms-star6`](entries/dms-star6/) | Dvořák–Mohar–Šámal 추측: subcubic 그래프의 star chromatic index ≤ 6 (미해결; 알려진 최선의 상계 7) | 부분 결과 | 추측 자체는 증명하지 못함. 증명한 것: flower·Goldberg snark, GP(n,k) (k ≤ 15), Möbius 사다리는 5색; 14꼭짓점 이하의 모든 bridgeless 3정칙 다중그래프는 6색; 동치 `dms_iff_cubic16`; 이름 붙인 미해결 가설들로의 환원. | — | Lean 4.33.1, 표준 공리; `lake build`(pack3), 모듈별 빌드(pack4, pack5) | [packet](entries/dms-star6/PACKET.md) · [families](entries/dms-star6/artifact/lean/pack4/src/Families.lean#L68) · [≤ 14 vertices](entries/dms-star6/artifact/lean/pack5/src/Star6Corollaries.lean#L48) · [equivalence](entries/dms-star6/artifact/lean/pack5/src/Star6Equiv.lean#L174) · [axioms](entries/dms-star6/artifact/lean/pack3/build/axioms.log) |
-| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | 에르되시 문제 12개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭 | 알려진 결과의 형식화 | 13개 묶음, 정리 19개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함. | — | Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일 | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
+| [`erdos-m2-formalizations`](entries/erdos-m2-formalizations/) | 에르되시 문제 16개에 딸린 알려진 결과(formal-conjectures 명제)와 bridgeless 3정칙 그래프의 완벽 매칭 | 알려진 결과의 형식화 | 17개 묶음, 정리 24개. Schönberger 정리와 Petersen 정리(연결된 경우) 포함. 패킷에 적은 검색에서 선행 형식 증명을 찾지 못함. | — | Lean 4.33.1, 표준 공리, 파일별 컴파일; 명제가 고정한 formal-conjectures 커밋과 동일 | [packet](entries/erdos-m2-formalizations/PACKET.md) · [files](entries/erdos-m2-formalizations/artifact/bundle/) · [Petersen](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean#L155) · [expected axioms](entries/erdos-m2-formalizations/artifact/VERIFY.md) |
 | `erdos-1038` | 에르되시 문제 #1038 | 담당 팀원 보고 | 팀원이 완전한 Lean 풀이를 보고함. 아직 이 저장소에 없음. | — | Lean 4.34.1 (보고된 값, 여기서 재확인하지 않음) | 담당 팀원이 추가 예정 |
 
 **팀원의 hill 결과** (AutoLab 보드의 계정별 최고 기록; 동률은 같은 순위)
@@ -159,10 +159,10 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 | 항목 | 출력 토큰 | 입력(캐시 제외) | 캐시 토큰 | 세션 수 | 기록된 wall 시간 | Lean 줄 수 | 주장 정리 수 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `dms-star6` | 78,313,222 | 79,895,063 | 9,635,136,505 | 2,094 | 77.8 + | 81,622 | 45 |
-| `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 19 |
+| `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 24 |
 | `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 13.1 + | 104,665 | 8 |
 | shared/steering | 2,165,675 | 5,130 | 923,843,294 | 19 |  |  |  |
-| **합계** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **72** |
+| **합계** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **77** |
 <!-- RESOURCES:END -->
 
 "+"는 수치가 없는 계산 행이 있다는 뜻입니다. job들이 동시에 돌았으므로 wall 시간의 합은 경과 시간도 CPU 시간도 아닙니다. 원본과 출처: [archive/stats/SUMMARY.md](archive/stats/SUMMARY.md), [archive/stats/](archive/stats/). 그림은 `python tools/make_charts.py`, 표는 `python tools/make_results_table.py`로 다시 만듭니다.

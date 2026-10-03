@@ -88,6 +88,27 @@ No `native_decide`, `axiom`, `unsafe`, `implemented_by`, `admit` in any file; no
 ```
 (proved in the file but NOT claimed: `Erdos1136.erdos_1136.variants.upper_bound`)
 
+`Erdos477.lean`  (sha256 `6f36a324a5c890fa4c7e38df2da86e8a12144bfc29877d7de99e14b78bfc3e1d`)  -- added 2026-10-03
+```
+'Erdos477.erdos_477.variants.S_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos477.erdos_477.variants.degree_two_dvd_condition_b_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+`Erdos358.lean`  (sha256 `bbaccc0fbda2b195d0bed0327d46d4eaf0a2ce29616cb565eceb37df7b712c68`)  -- added 2026-10-03
+```
+'Erdos358.f_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+`Erdos619.lean`  (sha256 `f596f21e1353bf6e9292d7f0cd9772c265dfc705ca855868e0a9e166149132ab`)  -- added 2026-10-03
+```
+'Erdos619.erdos_619.variants.add_edges_diam_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+`Erdos1148.lean`  (sha256 `e44647fb459d160b9c3499ba926a048c35c608587d54f87c5a66fa12c935534e`)  -- added 2026-10-03
+```
+'Erdos1148.erdos_1148.variants.weaker' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
 ### bundle_optional/ (not claimed by default, see PACKET_FINAL_v2.md section 3)
 
 `Erdos757.lean`  (sha256 `a1260c57f324cbc3e0794bdc32dfb94d4c905e2643eb8e347b8b07fea3d6043f`)
