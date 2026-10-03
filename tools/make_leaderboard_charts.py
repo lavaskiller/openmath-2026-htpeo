@@ -27,8 +27,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import make_charts as mc  # noqa: E402  (palette, typography, Svg helper)
 
-SNAPSHOT = "2026-10-02T18:04Z"
-SNAPSHOT_KST = "2026-10-03 03:04 KST"
+SNAPSHOT = "2026-10-03T02:44Z"
+SNAPSHOT_KST = "2026-10-03 11:44 KST"
 TEAM = ["lavaskiller", "hl728", "n0rang2", "thomasoh0408"]
 HILLS = [   # organisers' list: (file stem, display name, Korean name, folder prefix under entries/hills/)
     ("kobon-triangles", "Kobon triangles", "Kobon 삼각형", "kobon-triangles"),

@@ -1,0 +1,5 @@
+'RamseyCert.sol_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_lt_ref' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RamseyCert.sol_ppt' depends on axioms: [propext, Classical.choice, Quot.sound]
+TIME 3.72s MAXRSS 7545592KB

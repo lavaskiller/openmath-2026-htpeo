@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-10-02T18:04Z",
+ "snapshot": "2026-10-03T02:44Z",
  "ranking": "standard competition ranking over the full metric tuple",
  "boards": [
   {
@@ -207,20 +207,20 @@
      "api_rank": 1,
      "metrics": {
       "reference_beaten": 1,
-      "density_ppt": 30139933996
+      "density_ppt": 30139911990
      },
-     "timestamp": "2026-10-02T11:38:08Z"
+     "timestamp": "2026-10-03T02:43:23Z"
     },
     {
-     "owner": "madhanj05",
+     "owner": "wenyi-ai-wang",
      "rank": 2,
      "tied": 1,
      "api_rank": 2,
      "metrics": {
       "reference_beaten": 1,
-      "density_ppt": 30140425027
+      "density_ppt": 30140136033
      },
-     "timestamp": "2026-10-02T12:20:09Z"
+     "timestamp": "2026-10-03T01:54:44Z"
     },
     {
      "owner": "a-hamdi",
@@ -229,26 +229,37 @@
      "api_rank": 3,
      "metrics": {
       "reference_beaten": 1,
-      "density_ppt": 30140861400
+      "density_ppt": 30140156188
      },
-     "timestamp": "2026-10-02T16:55:47Z"
+     "timestamp": "2026-10-03T02:04:01Z"
     },
     {
-     "owner": "rachtsy",
+     "owner": "madhanj05",
      "rank": 4,
      "tied": 1,
      "api_rank": 4,
      "metrics": {
       "reference_beaten": 1,
-      "density_ppt": 30140932308
+      "density_ppt": 30140335647
      },
-     "timestamp": "2026-10-02T05:51:27Z"
+     "timestamp": "2026-10-02T23:31:02Z"
     },
     {
-     "owner": "hl728",
+     "owner": "rachtsy",
      "rank": 5,
      "tied": 1,
      "api_rank": 5,
+     "metrics": {
+      "reference_beaten": 1,
+      "density_ppt": 30140930507
+     },
+     "timestamp": "2026-10-02T21:26:48Z"
+    },
+    {
+     "owner": "hl728",
+     "rank": 6,
+     "tied": 1,
+     "api_rank": 6,
      "metrics": {
       "reference_beaten": 1,
       "density_ppt": 30141720946
@@ -257,9 +268,9 @@
     },
     {
      "owner": "yavol",
-     "rank": 6,
+     "rank": 7,
      "tied": 1,
-     "api_rank": 6,
+     "api_rank": 7,
      "metrics": {
       "reference_beaten": 1,
       "density_ppt": 30141721098
@@ -268,9 +279,9 @@
     },
     {
      "owner": "danamouk",
-     "rank": 7,
+     "rank": 8,
      "tied": 1,
-     "api_rank": 7,
+     "api_rank": 8,
      "metrics": {
       "reference_beaten": 1,
       "density_ppt": 30142036534
@@ -279,9 +290,9 @@
     },
     {
      "owner": "n0rang2",
-     "rank": 8,
+     "rank": 9,
      "tied": 1,
-     "api_rank": 8,
+     "api_rank": 9,
      "metrics": {
       "reference_beaten": 1,
       "density_ppt": 30142185839
@@ -290,9 +301,9 @@
     },
     {
      "owner": "shaff622",
-     "rank": 9,
+     "rank": 10,
      "tied": 1,
-     "api_rank": 9,
+     "api_rank": 10,
      "metrics": {
       "reference_beaten": 1,
       "density_ppt": 30142250482
@@ -301,9 +312,9 @@
     },
     {
      "owner": "rohith18p",
-     "rank": 10,
+     "rank": 11,
      "tied": 1,
-     "api_rank": 10,
+     "api_rank": 11,
      "metrics": {
       "reference_beaten": 0,
       "density_ppt": 30142314506
@@ -312,9 +323,9 @@
     },
     {
      "owner": "ottogin",
-     "rank": 11,
+     "rank": 12,
      "tied": 1,
-     "api_rank": 11,
+     "api_rank": 12,
      "metrics": {
       "reference_beaten": 0,
       "density_ppt": 30142649543
@@ -323,9 +334,9 @@
     },
     {
      "owner": "vyahhi",
-     "rank": 12,
+     "rank": 13,
      "tied": 1,
-     "api_rank": 12,
+     "api_rank": 13,
      "metrics": {
       "reference_beaten": 0,
       "density_ppt": 30144857036
@@ -365,7 +376,7 @@
     {
      "owner": "1c1jp5dhwy",
      "rank": 2,
-     "tied": 6,
+     "tied": 7,
      "api_rank": 2,
      "metrics": {
       "rank": 23,
@@ -376,7 +387,7 @@
     {
      "owner": "a-hamdi",
      "rank": 2,
-     "tied": 6,
+     "tied": 7,
      "api_rank": 3,
      "metrics": {
       "rank": 23,
@@ -387,7 +398,7 @@
     {
      "owner": "advaith-appajodu",
      "rank": 2,
-     "tied": 6,
+     "tied": 7,
      "api_rank": 4,
      "metrics": {
       "rank": 23,
@@ -396,10 +407,21 @@
      "timestamp": "2026-09-28T04:32:31Z"
     },
     {
+     "owner": "lavaskiller",
+     "rank": 2,
+     "tied": 7,
+     "api_rank": 5,
+     "metrics": {
+      "rank": 23,
+      "support": 139
+     },
+     "timestamp": "2026-10-02T22:21:48Z"
+    },
+    {
      "owner": "rachtsy",
      "rank": 2,
-     "tied": 6,
-     "api_rank": 5,
+     "tied": 7,
+     "api_rank": 6,
      "metrics": {
       "rank": 23,
       "support": 139
@@ -409,8 +431,8 @@
     {
      "owner": "wenyi-ai-wang",
      "rank": 2,
-     "tied": 6,
-     "api_rank": 6,
+     "tied": 7,
+     "api_rank": 7,
      "metrics": {
       "rank": 23,
       "support": 139
@@ -420,8 +442,8 @@
     {
      "owner": "wilsonwu-ai",
      "rank": 2,
-     "tied": 6,
-     "api_rank": 7,
+     "tied": 7,
+     "api_rank": 8,
      "metrics": {
       "rank": 23,
       "support": 139
@@ -430,9 +452,9 @@
     },
     {
      "owner": "connorbuchheit",
-     "rank": 8,
+     "rank": 9,
      "tied": 3,
-     "api_rank": 8,
+     "api_rank": 9,
      "metrics": {
       "rank": 23,
       "support": 153
@@ -441,9 +463,9 @@
     },
     {
      "owner": "ottogin",
-     "rank": 8,
+     "rank": 9,
      "tied": 3,
-     "api_rank": 9,
+     "api_rank": 10,
      "metrics": {
       "rank": 23,
       "support": 153
@@ -452,9 +474,9 @@
     },
     {
      "owner": "srirangam-r",
-     "rank": 8,
+     "rank": 9,
      "tied": 3,
-     "api_rank": 10,
+     "api_rank": 11,
      "metrics": {
       "rank": 23,
       "support": 153
@@ -632,10 +654,22 @@
      "timestamp": "2026-09-29T04:12:10Z"
     },
     {
-     "owner": "a-hamdi",
+     "owner": "lavaskiller",
      "rank": 5,
      "tied": 1,
      "api_rank": 5,
+     "metrics": {
+      "coverage_ppm": 1000000,
+      "min_descent_ppm": 525390,
+      "rule_count": 234
+     },
+     "timestamp": "2026-10-02T22:05:20Z"
+    },
+    {
+     "owner": "a-hamdi",
+     "rank": 6,
+     "tied": 1,
+     "api_rank": 6,
      "metrics": {
       "coverage_ppm": 1000000,
       "min_descent_ppm": 525390,
@@ -645,9 +679,9 @@
     },
     {
      "owner": "felixisaac",
-     "rank": 6,
+     "rank": 7,
      "tied": 1,
-     "api_rank": 6,
+     "api_rank": 7,
      "metrics": {
       "coverage_ppm": 1000000,
       "min_descent_ppm": 525390,
@@ -657,9 +691,9 @@
     },
     {
      "owner": "chaewon-research",
-     "rank": 7,
+     "rank": 8,
      "tied": 1,
-     "api_rank": 7,
+     "api_rank": 8,
      "metrics": {
       "coverage_ppm": 1000000,
       "min_descent_ppm": 525390,

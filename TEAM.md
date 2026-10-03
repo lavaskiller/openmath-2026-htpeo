@@ -25,7 +25,7 @@ After filling in, update the role line under your avatar in `README.md` and `REA
 Already known:
 
 - AutoLab account `lavaskiller` (owner of the Ramsey project `clique-cluster-ramsey-multiplicity-attempt-16`)
-- K4 Ramsey multiplicity hill: 1st of 12 (validation board, no ties), 30,139,933,996 ppt, 2026-10-02
+- K4 Ramsey multiplicity hill: 1st of 13 (validation board, no ties), 30,139,911,990 ppt, 2026-10-03 (earlier 30,139,933,996 on 2026-10-02)
 - Kobon triangles hill, board n = 39: 1st of 3, alone, 471 triangles, 2026-10-03 (experiment `38b81af6`); possibly a new best known value, literature check not human-verified. Files: [`entries/hills/kobon-n39-lavaskiller/`](entries/hills/kobon-n39-lavaskiller/)
 - Grothendieck constant witnesses hill: tied for 1st, 7 of 9 accounts, gap_ppm 1,414,213 / matrix_area 4 / certificate_bits 80, 2026-10-03 (experiment `2552e287`); known construction, not claimed as new. Files: [`entries/hills/grothendieck-lavaskiller/`](entries/hills/grothendieck-lavaskiller/)
 - Commit author of this repository
