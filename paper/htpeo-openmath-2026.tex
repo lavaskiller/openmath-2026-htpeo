@@ -6,16 +6,12 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs,array}
-\usepackage{authblk}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl}
 \setlength{\emergencystretch}{2em}
 
-\renewcommand\Affilfont{\small}
-\renewcommand\Authands{, }
-\setlength{\affilsep}{0.6em}
 
 \lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,frame=single,
   rulecolor=\color{gray!50},xleftmargin=1.2em,xrightmargin=1.2em,aboveskip=0.8em,belowskip=0.8em,
@@ -30,21 +26,17 @@
 \title{An improved upper bound on the $K_4$ Ramsey multiplicity constant\\
 and other formally verified results from OpenMath~2026}
 
-\author[1,2]{Woohyuk Kang}
-\author[3]{Hyunjin Lee}
-\author[4]{Sanghyeon Lee}
-\author[5]{Youchan Oh}
-\affil[1]{HTPeo}
-\affil[2]{Kyung Hee University}
-\affil[3]{University of Cambridge}
-\affil[4]{Korea University}
-\affil[5]{Seoul National University}
-\affil[ ]{\textit{E-mail:} \texttt{massis.kang@htpeo.com} (W.~Kang), \texttt{hl728@cam.ac.uk} (H.~Lee),\\
-\texttt{ymhlsh4065@korea.ac.kr} (S.~Lee), \texttt{thomasoh0408@snu.ac.kr} (Y.~Oh)}
+\author{Woohyuk Kang\textsuperscript{1,2} \quad Hyunjin Lee\textsuperscript{3} \quad
+Sanghyeon Lee\textsuperscript{4} \quad Youchan Oh\textsuperscript{5}\\[6pt]
+\parbox{0.8\textwidth}{\centering\small\mbox{\textsuperscript{1}HTPeo} \quad \mbox{\textsuperscript{2}Kyung Hee University} \quad
+\mbox{\textsuperscript{3}University of Cambridge}\\ \mbox{\textsuperscript{4}Korea University} \quad
+\mbox{\textsuperscript{5}Seoul National University}}}
 \date{October 2026}
 
 \begin{document}
 \maketitle
+{\renewcommand{\thefootnote}{}\footnotetext{\textit{E-mail addresses:} \texttt{massis.kang@htpeo.com} (W.~Kang),
+\texttt{hl728@cam.ac.uk} (H.~Lee), \texttt{ymhlsh4065@korea.ac.kr} (S.~Lee), \texttt{thomasoh0408@snu.ac.kr} (Y.~Oh).}}
 
 \begin{abstract}
 We report the results obtained by our team during OpenMath~2026, a one-week event in which only formally verified
@@ -71,11 +63,13 @@ which system, and records what was already known.
 \paragraph{Ramsey multiplicity.}
 Let $\mathrm{mono}_{K_4}(m)$ be the least number of monochromatic copies of $K_4$ over all two-colourings of the edges
 of $K_m$, and $c_4=\lim_{m\to\infty}\mathrm{mono}_{K_4}(m)/\binom m4$. Erd\H{o}s conjectured $c_4=1/32$; Thomason
-disproved this, and subsequent constructions lowered the upper bound in small steps, as surveyed by Parczyk,
-Pokutta, Spiegel and Szab\'o~\cite{ppss}. They proved $c_4 \le 4551721\cdot2^{-24}\cdot3^{-2} < 0.03015$ from a
-Cayley graph on 768 vertices, and the final note of their paper reports McKay's improvement to
-$10486266368/768^4 \approx 0.0301422734$ by local search from the same graph. The best lower bound cited there is
-$0.0296$. We prove the following.
+disproved this with a construction giving $c_4<0.03050$ and later improved it, and further small improvements
+followed, among them one by Even-Zohar and Linial, as described by Parczyk, Pokutta, Spiegel and
+Szab\'o~\cite{ppss}. They proved $c_4 \le 4551721\cdot2^{-24}\cdot3^{-2} < 0.03015$ from the blow-up sequence of a
+Cayley graph on 768 vertices, and a note at the end of their paper reports that McKay, by local search starting from
+that graph, found a graph with value $10486266368/768^4 \approx 0.0301422734$. The best known lower bound,
+$c_4>0.0296$, is due to Grzesik, Lee, Lidick\'y and Volec using flag algebras, as cited in~\cite{ppss}. We prove the
+following.
 
 \begin{theorem}\label{thm:ramsey}
 $c_4 \le \dfrac{200137750014677779172692777477}{6640289795261907019148161833841} \approx 0.030139911990.$
@@ -87,12 +81,13 @@ including the existence of the limit, is checked in Lean (Section~\ref{sec:ramse
 
 \paragraph{Star edge-colouring.}
 A star edge-colouring is a proper edge-colouring without bichromatic paths or cycles of length four. Dvo\v{r}\'ak,
-Mohar and \v{S}\'amal~\cite{dms} asked whether every subcubic multigraph has star chromatic index at most~6; the best
-general bound we know is~7. We do not settle this question. In Section~\ref{sec:dms} we prove in Lean that the
+Mohar and \v{S}\'amal~\cite{dms} proved that every subcubic graph has star chromatic index at most~7 and conjectured
+that $6$ colours always suffice. We do not settle the conjecture. Our formal development works with loopless
+multigraphs, which include the subcubic simple graphs of the conjecture. In Section~\ref{sec:dms} we prove in Lean that the
 flower snarks, the Goldberg snarks, the generalized Petersen graphs $GP(n,k)$ with $k\le15$ and the M\"obius ladders
 have star chromatic index at most~5, that every bridgeless cubic loopless multigraph on at most 14 vertices has star
-chromatic index at most~6, and that the conjecture is equivalent to a statement about bridgeless cubic multigraphs
-on at least 16 vertices.
+chromatic index at most~6, and that the multigraph form of the conjecture is equivalent to a statement about
+bridgeless cubic multigraphs on at least 16 vertices.
 
 \paragraph{Formalizations and scored tasks.}
 Section~\ref{sec:m2} describes Lean proofs of known results attached to sixteen Erd\H{o}s problems~\cite{erdosproblems},
@@ -165,7 +160,7 @@ Every bridgeless cubic loopless multigraph on at most $14$ vertices satisfies $\
 \end{theorem}
 
 \begin{theorem}\label{thm:equiv}
-The Dvo\v{r}\'ak--Mohar--\v{S}\'amal conjecture holds if and only if every bridgeless cubic loopless multigraph on at
+Every subcubic loopless multigraph has star chromatic index at most~$6$ if and only if every bridgeless cubic loopless multigraph on at
 least $16$ vertices, together with each of its leaf-extended subgraphs, is star $6$-edge-colourable
 (\lean{dms\_iff\_cubic16}).
 \end{theorem}
@@ -235,8 +230,9 @@ Starting from the F\"uredi--Pal\'asti arrangement~\cite{fp}, which gives 468 tri
 annealing on the line parameters produced 39 lines with integer coefficients that bound 471 triangles; the upper
 bound for 39 lines is $\lfloor 39\cdot 37/3\rfloor=481$. The certificate \lean{Kobon.kobon\_nonoverlapping} states that
 there are 39 pairwise distinct lines and 471 triples of them, each bounding a non-degenerate triangle whose open
-interior meets none of the lines, the 471 triangles being pairwise disjoint. We have not checked the literature for
-a larger published value for 39 lines beyond OEIS~A006066~\cite{oeis}, and we do not claim the value as new.
+interior meets none of the lines, the 471 triangles being pairwise disjoint. The table of known values in
+OEIS~A006066~\cite{oeis} lists no value for 39 lines; we have not searched the literature further and do not claim
+the value as new.
 
 \paragraph{Busy Beaver.}
 The six-state, two-symbol machine
@@ -253,7 +249,7 @@ $1393/985$, and at least $\sqrt2$ with exact vectors; Tsirelson's bound shows th
 better. These facts are classical.
 
 \paragraph{Other tasks.}
-The remaining results reproduce known constructions; the matrix-multiplication scheme is taken from the database of
+The remaining results reproduce known constructions; the matrix-multiplication scheme is one of the rank-23 schemes published by
 Heule, Kauers and Seidl~\cite{hks}, and searches for support below 139 were unsuccessful. A further result of a team
 member is the only entry on the held-out evaluation of the Ramsey task, with a slightly weaker template.
 
@@ -294,19 +290,26 @@ Erd\H{o}s statements and definitions are those of the formal-conjectures project
 Lean~\cite{lean4} and Mathlib~\cite{mathlib}.
 
 \begin{thebibliography}{99}\small
-\bibitem{dms} Z.~Dvo\v{r}\'ak, B.~Mohar and R.~\v{S}\'amal, Star chromatic index, \emph{J.~Graph Theory} 72 (2013),
-arXiv:1011.3376.
-\bibitem{erdosproblems} T.~F.~Bloom, Erd\H{o}s problems, \url{https://www.erdosproblems.com}.
-\bibitem{fc} Google DeepMind, Formal Conjectures, \url{https://github.com/google-deepmind/formal-conjectures}.
+\bibitem{dms} Z.~Dvo\v{r}\'ak, B.~Mohar and R.~\v{S}\'amal, Star chromatic index, \emph{J.~Graph Theory} 72
+(2013), no.~3, 313--326, doi:10.1002/jgt.21644; arXiv:1011.3376.
+\bibitem{erdosproblems} T.~F.~Bloom, Erd\H{o}s problems, \url{https://www.erdosproblems.com}, accessed October 2026.
+\bibitem{fc} Google DeepMind, Formal Conjectures, \url{https://github.com/google-deepmind/formal-conjectures},
+commit \texttt{df3f12d7}.
 \bibitem{fp} Z.~F\"uredi and I.~Pal\'asti, Arrangements of lines with a large number of triangles, \emph{Proc.
-Amer. Math. Soc.} 92 (1984).
-\bibitem{handbook} OpenMath~2026 Competition and Judging Handbook, \url{https://rsihouse.ai/openmath/handbook.pdf}.
-\bibitem{hks} M.~J.~H.~Heule, M.~Kauers and M.~Seidl, New ways to multiply $3\times3$ matrices, arXiv:1905.10192.
-\bibitem{lean4} L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, \emph{CADE} 2021.
-\bibitem{mathlib} The mathlib Community, The Lean mathematical library, \emph{CPP} 2020.
-\bibitem{oeis} OEIS Foundation, Sequence A006066, \url{https://oeis.org/A006066}.
+Amer. Math. Soc.} 92 (1984), 561--566, doi:10.1090/S0002-9939-1984-0760946-2.
+\bibitem{handbook} Open Problems Hack at MIT (OpenMath~2026), Competition and Judging Handbook,
+\url{https://rsihouse.ai/openmath/handbook.pdf}.
+\bibitem{hks} M.~J.~H.~Heule, M.~Kauers and M.~Seidl, New ways to multiply $3\times3$-matrices, arXiv:1905.10192,
+2019.
+\bibitem{lean4} L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated
+Deduction -- CADE~28}, Lecture Notes in Comput. Sci., Springer, 2021, 625--635, doi:10.1007/978-3-030-79876-5\_37.
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN
+International Conference on Certified Programs and Proofs (CPP~2020)}, ACM, 2020, 367--381,
+doi:10.1145/3372885.3373824; arXiv:1910.09336.
+\bibitem{oeis} OEIS Foundation, Kobon triangles: maximal number of nonoverlapping triangles that can be formed from
+$n$ lines drawn in the plane, Sequence A006066, \url{https://oeis.org/A006066}, accessed October 2026.
 \bibitem{ppss} O.~Parczyk, S.~Pokutta, C.~Spiegel and T.~Szab\'o, New Ramsey multiplicity bounds and search
-heuristics, arXiv:2206.04036.
+heuristics, \emph{Found. Comput. Math.} 25 (2025), 1777--1814, doi:10.1007/s10208-024-09675-6; arXiv:2206.04036.
 \bibitem{repo} Lean sources, certificates and records of this work,
 \url{https://github.com/lavaskiller/openmath-2026-htpeo}; state at the deadline: commit \texttt{76c63b8}.
 \end{thebibliography}
