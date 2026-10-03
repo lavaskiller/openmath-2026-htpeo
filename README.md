@@ -325,10 +325,10 @@ Team **HTPeo** (team entrant).
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ. CS&amp;E</sub><br/><sub>agent harness (DMS), Ramsey search and Lean certificate, Erdős formalizations, packets</sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo; Kyung Hee University</sub><br/><sub>agent harness (DMS), Ramsey search and Lean certificate, Erdős formalizations, packets</sub></td>
     <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>Hyunjin Lee<br/>University of Cambridge<br/>K4 Ramsey hill (validation and final-board evaluation)</sub></td>
-    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Sanghyeon Lee<br/>Korea Univ. Security<br/>Busy Beaver 6 and K4 Ramsey hills</sub></td>
-    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Youchan Oh<br/>Seoul National Univ. TI<br/>Kobon triangles hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Sanghyeon Lee<br/>Korea University<br/>Busy Beaver 6 and K4 Ramsey hills</sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Youchan Oh<br/>Seoul National University<br/>Kobon triangles hill</sub></td>
   </tr>
 </table>
 

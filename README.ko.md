@@ -188,10 +188,10 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 <table>
   <tr>
-    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo, KyungHee Univ. CS&amp;E</sub><br/><sub>에이전트 하네스(DMS), Ramsey 탐색과 Lean 인증서, 에르되시 형식화, 패킷</sub></td>
+    <td align="center" width="170"><a href="https://github.com/lavaskiller"><img src="https://github.com/lavaskiller.png?size=96" width="96" height="96" alt="lavaskiller"/><br/><sub><b>@lavaskiller</b></sub></a><br/><sub>HTPeo; Kyung Hee University</sub><br/><sub>에이전트 하네스(DMS), Ramsey 탐색과 Lean 인증서, 에르되시 형식화, 패킷</sub></td>
     <td align="center" width="170"><a href="https://github.com/hl728"><img src="https://github.com/hl728.png?size=96" width="96" height="96" alt="hl728"/><br/><sub><b>@hl728</b></sub></a><br/><sub>Hyunjin Lee<br/>University of Cambridge<br/>K4 Ramsey hill (검증 보드와 최종 보드 평가)</sub></td>
-    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Sanghyeon Lee<br/>Korea Univ. Security<br/>Busy Beaver 6, K4 Ramsey hill</sub></td>
-    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Youchan Oh<br/>Seoul National Univ. TI<br/>Kobon 삼각형 hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/n0rang2"><img src="https://github.com/n0rang2.png?size=96" width="96" height="96" alt="n0rang2"/><br/><sub><b>@n0rang2</b></sub></a><br/><sub>Sanghyeon Lee<br/>Korea University<br/>Busy Beaver 6, K4 Ramsey hill</sub></td>
+    <td align="center" width="170"><a href="https://github.com/thomasoh0408"><img src="https://github.com/thomasoh0408.png?size=96" width="96" height="96" alt="thomasoh0408"/><br/><sub><b>@thomasoh0408</b></sub></a><br/><sub>Youchan Oh<br/>Seoul National University<br/>Kobon 삼각형 hill</sub></td>
   </tr>
 </table>
 

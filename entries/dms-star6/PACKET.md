@@ -7,10 +7,10 @@
 
   | Name | Affiliation | E-mail | Role / contribution |
   |---|---|---|---|
-  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | lead@htpeo.com | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
+  | Woohyuk Kang | HTPeo; Kyung Hee University | lead@htpeo.com | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
   | Hyunjin Lee (@hl728) | University of Cambridge | hl728@cam.ac.uk | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
-  | Sanghyeon Lee (@n0rang2) | Korea Univ. Security | ymhlsh4065@korea.ac.kr | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
-  | Youchan Oh (@thomasoh0408) | Seoul National Univ. TI | thomasoh0408@snu.ac.kr | Kobon triangles hill (n = 18) |
+  | Sanghyeon Lee (@n0rang2) | Korea University | ymhlsh4065@korea.ac.kr | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
+  | Youchan Oh (@thomasoh0408) | Seoul National University | thomasoh0408@snu.ac.kr | Kobon triangles hill (n = 18) |
 
 * **Human review:** none. No team member reviewed the proofs or the statement-correspondence notes of this packet line by line; Woohyuk Kang (@lavaskiller) and Hyunjin Lee (@hl728) declared on 2026-10-03 that they did no human review, and the other members did not state one. The checks are the Lean kernel, the build and axiom logs, scripts, and cross-checks by AI models.
 * **Repository:** https://github.com/lavaskiller/openmath-2026-htpeo (private to the team until the competition deadline; it will be opened, or access given to the organisers, on request / after the deadline) — this entry is the folder `entries/dms-star6`; the submitted state is fixed by the git tag `dms-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/dms-v1/entries/dms-star6). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
