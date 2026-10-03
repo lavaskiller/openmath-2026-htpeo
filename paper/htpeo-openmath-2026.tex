@@ -1,0 +1,222 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,tabularx,longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\setlist{nosep,leftmargin=1.4em}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,frame=single,rulecolor=\color{gray!50},
+  literate={∃}{{$\exists$}}1 {∀}{{$\forall$}}1 {ℝ}{{$\mathbb{R}$}}1 {ℕ}{{$\mathbb{N}$}}1 {ℤ}{{$\mathbb{Z}$}}1
+           {↔}{{$\leftrightarrow$}}1 {≤}{{$\le$}}1 {→}{{$\to$}}1 {∧}{{$\wedge$}}1 {¬}{{$\neg$}}1 {≠}{{$\ne$}}1
+           {×}{{$\times$}}1 {ˢ}{{$^s$}}1 {•}{{$\cdot$}}1 {∣}{{$\mid$}}1}
+\newcommand{\repo}{\url{https://github.com/lavaskiller/openmath-2026-htpeo}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{Lean-checked results of team HTPeo at OpenMath 2026:\\
+a new upper bound for the $K_4$ Ramsey multiplicity constant, partial results on the
+Dvo\v{r}\'ak--Mohar--\v{S}\'amal conjecture, and formalizations of known results}
+\author{Woohyuk Kang\thanks{HTPeo, Kyung Hee University, CS\&E. \texttt{woohyuk@khu.ac.kr}} \and
+Hyunjin Lee\thanks{University of Cambridge. \texttt{hl728@cam.ac.uk}} \and
+Sanghyeon Lee\thanks{Korea University, Security. \texttt{ymhlsh4065@korea.ac.kr}} \and
+Youchan Oh\thanks{Seoul National University, TI. \texttt{thomasoh0408@snu.ac.kr}}}
+\date{3 October 2026\\[2pt]\small Repository: \repo, tag \texttt{submission-2026-10-03-v8}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We report what team HTPeo obtained during the OpenMath 2026 event (27 September -- 3 October 2026), in which only
+formalized results count. (1)~A weighted two-colouring template on 1024 blocks shows
+$c_4 \le 200137750014677779172692777477/6640289795261907019148161833841 \approx 0.0301399120$
+for the $K_4$ Ramsey multiplicity constant, below the previously best value $10486266368/768^4\approx0.0301422734$
+(McKay); the whole chain from the template to the bound on $c_4$ is checked in Lean~4 with standard axioms only.
+(2)~For the Dvo\v{r}\'ak--Mohar--\v{S}\'amal conjecture (star chromatic index of subcubic multigraphs at most~6) we do
+\emph{not} prove the conjecture; we prove in Lean star $5$-edge-colourings of several infinite families, star
+$6$-edge-colourability of all bridgeless cubic loopless multigraphs on at most 14 vertices, an equivalent form of the
+conjecture, and a reduction to named open hypotheses. (3)~We formalize known results attached to 16 Erd\H{o}s
+problems, stated exactly as in the formal-conjectures repository, and Sch\"onberger's and Petersen's theorems for
+Mathlib's \code{SimpleGraph} (17 families, 24 theorems). We also list our results on the competition's scored tasks
+(``hills''), three of which carry Lean certificates, and we state plainly what is not checked, what was already known,
+and what the work cost. Most of the mathematics and all of the Lean code were produced by AI systems under human
+direction; the human review was limited (Section~\ref{sec:provenance}).
+\end{abstract}
+
+\section{Setting}
+OpenMath 2026 (the handbook is titled \emph{Open Problems Hack at MIT}) ran from a status freeze at noon Eastern on
+27 September 2026 to the submission deadline at 00:00 EDT on 3 October. Problems are posed as \emph{hills} on the
+AutoLab platform: versioned tasks with an evaluator and a leaderboard. In the handbook's words a passing hill ``is not
+itself a mathematical proof''; formal checking, statement fidelity, literature status, attribution and review are
+separate gates. Our Ramsey and DMS entries are proposed under mode M3A (open problems outside the curated focus set),
+the formalizations under M2 (known mathematics, counted in families).
+
+All Lean results below use Lean~4.33.1 and Mathlib v4.33.1 (the Erd\H{o}s files: Mathlib as pinned by
+\code{google-deepmind/formal-conjectures} at commit \code{df3f12d7}). Every claimed theorem compiles with exit code~0
+and \code{\#print axioms} lists only \code{propext}, \code{Classical.choice} and \code{Quot.sound}. No claimed
+theorem depends on \code{sorry}, an added axiom, or \code{native\_decide}. The repository contains the sources, the
+build logs with the axiom output, checksums, and the exact commands.
+
+\section{The $K_4$ Ramsey multiplicity constant}
+Let $\mathrm{minMono}_{K_4}(m)$ be the least number of monochromatic $K_4$ over all red/blue colourings of the edges
+of $K_m$. The constant $c_4=\lim_m \mathrm{minMono}_{K_4}(m)/\binom m4$ exists. Thomason disproved Erd\H{o}s'
+conjecture $c_4=1/32$; the best published upper bound we are aware of is McKay's
+$10486266368/768^4\approx0.0301422734$, announced in the closing note of Parczyk, Pokutta, Spiegel and Szab\'o
+(arXiv:2206.04036v3), obtained by local search from a 768-vertex Cayley graph; the best lower bound cited there is
+$0.0296$ (Grzesik, Lee, Lidick\'y, Volec). McKay's value is the reference of the AutoLab hill
+\code{clique-cluster-ramsey-multiplicity}.
+
+\paragraph{Result.} A symmetric weighted template on 1024 blocks (integer weights, total $Q=50762939$, each pair of
+blocks and each block's interior coloured red or blue) has monochromatic-$K_4$ density
+\[
+\frac{N}{Q^4}=\frac{200137750014677779172692777477}{6640289795261907019148161833841}\approx 0.030139911990,
+\]
+i.e.\ hill metric $\lceil 10^{12}\cdot N/Q^4\rceil = 30{,}139{,}911{,}990$ against the reference $30{,}142{,}273{,}432$.
+Blowing the template up gives colourings of $K_m$ for all large $m$ with at most that density, hence
+\begin{lstlisting}
+theorem ramseyMultK4_limit_lt_ref :
+    ∃ L : ℝ, Filter.Tendsto (fun m : ℕ => (minMonoK4 m : ℝ) / (m.choose 4 : ℝ)) Filter.atTop (nhds L) ∧
+      L < 10486266368 / 768 ^ 4
+\end{lstlisting}
+together with \code{ramseyMultK4\_le\_sol} (the limit is at most the fraction above), \code{sol\_density},
+\code{sol\_ppt}, \code{sol\_symm} and \code{minMonoK4\_density\_le\_sol} (every $m\ge4$ satisfies the bound).
+
+\paragraph{How the proof is checked.} The finite computation (the number of monochromatic $K_4$ in the weighted
+template) is split into $2\times1024$ per-block kernel evaluations (\code{decide +kernel}) on a packed bit-mask
+representation whose agreement with the literal specification is proved once for all templates; the blow-up lemma,
+the existence of the limit (vertex-deletion averaging) and the comparison with the reference are ordinary Lean proofs.
+The certificate has 2048 generated chunk modules; it built with two processes in about two hours (3.9 CPU hours, at
+most 3.3~GB per process). The transcription of the template from JSON to Lean is done by a script and checked by a
+second script; it is not itself proved.
+
+\paragraph{How the template was found.} Starting from the hill's 768-vertex Cayley seed: simulated annealing and tabu
+search on the colour orbits under the automorphism group, splitting of near-twin blocks up to 1024 blocks, continuous
+weight optimisation with rounding to integers, and basin hopping; every candidate was re-scored exactly with the
+hill's own evaluator. A first template (density\_ppt 30,139,933,996, 2 October) was improved on 3 October and its
+certificate regenerated. On the hill's validation board the result is first of 13 accounts at the time of writing,
+224,043~ppt ahead of the second. It has no final-mode (held-out) evaluation; one attempt failed for a technical reason.
+The improvement is numerical (about $2.4\times10^{-6}$ in $c_4$) and does not determine $c_4$.
+
+\section{The Dvo\v{r}\'ak--Mohar--\v{S}\'amal conjecture}
+The conjecture states that every subcubic multigraph has star chromatic index at most~6 (a star edge-colouring is
+proper and has no bichromatic path or cycle of length four); the best published general bound we know is~7.
+\textbf{We do not prove the conjecture.} Proved in Lean (\code{entries/dms-star6}):
+\begin{itemize}
+\item star $5$-edge-colourings of the flower snarks $J_n$ ($n$ odd, $n\ge5$), the Goldberg snarks, the generalized
+Petersen graphs $GP(n,k)$ for all $1\le k\le 15$ and $n\ge 2k+1$ (except $GP(3,1)$), the M\"obius ladders and
+Petersen-type inflations, each as a statement for the whole infinite family;
+\item star $6$-edge-colourability of every bridgeless cubic loopless multigraph on at most 14 vertices;
+\item an equivalent form \code{dms\_iff\_cubic16} reducing the conjecture to bridgeless cubic multigraphs on at least
+16 vertices together with a condition on their leaf sets;
+\item a chain ``named open hypotheses $\Rightarrow$ conjecture''; each hypothesis is open.
+\end{itemize}
+The graph families are given as explicit edge lists; their agreement with the textbook definitions is checked by a
+script, not proved as an isomorphism. These results came out of an automated multi-agent ``harness'' that kept a graph
+of verified facts and cross-checked them with a second model family; the informal studies of the remaining core case
+(cyclically 4-edge-connected cubic graphs) are in the archive and are not Lean-checked.
+
+\section{Formalizations of known results (M2)}
+Each Erd\H{o}s file is the pinned formal-conjectures file with the \code{sorry} of the target theorem replaced by a
+proof; the statements are textually identical to formal-conjectures. ``New'' means only that searches of
+formal-conjectures, the TheJustinSunPrize/awards pull requests, plby/lean-proofs and other public collections found
+no earlier formal proof; several candidates were dropped as duplicates.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+Family & Lean theorem(s) & Tier\\\midrule
+G-PM & \code{simple\_schoenberger}, \code{simple\_petersen\_connected} (Sch\"onberger, Petersen, connected case) & substantive\\
+E942 & \code{erdos\_942.variants.limsup} & substantive\\
+E44 & \code{greedy\_sidon\_construction} & substantive\\
+E123 & \code{erdos\_123.variants.powers\_2\_3} & substantive\\
+E918 & three variants \code{eq\_aleph\_0\ldots} & substantive\\
+E292 & \code{variants.mul}, \code{two\_mul}, \code{prime\_pow} & substantive\\
+E395 & \code{erdos\_395.variants.one} (Carnielli--Carolino counterexample) & substantive\\
+E698 & \code{erdos\_698.variants.erdos\_szekeres} & substantive\\
+E939 & \code{erdos\_939.variants.seven}, \code{eight} & substantive\\
+E477 & \code{variants.S\_sq}, \code{degree\_two\_dvd\_condition\_b\_ne\_zero} (Sekanina; quadratic case) & substantive\\
+E295, E703, E748, E1136 & helper lemma, \code{variants.zero}, \code{lower\_bound}, \code{multiples\_of\_three} & minor\\
+E358, E619, E1148 & \code{f\_id} (odd divisors), \code{add\_edges\_diam\_three}, \code{variants.weaker} & minor\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent The four families E477, E358, E619 and E1148 were added on the last day. Erd\H{o}s problem \#1038 is
+treated separately (Section~\ref{sec:1038}).
+
+\section{Results on the competition hills}
+Leaderboard standings were read on 3 October 2026 at 02:44 UTC; accounts with identical metrics share a rank.
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lXll@{}}
+\toprule
+Hill (board) & Result & Standing & Lean\\\midrule
+$K_4$ Ramsey multiplicity & density\_ppt 30,139,911,990 (Section 2) & 1st of 13 & yes\\
+Kobon triangles ($n=39$) & 471 triangles with 39 lines & 1st of 3 & yes\\
+Busy Beaver 6 & machine \code{0LE1LA\_1LC1RH\_1RA1RF\_0RF0RD\_1RD1LB\_1LC1RD}: 249,881 steps, 554 ones, span 735 & tied 1st, 3 of 12 & yes\\
+Grothendieck witnesses & CHSH matrix, ratio $1393/985$, gap\_ppm 1,414,213, 80 bits & tied 1st, 7 of 9 & yes\\
+Kobon triangles ($n=18$) & 93 triangles & tied 1st, 12 of 15 & no\\
+3$\times$3 matrix multiplication & rank 23, support 139 (known scheme) & tied 2nd, 7 of 11 & no\\
+Collatz modular descent & 234 rules, full coverage & 5th of 8 & no\\
+Ramsey, held-out board & density\_ppt 30,141,921,123 & only entry & no\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Kobon triangles, 39 lines.} Starting from the F\"uredi--Pal\'asti arrangement (468 triangles), simulated
+annealing on the line parameters found 39 lines with integer coefficients bounding 471 triangles. The Lean certificate
+(\code{Kobon.kobon\_nonoverlapping}) states that there are 39 pairwise distinct lines and 471 index triples, each
+bounding a non-degenerate triangle whose open interior meets none of the lines, the triangles being pairwise disjoint;
+\code{Kobon.certificate} checks the list against the signed hill report. The upper bound is
+$\lfloor 39\cdot37/3\rfloor=481$. Whether 471 exceeds every published value for 39 lines was checked only by an AI
+helper (OEIS A006066 and one public gallery), \textbf{not by a human}; we do not claim it as new.
+
+\paragraph{Busy Beaver 6.} The Lean project (core Lean, no Mathlib) proves that the machine above halts after exactly
+249,881 steps, reaches all six states, and leaves 554 ones on a span of 735 cells, and that it is accepted by the hill
+exactly when the budget is at least 249,881. It reproduces the board's best value. That 249,881 is the largest halting
+time below the hidden budget is \emph{not} proved; a separate computation excluded 31 of 32 structural classes of
+machines and was stopped before the last class was finished.
+
+\paragraph{Grothendieck constant.} For the CHSH matrix with rational unit vectors the certificate proves that every
+constant $K$ satisfying the finite-dimensional Grothendieck inequality has $K\ge1393/985$, and with exact vectors
+$K\ge\sqrt2$; Tsirelson's bound for this matrix shows that no witness on it can score higher. All of this is classical.
+
+\section{Erd\H{o}s problem \#1038}\label{sec:1038}
+Two team members produced a proof (with Claude, cross-checked with GPT) that the infimum of the measure of
+$\{x:|f(x)|<1\}$ over monic real polynomials with all roots in $[-1,1]$ equals an explicit constant
+$D\approx1.8344304757$, and that the supremum is $2\sqrt2$, and formalized it in Lean~4.34.1 (315 modules). During
+the work they found that a proposed solution with the same approach had been published and that a Lean proof was
+already public (S.~Wang; imported into plby/lean-proofs on 15 September 2026). The team's development is a
+reconstruction with a different implementation. \textbf{We do not claim it.} The package and our partial rebuild with
+Lean~4.33.1 (supremum and classical lower bound re-checked; the exact infimum not, for memory reasons) are in
+\code{entries/erdos-1038}.
+
+\section{Provenance, review and cost}\label{sec:provenance}
+The DMS results came from an automated harness on a 16-core server: Claude agents proposed and proved lemmas, a Lean
+verification service accepted facts, and GPT models audited them; about 786 informal facts were recorded. The Ramsey
+search, the certificates, the Erd\H{o}s formalizations and the hill work were done in Claude Code and Codex sessions
+directed by team members. Recorded AI usage of the team lead's server and laptop was about $8.1\times10^7$ output
+tokens in 2,145 sessions, all under subscription plans; the other members' usage was not recorded as numbers.
+Human review: the team lead read the summaries, claimed statements and statement-correspondence notes of the three
+packets; this was not a line-by-line check of the proofs, and one member declared that no human review was done on
+their part. All proofs were written by AI models and checked by the Lean kernel and by scripts.
+
+\section*{Limitations}
+\begin{itemize}
+\item The Ramsey bound improves the constant numerically only; $c_4$ is not determined.
+\item The DMS conjecture is not proved; every hypothesis of our reduction is open.
+\item The M2 results are known mathematics; ``first formalization'' rests on searches with stated limits.
+\item The hill evaluators themselves are not formalized; where we compare with them, we compare against a hand
+transcription or against the signed report.
+\item Literature statements marked as unchecked by a human have not been checked by a human.
+\end{itemize}
+
+\section*{Availability}
+Everything is in \repo{} at tag \code{submission-2026-10-03-v8}: per entry a packet (\code{PACKET.md}), the Lean
+sources with build and axiom logs, \code{SHA256SUMS}, and the exact reproduction commands; an archive with a timeline,
+statistics and findings. The repository was private to the team until the deadline.
+
+\end{document}

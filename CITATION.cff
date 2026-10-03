@@ -5,8 +5,20 @@ title: "HTPeo entries to OpenMath 2026: Lean-checked results on the K4 Ramsey mu
 authors:
   - family-names: "Kang"
     given-names: "Woohyuk"
-    affiliation: "KyungHee University, CS&E; HTPeo"
-  - name: "HTPeo team"   # the remaining members, until they fill in TEAM.md
+    affiliation: "HTPeo; Kyung Hee University, CS&E"
+    email: "woohyuk@khu.ac.kr"
+  - family-names: "Lee"
+    given-names: "Hyunjin"
+    affiliation: "University of Cambridge"
+    email: "hl728@cam.ac.uk"
+  - family-names: "Lee"
+    given-names: "Sanghyeon"
+    affiliation: "Korea University, Security"
+    email: "ymhlsh4065@korea.ac.kr"
+  - family-names: "Oh"
+    given-names: "Youchan"
+    affiliation: "Seoul National University, TI"
+    email: "thomasoh0408@snu.ac.kr"
 date-released: "2026-10-03"
 repository-code: "https://github.com/lavaskiller/openmath-2026-htpeo"
 keywords:

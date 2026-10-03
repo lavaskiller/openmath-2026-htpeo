@@ -12,7 +12,8 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 <a href="#검증-방법">검증 방법</a> ·
 <a href="#사용한-자원">자원</a> ·
 <a href="#팀">팀</a> ·
-<a href="archive/">아카이브</a>
+<a href="archive/">아카이브</a> ·
+<a href="paper/htpeo-openmath-2026.pdf">논문 (PDF)</a>
 </p>
 
 심사자와 외부 독자를 위한 본문은 [README.md](README.md)(영어)입니다. 이 파일은 팀용 요약이고, 표와 그림은 같은 스크립트가 만듭니다.
@@ -26,7 +27,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 
 ## 한눈에 보는 결과
 
-팀이 가진 것 전부를 한곳에 모았습니다: 먼저 Lean으로 검증한 항목, 다음에 팀원이 대회 hill에서 가진 결과. hill 순위는 AutoLab 순위표를 2026-10-02T18:04Z (2026-10-03 03:04 KST)에 조회한 값이며 마감 전까지 바뀔 수 있습니다. 순위에는 항상 보드의 계정 수를 함께 적고, 지표가 같은 계정은 같은 순위입니다(플랫폼은 동률 계정을 알파벳 순으로 늘어놓고 번호를 차례로 매깁니다).
+팀이 가진 것 전부를 한곳에 모았습니다: 먼저 Lean으로 검증한 항목, 다음에 팀원이 대회 hill에서 가진 결과. hill 순위는 마감 직전 AutoLab 순위표를 2026-10-03T02:44Z (2026-10-03 11:44 KST)에 조회한 값입니다. 순위에는 항상 보드의 계정 수를 함께 적고, 지표가 같은 계정은 같은 순위입니다(플랫폼은 동률 계정을 알파벳 순으로 늘어놓고 번호를 차례로 매깁니다).
 
 <!-- RESULTS:START -->
 **Lean으로 검증한 항목**
@@ -98,7 +99,7 @@ Dvořák–Mohar–Šámal 추측의 부분 결과, 에르되시 문제들의 �
 >
 > **기계가 검증하지 않은 것.** (1) DMS pack4의 그래프 족은 변 목록으로 정의했고, 교과서 정의와 같은지는 [Python 스크립트](entries/dms-star6/artifact/lean/pack4/sanity_check.py)로만 확인했습니다(동형 증명 없음). (2) Ramsey 데이터는 `solution.json`에서 Lean으로 [스크립트](entries/ramsey-k4-multiplicity/artifact/lean/tools/gen.py)가 옮겨 적고 [다른 스크립트](entries/ramsey-k4-multiplicity/artifact/lean/tools/check_data.py)로 다시 확인했습니다. (3) 형식 명제가 원래 문제와 같은 뜻인지는 각 패킷의 대응 설명을 보십시오.
 >
-> **사람 검토.** 팀은 주장 명제와 명제 대응 설명을 팀원이 검토했다고 보고했습니다. 검토자 이름·범위·날짜는 [TEAM.md](TEAM.md)에 채워야 합니다.
+> **사람 검토.** Woohyuk Kang(@lavaskiller)이 2026-10-03에 패킷 세 개의 요약, 주장 명제, 명제 대응 설명을 읽었습니다. 증명을 한 줄씩 검사한 것은 아닙니다. Hyunjin Lee(@hl728)는 본인 몫의 사람 검토가 없었다고 밝혔고, 나머지 두 팀원은 검토 여부를 적지 않았습니다. 자세한 내용: [TEAM.md](TEAM.md).
 
 ## 항목
 
@@ -205,4 +206,4 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 - [archive/findings/](archive/findings/) — 주제별 발견점과 실패한 시도(영어 본문과 `*.ko.md`).
 - [archive/STATS_REQUEST.ko.md](archive/STATS_REQUEST.ko.md) — 팀원별 통계를 뽑는 방법(영어: [STATS_REQUEST.md](archive/STATS_REQUEST.md)).
 - [CONTRIBUTING.ko.md](CONTRIBUTING.ko.md) — 올리는 규칙 요약(전문은 영어 [CONTRIBUTING.md](CONTRIBUTING.md)).
-- 인용 정보는 [CITATION.cff](CITATION.cff). 라이선스는 팀이 정할 예정이며, 저장소는 마감까지 팀 비공개입니다.
+- 인용 정보는 [CITATION.cff](CITATION.cff)(저자: Woohyuk Kang, Hyunjin Lee, Sanghyeon Lee, Youchan Oh). 전체 결과를 논문 형식으로 정리한 PDF: [`paper/htpeo-openmath-2026.pdf`](paper/htpeo-openmath-2026.pdf). 라이선스는 팀이 정할 예정이며, 저장소는 마감까지 팀 비공개입니다.

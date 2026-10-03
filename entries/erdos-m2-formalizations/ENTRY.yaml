@@ -84,7 +84,7 @@ people:
   contributors:
     - "Woohyuk Kang: operator; commit author"
     - "TODO: operator - full roster and each human's contribution"
-  human_review: "reviewed by a human team member (reported by the team on 2026-10-03); reviewer names and scope to be filled in"
+  human_review: "Woohyuk Kang (@lavaskiller), 2026-10-03: summary, claimed statements and statement-correspondence notes of the packet; not a line-by-line check of the proofs (TEAM.md)"
 ai_and_tools:
   models:
     - "gpt-6-sol (codex CLI, unattended sessions on the server)"

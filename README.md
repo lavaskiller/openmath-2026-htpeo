@@ -9,7 +9,7 @@ and formalizations of known results on Erdős problems — with an archive of wh
 <a href="entries/ramsey-k4-multiplicity/artifact/lean/lean-toolchain"><img alt="Lean 4.33.1" src="https://img.shields.io/badge/Lean-4.33.1-blue"/></a>
 <a href="entries/ramsey-k4-multiplicity/artifact/lean/lake-manifest.json"><img alt="Mathlib v4.33.1" src="https://img.shields.io/badge/Mathlib-v4.33.1-blue"/></a>
 <a href="#verification-scope"><img alt="axioms: propext, Classical.choice, Quot.sound" src="https://img.shields.io/badge/axioms-propext%20%7C%20Classical.choice%20%7C%20Quot.sound-brightgreen"/></a>
-<a href="entries/"><img alt="entries: 3 packets, 1 pending" src="https://img.shields.io/badge/entries-3%20packets%20%2B%201%20pending-informational"/></a>
+<a href="entries/"><img alt="entries: 3 packets, 1 not claimed" src="https://img.shields.io/badge/entries-3%20packets%20%2B%201%20not%20claimed-informational"/></a>
 </p>
 
 <p align="center">
@@ -20,6 +20,7 @@ and formalizations of known results on Erdős problems — with an archive of wh
 <a href="#how-to-verify">How to verify</a> ·
 <a href="#resources-used">Resources</a> ·
 <a href="#team">Team</a> ·
+<a href="paper/htpeo-openmath-2026.pdf">Paper (PDF)</a> ·
 <a href="CONTRIBUTING.md">Contributing</a> ·
 <a href="archive/">Archive</a> ·
 <a href="README.ko.md">한국어</a>
@@ -36,7 +37,7 @@ and formalizations of known results on Erdős problems — with an archive of wh
 
 ## Results at a glance
 
-Everything the team has, in one place: the Lean-checked entries first, then the results team members hold on the competition hills. Hill standings are from the AutoLab leaderboards as read at 2026-10-02T18:04Z (2026-10-03 03:04 KST); they are a snapshot and can change until the deadline. A rank is always given with the size of its board, and accounts with identical metrics share a rank.
+Everything the team has, in one place: the Lean-checked entries first, then the results team members hold on the competition hills. Hill standings are from the AutoLab leaderboards as read at 2026-10-03T02:44Z (2026-10-03 11:44 KST), shortly before the deadline. A rank is always given with the size of its board, and accounts with identical metrics share a rank.
 
 <!-- RESULTS:START -->
 **Lean-checked entries**
@@ -104,7 +105,7 @@ Raw leaderboard responses: [`archive/leaderboards/`](archive/leaderboards/); fig
 
 ## Verification scope
 
-> **What is machine-checked.** Every theorem named in the table and cards is a Lean 4 declaration compiled with exit code 0, and its `#print axioms` output lists only `propext`, `Classical.choice`, `Quot.sound` (logs: [Ramsey](entries/ramsey-k4-multiplicity/artifact/lean/logs/RamseyCert.Final.log), [DMS chain](entries/dms-star6/artifact/lean/pack3/build/axioms.log), [DMS families](entries/dms-star6/artifact/lean/pack4/axioms.log), [DMS corollaries](entries/dms-star6/artifact/lean/pack5/logs/), [Erdős](entries/erdos-m2-formalizations/artifact/VERIFY.md)).
+> **What is machine-checked.** Every theorem named in the table and cards is a Lean 4 declaration compiled with exit code 0, and its `#print axioms` output lists only `propext`, `Classical.choice`, `Quot.sound` (logs: [Ramsey](entries/ramsey-k4-multiplicity/artifact/lean_v2/logs/RamseyCert.Final.log), [DMS chain](entries/dms-star6/artifact/lean/pack3/build/axioms.log), [DMS families](entries/dms-star6/artifact/lean/pack4/axioms.log), [DMS corollaries](entries/dms-star6/artifact/lean/pack5/logs/), [Erdős](entries/erdos-m2-formalizations/artifact/VERIFY.md)).
 >
 > **Build route.** Only DMS pack3 was built with `lake build`. The Ramsey certificate (2112 modules), DMS pack4 and pack5 were built module by module with scripts; the Erdős files are compiled one at a time inside `formal-conjectures` at a pinned commit, with the Mathlib pinned there. All builds ran on one machine.
 >
@@ -112,7 +113,7 @@ Raw leaderboard responses: [`archive/leaderboards/`](archive/leaderboards/); fig
 >
 > **Not machine-checked.** (1) The graph families of DMS pack4 are explicit edge lists; their agreement with the textbook definitions is checked by a [Python script](entries/dms-star6/artifact/lean/pack4/sanity_check.py), not proved as an isomorphism. (2) The Ramsey data is transcribed from `solution.json` to Lean by a [script](entries/ramsey-k4-multiplicity/artifact/lean/tools/gen.py) and re-checked by [another](entries/ramsey-k4-multiplicity/artifact/lean/tools/check_data.py); the transcription itself is not proved. (3) That each formal statement says what the informal problem says: see the correspondence notes in each packet.
 >
-> **Human review.** The team reports that the claimed statements and the statement-correspondence notes were reviewed by a human team member; reviewer names, scope and dates are still to be filled in in [TEAM.md](TEAM.md).
+> **Human review.** Woohyuk Kang (@lavaskiller) read the summaries, the claimed statements and the statement-correspondence notes of the three packets on 2026-10-03; this was not a line-by-line check of the proofs. Hyunjin Lee (@hl728) declared that no human review was done on their part; the other two members did not state a review. Details: [TEAM.md](TEAM.md).
 
 ## Entries
 
@@ -165,7 +166,7 @@ theorem simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDeg
     ∃ M : G.Subgraph, M.IsPerfectMatching := by
 ```
 
-- Files: [`bundle/`](entries/erdos-m2-formalizations/artifact/bundle/) (13 Lean files), [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean), [`VERIFY.md`](entries/erdos-m2-formalizations/artifact/VERIFY.md), [prior-art table](entries/erdos-m2-formalizations/artifact/PRIOR_ART_FINAL.tsv), [packet](entries/erdos-m2-formalizations/PACKET.md), [notes](entries/erdos-m2-formalizations/NOTES.md).
+- Files: [`bundle/`](entries/erdos-m2-formalizations/artifact/bundle/) (17 Lean files), [`Star6Simple.lean`](entries/erdos-m2-formalizations/artifact/bundle/Star6Simple.lean), [`VERIFY.md`](entries/erdos-m2-formalizations/artifact/VERIFY.md), [prior-art table](entries/erdos-m2-formalizations/artifact/PRIOR_ART_FINAL.tsv), [packet](entries/erdos-m2-formalizations/PACKET.md), [notes](entries/erdos-m2-formalizations/NOTES.md).
 - Limitation: "new" means only that the searches described in the packet found no earlier formal proof; the main (often open) statement of each Erdős problem is not claimed; `Star6Simple.lean` needs the star6 library of entry 2.
 
 ### 4 · Erdős problem #1038 — `erdos-1038`
@@ -352,11 +353,11 @@ This work builds on [Lean 4](https://lean-lang.org/) and [Mathlib](https://githu
 
 ## Citation
 
-Metadata is in [CITATION.cff](CITATION.cff).
+Metadata is in [CITATION.cff](CITATION.cff). A paper-style summary of all results: [`paper/htpeo-openmath-2026.pdf`](paper/htpeo-openmath-2026.pdf) (LaTeX source alongside).
 
 ```bibtex
 @misc{htpeo2026openmath,
-  author = {Kang, Woohyuk and {HTPeo team}},
+  author = {Kang, Woohyuk and Lee, Hyunjin and Lee, Sanghyeon and Oh, Youchan},
   title  = {HTPeo entries to OpenMath 2026: Lean-checked results on the K4 Ramsey multiplicity constant,
             the Dvořák–Mohar–Šámal conjecture and Erdős problems},
   year   = {2026},
