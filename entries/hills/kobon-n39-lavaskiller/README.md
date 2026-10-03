@@ -35,4 +35,4 @@
 ## Still to add
 
 - [x] `STATS.yaml` (AI tools and resources used; template in `../../_TEMPLATE/STATS.yaml`)
-- [ ] a human check of the literature statement
+- [x] a human check of the literature statement: **not done** — no team member checked the literature before the deadline; the statement "possibly a new best known value" rests only on an AI helper's search (OEIS A006066, Parpalak–Utkin gallery) and is not claimed
