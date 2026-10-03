@@ -169,6 +169,18 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 </details>
 
+### 이 수치가 누구의 사용량인지
+
+**위 수치는 모두 @lavaskiller의 사용량만입니다**: 팀 서버(하네스 job, codex 세션, Lean 빌드, Ramsey 탐색)와 팀 노트북의 Claude Code 세션. 다른 팀원의 개인 계정과 PC 사용량은 **포함하지 않았고**, 숫자로 기록되지 않아 합계에도 더하지 않았습니다. 팀원별 신고 내용([`TEAM.md`](TEAM.md)와 hill 폴더, 2026-10-03 기준):
+
+| 팀원 | 신고한 AI 도구 | 신고한 계산 자원 | 신고한 사람 시간 |
+|---|---|---|---|
+| @hl728 | ChatGPT 웹(개인 OpenAI 계정, 모델 기록 없음); Codex 데스크톱·에이전트·CLI(`gpt-6-astra`, `gpt-6.1-sol`) | 개인 Mac, 작업자 최대 4개; 탐색 1회 약 56분, 약 58분([NOTES](entries/hills/ramsey-hl728/NOTES.md)) | 약 20시간 이상 |
+| @n0rang2 | AutoLab 코딩 에이전트(Claude Haiku 4.5), Claude Code, Codex 데스크톱; [`STATS.yaml`](entries/hills/busy-beaver-6-n0rang2/STATS.yaml) | 개인 PC에서 기계 약 1.6·10^8개 탐색; 시간 기록 없음 | 미기재 |
+| @thomasoh0408 | Claude Code(claude-opus-5-5), codex CLI(gpt-6-Sol, gpt-6-Astra) — `TEAM.md` 기재 | 미기재(올린 `STATS.yaml`은 빈 템플릿) | 미기재 |
+
+이 계정들의 토큰 수와 비용은 기록되지 않았습니다.
+
 ## 팀
 
 팀 **HTPeo**.

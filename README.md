@@ -284,6 +284,18 @@ Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mo
 
 Caveats: the laptop subagent output is a lower bound; the first hours of the harness run on the laptop (WSL) and the `erdos-1038` work are not included; all usage was under subscription plans, and the only cost figure is the tool's API-list-price equivalent for the harness, at least 3,718 USD (lower bound, nothing billed per token). Compute ran on one 16-core, 14 GB server and a laptop; CPU time was mostly not recorded and human time is not recorded.
 
+### Whose usage these numbers cover
+
+**All numbers above are @lavaskiller's usage only**: the team server (harness jobs, codex sessions, Lean builds, Ramsey search) and the Claude Code sessions on the team laptop. The other members' own accounts and computers are **not** included, and they are not added to the totals because they were not recorded as numbers. What each member declared (from [`TEAM.md`](TEAM.md) and the hill folders, 2026-10-03):
+
+| Member | AI tools declared | Compute declared | Human time declared |
+|---|---|---|---|
+| @hl728 | ChatGPT on the web (personal OpenAI account, models not recorded); Codex desktop / agent / CLI (`gpt-6-astra`, `gpt-6.1-sol`) | local Mac, at most 4 worker processes; search rounds of about 56 and 58 minutes ([NOTES](entries/hills/ramsey-hl728/NOTES.md)) | about 20 hours or more |
+| @n0rang2 | AutoLab coding agent (Claude Haiku 4.5), Claude Code, Codex desktop; [`STATS.yaml`](entries/hills/busy-beaver-6-n0rang2/STATS.yaml) | search of about 1.6·10^8 machines on a personal computer; hours not recorded | not given |
+| @thomasoh0408 | Claude Code (claude-opus-5-5), codex CLI (gpt-6-Sol, gpt-6-Astra), as listed in `TEAM.md` | not given (the uploaded `STATS.yaml` is the empty template) | not given |
+
+Token counts and costs of these accounts were not recorded.
+
 ## Timeline
 
 ```mermaid
