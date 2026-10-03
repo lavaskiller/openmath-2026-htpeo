@@ -8,13 +8,13 @@
   | Name | Affiliation | E-mail | Role / contribution |
   |---|---|---|---|
   | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | woohyuk@khu.ac.kr | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
-  | @hl728 | | | K4 Ramsey hill (validation and final-board evaluation) |
+  | Hyunjin Lee (@hl728) | University of Cambridge | hl728@cam.ac.uk | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
   | @n0rang2 | | | Busy Beaver 6 and K4 Ramsey hills |
   | @thomasoh0408 | | | Kobon triangles hill |
 
 * **Human review:** the team reports that the claimed statements and the statement-correspondence notes of this packet were reviewed by a human team member. Reviewer(s): Woohyuk Kang (@lavaskiller) ; scope: the summary, the claimed statements and the statement-correspondence notes, read during the working sessions — not a line-by-line check of the proofs (scope entered as an estimate at the member's request, from the session records) ; date: 2026-10-03 . Sentences further below that say "human checking: none" describe the state before this review.
 * **Repository:** https://github.com/lavaskiller/openmath-2026-htpeo (private to the team until the competition deadline; it will be opened, or access given to the organisers, on request / after the deadline) — this entry is the folder `entries/erdos-m2-formalizations`; the submitted state is fixed by the git tag `erdos-m2-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/erdos-m2-v1/entries/erdos-m2-formalizations). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
-* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: Woohyuk Kang (@lavaskiller), 2026-10-03 . Attribution approval by every roster member: @lavaskiller 2026-10-03; @hl728, @n0rang2, @thomasoh0408 to be recorded in `TEAM.md` .
+* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: Woohyuk Kang (@lavaskiller), 2026-10-03 . Attribution approval by every roster member: @lavaskiller 2026-10-03; @hl728 (Hyunjin Lee) 2026-10-03; @n0rang2, @thomasoh0408 to be recorded in `TEAM.md` .
 
 Prepared 2026-10-02T15:06Z by helper-m2-advanced (Claude) from `~/erdos-fc/m2/`; supersedes `PACKET_FINAL.md` (v1, kept). Nothing has been submitted, uploaded or sent. Fields marked **TODO(operator)** must be filled by the team.
 
