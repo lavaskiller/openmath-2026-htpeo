@@ -16,7 +16,7 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 ## To add (checklist)
 
 - [x] for a final-mode (held-out) evaluation: not applicable — the uploaded report is a validation run (`"final": false`, `"official": true`)
-- [ ] AI tools used and rough resources (fill `STATS.yaml`, template in `../../_TEMPLATE/STATS.yaml`)
+- [x] AI tools used and rough resources (fill `STATS.yaml`, template in `../../_TEMPLATE/STATS.yaml`)
 - [x] date and time of the evaluation (with time zone): 2026-09-27T16:21:57Z = 2026-09-28 01:21 KST (timestamp of the uploaded report; the leaderboard row is dated 2026-09-28T02:15:21Z). Note: `report.json` begins with the evaluator's text output before the JSON object, so it is not a plain JSON file
 
 When the files are in, update the row in [`../README.md`](../README.md) and, if the result should be listed on the landing page, add an `ENTRY.yaml` (template in `../../_TEMPLATE/`).
