@@ -107,5 +107,5 @@ Already known:
 | Team name | HTPeo |
 | Entrant class | Team |
 | Contact e-mail | woohyuk@khu.ac.kr |
-| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: ____ |
+| Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: not claimed (a formal proof was already public; see `entries/PENDING.yaml`) |
 | Usage statistics | each member adds `archive/stats/<github id>.yaml` (see `archive/STATS_REQUEST.md`) |

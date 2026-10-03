@@ -1,19 +1,21 @@
 # Hill results by team members
 
-Results that team members put on the competition hills with their own AutoLab accounts. The standings below were read from the AutoLab leaderboard API at 2026-10-02T18:04Z (2026-10-03 03:04 KST) (raw responses: [`../../archive/leaderboards/`](../../archive/leaderboards/)); **the files are to be added by each owner** — every folder has a README that says exactly what to put in.
+Results that team members put on the competition hills with their own AutoLab accounts. The standings below were read from the AutoLab leaderboard API at 2026-10-03T02:44Z (2026-10-03 11:44 KST) (raw responses: [`../../archive/leaderboards/`](../../archive/leaderboards/)); **the files are to be added by each owner** — every folder has a README that says exactly what to put in.
 
-The team's main Ramsey result (1st of 12 on the validation board, with a Lean certificate) is the full entry [`../ramsey-k4-multiplicity/`](../ramsey-k4-multiplicity/).
+The team's main Ramsey result (1st of 13 on the validation board, with a Lean certificate) is the full entry [`../ramsey-k4-multiplicity/`](../ramsey-k4-multiplicity/).
 
 | Folder | Owner | Hill | Mode | Standing | Result | Files |
 |---|---|---|---|---|---|---|
 | [`kobon-n39-lavaskiller`](kobon-n39-lavaskiller/) | @lavaskiller | Kobon triangles | validation (board n = 39) | 1st of 3, alone | 471 triangles with 39 lines (2026-10-03) — above the classical 468 construction; possibly a new best known value, literature check not human-verified | solution, signed report, notes, code |
 | [`grothendieck-lavaskiller`](grothendieck-lavaskiller/) | @lavaskiller | Grothendieck constant witnesses | validation | tied for 1st, 7 of 9 accounts | gap_ppm 1,414,213, matrix_area 4, certificate_bits 80 (2026-10-03) — known construction; not claimed as new mathematics | solution, signed report, notes, code |
-| [`ramsey-hl728`](ramsey-hl728/) | @hl728 | K4 Ramsey multiplicity | final (held-out) and validation | only entry on the final (held-out) board (1 account); 5th of 12 on the validation board | 30,141,921,123 ppt (final, 2026-09-29); 30,141,720,946 ppt (validation, 2026-09-30) | to be added by @hl728 |
-| [`ramsey-n0rang2`](ramsey-n0rang2/) | @n0rang2 | K4 Ramsey multiplicity | validation | 8th of 12 | 30,142,185,839 ppt (2026-09-30) | leaderboard record only — no upload needed (team result: `ramsey-k4-multiplicity`) |
+| [`ramsey-hl728`](ramsey-hl728/) | @hl728 | K4 Ramsey multiplicity | final (held-out) and validation | only entry on the final (held-out) board (1 account); 6th of 13 on the validation board | 30,141,921,123 ppt (final, 2026-09-29); 30,141,720,946 ppt (validation, 2026-09-30) | to be added by @hl728 |
+| [`ramsey-n0rang2`](ramsey-n0rang2/) | @n0rang2 | K4 Ramsey multiplicity | validation | 9th of 13 | 30,142,185,839 ppt (2026-09-30) | leaderboard record only — no upload needed (team result: `ramsey-k4-multiplicity`) |
 | [`busy-beaver-6-n0rang2`](busy-beaver-6-n0rang2/) | @n0rang2 | Busy Beaver 6 certificates | validation | tied for 1st, 3 of 12 accounts | 249,881 steps, 554 ones, tape span 735 (2026-09-28 UTC / 2026-09-29 KST) — reproduces the board's best value; not claimed as new mathematics | solution, signed report, method, code, STATS, replay evidence |
 | [`kobon-triangles-thomasoh0408`](kobon-triangles-thomasoh0408/) | @thomasoh0408 | Kobon triangles | validation (board n = 18) | tied for 1st, 12 of 15 accounts | 93 triangles (2026-09-28) — reproduces the board's best value; not claimed as new mathematics | to be added by @thomasoh0408 |
+| [`matrix-multiplication-lavaskiller`](matrix-multiplication-lavaskiller/) | @lavaskiller | 3x3 matrix-multiplication tensor | validation | tied for 2nd, 7 of 11 accounts | rank 23, support 139 (2026-10-03) — known scheme (Heule-Kauers-Seidl database); the leader has support 138 | solution, signed report, notes, code |
+| [`collatz-lavaskiller`](collatz-lavaskiller/) | @lavaskiller | Collatz modular descent | validation | 5th of 8 | coverage_ppm 1,000,000, min_descent_ppm 525,390, rule_count 234 (2026-10-03) — the leaders use 3 rules | solution, signed report, notes, code |
 
-Hills with no team result on the leaderboard at that time: 3x3 matrix-multiplication tensor, Collatz modular descent, Erdős 3.
+Hill with no team result on the leaderboard at that time: Erdős 3 (its leaderboard could not be read at 02:44Z; the earlier snapshot is kept).
 
 Standings use competition ranking over the full metric tuple: accounts with identical metrics share a rank (the platform lists them alphabetically and numbers them consecutively), and a rank is always given with the size of its board. They are computed by `tools/make_leaderboard_charts.py`.
 

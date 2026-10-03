@@ -75,6 +75,10 @@ Reference times of the competition: status freeze 2026-09-27 12:00 EDT (2026-09-
 | 2026-10-03 02:58 KST | Kobon triangles hill, board n = 39: official evaluation of experiment `38b81af6` (account lavaskiller), 471 triangles; above the 468 of the classical construction; the literature check was done by an AI helper and is not human-verified | hills | `entries/hills/kobon-n39-lavaskiller/report.json` (2026-10-02T17:58:19Z), `NOTES.md` |
 | 2026-10-03 03:04 KST | Leaderboards re-read (2026-10-02T18:04Z): Kobon n = 39 board 471 / 470 / 468, lavaskiller 1st of 3; Grothendieck tied for 1st, 7 of 9 accounts; Ramsey unchanged, 1st of 12 on the validation board. An attempt to put the Ramsey solution on the final (held-out) board (experiment `217d0ba2`) failed: the hill did not accept "final" as a parameter. A better Ramsey value from the continued search (30,139,923,154 ppt) was not submitted | hills, ramsey-k4-multiplicity | `archive/leaderboards/`; reported by the operator (experiment `217d0ba2` and the unsubmitted value have no file in this repository) |
 | 2026-10-03 13:00 KST | Competition deadline (00:00 EDT). Whether and when the three packets were actually submitted: TODO (no source) — each of the three packets says only "not submitted by its writers" | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 item 9; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` header |
+| 2026-10-03 03:55–04:10 KST | Lean certificates for the three hill results: Kobon n = 39 (471 triangles), Busy Beaver 6 (n0rang2's project, rebuilt with Lean 4.33.1), Grothendieck witness. |
+| 2026-10-03 07:05–07:21 KST | Collatz (234 rules, 5th of 8) and 3x3 tensor (support 139, tied for 2nd) submitted; neither leads. |
+| 2026-10-03 08:10 KST | M2 additions verified: E477 (substantive), E358, E619, E1148 (minor); E494 and E825 found to be duplicates. The team member's Erdős #1038 package found to have a public predecessor. |
+| 2026-10-03 11:43 KST | Ramsey: improved template (experiment bc2c24e3, density_ppt 30,139,911,990, 22,006 below the earlier one) passes; certificate regenerated in `artifact/lean_v2/`; 1st of 13. |
 
 ## Events without a time
 

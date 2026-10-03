@@ -75,6 +75,10 @@ English: [timeline.md](timeline.md)
 | 2026-10-03 02:58 KST | Kobon 삼각형 hill, n = 39 보드: 실험 `38b81af6`(계정 lavaskiller) 공식 평가, 삼각형 471개. 고전적 구성의 468보다 큼. 문헌 확인은 AI 보조 세션이 했고 사람이 검증하지 않음 | hills | `entries/hills/kobon-n39-lavaskiller/report.json`(2026-10-02T17:58:19Z), `NOTES.md` |
 | 2026-10-03 03:04 KST | 순위표 재조회(2026-10-02T18:04Z): Kobon n = 39 보드 471 / 470 / 468, lavaskiller 3명 중 1위; Grothendieck 공동 1위(9명 중 7명); Ramsey는 변동 없이 검증 보드 12명 중 1위. Ramsey 해를 최종(held-out) 보드에 올리려던 시도(실험 `217d0ba2`)는 hill이 "final" 매개변수를 받지 않아 실패. 계속된 탐색에서 나온 더 나은 Ramsey 값(30,139,923,154 ppt)은 제출하지 않음 | hills, ramsey-k4-multiplicity | `archive/leaderboards/`; 운영자 보고(실험 `217d0ba2`와 미제출 값은 이 저장소에 파일 없음) |
 | 2026-10-03 13:00 KST | 대회 마감(00:00 EDT). 세 패킷의 실제 제출 여부와 시각: TODO(출처 없음) — 세 패킷 모두 "작성자는 제출하지 않음"이라고만 적혀 있음 | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 9번; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` 머리줄 |
+| 2026-10-03 03:55–04:10 KST | hill 결과 3건의 Lean 인증서: Kobon n = 39(삼각형 471개), Busy Beaver 6(n0rang2의 프로젝트, Lean 4.33.1로 재빌드), Grothendieck witness. |
+| 2026-10-03 07:05–07:21 KST | Collatz(규칙 234개, 8명 중 5위)와 3x3 텐서(support 139, 동점 2위) 제출; 둘 다 선두 아님. |
+| 2026-10-03 08:10 KST | M2 추가 검증: E477(실질), E358, E619, E1148(사소); E494, E825는 중복으로 판명. 팀원의 에르되시 #1038 패키지는 공개된 선행 형식화가 있음을 확인. |
+| 2026-10-03 11:43 KST | Ramsey: 개선된 틀(실험 bc2c24e3, density_ppt 30,139,911,990, 이전보다 22,006 낮음) 통과; `artifact/lean_v2/`에 인증서 재생성; 13명 중 1위. |
 
 ## 날짜 없는 사건
 

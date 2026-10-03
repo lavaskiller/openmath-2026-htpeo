@@ -10,7 +10,7 @@
   - ramsey-k4-multiplicity: an upper bound for the K4 Ramsey multiplicity constant, c_4 ≤ 0.030139933996… (2.34·10^-6 below the hill reference). **Lean kernel-checked**. Hill standing at the snapshot of 2026-10-02T16:23Z: 1st of 12 on the validation board, no ties (**computed** from `archive/leaderboards/`; a snapshot, not a final ranking).
   - dms-star6: partial results on the Dvořák–Mohar–Šámal conjecture (infinite families, at most 14 vertices, an equivalent reformulation, a conditional reduction). **Lean kernel-checked**. The conjecture itself is not proved.
   - erdos-m2-formalizations: 17 families of formalizations (13 until 2026-10-03, when E477, E358, E619, E1148 were added) of known results (M2; packet v2). **Lean kernel-checked**.
-  - erdos-1038: TODO (the member in charge).
+  - erdos-1038: not claimed. A team member's Lean solution was checked on 2026-10-03; a formal proof of the same result had been public since 2026-09-15 (plby/lean-proofs), and only part of the package could be rebuilt with our toolchain.
   - Hill results of team members without a Lean artifact (same snapshot, **computed**): Busy Beaver 6 certificates, @n0rang2, tied for 1st, 3 of 12 accounts; Kobon triangles (board n = 18), @thomasoh0408, tied for 1st, 12 of 15 accounts; K4 Ramsey, @hl728, only entry on the final (held-out) board (1 account) and 5th of 12 on the validation board; K4 Ramsey, @n0rang2, 8th of 12. The two tied results reproduce the best value on their board and are not claimed as new mathematics. Files: `entries/hills/` (to be added by the owners).
 - Judging results: TODO (to be added when available).
 - The three most important findings: TODO (team discussion). Candidates are in section 3.
