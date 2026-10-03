@@ -16,7 +16,6 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 ## To add (checklist)
 
 - [ ] how the result was obtained (method, code if any — put code in `code/`): ____
-- [ ] is this a known construction or something new? Source if known: ____
 - [ ] for a final-mode (held-out) evaluation: the exact command or UI steps used, so the team can repeat it: ____
 - [ ] AI tools used and rough resources (fill `STATS.yaml`, template in `../../_TEMPLATE/STATS.yaml`)
 - [ ] date and time of the evaluation (with time zone): ____
