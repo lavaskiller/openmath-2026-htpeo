@@ -23,7 +23,7 @@ The claim of this packet is now made for an improved template; the earlier one s
 
   | Name | Affiliation | E-mail | Role / contribution |
   |---|---|---|---|
-  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | woohyuk@khu.ac.kr | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
+  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | lead@htpeo.com | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
   | Hyunjin Lee (@hl728) | University of Cambridge | hl728@cam.ac.uk | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
   | Sanghyeon Lee (@n0rang2) | Korea Univ. Security | ymhlsh4065@korea.ac.kr | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
   | Youchan Oh (@thomasoh0408) | Seoul National Univ. TI | thomasoh0408@snu.ac.kr | Kobon triangles hill (n = 18) |

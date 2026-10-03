@@ -14,7 +14,7 @@ After filling in, update the role line under your avatar in `README.md` and `REA
 | GitHub | [@lavaskiller](https://github.com/lavaskiller) |
 | Name | Woohyuk Kang |
 | Affiliation | HTPeo, KyungHee Univ. CS&E |
-| E-mail | woohyuk@khu.ac.kr |
+| E-mail | lead@htpeo.com |
 | Entries worked on | `ramsey-k4-multiplicity`, `dms-star6`, `erdos-m2-formalizations` |
 | Role / contribution | Operated the multi-agent harness that produced the DMS fact graph and Lean chain; ran the K4 Ramsey search, its hill submission and the Lean certificate; ran the Erdős formalization sessions, their verification and prior-art checks; assembled the packets and this repository. |
 | Human review done | Not performed, as declared by Woohyuk Kang on 2026-10-03. The checks are the Lean kernel, the build and axiom logs, scripts, and cross-checks by AI models; none of them is a human review. |
@@ -106,6 +106,6 @@ Already known:
 |---|---|
 | Team name | HTPeo |
 | Entrant class | Team |
-| Contact e-mail | woohyuk@khu.ac.kr |
+| Contact e-mail | lead@htpeo.com |
 | Owner of each entry | ramsey-k4-multiplicity: @lavaskiller · dms-star6: @lavaskiller · erdos-m2-formalizations: @lavaskiller · erdos-1038: @hl728 with @n0rang2, not claimed (a formal proof was already public; see `entries/erdos-1038/`) |
 | Usage statistics | each member adds `archive/stats/<github id>.yaml` (see `archive/STATS_REQUEST.md`) |
