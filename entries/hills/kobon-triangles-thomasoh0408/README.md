@@ -7,7 +7,8 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 | | |
 |---|---|
 | Hill | `alejandrozu/kobon-triangles` (https://app.autolab.ai/hills/alejandrozu/kobon-triangles) |
-| Account | `thomasoh0408` |
+| Account/project | `thomasoh0408`/ 'thomasoh0408/Kobon Triangles attempt 14' |
+| Experiment | '6216e4ca'(merged) |
 | Mode | validation |
 | Standing | tied for 1st, 12 of 15 accounts (validation, board n = 18; the platform lists tied accounts alphabetically) |
 | Result | 93 triangles (2026-09-28) — reproduces the board's best value; not claimed as new mathematics |
@@ -16,7 +17,7 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 
 - [ ] `solution.json` (or the submitted directory) exactly as evaluated
 - [ ] the hill report (`report.json`) of the evaluation — it carries the hill hash, the metrics and the signature
-- [ ] AutoLab project name and experiment id: ____
+- [ ] AutoLab project name and experiment id: 6216e4ca
 - [ ] how the result was obtained (method, code if any — put code in `code/`): ____
 - [ ] is this a known construction or something new? Source if known: ____
 - [ ] for a final-mode (held-out) evaluation: the exact command or UI steps used, so the team can repeat it: ____
