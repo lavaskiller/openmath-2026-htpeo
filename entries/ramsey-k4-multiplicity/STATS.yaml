@@ -48,6 +48,30 @@ compute:
     cpu_hours: 0.19
     peak_memory_gb: "TODO"
     source: "artifact/lean/CERT_STATUS.md: 679 s for the final solution (one process assumed - estimate); an earlier run for the superseded solution took 1045 s and is not added"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "search continued 2026-10-03 (basin hopping from the 10-02 best; 11 worker processes plus a verify loop), produced solution_v2"
+    wall_hours: 0.73
+    cpu_hours: 8.0
+    peak_memory_gb: 9
+    source: "helper-ramsey3 report: 22:04-22:48 UTC on 10-02 = 07:04-07:48 KST; cpu_hours = 11 CPU-bound workers x 0.73 h (estimate); peak = the two 4G job caps plus the verify loop (cap, not a measurement)"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean build of the regenerated certificate artifact/lean_v2 (2048 chunk files, glue, main, final)"
+    wall_hours: 2.0
+    cpu_hours: 3.9
+    peak_memory_gb: 3.31
+    source: "artifact/lean_v2/build_status.txt and helper report: chunks 22:44-00:41:36 UTC, 14077 s summed per-file time, 2 processes, max RSS 3.31 GB"
+  - machine: "16-core server, 14 GB RAM"
+    purpose: "Lean native_decide cross-check for solution_v2 (Native.lean, not part of the proof)"
+    wall_hours: 0.19
+    cpu_hours: 0.19
+    peak_memory_gb: "TODO"
+    source: "helper report: 673 s"
+  - machine: "16-core server and laptop"
+    purpose: "exact re-scoring of solution_v2 with the hill's code before submission"
+    wall_hours: 0.07
+    cpu_hours: 0.07
+    peak_memory_gb: "TODO"
+    source: "helper report: 92 s on the server, 157 s on the laptop"
   - machine: "laptop"
     purpose: "evaluation: hill metric re-run in pure Python"
     wall_hours: 0.055

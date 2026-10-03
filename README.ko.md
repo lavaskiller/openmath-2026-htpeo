@@ -142,7 +142,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 
 ### 계산
 
-서버 job의 용도별 기록된 wall 시간입니다. 감사·에이전트 job은 대부분 모델 응답을 기다리는 시간이라 CPU 시간이 아닙니다. Ramsey 인증서 자체는 4.7 CPU시간.
+서버 job의 용도별 기록된 wall 시간입니다. 감사·에이전트 job은 대부분 모델 응답을 기다리는 시간이라 CPU 시간이 아닙니다. Ramsey 인증서 자체는 4.7 CPU시간, 개선된 틀에 맞춰 다시 만든 인증서는 3.9 CPU시간입니다.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/compute_by_purpose_dark.svg">
@@ -160,7 +160,7 @@ cd entries/dms-star6/artifact/lean/pack3 && lake update && lake exe cache get &&
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `dms-star6` | 78,313,222 | 79,895,063 | 9,635,136,505 | 2,094 | 77.8 + | 81,622 | 45 |
 | `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 24 |
-| `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 13.1 + | 104,665 | 8 |
+| `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 16.1 + | 104,665 | 8 |
 | shared/steering | 2,165,675 | 5,130 | 923,843,294 | 19 |  |  |  |
 | **합계** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **77** |
 <!-- RESOURCES:END -->

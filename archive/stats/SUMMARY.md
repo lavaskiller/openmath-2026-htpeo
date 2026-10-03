@@ -43,8 +43,8 @@ This file is written by `tools/summarize_stats.py`. Do not edit it by hand. Sour
 | Entry | Input tokens | Output tokens | Cache tokens | Sessions | Cost (USD) | Compute CPU hours | Human time | Lean lines | Claimed theorems |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | dms-star6 | 79,895,063 | 78,313,222 | 9,635,136,505 | 2,094 | 3,718.0 | 2.2 +TODO | TODO | 81,622 | 45 |
-| erdos-m2-formalizations | 3,716,184 | 860,456 | 244,039,536 | 26 |  | TODO | TODO | 2,791 | 19 |
-| ramsey-k4-multiplicity | 459,889 | 115,493 | 91,122,328 | 6 |  | 4.9 +TODO | TODO | 104,665 | 8 |
+| erdos-m2-formalizations | 3,716,184 | 860,456 | 244,039,536 | 26 |  | TODO | TODO | 2,791 | 24 |
+| ramsey-k4-multiplicity | 459,889 | 115,493 | 91,122,328 | 6 |  | 17.1 +TODO | TODO | 104,665 | 8 |
 | shared/steering | 5,130 | 2,165,675 | 923,843,294 | 19 |  |  |  |  |  |
 
 ## 4. Files read

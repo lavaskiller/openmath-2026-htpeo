@@ -77,7 +77,8 @@
   "Erdős proving sessions (codex)": 9.6,
   "GPT cross-check audit jobs (DMS)": 50.59,
   "Hill metric re-run (laptop)": 0.055,
-  "Lean builds and checks, all entries": 2.84,
+  "Lean builds and checks, all entries": 5.03,
+  "Other": 0.8,
   "Ramsey search (server)": 12,
   "Review / decompose / consult (DMS)": 18.18,
   "Worker computations, SAT (DMS)": 7.24

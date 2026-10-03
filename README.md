@@ -255,7 +255,7 @@ The harness ran at full size from 28 September to 1 October, when the Claude wor
 
 ### Compute
 
-Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mostly wait on a model, so these are not CPU hours; the Ramsey certificate itself took 4.7 CPU-hours.
+Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mostly wait on a model, so these are not CPU hours; the Ramsey certificate itself took 4.7 CPU-hours, and the certificate regenerated for the improved template 3.9 CPU-hours.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/compute_by_purpose_dark.svg">
@@ -273,7 +273,7 @@ Recorded wall-clock hours of server jobs by purpose. Audit and agent-run jobs mo
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `dms-star6` | 78,313,222 | 79,895,063 | 9,635,136,505 | 2,094 | 77.8 + | 81,622 | 45 |
 | `erdos-m2-formalizations` | 860,456 | 3,716,184 | 244,039,536 | 26 | 9.6 | 2,791 | 24 |
-| `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 13.1 + | 104,665 | 8 |
+| `ramsey-k4-multiplicity` | 115,493 | 459,889 | 91,122,328 | 6 | 16.1 + | 104,665 | 8 |
 | shared/steering | 2,165,675 | 5,130 | 923,843,294 | 19 |  |  |  |
 | **Total** | **81,454,846** | **84,076,266** | **10,894,141,663** | **2,145** | | **189,078** | **77** |
 <!-- RESOURCES:END -->
