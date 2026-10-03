@@ -1,0 +1,54 @@
+# Resources used for this entry. Numbers without a log are estimates and say so.
+entry: hills/kobon-n39-lavaskiller
+reported_by: "@lavaskiller (written by the Claude Code session that ran the work)"
+period: {from: "2026-10-02 23:30 KST", to: "2026-10-03 05:10 KST"}
+ai_usage:
+  - provider: Anthropic
+    model: claude-opus-5-5
+    interface: Claude Code (main session plus helper sessions: hills search, Lean certificate)
+    account_plan: "subscription (no API key)"
+    sessions: 2                   # helper-hills (several hills, this one included), helper-kobon-cert
+    input_tokens: null            # not recorded per entry
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "not recorded per entry; the whole-team totals are in archive/stats/"
+    source: "helper reports; per-entry token counts were not separated"
+compute:
+  - machine: "team server, 16 cores, 14 GB RAM"
+    purpose: "Lean build"
+    wall_hours: 0.05               # clean build 2 min 47 s (helper report, lean/build_status.txt)
+    cpu_hours: 0.08                # 303 s summed CPU
+    peak_memory_gb: 2.24
+    source: "lean/build_status.txt, helper report"
+  - machine: "laptop and team server"
+    purpose: "search (Fueredi-Palasti start, simulated annealing code/kobon_sa.c; 15 restarts)"
+    wall_hours: null               # not recorded
+    cpu_hours: null
+    peak_memory_gb: null
+    source: "not recorded"
+  - machine: "laptop (WSL), AutoLab node"
+    purpose: "evaluation (experiment 38b81af6, n = 39)"
+    wall_hours: 0.05               # estimate
+    cpu_hours: 0.05
+    peak_memory_gb: null
+    source: "estimate"
+human_time:
+  - person: "@lavaskiller"
+    hours: null                    # to be filled by the member
+    activity: "steering, approval of the submission"
+outputs:
+  lean_lines: 1634
+  lean_files: 54
+  theorems_claimed: 2             # certificate, kobon_nonoverlapping (plus supporting lemmas)
+  build_time: "2 min 47 s, 54 modules, 2 processes"
+  other: "471 triangles with 39 lines; one hill evaluation"
+attempts:
+  succeeded:
+    - "471 triangles for n = 39 (1st of 3 on the n = 39 board)"
+    - "Lean certificate of the 471 pairwise disjoint triangles"
+  failed:
+    - "no arrangement above 471 (13 of 15 restarts end at 471)"
+    - "line deletion from public 41-43 line arrangements: at most 459"
+notes: "Token usage of the sessions is included in the team totals of archive/stats and was not split per entry."

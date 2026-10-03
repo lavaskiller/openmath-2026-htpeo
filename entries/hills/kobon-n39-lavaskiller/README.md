@@ -34,5 +34,5 @@
 
 ## Still to add
 
-- [ ] `STATS.yaml` (AI tools and resources used; template in `../../_TEMPLATE/STATS.yaml`)
+- [x] `STATS.yaml` (AI tools and resources used; template in `../../_TEMPLATE/STATS.yaml`)
 - [ ] a human check of the literature statement

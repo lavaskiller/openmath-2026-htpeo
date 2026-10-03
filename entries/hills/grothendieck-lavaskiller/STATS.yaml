@@ -1,0 +1,54 @@
+# Resources used for this entry. Numbers without a log are estimates and say so.
+entry: hills/grothendieck-lavaskiller
+reported_by: "@lavaskiller (written by the Claude Code session that ran the work)"
+period: {from: "2026-10-03 00:30 KST", to: "2026-10-03 04:00 KST"}
+ai_usage:
+  - provider: Anthropic
+    model: claude-opus-5-5
+    interface: Claude Code (main session plus helper sessions: hills search, Lean certificate)
+    account_plan: "subscription (no API key)"
+    sessions: 2                   # helper-hills (several hills, this one included), helper-groth-cert
+    input_tokens: null            # not recorded per entry
+    output_tokens: null
+    cache_read_tokens: null
+    cache_write_tokens: null
+    cost_usd: null
+    plan_usage: "not recorded per entry; the whole-team totals are in archive/stats/"
+    source: "helper reports; per-entry token counts were not separated"
+compute:
+  - machine: "team server, 16 cores, 14 GB RAM"
+    purpose: "Lean build"
+    wall_hours: 0.01               # clean build about 7 s (lean/build_status.txt)
+    cpu_hours: 0.01
+    peak_memory_gb: 2.1            # lean/build_status.txt MAXRSS
+    source: "lean/build_status.txt"
+  - machine: "laptop and team server"
+    purpose: "search (code/search_bits.py, exhaustive over denominators up to 65536)"
+    wall_hours: null               # not recorded
+    cpu_hours: null
+    peak_memory_gb: null
+    source: "not recorded"
+  - machine: "laptop (WSL), AutoLab node"
+    purpose: "evaluation (experiment 2552e287)"
+    wall_hours: 0.05               # estimate
+    cpu_hours: 0.05
+    peak_memory_gb: null
+    source: "estimate"
+human_time:
+  - person: "@lavaskiller"
+    hours: null                    # to be filled by the member
+    activity: "steering, approval of the submission"
+outputs:
+  lean_lines: 408
+  lean_files: 4
+  theorems_claimed: 4             # certificate, witness_lower_bound, groth_bound_ge_sqrt2, chsh_vec_le
+  build_time: "about 7 s for the 4 modules (lean/build_status.txt)"
+  other: "known CHSH construction; one hill evaluation"
+attempts:
+  succeeded:
+    - "80-bit rational witness of gap_ppm 1414213 (tied for 1st)"
+    - "Lean certificate of the witness and of Tsirelson's bound for this matrix"
+  failed:
+    - "no 2x2 certificate below 80 bits found (search over denominators up to 65536); not re-checked"
+    - "gap above sqrt 2 with larger matrices not attempted"
+notes: "Token usage of the sessions is included in the team totals of archive/stats and was not split per entry."

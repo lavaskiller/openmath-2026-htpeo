@@ -30,4 +30,4 @@
 
 ## Still to add
 
-- [ ] `STATS.yaml` (template in `../../_TEMPLATE/STATS.yaml`)
+- [x] `STATS.yaml` (template in `../../_TEMPLATE/STATS.yaml`)
