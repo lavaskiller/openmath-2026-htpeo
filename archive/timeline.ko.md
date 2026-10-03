@@ -86,6 +86,7 @@ English: [timeline.md](timeline.md)
 | 2026-10-03 11:01–12:00 KST | @thomasoh0408가 Kobon n = 18 보고서, 코드, README를 올림. |
 | 2026-10-03 11:43 KST | Ramsey: 개선된 틀(실험 bc2c24e3, density_ppt 30,139,911,990, 이전보다 22,006 낮음) 통과; `artifact/lean_v2/`에 인증서 재생성; 13명 중 1위. |
 | 2026-10-03 11:45 KST | @hl728의 PR #5(최종 보드와 검증 보드의 해, 서명 보고서, 접수 기록) 병합. |
+| 2026-10-03 11:49–11:55 KST | 팀 채팅(Discord): @hl728이 에르되시 #1038 패키지를 설명 — 공개된 증명 논문을 보고 다시 푼 것으로 아이디어와 얼개는 같고 Lean 구현이 다름; 패키지를 차이 설명과 함께 올리기로 함. Kobon n = 39 Lean 파일이 무엇인지에 대한 질문. |
 | 2026-10-03 13:00 KST | 대회 마감(00:00 EDT). 세 패킷의 실제 제출 여부와 시각: TODO(출처 없음) — 세 패킷 모두 "작성자는 제출하지 않음"이라고만 적혀 있음 | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 9번; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` 머리줄 |
 
 ## 날짜 없는 사건

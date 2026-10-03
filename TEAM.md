@@ -65,10 +65,10 @@ Already known:
 | E-mail | ymhlsh4065@korea.ac.kr |
 | Entries worked on | `entries/hills/busy-beaver-6-n0rang2/`, `entries/hills/ramsey-n0rang2/`, `entries/erdos-1038/` (with @hl728) |
 | Role / contribution | Busy Beaver 6 hill: the 249,881-step machine, its Lean certificates, the replay evidence and the structural maximality computation; K4 Ramsey hill (validation board); Erdős #1038 with @hl728 (from the uploaded files and the team chat) |
-| Human review done | packet ____ , sections ____ , date ____ |
+| Human review done | not stated by the member (left blank at the deadline) |
 | AI tools and accounts used | AutoLab coding agent (Claude Haiku 4.5), Codex desktop (see `entries/hills/busy-beaver-6-n0rang2/STATS.yaml`); Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra, gpt-6.1-Sol); subscription plans |
-| Time spent (hours, rough) | ____ |
-| Approves attribution and release | ____ (name, date) |
+| Time spent (hours, rough) | not stated by the member |
+| Approves attribution and release | Sanghyeon Lee, 2026-10-03 — recorded by the team lead @lavaskiller on the member's behalf, not entered by the member personally |
 
 Already known:
 
@@ -89,10 +89,10 @@ Already known:
 | E-mail | thomasoh0408@snu.ac.kr |
 | Entries worked on | `entries/hills/kobon-triangles-thomasoh0408/` |
 | Role / contribution | Kobon triangles hill, board n = 18: 93 triangles (tied for 1st), with an AutoLab coding agent; report, code and STATS uploaded |
-| Human review done | packet ____ , sections ____ , date ____ |
+| Human review done | not stated by the member (left blank at the deadline) |
 | AI tools and accounts used | AutoLab coding-agent project with Claude Opus 5.5 (see `entries/hills/kobon-triangles-thomasoh0408/STATS.yaml`); Claude Code sessions (claude-opus-5-5); GPT workers through the codex CLI (gpt-6-Sol, gpt-6-Astra); subscription plans |
-| Time spent (hours, rough) | ____ |
-| Approves attribution and release | ____ (name, date) |
+| Time spent (hours, rough) | not stated by the member |
+| Approves attribution and release | Youchan Oh, 2026-10-03 — recorded by the team lead @lavaskiller on the member's behalf, not entered by the member personally |
 
 Already known:
 

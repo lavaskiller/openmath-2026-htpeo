@@ -86,6 +86,7 @@ Reference times of the competition: status freeze 2026-09-27 12:00 EDT (2026-09-
 | 2026-10-03 11:01–12:00 KST | @thomasoh0408 uploaded the Kobon n = 18 report, code and README. |
 | 2026-10-03 11:43 KST | Ramsey: improved template (experiment bc2c24e3, density_ppt 30,139,911,990, 22,006 below the earlier one) passes; certificate regenerated in `artifact/lean_v2/`; 1st of 13. |
 | 2026-10-03 11:45 KST | @hl728's pull request #5 (final-board and validation certificates with signed reports and receipts) merged. |
+| 2026-10-03 11:49–11:55 KST | Team chat (Discord): @hl728 explains the Erdős #1038 package — written after reading the published proof, same idea and overall structure, different Lean implementation; the team decides to upload the package with a note on the differences. Questions about what the Kobon n = 39 Lean files are. |
 | 2026-10-03 13:00 KST | Competition deadline (00:00 EDT). Whether and when the three packets were actually submitted: TODO (no source) — each of the three packets says only "not submitted by its writers" | shared | `CONTRIBUTING.md` §5; `ramsey_packet.md` §5 item 9; `star6_packet_final.md` §6; `erdos_m2_packet_final_v2.md` header |
 
 ## Events without a time
