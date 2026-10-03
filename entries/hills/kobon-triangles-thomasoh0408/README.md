@@ -15,7 +15,7 @@ Placeholder created from the leaderboard; **@thomasoh0408: please add the files 
 
 ## To add (checklist)
 
-- [ ] `solution.json` (or the submitted directory) exactly as evaluated
+- [v] `solution.json` (or the submitted directory) exactly as evaluated
 - [ ] the hill report (`report.json`) of the evaluation — it carries the hill hash, the metrics and the signature
 - [ ] AutoLab project name and experiment id: 6216e4ca
 - [ ] how the result was obtained (method, code if any — put code in `code/`): ____
