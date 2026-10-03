@@ -37,21 +37,21 @@ Already known:
 | Field | Value |
 |---|---|
 | GitHub | [@hl728](https://github.com/hl728) |
-| Name | ____ |
-| Affiliation | ____ |
-| E-mail | ____ |
-| Entries worked on | `entries/hills/ramsey-hl728/` |
-| Role / contribution | K4 Ramsey hill (validation and final-board evaluation) (from the leaderboard; to be completed by the member) |
-| Human review done | packet ____ , sections ____ , date ____ |
-| AI tools and accounts used | ____ (models, interface; no account e-mails or keys) |
-| Time spent (hours, rough) | ____ |
-| Approves attribution and release | ____ (name, date) |
+| Name | Hyunjin Lee |
+| Affiliation | University of Cambridge |
+| E-mail | hl728@cam.ac.uk |
+| Entries worked on | `entries/hills/ramsey-hl728/` (submitted); separate local research on Erdős problem #1038 and the 3×3 matrix-multiplication hill |
+| Role / contribution | Directed AI-assisted literature research and local K4 Ramsey template refinement; selected and submitted validation/final hill reports; preserved the evaluated certificates, signed reports and receipts, and documented provenance and limits. Separately directed Erdős #1038 Lean formalization, numerical certification and audits, and public-seed 3×3 matrix-multiplication search; these are separate from the submitted Ramsey hill record. |
+| Human review done | Not performed, as declared by Hyunjin Lee on 2026-10-03. The computed and AI-assisted checks in the Ramsey [README](entries/hills/ramsey-hl728/README.md) and [NOTES](entries/hills/ramsey-hl728/NOTES.md) are not human review. |
+| AI tools and accounts used | Personal OpenAI account via ChatGPT on the web (model identifiers not recorded) and Codex desktop/agent/CLI sessions (`gpt-6-astra`, `gpt-6.1-sol`, confirmed in local session metadata); Codex worker agents assisted research, implementation and audits. AutoLab account `hl728`, hosted seed climb and `autolab`/`hills` CLI for evaluations/submissions; the hosted seed agent model is not recorded here. Python exact arithmetic and scientific/symbolic tools; Lean 4 and Mathlib for the separate Erdős work. Local session metadata confirms the model identifiers; no account e-mails, keys or raw conversations are included. |
+| Time spent (hours, rough) | Approximately 20 hours or more (member-reported rough estimate, confirmed by Hyunjin Lee on 2026-10-03), including work using ChatGPT on the web and directing, checking and documenting the OpenMath work. This is human time; unattended agent/search/build time is excluded. |
+| Approves attribution and release | Yes — Hyunjin Lee, 2026-10-03; personally confirmed attribution and release of this profile and the current Ramsey hill submission records. |
 
 Already known:
 
 - K4 Ramsey multiplicity hill: only entry on the final (held-out) board (1 account), 30,141,921,123 ppt, 2026-09-29
 - K4 Ramsey multiplicity hill: 5th of 12 (validation board), 30,141,720,946 ppt, 2026-09-30
-- To upload: the final-board `solution.json` and signed `report.json` in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/) (the rest of that checklist is optional)
+- Uploaded: the exact final-board `solution.json` and signed `report.json`, the later validation pair, submission receipts and provenance notes in [`entries/hills/ramsey-hl728/`](entries/hills/ramsey-hl728/); [PR #5](https://github.com/lavaskiller/openmath-2026-htpeo/pull/5) merged on 2026-10-03.
 
 ## @n0rang2
 
